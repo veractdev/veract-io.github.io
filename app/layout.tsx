@@ -11,6 +11,7 @@ import Casestudies from './components/casestudies'
 import Testimonials from './components/testimonials'
 import Contacts from './components/contacts'
 import './styles/styles.css';
+import CustomCursor from './components/customCursor'
 import Clients from './components/clients'
 import Carousel from './components/carousel'
 import Footer from './components/footer'
@@ -25,29 +26,31 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  
+
   children,
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
         {/* <CasestudiesDetails /> */}
         <div id="Home">
           <div className=" custom-cursor">
+            <CustomCursor />
             <div className="mainPage fontFamily flex">
               <TopnavBar />
               <Banner />
             </div>
             <div>
-            <Clients />
+              <Clients />
             </div>
             <div  >
               <FoundersDesk />
             </div>
             <div >
-            <Services />
+              <Services />
             </div>
             <div  >
               <Casestudies />
@@ -56,14 +59,14 @@ export default function RootLayout({
               <Testimonials />
             </div>
             <div>
-            <Contacts />
+              <Contacts />
             </div>
             <div>
               {/* <Carousel/> */}
               < VeractDetails />
             </div>
             <div>
-              < Footer/>
+              < Footer />
             </div>
           </div>
         </div>
