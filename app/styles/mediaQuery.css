@@ -8,6 +8,7 @@
     /* overflow-x: hidden; */
     overflow-x: hidden;
     background-color: var(--white-text-colour) !important;
+   
 
   }
 
@@ -21,14 +22,12 @@
   }
 
   /*----------------banner--------------------------*/
-  .mainPage {
+  .mainPage{
     min-height: 93vh;
   }
-
-  .paddingClients {
+  .paddingClients{
     margin-top: 0px;
   }
-
   .happyPathMobile {
     font-size: 16px;
     font-weight: 700;
@@ -56,7 +55,7 @@
   }
 
   .customTextLandingPage {
-    padding-top: 10%;
+    padding-top:10%;
     line-height: 120%;
     font-size: var(--LandingPage-custom-text-mobile);
   }
@@ -64,15 +63,13 @@
   .customBannerText {
     margin-top: 20%;
   }
-
-  .mobileContentBanner {
-    display: flex;
+  .mobileContentBanner{
+    display:flex;
   }
 
-  .mobilePaddingHeader {
-    padding-top: 4%;
+  .mobilePaddingHeader{
+    padding-top:4%;
   }
-
   /* --------  navbar -----------*/
   .founder {
     /* color: #5c5c5c; */
@@ -80,7 +77,7 @@
     /* transition: 0.2s ease-in-out; */
     font-family: var(--primary-font);
     font-weight: 700;
-    font-size: 20px;
+    font-size:20px;
     padding-left: 15%;
   }
 
@@ -89,7 +86,7 @@
     color: var(--white-colour);
     padding-left: 40%;
     font-weight: 700;
-    font-size: 20px;
+    font-size:20px;
     /* transition: all 0.2s ease-in-out; */
     font-family: var(--primary-font);
   }
@@ -99,7 +96,7 @@
     color: var(--white-colour);
     padding-left: 26%;
     font-weight: 700;
-    font-size: 20px;
+    font-size:20px;
     /* transition: all 0.2s ease-in-out; */
     font-family: var(--primary-font);
   }
@@ -109,14 +106,14 @@
     color: var(--white-colour);
     padding-left: 26%;
     font-weight: 700;
-    font-size: 20px;
+    font-size:20px;
     font-family: var(--primary-font);
   }
 
   .testMain {
     padding-left: 18%;
     font-weight: 700;
-    font-size: 20px;
+    font-size:20px;
     font-family: var(--primary-font);
     color: var(--white-colour);
   }
@@ -223,8 +220,8 @@
 
   .fix-appointment1 {
     border: 1px solid #F44251;
-    background: #F44251;
-    color: white;
+    background:#F44251;
+    color:white;
     /* background: linear-gradient(to right, #FFA500, #fab700); */
     border-radius: 25px;
     color: var(--white-text-colour);
@@ -234,8 +231,9 @@
     flex-wrap: nowrap;
   }
 
-  .customTextLandingPage {}
+  .customTextLandingPage{
 
+  }
   .fix-appointment {
     /* border: 1px solid var(--secondary-colour); */
     /* background: linear-gradient(to right, #FFA500, #fab700); */
@@ -256,15 +254,12 @@
     transform: translateX(424px);
     transition: 4s;
   }
-
-  .mobileBannerText {
-    color: var(--secondary-colour);
+  .mobileBannerText{
+    color:var(--secondary-colour);
   }
-
-  .mobileTalk {
-    display: none
+  .mobileTalk{
+    display:none
   }
-
   .nav-list.MediaHidden {
     /* display:none; */
     transform: translateX(424px);
@@ -425,7 +420,7 @@
 
   .servicesWrapMedia {
     padding: 0px;
-    gap: 30px;
+    gap:30px;
   }
 
   .servicesWrapMedia {
@@ -473,80 +468,62 @@
     width: 100%;
   }
 
-  .case-studies {
+  .case-studies{
     padding-bottom: 47px;
   }
-
-  .manufacturingHover:hover {
-    transform: none;
+  .manufacturingHover:hover{
+    transform:none;
   }
-
-  .wellnessHover:hover:hover {
-    transform: none;
+  .wellnessHover:hover:hover{
+    transform:none;
   }
-
-  .agriHover:hover:hover {
-    transform: none;
+  .agriHover:hover:hover{
+    transform:none;
   }
-
-  .salesHover:hover:hover {
-    transform: none;
+  .salesHover:hover:hover{
+    transform:none;
   }
-
-  .fintechHover:hover:hover {
-    transform: none;
+  .fintechHover:hover:hover{
+    transform:none;
   }
-
-  .hrHover:hover:hover {
-    transform: none;
+  .hrHover:hover:hover{
+    transform:none;
   }
-
-  .manufacturingHover:hover .manufacturingDesc {
-    color: var(--white-colour);
+  .manufacturingHover:hover .manufacturingDesc{
+    color:var(--white-colour);
   }
-
-  .wellnessHover:hover .wellnessDesc {
-    color: var(--white-colour);
+  .wellnessHover:hover .wellnessDesc{
+    color:var(--white-colour);
   }
-
-  .salesHover:hover .salesDesc {
-    color: var(--white-colour);
+  .salesHover:hover .salesDesc{
+    color:var(--white-colour);
   }
-
-  .agriHover:hover .agriDesc {
-    color: var(--white-colour);
+  .agriHover:hover .agriDesc{
+    color:var(--white-colour);
   }
-
-  .hrHover:hover .hrDesc {
-    color: var(--white-colour);
+  .hrHover:hover .hrDesc{
+    color:var(--white-colour);
   }
-
-  .fintechHover:hover .fintechDesc {
-    color: var(--white-colour);
+  .fintechHover:hover .fintechDesc{
+    color:var(--white-colour);
   }
-
-  .infoIconMobile {
-    display: flex;
-    padding-top: 4px;
+  .infoIconMobile{
+    display:flex;
+    padding-top:4px;
   }
-
-  .desktopPortfolio {
-    display: none;
+  .desktopPortfolio{
+    display:none;
   }
-
-  .mobilePortfolio {
-    display: flex;
+  .mobilePortfolio{
+    display:flex;
   }
-
-  .mobilePortfolioText {
-    display: flex;
+  .mobilePortfolioText{
+    display:flex;
     white-space: nowrap;
   }
-
-  .desktopPortfolioText {
+  .desktopPortfolioText{
     /* display: none; */
   }
-
   /*----------------------testimonial --------------------*/
   .title {
     font-size: 12px;
@@ -596,7 +573,7 @@
 
   .contactSection {
     height: 45vh;
-
+    
   }
 
   .mobileCardContact {
@@ -622,9 +599,8 @@
     justify-content: center;
     padding-top: 10%;
   }
-
-  .contact_us_2 .submit-btn {
-    width: 55%;
+  .contact_us_2 .submit-btn{
+    width:55%;
   }
 
   /*------------footer-----------*/
