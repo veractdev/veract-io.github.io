@@ -5,10 +5,18 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Transform } from 'stream';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Contacts from './contacts';
 
 export default function TopnavBar() {
+  const router = useRouter()
+  const pathname = usePathname()
   const scrollToSection = (sectionId: string) => {
+    if (pathname !== "/") {
+      router.push("/");
+
+    }
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });

@@ -58,7 +58,7 @@ export default function Casestudies() {
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
                                 <div className='w-8 '><img src="portfolio/manufacturingOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4 '><Link href={`/CaseStudyPage`}>MANUFACTURING</Link></div>
+                                <div className='item-title flex textColorLogo pl-4 '>MANUFACTURING</div>
                                 </div>
                                 <div className=''>
                                 <img src="images/info.png" className='w-6 h-6'></img> 
