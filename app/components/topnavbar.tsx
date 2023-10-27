@@ -131,7 +131,7 @@ export default function TopnavBar() {
                 <div>
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div className="testMain " onClick={handleToggle}><div className='flex items-center justify-center navbarCursor whitespace-nowrap'onClick={() => scrollToSection("Testimonials")}>Clients speak</div></div>
+                  <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap'onClick={handleToggle}><div  onClick={() => scrollToSection("Testimonials")}>Clients speak</div></div>
                     <div><hr className="testimonialsHr"></hr></div>
                   </div>
                 </li>

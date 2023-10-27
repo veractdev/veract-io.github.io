@@ -171,7 +171,7 @@ export default function Casestudies() {
                 </div>
                
                 </div>
-                <div className='desktopPortfolio' id="Testimonials"></div>
+                {/* <div className='desktopPortfolio' id="Testimonials"></div> */}
                 <div className='mobilePortfolio'>
                 <div className='items-list flex  flex-wrap pt-1 pb-4   '>
                 {/* manufacturingHover */}
@@ -292,10 +292,11 @@ export default function Casestudies() {
                         {/* <div className='fintechArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
                     </div>
                 </div>
-                <div className='' id="Testimonials"></div>
                 </div>
                 
             </div>
+            <div className='' id="Testimonials"></div>
+
         </div>
     )
 }
