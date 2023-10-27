@@ -1,6 +1,7 @@
 'use client';
 import '../styles/styles.css';
 import '../styles/services.css';
+import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 
@@ -51,8 +52,8 @@ const services = [
         id: 4,
         image: images[theme].aiml,
         title: 'AI & ML Applications',
-        list: ['Unleashing the Power of Data and Machine Learning in computer vision.'],
-        mobileContent:"Unleashing the Power of Data and Machine Learning in computer vision."
+        list: ['Unleashing the Power of Data and Machine Learning in Computer Vision and Language Processing. '],
+        mobileContent:"Unleashing the Power of Data and Machine Learning in Computer Vision and Language Processing. "
     },
 ]
 

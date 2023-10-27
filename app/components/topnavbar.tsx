@@ -1,5 +1,6 @@
 'use client';
 import '../styles/styles.css'
+import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Transform } from 'stream';
@@ -61,14 +62,15 @@ export default function TopnavBar() {
       {/* <div className="p-4 border-2  rounded-lg border-primary   bg-primary " > */}
       <div className="flex flex-row justify-between flex-nowrap items-center justify-center">
         <button onClick={handleReload}>
-        <div className={`transitionEffect ${isVisible ? 'afterScroll ' : 'beforeScroll'}`} >ver<span className="textColorLogo">act</span></div>
+        <div className={`transitionEffect ${isVisible ? 'afterScroll ' : 'beforeScroll '}`} >ver<span className="textColorLogo">act</span></div>
+        {/* <div className={`transitionEffect ${isVisible ? 'navbar_afterScroll ' : 'navbar_beforeScroll' }`}></div> */}
         </button>
         {/* <div><img src="/logo.png"></img></div> */}
 
 
-        <div className="mobileAppointment " >
+        <div className="mobileAppointment pl-20" >
                 {/* <div className=" flex items-center justify-center whitespace-nowrap fontFamily"><a href="">Fix an appointment</a></div>  */}
-                <div className="fix-appointment1 flex navbarCursor  whitespace-nowrap fontFamily" onClick={() => scrollToSection("ContactUS")}><a >Talk to us</a></div>
+                <div className="fix-appointment1 flex navbarCursor  whitespace-nowrap fontFamily" onClick={() => scrollToSection("ContactUS")}><a>Talk to us</a></div>
                 </div>
         {/* <div className={`menu-links ${isOpen ? "open":" "}`}>
                   <div className="flex flex-end fontFamilyNav md:gap-10">
@@ -111,8 +113,9 @@ export default function TopnavBar() {
                 <div>
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    {/* <div  className="caseMain " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div> */}
                     <div  className="caseMain " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div>
+                    {/* <div  className="caseMain " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' ><Link href="/CaseStudyPage">Case Studies</Link></div></div> */}
+                    {/* onClick={() => scrollToSection("Portfolio")} */}
                     <div ><hr className="portfolioHr"></hr></div>
                   </div>
                 </li>

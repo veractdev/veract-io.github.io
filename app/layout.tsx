@@ -12,7 +12,7 @@ import Casestudies from './components/casestudies'
 import Testimonials from './components/testimonials'
 import Contacts from './components/contacts'
 import './styles/styles.css';
-import CustomCursor from './components/customCursor'
+// import CustomCursor from './components/customCursor'
 import Clients from './components/clients'
 import Carousel from './components/carousel'
 import Footer from './components/footer'
@@ -39,40 +39,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* <CasestudiesDetails /> */}
-        <div id="Home">
-          <div className=" custom-cursor">
-            <CustomCursor />
-            <div className="mainPage fontFamily flex">
-              <TopnavBar />
-              <Banner />
-            </div>
-            <div>
-            <Clients />
-            </div>
-            <div  >
-              <FoundersDesk />
-            </div>
-            <div >
-            <Services />
-            </div>
-            <div  >
-              <Casestudies />
-            </div>
-            <div >
-              <Testimonials />
-            </div>
-            <div>
-            <Contacts />
-            </div>
-            <div>
-              {/* <Carousel/> */}
-              < VeractDetails />
-            </div>
-            <div>
-              < Footer/>
-            </div>
-          </div>
-        </div>
         {/* <BouncingBall /> */}
         {children}</body>
     </html>

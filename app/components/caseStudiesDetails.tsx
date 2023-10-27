@@ -1,4 +1,5 @@
 import '../styles/styles.css';
+import '../styles/mediaQuery.css';
 
 export default function CasestudiesDetails(){
     return(

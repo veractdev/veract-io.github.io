@@ -77,6 +77,9 @@ span {
     align-items: center;
     justify-content: center;
   }
+  .copyrights_mobile{
+    display: none;
+  }
   .copyrightsText{
     color:#ffffff;
     white-space: nowrap;
@@ -127,7 +130,10 @@ span {
   .mobileContact{
     display:none;
   }
-
+/*----------Tab-------------------*/
+.mobileTab{
+  display: none;
+}
 /*----------Landing-page----------*/
 .WebAnimation{
   opacity:0;
@@ -363,15 +369,17 @@ span {
   display: flex;
   /* white-space: nowrap; */
 }
-
+.mainPage {
+  background-image: url("/images/blackBgNoMark.jpg");
+}
 .mainPage {
   margin: 0;
   padding: 0;
   width: 100%;
   /* background: linear-gradient(40deg, #8BD3E5 52%, transparent 52%, transparent 100%); */
   /* background: linear-gradient(40deg, #2596be, transparent 52%, transparent 100%); */
-  /* background:#c1dbe9; */
-  background-image: url("/images/blackBgNoMark.jpg");
+  background-color:#000;
+
   /* background: linear-gradient(90deg, hsla(240, 94%, 51%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
   /* background: linear-gradient(90deg, rgb(13, 13, 248) 0%, rgb(0, 0, 0) 100%) center center / cover no-repeat; */
   /* background:black; */
@@ -664,6 +672,47 @@ ul {
 }
 
 .navbar {
+  /* height: 18%; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* padding: 1%; */
+
+  /* background-color:#c1dbe9; */
+  /* background-image: url('/backgroundGradient.jpeg');
+       */
+  /* background: linear-gradient(90deg, hsla(240, 94%, 51%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
+  /* background: linear-gradient(90deg, rgb(13, 13, 248) 0%, rgb(0, 0, 0) 100%) center center / cover no-repeat; */
+  /* background-color: black; */
+  /* background-image: url("/blackBg.jpg"); */
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white-text-colour);
+  z-index: 99999;
+  /* Ensure the navbar appears above other elements */
+}
+
+.navbar_beforeScroll {
+  height: 18%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* padding: 1%; */
+
+  /* background-color:#c1dbe9; */
+  /* background-image: url('/backgroundGradient.jpeg');
+       */
+  /* background: linear-gradient(90deg, hsla(240, 94%, 51%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
+  /* background: linear-gradient(90deg, rgb(13, 13, 248) 0%, rgb(0, 0, 0) 100%) center center / cover no-repeat; */
+  /* background-color: black; */
+  /* background-image: url("/blackBg.jpg"); */
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white-text-colour);
+  z-index: 99999;
+  /* Ensure the navbar appears above other elements */
+}
+
+.navbar_afterScroll {
+  height: 15%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -827,7 +876,7 @@ ul {
 .left-column {}
 
 .founderDetails {
-  display: none;
+  display: contents;
 }
 
 .foundersContent {
@@ -842,7 +891,7 @@ ul {
 }
 
 .founderProfileWidth {
-  width: 12rem;
+  width: 16rem;
 }
 
 .firstPara {
@@ -1104,6 +1153,12 @@ ul {
 
 
 /*......................  caseStudies or portfolio page ..................................   */
+.desktopCaseStudy {
+  display: flex;
+}
+.mobileCaseStudy {
+  display: none;
+}
 .desktopPortfolio{
   display:flex;
 }
@@ -1339,7 +1394,7 @@ ul {
   align-items: center;
   /* justify-content: center; */
   left:20px;
-  top:20px;
+  top:120px;
   width:16%;
   height:95vh;
   background-color: var(--black-colour);
@@ -1389,6 +1444,7 @@ ul {
   white-space: nowrap;
 }
 .caseHeaderIconContent{
+  padding-top: 5%;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -1419,7 +1475,7 @@ ul {
   padding:2%;
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap: 5px;
 }
 .challenges{
   font-size:24px;
@@ -1509,13 +1565,14 @@ ul {
 }
 
 .techstackContainer{
+
   display:flex;
   flex-direction: row;
   border:1px solid #e4e4e4;
   width:370px;
   height:180px;
   border-radius: 10px;
-  gap:25px;
+  gap:0px;
   padding-left: 3%;
   padding-right:3% ;
 }
@@ -1939,3 +1996,7 @@ ul {
 }
 
 /*-------------------------scroll animation clients*/
+
+.temp{
+  display: none;
+}

@@ -22,6 +22,7 @@
   }
 
   /*----------------banner--------------------------*/
+
   .mainPage{
     min-height: 93vh;
   }
@@ -55,6 +56,7 @@
   }
 
   .customTextLandingPage {
+    padding-left: 0%;
     padding-top:10%;
     line-height: 120%;
     font-size: var(--LandingPage-custom-text-mobile);
@@ -162,7 +164,7 @@
     width: 100%;
     height: 100%;
     transition: transform 2s;
-    align-items: start;
+    align-items: flex-start;
     justify-content: right;
     padding-left: 6%;
     font-size: 28px;
@@ -229,11 +231,9 @@
     font-size: 16px;
     padding: 0.10rem 1rem;
     flex-wrap: nowrap;
+    padding-left: 10px;
   }
 
-  .customTextLandingPage{
-
-  }
   .fix-appointment {
     /* border: 1px solid var(--secondary-colour); */
     /* background: linear-gradient(to right, #FFA500, #fab700); */
@@ -255,14 +255,15 @@
     transition: 4s;
   }
   .mobileBannerText{
-    color:var(--secondary-colour);
+    color:var(--primary-colour);
+    font-size:var(--LandingPage-custom-text-mobile-desc);
   }
   .mobileTalk{
     display:none
   }
   .nav-list.MediaHidden {
     /* display:none; */
-    transform: translateX(424px);
+    transform: translateX(720px);
     transition: 1.5s ease;
   }
 
@@ -327,6 +328,13 @@
   .padding {
     padding-right: 20%;
     padding-left: 20%;
+  }
+  /*----------------Tab-----------------------------*/
+
+  .mobileTab{
+    display: flex;
+    position: fixed;
+
   }
 
   /*-----------clients ----------------------------*/
@@ -464,6 +472,189 @@
   }
 
   /*---------------------portfolio------------------------*/
+  .desktopCaseStudy {
+    display: none;
+  }
+  .mobileCaseStudy {
+    display: flex;
+  }
+  .caseHeader_mobile{
+    /* border:3px solid #925fe2; */
+    border-radius: 10px;
+    padding:1%;
+    width:90%;
+    height:23%;
+    /* display: flex;
+    flex-direction: row; */
+    gap:5%;
+  }
+  .caseHeaderContent_mobile {
+    align-items: center;
+    justify-content: center;
+  }
+  .caseHeaderTitle_mobile{
+    font-size: 42px;
+    color: var(--primary-colour);
+    display:flex ;
+    /* align-items: center;
+    justify-content: center; */
+    /* padding-left: 3%; */
+    font-weight: 500;
+    /* white-space: nowrap; */
+  }
+  .caseHeaderIcon_mobile{
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    /* white-space: nowrap; */
+  }
+  .caseHeaderIconContent_mobile{
+    padding-top: 5%;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* gap:30%; */
+    /* justify-content: space-between; */
+    padding-left: 3%;
+    padding-right: 3%;
+    gap:15px;
+  }
+  .ChallengeContainer_mobile{
+    /* padding-right: 10%; */
+    /* padding-left: 10%; */
+    width: 100%;
+    border:1px solid #e4e4e4;
+    box-shadow: 5px 5px #e4e4e4;
+    border-radius: 10px;
+    padding:2%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ChallengeSolutionContainer_mobile{
+    display:flex;
+    flex-direction: Column;
+    gap:30px;
+    /* padding-right: 2.5%;
+    padding-left: 2.5%; */
+    justify-content: space-around;
+  }
+  .challenges_mobile{
+    font-size:42px;
+    color:var(--primary-colour);
+    font-weight: 500;
+  }
+  .challengesContent_mobile{
+    font-size: 24px;
+    display:flex;
+    flex-wrap: nowrap;
+  }
+  .challengePoints_mobile{
+    font-size: 24px;
+    font-weight:700;
+  }
+  .solutionPoints_mobile{
+    font-size: 24px;
+    font-weight:700;
+  }
+  .serviceHeader_mobile{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 32px;
+    color:var(--primary-colour);
+    font-weight: 500;
+  }
+  .serviceText_mobile{
+    font-size: 24px;
+    text-align: left;
+    padding-left: 7%;
+    padding-right: 1%;
+    /* white-space: nowrap; */
+   
+  }
+  .PlatformText_mobile{
+    font-size: 24px;
+    text-align: center;
+    /* padding-left: 7%;
+    padding-right: 1%; */
+    white-space: nowrap;
+  }
+  .techText_mobile{
+    font-size: 20px;
+    text-align: left;
+    white-space: nowrap;
+    width: 50%;
+  }
+  .mainContainer{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .BottomContainer_mobile{
+    display:flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    gap:15px;
+  }
+  .serviceContainer_mobile{
+    display:flex;
+    flex-direction: column;
+    border:1px solid #e4e4e4;
+    border-radius: 10px;
+    /* align-items: center;
+    justify-content: center; */
+    width: 350px;
+    height:320px;
+    
+    /* padding:50% */
+  }
+
+  .platformContainer_mobile{
+    display:flex;
+  
+    flex-direction: column;
+    border:1px solid #e4e4e4;
+    border-radius: 10px;
+    /* align-items: center;
+    justify-content: center; */
+    width: 350px;
+    height:320px;
+    
+    padding-top:1.8%
+  }
+  .techContent_mobile{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+    /* width:fit-content; */
+    margin-top: 4%;
+    margin-bottom: 4%;
+    /* padding-left:2%; */
+    /* border:1px solid #e4e4e4; */
+    /* width:40%; */
+    margin-left: 5%;
+    gap:20px;
+    text-align: left;
+  }
+  .techstackContainer_mobile{
+    display:flex;
+    flex-direction: row;
+    border:1px solid #e4e4e4;
+    width: 100%;
+    height:300px;
+    border-radius: 10px;
+    gap:px;
+    padding-left: 3%;
+    padding-right:3% ;
+  }
+  .fontFamily_mobile {
+    font-family: 20px;
+  }
   .contentWidth {
     width: 100%;
   }
@@ -524,6 +715,17 @@
   .desktopPortfolioText{
     /* display: none; */
   }
+
+  .caseDetails_mobile{
+    /* height:100vh; */
+    /* padding-left: 2%; */
+    padding-top:6%;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap:15px;
+  }
+
   /*----------------------testimonial --------------------*/
   .title {
     font-size: 12px;
@@ -604,8 +806,77 @@
   }
 
   /*------------footer-----------*/
-  .copyrightsText {
+  .copyrights{
+    display: none;
+  }
+  .copyrights_mobile{
+    width:100%;
+    height:100px;
+    border:1px solid #000;
+    background:#000;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .copyrightsText_mobile{
+    color:#ffffff;
+    white-space: nowrap;
     font-size: 12px;
   }
+
+
+  /* styles/Navbar.module.css */
+.temp {
+  position: fixed;
+  /* display: inline-block; */
+  font-family: var(--primary-font);
+  font-size: 32px;
+  gap: 50px;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  border-radius: 20px;
+  margin-left: 30px;
+  padding-left: 15px;
+  padding-top: 40px;
+  height: 130px;
+  width: 660px;
+  background-color: #333;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-right: 29px;
+}
+.TabFont {
+  font-family: var(--primary-font);
+  font-size: 15px;
+}
+
+
+.scroll-container {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping to the next line */
+}
+
+.scroll-content {
+  display: inline-block; /* Make items line up horizontally */
+}
+
+.scroll-item {
+  min-width: 200px; /* Adjust the width of your items */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+
 
 }
