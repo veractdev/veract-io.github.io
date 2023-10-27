@@ -214,8 +214,8 @@ export default function PortfolioDetails(){
         window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
         window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
 
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
+        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
+        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
 
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
@@ -223,8 +223,8 @@ export default function PortfolioDetails(){
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesColor("white"): setSalesColor("#7f7f7f");
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriColor("white"): setAgriColor("#7f7f7f");
-        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
+        window.scrollY > 4500 && window.scrollY <=5200   ? setAgriColor("white"): setAgriColor("#7f7f7f");
+        window.scrollY > 4500 && window.scrollY <=5200   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
 
         // window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
         // window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");

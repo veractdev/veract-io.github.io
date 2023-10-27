@@ -1394,7 +1394,7 @@ ul {
   align-items: center;
   /* justify-content: center; */
   left:20px;
-  top:120px;
+  top:155px;
   width:16%;
   height:95vh;
   background-color: var(--black-colour);
@@ -1998,5 +1998,9 @@ ul {
 /*-------------------------scroll animation clients*/
 
 .temp{
+  display: none;
+}
+
+.caseMain_mobile{
   display: none;
 }

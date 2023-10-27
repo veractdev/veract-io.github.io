@@ -106,7 +106,7 @@
   .caseMain {
     /* color: #5c5c5c; */
     color: var(--white-colour);
-    padding-left: 26%;
+    /* padding-left: 26%; */
     font-weight: 700;
     font-size:20px;
     font-family: var(--primary-font);
@@ -878,5 +878,11 @@ li {
 }
 
 
+.caseMain_mobile{
+  display: flex;
+}
+.caseMain_desktop {
+  display: none;
+}
 
 }

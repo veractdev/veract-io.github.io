@@ -113,8 +113,8 @@ export default function TopnavBar() {
                 <div>
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div>
-                    {/* <div  className="caseMain " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' ><Link href="/CaseStudyPage">Case Studies</Link></div></div> */}
+                    <div  className="caseMain caseMain_mobile pl-3" onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div>
+                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap' ><Link href="/CaseStudyPage">Case Studies</Link></div></div>
                     {/* onClick={() => scrollToSection("Portfolio")} */}
                     <div ><hr className="portfolioHr"></hr></div>
                   </div>
