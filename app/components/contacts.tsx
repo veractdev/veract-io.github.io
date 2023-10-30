@@ -145,7 +145,10 @@ export default function Contacts() {
   <div className="contact_us_2 fontFamilyContacts">
   <div className="responsive-container-block big-container">
     <div className="responsive-container-block container">
-      <form className="form-box">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="9d3da815-bac9-4a3d-be26-6f4f5689cbba" />
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting us, we will get back to you soon!!"/>
+
         <div className="container-block form-wrapper">
           <p className="text-blk contactus-head">
             {/* Get in <span style={{color:"#000"}}> Touch </span> */}
@@ -158,34 +161,34 @@ export default function Contacts() {
               <p className="text-blk input-title">
                 FIRST NAME
               </p>
-              <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..."/>
+              <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..."  required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 LAST NAME
               </p>
-              <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..."/>
+              <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..." required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 EMAIL
               </p>
-              <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..."/>
+              <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..."  required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 PHONE NUMBER
               </p>
-              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone no..."/>
+              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone no..." required/>
             </div>
             <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
               <p className="text-blk input-title">
                 WHAT DO YOU HAVE IN MIND
               </p>
-              <textarea className="textinput" id="i5vyy" placeholder="Please enter query..."></textarea>
+              <textarea className="textinput" id="i5vyy" placeholder="Please enter query..."  required></textarea>
             </div>
           </div>
-          <button className="submit-btn">
+          <button className="submit-btn" type="submit">
             Submit
           </button>
         </div>
