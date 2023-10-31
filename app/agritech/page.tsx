@@ -9,9 +9,11 @@ const Page = () => {
         <TopnavBar/>
         <div className="pt-20">
             <Tab />
+        </div> 
+        <div className="pt-20">
+            <AgriTech />
         </div>
-        <AgriTech />
-        {/* <Footer /> */}
+        <Footer />
     </div>
 };
 

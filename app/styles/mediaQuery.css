@@ -133,6 +133,7 @@
   }
 
   .navbar {
+    width: 100%;
     /* padding-left: 0.5rem;
     padding-right: 0.5rem; */
     top: 0;
@@ -351,6 +352,32 @@
     max-height: 40px;
   }
 
+  .challenges_mobile{
+    font-size:28px;
+    color:var(--primary-colour);
+    font-weight: 500;
+  }
+
+  .challengesContent_mobile{
+    font-size: 18px;
+    display:flex;
+    flex-wrap: nowrap;
+  }
+
+  .title_mobile {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--tertiary-font);
+    letter-spacing: 2px;
+    line-height: 28px;
+  
+  
+    &.highlight {
+      color: var(--primary-colour);
+    }
+  }
+
   .clients-logo-section {
     width: 95%;
     height: 90px;
@@ -493,7 +520,7 @@
     justify-content: center;
   }
   .caseHeaderTitle_mobile{
-    font-size: 42px;
+    font-size: 28px;
     color: var(--primary-colour);
     display:flex ;
     /* align-items: center;
@@ -503,7 +530,7 @@
     /* white-space: nowrap; */
   }
   .caseHeaderIcon_mobile{
-    font-size: 24px;
+    font-size: 18px;
     display: flex;
     flex-wrap: wrap;
     /* white-space: nowrap; */
@@ -532,6 +559,9 @@
     gap: 5px;
   }
   .ChallengeSolutionContainer_mobile{
+    padding-left: 5%;
+    /* padding-right: 5%; */
+    width: 95%;
     display:flex;
     flex-direction: Column;
     gap:30px;
@@ -540,33 +570,33 @@
     justify-content: space-around;
   }
   .challenges_mobile{
-    font-size:42px;
+    font-size: 28px;
     color:var(--primary-colour);
     font-weight: 500;
   }
   .challengesContent_mobile{
-    font-size: 24px;
+    font-size: 18px;
     display:flex;
     flex-wrap: nowrap;
   }
   .challengePoints_mobile{
-    font-size: 24px;
+    font-size: 18px;
     font-weight:700;
   }
   .solutionPoints_mobile{
-    font-size: 24px;
+    font-size: 18px;
     font-weight:700;
   }
   .serviceHeader_mobile{
     display:flex;
     align-items: center;
     justify-content:center;
-    font-size: 32px;
+    font-size: 28px;
     color:var(--primary-colour);
     font-weight: 500;
   }
   .serviceText_mobile{
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
     padding-left: 7%;
     padding-right: 1%;
@@ -574,29 +604,33 @@
    
   }
   .PlatformText_mobile{
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     /* padding-left: 7%;
     padding-right: 1%; */
     white-space: nowrap;
   }
   .techText_mobile{
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     white-space: nowrap;
     width: 50%;
   }
   .mainContainer{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     gap:20px;
     justify-content: space-around;
     width: 100%;
+    /* padding-left: 20%; */
   }
   .BottomContainer_mobile{
     display:flex;
     /* justify-content: space-between; */
-    flex-direction: row;
+    /* row */
+    padding-right: 5%;
+    padding-left: 5%;
+    flex-direction: row; 
     gap:15px;
   }
   .serviceContainer_mobile{
@@ -606,8 +640,9 @@
     border-radius: 10px;
     /* align-items: center;
     justify-content: center; */
-    width: 350px;
-    height:320px;
+    width: 100%;
+    aspect-ratio: 1;
+    /* height:320px; */
     
     /* padding:50% */
   }
@@ -620,9 +655,8 @@
     border-radius: 10px;
     /* align-items: center;
     justify-content: center; */
-    width: 350px;
-    height:320px;
-    
+    width: 100%;
+    aspect-ratio: 1;
     padding-top:1.8%
   }
   .techContent_mobile{
@@ -640,10 +674,11 @@
     margin-left: 5%;
     gap:20px;
     text-align: left;
+    overflow-y: auto;
   }
   .techstackContainer_mobile{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     border:1px solid #e4e4e4;
     width: 100%;
     height:300px;
@@ -727,6 +762,16 @@
   }
 
   /*----------------------testimonial --------------------*/
+
+  .testimonialContainer_mobile{
+    display:flex;
+    flex-direction:row;
+    width:95%;
+    padding-left: 5%;
+    gap:20px;
+     
+  }
+
   .title {
     font-size: 12px;
   }
@@ -883,6 +928,30 @@ li {
 }
 .caseMain_desktop {
   display: none;
+}
+
+
+
+
+.horizontal-scrollable-container {
+  position: fixed;
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: #FFa500;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 }

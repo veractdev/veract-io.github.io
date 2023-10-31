@@ -9,8 +9,11 @@ const Page = () => {
         <div className="pt-20">
             <Tab />
         </div>
-        <Health />
-        {/* <Footer /> */}
+        <div className="pt-20">
+            <Health />
+        </div>
+        
+        <Footer />
     </div>
 };
 

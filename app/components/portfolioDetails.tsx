@@ -148,24 +148,24 @@ export default function PortfolioDetails(){
             company: "Agrosperity Tech Solutions",
             clientSpeak:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.",
         },
-        // {
-        //     id:'content6',
-        //     caseTitle:'Machine vision for manufacturing quality control',
-        //     caseTitleContent:'A sheet metal pressings manufacturing company.',
-        //     stampImage: "",
-        //     caseImage:'/portfolio/hrPurple.png',
-        //     challenges:'The components require intricate visual inspection on parts with throughput over 5 Million pcs/month. Manual inspection was tedious and accuracy was dropping on fatigue .',
-        //     challengePoints:'',
-        //     solution:'Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!',
-        //     solutionPoints:'',
-        //     services:'Software architecture consulting Software development Deployment',
-        //     platform:'Web application',
-        //     techstack:' Python,keras,Tensor flow,Pytorch',
-        //     name: "",
-        //     designation: "",
-        //     company: "",
-        //     clientSpeak:""
-        // },
+        {
+            id:'content6',
+            caseTitle:'Machine vision for manufacturing quality control',
+            caseTitleContent:'A sheet metal pressings manufacturing company.',
+            stampImage: "",
+            caseImage:'/portfolio/hrPurple.png',
+            challenges:'The components require intricate visual inspection on parts with throughput over 5 Million pcs/month. Manual inspection was tedious and accuracy was dropping on fatigue .',
+            challengePoints:'',
+            solution:'Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!',
+            solutionPoints:'',
+            services:'Software architecture consulting Software development Deployment',
+            platform:'Web application',
+            techstack:' Python,keras,Tensor flow,Pytorch',
+            name: "",
+            designation: "",
+            company: "",
+            clientSpeak:""
+        },
         {
             id:'content7',
             caseTitle:' Credit risk assessment and risk profiling ',
@@ -199,8 +199,8 @@ export default function PortfolioDetails(){
     const [salesImage, setSalesImage] = useState('/dashboard/salesGrey.png');
     const [agriColor, setAgriColor] = useState('#7f7f7f');
     const [agriImage, setAgriImage] = useState('/dashboard/agriGrey.png');
-    // const [hrColor, setHrColor] = useState('#7f7f7f');
-    // const [hrImage, setHrImage] = useState('/dashboard/hrGrey.png');
+    const [hrColor, setHrColor] = useState('#7f7f7f');
+    const [hrImage, setHrImage] = useState('/dashboard/hrGrey.png');
     const [finColor, setFinColor] = useState('#7f7f7f');
     const [finImage, setFinImage] = useState('/dashboard/finGrey.png');
     const section1=()=>{
@@ -214,8 +214,8 @@ export default function PortfolioDetails(){
         window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
         window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
 
-        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
-        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
+        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
+        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
 
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
@@ -223,11 +223,11 @@ export default function PortfolioDetails(){
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesColor("white"): setSalesColor("#7f7f7f");
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY > 4500 && window.scrollY <=5200   ? setAgriColor("white"): setAgriColor("#7f7f7f");
-        window.scrollY > 4500 && window.scrollY <=5200   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
+        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriColor("white"): setAgriColor("#7f7f7f");
+        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
 
-        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
-        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
+        window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
+        window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
 
         window.scrollY > 5200   ? setFinColor("white"): setFinColor("#7f7f7f");
         window.scrollY > 5200   ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
@@ -239,7 +239,6 @@ export default function PortfolioDetails(){
     
     return(
         <div>
-            
             <div className="desktopCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
                     <div className='dashboard'>
@@ -275,10 +274,10 @@ export default function PortfolioDetails(){
                                 <div><img src={agriImage} className="w-8"/></div>
                                 <div style={{color:agriColor}} className='flex items-center'>Agri tech</div>
                             </div>
-                            {/* <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
+                            <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
                                 <div><img src={hrImage} className="w-8"/></div>                       
                                 <div style={{color:hrColor}} className='flex items-center'>Hr tech</div>
-                            </div> */}
+                            </div>
                             <div className='menuRowDetails' onClick={() =>handleMenuClick('content7')}>
                                 <div><img src={finImage} className="w-8"/></div>
                                 <div style={{color:finColor}}className='flex items-center'>Fin tech</div>
@@ -394,33 +393,35 @@ export default function PortfolioDetails(){
                     
                 </div>
             </div>
-
+           
+           
             <div className="mobileCaseStudy">
-            <div id="portfolioDetails" className='fontFamily'>
-                    <div className='caseDetails_mobile'>
-                        <div className='caseHeader_mobile'>
-                                {/* <div className='caseHeaderContent_mobile pb-11'><img src="portfolio/wellnessPurple.png" className='w-48 pt-5'/></div> */}
-                                <div className='caseHeaderTitle_mobile pl-5 pt-15'>Health and wellness web  and mobile app</div>
-                            {/* </div> */}
-                                <div className='caseHeaderIcon_mobile pt-11 pb-11 pl-2'>Anyo is a health and wellness app tackling the important challenge of mental well being .</div>
+             <div id="portfolioDetails" className='fontFamily'>
+                    {portfolio.map((item)=>(
+                    <div key ={item.id} className='caseDetails_mobile' id={item.id}>
+                        <div className='caseHeader_mobile'>                                
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>{item.caseTitle} </div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>{item.caseTitleContent}</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Anyo founding team were in search of one stop solution - technical consulting and development for their product that had</div>
+                                <div className='challengesContent_mobile'>{item.challenges}</div>
                                 <div className='flex flex-col pt-6'>
-                                        <div className='challengePoints_mobile'>Live chat.</div>
-                                        <div className='challengePoints_mobile'>Video audio Streaming.</div>
-                                        <div className='challengePoints_mobile'>Chat bot integration.</div>
+                                    {item.challengePoints.split(',').map((challenge,index)=>(
+                                        <div key={index} className='challengePoints_mobile'>{challenge}</div>
+                                    ))}
                                 </div>
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract's team of architects and developers built the anyo mobile app, their four web portals within 5 months. </div>
-                                <div className='solutionPoints_mobile pt-5'>Architecture.</div>
-                                <div className='solutionPoints_mobile'>Framework.</div>
-                                <div className='solutionPoints_mobile'>Choice of Tools.</div>
+                                <div className='challengesContent_mobile'>{item.solution} </div>
+                                <div className='flex flex-col pt-6'>
+                                    {item.solutionPoints.split(',').map((solution,index)=>(
+                                        <div key={index} className='solutionPoints_mobile'>{solution}</div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <div className='BottomContainer_mobile pt-10'>
@@ -431,71 +432,72 @@ export default function PortfolioDetails(){
                                     <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
-                                    {/* <div className='serviceUsed flex flex-col'>
-                                    {item.services.split(',').map((service,index)=>(
-                                        <div key={index} className='serviceText' >{service}</div>
-                                    ))}
-                                    </div> */}
                                 </div>
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Mobile and Web application</div>
-                                    
+                                    <div className='PlatformText_mobile pt-2'>Mobile</div>
+                                    <div className='PlatformText_mobile pt-2'>and</div>
+                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-10">
-                            <div className="techstackContainer_mobile pt-5">
-                                    <div className='techImageTitle '>
+                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                            <div className="techstackContainer_mobile">
+                                    <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="caseStudies/tech-service.png" className='w-16 pt-1'/></div>
                                         <div className='serviceHeader_mobile pt-2'>Techstack</div>
                                     </div>
-                                    <div  className='techContent_mobile'>        
-                                        <div className='techText_mobile'>Java</div>
-                                        <div className='techText_mobile'>Springboot</div>
-                                        <div className='techText_mobile'>Postgres</div>
-                                        <div className='techText_mobile'>nginx</div>
-                                        <div className='techText_mobile '>Kafka</div>
-                                        <div className='techText_mobile'>Elastic search</div>
-                                        <div className='techText_mobile'>Google APIs</div>
-                                        <div className='techText_mobile'>CI/CD</div>
-                                        <div className='techText_mobile '>Angular</div>
-                                        <div className='techText_mobile'>Kibana</div>
-                                         {/* <div className='techText'>Keras</div>
-                                        // <div className='techText'>Tensor flow</div>
-                                        // <div className='techText'>Pytorch</div>
-                                        // <div className='techText'></div> */}
+                                <div  className='techContent_mobile'>
+                                    {item.techstack.split(',').map((stack,index)=>(
+                                    
+                                        <div key={index} className='techText_mobile'>{stack}</div>
+                                    
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                        <div className='testimonialContainer'>
-                            {/* <div className='engagementContainer'>
-                                <div className="challenges">Phase of Engagement</div>
-                                <div className='challengesContent flex items-center justify-center'>Growth</div>
-                            </div> */}
-                            <div className='clientContainer md:gap-4'>
-                            {/* <div className='flex pt-2'>
-                                <div className="challenges">Clients Speak</div>
-                            </div> */}
-                            <div className='flex pt-2 flex-row md:gap-3'>
-                                {/* <div className=""><i className="quotes"></i></div> */}
-                                {/* <div className='flex items-center'><span className='title whitespace-nowrap'>{item.name} - {item.designation}, </span><span className='title highlight '>{item.company}</span></div> */}
+                        <div className="pb-5">
+                            {item.clientSpeak?.length !== 0 && (
+                            <div className='testimonialContainer_mobile'>
+                                <div className='clientContainer md:gap-4'>
+                                <div className='flex pt-2'>
+                                    <div className="challenges_mobile">Clients Speak</div>
+                                </div>
+                                <div className='flex pt-2 flex-col md:gap-3'>
+                                    <div className="pb-5"><i className="quotes"></i></div>
+                                    <div className='flex flex-col items-center pb-5'>
+                                        <div className='title_mobile whitespace-nowrap'>{item.name} - {item.designation}, </div>
+                                        <div className='title_mobile highlight pl-3'>{item.company}</div>
+                                    </div>
+                                </div>
+                                <div className="challengesContent_mobile pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div>
+                                </div>
                             </div>
-                            {/* <div className="challengesContent">We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.  The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.</div> */}
-                            {/* <div className="challengesContent pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div> */}
-                            </div>
+                            )}
                         </div>
-                            {/* <div className='flex items-center justify-center'>
-                                <img src="/output/sales.png" className=''/>
-                            </div> */}
-                            <div className='flex items-center justify-center'>
-                                <img src="/output/anyoFinalOutput.png" className=''/>
+                        
+                        {item.id === "content2" && (
+                            <div className="pl-5">
+                                <div className='flex items-center justify-center'>
+                                    <img src="/output/sales.png" className=''/>
+                                </div>
                             </div>
+                            
+                        
+                        )}
+                        {item.id === "content1" && (
+                            <div className="pl-5">
+                                <div className='flex items-center justify-center'>
+                                    <img src="/output/anyoFinalOutput.png" className=''/>
+                                </div>
+                            </div>
+                        )}
                         
                         
-                        <hr className='separatorPortfolio'></hr> 
+                        {/* <hr className='separatorPortfolio'></hr>  */}
                     </div>  
+                    ))} 
                     
                 </div>
             </div>

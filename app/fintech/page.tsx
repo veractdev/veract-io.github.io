@@ -10,8 +10,10 @@ const Page = () => {
         <div className="pt-20">
             <Tab />
         </div>
-        <FinTech />
-        {/* <Footer /> */}
+        <div className="pt-20">
+            <FinTech />
+        </div>
+        <Footer />
     </div>
 };
 
