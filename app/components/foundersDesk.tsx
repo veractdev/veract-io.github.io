@@ -1,5 +1,6 @@
 'use client';
 import '../styles/styles.css';
+import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 
@@ -42,8 +43,8 @@ export default function FoundersDesk() {
                     </div>     
                     <div className="right-column flex flex-col md:gap-4 foundersContent">
                     <div className={`scroll-animationY ${isVisible ? 'visibleFounderContent' : ''}`}>
-                        <div><label className=" firstPara" >After my stints with leading software companies, Veract was created out of my love for engineering and using technology to drive efficiency. We hire and develop people who share our passion for engineering.</label></div>
-                        <div className="secondPara">At Veract you will directly work with passionate engineers who are keen to employ their superpowers to solve your challenges.</div>
+                        <div><label className=" firstPara" >Veract was created out of our love for engineering and using technology to drive efficiency. We hire and develop people who share our passion for engineering.</label></div>
+                        <div className="secondPara">At Veract you will directly work with passionate UX trained engineers who are keen to employ their superpowers to solve your challenges.</div>
                         <div className="thirdPara">I look forward to working with you and showcase our technical problem solving and software skills.</div>
                     </div>
                     </div>

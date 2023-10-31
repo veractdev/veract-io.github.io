@@ -1,5 +1,6 @@
 'use client';
 import '../styles/styles.css';
+import '../styles/mediaQuery.css';
 import '../styles/cube.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
@@ -38,14 +39,16 @@ export default function Banner() {
 
     return (
         <div className='bannerWidth flex flex-row  items-center justify-center'>
-            <div className="flex flex-col items-center justify-center customTextLandingPage ">
+            <div className="flex flex-col items-center justify-center customTextLandingPage">
                 {/* <div className="pl-8 flex flex-col customTextLandingPage md:gap-6 fontFamily"> */}
                 {/* <div>Custom</div> */}
                 {/* <div className=" whitespace-nowrap"  ><span className='WebAnimation'>Web</span> <span className='highlight-pipe'><span className='pipeMobile'>|</span></span><span className="MobileAnimation"> Mobile </span><span className='highlight-pipe'><span className="pipeAi">|</span></span><span className='aiAnimation'> AI Solutions</span></div> */}
                 <div className=" whitespace-nowrap paddingWebContent"  >Web <span className='highlight-pipe'>| </span> Mobile <span className='highlight-pipe'>|</span> AI & ML </div>
                 <div className='mobileContentBanner'>
                 <div className="  flex flex-col pt-32">
-                    <div className="mobileBannerText flex items-center justify-center"> Software development</div>
+                    <div className="mobileBannerText flex items-center justify-center"><span style={{color: "white"}}>Custom</span></div>
+                    <div className="mobileBannerText flex items-center justify-center whitespace-nowrap"><span style={{color: "white"}}>software development</span></div>
+                    <div className="mobileBannerText flex items-center justify-center">as a service</div>
                     {/* <div className="mobileBannerText whitespace-nowrap flex items-center justify-center">as a Service  </div> */}
                 </div>
                 </div>

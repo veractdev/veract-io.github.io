@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/clients.css';
+import '../styles/mediaQuery.css';
 import { useEffect, useState } from 'react';
 
 export default function Carousel() {

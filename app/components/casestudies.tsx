@@ -1,5 +1,7 @@
 'use client';
+import Link from 'next/link';
 import '../styles/styles.css';
+import '../styles/mediaQuery.css';
 import { useEffect, useState } from 'react';
 // import RotatingCircle from './rotatingCases'
 
@@ -46,9 +48,12 @@ export default function Casestudies() {
                 <div className='desktopPortfolio'>
                 <div className='items-list flex  flex-wrap pt-1 pb-4   '>
                 {/* manufacturingHover */}
-                    <div className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4' onClick={() => scrollToSection("ContactUS")}>
+                    <div className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4' >
+                    {/* onClick={() => scrollToSection("ContactUS")} */}
                     
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}>
+
+                            
                      
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
@@ -56,12 +61,12 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4 '>MANUFACTURING</div>
                                 </div>
                                 <div className=''>
-                                {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc manufacturingDesc'>
                                 Digitizing manufacturing process in low tech adoption workforce in high dust & temp environment.</div>        
-                            </div>
+                        </div>
                           
                         {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
                     </div>  
@@ -75,7 +80,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>WELLNESS</div>
                                 </div>
                                 <div className=''>
-                                  {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                  <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc wellnessDesc'>
@@ -96,7 +101,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>SALES</div>
                                 </div>
                                 <div className=''>
-                                  {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                  <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc salesDesc'>
@@ -115,7 +120,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4' >AGRI TECH</div>
                                 </div>
                                 <div className=''>
-                                  {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                  <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc agriDesc'>
@@ -134,7 +139,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>HR TECH</div>
                                 </div>
                                 <div className=''>
-                                  {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                  <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc hrDesc'>
@@ -153,7 +158,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>FINTECH</div>
                                 </div>
                                 <div className=''>
-                                 {/* <img src="images/info.png" className='w-6 h-6'></img>  */}
+                                 <img src="images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc fintechDesc'>
@@ -166,7 +171,7 @@ export default function Casestudies() {
                 </div>
                
                 </div>
-                <div className='desktopPortfolio' id="Testimonials"></div>
+                {/* <div className='desktopPortfolio' id="Testimonials"></div> */}
                 <div className='mobilePortfolio'>
                 <div className='items-list flex  flex-wrap pt-1 pb-4   '>
                 {/* manufacturingHover */}
@@ -199,7 +204,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>WELLNESS</div>
                                 </div>
                                 <div className='infoIconMobile' onClick={() => scrollToSection("ContactUS")}>
-                                  <img src="images/info.png" className='w-4 h-4'></img> 
+                                <img src="images/info.png" className='flex items-center justify-center  w-4 h-4'></img>  
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc wellnessDesc'>
@@ -287,10 +292,11 @@ export default function Casestudies() {
                         {/* <div className='fintechArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
                     </div>
                 </div>
-                <div className='' id="Testimonials"></div>
                 </div>
                 
             </div>
+            <div className='' id="Testimonials"></div>
+
         </div>
     )
 }

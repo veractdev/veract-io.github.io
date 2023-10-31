@@ -1,4 +1,5 @@
 import '../styles/styles.css';
+import '../styles/mediaQuery.css';
 
 
 export default function veractDetails(){
@@ -51,16 +52,16 @@ export default function veractDetails(){
             <div className='contactHeader  '>Veract Consultancy Pvt. Ltd</div>
             </div>  
             <div className='flex flex-row justify-between pt-3 pl-10 pr-10 md:gap-3'>
-                <div className='flex flex-col'>
+                {/* <div className='flex flex-col'> */}
                     
-                    <div className='contactText'><span className='contactHeader'>Regd.office:</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
+                    <div className='contactText pt-6'><span className='contactHeader'>Regd.office:</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
                     <div className="flex flex-row whitespace-nowrap md:gap-4 ">
-                    <div className='contactText'><span className='contactHeader'>CIN:</span> U74999TN2016PTC112991</div>
-                    <div className='contactText'><span className='contactHeader'>GSTIN:</span> 33AAFCV7102E1ZQ</div>
+                    {/* <div className='contactText'><span className='contactHeader'>CIN:</span> U74999TN2016PTC112991</div>
+                    <div className='contactText'><span className='contactHeader'>GSTIN:</span> 33AAFCV7102E1ZQ</div> */}
                 </div>
-                </div>
+                {/* </div> */}
                 
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                     <div className="flex flex-row md:gap-2">
                         <div className='contactHeader'>Email:</div>
                         <div className='contactText'>info@veractconsultancy.in</div>

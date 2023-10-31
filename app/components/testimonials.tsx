@@ -2,6 +2,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import '../styles/testimonials.css';
+import '../styles/mediaQuery.css';
 // import '../styles/styles.css';
 import { useEffect, useState } from 'react';
 
@@ -9,11 +10,11 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Salil Nair",
-      designation: "CTO",
-      company: "Agrosperity Tech Solutions",
-      image: "images/salilModified.png",
-      content: "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.  The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements."
+      name: "Hare Priyaa Rajendran",
+      designation: "Founder",
+      company: "Geeraj Business Solutions",
+      image: "images/harepriyaa.jpeg",
+      content: "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting."
     },
     {
       id: 2,
@@ -25,12 +26,13 @@ export default function Testimonials() {
     },
     {
       id: 3,
-      name: "Hare Priyaa Rajendran",
-      designation: "Founder",
-      company: "Geeraj Business Solutions",
-      image: "images/harepriyaa.jpeg",
-      content: "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting."
-    },
+      name: "Salil Nair",
+      designation: "CTO",
+      company: "Agrosperity Tech Solutions",
+      image: "images/salilModified.png",
+      content: "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.  The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements."
+    }
+   
     // {
     //   id: 4,
     //   name: "Name4",

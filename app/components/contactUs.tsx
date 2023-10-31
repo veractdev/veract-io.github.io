@@ -1,4 +1,5 @@
 import '../styles/styles.css'
+import '../styles/mediaQuery.css';
 import React from 'react';
 
 export default function ContactUs(){
