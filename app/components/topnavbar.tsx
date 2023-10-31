@@ -79,36 +79,36 @@ export default function TopnavBar() {
           <ul>
             <div className={`nav-list ${isOpen ? "open" : "MediaHidden"}`}>
               <div className="flex nav-list fontFamilyNav  navFonts md:gap-10">
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                     <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                      <div className="flex items-center justify-center navbarCursor whitespace-nowrap" onClick={() => scrollToSection('Home')}><a className="home " onClick={handleToggle}>Home</a></div>
-                      <div><hr className="homeHr"></hr></div>
+                      <div className='flex items-center justify-center navbarCursor whitespace-nowrap menu-item' onClick={handleToggle}><div onClick={() => scrollToSection("Home")}>Home</div></div>
+                      <div><hr className="menu-item-separator"></hr></div>
                     </div>
                   </li>
                 </div>
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                     <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                      <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap' onClick={handleToggle}><div onClick={() => scrollToSection("Founder's")}>Founder's desk</div></div>
-                      <div> <hr className="founderHr"></hr></div>
+                      <div className='flex items-center justify-center navbarCursor whitespace-nowrap menu-item' onClick={handleToggle}><div onClick={() => scrollToSection("Founder's")}>Founder's desk</div></div>
+                      <div> <hr className="menu-item-separator"></hr></div>
                     </div>
                   </li>
                 </div>
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                     <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                      <div className="flex items-center justify-center navbarCursor whitespace-nowrap" onClick={() => scrollToSection("Services")}><a className="services " onClick={handleToggle}><span onClick={() => scrollToSection("Services")}>Services</span></a></div>
-                      <div><hr className="serviceHr"></hr></div>
+                      <div className="flex items-center justify-center navbarCursor whitespace-nowrap" onClick={() => scrollToSection("Services")}><a className="services menu-item" onClick={handleToggle}><span onClick={() => scrollToSection("Services")}>Services</span></a></div>
+                      <div><hr className="menu-item-separator"></hr></div>
                     </div>
                   </li>
                 </div>
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                     <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
                       {/* <div className="flex items-center founder justify-center navbarCursor whitespace-nowrap" onClick={() => scrollToSection("Portfolio")}><a  className="services " onClick={handleToggle}><span onClick={() => scrollToSection("Portfolio")}>Case Studies</span></a></div> */}
-                      <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap' onClick={handleToggle}><div onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div>
-                      <div><hr className="founderHr"></hr></div>
+                      <div className='flex items-center justify-center navbarCursor whitespace-nowrap menu-item' onClick={handleToggle}><div onClick={() => scrollToSection("Portfolio")}>Case Studies</div></div>
+                      <div><hr className="menu-item-separator"></hr></div>
                     </div>
                   </li>
                 </div>
@@ -123,23 +123,22 @@ export default function TopnavBar() {
                   </div>
                 </li>
                 </div> */}
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                     <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                      <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap' onClick={handleToggle}><div onClick={() => scrollToSection("Testimonials")}>Clients speak</div></div>
-                      <div><hr className="testimonialsHr"></hr></div>
+                      <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap menu-item' onClick={handleToggle}><div onClick={() => scrollToSection("Testimonials")}>Clients speak</div></div>
+                      <div><hr className="menu-item-separator"></hr></div>
                     </div>
                   </li>
                 </div>
-                <div>
+                <div className='w-full'>
                   <li className={`nav-item ${isOpen ? "visible pl-8" : "MediaHidden"}`}>
                     <div className="mobileTalk">
-                      <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily whitespace-nowrap" onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
+                      <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily whitespace-nowrap menu-item" onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
                     </div>
                   </li>
                 </div>
               </div>
-
             </div>
           </ul>
         </nav>
