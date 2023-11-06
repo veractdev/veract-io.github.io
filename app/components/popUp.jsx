@@ -1,6 +1,6 @@
 // components/Popup.js
 import React from 'react';
-import styles from './Popup.module.css';
+// import styles from './Popup.module.css';
 
 const Popup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

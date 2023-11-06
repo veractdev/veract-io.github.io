@@ -24,7 +24,7 @@ export default function Clients() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow: slidesToShow,                                                                
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 500,

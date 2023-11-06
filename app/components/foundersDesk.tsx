@@ -36,16 +36,22 @@ export default function FoundersDesk() {
                 <div className={`scroll-animationY ${isVisible ? 'visibleFounderProfile' : ''}`}>
                     <div className="left-column">
                    
-                      <div className="founderProfileWidth"><img src="founderProfileCircle.png" className='founderProfileChange' /></div>
+                      <div className="founderProfileWidth pb-2"><img src="founderProfileCircle.png" className='founderProfileChange' /></div>
                    
                     <div className='founderDetails whitespace-nowrap pt-2'><label className='title'>PREETHY SRIKANTHAN, <span className='title highlight'>Founder</span></label> </div>
                     </div>
                     </div>     
                     <div className="right-column flex flex-col md:gap-4 foundersContent">
                     <div className={`scroll-animationY ${isVisible ? 'visibleFounderContent' : ''}`}>
+                      <div className="paragraph_padding pb-2">
                         <div><label className=" firstPara" >Veract was created out of our love for engineering and using technology to drive efficiency. We hire and develop people who share our passion for engineering.</label></div>
+                      </div>
+                      <div className="paragraph_padding pb-2">
                         <div className="secondPara">At Veract you will directly work with passionate UX trained engineers who are keen to employ their superpowers to solve your challenges.</div>
+                      </div>
+                      <div className="paragraph_padding">
                         <div className="thirdPara">I look forward to working with you and showcase our technical problem solving and software skills.</div>
+                      </div>
                     </div>
                     </div>
                    

@@ -244,7 +244,7 @@ export default function AgriTech(){
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture finance ecosystem web application </div>
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture Finance Ecosystem Web Application </div>
                                 <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>KiVi by agrosperity is a phygital platform that seamlessly enables farmers and agri, rural entrepreneurs to access timely and efficient capital.</div>
 
                         </div>
@@ -272,14 +272,14 @@ export default function AgriTech(){
                         <div className='BottomContainer_mobile pt-10'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/vehicle.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
                                     <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>
                                 <div className='platformContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/web.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
                                     <div className='PlatformText_mobile pt-2'>Mobile</div>
                                     <div className='PlatformText_mobile pt-2'>and</div>
@@ -290,20 +290,28 @@ export default function AgriTech(){
                         <div className="pt-2.5 pl-5 pr-5 pb-10">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
-                                        <div className='ServiceImage'><img src="caseStudies/tech-service.png" className='w-16 pt-1'/></div>
+                                        <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
                                         <div className='serviceHeader_mobile pt-2'>Techstack</div>
                                     </div>
                                 <div className='techContent_mobile'>
-                                    <div className='techText_mobile'>Java</div>
-                                    <div className='techText_mobile'>Springboot</div>
-                                    <div className='techText_mobile'>Postgres</div>
-                                    <div className='techText_mobile'>nginx</div>
-                                    <div className='techText_mobile'>kafka</div>
-                                    <div className='techText_mobile'>Elastic Search</div>
-                                    <div className='techText_mobile'>Google APIs</div>
-                                    <div className='techText_mobile'>CI/CD</div>
-                                    <div className='techText_mobile'>Angular</div>
-                                    <div className='techText_mobile'>Kibana</div>
+                                <div className="flex flex-row justify-around pt-6">
+                                        <div className="flex flex-col md:gap-6">
+                                            <div className='techText_mobile pb-3'>Java</div>
+                                            <div className='techText_mobile pb-3'>Springboot</div>
+                                            <div className='techText_mobile pb-3'>Postgres</div>
+                                            <div className='techText_mobile pb-3'>nginx</div>
+                                            <div className='techText_mobile pb-3'>kafka</div>
+
+                                        </div>
+                                        <div className="flex flex-col md:gap-6">
+                                            <div className='techText_mobile pb-3'>Elastic Search</div>
+                                            <div className='techText_mobile pb-3'>Google APIs</div>
+                                            <div className='techText_mobile pb-3'>CI/CD</div>
+                                            <div className='techText_mobile pb-3'>Angular</div>
+                                            <div className='techText_mobile pb-3'>Kibana</div>
+
+                                        </div>     
+                                    </div>
                                 </div>
                             </div>
                         </div>

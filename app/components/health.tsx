@@ -1,9 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-
-
-import DashboardDetails from './dashboardPortfolio';
-
 import '../styles/styles.css';
 import '../styles/mediaQuery.css'
 import '../styles/testimonials.css';
@@ -52,7 +48,7 @@ export default function Health(){
             solutionPoints:'',
             services:'Software architecture consulting Software development Deployment',
             platform:'Web application',
-            techstack:' Bootstrap,Redis,Express.js,Indexdb,Jquery,Google API,Mongodb',
+            techstack:' Bootstrap,Redis,Express.js,Indexdb,Jquery,Google API,MongoDB',
             name: "",
             designation: "",
             company: "",
@@ -88,7 +84,7 @@ export default function Health(){
             solutionPoints:'',
             services:'Software architecture consulting Software development Deployment',
             platform:'Web application',
-            techstack:'Bootstrap,Express.js,Jquery,Mongodb,Redis,Indexdb,Google API',
+            techstack:'Bootstrap,Express.js,Jquery,MongoDB,Redis,Indexdb,Google API',
             name: "",
             designation: "",
             company: "",
@@ -124,7 +120,7 @@ export default function Health(){
         //     solutionPoints:'',
         //     services:'Software architecture consulting Software development Deployment',
         //     platform:'Web application',
-        //     techstack:' Bootstrap,Redis,Express.js,Indexeddb,Jquery,Google API,Mongodb',
+        //     techstack:' Bootstrap,Redis,Express.js,Indexeddb,Jquery,Google API,MongoDB',
         //     name: "",
         //     designation: "",
         //     company: "",
@@ -235,7 +231,6 @@ export default function Health(){
     useEffect(()=>{
         window.addEventListener("scroll",section1);
     })
-
     
     return(
         <div>
@@ -243,8 +238,13 @@ export default function Health(){
             <div className="mobileCaseStudy">
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
+                        <div className="pl-5">
+                            <div className='flex items-center justify-center'>
+                                <img src="/output/anyoFinalOutput.png" className=''/>
+                            </div>
+                        </div>
                         <div className='caseHeader_mobile'>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Health and wellness web  and mobile app. </div>
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Health and Wellness Web and Mobile App. </div>
                                 <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>Anyo is a health and wellness app tackling the important challenge of mental well being .</div>
 
                         </div>
@@ -271,14 +271,14 @@ export default function Health(){
                         <div className='BottomContainer_mobile pt-10'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/vehicle.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
                                     <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>
                                 <div className='platformContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/web.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
                                     <div className='PlatformText_mobile pt-2'>Mobile</div>
                                     <div className='PlatformText_mobile pt-2'>and</div>
@@ -289,28 +289,32 @@ export default function Health(){
                         <div className="pt-2.5 pl-5 pr-5 pb-10">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
-                                        <div className='ServiceImage'><img src="caseStudies/tech-service.png" className='w-16 pt-1'/></div>
+                                        <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
                                         <div className='serviceHeader_mobile pt-2'>Techstack</div>
                                     </div>
+                                    
                                 <div className='techContent_mobile'>
-                                    <div className='techText_mobile'>Java</div>
-                                    <div className='techText_mobile'>Springboot</div>
-                                    <div className='techText_mobile'>Postgres</div>
-                                    <div className='techText_mobile'>nginx</div>
-                                    <div className='techText_mobile'>Kafka</div>
-                                    <div className='techText_mobile'>Elastic search</div>
-                                    <div className='techText_mobile'>Google APIs</div>
-                                    <div className='techText_mobile'>CI/CD</div>
-                                    <div className='techText_mobile'>Angular</div>
-                                    <div className='techText_mobile'>Kibana</div>
+                                    
+                                <div className="flex flex-row justify-around pt-6">
+                                    <div className="flex flex-col md:gap-6">
+                                        <div className='techText_mobile pb-3'>Flutter</div>
+                                        <div className='techText_mobile pb-3'>Angular</div>
+                                        <div className='techText_mobile pb-3'>Loopback</div>
+                                        <div className='techText_mobile pb-3'>MongoDB</div>
+                                        <div className='techText_mobile pb-3'>Elastic Search</div>
+                                    </div>  
+                                    {/* <div className="flex flex-col">
+                                        <div className='techText_mobile pb-3'>Elastic search</div>
+                                        <div className='techText_mobile pb-3'>Google APIs</div>
+                                        <div className='techText_mobile pb-3'>CI/CD</div>
+                                        <div className='techText_mobile pb-3'>Angular</div>
+                                        <div className='techText_mobile pb-3'>Kibana</div>
+                                    </div>      */}
+                                </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="pl-5">
-                            <div className='flex items-center justify-center'>
-                                <img src="/output/anyoFinalOutput.png" className=''/>
-                            </div>
-                        </div>
+                        
                     </div> 
                     
                 </div>

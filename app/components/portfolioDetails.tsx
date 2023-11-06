@@ -7,12 +7,39 @@ import DashboardDetails from './dashboardPortfolio';
 import '../styles/styles.css';
 import '../styles/mediaQuery.css'
 import '../styles/testimonials.css';
+import { usePathname, useSearchParams,useRouter } from 'next/navigation'
 
 export default function PortfolioDetails(){
+
+    const router = useRouter();
+    const searchParams = useSearchParams()
+    console.log(searchParams?.get("id"));
+    let section = searchParams?.get("id") ?? "";
+
+    useEffect(() => {
+        if (section) {
+            console.log(section);
+          const targetSection = section;
+    
+          if (typeof targetSection === 'string') {
+            const sectionElement = document.getElementById(targetSection);
+    
+            if (sectionElement) {
+              sectionElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+          window.history.replaceState(null, '', '/CaseStudyPage')
+
+        }
+      }, []);
+ 
     const scrollToSection = (sectionId:string) => {
         const section = document.getElementById(sectionId);
         if (section) {
           section.scrollIntoView({ behavior: 'smooth' });
+        }
+        if(section) {
+
         }
       };
     
@@ -24,7 +51,7 @@ export default function PortfolioDetails(){
     const portfolio=[
         {
             id:'content1',
-            caseTitle:'Health and wellness web  and mobile app ',
+            caseTitle:'Health and Wellness Web  and Mobile App ',
             caseTitleContent:'Anyo is a health and wellness app tackling the important challenge of mental well being .',
             stampImage: "",
             caseImage:'portfolio/wellnessPurple.png',
@@ -34,7 +61,7 @@ export default function PortfolioDetails(){
             solutionPoints:'Architecture.,Framework.,Choice of tools.',
             services:'Software architecture consulting Software development Deployment',
             platform:'Mobile and Web application',
-            techstack:' Java,Springboot,Postgres,nginx,Kafka,Elastic search,Google APIs,CI/CD,Angular,Kibana',
+            techstack:'Flutter, Angular, Loopback, MongoDB, Elastic Search',
             name: "",
             designation: "",
             company: "",
@@ -42,7 +69,7 @@ export default function PortfolioDetails(){
         },
         {
             id:'content2',
-            caseTitle:'Sales enquiry and quote management  ',
+            caseTitle:'Sales Enquiry and Quote Management  ',
             caseTitleContent:'Rajdeep is a multi principal,multi product,multi location industrial products distributor based out of pune.  ',
             stampImage: "",
             caseImage:'portfolio/salesPurple.png',
@@ -52,7 +79,7 @@ export default function PortfolioDetails(){
             solutionPoints:'',
             services:'Software architecture consulting Software development Deployment',
             platform:'Web application',
-            techstack:' Bootstrap,Redis,Express.js,Indexdb,Jquery,Google API,Mongodb',
+            techstack:' Bootstrap,Redis,Express.js,Indexdb,Jquery,Google API,MongoDB',
             name: "",
             designation: "",
             company: "",
@@ -60,7 +87,7 @@ export default function PortfolioDetails(){
         },
         {
             id:'content3',
-            caseTitle:'Machine vision for manufacturing quality control',
+            caseTitle:'Machine Vision for Manufacturing Quality Control',
             caseTitleContent:'A sheet metal pressings manufacturing company.',
             stampImage: "portfolio/artificial-intelligence.png",
             caseImage:'factoryCase.png',
@@ -78,7 +105,7 @@ export default function PortfolioDetails(){
         },
         {
             id:'content4',
-            caseTitle:' Quality documentation for metal foundry   ',
+            caseTitle:' Quality Documentation for Metal Foundry   ',
             caseTitleContent:'Grey iron and ductile iron foundry looking for an automated quality report generation for customer submission . ',
             stampImage: "",
             // caseImage:'portfolio/fintechPurple.png',
@@ -88,7 +115,7 @@ export default function PortfolioDetails(){
             solutionPoints:'',
             services:'Software architecture consulting Software development Deployment',
             platform:'Web application',
-            techstack:'Bootstrap,Express.js,Jquery,Mongodb,Redis,Indexdb,Google API',
+            techstack:'Bootstrap,Express.js,Jquery,MongoDB,Redis,Indexdb,Google API',
             name: "",
             designation: "",
             company: "",
@@ -124,7 +151,7 @@ export default function PortfolioDetails(){
         //     solutionPoints:'',
         //     services:'Software architecture consulting Software development Deployment',
         //     platform:'Web application',
-        //     techstack:' Bootstrap,Redis,Express.js,Indexeddb,Jquery,Google API,Mongodb',
+        //     techstack:' Bootstrap,Redis,Express.js,Indexeddb,Jquery,Google API,MongoDB',
         //     name: "",
         //     designation: "",
         //     company: "",
@@ -132,7 +159,7 @@ export default function PortfolioDetails(){
         // },
         {
             id:'content5',
-            caseTitle:'Agriculture finance ecosystem web application ',
+            caseTitle:'Agriculture Finance Ecosystem Web Application ',
             caseTitleContent:'KiVi by agrosperity is a phygital platform that seamlessly enables farmers and agri, rural entrepreneurs to access timely and efficient capital.',
             stampImage: "",
             caseImage:'portfolio/agriPurple.png',
@@ -148,27 +175,27 @@ export default function PortfolioDetails(){
             company: "Agrosperity Tech Solutions",
             clientSpeak:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.",
         },
+        // {
+        //     id:'content6',
+        //     caseTitle:'Machine vision for manufacturing quality control',
+        //     caseTitleContent:'A sheet metal pressings manufacturing company.',
+        //     stampImage: "",
+        //     caseImage:'/portfolio/hrPurple.png',
+        //     challenges:'The components require intricate visual inspection on parts with throughput over 5 Million pcs/month. Manual inspection was tedious and accuracy was dropping on fatigue .',
+        //     challengePoints:'',
+        //     solution:'Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!',
+        //     solutionPoints:'',
+        //     services:'Software architecture consulting Software development Deployment',
+        //     platform:'Web application',
+        //     techstack:' Python,keras,Tensor flow,Pytorch',
+        //     name: "",
+        //     designation: "",
+        //     company: "",
+        //     clientSpeak:""
+        // },
         {
             id:'content6',
-            caseTitle:'Machine vision for manufacturing quality control',
-            caseTitleContent:'A sheet metal pressings manufacturing company.',
-            stampImage: "",
-            caseImage:'/portfolio/hrPurple.png',
-            challenges:'The components require intricate visual inspection on parts with throughput over 5 Million pcs/month. Manual inspection was tedious and accuracy was dropping on fatigue .',
-            challengePoints:'',
-            solution:'Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!',
-            solutionPoints:'',
-            services:'Software architecture consulting Software development Deployment',
-            platform:'Web application',
-            techstack:' Python,keras,Tensor flow,Pytorch',
-            name: "",
-            designation: "",
-            company: "",
-            clientSpeak:""
-        },
-        {
-            id:'content7',
-            caseTitle:' Credit risk assessment and risk profiling ',
+            caseTitle:' Credit Risk Assessment and Risk Profiling ',
             caseTitleContent:'Northern Arc Capital is a platform in the financial services sector set up primarily with the mission of catering to the diverse credit requirements of under-served households and businesses.',
             stampImage: "",
             caseImage:'portfolio/fintechPurple.png',
@@ -208,14 +235,14 @@ export default function PortfolioDetails(){
         window.scrollY === 0  || window.scrollY < 1400  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
         window.scrollY < 1400  || window.scrollY === 0  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
 
-        window.scrollY >= 1400 && window.scrollY < 3000  ? setSalesColor("white"): setSalesColor("#7f7f7f");
-        window.scrollY >= 1400 && window.scrollY < 3000  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
+        window.scrollY >= 1400 && window.scrollY < 2600 ? setSalesColor("white"): setSalesColor("#7f7f7f");
+        window.scrollY >= 1400 && window.scrollY < 2600  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
+        window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
+        window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
 
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
-        window.scrollY > 3000 && window.scrollY <= 3800 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
+        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
+        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
 
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
         // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
@@ -223,20 +250,19 @@ export default function PortfolioDetails(){
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesColor("white"): setSalesColor("#7f7f7f");
         // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriColor("white"): setAgriColor("#7f7f7f");
-        window.scrollY > 3800 && window.scrollY <=4500   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
+        window.scrollY > 4500 && window.scrollY <=5100   ? setAgriColor("white"): setAgriColor("#7f7f7f");
+        window.scrollY > 4500 && window.scrollY <=5100   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
 
-        window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
-        window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
+        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
+        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
 
-        window.scrollY > 5200   ? setFinColor("white"): setFinColor("#7f7f7f");
-        window.scrollY > 5200   ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
+        window.scrollY > 5300   ? setFinColor("white"): setFinColor("#7f7f7f");
+        window.scrollY > 5300   ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
     }
     useEffect(()=>{
         window.addEventListener("scroll",section1);
     })
 
-    
     return(
         <div>
             <div className="desktopCaseStudy">
@@ -272,20 +298,22 @@ export default function PortfolioDetails(){
                             </div>
                             <div className='menuRowDetails'onClick={() =>handleMenuClick('content5')}>
                                 <div><img src={agriImage} className="w-8"/></div>
-                                <div style={{color:agriColor}} className='flex items-center'>Agri tech</div>
+                                <div style={{color:agriColor}} className='flex items-center'>Agri Tech</div>
                             </div>
-                            <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
+                            {/* <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
                                 <div><img src={hrImage} className="w-8"/></div>                       
                                 <div style={{color:hrColor}} className='flex items-center'>Hr tech</div>
-                            </div>
-                            <div className='menuRowDetails' onClick={() =>handleMenuClick('content7')}>
+                            </div> */}
+                            <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
                                 <div><img src={finImage} className="w-8"/></div>
-                                <div style={{color:finColor}}className='flex items-center'>Fin tech</div>
+                                <div style={{color:finColor}}className='flex items-center'>Fin Tech</div>
                             </div>
                         </div>
                     </div>
                     {portfolio.map((item)=>(
-                    <div key ={item.id} className='caseDetails' id={item.id}>
+                        //  id={item.id}
+                        <section key={item.id} id={item.id} >
+                        <div className='caseDetails' id={item.id} >
                         <div className='caseHeader'>
                             <div className='caseHeaderIconContent pt-12'> 
                                 <div className="flex flex-row-reverse">
@@ -387,8 +415,9 @@ export default function PortfolioDetails(){
                         )}
                         
                         
-                        <hr className='separatorPortfolio'></hr> 
+                        <hr className='separatorPortfolio'></hr>
                     </div>  
+                    </section>
                     ))} 
                     
                 </div>

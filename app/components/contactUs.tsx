@@ -1,8 +1,14 @@
 import '../styles/styles.css'
 import '../styles/mediaQuery.css';
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export default function ContactUs(){
+
+    const router = useRouter();
+    const handleSubmit = () => {
+      router.push("/");
+    }
     const triggerRecaptchaVerification = () => {
         const chkVerification = document.getElementById('chkVerification')as HTMLInputElement;
         if (chkVerification && chkVerification.checked) {
@@ -25,9 +31,10 @@ export default function ContactUs(){
                 <span className="me-yellow-color mx-auto fs-5 fw-bold">CONTACT US</span>
             </div>
         </nav> */}
+        
         <div className="px-2 pt-10  flex items-center justify-center ">
             <div className="container p-3  flex items-center justify-center border rounded contact-form-area">
-                <form action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
+                <form onSubmit={handleSubmit} action="https://formsubmit.co/ccb4d5c859355807d3b5b2611551bcc9" method="POST">
                 <div>
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_next" value="http://www.motoelectrix.in/" />

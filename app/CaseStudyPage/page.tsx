@@ -6,10 +6,6 @@ import Tab from "../components/tab";
 const Page = () => {
     return <div>
         <TopnavBar />
-        <div className="pt-20">
-            <Tab />
-        </div>
-        
         <PortfolioDetails />
         <Footer />
     </div>

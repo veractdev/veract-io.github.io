@@ -89,7 +89,9 @@ useEffect(() => {
                         <div className="service-card-image flex  flex-col items-center justify-center ">
                             <img className="serviceImageWidth " src={service.image} />
                         </div>
+                        
                         <div className="service-card-content">
+                            
                             <label className="servicesCardText"><b>{service.title}</b></label>
                             <ol className="pt-4 fontFamily">
                                 {service.list.map((listItem) => (<li className="font-semibold">{listItem}</li>))}
