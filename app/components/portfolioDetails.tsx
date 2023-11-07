@@ -65,7 +65,8 @@ export default function PortfolioDetails(){
             name: "",
             designation: "",
             company: "",
-            clientSpeak:""
+            clientSpeak:"",
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         {
             id:'content2',
@@ -83,7 +84,8 @@ export default function PortfolioDetails(){
             name: "",
             designation: "",
             company: "",
-            clientSpeak:""
+            clientSpeak:"",
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         {
             id:'content3',
@@ -101,7 +103,8 @@ export default function PortfolioDetails(){
             name: "",
             designation: "",
             company: "",
-            clientSpeak:""
+            clientSpeak:"",
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         {
             id:'content4',
@@ -119,7 +122,8 @@ export default function PortfolioDetails(){
             name: "",
             designation: "",
             company: "",
-            clientSpeak:""
+            clientSpeak:"",
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         // {
         //     id:'content2',
@@ -174,6 +178,7 @@ export default function PortfolioDetails(){
             designation: "CTO",
             company: "Agrosperity Tech Solutions",
             clientSpeak:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.",
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         // {
         //     id:'content6',
@@ -209,7 +214,8 @@ export default function PortfolioDetails(){
             name: "",
             designation: "",
             company: "",
-            clientSpeak:""
+            clientSpeak:"",
+            seperator: <div className="pb-16"></div>
         },
         
         
@@ -263,19 +269,32 @@ export default function PortfolioDetails(){
         window.addEventListener("scroll",section1);
     })
 
+    useEffect(() => {
+        const handleScroll = () => {
+          const scrollY = window.scrollY;
+          const container = document.getElementById('container'); // Replace 'container' with your element's ID
+          const threshold = 100; // Adjust the scroll threshold as needed
+    
+          if (container) {
+            container.style.top = scrollY > threshold ? '77px' : '147px'; // Adjust the desired heights
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+  
+
+
     return(
         <div>
             <div className="desktopCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
-                    <div className='dashboard'>
-                        {/* <div className='pt-24 '><img src="veractLogo.jpg " className='w-48'/></div> */}
+                    <div className='dashboard' id="container" style={{overflow: "auto"}}>
                         <div className='menuDetails'>
-                            {/* <div className='menuRowDetails ' onClick={() =>handleMenuClick('content1')}>
-                            
-                                <div><img src={manufacturingImage} className="w-8"/></div>
-                                <div style={{color:manufacturingColor}} className='flex items-center'>Manufacturing</div>
-                                
-                            </div> */}
                             <div className='menuRowDetails' onClick={() =>handleMenuClick('content1')}>
                                 <div><img src={wellnessImage} className="w-8"/></div>
                                 <div style={{color:wellnessColor}} className='flex items-center'>Wellness</div>
@@ -300,10 +319,6 @@ export default function PortfolioDetails(){
                                 <div><img src={agriImage} className="w-8"/></div>
                                 <div style={{color:agriColor}} className='flex items-center'>Agri Tech</div>
                             </div>
-                            {/* <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
-                                <div><img src={hrImage} className="w-8"/></div>                       
-                                <div style={{color:hrColor}} className='flex items-center'>Hr tech</div>
-                            </div> */}
                             <div className='menuRowDetails' onClick={() =>handleMenuClick('content6')}>
                                 <div><img src={finImage} className="w-8"/></div>
                                 <div style={{color:finColor}}className='flex items-center'>Fin Tech</div>
@@ -414,8 +429,8 @@ export default function PortfolioDetails(){
                         
                         )}
                         
-                        
-                        <hr className='separatorPortfolio'></hr>
+                        {item.seperator}
+                        {/* <hr className='separatorPortfolio'></hr> */}
                     </div>  
                     </section>
                     ))} 
@@ -523,7 +538,7 @@ export default function PortfolioDetails(){
                             </div>
                         )}
                         
-                        
+                        {/* {item.seperator} */}
                         {/* <hr className='separatorPortfolio'></hr>  */}
                     </div>  
                     ))} 

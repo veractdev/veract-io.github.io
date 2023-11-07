@@ -1444,7 +1444,7 @@ ul {
   align-items: center;
   /* justify-content: center; */
   left: 20px;
-  top: 155px;
+  top: 147px;
   width: 16%;
   height: 95vh;
   background-color: var(--black-colour);
@@ -2160,12 +2160,18 @@ ul {
   display: none;
 }
 
+.seperator {
+  display: none;
+}
+
 /*-------------------------scroll animation clients*/
 
 .temp{
   display: none;
 }
-
+.caseMain_desktop {
+  display: flex;
+}
 .caseMain_mobile{
   display: none;
 }
