@@ -9,6 +9,7 @@ import '../styles/mediaQuery.css';
 // import '../styles/styles.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Clients() {
   const [slidesToShow, setSlidesToShow] = useState(4);
@@ -53,7 +54,10 @@ export default function Clients() {
   }, []);
 
 
-  const clients = [{ image: "resizedLogo/mako-logo.png", largeImage: false }, { image: "resizedLogo/rajdeep-logo.png", largeImage: false },
+  const clients = [
+    { image: "resizedLogo/mako-logo.png", largeImage: false },
+    
+    { image: "resizedLogo/rajdeep-logo.png", largeImage: false },
   { image: "resizedLogo/suyash-logo.png", largeImage: false }, { image: "resizedLogo/anyo-logo.png", largeImage: false },
   { image: "resizedLogo/india-wasted-logo.png", largeImage: false }, { image: "resizedLogo/northern-arc-logo.png", largeImage: false },
   { image: "resizedLogo/dhananjaya-logo.png", largeImage: false }, { image: "resizedLogo/ia-logo.png", largeImage: false },
@@ -88,6 +92,7 @@ export default function Clients() {
             //  ((
             <div className="clientLogo ">
               <img className='logo' src={client.image} />
+              {/* <Image className="logo" src={client.image} width={500} height={500} alt="Picture of the author" /> */}
            </div>
 
           ))}

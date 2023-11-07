@@ -3,6 +3,19 @@
 @tailwind utilities;
 @import url('constants.css');
 
+
+
+.modal-form{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index: 1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 .contactsMain{
   background:#f3f5f8;
 }
@@ -533,3 +546,5 @@ button.contact_form_submit {
       height: 45px;
     }
   }
+
+  

@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 // import { Button, Modal, ModalBody, ModalFooter } from "reactstrap";
 import Link from 'next/link';
+import Modal from './modal';
 // import Modal from "src/components/Modal";
 // import {useState} from "react";
 
@@ -24,8 +25,7 @@ type Props = {
 };
 
 export default function Contacts() {
-
-  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
     const router = useRouter();  
   
@@ -39,7 +39,8 @@ export default function Contacts() {
       
     }, []);
     const handleSubmit = () => {
-      router.push("/form-success");
+      
+      setModalOpen(true);
       // console.log("Success");
     }
     
@@ -58,7 +59,7 @@ export default function Contacts() {
         setShowSuccess(false);
       };
 
-      const [modalOpen, setModalOpen] = React.useState(false);
+   
     
     return (
        
@@ -217,7 +218,8 @@ export default function Contacts() {
           <p className="text-blk contactus-subhead" style={{fontSize:18}}>
           Feel free to contact us any time.
           </p>
-          <div className="responsive-container-block">
+          <div className="responsive-container-block"> 
+
             <div className="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
               <p className="text-blk input-title">
                 FIRST NAME
@@ -253,121 +255,9 @@ export default function Contacts() {
           <button className="submit-btn" type="submit">
               Submit
             </button>
-          {/* <div className="fixed inset-0 flex items-center justify-center z-50">
-            {isVisible && (  
-          <div className="enquiry-box">
-            <svg className="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
-            </svg>
-            <div className="message pl-2">
-              Enquiry Sent Successfully
-            </div>
-          </div> )}  
-          </div>          */}
-          {/* <div>
-            <button className="submit-btn" type="submit">
-              Submit
-            </button>
-            {showSuccess && (
-        <div className="mt-4 p-4 border border-green-500 rounded-md bg-green-100">
-          <div className="text-center">
-            <p>Enquiry Sent Successfully...</p>
-            <button onClick={handleCloseSuccess} className="mt-2 bg-red-500 text-white pl-4 pr-4 pt-2 pb-2 rounded-full">
-              Close
-            </button>
-          </div>
+            
         </div>
-        )}
-          </div> */}
-
-          {/* <div>
-          <Button
-        color="primary"
-        type="button"
-        onClick={() => setModalOpen(!modalOpen)}
-      >
-        Launch demo modal
-      </Button>
-      <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
-        <div className=" modal-header">
-          <h5 className=" modal-title" id="exampleModalLabel">
-            Modal title
-          </h5>
-          <button
-            aria-label="Close"
-            className=" close"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            <span aria-hidden={true}>×</span>
-          </button>
-        </div>
-        <ModalBody>...</ModalBody>
-        <ModalFooter>
-          <Button
-            color="secondary"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            Close
-          </Button>
-          <Button color="primary" type="button">
-            Save changes
-          </Button>
-        </ModalFooter>
-      </Modal>
-          </div> */}
-
-     
-
-          {/* <div className="modal_padding">
-            <Modal 
-        
-        backdrop="opaque" 
-        isOpen={isOpen} 
-        onOpenChange={onOpenChange}
-        // border-radius="2xl"
-        classNames={{
-          body: "py-12",
-          backdrop: "bg-[#4825F4]/50 backdrop-opacity-40",
-          base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
-          header: "border-b-[1px] border-[#292f46]",
-          footer: "border-t-[1px] border-[#292f46]",
-          closeButton: "hover:bg-white/5 active:bg-white/10",
-        }}
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">Success</ModalHeader>
-              <ModalBody>
-                <p> 
-                  Enquiry Sent Successfully...
-                </p>
-              </ModalBody>
-              <ModalFooter>
-                <div className="flex pt-4">
-                <Button className=" shadow-indigo-500/20" onPress={onClose}>
-                  ok
-                </Button>
-                </div>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-
-          </div> */}
-          
-        </div>
-        {/* <div>
-        <button onClick={() => setShowModal(true)}>Open Modal</button>
-        {showModal &&
-            <Modal onClose={() => setShowModal(false)}>
-                Hello from the modal!
-            </Modal>
-        }
-      </div> */}
+       
         {/* <div className="social-media-links">
           <a href="#" id="ix94i-2">
             <img className="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png"/>
@@ -383,6 +273,26 @@ export default function Contacts() {
           </a>
         </div> */}
       </form>
+      {/* <div>
+      <button
+        onClick={() => {
+          setModalOpen(true);
+        }}
+      >
+        Open
+      </button>
+
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+    </div> */}
+      {/* <div>
+      <button onClick={() => {
+          setModalOpen(true);
+          }}>click</button>
+          {modalOpen && <Modal />} 
+      </div> */}
+      <div >
+      {modalOpen && <div className='modal-form' ><Modal setOpenModal={setModalOpen} /></div>}
+      </div>
     </div>
   </div>
 </div>

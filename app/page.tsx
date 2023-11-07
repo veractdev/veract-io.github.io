@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import Modal from './components/modal';
 import TopnavBar from './components/topnavbar';
 import Banner from './components/banner';
 import Clients from './components/clients';

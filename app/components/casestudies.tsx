@@ -50,32 +50,31 @@ export default function Casestudies() {
   const portfolio=[
     
     {
-        refvalue:'toto',
-        id:'content1',
+        id:'content4',
         img: "portfolio/manufacturingOrange.png",
         heading: "MANUFACTURING",
         desc:"Digitizing manufacturing process in low tech adoption workforce in high dust & temp environment."       
     },
     {
-        id:'content2',
+        id:'content1',
         img: "portfolio/wellnessOrange.png",
         heading: "WELLNESS",
         desc:"New age startup looking to launch mental health and wellness app."       
     },
     {
-        id:'content3',
+        id:'content2',
         img: "portfolio/salesOrange.png",
         heading: "SALES",
         desc:"Sales resource attrition leads to lost opportunities. Improved key metrics in a multi product, location sales environment."       
     },
     {
-        id:'content4',
+        id:'content5',
         img: "portfolio/agriOrange.png",
         heading: "AGRI TECH",
         desc:"End  to end solution in the exciting area of farmer supply chain."       
     },
     {
-        id:'content5',
+        id:'content3',
         img: "portfolio/manufacturingOrange.png",
         heading: "MACHINE VISION",
         desc:"AI driven defect detection in manufacturing environment."       
