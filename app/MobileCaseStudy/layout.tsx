@@ -43,13 +43,14 @@ export default function MobileCaseStudy_Layout({
             <div className='w-full h-full '>
                 <TopnavBar />
                 {/* horizontal-scrollable-container n */}
-            <div ref={scrollableDivRef} className="pt-16 pb-2">
+                {/* ref={scrollableDivRef} */}
+            <div  className="pt-16 pb-2">
                 {/* <div className="buttons"> */}
                     <div className="mx-auto md:mx-0">
                     <div className="flex flex-col pl-2 pr-1">
                         <div className="flex flex-row pb-4 justify-around">
                     <button id="3"
-                    onClick={() => sendToRoute("/MobileCaseStudy/machinevision")}
+                    onClick={() => router.push("/MobileCaseStudy/machinevision")}
                     className={`custom_button ${
                         pathname === '/MobileCaseStudy/machinevision' ? 'bg-orange' : 'bg-white'
                     } ${
@@ -60,7 +61,7 @@ export default function MobileCaseStudy_Layout({
                     </button>
                         
                         <button id="2"
-                    onClick={()=> sendToRoute("/MobileCaseStudy/sales")}
+                    onClick={()=> router.push("/MobileCaseStudy/sales")}
                     className={`custom_button  ${
                         pathname === '/MobileCaseStudy/sales' ? 'bg-orange' : 'bg-white'
                     } ${
@@ -69,47 +70,47 @@ export default function MobileCaseStudy_Layout({
                     >
                     Sales
                     </button>
-                    <div id="1" onClick={() => sendToRoute('/MobileCaseStudy/health')} 
-                            className={`custom_button ${
-                                pathname === '/MobileCaseStudy/health' ? 'bg-orange' : 'bg-white'
-                            } ${
-                                pathname === '/MobileCaseStudy/health' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                            } cursor-pointer`}>
-                            Wellness
-                        </div>
-                        </div>
-                        <div className="flex flex-row justify-around">
-                        <button id="4"
-                    onClick={() => sendToRoute("/MobileCaseStudy/manufacturing")}
-                    className={`custom_button ${
-                        pathname === '/MobileCaseStudy/manufacturing' ? 'bg-orange' : 'bg-white'
-                    } ${
-                        pathname === '/MobileCaseStudy/manufacturing' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                    } cursor-pointer`}
-                    >
-                    Manufacturing
-                    </button>
-                    <button id="5"
-                    onClick={() => sendToRoute("/MobileCaseStudy/agritech")}
-                    className={`custom_button ${
-                        pathname === '/MobileCaseStudy/agritech' ? 'bg-orange' : 'bg-white'
-                    } ${
-                        pathname === '/MobileCaseStudy/agritech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                    } cursor-pointer`}
-                    >
-                    Agri Tech
-                    </button>
-                    <button id="6"
-                    onClick={() => sendToRoute("/MobileCaseStudy/fintech")}
-                    className={`custom_button ${
-                        pathname === '/MobileCaseStudy/fintech' ? 'bg-orange' : 'bg-white'
-                    } ${
-                        pathname === '/MobileCaseStudy/fintech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                    } cursor-pointer`}
-                    >
-                    Fin Tech
-                    </button>
-                        </div>
+                            <button id="1" onClick={() => router.push('/MobileCaseStudy/health')} 
+                                    className={`custom_button ${
+                                        pathname === '/MobileCaseStudy/health' ? 'bg-orange' : 'bg-white'
+                                    } ${
+                                        pathname === '/MobileCaseStudy/health' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                    } cursor-pointer`}>
+                                    Wellness
+                            </button>
+                    </div>
+                    <div className="flex flex-row justify-around">
+                                    <button id="4"
+                                onClick={() => router.push("/MobileCaseStudy/manufacturing")}
+                                className={`custom_button ${
+                                    pathname === '/MobileCaseStudy/manufacturing' ? 'bg-orange' : 'bg-white'
+                                } ${
+                                    pathname === '/MobileCaseStudy/manufacturing' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                } cursor-pointer`}
+                                >
+                                Manufacturing
+                                </button>
+                                <button id="5"
+                                onClick={() => router.push("/MobileCaseStudy/agritech")}
+                                className={`custom_button ${
+                                    pathname === '/MobileCaseStudy/agritech' ? 'bg-orange' : 'bg-white'
+                                } ${
+                                    pathname === '/MobileCaseStudy/agritech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                } cursor-pointer`}
+                                >
+                                Agri Tech
+                                </button>
+                                <button id="6"
+                                onClick={() => router.push("/MobileCaseStudy/fintech")}
+                                className={`custom_button ${
+                                    pathname === '/MobileCaseStudy/fintech' ? 'bg-orange' : 'bg-white'
+                                } ${
+                                    pathname === '/MobileCaseStudy/fintech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                } cursor-pointer`}
+                                >
+                                Fin Tech
+                                </button>
+                    </div>
                     </div>
                     {/* <button id="1"
                     onClick={() => sendToRoute('/MobileCaseStudy/health')}

@@ -84,23 +84,23 @@ useEffect(() => {
             </div>
             <div className={`scroll-animationServices ${isVisible ? 'visibleCard' : ''}`}>
             <div className="flex items-center justify-center  servicesWrapMedia ">
-                {services.map((service) => (
-                    <div className="service-card flex items-center justify-center gap-4" id={`service-${service.id}`} >
+                {services.map((service, j) => (
+                    <div className="service-card flex items-center justify-center gap-4" key={j} id={`service-${service.id}`} >
                         <div className="service-card-image flex  flex-col items-center justify-center ">
-                            <img className="serviceImageWidth " src={service.image} />
+                            <img className="serviceImageWidth" key={j} src={service.image} />
                         </div>
                         
                         <div className="service-card-content">
                             
-                            <label className="servicesCardText"><b>{service.title}</b></label>
+                            <label className="servicesCardText" key={j}><b>{service.title}</b></label>
                             <ol className="pt-4 fontFamily">
-                                {service.list.map((listItem) => (<li className="font-semibold">{listItem}</li>))}
+                                {service.list.map((listItem, i) => (<li className="font-semibold" key={i}>{listItem}</li>))}
                             </ol>
                             {/* <label className="text-black font-semibold"><u>Know More !</u></label> */}
                         </div>
                         <div className="service-mobile-content">
-                            <div><label className="servicesCardText "><b>{service.title}</b></label></div>
-                            <div className='pt-2'><label className="flex items-center justify-center ">{service.mobileContent}</label></div>
+                            <div><label className="servicesCardText " key={j}><b>{service.title}</b></label></div>
+                            <div className='pt-2'><label className="flex items-center justify-center " key={j}>{service.mobileContent}</label></div>
                         </div>
                     </div>
                 ))}

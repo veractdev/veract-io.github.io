@@ -2274,6 +2274,14 @@ ul {
   margin: 0;
 }
 
+.modalTitle{
+  display: flex;
+  text-align: center;
+  font-family: var(--primary-font) ;
+  font-size: 25px;
+  font-weight: 700;
+}
+
 
 
 

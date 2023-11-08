@@ -87,10 +87,10 @@ export default function Clients() {
 
         {/* <div className={`scroll-animationClients ${isLogo ? 'client flex flex-row flex-wrap pr-10 pl-10' : ''}`}> */}
         <Slider {...settings}>
-          {clients.map((client) => (
+          {clients.map((client, i) => (
             //  {client.largeImage ===  true ? (<img className='logo  w-36' src={client.image} />):
             //  ((
-            <div className="clientLogo ">
+            <div className="clientLogo " key={i}>
               <img className='logo' key={client.id} src={client.image} />
               {/* <Image className="logo" src={client.image} width={500} height={500} alt="Picture of the author" /> */}
            </div>

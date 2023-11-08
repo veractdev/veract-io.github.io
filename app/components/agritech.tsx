@@ -101,7 +101,7 @@ export default function AgriTech(){
                         </div>
                         <div className="pb-5">
                             <div className='testimonialContainer_mobile'>
-                                <div className='clientContainer md:gap-4'>
+                                <div className='clientContainer_mobile md:gap-4'>
                                 <div className='flex pt-2'>
                                     <div className="challenges_mobile">Clients Speak</div>
                                 </div>

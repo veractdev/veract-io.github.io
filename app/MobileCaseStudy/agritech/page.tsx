@@ -1,3 +1,4 @@
+'use client';
 import AgriTech from "../../components/agritech";
 import Footer from "../../components/footer";
 import Health from "../../components/health";

@@ -1,3 +1,4 @@
+'use client';
 import Footer from "../../components/footer";
 import Health from "../../components/health";
 import Sales from "../../components/sales";

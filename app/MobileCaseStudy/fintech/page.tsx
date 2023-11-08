@@ -1,3 +1,4 @@
+'use client';
 import FinTech from "../../components/fintech";
 import Footer from "../../components/footer";
 import Health from "../../components/health";

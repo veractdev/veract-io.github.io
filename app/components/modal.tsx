@@ -27,8 +27,8 @@ function Modal({ setOpenModal}:ModalProps) {
             X
           </button> */}
         </div>
-        <div className="title">
-            Enquiry Submitted Successfully
+        <div className="modalTitle">
+            Enquiry has been submitted successfully
         </div>
         <div className="body">
           <p>We will reach you soon!</p>
