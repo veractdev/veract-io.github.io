@@ -216,10 +216,9 @@ export default function Contacts() {
   <div className="contact_us_2 fontFamilyContacts">
   <div className="responsive-container-block big-container">
     <div className="responsive-container-block container"> 
-    {/* action="https://api.web3forms.com/submit" */}
-      <form onSubmit={handleSubmit} action=""  method="POST">
+      <form onSubmit={handleSubmit} action="https://api.web3forms.com/submit"  method="POST">
         {/* empty form elements */}
-        {/* <input type="hidden" name="redirect" value="https://veract.io" /> */}
+        <input type="hidden" name="redirect" value="https://veract.io" />
         <input type="hidden" name="access_key" value="9d3da815-bac9-4a3d-be26-6f4f5689cbba" />
         {/* <input type="hidden" name="_autoresponse" value="Thank you for contacting us, we will get back to you soon!!"/> */}
 

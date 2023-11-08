@@ -52,7 +52,7 @@ export default function AgriTech(){
                                 </div> */}
                             </div>
                         </div>
-                        <div className='BottomContainer_mobile pt-10'>
+                        <div className='BottomContainer_mobile'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
@@ -71,7 +71,7 @@ export default function AgriTech(){
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                        <div className="pt-2.5 pl-5 pr-5">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>

@@ -50,7 +50,7 @@ export default function FinTech(){
                                 </div>
                             </div>
                         </div>
-                        <div className='BottomContainer_mobile pt-10'>
+                        <div className='BottomContainer_mobile'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
