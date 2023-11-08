@@ -28,22 +28,22 @@ export default function MachineVision(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Machine Vision for Manufacturing Quality Control</div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>A sheet metal pressings manufacturing company.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>A sheet metal pressings manufacturing company.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>The components require intricate visual inspection  on parts with throughput over</div>
-                                <div className='flex flex-col pt-6'>
+                                <div className='challengesContent_mobile'>Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious and, as inspector fatigue set in, accuracy levels dropped</div>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'> 5 Million pcs/month.</div>
                                         <div className='challengePoints_mobile'>Manual inspection was tedious.</div>
                                         <div className='challengePoints_mobile'>Dropping accuracy levels on fatigue. </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!</div>
+                                <div className='challengesContent_mobile'>Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.</div>
                                 <div className='flex flex-col pt-6'>
                                         {/* <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
@@ -56,7 +56,9 @@ export default function MachineVision(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>End to end vision systems</div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>

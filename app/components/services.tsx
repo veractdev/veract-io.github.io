@@ -8,10 +8,10 @@ import { useEffect, useState } from 'react';
 const theme = "default";
 const images = {
     default: {
-        "webApp": "images/webDevelopment.png",
-        "mobileApp": "images/development.png",
-        "uiux": "images/uxGBlue.png",
-        "aiml": "images/brain.png"
+        "webApp": "/images/webDevelopment.png",
+        "mobileApp": "/images/development.png",
+        "uiux": "/images/uxGBlue.png",
+        "aiml": "/images/brain.png"
     },
     light: {
         "webApp": "webAppOrange.png",

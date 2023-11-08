@@ -27,13 +27,13 @@ export default function FinTech(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'> Credit Risk Assessment and Risk Profiling </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>Northern Arc Capital is a platform in the financial services sector set up primarily with the mission of catering to the diverse credit requirements of under-served households and businesses.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Northern Arc Capital is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Northern arc needed a team with financial domain and technical expertise to build their investor portal. They had the need to mitigate risk profile, risk analytics etc</div>
+                                <div className='challengesContent_mobile'>For the construction of their investor portal, Northern Arc Capital required a team with technical and financial domain experience. They needed to reduce risk by using risk analytics, risk profiles, etc.</div>
                                 <div className='flex flex-col pt-6'>
                                         {/* <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -42,7 +42,7 @@ export default function FinTech(){
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract combined its financial domain expertise with core development skills and deployed risk profiling in their investor tracking portal</div>
+                                <div className='challengesContent_mobile'>Veract implemented risk profiling in their investor tracking portal by fusing their core development skills with their expertise in financial domain.</div>
                                 <div className='flex flex-col pt-6'>
                                         {/* <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
@@ -55,7 +55,8 @@ export default function FinTech(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>

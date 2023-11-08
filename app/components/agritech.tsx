@@ -28,28 +28,28 @@ export default function AgriTech(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture Finance Ecosystem Web Application </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>KiVi by agrosperity is a phygital platform that seamlessly enables farmers and agri, rural entrepreneurs to access timely and efficient capital.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Agrosperity KiVi is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Kivi  was looking for a development partner to completely take over the  design ,development and deployment of loan eligiblity data </div>
-                                <div className='flex flex-col pt-6'>
+                                <div className='challengesContent_mobile'>Kivi was seeking a development partner to fully assume responsibility for the design, development and implementation of Vision to text, Map interfaces for loan eligibility data, loan documents automation, dashboards with multiple authentication levels.</div>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Vision to text.</div>
                                         <div className='challengePoints_mobile'>Map interfaces.</div>
                                         <div className='challengePoints_mobile'>Multi level authentication. </div>
                                         <div className='challengePoints_mobile'>Dashboards.</div>
-                                </div>  
+                                </div>   */}
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract architects took end to end ownership of the product and setup the platform making crucial</div>
-                                <div className='flex flex-col pt-6'>
+                                <div className='challengesContent_mobile'>Veract architects set up the platform and assumed complete ownership of the product and made critical choices of architecture, framework to enable rapid development.</div>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
                                         <div className='solutionPoints_mobile'>Turnaround time.</div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='BottomContainer_mobile pt-10'>
@@ -57,7 +57,8 @@ export default function AgriTech(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>

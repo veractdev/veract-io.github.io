@@ -55,14 +55,14 @@ export default function Clients() {
 
 
   const clients = [
-    { image: "resizedLogo/mako-logo.png", largeImage: false },
+    { id: "1", image: "/resizedLogo/mako-logo.png", largeImage: false },
     
-    { image: "resizedLogo/rajdeep-logo.png", largeImage: false },
-  { image: "resizedLogo/suyash-logo.png", largeImage: false }, { image: "resizedLogo/anyo-logo.png", largeImage: false },
-  { image: "resizedLogo/india-wasted-logo.png", largeImage: false }, { image: "resizedLogo/northern-arc-logo.png", largeImage: false },
-  { image: "resizedLogo/dhananjaya-logo.png", largeImage: false }, { image: "resizedLogo/ia-logo.png", largeImage: false },
-  { image: "resizedLogo/myTrackie-logo.png", largeImage: false }, { image: "resizedLogo/kivi-logo.png", largeImage: false },
-  { image: "resizedLogo/technoweld-logo.png", largeImage: false }
+    {id: "2", image: "/resizedLogo/rajdeep-logo.png", largeImage: false },
+  {id: "3", image: "/resizedLogo/suyash-logo.png", largeImage: false }, { id: "4",image: "/resizedLogo/anyo-logo.png", largeImage: false },
+  {id: "5", image: "/resizedLogo/india-wasted-logo.png", largeImage: false }, {id: "6",image: "/resizedLogo/northern-arc-logo.png", largeImage: false },
+  {id: "7", image: "/resizedLogo/dhananjaya-logo.png", largeImage: false }, {id: "8", image: "/resizedLogo/ia-logo.png", largeImage: false },
+  {id: "9", image: "/resizedLogo/myTrackie-logo.png", largeImage: false }, {id: "10", image: "/resizedLogo/kivi-logo.png", largeImage: false },
+  {id: "11", image: "/resizedLogo/technoweld-logo.png", largeImage: false }
 
 
 
@@ -91,7 +91,7 @@ export default function Clients() {
             //  {client.largeImage ===  true ? (<img className='logo  w-36' src={client.image} />):
             //  ((
             <div className="clientLogo ">
-              <img className='logo' src={client.image} />
+              <img className='logo' key={client.id} src={client.image} />
               {/* <Image className="logo" src={client.image} width={500} height={500} alt="Picture of the author" /> */}
            </div>
 

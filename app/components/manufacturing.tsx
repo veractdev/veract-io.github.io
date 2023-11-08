@@ -28,13 +28,13 @@ export default function Manufacturing(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Quality Documentation for Metal Foundry   </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>Grey iron and ductile iron foundry looking for an automated quality report generation for customer submission . </div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>An automated quality report generation system was needed by the Grey Iron and Ductile Iron Foundry in order to submit reports to customers.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Parts submission require quality documents to be submitted regarding spectrometer reading ,sand properties,pouring properties,mould properties .</div>
+                                <div className='challengesContent_mobile'>Submission of parts necessitates the submission of high-quality documentation on spectrometer readings, pouring properties, mould properties and sand properties.</div>
                                 <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'></div>
                                         <div className='challengePoints_mobile'></div>
@@ -43,7 +43,7 @@ export default function Manufacturing(){
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>One stop solution that consolidates all quality documents along with CAPA followup, machine maintenance and defect prediction.</div>
+                                <div className='challengesContent_mobile'>A one-stop shop that combines machine maintenance, defect prediction, CAPA follow-up, test certificate and other quality documents.</div>
                                 <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'></div>
                                         <div className='solutionPoints_mobile'></div>
@@ -56,9 +56,10 @@ export default function Manufacturing(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
-                                    <div className='serviceText_mobile pt-2'>Deployment</div>
+                                    <div className='serviceText_mobile pt-2'>Deployment</div>   
                                 </div>
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>

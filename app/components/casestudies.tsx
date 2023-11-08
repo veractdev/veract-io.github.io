@@ -51,37 +51,37 @@ export default function Casestudies() {
     
     {
         id:'content4',
-        img: "portfolio/manufacturingOrange.png",
+        img: "/portfolio/manufacturingOrange.png",
         heading: "MANUFACTURING",
         desc:"Digitizing manufacturing process in low tech adoption workforce in high dust & temp environment."       
     },
     {
         id:'content1',
-        img: "portfolio/wellnessOrange.png",
+        img: "/portfolio/wellnessOrange.png",
         heading: "WELLNESS",
         desc:"New age startup looking to launch mental health and wellness app."       
     },
     {
         id:'content2',
-        img: "portfolio/salesOrange.png",
+        img: "/portfolio/salesOrange.png",
         heading: "SALES",
         desc:"Sales resource attrition leads to lost opportunities. Improved key metrics in a multi product, location sales environment."       
     },
     {
         id:'content5',
-        img: "portfolio/agriOrange.png",
+        img: "/portfolio/agriOrange.png",
         heading: "AGRI TECH",
         desc:"End  to end solution in the exciting area of farmer supply chain."       
     },
     {
         id:'content3',
-        img: "portfolio/manufacturingOrange.png",
+        img: "/portfolio/manufacturingOrange.png",
         heading: "MACHINE VISION",
         desc:"AI driven defect detection in manufacturing environment."       
     },
     {
         id:'content6',
-        img: "portfolio/fintechOrange.png",
+        img: "/portfolio/fintechOrange.png",
         heading: "FIN TECH",
         desc:"Implementation with well established finance and micro lending company."       
     },
@@ -124,7 +124,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4 '>{item.heading}</div>
                                 </div>
                                 <div className=''>
-                                <img src="images/info.png" className='w-6 h-6'></img> 
+                                <img src="/images/info.png" className='w-6 h-6'></img> 
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc manufacturingDesc'>
@@ -265,12 +265,12 @@ export default function Casestudies() {
                             
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8'><img src="portfolio/manufacturingOrange.png" /></div>
+                                <div className='w-8'><img src="/portfolio/manufacturingOrange.png" /></div>
                                 <div className='item-title flex textColorLogo pl-4 '>MANUFACTURING</div>
                                 </div>
                                 <div className='infoIconMobile '>
                                 <Link href="/MobileCaseStudy/manufacturing">
-                                        <img src="images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
+                                        <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                 </Link>
                                 </div>
                             </div>
@@ -287,12 +287,12 @@ export default function Casestudies() {
                             
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="portfolio/wellnessOrange.png" /></div>
+                                <div className='w-8 '><img src="/portfolio/wellnessOrange.png" /></div>
                                 <div className='item-title flex textColorLogo pl-4 '>WELLNESS</div>
                                 </div>
                                 <div className='infoIconMobile '>
                                     <Link href="/MobileCaseStudy/health">
-                                        <img src="images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
+                                        <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                     </Link> 
                                 </div>
                             </div>
@@ -328,12 +328,12 @@ export default function Casestudies() {
                         {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="portfolio/salesOrange.png" /></div>
+                                <div className='w-8 '><img src="/portfolio/salesOrange.png" /></div>
                                 <div className='item-title flex textColorLogo pl-4'>SALES</div>
                                 </div>
                                 <div className='infoIconMobile'>
                                     <Link href="/MobileCaseStudy/sales">
-                                    <img src="images/info.png" className='w-4 h-4'></img> 
+                                    <img src="/images/info.png" className='w-4 h-4'></img> 
                                     </Link>
                                  
                                 </div>
@@ -350,12 +350,12 @@ export default function Casestudies() {
                         {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleAgri' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="portfolio/agriOrange.png" /></div>
+                                <div className='w-8 '><img src="/portfolio/agriOrange.png" /></div>
                                 <div className='item-title flex textColorLogo pl-4' >AGRI TECH</div>
                                 </div>
                                 <div className='infoIconMobile'>
                                     <Link href="/MobileCaseStudy/agritech">
-                                    <img src="images/info.png" className='w-4 h-4'></img>
+                                    <img src="/images/info.png" className='w-4 h-4'></img>
                                     </Link>
                                  
                                 </div>
@@ -392,12 +392,12 @@ export default function Casestudies() {
                         {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleFintech' : ''}`}> */}
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 ' ><img src="portfolio/fintechOrange.png"/></div>
+                                <div className='w-8 ' ><img src="/portfolio/fintechOrange.png"/></div>
                                 <div className='item-title flex textColorLogo pl-4'>FINTECH</div>
                                 </div>
                                 <div className='infoIconMobile'>
                                     <Link href="/MobileCaseStudy/fintech">
-                                    <img src="images/info.png" className='w-4 h-4'></img> 
+                                    <img src="/images/info.png" className='w-4 h-4'></img> 
                                     </Link>
                                 </div>
                             </div>
@@ -413,12 +413,12 @@ export default function Casestudies() {
                             
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8'><img src="portfolio/manufacturingOrange.png" /></div>
+                                <div className='w-8'><img src="/portfolio/manufacturingOrange.png" /></div>
                                 <div className='item-title flex textColorLogo pl-4 '>MACHINE VISION</div>
                                 </div>
                                 <div className='infoIconMobile '>
                                     <Link href="/MobileCaseStudy/machinevision">
-                                        <img src="images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
+                                        <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                     </Link> 
                                 </div>
                             </div>

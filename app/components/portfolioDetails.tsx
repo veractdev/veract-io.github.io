@@ -51,15 +51,15 @@ export default function PortfolioDetails(){
     const portfolio=[
         {
             id:'content1',
-            caseTitle:'Health and Wellness Web  and Mobile App ',
-            caseTitleContent:'Anyo is a health and wellness app tackling the important challenge of mental well being .',
+            caseTitle:'Health and Wellness Web and Mobile App',
+            caseTitleContent:'Anyo is a health and wellness app that addresses the significant issue of mental health.',
             stampImage: "",
-            caseImage:'portfolio/wellnessPurple.png',
-            challenges:'Anyo founding team were in search of one stop solution - technical consulting and development for their product that had',
-            challengePoints:'Live chat.,Video audio streaming.,Chat bot integration. ',
-            solution:"Veract's team of architects and developers built the anyo mobile app, their four web portals within 5 months. ",
-            solutionPoints:'Architecture.,Framework.,Choice of tools.',
-            services:'Software architecture consulting Software development Deployment',
+            caseImage:'/portfolio/wellnessPurple.png',
+            challenges:'The founders of Anyo were looking for a one-stop shop for technical advice and development for their live chat-enabled platform with streaming audio, video along with chatbots.',
+            challengePoints:'',
+            solution:"Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc",
+            solutionPoints:'',
+            services:'Software architecture, Technology consulting, Software development, Deployment',
             platform:'Mobile and Web application',
             techstack:'Flutter, Angular, Loopback, MongoDB, Elastic Search',
             name: "",
@@ -70,17 +70,17 @@ export default function PortfolioDetails(){
         },
         {
             id:'content2',
-            caseTitle:'Sales Enquiry and Quote Management  ',
-            caseTitleContent:'Rajdeep is a multi principal,multi product,multi location industrial products distributor based out of pune.  ',
+            caseTitle:'Sales Enquiry and Quote Management',
+            caseTitleContent:'Rajdeep is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.',
             stampImage: "",
-            caseImage:'portfolio/salesPurple.png',
-            challenges:"Client's pain points were salesmen attrition, lack of data continuity, quotation generation and reporting. They were looking for a solution to these with an ability to fit into their regular workflow including SAP integration. They also wanted the application to work offline.",
+            caseImage:'/portfolio/salesPurple.png',
+            challenges:"Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine. On top is the complete offline functionality due to poor network connectivity phases.",
             challengePoints:'',
-            solution:'Veract developed a web and mobile application with seamless integration with other software applications customer has been using',
+            solution:'Veract created a mobile and online application that seamlessly integrated with the customers existing software.',
             solutionPoints:'',
-            services:'Software architecture consulting Software development Deployment',
-            platform:'Web application',
-            techstack:' Bootstrap,Redis,Express.js,Indexdb,Jquery,Google API,MongoDB',
+            services:'Software architecture, Technology consulting, Software development, Deployment',
+            platform:'Mobile and Web application',
+            techstack:'Redis,Bootstrap,Express.js,Indexdb,MongoDB,Google API,Jquery',
             name: "",
             designation: "",
             company: "",
@@ -91,15 +91,15 @@ export default function PortfolioDetails(){
             id:'content3',
             caseTitle:'Machine Vision for Manufacturing Quality Control',
             caseTitleContent:'A sheet metal pressings manufacturing company.',
-            stampImage: "portfolio/artificial-intelligence.png",
+            stampImage: "/portfolio/artificial-intelligence.png",
             caseImage:'factoryCase.png',
-            challenges:'The components require intricate visual inspection  on parts with throughput over',
-            challengePoints:' 5 Million pcs/month,Manual inspection was tedious, Dropping accuracy levels on fatigue ',
-            solution:"Veract developed a homegrown AI based visual inspection application to improve efficiency and prevent downstream issues of part rejections and recalls. The cost effective nature of the solution made it a winner all the way for the manufacturer!",
+            challenges:'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious and, as inspector fatigue set in, accuracy levels dropped',
+            challengePoints:'',
+            solution:"Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.",
             solutionPoints:'',
-            services:'Software architecture consulting Software development Deployment',
+            services:'Software architecture, Technology consulting, Software development, Deployment, End to end vision systems',
             platform:'Web application',
-            techstack:' Python,Keras,Tensor flow,Pytorch',
+            techstack:' Python, Keras, Tensor flow, Pytorch',
             name: "",
             designation: "",
             company: "",
@@ -108,15 +108,15 @@ export default function PortfolioDetails(){
         },
         {
             id:'content4',
-            caseTitle:' Quality Documentation for Metal Foundry   ',
-            caseTitleContent:'Grey iron and ductile iron foundry looking for an automated quality report generation for customer submission . ',
+            caseTitle:'Quality Documentation for Metal Foundry',
+            caseTitleContent:'An automated quality report generation system was needed by the Grey Iron and Ductile Iron Foundry in order to submit reports to customers.',
             stampImage: "",
             // caseImage:'portfolio/fintechPurple.png',
-            challenges:'Parts submission require quality documents to be submitted regarding spectrometer reading ,sand properties,pouring properties,mould properties .',
+            challenges:'Submission of parts necessitates the submission of high-quality documentation on spectrometer readings, pouring properties, mould properties and sand properties.',
             challengePoints:' ',
-            solution:'One stop solution that consolidates all quality documents along with CAPA followup, machine maintenance and defect prediction.',
+            solution:'A one-stop shop that combines machine maintenance, defect prediction, CAPA follow-up, test certificate and other quality documents.',
             solutionPoints:'',
-            services:'Software architecture consulting Software development Deployment',
+            services:'Software architecture, Technology consulting, Software development, Deployment',
             platform:'Web application',
             techstack:'Bootstrap,Express.js,Jquery,MongoDB,Redis,Indexdb,Google API',
             name: "",
@@ -164,14 +164,14 @@ export default function PortfolioDetails(){
         {
             id:'content5',
             caseTitle:'Agriculture Finance Ecosystem Web Application ',
-            caseTitleContent:'KiVi by agrosperity is a phygital platform that seamlessly enables farmers and agri, rural entrepreneurs to access timely and efficient capital.',
+            caseTitleContent:'Agrosperity KiVi is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.',
             stampImage: "",
-            caseImage:'portfolio/agriPurple.png',
-            challenges:'Kivi  was looking for a development partner to completely take over the  design ,development and deployment of loan eligiblity data ',
-            challengePoints:'Vision to text ,Map interfaces,Multi level authentication ,Dashboards  ',
-            solution:'Veract architects took end to end ownership of the product and setup the platform making crucial',
-            solutionPoints:'Architecture,Framework,Turnaround time',
-            services:'Software architecture consulting Software development Deployment',
+            caseImage:'/portfolio/agriPurple.png',
+            challenges:'Kivi was seeking a development partner to fully assume responsibility for the design, development and implementation of Vision to text, Map interfaces for loan eligibility data, loan documents automation, dashboards with multiple authentication levels',
+            challengePoints:'',
+            solution:'Veract architects set up the platform and assumed complete ownership of the product and made critical choices of architecture, framework to enable rapid development.',
+            solutionPoints:'',
+            services:'Software architecture, Technology consulting, Software development, Deployment',
             platform:'Progressive web application',
             techstack:' Java,Springboot,Postgres,nginx,Kafka,Elastic search,Google APIs,CI/CD,Angular,Kibana',
             name: "Salil Nair",
@@ -201,14 +201,14 @@ export default function PortfolioDetails(){
         {
             id:'content6',
             caseTitle:' Credit Risk Assessment and Risk Profiling ',
-            caseTitleContent:'Northern Arc Capital is a platform in the financial services sector set up primarily with the mission of catering to the diverse credit requirements of under-served households and businesses.',
+            caseTitleContent:'Northern Arc Capital is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.',
             stampImage: "",
-            caseImage:'portfolio/fintechPurple.png',
-            challenges:'Northern arc needed a team with financial domain and technical expertise to build their investor portal. They had the need to mitigate risk profile, risk analytics etc',
+            caseImage:'/portfolio/fintechPurple.png',
+            challenges:'For the construction of their investor portal, Northern Arc Capital required a team with technical and financial domain experience. They needed to reduce risk by using risk analytics, risk profiles, etc.',
             challengePoints:' ',
-            solution:'Veract combined its financial domain expertise with core development skills and deployed risk profiling in their investor tracking portal',
+            solution:'Veract implemented risk profiling in their investor tracking portal by fusing their core development skills with their expertise in financial domain.',
             solutionPoints:'',
-            services:'Software architecture consulting Software development Deployment',
+            services:'Software architecture, Technology consulting, Software development, Deployment',
             platform:'Web application',
             techstack:'Angular,Springboot,Postgres,Kibana,Elastic search,Node js',
             name: "",
@@ -363,9 +363,14 @@ export default function PortfolioDetails(){
                                 <div className='serviceContainer'>
                                     <div className='ServiceImage'><img src="caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader'>Services</div>
-                                    <div className='serviceText'>Software architecture consulting </div>
+                                    <div className='flex flex-col'>
+                                    {item.services.split(',').map((service,index)=>(
+                                        <div key={index} className='challengePoints'>{service}</div>
+                                    ))}
+                                    </div>
+                                    {/* <div className='serviceText'>Software architecture consulting </div>
                                     <div className='serviceText'>Software development</div>
-                                    <div className='serviceText'>Deployment</div>
+                                    <div className='serviceText'>Deployment</div> */}
                                     {/* <div className='serviceUsed flex flex-col'>
                                     {item.services.split(',').map((service,index)=>(
                                         <div key={index} className='serviceText' >{service}</div>
@@ -373,10 +378,9 @@ export default function PortfolioDetails(){
                                     </div> */}
                                 </div>
                                 <div className='platformContainer'>
-                                    <div className='ServiceImage'><img src="caseStudies/web.png" className='w-16'/></div>
+                                    <div className='ServiceImage pt-12'><img src="caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader'>Platform</div>
                                     <div className='PlatformText'>{item.platform}</div>
-                                    
                                 </div>
                             </div>
                             <div className="techstackContainer">

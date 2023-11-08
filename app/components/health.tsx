@@ -16,8 +16,6 @@ export default function Health(){
         scrollToSection(sectionId);
       };
     
-
-    
     return(
         <div>
 
@@ -31,27 +29,27 @@ export default function Health(){
                         </div>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Health and Wellness Web and Mobile App. </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>Anyo is a health and wellness app tackling the important challenge of mental well being .</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Anyo is a health and wellness app that addresses the significant issue of mental health.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Anyo founding team were in search of one stop solution - technical consulting and development for their product that had</div>
-                                <div className='flex flex-col pt-6'>
+                                <div className='challengesContent_mobile'>The founders of Anyo were looking for a one-stop shop for technical advice and development for their live chat-enabled platform with streaming audio, video along with chatbots.</div>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
                                         <div className='challengePoints_mobile'>Chat bot integration. </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract's team of architects and developers built the anyo mobile app, their four web portals within 5 months. </div>
-                                <div className='flex flex-col pt-6'>
+                                <div className='challengesContent_mobile'>Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc</div>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
                                         <div className='solutionPoints_mobile'>Choice of tools.</div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='BottomContainer_mobile pt-10'>
@@ -59,7 +57,8 @@ export default function Health(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>

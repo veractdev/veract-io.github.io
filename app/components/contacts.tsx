@@ -41,6 +41,11 @@ export default function Contacts() {
     const handleSubmit = () => {
       
       setModalOpen(true);
+      setfName("");
+      setlName("");
+      setEmail("");
+      setPhone("");
+      setText("");
       // console.log("Success");
     }
     
@@ -59,6 +64,11 @@ export default function Contacts() {
         setShowSuccess(false);
       };
 
+      const [fname, setfName] = useState("");
+      const [lname, setlName] = useState("");
+      const [email, setEmail] = useState("");
+      const [phone, setPhone] = useState("");
+      const [text, setText] = useState("");
    
     
     return (
@@ -207,6 +217,7 @@ export default function Contacts() {
   <div className="responsive-container-block big-container">
     <div className="responsive-container-block container"> 
       <form onSubmit={handleSubmit} action="https://api.web3forms.com/submit" method="POST">
+        {/* empty form elements */}
         <input type="hidden" name="redirect" value="https://veract.io" />
         <input type="hidden" name="access_key" value="9d3da815-bac9-4a3d-be26-6f4f5689cbba" />
         {/* <input type="hidden" name="_autoresponse" value="Thank you for contacting us, we will get back to you soon!!"/> */}
@@ -224,31 +235,46 @@ export default function Contacts() {
               <p className="text-blk input-title">
                 FIRST NAME
               </p>
-              <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..."  required/>
+              <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..." 
+                value={fname}
+                onChange={e => setfName(e.target.value)}
+                required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 LAST NAME
               </p>
-              <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..." required/>
+              <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..."
+              value={lname}
+              onChange={e => setlName(e.target.value)}
+              required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 EMAIL
               </p>
-              <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..."  required/>
+              <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..."  
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 PHONE NUMBER
               </p>
-              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone no..." required/>
+              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone no..." type='number' 
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              required/>
             </div>
             <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
               <p className="text-blk input-title">
                 WHAT DO YOU HAVE IN MIND
               </p>
-              <textarea className="textinput" id="i5vyy" name="query" placeholder="Please enter query..."  required />
+              <textarea className="textinput" id="i5vyy" name="query" placeholder="Please enter query..."  
+              value={text}
+              onChange={e => setText(e.target.value)}
+              required />
             </div>
           </div>
           

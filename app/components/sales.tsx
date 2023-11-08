@@ -30,13 +30,13 @@ export default function Sales(){
                         </div>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Sales Enquiry and Quote Management  </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-11 pl-5'>Rajdeep is a multi principal,multi product,multi location industrial products distributor based out of pune.  </div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Rajdeep is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Client's pain points were salesmen attrition, lack of data continuity, quotation generation and reporting. They were looking for a solution to these with an ability to fit into their regular workflow including SAP integration. They also wanted the application to work offline.</div>
+                                <div className='challengesContent_mobile'>Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine. On top is the complete offline functionality due to poor network connectivity phases.</div>
                                 <div className='flex flex-col pt-6'>
                                         {/* <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -45,7 +45,7 @@ export default function Sales(){
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract developed a web and mobile application with seamless integration with other software applications customer has been using</div>
+                                <div className='challengesContent_mobile'>Veract created a mobile and online application that seamlessly integrated with the customers existing software.</div>
                                 <div className='flex flex-col pt-6'>
                                         {/* <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
@@ -58,7 +58,8 @@ export default function Sales(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
+                                    <div className='serviceText_mobile pt-2 '>Software architecture</div>
+                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>

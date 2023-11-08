@@ -36,7 +36,7 @@ export default function FoundersDesk() {
                 <div className={`scroll-animationY ${isVisible ? 'visibleFounderProfile' : ''}`}>
                     <div className="left-column">
                    
-                      <div className="founderProfileWidth pb-2"><img src="founderProfileCircle.png" className='founderProfileChange' /></div>
+                      <div className="founderProfileWidth pb-2"><img src="/founderProfileCircle.png" className='founderProfileChange' /></div>
                    
                     <div className='founderDetails whitespace-nowrap pt-2'><label className='title'>PREETHY SRIKANTHAN, <span className='title highlight'>Founder</span></label> </div>
                     </div>
