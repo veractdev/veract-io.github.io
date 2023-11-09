@@ -104,7 +104,7 @@ export default function Sales(){
                                     <div className="pb-5 pl-5"><i className="quotes"></i></div>
                                     <div className='flex flex-col items-center pb-2'>
                                         <div className='title_mobile whitespace-nowrap'>ANAND SHAH - DIRECTOR</div>
-                                        <div className='title_mobile highlight pl-3'>RAJDEEP INDUSTRIAL PRODUCTS</div>
+                                        <div className='title_mobile highlight'>RAJDEEP INDUSTRIAL PRODUCTS</div>
                                     </div>
                                 </div>
                                 <div className="clientscontent_mobile flex-wrap pb-2">Excellent prompt support in spite of remote location.</div>

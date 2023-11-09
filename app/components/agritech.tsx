@@ -107,7 +107,7 @@ export default function AgriTech(){
                                     <div className="pb-5 pl-5"><i className="quotes"></i></div>
                                     <div className='flex flex-col items-center pb-5'>
                                         <div className='title_mobile whitespace-nowrap'>Salil Nair - CTO</div>
-                                        <div className='title_mobile highlight pl-3'>Agrosperity Tech Solutions</div>
+                                        <div className='title_mobile highlight'>Agrosperity Tech Solutions</div>
                                     </div>
                                 </div>
                                 <div className="clientscontent_mobile flex-wrap pb-2">We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.</div>
