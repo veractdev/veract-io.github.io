@@ -35,20 +35,20 @@ export default function Manufacturing(){
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
                                 <div className='challengesContent_mobile'>Submission of parts necessitates the submission of high-quality documentation on spectrometer readings, pouring properties, mould properties and sand properties.</div>
-                                <div className='flex flex-col pt-6'>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'></div>
                                         <div className='challengePoints_mobile'></div>
                                         <div className='challengePoints_mobile'></div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
                                 <div className='challengesContent_mobile'>A one-stop shop that combines machine maintenance, defect prediction, CAPA follow-up, test certificate and other quality documents.</div>
-                                <div className='flex flex-col pt-6'>
+                                {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'></div>
                                         <div className='solutionPoints_mobile'></div>
                                         <div className='solutionPoints_mobile'></div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='BottomContainer_mobile '>
@@ -64,13 +64,11 @@ export default function Manufacturing(){
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Mobile</div>
-                                    <div className='PlatformText_mobile pt-2'>and</div>
-                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                        <div className="pl-5 pr-5 pb-8">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
@@ -81,13 +79,13 @@ export default function Manufacturing(){
                                         <div className="flex flex-col md:gap-6">
                                             <div className='techText_mobile pb-3'>Bootstrap</div>
                                             <div className='techText_mobile pb-3'>Express.js</div>
-                                            <div className='techText_mobile pb-3'>Jquery</div>
+                                            <div className='techText_mobile pb-3'>jQuery</div>
                                             <div className='techText_mobile pb-3'>MongoDB</div>
                                         </div>
                                         <div className="flex flex-col md:gap-6">
                                             <div className='techText_mobile pb-3'>Redis</div>
-                                            <div className='techText_mobile pb-3'>Indexdb</div>
-                                            <div className='techText_mobile pb-3'>Google API</div>
+                                            <div className='techText_mobile pb-3'>IndexedDB</div>
+                                            <div className='techText_mobile pb-3'>Google APIs</div>
                                         </div>     
                                     </div>
                                 </div>

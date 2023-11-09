@@ -65,13 +65,11 @@ export default function AgriTech(){
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Mobile</div>
-                                    <div className='PlatformText_mobile pt-2'>and</div>
-                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
+                                    <div className='PlatformText_mobile pt-2'>web</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5">
+                        <div className="pl-5 pr-5">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
@@ -81,14 +79,14 @@ export default function AgriTech(){
                                 <div className="flex flex-row justify-around pt-6">
                                         <div className="flex flex-col md:gap-6">
                                             <div className='techText_mobile pb-3'>Java</div>
-                                            <div className='techText_mobile pb-3'>Springboot</div>
-                                            <div className='techText_mobile pb-3'>Postgres</div>
-                                            <div className='techText_mobile pb-3'>nginx</div>
-                                            <div className='techText_mobile pb-3'>kafka</div>
+                                            <div className='techText_mobile pb-3'>Spring Boot</div>
+                                            <div className='techText_mobile pb-3'>PostgreSQL</div>
+                                            <div className='techText_mobile pb-3'>Nginx</div>
+                                            <div className='techText_mobile pb-3'>Kafka</div>
 
                                         </div>
                                         <div className="flex flex-col md:gap-6">
-                                            <div className='techText_mobile pb-3'>Elastic Search</div>
+                                            <div className='techText_mobile pb-3'>Elasticsearch</div>
                                             <div className='techText_mobile pb-3'>Google APIs</div>
                                             <div className='techText_mobile pb-3'>CI/CD</div>
                                             <div className='techText_mobile pb-3'>Angular</div>
@@ -103,16 +101,16 @@ export default function AgriTech(){
                             <div className='testimonialContainer_mobile'>
                                 <div className='clientContainer_mobile md:gap-4'>
                                 <div className='flex pt-2'>
-                                    <div className="challenges_mobile">Clients Speak</div>
+                                    <div className="clientsspeak_mobile">Clients Speak</div>
                                 </div>
                                 <div className='flex pt-2 flex-col md:gap-3'>
-                                    <div className="pb-5"><i className="quotes"></i></div>
+                                    <div className="pb-5 pl-5"><i className="quotes"></i></div>
                                     <div className='flex flex-col items-center pb-5'>
                                         <div className='title_mobile whitespace-nowrap'>Salil Nair - CTO</div>
                                         <div className='title_mobile highlight pl-3'>Agrosperity Tech Solutions</div>
                                     </div>
                                 </div>
-                                <div className="challengesContent_mobile pl-2 pr-2 flex-wrap pb-2">We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.</div>
+                                <div className="clientscontent_mobile flex-wrap pb-2">We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.</div>
                                 </div>
                             </div>
                         </div>

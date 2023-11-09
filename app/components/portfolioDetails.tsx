@@ -60,8 +60,8 @@ export default function PortfolioDetails(){
             solution:"Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc",
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment',
-            platform:'Mobile and Web application',
-            techstack:'Flutter, Angular, Loopback, MongoDB, Elastic Search',
+            platform:'Mobile, Web ',
+            techstack:'Flutter, Angular, LoopBack, MongoDB, Elasticsearch',
             name: "",
             designation: "",
             company: "",
@@ -79,8 +79,8 @@ export default function PortfolioDetails(){
             solution:'Veract created a mobile and online application that seamlessly integrated with the customers existing software.',
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment',
-            platform:'Mobile and Web application',
-            techstack:'Redis,Bootstrap,Express.js,Indexdb,MongoDB,Google API,Jquery',
+            platform:'Mobile,Web',
+            techstack:'Redis,Bootstrap,Express.js,IndexedDB,MongoDB,Google APIs,jQuery',
             name: "",
             designation: "",
             company: "",
@@ -98,8 +98,8 @@ export default function PortfolioDetails(){
             solution:"Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.",
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment, End to end vision systems',
-            platform:'Web application',
-            techstack:' Python, Keras, Tensor flow, Pytorch',
+            platform:'Web',
+            techstack:'Python, Keras, TensorFlow, PyTorch',
             name: "",
             designation: "",
             company: "",
@@ -117,8 +117,8 @@ export default function PortfolioDetails(){
             solution:'A one-stop shop that combines machine maintenance, defect prediction, CAPA follow-up, test certificate and other quality documents.',
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment',
-            platform:'Web application',
-            techstack:'Bootstrap,Express.js,Jquery,MongoDB,Redis,Indexdb,Google API',
+            platform:'Web',
+            techstack:'Bootstrap,Express.js,jQuery,MongoDB,Redis,IndexedDB,Google APIs',
             name: "",
             designation: "",
             company: "",
@@ -172,8 +172,8 @@ export default function PortfolioDetails(){
             solution:'Veract architects set up the platform and assumed complete ownership of the product and made critical choices of architecture, framework to enable rapid development.',
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment',
-            platform:'Progressive web application',
-            techstack:' Java,Springboot,Postgres,nginx,Kafka,Elastic search,Google APIs,CI/CD,Angular,Kibana',
+            platform:'web',
+            techstack:' Java,Spring Boot,PostgreSQL,Nginx,Kafka,Elasticsearch,Google APIs,CI/CD,Angular,Kibana',
             name: "Salil Nair",
             designation: "CTO",
             company: "Agrosperity Tech Solutions",
@@ -209,8 +209,8 @@ export default function PortfolioDetails(){
             solution:'Veract implemented risk profiling in their investor tracking portal by fusing their core development skills with their expertise in financial domain.',
             solutionPoints:'',
             services:'Software architecture, Technology consulting, Software development, Deployment',
-            platform:'Web application',
-            techstack:'Angular,Springboot,Postgres,Kibana,Elastic search,Node js',
+            platform:'Web',
+            techstack:'Angular,Spring Boot,PostgreSQL,Kibana,Elasticsearch,Node.js',
             name: "",
             designation: "",
             company: "",
@@ -380,7 +380,12 @@ export default function PortfolioDetails(){
                                 <div className='platformContainer'>
                                     <div className='ServiceImage pt-12'><img src="caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader'>Platform</div>
-                                    <div className='PlatformText'>{item.platform}</div>
+                                    
+                                    {item.platform.split(',').map((temp,index)=>(
+                                
+                                        <div className='PlatformText'>{temp}</div> 
+                            
+                                    ))}
                                 </div>
                             </div>
                             <div className="techstackContainer">
@@ -392,10 +397,6 @@ export default function PortfolioDetails(){
                                 {item.techstack.split(',').map((stack,index)=>(
                                 
                                     <div key={index} className='techText'>{stack}</div>
-                                    // {/* <div className='techText'>Keras</div>
-                                    // <div className='techText'>Tensor flow</div>
-                                    // <div className='techText'>Pytorch</div>
-                                    // <div className='techText'></div> */}
                                 
                                 ))}
                                 </div>

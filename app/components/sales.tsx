@@ -37,20 +37,20 @@ export default function Sales(){
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
                                 <div className='challengesContent_mobile'>Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine. On top is the complete offline functionality due to poor network connectivity phases.</div>
-                                <div className='flex flex-col pt-6'>
-                                        {/* <div className='challengePoints_mobile'>Live chat.</div>
+                                {/* <div className='flex flex-col pt-6'>
+                                        <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
-                                        <div className='challengePoints_mobile'>Chat bot integration. </div> */}
-                                </div>
+                                        <div className='challengePoints_mobile'>Chat bot integration. </div>
+                                </div> */}
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
                                 <div className='challengesContent_mobile'>Veract created a mobile and online application that seamlessly integrated with the customers existing software.</div>
-                                <div className='flex flex-col pt-6'>
-                                        {/* <div className='solutionPoints_mobile'>Architecture.</div>
+                                {/* <div className='flex flex-col pt-6'>
+                                        <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
-                                        <div className='solutionPoints_mobile'>Choice of tools.</div> */}
-                                </div>
+                                        <div className='solutionPoints_mobile'>Choice of tools.</div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='BottomContainer_mobile'>
@@ -67,12 +67,11 @@ export default function Sales(){
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
                                     <div className='PlatformText_mobile pt-2'>Mobile</div>
-                                    <div className='PlatformText_mobile pt-2'>and</div>
-                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                        <div className="pl-5 pr-5">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
@@ -84,14 +83,31 @@ export default function Sales(){
                                             <div className='techText_mobile pb-3'>Bootstrap</div>
                                             <div className='techText_mobile pb-3'>Redis</div>
                                             <div className='techText_mobile pb-3'>Express.js</div>
-                                            <div className='techText_mobile pb-3'>Indexdb</div>
+                                            <div className='techText_mobile pb-3'>IndexedDB</div>
                                         </div>  
                                         <div className="flex flex-col">
-                                            <div className='techText_mobile pb-3'>Jquery</div>
-                                            <div className='techText_mobile pb-3'>Google API</div>
+                                            <div className='techText_mobile pb-3'>jQuery</div>
+                                            <div className='techText_mobile pb-3'>Google APIs</div>
                                             <div className='techText_mobile pb-3'>MongoDB</div>
                                         </div>     
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="pb-8">
+                            <div className='testimonialContainer_mobile'>
+                                <div className='clientContainer_mobile md:gap-4'>
+                                <div className='flex pt-2'>
+                                    <div className="clientsspeak_mobile">Clients Speak</div>
+                                </div>
+                                <div className='flex pt-2 flex-col md:gap-3'>
+                                    <div className="pb-5 pl-5"><i className="quotes"></i></div>
+                                    <div className='flex flex-col items-center pb-2'>
+                                        <div className='title_mobile whitespace-nowrap'>ANAND SHAH - DIRECTOR</div>
+                                        <div className='title_mobile highlight pl-3'>RAJDEEP INDUSTRIAL PRODUCTS</div>
+                                    </div>
+                                </div>
+                                <div className="clientscontent_mobile flex-wrap pb-2">Excellent prompt support in spite of remote location.</div>
                                 </div>
                             </div>
                         </div>

@@ -66,12 +66,11 @@ export default function Health(){
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
                                     <div className='PlatformText_mobile pt-2'>Mobile</div>
-                                    <div className='PlatformText_mobile pt-2'>and</div>
-                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                        <div className="pl-5 pr-5 pb-8">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
@@ -84,10 +83,13 @@ export default function Health(){
                                     <div className="flex flex-col md:gap-6">
                                         <div className='techText_mobile pb-3'>Flutter</div>
                                         <div className='techText_mobile pb-3'>Angular</div>
-                                        <div className='techText_mobile pb-3'>Loopback</div>
+                                        <div className='techText_mobile pb-3'>LoopBack</div>
+
+                                    </div> 
+                                    <div className="flex flex-col md:gap-6">
                                         <div className='techText_mobile pb-3'>MongoDB</div>
-                                        <div className='techText_mobile pb-3'>Elastic Search</div>
-                                    </div>  
+                                        <div className='techText_mobile pb-3'>Elasticsearch</div>
+                                    </div> 
                                     {/* <div className="flex flex-col">
                                         <div className='techText_mobile pb-3'>Elastic search</div>
                                         <div className='techText_mobile pb-3'>Google APIs</div>

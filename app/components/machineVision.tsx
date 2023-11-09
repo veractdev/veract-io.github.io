@@ -44,11 +44,11 @@ export default function MachineVision(){
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
                                 <div className='challengesContent_mobile'>Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.</div>
-                                <div className='flex flex-col pt-6'>
-                                        {/* <div className='solutionPoints_mobile'>Architecture.</div>
+                                {/* <div className='flex flex-col pt-6'>
+                                        <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
-                                        <div className='solutionPoints_mobile'>Choice of tools.</div> */}
-                                </div>
+                                        <div className='solutionPoints_mobile'>Choice of tools.</div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='BottomContainer_mobile'>
@@ -65,13 +65,11 @@ export default function MachineVision(){
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Mobile</div>
-                                    <div className='PlatformText_mobile pt-2'>and</div>
-                                    <div className='PlatformText_mobile pt-2'>Web applications</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div> 
-                        <div className="pt-2.5 pl-5 pr-5 pb-10">
+                        <div className="pl-5 pr-5 pb-8">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
                                         <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
@@ -80,10 +78,13 @@ export default function MachineVision(){
                                 <div className='techContent_mobile'>
                                 <div className="flex flex-row justify-around pt-6">
                                     <div className="flex flex-col md:gap-6">
-                                    <div className='techText_mobile pb-3'>Python</div>
-                                    <div className='techText_mobile pb-3'>Keras</div>
-                                    <div className='techText_mobile pb-3'>Tensor flow</div>
-                                    <div className='techText_mobile pb-3'>Pytorch</div>
+                                        <div className='techText_mobile pb-3'>TensorFlow</div>
+                                        <div className='techText_mobile pb-3'>Python</div>
+                                        
+                                    </div> 
+                                    <div className="flex flex-col md:gap-6">
+                                        <div className='techText_mobile pb-3'>Keras</div>
+                                        <div className='techText_mobile pb-3'>PyTorch</div>
                                     </div>     
                                 </div>
                                     
