@@ -44,7 +44,7 @@ export default function Health(){
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc</div>
+                                <div className='challengesContent_mobile'>Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>

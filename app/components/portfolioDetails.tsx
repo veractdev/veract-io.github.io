@@ -81,10 +81,10 @@ export default function PortfolioDetails(){
             services:'Software architecture, Technology consulting, Software development, Deployment',
             platform:'Mobile,Web',
             techstack:'Redis,Bootstrap,Express.js,IndexedDB,MongoDB,Google APIs,jQuery',
-            name: "",
-            designation: "",
-            company: "",
-            clientSpeak:"",
+            name: "ANAND SHAH",
+            designation: "DIRECTOR",
+            company: "RAJDEEP INDUSTRIAL PRODUCTS",
+            clientSpeak:"Excellent prompt support in spite of remote location.",
             seperator: <hr className='separatorPortfolio'></hr>
         },
         {
@@ -401,8 +401,21 @@ export default function PortfolioDetails(){
                                 ))}
                                 </div>
                             </div>
-                        </div> 
-                        {item.clientSpeak?.length !== 0 && (
+                        </div>
+                        {item.id === "content2" && (
+                            <div className='flex items-center justify-center'>
+                                <img src="/output/sales.png" className=''/>
+                            </div>
+                        
+                        )}
+                        {item.id === "content1" && (
+                            <div className='flex items-center justify-center'>
+                                <img src="/output/anyoFinalOutput.png" className=''/>
+                            </div>
+                        
+                        )}
+                         
+                         {item.clientSpeak?.length !== 0 && (
                         <div className='testimonialContainer'>
                             {/* <div className='engagementContainer'>
                                 <div className="challenges">Phase of Engagement</div>
@@ -420,18 +433,6 @@ export default function PortfolioDetails(){
                             <div className="challengesContent pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div>
                             </div>
                         </div>
-                        )}
-                        {item.id === "content2" && (
-                            <div className='flex items-center justify-center'>
-                                <img src="/output/sales.png" className=''/>
-                            </div>
-                        
-                        )}
-                        {item.id === "content1" && (
-                            <div className='flex items-center justify-center'>
-                                <img src="/output/anyoFinalOutput.png" className=''/>
-                            </div>
-                        
                         )}
                         
                         {item.seperator}
