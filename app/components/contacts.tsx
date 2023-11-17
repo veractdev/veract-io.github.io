@@ -41,12 +41,6 @@ export default function Contacts() {
     const handleSubmit = () => {
       
       setModalOpen(true);
-      setfName("");
-      setlName("");
-      setEmail("");
-      setPhone("");
-      setText("");
-      // console.log("Success");
     }
     
 
@@ -247,7 +241,7 @@ export default function Contacts() {
               <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..."
               value={lname}
               onChange={e => setlName(e.target.value)}
-              required/>
+              />
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
