@@ -221,7 +221,7 @@ export default function Contacts() {
             {/* Get in <span style={{color:"#000"}}> Touch </span> */}
           </p>
           <p className="text-blk contactus-subhead" style={{fontSize:18}}>
-          Feel free to contact us any time
+          Feel free to contact us any time.
           </p>
           <div className="responsive-container-block"> 
 
