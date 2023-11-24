@@ -30,7 +30,7 @@ const services = [
     {
         id: 1,
         image: images[theme].webApp,
-        title: 'Web Applications',
+        title: 'Web Applications ',
         list: [ 'JavaScript', 'NodeJS', 'Angular', 'ReactJS',' Java SpringBoot'],
         mobileContent:" JavaScript, NodeJS, Angular, ReactJS, Java SpringBoot"
     },
