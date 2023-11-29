@@ -100,7 +100,7 @@ export default function TopnavBar() {
       <div className="flex flex-row justify-between flex-nowrap items-center justify-center">
         <Link href="/">
         {/* <button> */}
-        <div className={`transitionEffect ${isVisible ? 'afterScroll' : 'beforeScroll'}`} >ver<span className="textColorLogo">act</span></div>
+        <div className={`transitionEffect ${isVisible ? 'afterScroll' : 'beforeScroll'}`} ><span className="font-semibold">ver</span><span className="textColorLogo">act</span></div>
         {/* <div className={`transitionEffect ${isVisible ? 'navbar_afterScroll ' : 'navbar_beforeScroll' }`}></div> */}
         {/* </button> */}
         </Link>

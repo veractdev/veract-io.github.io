@@ -43,10 +43,10 @@ export default function FoundersDesk() {
                     </div>     
                     <div className="right-column flex flex-col md:gap-4 foundersContent">
                     <div className={`scroll-animationY ${isVisible ? 'visibleFounderContent' : ''}`}>
-                      <div className="paragraph_padding pb-2">
+                      <div className="paragraph_padding ">
                         <div><label className=" firstPara" >Veract was created out of our love for engineering and using technology to drive efficiency. We hire and develop people who share our passion for engineering.</label></div>
                       </div>
-                      <div className="paragraph_padding pb-2">
+                      <div className="paragraph_padding">
                         <div className="secondPara">At Veract you will directly work with passionate UX trained engineers who are keen to employ their superpowers to solve your challenges.</div>
                       </div>
                       <div className="paragraph_padding">

@@ -345,7 +345,7 @@
     font-family: var(--founders-desk-font);
     font-size: 18px;
     text-align: justify;
-    line-height: normal;
+    /* line-height: normal; */
   }
 
 
