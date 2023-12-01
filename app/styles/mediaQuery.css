@@ -2,7 +2,9 @@
 @import url('services.css');
 @import url('testimonials.css');
 @import url('contacts.css');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @media (max-width :768px) {
   body {
