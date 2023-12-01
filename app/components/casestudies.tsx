@@ -113,7 +113,7 @@ export default function Casestudies() {
                 <div className="flex flex-row flex-wrap">
                 {portfolio.map((item)=>(
                 <div key={item.id} className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4'>
-                <Link href={{
+                <Link rel="preload" href={{
                             pathname: 'CaseStudyPage',
                             query: { id: item.id },
                         }}>
@@ -269,7 +269,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4 '>MANUFACTURING</div>
                                 </div>
                                 <div className='infoIconMobile '>
-                                <Link href="/MobileCaseStudy/manufacturing">
+                                <Link rel="preload" href="/MobileCaseStudy/manufacturing">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                 </Link>
                                 </div>
@@ -291,7 +291,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4 '>WELLNESS</div>
                                 </div>
                                 <div className='infoIconMobile '>
-                                    <Link href="/MobileCaseStudy/health">
+                                    <Link rel="preload" href="/MobileCaseStudy/health">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                     </Link> 
                                 </div>
@@ -332,7 +332,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>SALES</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/sales">
+                                    <Link rel="preload" href="/MobileCaseStudy/sales">
                                     <img src="/images/info.png" className='w-4 h-4'></img> 
                                     </Link>
                                  
@@ -354,7 +354,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4' >AGRI TECH</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/agritech">
+                                    <Link rel="preload" href="/MobileCaseStudy/agritech">
                                     <img src="/images/info.png" className='w-4 h-4'></img>
                                     </Link>
                                  
@@ -396,7 +396,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4'>FINTECH</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/fintech">
+                                    <Link rel="preload" href="/MobileCaseStudy/fintech">
                                     <img src="/images/info.png" className='w-4 h-4'></img> 
                                     </Link>
                                 </div>
@@ -417,7 +417,7 @@ export default function Casestudies() {
                                 <div className='item-title flex textColorLogo pl-4 '>MACHINE VISION</div>
                                 </div>
                                 <div className='infoIconMobile '>
-                                    <Link href="/MobileCaseStudy/machinevision">
+                                    <Link rel="preload" href="/MobileCaseStudy/machinevision">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
                                     </Link> 
                                 </div>
