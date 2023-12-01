@@ -52,8 +52,6 @@ let scroll =   searchParams?.get("sectionId");
     return (
         <>
             <div id="Home">
-              
-
           {/* <div className=" custom-cursor"> */}
             {/* <CustomCursor /> */}
             <div className="mainPage fontFamily flex">
