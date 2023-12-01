@@ -188,7 +188,7 @@ export default function TopnavBar() {
                   
                 <li className={`nav-item ${isOpen ? "visible pl-8" : "MediaHidden"}`}>
                   <div className="mobileTalk">
-                  <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily whitespace-nowrap"  onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
+                  <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily"  onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
                   </div>
                 </li>
                 </div>
@@ -277,7 +277,7 @@ export default function TopnavBar() {
                 <div>
                   <li className={`nav-item ${isOpen ? "visible pl-8" : "MediaHidden"}`}>
                   <div className="mobileTalk">
-                  <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily whitespace-nowrap"  onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
+                  <div className="fix-appointment flex navbarCursor whitespace-nowrap fontFamily"  onClick={() => scrollToSection("ContactUS")}><a onClick={handleToggle}>Talk to us</a></div>
                   </div>
                 </li>
                 </div>

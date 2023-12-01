@@ -481,13 +481,15 @@ span {
 }
 
 .mainPage {
-  background-image: url("/images/blackBgNoMark.jpg");
+  /* background-image: url("/images/blackBgNoMark.jpg"); */
+  background-image: url("/images/backgroundImg.jpg");
 }
 
 .mainPage {
   margin: 0;
   padding: 0;
   width: 100%;
+  z-index: 9999;
   /* background: linear-gradient(40deg, #8BD3E5 52%, transparent 52%, transparent 100%); */
   /* background: linear-gradient(40deg, #2596be, transparent 52%, transparent 100%); */
   background-color: #000 !important;
@@ -901,8 +903,6 @@ ul {
   }
 }
 
-.left-column {}
-
 .founderDetails {
   display: contents;
 }
@@ -955,11 +955,6 @@ ul {
 /* .................... services page ...................................*/
 
 
-
-.servicesMain {
-  /* background-image: url("/blueBg.jpg"); */
-  /* background-color: #000C19; */
-}
 
 .line-with-text {
   background-image: url('/bgServices.png');
