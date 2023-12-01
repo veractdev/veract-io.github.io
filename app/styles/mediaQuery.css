@@ -286,9 +286,13 @@
     line-height: 28px;
 
 
-    &.highlight {
+    /* .highlight {
       color: var(--primary-colour);
-    }
+    } */
+  }
+
+  .highlight {
+    color: var(--primary-colour);
   }
 
   .clients-logo-section {
