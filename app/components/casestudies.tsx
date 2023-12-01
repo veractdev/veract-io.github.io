@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 import { useEffect, useRef, useState } from 'react';
 import { link } from 'fs';
 import { useRouter } from 'next/router';

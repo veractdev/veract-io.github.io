@@ -1,8 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import '../styles/styles.css';
-import '../styles/mediaQuery.css'
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css'
 
 export default function SuccessPage(){
     

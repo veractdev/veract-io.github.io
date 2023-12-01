@@ -1,6 +1,6 @@
 'use client';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 

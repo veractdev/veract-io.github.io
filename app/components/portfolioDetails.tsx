@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 import DashboardDetails from './dashboardPortfolio';
 
-import '../styles/styles.css';
-import '../styles/mediaQuery.css'
-import '../styles/testimonials.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css'
+// import '../styles/testimonials.css';
 import { usePathname, useSearchParams,useRouter } from 'next/navigation'
 
 export default function PortfolioDetails(){
@@ -325,7 +325,7 @@ export default function PortfolioDetails(){
                             </div>
                         </div>
                     </div>
-                    {portfolio.map((item)=>(
+                    {portfolio.map((item, i)=>(
                         //  id={item.id}
                         <section key={item.id} id={item.id} >
                         <div className='caseDetails' id={item.id} >
