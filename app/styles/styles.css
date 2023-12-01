@@ -1,8 +1,8 @@
 @import url('constants.css');
 @import url('cursor.css');
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 /* styles/FlipCard.module.css */
 
 
@@ -116,10 +116,6 @@ span {
   color: var(--primary-colour);
 }
 
-.contactCardDetails {
-  /* color:#8c9398; */
-}
-
 .mailText:hover {
   color: var(--primary-colour);
 }
@@ -184,9 +180,7 @@ span {
   .contactHeader{
     color:var(--primary-colour);
   }
-  .contactCardDetails{
-    /* color:#8c9398; */
-  }
+
   .mailText:hover{
     color:var(--primary-colour);
   }
@@ -464,10 +458,7 @@ span {
   padding-top: 1%;
 }
 
-.paddingWebContent {
-  /* padding-top:96px; */
-  /* padding-top:5px; */
-}
+
 
 .mobileContentBanner {
   display: none;
@@ -1808,8 +1799,6 @@ ul {
   animation-delay: 1s;
   opacity: 0;
 }
-
-.scroll-animationPortfolio.item-icon {}
 
 .infoIconMobile {
   display: none;

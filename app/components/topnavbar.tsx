@@ -97,7 +97,7 @@ export default function TopnavBar() {
   return (
     <div className={`navbar ${isOpen ? " padding" : "padding"}`}>
       {/* <div className="p-4 border-2  rounded-lg border-primary   bg-primary " > */}
-      <div className="flex flex-row justify-between flex-nowrap items-center justify-center">
+      <div className="flex flex-row justify-between flex-nowrap items-center ">
         <Link href="/">
         {/* <button> */}
         <div className={`transitionEffect ${isVisible ? 'afterScroll' : 'beforeScroll'}`} ><span className="font-semibold">ver</span><span className="textColorLogo">act</span></div>
