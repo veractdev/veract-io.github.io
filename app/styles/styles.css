@@ -889,9 +889,12 @@ ul {
   line-height: 28px;
 
 
-  &.highlight {
+  /* &.highlight {
     color: var(--primary-header-text-color);
-  }
+  } */
+}
+.highlight {
+  color: var(--primary-header-text-color);
 }
 
 .founderDetails {
