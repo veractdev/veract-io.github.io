@@ -94,7 +94,7 @@ export default function Casestudies() {
             <div className="flex flex-col  case-studies portfolioFonts ">
                 <div className="flex flex-col case-studies-content   ">
                     <div className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName' : ''}`}>
-                        <div className="flex case-studies-content-top items-center justify-center flex flex-row md:gap-6 ">
+                        <div className=" case-studies-content-top items-center justify-center flex flex-row md:gap-6 ">
                             <hr className="separator"></hr>
                             <div className='section-title mobilePaddingHeader'>
                                 CUSTOMER <span className='section-title-highlight'> SUCCESS</span>
