@@ -17,6 +17,8 @@ import Carousel from './components/carousel'
 import Footer from './components/footer'
 import VeractDetails from './components/veractDetails'
 import './styles/mediaQuery.css';
+<link rel="styleSheet" href='./styles/styles.css' />;
+<link rel="styleSheet" href= './styles/mediaQuery.css' />;
 
 const inter = Inter({ subsets: ['latin'] })
 
