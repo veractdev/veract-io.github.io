@@ -6,8 +6,9 @@ const nextConfig = {
 
 module.exports = {
     output: 'export',
-    images: {
-        disableStaticImages: true,
-      },
+        images: {
+            disableStaticImages: true,
+             unoptimized: true ,
+          },
     
 }
