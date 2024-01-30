@@ -1100,4 +1100,7 @@
   /* white-space: nowrap; */
 }
 
+.mobileHeader {
+  font-size: 14px;
+}
 }
