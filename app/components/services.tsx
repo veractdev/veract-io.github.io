@@ -38,7 +38,7 @@ const services = [
         id: 2,
         image: images[theme].mobileApp,
         title: 'Mobile Applications',
-        list: ["Flutter"," React native"],
+        list: ["Flutter"," React native."],
         mobileContent:" Flutter, React native"
     },
     {
