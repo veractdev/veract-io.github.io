@@ -26,9 +26,12 @@
   line-height: 28px;
 
 
-  &.highlight {
+  /* &.highlight {
     color: var(--primary-colour);
-  }
+  } */
+}
+.highlight {
+  color: var(--primary-colour);
 }
 
 .text {
@@ -45,11 +48,13 @@
   height: 8px !important;
   background: #838383 !important;
   box-shadow: none !important;
-  &.selected {
+  /* &.selected {
     background: var(--primary-colour) !important;
-  }
+  } */
 }
-
+.dot .selected {
+  background: var(--primary-colour) !important;
+}
 .control-arrow {
   display: none;
 }

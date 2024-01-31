@@ -5,10 +5,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/clients.css';
-import '../styles/mediaQuery.css';
+// import '../styles/mediaQuery.css';
 // import '../styles/styles.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Clients() {
   const [slidesToShow, setSlidesToShow] = useState(4);
@@ -24,10 +25,10 @@ export default function Clients() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow: slidesToShow,                                                                
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 500,
+    autoplaySpeed: 1000,
     adaptiveHeight: false
 
   };
@@ -53,15 +54,32 @@ export default function Clients() {
   }, []);
 
 
-  const clients = [{ image: "resizedLogo/mako-logo.png", largeImage: false }, { image: "resizedLogo/rajdeep-logo.png", largeImage: false },
-  { image: "resizedLogo/suyash-logo.png", largeImage: false }, { image: "resizedLogo/anyo-logo.png", largeImage: false },
-  { image: "resizedLogo/india-wasted-logo.png", largeImage: false }, { image: "resizedLogo/northern-arc-logo.png", largeImage: false },
-  { image: "resizedLogo/dhananjaya-logo.png", largeImage: false }, { image: "resizedLogo/ia-logo.png", largeImage: false },
-  { image: "resizedLogo/myTrackie-logo.png", largeImage: false }, { image: "resizedLogo/kivi-logo.png", largeImage: false },
-  { image: "resizedLogo/technoweld-logo.png", largeImage: false }
+  const clients = [
+  //   { id: "1", image: "/resizedLogo/mako-logo.png", largeImage: false },
+    
+  //   {id: "2", image: "/resizedLogo/rajdeep-logo.png", largeImage: false },
+  // {id: "3", image: "/resizedLogo/suyash-logo.png", largeImage: false }, { id: "4",image: "/resizedLogo/anyo-logo.png", largeImage: false },
+  // {id: "5", image: "/resizedLogo/india-wasted-logo.png", largeImage: false }, {id: "6",image: "/resizedLogo/northern-arc-logo.png", largeImage: false },
+  // {id: "7", image: "/resizedLogo/dhananjaya-logo.png", largeImage: false }, {id: "8", image: "/resizedLogo/ia-logo.png", largeImage: false },
+  // {id: "9", image: "/resizedLogo/myTrackie-logo.png", largeImage: false }, {id: "10", image: "/resizedLogo/kivi-logo.png", largeImage: false },
+  // {id: "11", image: "/resizedLogo/technoweld-logo.png", largeImage: false }
 
+  {id: "1", image: "/clients/kivi.png"},
 
+  {id: "2", image: "/clients/rajdeep.png"},
+  {id: "3", image: "/clients/dhananjaya.png"},
 
+  {id: "4", image: "/clients/technowild.png"},
+  {id: "5", image: "/clients/mako.png"},
+
+  {id: "6", image: "/clients/india_wasted.png"},
+  {id: "7", image: "/clients/suyash.png"},
+
+  {id: "8", image: "/clients/anyo.png"},
+  {id: "9", image: "/clients/industrial_agencies.png"},
+
+  {id: "10", image: "/clients/my_trackie.png"},
+  {id: "11", image: "/clients/northen_arc.png"},
   ];
   // image:{"mako.svg", "rajdeep.svg", "suyash.svg", "anyoBg.png", "myTrackieBg.png","nothernArcBg.png"
 
@@ -79,22 +97,20 @@ export default function Clients() {
           <hr className="separator"></hr>
         </div>
       </div>
-      <div className={`scroll-animationClients clients-logo-section ${isLogo ? 'visibleClients pl-3 pr-3' : ' pl-3 pr-3'}`}>
+      <div className={`scroll-animationClients clients-logo-section flex justify-center ${isLogo ? 'visibleClients pl-3 pr-3' : 'pl-3 pr-3'}`}>
 
         {/* <div className={`scroll-animationClients ${isLogo ? 'client flex flex-row flex-wrap pr-10 pl-10' : ''}`}> */}
         <Slider {...settings}>
-          {clients.map((client) => (
+          {clients.map((client, i) => (
             //  {client.largeImage ===  true ? (<img className='logo  w-36' src={client.image} />):
             //  ((
-            <div className="clientLogo ">
-              <img className='logo' src={client.image} />
+            <div className="clientLogo " key={i}>
+              <img className='logo' key={client.id} src={client.image} />
+              {/* <Image className="logo" src={client.image} width={500} height={500} alt="Picture of the author" /> */}
            </div>
-
           ))}
-
         </Slider>
         {/* </div> */}
-
       </div>
       <div id="Founder's"></div>
     </div>

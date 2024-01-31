@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  // purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       backgroundImage: {
@@ -15,7 +16,10 @@ const config: Config = {
       },
       colors:{
         // primary:"#fff4ec",
-        primary:"white"
+        primary:"white",
+        grey: "#808080",
+        orange: "#ffa500",
+        primary_color: "#4285F4"
       },
     },
   },

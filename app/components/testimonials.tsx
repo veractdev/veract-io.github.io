@@ -2,7 +2,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import '../styles/testimonials.css';
-import '../styles/mediaQuery.css';
+// import '../styles/mediaQuery.css';
 // import '../styles/styles.css';
 import { useEffect, useState } from 'react';
 
@@ -13,7 +13,7 @@ export default function Testimonials() {
       name: "Hare Priyaa Rajendran",
       designation: "Founder",
       company: "Geeraj Business Solutions",
-      image: "images/harepriyaa.jpeg",
+      image: "/images/harepriyaa.jpeg",
       content: "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting."
     },
     {
@@ -21,7 +21,7 @@ export default function Testimonials() {
       name: "Mahendra Vadivelu",
       designation: "CEO",
       company: "Mako IT Lab",
-      image: "images/mahendra.jpg",
+      image: "/images/mahendra.jpg",
       content: "We  engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team  took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need."
     },
     {
@@ -29,18 +29,18 @@ export default function Testimonials() {
       name: "Salil Nair",
       designation: "CTO",
       company: "Agrosperity Tech Solutions",
-      image: "images/salilModified.png",
+      image: "/images/salilModified.png",
       content: "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.  The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements."
-    }
+    },
    
-    // {
-    //   id: 4,
-    //   name: "Name4",
-    //   designation: "Desig4",
-    //   company: "Company4",
-    //   image: "testProfile.jpeg",
-    //   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    // },
+    {
+      id: 4,
+      name: "Anand Shah",
+      designation: "Director",
+      company: "Rajdeep industrial products",
+      image: "/images/AnanadShah_Modified.png",
+      content: "Excellent prompt support in spite of remote location. "
+    },
   ];
   const [isVisible, setIsVisible] = useState(false);
 

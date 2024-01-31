@@ -1,5 +1,5 @@
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 
 
 export default function veractDetails(){
@@ -48,10 +48,11 @@ export default function veractDetails(){
                     <div> +91 97899 91565, +91 99628 37650</div>
                 </div>
             </div> */}
-            <div className='flex flex-start pl-10 pt-6'>
-            <div className='contactHeader  '>Veract Consultancy Pvt. Ltd</div>
+            <div className='flex flex-row justify-between pl-10 pt-10 pr-52'>
+                <div className='contactHeader pr-10'>Veract Consultancy Pvt. Ltd</div>
+                <div className='contactText'><span className='contactHeader pl -10'>Email:</span>info@veract.io</div>
             </div>  
-            <div className='flex flex-row justify-between pt-3 pl-10 pr-10 md:gap-3'>
+            <div className='flex flex-row justify-between pt-0 pl-10 pr-10 md:gap-3'>
                 {/* <div className='flex flex-col'> */}
                     
                     <div className='contactText pt-6'><span className='contactHeader'>Regd.office:</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
@@ -61,12 +62,12 @@ export default function veractDetails(){
                 </div>
                 {/* </div> */}
                 
-                <div className="flex flex-col">
+                <div className="flex flex-col pt-6">
                     <div className="flex flex-row md:gap-2">
-                        <div className='contactHeader'>Email:</div>
-                        <div className='contactText'>info@veractconsultancy.in</div>
+                        {/* <div className='contactHeader'>Email:</div>
+                        <div className='contactText'>info@veract.io</div> */}
                     </div>
-                    <div className="flex flex-row md:gap-2">
+                    <div className="flex flex-row md:gap-1">
                         <div className='contactHeader'>Phone:</div>
                         <div className='contactText'>+91 97899 91565, +91 99628 37650</div>
                     </div>
@@ -95,7 +96,7 @@ export default function veractDetails(){
                         <div><img/></div>
                         <div className="mobileContactText">EMAIL</div>
                     </div>
-                    <div className="contactText">info@veractconsultancy.in</div>
+                    <div className="contactText">info@veract.io</div>
                 </div>
             </div>
 
