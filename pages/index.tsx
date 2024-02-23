@@ -1,24 +1,30 @@
 "use client"
 import Image from 'next/image'
-import Modal from './components/modal';
-import TopnavBar from './components/topnavbar';
-import Banner from './components/banner';
-import Clients from './components/clients';
-import Services from './components/services';
-import Casestudies from './components/casestudies';
-import Testimonials from './components/testimonials';
-import Contacts from './components/contacts';
-import VeractDetails from './components/veractDetails';
-import Footer from './components/footer';
-import FoundersDesk from './components/foundersDesk';
+import Modal from '../app/components/modal';
+import TopnavBar from '../app/components/topnavbar';
+import Banner from '../app/components/banner';
+import Clients from '../app/components/clients';
+import Services from '../app/components/services';
+import Casestudies from '../app/components/casestudies';
+import Testimonials from '../app/components/testimonials';
+import Contacts from '../app/components/contacts';
+import VeractDetails from '../app/components/veractDetails';
+import Footer from '../app/components/footer';
+import FoundersDesk from '../app/components/foundersDesk';
 import { useEffect } from 'react';
 // import { useRouter } from 'next/router';
 import { usePathname, useSearchParams,useRouter } from 'next/navigation'
+import "../app/styles/styles.css"
+// import "../app/globals.css"
+import "../app/styles/mediaQuery.css"
 
-const Page = () => {
+const Index = () => {
   const router = useRouter();
   const searchParams = useSearchParams()
   console.log(searchParams?.get("sectionId"));
+  const sectionId = searchParams?.get("sectionId");
+
+  console.log("Inital section ID : "+sectionId)
 
   const scrollToElement=(sectionId:string)=>{
     const section = document.getElementById(sectionId);
@@ -27,33 +33,38 @@ const Page = () => {
     console.log("ROUTER");
 
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView({behavior: 'smooth'});
     
     
     
   }
     
+  }
+  if(sectionId){
+    console.log("ROUTER");
+
+    scrollToElement(sectionId)
+    window.history.replaceState(null, '', '/')
   }
 
   useEffect(() => {
     // if(router.query){
 let scroll =   searchParams?.get("sectionId");
+  console.log("scroll ID : "+scroll);
   if(scroll){
     scrollToElement(scroll);
     window.history.replaceState(null, '', '/')
-
   
 
   }
 
     //}
 }, []);
+    // const img = require("../public/images/backgroundImg.jpg")
 
     return (
         <>
             <div id="Home">
-          {/* <div className=" custom-cursor"> */}
-            {/* <CustomCursor /> */}
             <div className="mainPage fontFamily flex">
               <TopnavBar />
               <Banner />
@@ -77,16 +88,14 @@ let scroll =   searchParams?.get("sectionId");
             <Contacts />
             </div>
             <div>
-              {/* <Carousel/> */}
               < VeractDetails />
             </div>
             <div>
               < Footer/>
             </div>
-          {/* </div> */}
         </div>
         </>
     )
 }
 
-export default Page;
+export default Index;

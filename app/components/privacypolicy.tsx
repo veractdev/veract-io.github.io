@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function privacypolicy() {
+export default function PrivacyPolicy() {
 	return (
 		<section className="mx-3">
 				<h1 className="text-2xl font-bold text-center my-5">Intellikast CRM - Privacy Policy</h1>
