@@ -1,7 +1,7 @@
 'use client';
-import '../styles/styles.css';
+// import '../styles/styles.css';
 import '../styles/services.css';
-import '../styles/mediaQuery.css';
+// import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 
@@ -38,7 +38,7 @@ const services = [
         id: 2,
         image: images[theme].mobileApp,
         title: 'Mobile Applications',
-        list: ["Flutter"," React Native"],
+        list: ["Flutter"," React native."],
         mobileContent:" Flutter, React native"
     },
     {

@@ -13,12 +13,12 @@ export default function PortfolioDetails(){
 
     const router = useRouter();
     const searchParams = useSearchParams()
-    console.log(searchParams?.get("id"));
+    // console.log(searchParams?.get("id"));
     let section = searchParams?.get("id") ?? "";
 
     useEffect(() => {
         if (section) {
-            console.log(section);
+            // console.log(section);
           const targetSection = section;
     
           if (typeof targetSection === 'string') {
@@ -236,56 +236,92 @@ export default function PortfolioDetails(){
     const [hrImage, setHrImage] = useState('/dashboard/hrGrey.png');
     const [finColor, setFinColor] = useState('#7f7f7f');
     const [finImage, setFinImage] = useState('/dashboard/finGrey.png');
-    const section1=()=>{
+    // const section1=()=>{
 
-        window.scrollY === 0  || window.scrollY < 1400  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
-        window.scrollY < 1400  || window.scrollY === 0  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
+    //     window.scrollY === 0  || window.scrollY < 1400  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
+    //     window.scrollY < 1400  || window.scrollY === 0  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
 
-        window.scrollY >= 1400 && window.scrollY < 2600 ? setSalesColor("white"): setSalesColor("#7f7f7f");
-        window.scrollY >= 1400 && window.scrollY < 2600  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
+    //     window.scrollY >= 1400 && window.scrollY < 2600 ? setSalesColor("white"): setSalesColor("#7f7f7f");
+    //     window.scrollY >= 1400 && window.scrollY < 2600  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
-        window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
+    //     window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
+    //     window.scrollY >= 2800 && window.scrollY <= 3600 ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
 
-        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
-        window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
+    //     window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
+    //     window.scrollY > 3800 && window.scrollY <= 4500 ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
 
-        // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
-        // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
+    //     // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
+    //     // window.scrollY >= 1400  && window.scrollY <3000  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
 
-        // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesColor("white"): setSalesColor("#7f7f7f");
-        // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
+    //     // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesColor("white"): setSalesColor("#7f7f7f");
+    //     // window.scrollY > 3000 && window.scrollY <=3800  ? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
 
-        window.scrollY > 4500 && window.scrollY <=5100   ? setAgriColor("white"): setAgriColor("#7f7f7f");
-        window.scrollY > 4500 && window.scrollY <=5100   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
+    //     window.scrollY > 4500 && window.scrollY <=5100   ? setAgriColor("white"): setAgriColor("#7f7f7f");
+    //     window.scrollY > 4500 && window.scrollY <=5100   ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
 
-        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
-        // window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
+    //     // window.scrollY > 4500 && window.scrollY <=5200   ? setHrColor("white"): setHrColor("#7f7f7f");
+    //     // window.scrollY > 4500 && window.scrollY <=5200   ? setHrImage("/dashboard/hrWhite.png"): setHrImage("/dashboard/hrGrey.png");
 
-        window.scrollY > 5300   ? setFinColor("white"): setFinColor("#7f7f7f");
-        window.scrollY > 5300   ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
-    }
+    //     window.scrollY > 5300   ? setFinColor("white"): setFinColor("#7f7f7f");
+    //     window.scrollY > 5300   ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
+    // }
+    const section1 = () => {
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY;
+        const middlePosition = scrollPosition + windowHeight * 0.75;
+    
+        const activeMenu = portfolio.find((item) => {
+            const element = document.getElementById(item.id);
+            if (element) {
+                const elementTop = element.offsetTop;
+                const elementBottom = elementTop + element.offsetHeight;
+                return elementTop <= middlePosition && middlePosition <= elementBottom;
+            }
+            return false;
+        });
+    
+        if (activeMenu) {
+            console.log(activeMenu.id);
+            activeMenu.id == 'content1'    ? setWellnessColor("white"): setWellnessColor("#7f7f7f");
+            activeMenu.id == 'content1'  ? setWellnessImage('/dashboard/wellnessWhite.png'): setWellnessImage('/dashboard/wellnessGrey.png');
+    
+            activeMenu.id == 'content2'? setSalesColor("white"): setSalesColor("#7f7f7f");
+            activeMenu.id == 'content2'? setSalesImage("/dashboard/salesWhite.png"): setSalesImage("/dashboard/salesGrey.png");
+    
+            activeMenu.id == 'content3' ? setManufacturingColor_1("white"): setManufacturingColor_1("#7f7f7f");
+            activeMenu.id == 'content3' ? setManufacturingImage_1("/dashboard/manufacturingWhite.png"): setManufacturingImage_1("/dashboard/manufacturingGrey.png");
+    
+            activeMenu.id == 'content4' ? setManufacturingColor_2("white"): setManufacturingColor_2("#7f7f7f");
+            activeMenu.id == 'content4' ? setManufacturingImage_2("/dashboard/manufacturingWhite.png"): setManufacturingImage_2("/dashboard/manufacturingGrey.png");
+    
+            activeMenu.id == 'content5' ? setAgriColor("white"): setAgriColor("#7f7f7f");
+            activeMenu.id == 'content5'  ? setAgriImage("/dashboard/agriWhite.png"): setAgriImage("/dashboard/agriGrey.png");
+    
+            activeMenu.id == 'content6'  ? setFinColor("white"): setFinColor("#7f7f7f");
+            activeMenu.id == 'content6'  ? setFinImage("/dashboard/finWhite.png"): setFinImage("/dashboard/finGrey.png");
+        }
+    };
     useEffect(()=>{
         window.addEventListener("scroll",section1);
     })
 
-    useEffect(() => {
-        const handleScroll = () => {
-          const scrollY = window.scrollY;
-          const container = document.getElementById('container'); // Replace 'container' with your element's ID
-          const threshold = 100; // Adjust the scroll threshold as needed
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //       const scrollY = window.scrollY;
+    //       const container = document.getElementById('container'); // Replace 'container' with your element's ID
+    //       const threshold = 100; // Adjust the scroll threshold as needed
     
-          if (container) {
-            container.style.top = scrollY > threshold ? '77px' : '147px'; // Adjust the desired heights
-          }
-        };
+    //       if (container) {
+    //         container.style.top = scrollY > threshold ? '77px' : '147px'; // Adjust the desired heights
+    //       }
+    //     };
     
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
     
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+    //     return () => {
+    //       window.removeEventListener('scroll', handleScroll);
+    //     };
+    //   }, []);
   
 
 
@@ -325,7 +361,7 @@ export default function PortfolioDetails(){
                             </div>
                         </div>
                     </div>
-                    {portfolio.map((item)=>(
+                    {portfolio.map((item, i)=>(
                         //  id={item.id}
                         <section key={item.id} id={item.id} >
                         <div className='caseDetails' id={item.id} >

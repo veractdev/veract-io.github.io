@@ -1,8 +1,8 @@
 import React from'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import '../styles/mediaQuery.css';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 export default function Footer(){
     return(
         <div>

@@ -1,22 +1,7 @@
 import './globals.css'
-
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import ScrollAnimation from './components/scrollAnimation'
-import CasestudiesDetails from './components/caseStudiesDetails'
-import Banner from './components/banner'
-import TopnavBar from './components/topnavbar'
-import FoundersDesk from './components/foundersDesk'
-import Services from './components/services'
-import Casestudies from './components/casestudies'
-import Testimonials from './components/testimonials'
-import Contacts from './components/contacts'
 import './styles/styles.css';
-// import CustomCursor from './components/customCursor'
-import Clients from './components/clients'
-import Carousel from './components/carousel'
-import Footer from './components/footer'
-import VeractDetails from './components/veractDetails'
 import './styles/mediaQuery.css';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -38,8 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <CasestudiesDetails /> */}
-        {/* <BouncingBall /> */}
         {children}</body>
     </html>
   )

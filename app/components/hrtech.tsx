@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 
 import DashboardDetails from './dashboardPortfolio';
 
-import '../styles/styles.css';
-import '../styles/mediaQuery.css'
-import '../styles/testimonials.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css'
+// import '../styles/testimonials.css';
 
 export default function HrTech(){
     const scrollToSection = (sectionId:string) => {

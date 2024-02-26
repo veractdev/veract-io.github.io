@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import "./Modal.css";
-import "../styles/styles.css"
+// import "../styles/styles.css"
 
 type ModalProps={
     setOpenModal:(value:boolean)=>void;

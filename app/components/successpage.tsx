@@ -1,8 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import '../styles/styles.css';
-import '../styles/mediaQuery.css'
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css'
 
 export default function SuccessPage(){
     
@@ -24,7 +24,7 @@ export default function SuccessPage(){
                     </div>
                     
                     <div className="flex flex-col" style={{color: "#4285f4"}}>
-                    <button className="underline text-lg"><Link href="/">Go back</Link></button>    
+                    <button className="underline text-lg"><Link rel="preload" href="/">Go back</Link></button>    
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export default function SuccessPage(){
                             </div>
                             
                             <div className="flex flex-col pb-6" style={{color: "#4285f4"}}>
-                            <button className="underline"><Link href="/">Go back</Link></button>    
+                            <button className="underline"><Link rel="preload" href="/">Go back</Link></button>    
                             </div>
                         </div>
                     </div>        

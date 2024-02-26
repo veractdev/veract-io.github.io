@@ -1,8 +1,8 @@
 'use client';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 import '../styles/contacts.css';
-import '../styles/cube.css';
+// import '../styles/cube.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 

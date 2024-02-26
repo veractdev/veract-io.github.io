@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css'
-import '../styles/testimonials.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css'
+// import '../styles/testimonials.css';
 
 export default function Health(){
     const scrollToSection = (sectionId:string) => {

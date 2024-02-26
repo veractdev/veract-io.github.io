@@ -1,9 +1,9 @@
 'use client';
-import '../styles/styles.css';
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css';
+// import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
-
+import Image from 'next/image';
 
 export default function FoundersDesk() {
     const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +36,16 @@ export default function FoundersDesk() {
                 <div className={`scroll-animationY ${isVisible ? 'visibleFounderProfile' : ''}`}>
                     <div className="left-column">
                    
-                      <div className="founderProfileWidth pb-2"><img src="/founderProfileCircle.png" className='founderProfileChange' /></div>
+                      <div className="founderProfileWidth pb-2">
+                        {/* <img src="/founderProfileCircle.png" className='founderProfileChange' /> */}
+                        <Image
+                          src={"/founderProfileCircle.png"}
+                          alt={"lazy load"}
+                          width={600}
+                          height={400}
+                          loading="lazy"
+                        />
+                      </div>
                    
                     <div className='founderDetails whitespace-nowrap pt-2'><label className='title'>PREETHY SRIKANTHAN, <span className='title highlight'>Founder</span></label> </div>
                     </div>

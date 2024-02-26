@@ -1,6 +1,6 @@
 'use client';
-import '../styles/styles.css'
-import '../styles/mediaQuery.css';
+// import '../styles/styles.css'
+// import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Transform } from 'stream';
@@ -98,7 +98,7 @@ export default function TopnavBar() {
     <div className={`navbar ${isOpen ? " padding" : "padding"}`}>
       {/* <div className="p-4 border-2  rounded-lg border-primary   bg-primary " > */}
       <div className="flex flex-row justify-between flex-nowrap items-center ">
-        <Link href="/">
+        <Link rel="preload" href="/">
         {/* <button> */}
         <div className={`transitionEffect ${isVisible ? 'afterScroll' : 'beforeScroll'}`} ><span className="font-semibold">ver</span><span className="textColorLogo">act</span></div>
         {/* <div className={`transitionEffect ${isVisible ? 'navbar_afterScroll ' : 'navbar_beforeScroll' }`}></div> */}
@@ -128,7 +128,7 @@ export default function TopnavBar() {
                 <div className="w-full">
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={() => scrollToSection('Home')}><Link href="/" className="home" onClick={handleToggle}>Home</Link></div>
+                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={() => scrollToSection('Home')}><Link rel="preload" href="/" className="home" onClick={handleToggle}>Home</Link></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
@@ -153,7 +153,7 @@ export default function TopnavBar() {
                   <div className="w-full">
                     <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                       <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/MobileCaseStudy/machinevision" className="">Customer Success</Link></div></div>
+                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link rel="preload" href="/MobileCaseStudy/machinevision" className="">Customer Success</Link></div></div>
                         <div><hr className="testimonialsHr"></hr></div>
                       </div>
                     </li>
@@ -162,7 +162,7 @@ export default function TopnavBar() {
                 <div className="caseMain_desktop">
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/CaseStudyPage" className="">Customer Success</Link></div></div>
+                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link rel="preload" href="/CaseStudyPage" className="">Customer Success</Link></div></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
