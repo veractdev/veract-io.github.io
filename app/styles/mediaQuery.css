@@ -1100,4 +1100,17 @@
   /* white-space: nowrap; */
 }
 
+.contact_us_2 .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12 {
+  width: 100% !important;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 26px;
+  margin-left: 0px;
+  min-height: 50px;
+}
+
+.responsive-cell-block {
+  width: 100% !important;
+}
+
 }
