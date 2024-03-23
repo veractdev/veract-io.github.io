@@ -1,8 +1,5 @@
 'use client';
-// import '../styles/styles.css';
-// import '../styles/mediaQuery.css';
 import '../styles/contacts.css';
-// import '../styles/cube.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -261,7 +258,7 @@ export default function Contacts() {
               onChange={e => setPhone(e.target.value)}
               required/>
             </div>
-            <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
+            <div className="responsive-cell-block w-[50%]" id="i634i">
               <p className="text-blk input-title">
                 WHAT DO YOU HAVE IN MIND
               </p>
@@ -271,7 +268,26 @@ export default function Contacts() {
               required />
             </div>
           </div>
-          
+        {/* <div className='flex flex-row w-full'>
+            <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+              <p className="text-blk input-title">
+                PHONE NUMBER
+              </p>
+              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone no..." type='number' 
+              value={phone}
+              onChange={e => setPhone(e.target.value)}
+              required/>
+            </div>
+            <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
+              <p className="text-blk input-title">
+                WHAT DO YOU HAVE IN MIND
+              </p>
+              <textarea className="textinput" id="i5vyy" name="query" placeholder="Please enter query..."  
+              value={text}
+              onChange={e => setText(e.target.value)}
+              required />
+            </div>
+        </div>  */}
           <button className="submit-btn" type="submit">
               Submit
             </button>

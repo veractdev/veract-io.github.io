@@ -1,8 +1,5 @@
 @import url('constants.css');
 @import url('cursor.css');
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 /* styles/FlipCard.module.css */
 
 
@@ -483,8 +480,7 @@ span {
   z-index: 9999;
   /* background: linear-gradient(40deg, #8BD3E5 52%, transparent 52%, transparent 100%); */
   /* background: linear-gradient(40deg, #2596be, transparent 52%, transparent 100%); */
-  /* background-color: #000 !important; */
-  background-image: url("/blackBg.jpg");
+  background-color: #000 !important;
 
   /* background: linear-gradient(90deg, hsla(240, 94%, 51%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
   /* background: linear-gradient(90deg, rgb(13, 13, 248) 0%, rgb(0, 0, 0) 100%) center center / cover no-repeat; */
@@ -1830,7 +1826,9 @@ ul {
 .manufacturingHover:hover {
   /* opacity:1; */
   /* border-bottom: 1px solid var(--primary-colour); */
+  transition: all 0.5s ease;
   transform: scale(1.1);
+
   /* border-radius: 10px;; */
   /* box-shadow: 3px 3px 3px 3px; */
   /* padding:5px; */
@@ -1839,6 +1837,7 @@ ul {
 .manufacturingHover {
 
   border: 1px solid var(--black-colour);
+  transition: all 0.5s ease;
   /* border-radius:10px; */
   /* padding:5%; */
 }
