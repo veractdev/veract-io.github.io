@@ -50,6 +50,9 @@ export default function FoundersDesk() {
                         <div className="secondPara">At Veract you will directly work with passionate UX trained engineers who are keen to employ their superpowers to solve your challenges.</div>
                       </div>
                       <div className="paragraph_padding">
+                        <div className="thirdPara">Our focus on bringing the best of what AI has to offer businesses has sharpened our expertise in the areas of Machine Vision, Large Language Models and context trained Speech to Text conversions.</div>
+                      </div>
+                      <div className="paragraph_padding">
                         <div className="thirdPara">I look forward to working with you and showcase our technical problem solving and software skills.</div>
                       </div>
                     </div>
