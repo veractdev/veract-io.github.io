@@ -52,9 +52,9 @@ export default function MobileCaseStudy_Layout({
                     <button id="3"
                     onClick={() => router.push("/MobileCaseStudy/machinevision")}
                     className={`custom_button ${
-                        pathname === '/MobileCaseStudy/machinevision' ? 'bg-orange' : 'bg-white'
+                        pathname === '/MobileCaseStudy/machinevision/' ? 'bg-orange' : 'bg-white'
                     } ${
-                        pathname === '/MobileCaseStudy/machinevision' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                        pathname === '/MobileCaseStudy/machinevision/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                     } cursor-pointer`}
                     >
                     Machine Vision
@@ -63,18 +63,18 @@ export default function MobileCaseStudy_Layout({
                         <button id="2"
                     onClick={()=> router.push("/MobileCaseStudy/sales")}
                     className={`custom_button  ${
-                        pathname === '/MobileCaseStudy/sales' ? 'bg-orange' : 'bg-white'
+                        pathname === '/MobileCaseStudy/sales/' ? 'bg-orange' : 'bg-white'
                     } ${
-                        pathname === '/MobileCaseStudy/sales' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                        pathname === '/MobileCaseStudy/sales/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                     } cursor-pointer`}
                     >
                     Sales
                     </button>
                             <button id="1" onClick={() => router.push('/MobileCaseStudy/health')} 
                                     className={`custom_button ${
-                                        pathname === '/MobileCaseStudy/health' ? 'bg-orange' : 'bg-white'
+                                        pathname === '/MobileCaseStudy/health/' ? 'bg-orange' : 'bg-white'
                                     } ${
-                                        pathname === '/MobileCaseStudy/health' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        pathname === '/MobileCaseStudy/health/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                     } cursor-pointer`}>
                                     Wellness
                             </button>
@@ -83,9 +83,9 @@ export default function MobileCaseStudy_Layout({
                                     <button id="4"
                                 onClick={() => router.push("/MobileCaseStudy/manufacturing")}
                                 className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/manufacturing' ? 'bg-orange' : 'bg-white'
+                                    pathname === '/MobileCaseStudy/manufacturing/' ? 'bg-orange' : 'bg-white'
                                 } ${
-                                    pathname === '/MobileCaseStudy/manufacturing' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                    pathname === '/MobileCaseStudy/manufacturing/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                 } cursor-pointer`}
                                 >
                                 Manufacturing
@@ -93,9 +93,9 @@ export default function MobileCaseStudy_Layout({
                                 <button id="5"
                                 onClick={() => router.push("/MobileCaseStudy/agritech")}
                                 className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/agritech' ? 'bg-orange' : 'bg-white'
+                                    pathname === '/MobileCaseStudy/agritech/' ? 'bg-orange' : 'bg-white'
                                 } ${
-                                    pathname === '/MobileCaseStudy/agritech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                    pathname === '/MobileCaseStudy/agritech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                 } cursor-pointer`}
                                 >
                                 Agri Tech
@@ -103,9 +103,9 @@ export default function MobileCaseStudy_Layout({
                                 <button id="6"
                                 onClick={() => router.push("/MobileCaseStudy/fintech")}
                                 className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/fintech' ? 'bg-orange' : 'bg-white'
+                                    pathname === '/MobileCaseStudy/fintech/' ? 'bg-orange' : 'bg-white'
                                 } ${
-                                    pathname === '/MobileCaseStudy/fintech' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                    pathname === '/MobileCaseStudy/fintech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                 } cursor-pointer`}
                                 >
                                 Fin Tech

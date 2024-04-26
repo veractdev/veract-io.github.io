@@ -5,6 +5,9 @@ const nextConfig = {
 }
 
 module.exports = {
+
+    trailingSlash:  true,
+
     output: 'export',
     images: {
         disableStaticImages: true,

@@ -80,7 +80,7 @@ export default function PortfolioDetails(){
             caseTitle:'Machine Vision for Manufacturing Quality Control',
             caseTitleContent:'A sheet metal pressings manufacturing company.',
             stampImage: "/portfolio/artificial-intelligence.png",
-            caseImage:'factoryCase.png',
+            caseImage:'/factoryCase.png',
             challenges:'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious and, as inspector fatigue set in, accuracy levels dropped',
             challengePoints:'',
             solution:"Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.",
@@ -287,7 +287,7 @@ export default function PortfolioDetails(){
                         <div className='BottomContainer'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer'>
-                                    <div className='ServiceImage'><img src="caseStudies/vehicle.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader'>Services</div>
                                     <div className='flex flex-col'>
                                     {item.services.split(',').map((service,index)=>(
@@ -296,7 +296,7 @@ export default function PortfolioDetails(){
                                     </div>
                                 </div>
                                 <div className='platformContainer'>
-                                    <div className='ServiceImage pt-12'><img src="caseStudies/web.png" className='w-16'/></div>
+                                    <div className='ServiceImage pt-12'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader'>Platform</div>
                                     
                                     {item.platform.split(',').map((temp,index)=>(
@@ -308,7 +308,7 @@ export default function PortfolioDetails(){
                             </div>
                             <div className="techstackContainer">
                                 <div className='techImageTitle '>
-                                    <div className='ServiceImage'><img src="caseStudies/tech-service.png" className='w-16 pt-1'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
                                     <div className='serviceHeader'>Techstack</div>
                                 </div>
                                 <div  className='techContent '>
@@ -389,14 +389,14 @@ export default function PortfolioDetails(){
                         <div className='BottomContainer_mobile pt-10'>
                             <div className='mainContainer'>
                                 <div className='serviceContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/vehicle.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
                                     <div className='serviceText_mobile pt-2'>Software architecture consulting </div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
                                 </div>
                                 <div className='platformContainer_mobile'>
-                                    <div className='ServiceImage'><img src="caseStudies/web.png" className='w-16'/></div>
+                                    <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
                                     <div className='PlatformText_mobile pt-2'>Mobile</div>
                                     <div className='PlatformText_mobile pt-2'>and</div>
@@ -407,7 +407,7 @@ export default function PortfolioDetails(){
                         <div className="pt-2.5 pl-5 pr-5 pb-10">
                             <div className="techstackContainer_mobile">
                                     <div className='techImageTitle_mobile pl-20 pr-20'>
-                                        <div className='ServiceImage'><img src="caseStudies/tech-service.png" className='w-16 pt-1'/></div>
+                                        <div className='ServiceImage'><img src="/caseStudies/tech-service.png" className='w-16 pt-1'/></div>
                                         <div className='serviceHeader_mobile pt-2'>Techstack</div>
                                     </div>
                                 <div  className='techContent_mobile'>
