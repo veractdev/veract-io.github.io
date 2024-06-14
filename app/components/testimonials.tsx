@@ -5,6 +5,7 @@ import '../styles/testimonials.css';
 import '../styles/mediaQuery.css';
 // import '../styles/styles.css';
 import { useEffect, useState } from 'react';
+import { useInView } from "react-intersection-observer";
 
 export default function Testimonials() {
   const testimonials = [
@@ -44,21 +45,32 @@ export default function Testimonials() {
   ];
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const triggerPoint = window.innerHeight * 3; // Adjust this value as needed
-      setIsVisible(scrollTop > triggerPoint);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const triggerPoint = window.innerHeight * 3; // Adjust this value as needed
+  //     setIsVisible(scrollTop > triggerPoint);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  const {ref:sectionRef,inView:sectionInView}=useInView({
+    threshold:0.2,
+    triggerOnce:true   
+   })
+   
+   useEffect(()=>{
+       setIsVisible(sectionInView)
+   },[sectionInView])
+
+
   return (
     <div className="testimonialsMain fontFamilyNav mt-6" >
-      <div className={`scroll-animationTestimonials ${isVisible ? 'visiblesectionName' : ''}`}>
+      <div ref={sectionRef} className={`scroll-animationTestimonials ${isVisible ? 'visiblesectionName' : ''}`}>
         <div className="flex items-center justify-center">
           <hr className='separator'></hr>
           <div className='section-title mobilePaddingHeader'>
