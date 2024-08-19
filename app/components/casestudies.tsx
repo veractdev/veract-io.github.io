@@ -5,6 +5,7 @@ import '../styles/mediaQuery.css';
 import { useEffect, useRef, useState } from 'react';
 import { link } from 'fs';
 import { useRouter } from 'next/router';
+import { useInView } from 'react-intersection-observer';
 // import RotatingCircle from './rotatingCases'
 
 export default function Casestudies() {
@@ -17,18 +18,26 @@ export default function Casestudies() {
       };
     const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            const triggerPoint = window.innerHeight * 2.0; // Adjust this value as needed
-            setIsVisible(scrollTop > triggerPoint);
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollTop = window.scrollY;
+    //         const triggerPoint = window.innerHeight * 2.0; // Adjust this value as needed
+    //         setIsVisible(scrollTop > triggerPoint);
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
+
+    const {ref:sectionRef,inView:sectionInView}=useInView({
+        threshold:0.2,
+        triggerOnce:true   
+       })
+    useEffect(()=>{
+        setIsVisible(sectionInView)
+    },[sectionInView])
 
   const button1Ref = useRef<HTMLButtonElement | null>(null);
   const button2Ref = useRef<HTMLButtonElement | null>(null);
@@ -93,7 +102,7 @@ export default function Casestudies() {
         <div  className="pt-12 pb-12 ">
             <div className="flex flex-col  case-studies portfolioFonts ">
                 <div className="flex flex-col case-studies-content   ">
-                    <div className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName' : ''}`}>
+                    <div ref={sectionRef} className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName' : ''}`}>
                         <div className=" case-studies-content-top items-center justify-center flex flex-row md:gap-6 ">
                             <hr className="separator"></hr>
                             <div className='section-title mobilePaddingHeader'>

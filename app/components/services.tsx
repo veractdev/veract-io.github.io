@@ -4,6 +4,7 @@ import '../styles/services.css';
 import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const theme = "default";
 const images = {
@@ -60,22 +61,30 @@ const services = [
 export default function Services() {
     const [isVisible, setIsVisible] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const triggerPoint = window.innerHeight * 1; // Adjust this value as needed
-    setIsVisible(scrollTop > triggerPoint);
-  };
+// useEffect(() => {
+//   const handleScroll = () => {
+//     const scrollTop = window.scrollY;
+//     const triggerPoint = window.innerHeight * 1; // Adjust this value as needed
+//     setIsVisible(scrollTop > triggerPoint);
+//   };
 
-  window.addEventListener('scroll', handleScroll);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+//   window.addEventListener('scroll', handleScroll);
+//   return () => {
+//     window.removeEventListener('scroll', handleScroll);
+//   };
+// }, []);
+
+    const {ref:sectionRef,inView:sectionInView}=useInView({
+     threshold:0.2,
+     triggerOnce:true   
+    })
+    useEffect(()=>{
+        setIsVisible(sectionInView)
+    },[sectionInView])
 
     return (
         <div className=" flex flex-col servicesMain fontFamily ">
-            <div className={`scroll-animationServices ${isVisible ? 'visiblesectionName' : ''}`}>
+            <div ref={sectionRef} className={`scroll-animationServices ${isVisible ? 'visiblesectionName' : ''}`}>
             <div className="flex items-center justify-center">
                 <hr className='separator'></hr>
                 <label className="section-title mobilePaddingHeader">Our <span className="section-title section-title-highlight">Services</span></label>

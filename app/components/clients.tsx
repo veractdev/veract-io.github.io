@@ -10,6 +10,7 @@ import '../styles/mediaQuery.css';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 export default function Clients() {
   const [slidesToShow, setSlidesToShow] = useState(4);
@@ -37,21 +38,40 @@ export default function Clients() {
   const [isVisible, setIsVisible] = useState(false);
   const [isLogo, setLogoVisible] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const triggerPoint = window.innerHeight * 0.2;
-      const triggerPointLogo = window.innerHeight * 0.2;
-      // Adjust this value as needed
-      setIsVisible(scrollTop > triggerPoint);
-      setLogoVisible(scrollTop > triggerPointLogo);
-    };
+  const { ref: sectionRef, inView: sectionInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const { ref: logoRef, inView: logoInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    setIsVisible(sectionInView);
+  }, [sectionInView]);
+
+  useEffect(() => {
+    setLogoVisible(logoInView);
+  }, [logoInView]);
+
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const triggerPoint = window.innerHeight * 0.2;
+  //     const triggerPointLogo = window.innerHeight * 0.2;
+  //     // Adjust this value as needed
+  //     setIsVisible(scrollTop > triggerPoint);
+  //     setLogoVisible(scrollTop > triggerPointLogo);
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
 
   const clients = [
@@ -85,7 +105,7 @@ export default function Clients() {
 
   return (
     <div id="clients-section  " className="paddingClients">
-      <div className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName  mb-12' : ''}`}>
+      <div  ref={sectionRef} className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName  mb-12' : ''}`}>
         <div className="flex items-center justify-center ">
           <hr className="separator"></hr>
           <div className='section-title clients-title-desktop mobilePaddingHeader'>
@@ -97,7 +117,7 @@ export default function Clients() {
           <hr className="separator"></hr>
         </div>
       </div>
-      <div className={`scroll-animationClients clients-logo-section flex justify-center ${isLogo ? 'visibleClients pl-3 pr-3' : 'pl-3 pr-3'}`}>
+      <div ref={logoRef} className={`scroll-animationClients clients-logo-section flex justify-center ${isLogo ? 'visibleClients pl-3 pr-3' : 'pl-3 pr-3'}`}>
 
         {/* <div className={`scroll-animationClients ${isLogo ? 'client flex flex-row flex-wrap pr-10 pl-10' : ''}`}> */}
         <Slider {...settings}>
