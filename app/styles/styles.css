@@ -1430,12 +1430,12 @@ ul {
   display: flex;
   position: fixed;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+  justify-content: space-evenly;
+  padding-left: 2%;
   left: 20px;
   top: 147px;
   width: 16%;
-  height: 86vh;
+  height: 75vh;
   background-color: var(--black-colour);
   border-radius: 20px;
 }
@@ -2270,6 +2270,10 @@ ul {
   font-family: var(--primary-font) ;
   font-size: 25px;
   font-weight: 700;
+}
+
+.dashboard::-webkit-scrollbar {
+  display: none;
 }
 
 

@@ -18,7 +18,7 @@ export default function MobileCaseStudy_Layout({
     children: React.ReactNode;
 }) {
     const scrollableDivRef = useRef(null);
-    
+
 
     const id = '1';
     let temp;
@@ -29,14 +29,14 @@ export default function MobileCaseStudy_Layout({
     function sendToRoute(path: string): void {
         router.push(path);
     }
-    function scrollToCenter(ref:any){
+    function scrollToCenter(ref: any) {
         ref.current.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
             inline: 'nearest',
-          });      
+        });
     }
-   
+
 
     return (
         <div className="fontFamily">
@@ -44,75 +44,99 @@ export default function MobileCaseStudy_Layout({
                 <TopnavBar />
                 {/* horizontal-scrollable-container n */}
                 {/* ref={scrollableDivRef} */}
-            <div  className="pt-16 pb-2">
-                {/* <div className="buttons"> */}
+                <div className="pt-16 pb-2">
+                    {/* <div className="buttons"> */}
                     <div className="mx-auto md:mx-0">
-                    <div className="flex flex-col pl-2 pr-1">
-                        <div className="flex flex-row pb-4 justify-around">
-                    <button id="3"
-                    onClick={() => router.push("/MobileCaseStudy/machinevision")}
-                    className={`custom_button ${
-                        pathname === '/MobileCaseStudy/machinevision/' ? 'bg-orange' : 'bg-white'
-                    } ${
-                        pathname === '/MobileCaseStudy/machinevision/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                    } cursor-pointer`}
-                    >
-                    Machine Vision
-                    </button>
-                        
-                        <button id="2"
-                    onClick={()=> router.push("/MobileCaseStudy/sales")}
-                    className={`custom_button  ${
-                        pathname === '/MobileCaseStudy/sales/' ? 'bg-orange' : 'bg-white'
-                    } ${
-                        pathname === '/MobileCaseStudy/sales/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                    } cursor-pointer`}
-                    >
-                    Sales
-                    </button>
-                            <button id="1" onClick={() => router.push('/MobileCaseStudy/health')} 
-                                    className={`custom_button ${
-                                        pathname === '/MobileCaseStudy/health/' ? 'bg-orange' : 'bg-white'
-                                    } ${
-                                        pathname === '/MobileCaseStudy/health/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                    } cursor-pointer`}>
-                                    Wellness
-                            </button>
-                    </div>
-                    <div className="flex flex-row justify-around">
-                                    <button id="4"
-                                onClick={() => router.push("/MobileCaseStudy/manufacturing")}
-                                className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/manufacturing/' ? 'bg-orange' : 'bg-white'
-                                } ${
-                                    pathname === '/MobileCaseStudy/manufacturing/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                } cursor-pointer`}
+                        <div className="flex flex-col pl-2 pr-1">
+                            <div className="flex flex-row pb-4 justify-around">
+                                <button id="3"
+                                    onClick={() => router.push("/MobileCaseStudy/machinevision")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/machinevision/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/machinevision/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
                                 >
-                                Manufacturing
+                                    Machine Vision
+                                </button>
+
+                                <button id="2"
+                                    onClick={() => router.push("/MobileCaseStudy/sales")}
+                                    className={`custom_button  ${pathname === '/MobileCaseStudy/sales/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/sales/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Sales
+                                </button>
+                                <button id="1" onClick={() => router.push('/MobileCaseStudy/health')}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/health/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/health/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}>
+                                    Wellness
+                                </button>
+                            </div>
+                            <div className="flex flex-row justify-around">
+                                <button id="4"
+                                    onClick={() => router.push("/MobileCaseStudy/manufacturing")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/manufacturing/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/manufacturing/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Manufacturing
                                 </button>
                                 <button id="5"
-                                onClick={() => router.push("/MobileCaseStudy/agritech")}
-                                className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/agritech/' ? 'bg-orange' : 'bg-white'
-                                } ${
-                                    pathname === '/MobileCaseStudy/agritech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                } cursor-pointer`}
+                                    onClick={() => router.push("/MobileCaseStudy/agritech")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/agritech/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/agritech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
                                 >
-                                Agri Tech
+                                    Agri Tech
                                 </button>
                                 <button id="6"
-                                onClick={() => router.push("/MobileCaseStudy/fintech")}
-                                className={`custom_button ${
-                                    pathname === '/MobileCaseStudy/fintech/' ? 'bg-orange' : 'bg-white'
-                                } ${
-                                    pathname === '/MobileCaseStudy/fintech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                } cursor-pointer`}
+                                    onClick={() => router.push("/MobileCaseStudy/fintech")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/fintech/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/fintech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
                                 >
-                                Fin Tech
+                                    Fin Tech
                                 </button>
-                    </div>
-                    </div>
-                    {/* <button id="1"
+                            </div>
+                            <div className="flex flex-row justify-around">
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/edTech")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/edTech/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/edTech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Ed Tech
+                                </button>
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/eCommerce")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/eCommerce/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/eCommerce/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    ECom
+                                </button>
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/audit")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/audit/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/audit/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Audit
+                                </button>
+                            </div>
+                            <div className="flex flex-row justify-around">
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/industrialPlatform")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Industrial Platform
+                                </button>
+                            </div>
+                        </div>
+                        {/* <button id="1"
                     onClick={() => sendToRoute('/MobileCaseStudy/health')}
                     className={`py-2 px-8 rounded-2xl ${
                         pathname === '/MobileCaseStudy/health' ? 'bg-orange' : 'bg-gray-200'
@@ -173,14 +197,14 @@ export default function MobileCaseStudy_Layout({
                     Fin Tech
                     </button> */}
                     </div>
-                {/* </div> */}
-                
-        </div>
-        <div className="pt-0">
-            {children}
-        </div>
-        
-            <Footer />
+                    {/* </div> */}
+
+                </div>
+                <div className="pt-0">
+                    {children}
+                </div>
+
+                <Footer />
                 {/* <aside id="logo-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
                     <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                         <ul className="space-y-2 font-medium">
