@@ -25,9 +25,14 @@ export default function IndustrialPlatform() {
             <div className="mobileCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
+                        <div className="px-5">
+                            <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
+                                <img src="/output/updateEvo11veSitePoster.svg" className='' />
+                            </div>
+                        </div>
                         <div className='caseHeader_mobile'>
-                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>AI-enabled K-12 edtech</div>
-                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Evolve is an edtech platform that revolutionizes K-12 augmented learning</div>
+                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>AI-enabled Edtech platform</div>
+                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Evolve is an edtech platform that revolutionizes augmented learning</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>

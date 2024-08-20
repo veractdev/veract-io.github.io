@@ -48,39 +48,14 @@ export default function MobileCaseStudy_Layout({
                     {/* <div className="buttons"> */}
                     <div className="mx-auto md:mx-0">
                         <div className="flex flex-col pl-2 pr-1">
-                            <div className="flex flex-row pb-4 justify-around">
-                                <button id="3"
-                                    onClick={() => router.push("/MobileCaseStudy/machinevision")}
-                                    className={`custom_button ${pathname === '/MobileCaseStudy/machinevision/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/machinevision/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                        } cursor-pointer`}
-                                >
-                                    Machine Vision
-                                </button>
-
-                                <button id="2"
-                                    onClick={() => router.push("/MobileCaseStudy/sales")}
-                                    className={`custom_button  ${pathname === '/MobileCaseStudy/sales/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/sales/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                        } cursor-pointer`}
-                                >
-                                    Sales
-                                </button>
-                                <button id="1" onClick={() => router.push('/MobileCaseStudy/health')}
-                                    className={`custom_button ${pathname === '/MobileCaseStudy/health/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/health/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
-                                        } cursor-pointer`}>
-                                    Wellness
-                                </button>
-                            </div>
                             <div className="flex flex-row justify-around">
-                                <button id="4"
-                                    onClick={() => router.push("/MobileCaseStudy/manufacturing")}
-                                    className={`custom_button ${pathname === '/MobileCaseStudy/manufacturing/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/manufacturing/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/edTech")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/edTech/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/edTech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                         } cursor-pointer`}
                                 >
-                                    Manufacturing
+                                    Ed Tech
                                 </button>
                                 <button id="5"
                                     onClick={() => router.push("/MobileCaseStudy/agritech")}
@@ -99,14 +74,38 @@ export default function MobileCaseStudy_Layout({
                                     Fin Tech
                                 </button>
                             </div>
-                            <div className="flex flex-row justify-around">
-                                <button id="6"
-                                    onClick={() => router.push("/MobileCaseStudy/edTech")}
-                                    className={`custom_button ${pathname === '/MobileCaseStudy/edTech/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/edTech/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                            <div className="flex flex-row pb-4 justify-around">
+                                <button id="3"
+                                    onClick={() => router.push("/MobileCaseStudy/machinevision")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/machinevision/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/machinevision/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                         } cursor-pointer`}
                                 >
-                                    Ed Tech
+                                    Machine Vision
+                                </button>
+                                <button id="2"
+                                    onClick={() => router.push("/MobileCaseStudy/sales")}
+                                    className={`custom_button  ${pathname === '/MobileCaseStudy/sales/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/sales/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Sales
+                                </button>
+                                <button id="1" onClick={() => router.push('/MobileCaseStudy/health')}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/health/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/health/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}>
+                                    Wellness
+                                </button>
+                            </div>
+                            <div className="flex flex-row justify-around">
+                                <button id="6"
+                                    onClick={() => router.push("/MobileCaseStudy/industrialPlatform")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                        } cursor-pointer`}
+                                >
+                                    Social Platform
                                 </button>
                                 <button id="6"
                                     onClick={() => router.push("/MobileCaseStudy/eCommerce")}
@@ -126,13 +125,13 @@ export default function MobileCaseStudy_Layout({
                                 </button>
                             </div>
                             <div className="flex flex-row justify-around">
-                                <button id="6"
-                                    onClick={() => router.push("/MobileCaseStudy/industrialPlatform")}
-                                    className={`custom_button ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'bg-orange' : 'bg-white'
-                                        } ${pathname === '/MobileCaseStudy/industrialPlatform/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
+                                <button id="4"
+                                    onClick={() => router.push("/MobileCaseStudy/manufacturing")}
+                                    className={`custom_button ${pathname === '/MobileCaseStudy/manufacturing/' ? 'bg-orange' : 'bg-white'
+                                        } ${pathname === '/MobileCaseStudy/manufacturing/' ? 'text-white' : 'text-black underline decoration-orange underline-offset-8 '
                                         } cursor-pointer`}
                                 >
-                                    Industrial Platform
+                                    Manufacturing
                                 </button>
                             </div>
                         </div>

@@ -12,10 +12,10 @@ export default function Casestudies() {
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-          
+            section.scrollIntoView({ behavior: 'smooth' });
+
         }
-      };
+    };
     const [isVisible, setIsVisible] = useState(false);
 
     // useEffect(() => {
@@ -31,75 +31,75 @@ export default function Casestudies() {
     //     };
     // }, []);
 
-    const {ref:sectionRef,inView:sectionInView}=useInView({
-        threshold:0.2,
-        triggerOnce:true   
-       })
-    useEffect(()=>{
+    const { ref: sectionRef, inView: sectionInView } = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    })
+    useEffect(() => {
         setIsVisible(sectionInView)
-    },[sectionInView])
+    }, [sectionInView])
 
-  const button1Ref = useRef<HTMLButtonElement | null>(null);
-  const button2Ref = useRef<HTMLButtonElement | null>(null);
+    const button1Ref = useRef<HTMLButtonElement | null>(null);
+    const button2Ref = useRef<HTMLButtonElement | null>(null);
 
-  const handleScrollToButton = (buttonId: string) => {
-    let buttonRef: React.RefObject<HTMLButtonElement> | null = null;
+    const handleScrollToButton = (buttonId: string) => {
+        let buttonRef: React.RefObject<HTMLButtonElement> | null = null;
 
-    if (buttonId === 'button1') {
-      buttonRef = button1Ref;
-    } else if (buttonId === 'button2') {
-      buttonRef = button2Ref;
+        if (buttonId === 'button1') {
+            buttonRef = button1Ref;
+        } else if (buttonId === 'button2') {
+            buttonRef = button2Ref;
+        }
+
+        if (buttonRef && buttonRef.current) {
+            buttonRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 
-    if (buttonRef && buttonRef.current) {
-      buttonRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
+    const portfolio = [
 
-  const portfolio=[
-    
-    {
-        id:'content4',
-        img: "/portfolio/manufacturingOrange.png",
-        heading: "MANUFACTURING",
-        desc:"Digitizing manufacturing process in low tech adoption workforce in high dust & temp environment."       
-    },
-    {
-        id:'content1',
-        img: "/portfolio/wellnessOrange.png",
-        heading: "WELLNESS",
-        desc:"New age startup looking to launch mental health and wellness app."       
-    },
-    {
-        id:'content2',
-        img: "/portfolio/salesOrange.png",
-        heading: "SALES",
-        desc:"Sales resource attrition leads to lost opportunities. Improved key metrics in a multi product, location sales environment."       
-    },
-    {
-        id:'content5',
-        img: "/portfolio/agriOrange.png",
-        heading: "AGRI TECH",
-        desc:"End  to end solution in the exciting area of farmer supply chain."       
-    },
-    {
-        id:'content3',
-        img: "/portfolio/manufacturingOrange.png",
-        heading: "MACHINE VISION",
-        desc:"AI driven defect detection in manufacturing environment."       
-    },
-    {
-        id:'content6',
-        img: "/portfolio/fintechOrange.png",
-        heading: "FIN TECH",
-        desc:"Implementation with well established finance and micro lending company."       
-    },
+        {
+            id: 'content1',
+            img: "/portfolio/edtechIcon.png",
+            heading: "EDTECH",
+            desc: "AI driven e learning application with state of the art voice to text and large language model capabilities"
+        },
+        {
+            id: 'content3',
+            img: "/portfolio/wellnessOrange.png",
+            heading: "WELLNESS",
+            desc: "Empowering individuals through personalized mental health and wellness solutions in a user-friendly app."
+        },
+        {
+            id: 'content2',
+            img: "/portfolio/salesOrange.png",
+            heading: "MACHINE VISION",
+            desc: "AI-driven defect detection system, optimizing manufacturing processes for higher efficiency and accuracy."
+        },
+        {
+            id: 'content4',
+            img: "/portfolio/socialIcon.png",
+            heading: "SOCIAL",
+            desc: "Specialized social platform connecting professionals in the data center industry for collaboration and networking."
+        },
+        {
+            id: 'content7',
+            img: "/portfolio/EcomIcon.png",
+            heading: "ECOMMERCE",
+            desc: "Ecommerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain."
+        },
+        {
+            id: 'content9',
+            img: "/portfolio/auditIcon.png",
+            heading: "AUDIT",
+            desc: "Advanced data extraction tool for precise, efficient audit processes, ensuring accuracy and compliance."
+        },
 
-  ]
-   
+    ]
+
 
     return (
-        <div  className="pt-12 pb-12 ">
+        <div className="pt-12 pb-12 ">
             <div className="flex flex-col  case-studies portfolioFonts ">
                 <div className="flex flex-col case-studies-content   ">
                     <div ref={sectionRef} className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName' : ''}`}>
@@ -117,36 +117,36 @@ export default function Casestudies() {
 
                 </div>
                 <div className='desktopPortfolio'>
-                <div className='items-list flex  flex-wrap pt-1 pb-4   '>
-                {/* manufacturingHover */}
-                <div className="flex flex-row flex-wrap">
-                {portfolio.map((item)=>(
-                <div key={item.id} className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4'>
-                <Link href={{
-                            pathname: 'CaseStudyPage',
-                            query: { id: item.id },
-                        }}>
-                        <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}>
-                            <div className='flex flex-row justify-between mb-2'>
-                                <div className='flex flex-row'>
-                                <div className='w-8 '><img src={item.img} /></div>
-                                <div className='item-title flex textColorLogo pl-4 '>{item.heading}</div>
+                    <div className='items-list flex  flex-wrap pt-1 pb-4   '>
+                        {/* manufacturingHover */}
+                        <div className="flex flex-row flex-wrap">
+                            {portfolio.map((item) => (
+                                <div key={item.id} className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4'>
+                                    <Link href={{
+                                        pathname: 'CaseStudyPage',
+                                        query: { id: item.id },
+                                    }}>
+                                        <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}>
+                                            <div className='flex flex-row justify-between mb-2'>
+                                                <div className='flex flex-row'>
+                                                    <div className='w-8 '><img src={item.img} /></div>
+                                                    <div className='item-title flex textColorLogo pl-4 '>{item.heading}</div>
+                                                </div>
+                                                <div className=''>
+                                                    <img src="/images/info.png" className='w-6 h-6'></img>
+                                                </div>
+                                            </div>
+                                            <div className='flex flex-row item-desc manufacturingDesc'>
+                                                {item.desc}
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
                                 </div>
-                                <div className=''>
-                                <img src="/images/info.png" className='w-6 h-6'></img> 
-                                </div>
-                            </div>
-                            <div className='flex flex-row item-desc manufacturingDesc'>
-                                {item.desc}
-                            </div>        
+                                // </div>
+                            ))}
                         </div>
-                        </Link>                        
-                        {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                </div>
-                // </div>
-                ))}
-                </div>
-                    {/* <div className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4'>
+                        {/* <div className='item flex flex-col contentWidth navbarCursor manufacturingHover md:w-1/3 p-4'>
                         <Link href="/CaseStudyPage">
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}>
 
@@ -166,8 +166,8 @@ export default function Casestudies() {
                         </div>
                         </Link>                          
                     </div> */}
-                    {/* wellnessHover */}
-                    {/* <div className='item flex flex-col contentWidth navbarCursor manufacturingHover  md:w-1/3 p-4' >
+                        {/* wellnessHover */}
+                        {/* <div className='item flex flex-col contentWidth navbarCursor manufacturingHover  md:w-1/3 p-4' >
                         <Link href="/CaseStudyPage">
                             <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}>
                                 <div className='flex flex-row justify-between mb-2'>
@@ -184,8 +184,8 @@ export default function Casestudies() {
                             </div>
                         </Link>
                     </div> */}
-                    {/* salesHover */}
-                    {/* <div className='item flex flex-col contentWidth navbarCursor salesHover md:w-1/3 p-4' >
+                        {/* salesHover */}
+                        {/* <div className='item flex flex-col contentWidth navbarCursor salesHover md:w-1/3 p-4' >
                         <Link href="/CaseStudyPage">
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}>
                             <div className='flex flex-row  justify-between mb-2'>
@@ -203,8 +203,8 @@ export default function Casestudies() {
                         </Link>
                       
                     </div> */}
-                    {/* agriHover */}
-                    {/* <div className='item flex flex-col contentWidth navbarCursor agriHover md:w-1/3 p-4'>
+                        {/* agriHover */}
+                        {/* <div className='item flex flex-col contentWidth navbarCursor agriHover md:w-1/3 p-4'>
                         <Link href="/CaseStudyPage">
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleAgri' : ''}`}>
                             <div className='flex flex-row  justify-between mb-2'>
@@ -221,8 +221,8 @@ export default function Casestudies() {
                         </div>
                         </Link>
                     </div> */}
-                    {/* hrHover */}
-                    {/* <div className='item flex flex-col contentWidth navbarCursor machinevisionHover md:w-1/3 p-4'>
+                        {/* hrHover */}
+                        {/* <div className='item flex flex-col contentWidth navbarCursor machinevisionHover md:w-1/3 p-4'>
                         <Link href="/CaseStudyPage">
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleMachinevision' : ''}`}>
                             <div className='flex flex-row justify-between mb-2'>
@@ -241,8 +241,8 @@ export default function Casestudies() {
                         </Link>
                        
                     </div> */}
-                    {/* fintechHover */}
-                    {/* <div className='item flex flex-col contentWidth navbarCursor fintechHover md:w-1/3 p-4 '>
+                        {/* fintechHover */}
+                        {/* <div className='item flex flex-col contentWidth navbarCursor fintechHover md:w-1/3 p-4 '>
                         <Link href="/CaseStudyPage">
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleFintech' : ''}`}>
                             <div className='flex flex-row justify-between mb-2'>
@@ -261,57 +261,58 @@ export default function Casestudies() {
                         </Link>
                  
                     </div> */}
-                </div>
-               
+                    </div>
+
                 </div>
                 {/* <div className='desktopPortfolio' id="Testimonials"></div> */}
                 <div className='mobilePortfolio'>
-                <div className='items-list flex  flex-wrap pt-1 pb-4   '>
-                {/* manufacturingHover */}
-                
-                    <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}> */}
-                            
+                    <div className='items-list flex  flex-wrap pt-1 pb-4   '>
+                        {/* manufacturingHover */}
+
+                        <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}> */}
+
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8'><img src="/portfolio/manufacturingOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4 '>MANUFACTURING</div>
+                                    <div className='w-8'><img src="/portfolio/edtechIcon.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4 '>EDTECH</div>
                                 </div>
                                 <div className='infoIconMobile '>
-                                <Link href="/MobileCaseStudy/manufacturing">
+                                    <Link href="/MobileCaseStudy/edTech">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
-                                </Link>
+                                    </Link>
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc manufacturingDesc'>
-                                Digitizing manufacturing process in low tech adoption workforce in high dust & temp environment.</div>        
+                                AI driven e learning application with state of the art voice to text and large language model capabilities .
+                            </div>
                             {/* </div> */}
-                           
-                        {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div>  
-                    {/* wellnessHover */}
-                    <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
-                        
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}> */}
-                            
+
+                            {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                        {/* wellnessHover */}
+                        <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
+
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleManufacturing' : ''}`}> */}
+
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="/portfolio/wellnessOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4 '>WELLNESS</div>
+                                    <div className='w-8 '><img src="/portfolio/wellnessOrange.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4 '>WELLNESS</div>
                                 </div>
                                 <div className='infoIconMobile '>
                                     <Link href="/MobileCaseStudy/health">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
-                                    </Link> 
+                                    </Link>
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc manufacturingDesc'>
-                                New age startup looking to launch mental health and wellness app.</div>        
+                                New age startup looking to launch mental health and wellness app.</div>
                             {/* </div> */}
-                           
-                        {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div>
-                    {/* <div className='item flex flex-col contentWidth wellnessHover  md:w-1/3 p-4' >
+
+                            {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                        {/* <div className='item flex flex-col contentWidth wellnessHover  md:w-1/3 p-4' >
                        
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleWellness' : ''}`}>
                             <div className='flex flex-row justify-between mb-2'>
@@ -331,52 +332,52 @@ export default function Casestudies() {
                             </div>
                         </div>
                     </div> */}
-                    {/* salesHover */}
-                    <div className='item flex flex-col contentWidth salesHover md:w-1/3 p-4'>
-                      
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}> */}
+                        {/* salesHover */}
+                        <div className='item flex flex-col contentWidth salesHover md:w-1/3 p-4'>
+
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="/portfolio/salesOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4'>SALES</div>
+                                    <div className='w-8 '><img src="/portfolio/manufacturingOrange.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4'>MACHINE VISION</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/sales">
-                                    <img src="/images/info.png" className='w-4 h-4'></img> 
+                                    <Link href="/MobileCaseStudy/machinevision">
+                                        <img src="/images/info.png" className='w-4 h-4'></img>
                                     </Link>
-                                 
+
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc salesDesc'>
-                                Sales resource attrition leads to lost opportunities. Improved key metrics in a multi product, location sales environment.                    </div>
-                        {/* </div> */}
-                      
-                        {/* <div className='salesArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div>
-                    {/* agriHover */}
-                    <div className='item flex flex-col contentWidth agriHover md:w-1/3 p-4'>
-                      
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleAgri' : ''}`}> */}
+                                AI-driven defect detection system, optimizing manufacturing processes for higher efficiency and accuracy.
+                            </div>
+                            {/* <div className='salesArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                        {/* agriHover */}
+                        <div className='item flex flex-col contentWidth agriHover md:w-1/3 p-4'>
+
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleAgri' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 '><img src="/portfolio/agriOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4' >AGRI TECH</div>
+                                    <div className='w-8 '><img src="/portfolio/socialIcon.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4' >SOCIAL</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/agritech">
-                                    <img src="/images/info.png" className='w-4 h-4'></img>
+                                    <Link href="/MobileCaseStudy/industrialPlatform">
+                                        <img src="/images/info.png" className='w-4 h-4'></img>
                                     </Link>
-                                 
+
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc agriDesc'>
-                                End  to end solution in the exicting area of farmer supply chain.</div>
-                        {/* </div> */}
-                        
-                        {/* <div className='agriArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div>
-                    {/* hrHover */}
-                    {/* <div className='item flex flex-col contentWidth hrHover md:w-1/3 p-4'>
+                                Specialized social platform connecting professionals in the data center industry for collaboration and networking.
+                            </div>
+                            {/* </div> */}
+
+                            {/* <div className='agriArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                        {/* hrHover */}
+                        {/* <div className='item flex flex-col contentWidth hrHover md:w-1/3 p-4'>
                         
                         <div className={`scroll-animationPortfolio ${isVisible ? 'visibleHr' : ''}`}>
                             <div className='flex flex-row justify-between mb-2'>
@@ -395,52 +396,53 @@ export default function Casestudies() {
                                 Seamless integration of recruitment process.</div>
                         </div>
                     </div> */}
-                    {/* fintechHover */}
-                    <div className='item flex flex-col contentWidth fintechHover md:w-1/3 p-4 '>
-                        
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleFintech' : ''}`}> */}
+                        {/* fintechHover */}
+                        <div className='item flex flex-col contentWidth fintechHover md:w-1/3 p-4 '>
+
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleFintech' : ''}`}> */}
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8 ' ><img src="/portfolio/fintechOrange.png"/></div>
-                                <div className='item-title flex textColorLogo pl-4'>FINTECH</div>
+                                    <div className='w-8 ' ><img src="/portfolio/EcomIcon.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4'>ECOMMERCE</div>
                                 </div>
                                 <div className='infoIconMobile'>
-                                    <Link href="/MobileCaseStudy/fintech">
-                                    <img src="/images/info.png" className='w-4 h-4'></img> 
+                                    <Link href="/MobileCaseStudy/eCommerce">
+                                        <img src="/images/info.png" className='w-4 h-4'></img>
                                     </Link>
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc fintechDesc'>
-                                Implementation with well established finance and micro lending company.</div>
-                               
-                        {/* </div> */}
-                      
-                        {/* <div className='fintechArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div>
-                    <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
-                        {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleMachinevision' : ''}`}> */}
-                            
+                                Ecommerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain.
+                            </div>
+
+                            {/* </div> */}
+
+                            {/* <div className='fintechArrow'> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                        <div className='item flex flex-col contentWidth manufacturingHover md:w-1/3 p-4'>
+                            {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleMachinevision' : ''}`}> */}
+
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                <div className='w-8'><img src="/portfolio/manufacturingOrange.png" /></div>
-                                <div className='item-title flex textColorLogo pl-4 '>MACHINE VISION</div>
+                                    <div className='w-8'><img src="/portfolio/auditIcon.png" /></div>
+                                    <div className='item-title flex textColorLogo pl-4 '>AUDIT</div>
                                 </div>
                                 <div className='infoIconMobile '>
-                                    <Link href="/MobileCaseStudy/machinevision">
+                                    <Link href="/MobileCaseStudy/audit">
                                         <img src="/images/info.png" className='flex items-center justify-center  w-4 h-4'></img>
-                                    </Link> 
+                                    </Link>
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc manufacturingDesc'>
-                                AI driven defect detection in manufacturing environment.
-                            </div>        
+                                Advanced data extraction tool for precise, efficient audit processes, ensuring accuracy and compliance.
+                            </div>
                             {/* </div> */}
-                           
-                        {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
-                    </div> 
+
+                            {/* <div className='manufacturingArrow  '> <img src="portfolio/rightArrow.png" className="w-8 " /></div> */}
+                        </div>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
             <div className='' id="Testimonials"></div>
 

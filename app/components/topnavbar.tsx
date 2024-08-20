@@ -82,7 +82,7 @@ export default function TopnavBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const triggerPoint = window.innerHeight * 0.1; // Adjust this value as needed
+      const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
       setIsVisible(scrollTop > triggerPoint);
     };
     
@@ -153,7 +153,7 @@ export default function TopnavBar() {
                   <div className="w-full">
                     <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                       <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/MobileCaseStudy/machinevision" className="">Customer Success</Link></div></div>
+                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/MobileCaseStudy/edTech/" className="">Customer Success</Link></div></div>
                         <div><hr className="testimonialsHr"></hr></div>
                       </div>
                     </li>

@@ -22,9 +22,10 @@ export default function Health(){
             <div className="mobileCaseStudy">
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
-                        <div className="pl-5">
-                            <div className='flex items-center justify-center'>
+                        <div className="px-5">
+                            <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
                                 <img src="/output/anyoFinalOutput.png" className=''/>
+                                <img src="/output/anyo_image.svg" className=''/>
                             </div>
                         </div>
                         <div className='caseHeader_mobile'>                                

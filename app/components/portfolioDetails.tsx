@@ -39,10 +39,10 @@ export default function PortfolioDetails() {
     const portfolio = [
         {
             id: 'content1',
-            caseTitle: ' AI-enabled K-12 edtech',
-            caseTitleContent: 'Evolve is an edtech platform that revolutionizes K-12 augmented learning',
+            caseTitle: ' AI-enabled Edtech platform',
+            caseTitleContent: 'Evolve is an edtech platform that revolutionizes augmented learning',
             stampImage: "",
-            caseImage: '/portfolio/ai (1).png',
+            caseImage: '/portfolio/edTechCaseImage.png',
             challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
             challengePoints: ' ',
             solution: 'Veract team designed and Developed a desktop app with integrated voice-to-text functionality.Implemented noise cancellation features.Included chat capabilities.',
@@ -54,7 +54,13 @@ export default function PortfolioDetails() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <div className="pb-16"></div>
+            seperator: <hr className='separatorPortfolio'></hr>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/output/updateEvo11veSitePoster.svg',
+                }
+            ]
         },
         {
             id: 'content2',
@@ -92,11 +98,21 @@ export default function PortfolioDetails() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <hr className='separatorPortfolio'></hr>
+            seperator: <hr className='separatorPortfolio'></hr>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/output/anyoFinalOutput.png'
+                },
+                {
+                    id: 2,
+                    image: '/output/anyo_image.svg'
+                }
+            ]
         },
         {
             id: 'content4',
-            caseTitle: 'Industrial platform for the fast-growing data center',
+            caseTitle: 'Social platform for the fast-growing data center businesses.',
             caseTitleContent: 'Data Center Mart is an initiative of IBITS',
             stampImage: "",
             caseImage: '/portfolio/network.png',
@@ -111,7 +127,7 @@ export default function PortfolioDetails() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <div className="pb-16"></div>
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         {
             id: 'content5',
@@ -167,7 +183,13 @@ export default function PortfolioDetails() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <div className="pb-16"></div>
+            seperator: <hr className='separatorPortfolio'></hr>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/output/updatedBeanstalkPoster.svg',
+                }
+            ]
         },
         {
             id: 'content8',
@@ -186,7 +208,13 @@ export default function PortfolioDetails() {
             designation: "DIRECTOR",
             company: "RAJDEEP INDUSTRIAL PRODUCTS",
             clientSpeak: "Excellent prompt support in spite of remote location.",
-            seperator: <hr className='separatorPortfolio'></hr>
+            seperator: <hr className='separatorPortfolio'></hr>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/output/sales.png',
+                }
+            ]
         },
         {
             id: 'content9',
@@ -205,7 +233,7 @@ export default function PortfolioDetails() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <div className="pb-16"></div>
+            seperator: <hr className='separatorPortfolio'></hr>
         },
         {
             id: 'content10',
@@ -250,6 +278,7 @@ export default function PortfolioDetails() {
     const [eComImage, setEcomImage] = useState('/portfolio/grocery-store (1).png');
     const [auditColor, setAuditColor] = useState('#7f7f7f');
     const [auditImage, setAuditImage] = useState('/portfolio/invoice (1).png');
+    const [isVisible, setIsVisible] = useState(false);
 
     const section1 = () => {
         const windowHeight = window.innerHeight;
@@ -306,16 +335,32 @@ export default function PortfolioDetails() {
         window.addEventListener("scroll", section1);
     })
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
+            setIsVisible(scrollTop > triggerPoint);
+        };
+
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div>
             <div className="desktopCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
-                    <div className='dashboard' id="container" style={{ overflow: "auto" }}>
+                    <div className={`dashboard ${isVisible ? 'h-[86.75vh]' : 'h-[74.5vh]'}`} id="container" style={{ overflow: "auto" }}>
                         {/* <div className='menuDetails'> */}
                         <div className='menuRowDetails' onClick={() => handleMenuClick('content1')}>
                             <div><img src={edTechImage} className="w-8" /></div>
-                            <div style={{ color: edTechColor }} className='flex items-center'>Ed Tech</div>
+                            {/* <div className='relative'> */}
+                                <div style={{ color: edTechColor }} className='flex items-center'>Ed Tech</div>
+                                {/* <img src="/portfolio/ai_stamp.png" alt="" className='absolute top-0 right-0 w-[1rem] h-[1rem]' />
+                            </div> */}
                         </div>
                         <div className='menuRowDetails ' onClick={() => handleMenuClick('content2')}>
                             <div><img src={manufacturingImage_1} className="w-8" /></div>
@@ -327,7 +372,7 @@ export default function PortfolioDetails() {
                         </div>
                         <div className='menuRowDetails' onClick={() => handleMenuClick('content4')}>
                             <div><img src={industrialPlatformImage} className="w-8" /></div>
-                            <div style={{ color: industrialPlatformColor }} className='flex items-center text-left'>Industrial Platform</div>
+                            <div style={{ color: industrialPlatformColor }} className='flex items-center text-left'>Social</div>
                         </div>
                         <div className='menuRowDetails ' onClick={() => handleMenuClick('content5')}>
                             <div><img src={manufacturingImage_2} className="w-8" /></div>
@@ -358,21 +403,21 @@ export default function PortfolioDetails() {
                     {portfolio.map((item) => (
                         //  id={item.id}
                         <section key={item.id} id={item.id} >
-                            <div className='caseDetails'>
+                            <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
                                 <div className='caseHeader'>
-                                    <div className='caseHeaderIconContent pt-12'>
+                                    <div className='caseHeaderIconContent '>
                                         <div className="flex flex-row-reverse">
                                         </div>
-                                        <div className='caseHeaderTitle'>{item.caseTitle} </div>
+                                        <div className='caseHeaderTitle w-[80%] flex-wrap'>{item.caseTitle} </div>
                                         <div className='caseHeaderIcon'>{item.caseTitleContent}</div>
                                     </div>
-                                    <div className='caseHeaderContent pt-11'><img src={item.caseImage} className='w-24 pt-5' /></div>
+                                    <div className='caseHeaderContent'><img src={item.caseImage} className='w-24 pt-5' /></div>
                                 </div>
                                 <div className='ChallengeSolutionContainer'>
                                     <div className='ChallengeContainer'>
                                         <div className="challenges">Challenges</div>
                                         <div className='challengesContent'>{item.challenges}</div>
-                                        <div className='flex flex-col pt-6'>
+                                        <div className='flex flex-col '>
                                             {item.challengePoints.split(',').map((challenge, index) => (
                                                 <div key={index} className='challengePoints'>{challenge}</div>
                                             ))}
@@ -381,13 +426,20 @@ export default function PortfolioDetails() {
                                     <div className='ChallengeContainer'>
                                         <div className="challenges">Solution</div>
                                         <div className='challengesContent'>{item.solution} </div>
-                                        <div className='flex flex-col pt-6'>
+                                        <div className='flex flex-col '>
                                             {item.solutionPoints.split(',').map((solution, index) => (
                                                 <div key={index} className='solutionPoints'>{solution}</div>
                                             ))}
                                         </div>
                                     </div>
                                 </div>
+                                {item.referenceImage?.map((item: any, index: any) => (
+                                    <div key={index} className="pl-5">
+                                        <div className='flex items-center justify-center'>
+                                            <img src={item.image} className='' />
+                                        </div>
+                                    </div>
+                                ))}
                                 <div className='BottomContainer'>
                                     <div className='mainContainer'>
                                         <div className='serviceContainer'>
@@ -424,18 +476,13 @@ export default function PortfolioDetails() {
                                         </div>
                                     </div>
                                 </div>
-                                {item.id === "content2" && (
-                                    <div className='flex items-center justify-center'>
-                                        <img src="/output/sales.png" className='' />
+                                {/* {item.referenceImage?.map((item: any, index: any) => (
+                                    <div key={index} className="pl-5">
+                                        <div className='flex items-center justify-center'>
+                                            <img src={item.image} className='' />
+                                        </div>
                                     </div>
-
-                                )}
-                                {item.id === "content1" && (
-                                    <div className='flex items-center justify-center'>
-                                        <img src="/output/anyoFinalOutput.png" className='' />
-                                    </div>
-
-                                )}
+                                ))} */}
 
                                 {item.clientSpeak?.length !== 0 && (
                                     <div className='testimonialContainer'>
@@ -474,7 +521,7 @@ export default function PortfolioDetails() {
                                 <div className='ChallengeContainer_mobile'>
                                     <div className="challenges_mobile">Challenges</div>
                                     <div className='challengesContent_mobile'>{item.challenges}</div>
-                                    <div className='flex flex-col pt-6'>
+                                    <div className='flex flex-col '>
                                         {item.challengePoints.split(',').map((challenge, index) => (
                                             <div key={index} className='challengePoints_mobile'>{challenge}</div>
                                         ))}
@@ -483,7 +530,7 @@ export default function PortfolioDetails() {
                                 <div className='ChallengeContainer_mobile'>
                                     <div className="challenges_mobile">Solution</div>
                                     <div className='challengesContent_mobile'>{item.solution} </div>
-                                    <div className='flex flex-col pt-6'>
+                                    <div className='flex flex-col '>
                                         {item.solutionPoints.split(',').map((solution, index) => (
                                             <div key={index} className='solutionPoints_mobile'>{solution}</div>
                                         ))}
@@ -543,7 +590,7 @@ export default function PortfolioDetails() {
                                 )}
                             </div>
 
-                            {item.id === "content2" && (
+                            {/* {item.id === "content2" && (
                                 <div className="pl-5">
                                     <div className='flex items-center justify-center'>
                                         <img src="/output/sales.png" className='' />
@@ -558,7 +605,7 @@ export default function PortfolioDetails() {
                                         <img src="/output/anyoFinalOutput.png" className='' />
                                     </div>
                                 </div>
-                            )}
+                            )} */}
                         </div>
                     ))}
 
