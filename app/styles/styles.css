@@ -1432,14 +1432,16 @@ ul {
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 2%;
+  padding-right: 2%;
   left: 20px;
   /* top: 147px; */
   bottom: 1%;
-  width: 16%;
+  /* width: 16%; */
   /* height: 75vh; */
   background-color: var(--black-colour);
   border-radius: 20px;
   transition: all 0.3s ease;
+
 }
 
 .menuDetails {
@@ -2276,6 +2278,10 @@ ul {
 
 .dashboard::-webkit-scrollbar {
   display: none;
+}
+
+.caseStudyContainerBoxShadow {
+  box-shadow: inset 2px 3px 10px 3px rgba(0, 0, 0, 0.10);
 }
 
 

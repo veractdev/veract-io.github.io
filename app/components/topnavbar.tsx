@@ -162,7 +162,7 @@ export default function TopnavBar() {
                 <div className="caseMain_desktop">
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/CaseStudyPage" className="">Customer Success</Link></div></div>
+                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/updatedCaseStudy" className="">Customer Success</Link></div></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
