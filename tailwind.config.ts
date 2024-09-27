@@ -19,7 +19,8 @@ const config: Config = {
         primary:"white",
         grey: "#808080",
         orange: "#ffa500",
-        primary_color: "#4285F4"
+        primary_color: "#4285F4",
+        blue:"rgba(146, 82, 254, 1)"
       },
     },
   },

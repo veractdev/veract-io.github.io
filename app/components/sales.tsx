@@ -23,16 +23,18 @@ export default function Sales(){
             <div className="mobileCaseStudy">
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
+                    <div className='caseHeader_mobile'>                                
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Sales Enquiry and Quote Management  </div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>
+                                    <p><span className='para_Color'>Rajdeep </span> is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.</p></div>
+
+                        </div>
                         <div className="pl-5">
                             <div className='flex items-center justify-center'>
                                 <img src="/output/sales.png" className=''/>
                             </div>
                         </div>
-                        <div className='caseHeader_mobile'>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Sales Enquiry and Quote Management  </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Rajdeep is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.</div>
-
-                        </div>
+                       
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
@@ -108,6 +110,7 @@ export default function Sales(){
                                     </div>
                                 </div>
                                 <div className="clientscontent_mobile flex-wrap pb-2">Excellent prompt support in spite of remote location.</div>
+                                <div className='w-[100%] flex justify-end'><img src="/caseStudies/right_quote.svg" className='m-3 w-70' alt="" /> </div>
                                 </div>
                             </div>
                         </div>

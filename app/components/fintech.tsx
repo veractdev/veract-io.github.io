@@ -27,7 +27,8 @@ export default function FinTech(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'> Credit Risk Assessment and Risk Profiling </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Northern Arc Capital is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 '>
+                                <p className='px-2'> Agrosperity<span className='para_Color'> Northern Arc Capital </span> is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.</p></div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>

@@ -25,14 +25,15 @@ export default function ECommerece() {
             <div className="mobileCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
-                        <div className="px-5">
-                            <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
-                                <img src="/output/updatedBeanstalkPoster.svg" className='' />
-                            </div>
-                        </div>
+                 
                         <div className='caseHeader_mobile'>
                             <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>E-commerce site for agricultural produce</div>
                             <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Beanstalk operates in the exciting farm-to-table space</div>
+                        </div>
+                        <div className="px-5">
+                            <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
+                                <img src="/caseStudies/eCom.svg" className='' />
+                            </div>
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>

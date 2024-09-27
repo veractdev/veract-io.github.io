@@ -7,7 +7,6 @@ import DashboardDetails from './dashboardPortfolio';
 import '../styles/styles.css';
 import '../styles/mediaQuery.css'
 import '../styles/testimonials.css';
-
 export default function IndustrialPlatform() {
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
@@ -25,15 +24,18 @@ export default function IndustrialPlatform() {
             <div className="mobileCaseStudy">
                 <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
+                       
+                        <div className='caseHeader_mobile'>
+                            <div className='caseHeaderTitle_mobile flex flex-wrap '>AI-enabled Edtech platform</div>
+                            <div className='caseHeaderIcon_mobile pt-5 pb-5 '>
+                            <p className='px-2'> <span className='para_Color'> Evolve </span> is an edtech platform that revolutionizes augmented learning
+                            </p></div>
+                           
+                        </div>
                         <div className="px-5">
                             <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
-                                <img src="/output/updateEvo11veSitePoster.svg" className='' />
+                                <img src='/caseStudies/mobile_Evo11ve.svg' className='' />
                             </div>
-                        </div>
-                        <div className='caseHeader_mobile'>
-                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>AI-enabled Edtech platform</div>
-                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Evolve is an edtech platform that revolutionizes augmented learning</div>
-
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>

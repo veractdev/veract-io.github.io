@@ -28,7 +28,9 @@ export default function AgriTech(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture Finance Ecosystem Web Application </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Agrosperity KiVi is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5'>
+                                <p className='px-2'> Agrosperity<span className='para_Color'> KiVi </span> is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.
+                                </p></div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
@@ -111,6 +113,8 @@ export default function AgriTech(){
                                     </div>
                                 </div>
                                 <div className="clientscontent_mobile flex-wrap pb-2">We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work.</div>
+                                
+                                <div className='w-[100%] flex justify-end'><img src="/caseStudies/right_quote.svg" className='m-3 w-60' alt="" /> </div>
                                 </div>
                             </div>
                         </div>

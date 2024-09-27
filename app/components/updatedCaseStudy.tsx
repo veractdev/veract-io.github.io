@@ -120,7 +120,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/output/updateEvo11veSitePoster.svg',
+                    image: '/output/portfolio_one.svg',
                 }
             ]
         },
@@ -164,12 +164,8 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/output/anyoFinalOutput.png'
+                    image: '/output/portfolio_wellness.svg'
                 },
-                {
-                    id: 2,
-                    image: '/output/anyo_image.svg'
-                }
             ]
         },
         {
@@ -189,13 +185,20 @@ export default function UpdatedCaseStudy() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <hr className='separatorPortfolio'></hr>
+            seperator: <hr className='separatorPortfolio'></hr>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/output/portfolio_dcm.svg'
+                },
+            ]
         },
         {
             id: 'content5',
             caseTitle: 'Quality Documentation for Metal Foundry',
             caseTitleContent: 'An automated quality report generation system was needed by the Grey Iron and Ductile Iron Foundry in order to submit reports to customers.',
             stampImage: "",
+            caseImage: '/output/quality_documetation_logo.svg',
             challenges: 'Submission of parts necessitates the submission of high-quality documentation on spectrometer readings, pouring properties, mould properties and sand properties.',
             challengePoints: ' ',
             solution: 'A one-stop shop that combines machine maintenance, defect prediction, CAPA follow-up, test certificate and other quality documents.',
@@ -249,7 +252,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/output/updatedBeanstalkPoster.svg',
+                    image: '/output/portfoilio_beanstalk.svg',
                 }
             ]
         },
