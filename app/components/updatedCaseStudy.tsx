@@ -416,7 +416,7 @@ export default function UpdatedCaseStudy() {
                         ))}
                     </div>
                     {portfolio.map((item, index) => (
-                        <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => (contentRefs.current[index] = el)}>
+                        <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => {(contentRefs.current[index] = el)}}>
                             <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
                                 <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
                                     <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>
