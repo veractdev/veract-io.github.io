@@ -28,7 +28,7 @@ export default function Manufacturing(){
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
                                 <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Quality Documentation for Metal Foundry   </div>
-                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>An automated quality report generation system was needed by the Grey Iron and Ductile Iron Foundry in order to submit reports to customers.</div>
+                                <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>An automated quality report generation system for Grey Iron and Ductile Iron Foundry.</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>

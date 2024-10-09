@@ -24,7 +24,7 @@ export default function Health(){
                     <div className='caseDetails_mobile'>
                    
                         <div className=''>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Health and Wellness Web and Mobile App. </div>
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Health and Wellness Tech </div>
                                 <div className='caseHeaderIcon_mobile pt-5 pb-5 '>
                                     <p className='px-2'> <span className='para_Color'> Anyo </span> is a health and wellness app  that addresses the significant issue of mental health.
                                     </p></div>

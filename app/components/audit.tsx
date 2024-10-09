@@ -27,13 +27,16 @@ export default function Audit() {
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>
                             <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Data extraction for the audit industry</div>
-                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Financial audit firm with over 100 associates</div>
+                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>
+                            <p className='px-2'><span className='para_Color'>Financial audit </span>firm with over 100 associates</p></div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Audit firm looking to reduce manual data entry processes required for compliance.</div>
+                                <div className='challengesContent_mobile'>
+                               Audit firm  looking to reduce manual data entry processes required for compliance.
+                                </div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -64,7 +67,7 @@ export default function Audit() {
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16' /></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Web application</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +85,6 @@ export default function Audit() {
                                         </div>
                                         <div className="flex flex-col md:gap-6">
                                             <div className='techText_mobile pb-3'>Next JS</div>
-                                            <div className='techText_mobile pb-3'>React JS</div>
                                         </div>
                                     </div>
                                 </div>

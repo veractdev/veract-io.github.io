@@ -8,7 +8,8 @@ import Tabs from "../components/tab";
 import { usePathname } from "next/navigation";
 import { send } from "process";
 import Footer from "../components/footer";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import mobileCustomerSuccess from "../mobileCustomerSuccess";
 
 export default function MobileCaseStudy_Layout({
   children,
@@ -33,6 +34,20 @@ export default function MobileCaseStudy_Layout({
       inline: "nearest",
     });
   }
+  const [activePage, setActivePage] = useState("content1");
+  console.log(mobileCustomerSuccess);
+  const [selectedPage, setSelectedPage] = useState(
+    mobileCustomerSuccess.filter((item) => item.id === activePage)
+  );
+
+  const handleClick = (id: string) => {
+    setActivePage(id);
+    setSelectedPage(
+      mobileCustomerSuccess.filter((item) => item.id === id)
+    );
+  };
+
+  console.log(selectedPage);
 
   return (
     <div className="fontFamily">
@@ -44,182 +59,33 @@ export default function MobileCaseStudy_Layout({
           {/* <div className="buttons"> */}
           <div className="mx-auto md:mx-0">
             <div className="flex overflow-x-scroll customScroll hover:cursor-pointer   pl-2 pr-1 ">
-              <div className="flex flex-row justify-around align-center ">
-                <button
-                  id="6"
-                  onClick={() => router.push("/MobileCaseStudy/edTech")}
-                  className={`custom_button w-[150] flex flex-col items-center justify-center
-                                         ${
-                                           pathname ===
-                                           "/MobileCaseStudy/edTech/"
-                                             ? "text-blue"
-                                             : "text-gray-400"
-                                         } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/edTech/" ?"/caseStudies/edTech_icon.svg" : "/caseStudies/edtech_icon_gray.svg" }`}
-                    alt=""
-                  />
-                  <p > Ed&nbsp;Tech</p>
-                </button>
-                <button
-                  id="5"
-                  onClick={() => router.push("/MobileCaseStudy/agritech")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150]  ${
-                    pathname === "/MobileCaseStudy/agritech/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/agritech/" ?"/caseStudies/agriTech_icon.svg" : "/caseStudies/agriTech_icon_gray.svg" }`}
-                    alt=""
-                  />
-
-                  <p> AgriTech </p>
-                </button>
-                <button
-                  id="6"
-                  onClick={() => router.push("/MobileCaseStudy/fintech")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150] ${
-                    pathname === "/MobileCaseStudy/fintech/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/fintech/" ?"/caseStudies/finTech_icon_blue.svg" : "/caseStudies/fintech_icon.svg" }`}
-                    alt=""
-                  />
-
-                  <p>Fin&nbsp;Tech</p>
-                </button>
-
-                <button
-                  id="3"
-                  onClick={() => router.push("/MobileCaseStudy/machinevision")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150] ${
-                    pathname === "/MobileCaseStudy/machinevision/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/machinevision/" ?"/caseStudies/machine_icon_blue.svg" : "/caseStudies/mechine_vision_icon.svg" }`}
-                    alt=""
-                  />
-                  <p> Machine&nbsp;Vision </p>
-                </button>
-                <button
-                  id="2"
-                  onClick={() => router.push("/MobileCaseStudy/sales")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150]   ${
-                    pathname === "/MobileCaseStudy/sales/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/sales/" ?"/caseStudies/sales_icon.svg" : "/caseStudies/sales_icon_gray.svg" }`}
-                    alt=""
-                  />
-
-                  <p>Sales</p>
-                </button>
-                <button
-                  id="1"
-                  onClick={() => router.push("/MobileCaseStudy/health")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150]  ${
-                    pathname === "/MobileCaseStudy/health/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/health/" ?"/caseStudies/wellness_icon_blue.svg" : "/caseStudies/wellness_icon.svg" }`}
-                    alt=""
-                  />
-                  <p> Wellness </p>
-                </button>
-                <button
-                  id="6"
-                  onClick={() =>
-                    router.push("/MobileCaseStudy/industrialPlatform")
-                  }
-                  className={`flex flex-col items-center justify-center custom_button w-[150]  ${
-                    pathname === "/MobileCaseStudy/industrialPlatform/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                                      src={`${pathname ==="/MobileCaseStudy/industrialPlatform/" ?"/caseStudies/social_icon_blue.svg" : "/caseStudies/social_icon_gray.svg" }`}
-
-                    className="w-15"
-                    alt=""
-                  />
-
-                  <p>Social&nbsp;Platform</p>
-                </button>
-                <button
-                  id="6"
-                  onClick={() => router.push("/MobileCaseStudy/eCommerce")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150]  ${
-                    pathname === "/MobileCaseStudy/eCommerce/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/eCommerce/" ?"/caseStudies/eCom_icon_blue.svg" : "/caseStudies/ecom_icon.svg" }`}
-                    alt=""
-                  />
-
-                  <p>ECom</p>
-                </button>
-                <button
-                  id="6"
-                  onClick={() => router.push("/MobileCaseStudy/audit")}
-                  className={`flex flex-col items-center justify-center custom_button w-[150]  ${
-                    pathname === "/MobileCaseStudy/audit/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                                      src={`${pathname ==="/MobileCaseStudy/audit/" ? "/caseStudies/audit_icon_blue.svg" : "/caseStudies/audit_icon.svg" }`}
-
-                    className="w-15"
-                    alt=""
-                  />
-                  <p>Audit</p>
-                </button>
-                <button
-                  id="4"
-                  onClick={() => router.push("/MobileCaseStudy/manufacturing")}
-                  className={`flex flex-col items-center justify-center custom_button   ${
-                    pathname === "/MobileCaseStudy/manufacturing/"
-                      ? "text-blue"
-                      : "text-gray-400 "
-                  } cursor-pointer`}
-                >
-                  <img
-                    className="w-15"
-                    src={`${pathname ==="/MobileCaseStudy/manufacturing/" ? "/caseStudies/manufacturing_icon.svg" : "/caseStudies/manuf_icon_gray.svg" }`}
-                    alt=""
-                  />
-                  <p>Manufacturing</p>
-                </button>
+              <div className="flex flex-row justify-around "style={{alignItems:"flex-start"}}>
+                {mobileCustomerSuccess.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => handleClick(item.id)}
+                    id={item.id}
+                    className={`custom_button w-[150] flex flex-col items-center justify-center
+                     ${
+                       item.id === activePage ? "text-blue" : "text-gray-400"
+                     } cursor-pointer`}
+                  >
+                    <img
+                      className="w-15"
+                      src={`${
+                        item.id === activePage
+                          ? item.activeIcon
+                          : item.inActiveIcon
+                      }`}
+                      alt=""
+                    />
+                    <p>{item.title}</p>
+                  </button>
+                ))}
               </div>
             </div>
-            {/* <button id="1"
+          </div>
+          {/* <button id="1"
                     onClick={() => sendToRoute('/MobileCaseStudy/health')}
                     className={`py-2 px-8 rounded-2xl ${
                         pathname === '/MobileCaseStudy/health' ? 'bg-orange' : 'bg-gray-200'
@@ -279,13 +145,152 @@ export default function MobileCaseStudy_Layout({
                     >
                     Fin Tech
                     </button> */}
-          </div>
-          {/* </div> */}
         </div>
-        <div className="pt-0">{children}</div>
+        {/* </div> */}
+      </div>
+      <div className="pt-0">
+        {selectedPage && selectedPage.length > 0 && (
+          <>
+            <div id="portfolioDetails" className="fontFamily">
+              <div className="caseDetails_mobile">
+                <div className="caseHeader_mobile">
+                  <div className="caseHeaderTitle_mobile flex flex-wrap pl-5">
+                    {selectedPage[0].caseTitle}
+                  </div>
+                  <div className="caseHeaderIcon_mobile pt-5 pb-5">
+                    <p className="px-2"> {selectedPage[0].caseTitleContent}</p>
+                  </div>
+                </div>
+          {  selectedPage[0].caseImage &&  <div className="px-5">
+                            <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
+                                <img src={selectedPage[0].caseImage} className='' />
+                            </div>
+                        </div>}
+                <div className="ChallengeSolutionContainer_mobile">
+                  <div className="ChallengeContainer_mobile">
+                    <div className="challenges_mobile">Challenges</div>
+                    <div className="challengesContent_mobile">
+                      {selectedPage[0].challenges}
+                    </div>
+                  </div>
+                  <div className="ChallengeContainer_mobile">
+                    <div className="challenges_mobile">Solution</div>
+                    <div className="challengesContent_mobile">
+                      {selectedPage[0].solution}
+                    </div>
+                  </div>
+                </div>
+                <div className="BottomContainer_mobile">
+                  <div className="mainContainer">
+                    <div className="serviceContainer_mobile">
+                      <div className="ServiceImage">
+                        <img src="/caseStudies/vehicle.png" className="w-16" />
+                      </div>
+                      <div className="serviceHeader_mobile pt-2">Services</div>
+                      {selectedPage[0].services.map((item, id) => (
+                        <div key={id} className="serviceText_mobile pt-2">
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="platformContainer_mobile">
+                      <div className="ServiceImage">
+                        <img src="/caseStudies/web.png" className="w-16" />
+                      </div>
+                      <div className="serviceHeader_mobile pt-2">Platform</div>
+                      {selectedPage[0].platform.map((item, id) => (
+                        <div key={id} className="PlatformText_mobile pt-2">
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="pl-5 pb-5 pr-5">
+                  <div className="techstackContainer_mobile">
+                    <div className="techImageTitle_mobile pl-20 pr-20">
+                      <div className="ServiceImage">
+                        <img
+                          src="/caseStudies/tech-service.png"
+                          className="w-16 pt-1"
+                        />
+                      </div>
+                      <div className="serviceHeader_mobile pt-2">Techstack</div>
+                    </div>
+                    <div className="techContent_mobile">
+                      <div className="flex flex-row justify-around pt-6">
+                        <div className="flex flex-col md:gap-6">
+                          {selectedPage[0].techstack
+                            .slice(0, selectedPage[0].techstack.length / 2)
+                            .map((item, id) => (
+                              <div key={id} className="techText_mobile pb-2">
+                                {item}
+                              </div>
+                            ))}
+                        </div>
+                        <div className="flex flex-col md:gap-6">
+                          {selectedPage[0].techstack
+                            .slice(
+                              selectedPage[0].techstack.length / 2,
+                              selectedPage[0].techstack.length
+                            )
+                            .map((item, id) => (
+                              <div key={id} className="techText_mobile pb-2">
+                                {item}
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {selectedPage[0].clientSpeakName &&
+                  selectedPage[0].clientSpeakCmp &&
+                  selectedPage[0].clientSpeakDesc && (
+                    <div className="pb-5">
+                      <div className="testimonialContainer_mobile">
+                        <div className="serviceContainer_mobile md:gap-4">
+                          <div className="flex pt-2">
+                            <div className="clientsspeak_mobile">
+                              Clients Speak
+                            </div>
+                          </div>
+                          <div className="flex pt-2 flex-col md:gap-3">
+                            <div className="pb-5 pl-5">
+                              <i className="quotes"></i>
+                            </div>
+                            <div className="flex flex-col items-center pb-5">
+                              <div className="title_mobile whitespace-nowrap">
+                                {selectedPage[0].clientSpeakName}
+                              </div>
+                              <div className="title_mobile highlight">
+                                {selectedPage[0].clientSpeakCmp}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="clientscontent_mobile flex-wrap pb-2">
+                            {selectedPage[0].clientSpeakDesc}
+                          </div>
 
-        <Footer />
-        {/* <aside id="logo-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+                          <div className="w-[100%] flex justify-end">
+                            <img
+                              src="/caseStudies/right_quote.svg"
+                              className="m-3 w-60"
+                              alt=""
+                            />{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
+      <Footer />
+      {/* <aside id="logo-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
                     <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                         <ul className="space-y-2 font-medium">
                             <li>
@@ -322,12 +327,11 @@ export default function MobileCaseStudy_Layout({
                     </div>
                 </aside > */}
 
-        {/* <div className="p-4 sm:ml-64 m-11 ">
+      {/* <div className="p-4 sm:ml-64 m-11 ">
                     {children}
 
 
                 </div> */}
-      </div>
     </div>
   );
 }

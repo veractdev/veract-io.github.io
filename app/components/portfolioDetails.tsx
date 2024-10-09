@@ -255,6 +255,7 @@ export default function PortfolioDetails() {
             seperator: <div className="pb-16"></div>
         },
     ]
+    
     const [manufacturingColor_1, setManufacturingColor_1] = useState('#7f7f7f');
     const [manufacturingImage_1, setManufacturingImage_1] = useState('/dashboard/manufacturingGrey.png');
     const [manufacturingColor_2, setManufacturingColor_2] = useState('#7f7f7f');

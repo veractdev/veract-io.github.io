@@ -26,14 +26,14 @@ export default function IndustrialPlatform() {
                 <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>
-                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Industrial platform for the fast-growing data center</div>
+                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Data Center Innovation Platform</div>
                             <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Data Center Mart is an initiative of IBITS</div>
 
                         </div>
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>comprehensive platform tailored for the data center industry. This site will enable users to create posts, comment, like, and share content. Additionally, it will feature a marketplace for products and services and a directory of suppliers specializing in data center solutions.</div>
+                                <div className='challengesContent_mobile'>Challenged with creating a comprehensive platform tailored specifically for the data center industry including post content, comment, like, and share within the community, with a integrated marketplace for products and services and a directory of suppliers specializing in data center solutions.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -64,7 +64,7 @@ export default function IndustrialPlatform() {
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16' /></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Web application</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ export default function IndustrialPlatform() {
                                 </div>
                                 <div className='techContent_mobile'>
                                     <div className="flex flex-row justify-around pt-6">
-                                        <div className="flex flex-col md:gap-6">
+                                        <div className="flex gap-5 md:gap-3">
                                             <div className='techText_mobile pb-3'>Next JS</div>
                                             <div className='techText_mobile pb-3'>MongoDB</div>
                                             <div className='techText_mobile pb-3'>NodeJS</div>

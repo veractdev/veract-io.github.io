@@ -27,8 +27,10 @@ export default function ECommerece() {
                     <div className='caseDetails_mobile'>
                  
                         <div className='caseHeader_mobile'>
-                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>E-commerce site for agricultural produce</div>
-                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>Beanstalk operates in the exciting farm-to-table space</div>
+                            <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>E-Commerce for Seasonal Produce</div>
+                            <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>
+                                <p className='px-2'><span className='para_Color'>Beanstalk </span>operates in the exciting farm-to-table space</p>
+                            </div>
                         </div>
                         <div className="px-5">
                             <div className='flex flex-col gap-[0.25rem] items-center justify-center'>
@@ -38,7 +40,7 @@ export default function ECommerece() {
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>A custom-built, voice-to-text enabled personalized AI coach</div>
+                                <div className='challengesContent_mobile'>Payment enabled e-commerce site in time for customers produce season.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -47,7 +49,7 @@ export default function ECommerece() {
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Veract team designed and Developed a desktop app with integrated voice-to-text functionality.Implemented noise cancellation features.Included chat capabilities.</div>
+                                <div className='challengesContent_mobile'>Veract team developed and deployed a payment enabled custom designed web application.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>
@@ -69,7 +71,7 @@ export default function ECommerece() {
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16' /></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Desktop application</div>
+                                    <div className='PlatformText_mobile pt-2'>Web</div>
                                 </div>
                             </div>
                         </div>
@@ -83,14 +85,14 @@ export default function ECommerece() {
                                     <div className="flex flex-row justify-around pt-6">
                                         <div className="flex flex-col md:gap-6">
                                             <div className='techText_mobile pb-3'>Next JS</div>
-                                            <div className='techText_mobile pb-3'>Electron</div>
+                                            <div className='techText_mobile pb-3'>Express JS</div>
                                             <div className='techText_mobile pb-3'>NodeJS</div>
 
                                         </div>
                                         <div className="flex flex-col md:gap-6">
-                                            <div className='techText_mobile pb-3'>MongoDB</div>
-                                            <div className='techText_mobile pb-3'>Express</div>
-                                            <div className='techText_mobile pb-3'>Elastic Search</div>
+                                            <div className='techText_mobile pb-3'>Redis</div>
+                                            <div className='techText_mobile pb-3'>PostgreSQL</div>
+                                            <div className='techText_mobile pb-3'>Razorpay</div>
 
                                         </div>
                                     </div>

@@ -28,7 +28,7 @@ export default function IndustrialPlatform() {
                         <div className='caseHeader_mobile'>
                             <div className='caseHeaderTitle_mobile flex flex-wrap '>AI-enabled Edtech platform</div>
                             <div className='caseHeaderIcon_mobile pt-5 pb-5 '>
-                            <p className='px-2'> <span className='para_Color'> Evolve </span> is an edtech platform that revolutionizes augmented learning
+                            <p className='px-2'> <span className='para_Color'> Evollve </span> is an edtech platform that revolutionizes augmented learning
                             </p></div>
                            
                         </div>
@@ -71,7 +71,9 @@ export default function IndustrialPlatform() {
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16' /></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>Desktop application</div>
+                                    <div className='PlatformText_mobile pt-2'>Desktop </div>
+                                    <div className='PlatformText_mobile pt-2'>Web </div>
+
                                 </div>
                             </div>
                         </div>

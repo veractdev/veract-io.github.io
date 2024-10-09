@@ -38,7 +38,7 @@ export default function Sales(){
                         <div className='ChallengeSolutionContainer_mobile'>
                             <div className='ChallengeContainer_mobile'>    
                                 <div className="challenges_mobile">Challenges</div>
-                                <div className='challengesContent_mobile'>Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine. On top is the complete offline functionality due to poor network connectivity phases.</div>
+                                <div className='challengesContent_mobile'>Salesman attrition, inconsistent data, quotation production and reporting were the client’s pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='challengePoints_mobile'>Live chat.</div>
                                         <div className='challengePoints_mobile'>Video audio streaming.</div>
@@ -88,7 +88,7 @@ export default function Sales(){
                                             <div className='techText_mobile pb-3'>IndexedDB</div>
                                         </div>  
                                         <div className="flex flex-col">
-                                            <div className='techText_mobile pb-3'>jQuery</div>
+                                            <div className='techText_mobile pb-3'>JQuery</div>
                                             <div className='techText_mobile pb-3'>Google APIs</div>
                                             <div className='techText_mobile pb-3'>MongoDB</div>
                                         </div>     

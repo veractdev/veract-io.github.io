@@ -27,9 +27,9 @@ export default function AgriTech(){
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture Finance Ecosystem Web Application </div>
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Agriculture Finance Ecosystem</div>
                                 <div className='caseHeaderIcon_mobile pt-5 pb-5'>
-                                <p className='px-2'> Agrosperity<span className='para_Color'> KiVi </span> is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.
+                                <p className='px-2'> Agrosperity<span className='para_Color'> KiVi </span> is a phygital platform in the area of agri supply chain and financing.
                                 </p></div>
 
                         </div>
@@ -67,7 +67,7 @@ export default function AgriTech(){
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Platform</div>
-                                    <div className='PlatformText_mobile pt-2'>web</div>
+                                    <div className='PlatformText_mobile pt-2'>Progressive web</div>
                                 </div>
                             </div>
                         </div> 
@@ -101,7 +101,7 @@ export default function AgriTech(){
                         </div>
                         <div className="pb-5">
                             <div className='testimonialContainer_mobile'>
-                                <div className='clientContainer_mobile md:gap-4'>
+                                <div className='serviceContainer_mobile md:gap-4'>
                                 <div className='flex pt-2'>
                                     <div className="clientsspeak_mobile">Clients Speak</div>
                                 </div>

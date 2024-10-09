@@ -27,7 +27,8 @@ export default function MachineVision(){
             <div id="portfolioDetails" className='fontFamily'>
                     <div className='caseDetails_mobile'>
                         <div className='caseHeader_mobile'>                                
-                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Machine Vision for Manufacturing Quality Control</div>
+                                <div className='caseHeaderTitle_mobile flex flex-wrap pl-5'>Automated Machine 
+                                Vision Inspection</div>
                                 <div className='caseHeaderIcon_mobile pt-5 pb-5 pl-5'>A sheet metal pressings manufacturing company.</div>
 
                         </div>
@@ -56,11 +57,11 @@ export default function MachineVision(){
                                 <div className='serviceContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/vehicle.png" className='w-16'/></div>
                                     <div className='serviceHeader_mobile pt-2'>Services</div>
-                                    <div className='serviceText_mobile pt-2 '>End to end vision systems</div>
                                     <div className='serviceText_mobile pt-2 '>Software architecture</div>
-                                    <div className='serviceText_mobile pt-2'>Technology consulting</div>
+                                    <div className='serviceText_mobile pt-2 '>Technology consulting</div>
                                     <div className='serviceText_mobile pt-2'>Software development</div>
                                     <div className='serviceText_mobile pt-2'>Deployment</div>
+                                    <div className='serviceText_mobile pt-2'>End to end vision systems</div>
                                 </div>
                                 <div className='platformContainer_mobile'>
                                     <div className='ServiceImage'><img src="/caseStudies/web.png" className='w-16'/></div>
@@ -78,12 +79,13 @@ export default function MachineVision(){
                                 <div className='techContent_mobile'>
                                 <div className="flex flex-row justify-around pt-6">
                                     <div className="flex flex-col md:gap-6">
-                                        <div className='techText_mobile pb-3'>TensorFlow</div>
-                                        <div className='techText_mobile pb-3'>Python</div>
+                                    <div className='techText_mobile pb-3'>Python</div>
+                                    <div className='techText_mobile pb-3'>Keras</div>
+
                                         
                                     </div> 
                                     <div className="flex flex-col md:gap-6">
-                                        <div className='techText_mobile pb-3'>Keras</div>
+                                    <div className='techText_mobile pb-3'>TensorFlow</div>
                                         <div className='techText_mobile pb-3'>PyTorch</div>
                                     </div>     
                                 </div>
