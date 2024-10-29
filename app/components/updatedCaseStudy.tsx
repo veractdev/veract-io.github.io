@@ -12,6 +12,7 @@ export default function UpdatedCaseStudy() {
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [selectedTab, setSelectedTab] = useState<number>();
+    const [showsite,setShowSite]=useState(true);
 
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
@@ -50,7 +51,7 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content4',
-            title: 'Social',
+            title: 'Industry Platform',
             titleImage: '/updatedCaseStudiesIcon/social.svg',
             selectedTitleImage: '/updatedCaseStudiesIcon/socialSelected.svg',
             hasAi: false,
@@ -118,9 +119,13 @@ export default function UpdatedCaseStudy() {
             clientSpeak: "",
             seperator: <hr className='separatorPortfolio'></hr>,
             referenceImage: [
+                // {
+                //     id: 1,
+                //     image: '/output/portfolio_one.svg',
+                // }
                 {
                     id: 1,
-                    image: '/output/portfolio_one.svg',
+                    image: '/updatedCaseStudiesIcon/evollveFinal.svg',
                 }
             ]
         },
@@ -162,10 +167,18 @@ export default function UpdatedCaseStudy() {
             clientSpeak: "",
             seperator: <hr className='separatorPortfolio'></hr>,
             referenceImage: [
+                // {
+                //     id: 1,
+                //     image: '/output/portfolio_wellness.svg'
+                // }, 
                 {
                     id: 1,
-                    image: '/output/portfolio_wellness.svg'
-                },
+                    image: '/updatedCaseStudiesIcon/anyoFinal.svg'
+                },                
+                {
+                    id: 2,
+                    image: '/output/anyo_image.svg'
+                }
             ]
         },
         {
@@ -189,7 +202,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/output/portfolio_dcm.svg'
+                    image: '/updatedCaseStudiesIcon/dcmFinal.svg'
                 },
             ]
         },
@@ -250,11 +263,17 @@ export default function UpdatedCaseStudy() {
             clientSpeak: "",
             seperator: <hr className='separatorPortfolio'></hr>,
             referenceImage: [
+                // {
+                //     id: 1,
+                //     image: '/output/portfoilio_beanstalk.svg',
+                // 
+                            // }                
                 {
                     id: 1,
-                    image: '/output/portfoilio_beanstalk.svg',
+                    image: '/updatedCaseStudiesIcon/beanstalkFinal.svg',
                 }
             ]
+
         },
         {
             id: 'content8',
@@ -277,7 +296,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/output/sales.png',
+                    image: '/updatedCaseStudiesIcon/salesFinal.svg',
                 }
             ]
         },
@@ -337,38 +356,53 @@ export default function UpdatedCaseStudy() {
         // });
     }
 
-    useEffect(() => {
-        section1();
-        window.addEventListener("scroll", section1);
-    })
+    // useEffect(() => {
+    //     section1();
+    //     window.addEventListener("scroll", section1);
+    // })
+
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollTop = window.scrollY;
+    //         const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
+    //         setIsVisible(scrollTop > triggerPoint);
+    //     };
+
+
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
+
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
-            setIsVisible(scrollTop > triggerPoint);
-        };
-
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        document.title = "Veract"
+        document.title = "Veract";
         const section = searchParams?.get("id") ?? "";
         console.log("from portfolio : ", section);
-        // if (content) {
-        //     handleMenuClick(content);
-        // }
-        window.history.replaceState(null, '', '/updatedCaseStudy')
-        console.log('selected tab: ', selectedTab);
-        setSelectedTab(1);
-    }, []);
 
+        if (section) {
+            handleMenuClick(section);
+            setSelectedTab(parseInt(section.replace('content', ''), 10)); // Set the selected tab based on the section
+        } else {
+            setSelectedTab(1); // Default to the first tab if no section is provided
+        }
 
+        // Delay setting isLoading to false to ensure the loader is visible
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 500); // Adjust the timeout duration as needed
+
+        window.history.replaceState(null, '', '/updatedCaseStudy');
+    }, [searchParams]);
+
+    useEffect(() => {
+        if (!isLoading && selectedTab && showsite) {
+            scrollToSection(`content${selectedTab}`);
+            setShowSite(false)
+        }
+    }, [isLoading, selectedTab]);
 
     const [activeIndex, setActiveIndex] = useState(null);
     const contentRefs = useRef<any>([]);
@@ -402,102 +436,106 @@ export default function UpdatedCaseStudy() {
 
     return (
         <div>
-            <div className="desktopCaseStudy">
-                <div id="portfolioDetails" className='fontFamily'>
-                    <div className={`dashboard ${isVisible ? 'h-[86.75vh]' : 'h-[74.5vh]'} overflow-auto`} id="container">
-                        {sideNavDetails.map((item: any, index: any) => (
-                            <div key={index} className='menuRowDetails ' onClick={() => { handleMenuClick(item.id) }}>
-                                <img src={`${selectedTab === index + 1 ? `${item.selectedTitleImage}` : `${item.titleImage}`}`} className="w-8" />
-                                <div className={`flex items-center ${selectedTab === index + 1 ? `text-white` : `text-[#7F7F7F]`}`}>{item.title}</div>
-                                {item.hasAi && (
-                                    <img src='/updatedCaseStudiesIcon/aiStamp.svg' alt='' className='' />
-                                )}
-                            </div>
+            {isLoading ? (
+                <div className="loader">Loading...</div> // Ensure this loader has appropriate styles
+            ) : (
+                <div className="desktopCaseStudy">
+                    <div id="portfolioDetails" className='fontFamily'>
+                        <div className={`dashboard ${isVisible ? 'h-[86.75vh]' : 'h-[74.5vh]'} overflow-auto`} id="container">
+                            {sideNavDetails.map((item: any, index: any) => (
+                                <div key={index} className='menuRowDetails ' onClick={() => { handleMenuClick(item.id) }}>
+                                    <img src={`${selectedTab === index + 1 ? `${item.selectedTitleImage}` : `${item.titleImage}`}`} className="w-8" />
+                                    <div className={`flex items-center ${selectedTab === index + 1 ? `text-white` : `text-[#7F7F7F]`}`}>{item.title}</div>
+                                    {item.hasAi && (
+                                        <img src='/updatedCaseStudiesIcon/aiStamp.svg' alt='' className='' />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                        {portfolio.map((item, index) => (
+                            <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => {(contentRefs.current[index] = el)}}>
+                                <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
+                                    <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
+                                        <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>
+                                            <img src={item.caseImage} alt="" className='w-[4.563rem] aspect-square' />
+                                            <div className='text-[32px] font-semibold text-[#4285f4]'>{item.caseTitle}</div>
+                                        </div>
+                                        <div className='text-[18px] font-normal text-black'>{item.caseTitleContent}</div>
+                                    </div>
+                                    <div className='w-[95%] flex flex-row justify-between'>
+                                        <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Challenges</div>
+                                            <div className='text-[16px] text-black font-normal'>{item.challenges}</div>
+                                        </div>
+                                        <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Solution</div>
+                                            <div className='text-[16px] text-black font-normal'>{item.solution}</div>
+                                        </div>
+                                    </div>
+                                    <div className='w-[95%] flex flex-row justify-between mt-[2rem]'>
+                                        <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
+                                            <img src="/caseStudies/vehicle.png" className='w-[3.625rem] aspect-square' />
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Services</div>
+                                            <div className='flex flex-col'>
+                                                {item.services.split(',').map((service, index) => (
+                                                    <div key={index} className='text-[16px] text-black font-normal text-center'>{service}</div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
+                                            <img src="/caseStudies/web.png" className='w-[3.625rem] aspect-square' />
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Platform</div>
+                                            <div className='flex flex-col gap-[0.25rem] mt-[0.25rem]'>
+                                                {item.platform.split(',').map((temp) => (
+                                                    <div className='PlatformText'>{temp}</div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
+                                            <img src="/caseStudies/tech-service.png" className='w-[3.625rem] aspect-square' />
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Techstack</div>
+                                            <div className='flex flex-row gap-[1.25rem]'>
+                                                <div className='flex flex-col gap-[0.25rem]'>
+                                                    {item.techstack.split(',').slice(0, 4).map((stack, index) => (
+                                                        <div key={index} className='techText text-center'>{stack}</div>
+                                                    ))}
+                                                </div>
+                                                <div className='flex flex-col gap-[0.25rem]'>
+                                                    {item.techstack.split(',').slice(4, 8).map((stack, index) => (
+                                                        <div key={index} className='techText text-center'>{stack}</div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {item.clientSpeak?.length !== 0 && (
+                                        <div className='testimonialContainer'>
+                                            <div className='clientContainer md:gap-4'>
+                                                <div className='flex pt-2'>
+                                                    <div className="challenges">Clients Speak</div>
+                                                </div>
+                                                <div className='flex pt-2 flex-row md:gap-3'>
+                                                    <div className=""><i className="quotes"></i></div>
+                                                    <div className='flex items-center'><span className='title whitespace-nowrap'>{item.name} - {item.designation}, </span><span className='title highlight '>{item.company}</span></div>
+                                                </div>
+                                                <div className="challengesContent pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div>
+                                            </div>
+                                        </div>
+                                    )}
+                                    {item.referenceImage?.map((item: any, index: any) => (
+                                        <div key={index} className="pl-5">
+                                            <div className='flex items-center justify-center'>
+                                                <img src={item.image} className='' />
+                                            </div>
+                                        </div>
+                                    ))}
+                                    {item.seperator}
+                                </div>
+                            </section>
                         ))}
                     </div>
-                    {portfolio.map((item, index) => (
-                        <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => {(contentRefs.current[index] = el)}}>
-                            <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
-                                <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
-                                    <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>
-                                        <img src={item.caseImage} alt="" className='w-[4.563rem] aspect-square' />
-                                        <div className='text-[32px] font-semibold text-[#4285f4]'>{item.caseTitle}</div>
-                                    </div>
-                                    <div className='text-[18px] font-normal text-black'>{item.caseTitleContent}</div>
-                                </div>
-                                <div className='w-[95%] flex flex-row justify-between'>
-                                    <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                        <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Challenges</div>
-                                        <div className='text-[16px] text-black font-normal'>{item.challenges}</div>
-                                    </div>
-                                    <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                        <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Solution</div>
-                                        <div className='text-[16px] text-black font-normal'>{item.solution}</div>
-                                    </div>
-                                </div>
-                                <div className='w-[95%] flex flex-row justify-between mt-[2rem]'>
-                                    <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                        <img src="/caseStudies/vehicle.png" className='w-[3.625rem] aspect-square' />
-                                        <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Services</div>
-                                        <div className='flex flex-col'>
-                                            {item.services.split(',').map((service, index) => (
-                                                <div key={index} className='text-[16px] text-black font-normal text-center'>{service}</div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                        <img src="/caseStudies/web.png" className='w-[3.625rem] aspect-square' />
-                                        <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Platform</div>
-                                        <div className='flex flex-col gap-[0.25rem] mt-[0.25rem]'>
-                                            {item.platform.split(',').map((temp) => (
-                                                <div className='PlatformText'>{temp}</div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                        <img src="/caseStudies/tech-service.png" className='w-[3.625rem] aspect-square' />
-                                        <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Techstack</div>
-                                        <div className='flex flex-row gap-[1.25rem]'>
-                                            <div className='flex flex-col gap-[0.25rem]'>
-                                                {item.techstack.split(',').slice(0, 4).map((stack, index) => (
-                                                    <div key={index} className='techText text-center'>{stack}</div>
-                                                ))}
-                                            </div>
-                                            <div className='flex flex-col gap-[0.25rem]'>
-                                                {item.techstack.split(',').slice(4, 8).map((stack, index) => (
-                                                    <div key={index} className='techText text-center'>{stack}</div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {item.clientSpeak?.length !== 0 && (
-                                    <div className='testimonialContainer'>
-                                        <div className='clientContainer md:gap-4'>
-                                            <div className='flex pt-2'>
-                                                <div className="challenges">Clients Speak</div>
-                                            </div>
-                                            <div className='flex pt-2 flex-row md:gap-3'>
-                                                <div className=""><i className="quotes"></i></div>
-                                                <div className='flex items-center'><span className='title whitespace-nowrap'>{item.name} - {item.designation}, </span><span className='title highlight '>{item.company}</span></div>
-                                            </div>
-                                            <div className="challengesContent pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div>
-                                        </div>
-                                    </div>
-                                )}
-                                {item.referenceImage?.map((item: any, index: any) => (
-                                    <div key={index} className="pl-5">
-                                        <div className='flex items-center justify-center'>
-                                            <img src={item.image} className='' />
-                                        </div>
-                                    </div>
-                                ))}
-                                {item.seperator}
-                            </div>
-                        </section>
-                    ))}
                 </div>
-            </div>
+            )}
         </div>
     )
 }

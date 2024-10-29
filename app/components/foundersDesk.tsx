@@ -52,16 +52,16 @@ export default function FoundersDesk() {
                     <div className="right-column flex flex-col md:gap-4 foundersContent">
                     <div className={`scroll-animationY ${isVisible ? 'visibleFounderContent' : ''}`}>
                       <div className="paragraph_padding ">
-                        <div><label className=" firstPara" >Veract was created out of our love for engineering and using technology to drive efficiency. We hire and develop people who share our passion for engineering.</label></div>
+                        <div><label className=" firstPara" >Veract was founded on our passion for engineering and leveraging technology to drive efficiency. We recruit and develop individuals who share our enthusiasm for engineering.</label></div>
                       </div>
                       <div className="paragraph_padding">
-                        <div className="secondPara">At Veract you will directly work with passionate UX trained engineers who are keen to employ their superpowers to solve your challenges.</div>
+                        <div className="secondPara"> At Veract, you will collaborate directly with passionate, UX-trained engineers eager to utilize their expertise to tackle your challenges.</div>
                       </div>
                       <div className="paragraph_padding">
-                        <div className="thirdPara">Our focus on bringing the best of what AI has to offer businesses has sharpened our expertise in the areas of Machine Vision, Large Language Models and context trained Speech to Text conversions.</div>
+                        <div className="thirdPara">Our dedication to harnessing AI's potential for businesses has refined our expertise in Machine Vision, Large Language Models, and context-trained Speech-to-Text conversions.</div>
                       </div>
                       <div className="paragraph_padding">
-                        <div className="thirdPara">I look forward to working with you and showcase our technical problem solving and software skills.</div>
+                        <div className="thirdPara">We look forward to working with you and showcasing our technical problem-solving and software capabilities.</div>
                       </div>
                     </div>
                     </div>

@@ -50,7 +50,7 @@ export default function veractDetails(){
             </div> */}
             <div className='flex flex-row justify-between pl-10 pt-10 pr-52'>
                 <div className='contactHeader pr-10'>Veract Consultancy Pvt. Ltd</div>
-                <div className='contactText'><span className='contactHeader pl -10'>Email:</span>info@veract.io</div>
+                <a href='mailto:info@veract.io' className='contactText'><span className='contactHeader pl -10'>Email:</span>info@veract.io</a>
             </div>  
             <div className='flex flex-row justify-between pt-0 pl-10 pr-10 md:gap-3'>
                 {/* <div className='flex flex-col'> */}
@@ -69,7 +69,7 @@ export default function veractDetails(){
                     </div>
                     <div className="flex flex-row md:gap-1">
                         <div className='contactHeader'>Phone:</div>
-                        <div className='contactText'>+91 97899 91565, +91 99628 37650</div>
+                        <div className='contactText'><a href='tel:+91 97899 91565'>+91 97899 91565,</a> <a href='tel:+91 99628 37650'> +91 99628 37650</a></div>
                     </div>
                 </div>
             </div>
