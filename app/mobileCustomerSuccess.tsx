@@ -25,7 +25,7 @@ const mobileCustomerSuccess =
         caseTitle: 'Automated Machine Vision Inspection',
         caseTitleContent: 'A sheet metal pressings manufacturing company.',
         caseImage: '',
-        challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious and, as inspector fatigue set in, accuracy levels dropped.',
+        challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped.',
         solution: 'Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.',
         services: ['Software architecture','Technology consulting','Software development','Deployment','End to end vision systems'],
         platform: ['Web'],

@@ -13,12 +13,13 @@ export default function UpdatedCaseStudy() {
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [selectedTab, setSelectedTab] = useState<number>();
     const [showsite,setShowSite]=useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+    const contentRefs = useRef<(HTMLElement | null)[]>([]);
 
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
-        console.log(section, "section to scroll");
         if (section) {
-            section.scrollIntoView();
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
     const handleMenuClick = (sectionId: string) => {
@@ -108,7 +109,7 @@ export default function UpdatedCaseStudy() {
             caseImage: '/portfolio/edTechCaseImage.png',
             challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
             challengePoints: ' ',
-            solution: 'Veract team designed and Developed a desktop app with integrated voice-to-text functionality.Implemented noise cancellation features.Included chat capabilities.',
+            solution: 'The Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
             solutionPoints: '',
             services: 'Software architecture, Technology consulting,Front end development,Back end development,Deployment',
             platform: 'Desktop application',
@@ -135,9 +136,9 @@ export default function UpdatedCaseStudy() {
             caseTitleContent: 'A sheet metal pressings manufacturing company.',
             stampImage: "/portfolio/artificial-intelligence.png",
             caseImage: '/factoryCase.png',
-            challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious and, as inspector fatigue set in, accuracy levels dropped',
+            challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped',
             challengePoints: '',
-            solution: "Veract created a proprietary AI-powered visual inspection tool to increase productivity and stop problems with part rejections and recalls later on. For the manufacturer, the solution was a complete success due to its cost-effectiveness.",
+            solution: "Veract developed a proprietary AI-powered visual inspection tool, boosting productivity and preventing part rejections and recalls. The manufacturer deemed the solution a complete success due to its cost-effectiveness.",
             solutionPoints: '',
             services: 'Software architecture, Technology consulting, Software development, Deployment, End to end vision systems',
             platform: 'Web',
@@ -154,9 +155,9 @@ export default function UpdatedCaseStudy() {
             caseTitleContent: 'Anyo is a health and wellness app that addresses the significant issue of mental health.',
             stampImage: "",
             caseImage: '/portfolio/wellnessPurple.png',
-            challenges: 'The founders of Anyo were looking for a one-stop shop for technical advice and development for their live chat-enabled platform with streaming audio, video along with chatbots.',
+            challenges: 'The founders of Anyo were looking for a one-stop shop for technical advice and development of their live chat-enabled platform with streaming audio, video and chatbots',
             challengePoints: '',
-            solution: "Within five months, Veract's team of architects and developers created their four online portals and the Anyo mobile app making crucial choices on architecture, framework etc",
+            solution: `Within five months, Veract's team of architects and developers successfully designed and deployed:  four online portals , the Anyo mobile app. Key technical decisions included:  architecture selection, framework choice`,
             solutionPoints: '',
             services: 'Software architecture, Technology consulting, Software development, Deployment',
             platform: 'Mobile, Web ',
@@ -340,59 +341,19 @@ export default function UpdatedCaseStudy() {
         },
     ]
 
-    const section1 = () => {
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.scrollY;
-        const middlePosition = scrollPosition + windowHeight * 0.75;
-
-        // const activeMenu = portfolio.find((item) => {
-        //     const element = document.getElementById(item.id);
-        //     if (element) {
-        //         const elementTop = element.offsetTop;
-        //         const elementBottom = elementTop + element.offsetHeight;
-        //         return elementTop <= middlePosition && middlePosition <= elementBottom;
-        //     }
-        //     return false;
-        // });
-    }
-
-    // useEffect(() => {
-    //     section1();
-    //     window.addEventListener("scroll", section1);
-    // })
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const scrollTop = window.scrollY;
-    //         const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
-    //         setIsVisible(scrollTop > triggerPoint);
-    //     };
-
-
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
-
-    const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         document.title = "Veract";
         const section = searchParams?.get("id") ?? "";
-        console.log("from portfolio : ", section);
-
         if (section) {
             handleMenuClick(section);
-            setSelectedTab(parseInt(section.replace('content', ''), 10)); // Set the selected tab based on the section
+            setSelectedTab(parseInt(section.replace('content', ''), 10));
         } else {
-            setSelectedTab(1); // Default to the first tab if no section is provided
+            setSelectedTab(1);
         }
 
-        // Delay setting isLoading to false to ensure the loader is visible
         setTimeout(() => {
             setIsLoading(false);
-        }, 500); // Adjust the timeout duration as needed
+        }, 500);
 
         window.history.replaceState(null, '', '/updatedCaseStudy');
     }, [searchParams]);
@@ -400,35 +361,33 @@ export default function UpdatedCaseStudy() {
     useEffect(() => {
         if (!isLoading && selectedTab && showsite) {
             scrollToSection(`content${selectedTab}`);
-            setShowSite(false)
+            setShowSite(false);
         }
     }, [isLoading, selectedTab]);
-
-    const [activeIndex, setActiveIndex] = useState(null);
-    const contentRefs = useRef<any>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const index = contentRefs.current.indexOf(entry.target);
+                        const index = contentRefs.current.indexOf(entry.target as HTMLElement);
+                        console.log(index, "index");
                         setSelectedTab(index + 1);
                     }
                 });
             },
             {
                 root: null,
-                threshold: 0.1, // Adjust threshold as needed
+                threshold: 0.2, // Adjust threshold as needed
             }
         );
 
-        contentRefs.current.forEach((ref: Element) => {
+        contentRefs.current.forEach((ref) => {
             if (ref) observer.observe(ref);
         });
 
         return () => {
-            contentRefs.current.forEach((ref: Element) => {
+            contentRefs.current.forEach((ref) => {
                 if (ref) observer.unobserve(ref);
             });
         };
@@ -437,7 +396,7 @@ export default function UpdatedCaseStudy() {
     return (
         <div>
             {isLoading ? (
-                <div className="loader">Loading...</div> // Ensure this loader has appropriate styles
+                <div className="loader">Loading...</div>
             ) : (
                 <div className="desktopCaseStudy">
                     <div id="portfolioDetails" className='fontFamily'>
@@ -453,7 +412,7 @@ export default function UpdatedCaseStudy() {
                             ))}
                         </div>
                         {portfolio.map((item, index) => (
-                            <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => {(contentRefs.current[index] = el)}}>
+                            <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => { contentRefs.current[index] = el }}>
                                 <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
                                     <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
                                         <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>

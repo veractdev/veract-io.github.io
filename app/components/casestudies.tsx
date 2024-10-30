@@ -274,7 +274,7 @@ export default function Casestudies() {
 
                             <div className='flex flex-row justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/edTech" className='flex flex-row'>
-                                    <div className='w-8'><img src="/portfolio/edtechIcon.png" /></div>
+                                    <div className='w-8'><img src="/portfolio/edBookCaseStudy.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4 '>EDTECH</div>
                                 </Link>
                                 <div className='infoIconMobile '>
@@ -297,7 +297,7 @@ export default function Casestudies() {
 
                             <div className='flex flex-row justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/health" className='flex flex-row'>
-                                    <div className='w-8 '><img src="/portfolio/wellnessOrange.png" /></div>
+                                    <div className='w-8 '><img src="/portfolio/healthCaseStudy.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4 '>WELLNESS</div>
                                 </Link>
                                 <div className='infoIconMobile '>
@@ -338,7 +338,7 @@ export default function Casestudies() {
                             {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleSales' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/machinevision" className='flex flex-row'>
-                                    <div className='w-8 '><img src="/portfolio/manufacturingOrange.png" /></div>
+                                    <div className='w-8 '><img src="/portfolio/carbon_industry.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4'>MACHINE VISION</div>
                                 </Link>
                                 <div className='infoIconMobile'>
@@ -359,7 +359,7 @@ export default function Casestudies() {
                             {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleAgri' : ''}`}> */}
                             <div className='flex flex-row  justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/industrialPlatform" className='flex flex-row'>
-                                    <div className='w-8 '><img src="/portfolio/socialIcon.png" /></div>
+                                    <div className='w-8 '><img src="/portfolio/socialCaseStudy.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4' >SOCIAL</div>
                                 </Link>
                                 <div className='infoIconMobile'>
@@ -402,7 +402,7 @@ export default function Casestudies() {
                             {/* <div className={`scroll-animationPortfolio ${isVisible ? 'visibleFintech' : ''}`}> */}
                             <div className='flex flex-row justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/eCommerce" className='flex flex-row'>
-                                    <div className='w-8 ' ><img src="/portfolio/EcomIcon.png" /></div>
+                                    <div className='w-8 ' ><img src="/portfolio/eCommerceCaseStudy.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4'>ECOMMERCE</div>
                                 </Link>
                                 <div className='infoIconMobile'>
@@ -424,7 +424,7 @@ export default function Casestudies() {
 
                             <div className='flex flex-row justify-between mb-2'>
                                 <Link href="/MobileCaseStudy/audit" className='flex flex-row'>
-                                    <div className='w-8'><img src="/portfolio/auditIcon.png" /></div>
+                                    <div className='w-8'><img src="/portfolio/invoiceCaseStudy.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4 '>AUDIT</div>
                                 </Link>
                                 <div className='infoIconMobile '>

@@ -8,8 +8,26 @@ import Tabs from "../components/tab";
 import { usePathname } from "next/navigation";
 import { send } from "process";
 import Footer from "../components/footer";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import mobileCustomerSuccess from "../mobileCustomerSuccess";
+
+interface MobileCustomerSuccessProps {
+  id: string;
+  title: string;
+  activeIcon: string;
+  inActiveIcon: string;
+  caseTitle: string;
+  caseTitleContent: string;
+  caseImage: string;
+  challenges: string;
+  solution: string;
+  services: string[];
+  platform: string[];
+  techstack: string[];
+  clientSpeakName: string;
+  clientSpeakCmp: string;
+  clientSpeakDesc: string;
+}
 
 export default function MobileCaseStudy_Layout({
   children,
@@ -34,11 +52,41 @@ export default function MobileCaseStudy_Layout({
       inline: "nearest",
     });
   }
-  const [activePage, setActivePage] = useState("content1");
+  const [activePage, setActivePage] = useState("");
   console.log(mobileCustomerSuccess);
-  const [selectedPage, setSelectedPage] = useState(
-    mobileCustomerSuccess.filter((item) => item.id === activePage)
-  );
+  const [selectedPage, setSelectedPage] = useState<MobileCustomerSuccessProps[]>([]);
+useEffect(()=>{
+  // health
+  if(pathname){
+    if(pathname.includes("edTech")){
+      setActivePage("content1");
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content1')
+      );
+    }
+    if(pathname === "/MobileCaseStudy/health/"){
+      setActivePage("content3")
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content3')
+      );
+    }
+    if(pathname === "/MobileCaseStudy/industrialPlatform/"){
+      setActivePage("content4")
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content4')
+      );
+    }
+    if(pathname === "/MobileCaseStudy/eCommerce/" ){
+      setActivePage("content7")
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content7')
+      );
+    }
+    if(pathname === "/MobileCaseStudy/audit/" ){
+      setActivePage("content9")
+    }
+  }
+},[])
 
   const handleClick = (id: string) => {
     setActivePage(id);
