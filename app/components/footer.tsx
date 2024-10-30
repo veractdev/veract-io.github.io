@@ -8,7 +8,7 @@ export default function Footer(){
         <div>
             <div className="copyrights">
                 <div className='flex items-center justify-center pb-12'>
-                    <label className="copyrightsText pt-12">Copyright © 2023 Veract Consultancy | All Rights Reserved</label>
+                    <label className="copyrightsText pt-[5rem]">Copyright © 2023 Veract Consultancy | All Rights Reserved</label>
                 </div>
             </div>
 

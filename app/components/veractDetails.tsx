@@ -55,7 +55,7 @@ export default function veractDetails(){
             <div className='flex flex-row justify-between pt-0 pl-10 pr-10 md:gap-3'>
                 {/* <div className='flex flex-col'> */}
                     
-                    <div className='contactText pt-6'><span className='contactHeader'>Regd.office:</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
+                    <div className='contactText pt-6'><span className='contactHeader'>Regd.office :</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
                     <div className="flex flex-row whitespace-nowrap md:gap-4 ">
                     {/* <div className='contactText'><span className='contactHeader'>CIN:</span> U74999TN2016PTC112991</div>
                     <div className='contactText'><span className='contactHeader'>GSTIN:</span> 33AAFCV7102E1ZQ</div> */}
@@ -68,11 +68,17 @@ export default function veractDetails(){
                         <div className='contactText'>info@veract.io</div> */}
                     </div>
                     <div className="flex flex-row md:gap-1">
-                        <div className='contactHeader'>Phone:</div>
+                        <div className='contactHeader'>Phone :</div>
                         <div className='contactText'><a href='tel:+91 97899 91565'>+91 97899 91565,</a> <a href='tel:+91 99628 37650'> +91 99628 37650</a></div>
                     </div>
                 </div>
+                
             </div>
+            <div className='flex flex-row md:gap-1 pl-10 pr-10 pt-3'>
+                    <div className='contactHeader'>Office :</div>
+                    <div className='contactText'>37, Brindavan Street, Pon Vidyashram School 200 meters from, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
+            </div>
+            
         </div>
 
         <div className='mobileContact'>
@@ -87,9 +93,16 @@ export default function veractDetails(){
                 <div className='flex flex-col items-center justify-centermd:gap-2'>
                     <div className='flex flex-row md:gap-1'>
                         <div><img/></div>
+                        <div className="mobileContactText">Office</div>
+                    </div>
+                    <div className="contactText">37, Brindavan Street, Pon Vidyashram School 200 meters from, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
+                </div>
+                <div className='flex flex-col items-center justify-centermd:gap-2'>
+                    <div className='flex flex-row md:gap-1'>
+                        <div><img/></div>
                         <div className="mobileContactText">PHONE</div>
                     </div>
-                    <div className="contactText">+91-9789991565</div>
+                    <div className="contactText"><a href='tel:+91 97899 91565'>+91 97899 91565,</a> <a href='tel:+91 99628 37650'> +91 99628 37650</a></div>
                 </div>
                 <div className='flex flex-col items-center justify-center md:gap-1'>
                     <div className='flex flex-row md:gap-1'>
