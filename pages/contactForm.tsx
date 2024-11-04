@@ -161,31 +161,31 @@ export default function ContactForm() {
               <p className="text-blk input-title">
                 FIRST NAME
               </p>
-              <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..."/>
+              <input className="input" id="ijowk" name="FirstName" placeholder="Enter first name..."/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 LAST NAME
               </p>
-              <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..."/>
+              <input className="input" id="indfi" name="Last Name" placeholder="Enter last name..."/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 EMAIL
               </p>
-              <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..."/>
+              <input className="input" id="ipmgh" name="Email" placeholder="Enter email..."/>
             </div>
             <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
               <p className="text-blk input-title">
                 PHONE NUMBER
               </p>
-              <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone number..."/>
+              <input className="input" id="imgis" name="PhoneNumber" placeholder="Enter phone number..."/>
             </div>
             <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
               <p className="text-blk input-title">
                 WHAT DO YOU HAVE IN MIND
               </p>
-              <textarea className="textinput" id="i5vyy" placeholder="Please enter query..."></textarea>
+              <textarea className="textinput" id="i5vyy" placeholder="Enter query..."></textarea>
             </div>
           </div>
           <button className="submit-btn">

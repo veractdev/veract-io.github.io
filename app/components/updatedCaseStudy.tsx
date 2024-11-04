@@ -136,7 +136,7 @@ export default function UpdatedCaseStudy() {
             caseTitleContent: 'A sheet metal pressings manufacturing company.',
             stampImage: "/portfolio/artificial-intelligence.png",
             caseImage: '/factoryCase.png',
-            challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped',
+            challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped.',
             challengePoints: '',
             solution: "Veract developed a proprietary AI-powered visual inspection tool, boosting productivity and preventing part rejections and recalls. The manufacturer deemed the solution a complete success due to its cost-effectiveness.",
             solutionPoints: '',
