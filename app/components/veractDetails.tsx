@@ -76,13 +76,13 @@ export default function veractDetails(){
             </div>
             <div className='flex flex-row md:gap-1 pl-10 pr-10 pt-3'>
                     <div className='contactHeader'>Office :</div>
-                    <div className='contactText'>37, Brindavan Street, near Pon Vidyashram School, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
+                    <div className='contactText'>37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
             </div>
             
         </div>
 
         <div className='mobileContact'>
-            <div className='mobileCardContact flex flex-col pt-16 pl-2 pr-2 gap-6'>
+            <div className='mobileCardContact flex flex-col pl-2 pr-2 gap-6'>
                 <div className='flex flex-col items-center justify-center gap-2'>
                     <div className='flex flex-row gap-1'>
                         <div><img /></div>
@@ -95,7 +95,7 @@ export default function veractDetails(){
                         <div><img/></div>
                         <div className="mobileContactText">Office</div>
                     </div>
-                    <div className="contactText">37, Brindavan Street, near Pon Vidyashram School, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
+                    <div className="contactText">37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
                 </div>
                 <div className='flex flex-col items-center justify-centermd:gap-2'>
                     <div className='flex flex-row md:gap-1'>
