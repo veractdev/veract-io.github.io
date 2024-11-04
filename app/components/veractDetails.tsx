@@ -50,7 +50,7 @@ export default function veractDetails(){
             </div> */}
             <div className='flex flex-row justify-between pl-10 pt-10 pr-52'>
                 <div className='contactHeader pr-10'>Veract Consultancy Pvt. Ltd</div>
-                <a href='mailto:info@veract.io' className='contactText'><span className='contactHeader pl -10'>Email:</span> info@veract.io</a>
+                <a href='mailto:info@veract.io' className='contactText'><span className='contactHeader pl -10'>Email :</span> info@veract.io</a>
             </div>  
             <div className='flex flex-row justify-between pt-0 pl-10 pr-10 md:gap-3'>
                 {/* <div className='flex flex-col'> */}
