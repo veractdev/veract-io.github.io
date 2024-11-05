@@ -99,6 +99,13 @@ export default function UpdatedCaseStudy() {
             selectedTitleImage: '/updatedCaseStudiesIcon/finTechSelected.svg',
             hasAi: false,
         },
+        {
+            id: 'content11',
+            title: 'Thermal Vision',
+            titleImage: '/caseStudies/thermal_gray_icon.svg',
+            selectedTitleImage: '/caseStudies/thermalGraySelectedWhite.svg',
+            hasAi: false,
+        },
     ];
     const portfolio = [
         {
@@ -126,7 +133,7 @@ export default function UpdatedCaseStudy() {
                 // }
                 {
                     id: 1,
-                    image: '/updatedCaseStudiesIcon/evollveFinal.svg',
+                    image: '/caseStudyReflectionImages/evollveReflection.svg',
                 }
             ]
         },
@@ -174,7 +181,7 @@ export default function UpdatedCaseStudy() {
                 // }, 
                 {
                     id: 1,
-                    image: '/updatedCaseStudiesIcon/anyoFinal.svg'
+                    image: '/caseStudyReflectionImages/anyoReflection.svg'
                 },                
                 {
                     id: 2,
@@ -203,7 +210,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/updatedCaseStudiesIcon/dcmFinal.svg'
+                    image: '/caseStudyReflectionImages/dcmReflection.svg'
                 },
             ]
         },
@@ -271,7 +278,7 @@ export default function UpdatedCaseStudy() {
                             // }                
                 {
                     id: 1,
-                    image: '/updatedCaseStudiesIcon/beanstalkFinal.svg',
+                    image: '/caseStudyReflectionImages/BeanstalkfarmersReflection.svg',
                 }
             ]
 
@@ -297,7 +304,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/updatedCaseStudiesIcon/salesFinal.svg',
+                    image: '/caseStudyReflectionImages/salesReflection.svg',
                 }
             ]
         },
@@ -337,7 +344,32 @@ export default function UpdatedCaseStudy() {
             designation: "",
             company: "",
             clientSpeak: "",
-            seperator: <div className="pb-16"></div>
+            seperator: <hr className='separatorPortfolio'></hr>
+        },
+        {
+            id: 'content11',
+            caseTitle: ' Infrared thermography',
+            caseTitleContent: 'The Institute of Buffalo Science focuses on improving buffalo health monitoring by tracking key parameters and mapping udder thermal profiles. This approach aims to correlate these thermal profiles with the early onset of mastitis, a prevalent and serious condition in dairy animals.',
+            stampImage: "",
+            caseImage: '/updatedCaseStudiesIcon/thermalPurple.svg',
+            challenges: 'Challenged with creating a comprehensive platform tailored specifically for the data center industry. This platform needs to enable users to post content, comment, like, and share within the community, while also integrating a marketplace for products and services. Additionally, it must feature a directory of suppliers specializing in data center solutions.',
+            challengePoints: ' ',
+            solution: 'Software Development: Created custom software for real-time analysis and visualization of udder thermal profiles and camera control through a user-friendly interface.',
+            solutionPoints: '',
+            services: 'Software architecture, Technology consulting, Front end development, Back end development, Deployment',
+            platform: 'Web',
+            techstack: 'Dotnet,Angular,MongoDB,Express.js,Windows,Node.js',
+            name: "",
+            designation: "",
+            company: "",
+            clientSpeak: "",
+            seperator: <div className="pb-16"></div>,
+            referenceImage: [
+                {
+                    id: 1,
+                    image: '/caseStudyReflectionImages/thermalReflection.svg',
+                }
+            ]
         },
     ]
 
