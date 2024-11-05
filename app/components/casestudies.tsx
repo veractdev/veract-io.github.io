@@ -85,8 +85,8 @@ export default function Casestudies() {
         {
             id: 'content7',
             img: "/portfolio/eCommerceCaseStudy.svg",
-            heading: "ECOMMERCE",
-            desc: "Ecommerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain."
+            heading: "E-COMMERCE",
+            desc: "E-commerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain."
         },
         {
             id: 'content9',
@@ -99,7 +99,7 @@ export default function Casestudies() {
 
 
     return (
-        <div className="pt-12 pb-12 ">
+        <div className="pt-12 pb-12 " id="CustomerSuccess">
             <div className="flex flex-col  case-studies portfolioFonts ">
                 <div className="flex flex-col case-studies-content   ">
                     <div ref={sectionRef} className={`scroll-animationPortfolio ${isVisible ? 'visiblesectionName' : ''}`}>
@@ -403,7 +403,7 @@ export default function Casestudies() {
                             <div className='flex flex-row justify-between mb-2'>
                                 <div  className='flex flex-row'>
                                     <div className='w-8 ' ><img src="/portfolio/eCommerceCaseStudy.svg" /></div>
-                                    <div className='item-title flex textColorLogo pl-4'>ECOMMERCE</div>
+                                    <div className='item-title flex textColorLogo pl-4'>E-COMMERCE</div>
                                 </div>
                                 <div className='infoIconMobile'>
                                     {/* <Link href="/MobileCaseStudy/eCommerce"> */}
@@ -412,7 +412,7 @@ export default function Casestudies() {
                                 </div>
                             </div>
                             <div className='flex flex-row item-desc fintechDesc'>
-                                Ecommerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain.
+                                E-commerce platform enabling farmers to sell fresh produce directly to consumers, bridging the gap in the supply chain.
                             </div>
 
                             {/* </div> */}

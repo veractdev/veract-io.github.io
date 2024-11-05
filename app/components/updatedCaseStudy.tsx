@@ -104,9 +104,9 @@ export default function UpdatedCaseStudy() {
         {
             id: 'content1',
             caseTitle: ' AI-enabled Edtech platform',
-            caseTitleContent: 'Evolve is an edtech platform that revolutionizes augmented learning',
+            caseTitleContent: 'Evollve is an edtech platform that revolutionizes augmented learning',
             stampImage: "",
-            caseImage: '/portfolio/edTechCaseImage.png',
+            caseImage: '/updatedCaseStudiesIcon/edBookPurple.svg',
             challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
             challengePoints: ' ',
             solution: 'The Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
@@ -135,7 +135,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'Machine Vision for Manufacturing Quality Control',
             caseTitleContent: 'A sheet metal pressings manufacturing company.',
             stampImage: "/portfolio/artificial-intelligence.png",
-            caseImage: '/factoryCase.png',
+            caseImage: '/updatedCaseStudiesIcon/machineVisionPurple.svg',
             challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped.',
             challengePoints: '',
             solution: "Veract developed a proprietary AI-powered visual inspection tool, boosting productivity and preventing part rejections and recalls. The manufacturer deemed the solution a complete success due to its cost-effectiveness.",
@@ -154,7 +154,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'Health and Wellness Web and Mobile App',
             caseTitleContent: 'Anyo is a health and wellness app that addresses the significant issue of mental health.',
             stampImage: "",
-            caseImage: '/portfolio/wellnessPurple.png',
+            caseImage: '/updatedCaseStudiesIcon/wellnessPurple.svg',
             challenges: 'The founders of Anyo were looking for a one-stop shop for technical advice and development of their live chat-enabled platform with streaming audio, video and chatbots',
             challengePoints: '',
             solution: `Within five months, Veract's team of architects and developers successfully designed and deployed:  four online portals , the Anyo mobile app. Key technical decisions included:  architecture selection, framework choice`,
@@ -187,7 +187,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'Social platform for the fast-growing data center businesses.',
             caseTitleContent: 'Data Center Mart is an initiative of IBITS',
             stampImage: "",
-            caseImage: '/portfolio/network.png',
+            caseImage: '/updatedCaseStudiesIcon/socialPurple.svg',
             challenges: 'comprehensive platform tailored for the data center industry. This site will enable users to create posts, comment, like, and share content. Additionally, it will feature a marketplace for products and services and a directory of suppliers specializing in data center solutions.',
             challengePoints: ' ',
             solution: 'Designed and deployed a web and responsive app ',
@@ -231,7 +231,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'Agriculture Finance Ecosystem Web Application ',
             caseTitleContent: 'Agrosperity KiVi is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.',
             stampImage: "",
-            caseImage: '/portfolio/agriPurple.png',
+            caseImage: '/updatedCaseStudiesIcon/agriTechPurple.svg',
             challenges: 'Kivi was seeking a development partner to fully assume responsibility for the design, development and implementation of Vision to text, Map interfaces for loan eligibility data, loan documents automation, dashboards with multiple authentication levels',
             challengePoints: '',
             solution: 'Veract architects set up the platform and assumed complete ownership of the product and made critical choices of architecture, framework to enable rapid development.',
@@ -250,7 +250,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'E-commerce site for agricultural produce',
             caseTitleContent: 'Beanstalk operates in the exciting farm-to-table space',
             stampImage: "",
-            caseImage: '/portfolio/grocery-store.png',
+            caseImage: '/updatedCaseStudiesIcon/eComPurple.svg',
             challenges: 'Payment enabled E-COM site in time for customers produce season',
             challengePoints: ' ',
             solution: 'Veract team developed and deployed a payment enabled custom designed web application ',
@@ -306,7 +306,7 @@ export default function UpdatedCaseStudy() {
             caseTitle: 'Data extraction for the audit industry',
             caseTitleContent: 'Financial audit firm with over 100 associates',
             stampImage: "",
-            caseImage: '/portfolio/invoice.png',
+            caseImage: '/updatedCaseStudiesIcon/auditPurple.svg',
             challenges: 'Audit firm looking to reduce manual data entry processes required for compliance.',
             challengePoints: ' ',
             solution: 'Veract team developed and deployed a easy to use Large language model +OCR based custom trained data extraction capablity ',
@@ -355,7 +355,7 @@ export default function UpdatedCaseStudy() {
             setIsLoading(false);
         }, 500);
 
-        window.history.replaceState(null, '', '/updatedCaseStudy');
+        window.history.replaceState(null, '', '/cutomer-success');
     }, [searchParams]);
 
     useEffect(() => {
@@ -417,7 +417,7 @@ export default function UpdatedCaseStudy() {
                                     <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
                                         <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>
                                             <img src={item.caseImage} alt="" className='w-[4.563rem] aspect-square' />
-                                            <div className='text-[32px] font-semibold text-[#4285f4]'>{item.caseTitle}</div>
+                                             <div className='text-[32px] font-semibold text-[#4285f4]'>{item.caseTitle}</div>
                                         </div>
                                         <div className='text-[18px] font-normal text-black'>{item.caseTitleContent}</div>
                                     </div>

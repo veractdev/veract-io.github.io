@@ -153,7 +153,7 @@ export default function TopnavBar() {
                   <div className="w-full">
                     <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                       <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/MobileCaseStudy/edTech/" className="">Customer Success</Link></div></div>
+                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' onClick={() => scrollToSection("CustomerSuccess")} >Customer Success</div></div>
                         <div><hr className="testimonialsHr"></hr></div>
                       </div>
                     </li>
@@ -162,7 +162,7 @@ export default function TopnavBar() {
                 <div className="caseMain_desktop">
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' ><Link href="/updatedCaseStudy" className="">Customer Success</Link></div></div>
+                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' onClick={() => scrollToSection("CustomerSuccess")}  >Customer Success</div></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>

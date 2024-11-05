@@ -92,8 +92,8 @@ export default function veractDetails(){
                 </div>
                 <div className='flex flex-col items-center justify-centermd:gap-2'>
                     <div className='flex flex-row md:gap-1'>
-                        <div><img/></div>
-                        <div className="mobileContactText">Office</div>
+                        <div><img/></div> 
+                        <div className="mobileContactText">OFFICE</div>
                     </div>
                     <div className="contactText">37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
                 </div>
@@ -109,7 +109,7 @@ export default function veractDetails(){
                         <div><img/></div>
                         <div className="mobileContactText">EMAIL</div>
                     </div>
-                    <div className="contactText">info@veract.io</div>
+                    <a href='mailto:info@veract.io'><div className="contactText">info@veract.io</div></a>
                 </div>
             </div>
 
