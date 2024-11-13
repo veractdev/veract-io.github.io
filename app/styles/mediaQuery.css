@@ -6,6 +6,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-item.active  a{
+  color:  var(--secondary-colour) !important;
+}
+
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slide.slick-cloned div{
+   margin: 0 10px !important;
+}
 @media (max-width :768px) {
   body {
     /* overflow-x: hidden; */
@@ -152,6 +163,7 @@
     font-size: var(--logo-mobile-view);
     transition: none;
     padding: 0px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .navbar.padding {
@@ -201,6 +213,11 @@
 
   .hamburger-icon {
     display: block;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-item{
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav-item.MediaHidden {
@@ -300,8 +317,8 @@
   }
 
   .clients-logo-section {
-    width: 95%;
-    height: 90px;
+    width: 100%;
+    /* height: 90px; */
     display: block;
   }
 
@@ -871,6 +888,7 @@
 
   .contact_us_2 .submit-btn {
     width: 45%;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /*------------footer-----------*/
@@ -1039,9 +1057,15 @@
   /* width: 125px;
   height: 60px;
   border: 1px; */
+  outline: none;
+  -webkit-tap-highlight-color: transparent; 
   border-radius: 20px;
 }
 
+.parentMobileCaseStudy{
+  outline: none;
+  -webkit-tap-highlight-color: transparent; 
+}
 .primary_color {
   color: var(--primary-colour) !important;
 }

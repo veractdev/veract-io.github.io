@@ -60,7 +60,7 @@ export default function Casestudies() {
 
         {
             id: 'content1',
-            img: "/portfolio/edBookCaseStudy.svg",
+            img: "/portfolio/Group.svg",
             heading: "EDTECH",
             desc: "AI driven e learning application with state of the art voice to text and large language model capabilities"
         },
@@ -79,7 +79,7 @@ export default function Casestudies() {
         {
             id: 'content4',
             img: "/portfolio/socialCaseStudy.svg",
-            heading: "SOCIAL",
+            heading: "Industrial Platform",
             desc: "Specialized social platform connecting professionals in the data center industry for collaboration and networking."
         },
         {
@@ -274,7 +274,7 @@ export default function Casestudies() {
 
                             <div className='flex flex-row justify-between mb-2'>
                                 <div className='flex flex-row'>
-                                    <div className='w-8'><img src="/portfolio/edBookCaseStudy.svg" /></div>
+                                    <div className='w-8'><img src="/portfolio/Group.svg" /></div>
                                     <div className='item-title flex textColorLogo pl-4 '>EDTECH</div>
                                 </div>
                                 <div className='infoIconMobile '>

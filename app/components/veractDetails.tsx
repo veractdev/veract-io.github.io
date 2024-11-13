@@ -1,120 +1,61 @@
 import '../styles/styles.css';
 import '../styles/mediaQuery.css';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaLocationDot } from "react-icons/fa6";
 
-
-export default function veractDetails(){
-    return(
+export default function VeractDetails() {
+  return (
+    <div className="flex flex-col fontFamily bg-black text-white" >
+      
+      {/* Contact Information Section */}
+      <div className=" px-6 py-10 md:px-20">
         
-        <div className=" flex flex-col contactSection contactsMain fontFamily " id="section6">
-            
-            {/* <div className="flex items-center justify-center pt-4">
-                <hr className="separator"></hr>
-                <div className='section-title'>
-                <label className=" section-title-highlight">Contact<span className="servicesHeading  p-3">Us</span></label>
-                </div>
-                <hr className="separator"></hr>
+        <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center">
+        <div className="transitionEffect afterScroll"><span className="font-semibold">ver</span><span className ="textColorLogo">act</span></div>
+                  <a href="mailto:info@veract.io" className="flex items-center gap-2 text-lg">
+            <FaEnvelope size={18} color="#4285F4" /> <span>info@veract.io</span>
+          </a>
+        </div>
+        <div className="flex flex-col mt-6 md:flex-row md:justify-between"> 
+          <div className="flex flex-col space-y-3">
+            <div className="flex  items-start gap-2  ">
+              <div><FaLocationDot  size={18} color="#4285F4" /></div>
+              <div><p className='text-wrap'>Regd. Office: 17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</p></div>
+            </div>
+            {/* <div className="flex items-start gap-2  ">
+              <div><FaLocationDot  size={18} color="#4285F4" /></div>
+              <div><p className='text-wrap'>Office: 37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</p></div>
             </div> */}
-            <div className='contactDetails'>
-            {/* <div className="flex flex-row flex-wrap items-center justify-center  md:gap-10">
-            <div className="contactCard">
-                <div className="contactCardText">REGISTERED ADDRESS</div>
-                <div className="boxBetween"></div>
-                <div className="whitespace-nowrap contactCardDetails">Veract Consultancy Pvt. Ltd., Chennai</div>
-            </div>
-            <div className="contactCard">
-                <div className="contactCardText">PHONE</div>
-                <div className="boxBetween"></div>
-                <div className="contactCardDetails">+91-9789991565</div>
-            </div>
-            <div className="contactCard">
-                <div className="contactCardText">EMAIL</div>
-                <div className="boxBetween"></div>
-                <div className="mailText"><a href="#">info@veractconsultancy.in</a></div>
-            </div>
-        </div> */}
-            {/* <div className='flex flex-col items-center justify-center pt-2'>
-                <div className='contactText'>Veract Consultancy Pvt. Ltd</div>
-                <div className='flex flex-row md:gap-2'>
-                    <div className='contactText'>CIN: U74999TN2016PTC112991</div>
-                    <div className='contactText'>GSTIN: 33AAFCV7102E1ZQ</div>
-                </div>
-                <div className='contactText'>17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
-                <div className="flex flex-row contactText md:gap-2">
-                    <div className='flex font-bold'>Email:</div>
-                    <div> info@veractconsultancy.in</div>
-                </div>
-                <div className="flex contactText flex-row md:gap-2">
-                    <div className='flex font-bold'>Phone:</div>
-                    <div> +91 97899 91565, +91 99628 37650</div>
-                </div>
-            </div> */}
-            <div className='flex flex-row justify-between pl-10 pt-10 pr-52'>
-                <div className='contactHeader pr-10'>Veract Consultancy Pvt. Ltd</div>
-                <a href='mailto:info@veract.io' className='contactText'><span className='contactHeader pl -10'>Email :</span> info@veract.io</a>
+          </div>
+          <div className="flex flex-col mt-6 space-y-3 md:mt-0">
+            <div className="flex flex-col items-start gap-3">
+              <div className='flex items-center justify-center gap-2'>
+                <FaPhoneAlt size={18}  color="#4285F4" />
+                <a className='m-0 p-0' href="tel:+919789991565">+91 97899 91565</a>
+              </div>
+              <div className='flex items-center justify-center gap-2'>
+                <FaPhoneAlt size={18}  color="#4285F4" />
+                <a href="tel:+919962837650">+91 99628 37650</a>
+              </div>
             </div>  
-            <div className='flex flex-row justify-between pt-0 pl-10 pr-10 md:gap-3'>
-                {/* <div className='flex flex-col'> */}
-                    
-                    <div className='contactText pt-6'><span className='contactHeader'>Regd.office :</span>  17, First Street, Tansi Nagar, Velachery, Chennai - 600 042</div>
-                    <div className="flex flex-row whitespace-nowrap md:gap-4 ">
-                    {/* <div className='contactText'><span className='contactHeader'>CIN:</span> U74999TN2016PTC112991</div>
-                    <div className='contactText'><span className='contactHeader'>GSTIN:</span> 33AAFCV7102E1ZQ</div> */}
-                </div>
-                {/* </div> */}
-                
-                <div className="flex flex-col pt-6">
-                    <div className="flex flex-row md:gap-2">
-                        {/* <div className='contactHeader'>Email:</div>
-                        <div className='contactText'>info@veract.io</div> */}
-                    </div>
-                    <div className="flex flex-row md:gap-1">
-                        <div className='contactHeader'>Phone :</div>
-                        <div className='contactText'><a href='tel:+91 97899 91565'>+91 97899 91565,</a> <a href='tel:+91 99628 37650'> +91 99628 37650</a></div>
-                    </div>
-                </div>
-                
-            </div>
-            <div className='flex flex-row md:gap-1 pl-10 pr-10 pt-3'>
-                    <div className='contactHeader'>Office :</div>
-                    <div className='contactText'>37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
-            </div>
-            
+          </div>
         </div>
-
-        <div className='mobileContact'>
-            <div className='mobileCardContact flex flex-col pl-2 pr-2 gap-6'>
-                <div className='flex flex-col items-center justify-center gap-2'>
-                    <div className='flex flex-row gap-1'>
-                        <div><img /></div>
-                        <div className="mobileContactText">ORGANIZATION</div>
-                    </div>
-                    <div className="contactText">Veract Consultancy Pvt. Ltd., Chennai</div>
-                </div>
-                <div className='flex flex-col items-center justify-centermd:gap-2'>
-                    <div className='flex flex-row md:gap-1'>
-                        <div><img/></div> 
-                        <div className="mobileContactText">OFFICE</div>
-                    </div>
-                    <div className="contactText">37, Brindavan Street, Velachery Main Rd, Srinivasa Nagar, Madipakkam, Chennai, Tamil Nadu 600091</div>
-                </div>
-                <div className='flex flex-col items-center justify-centermd:gap-2'>
-                    <div className='flex flex-row md:gap-1'>
-                        <div><img/></div>
-                        <div className="mobileContactText">PHONE</div>
-                    </div>
-                    <div className="contactText"><a href='tel:+91 97899 91565'>+91 97899 91565,</a> <a href='tel:+91 99628 37650'> +91 99628 37650</a></div>
-                </div>
-                <div className='flex flex-col items-center justify-center md:gap-1'>
-                    <div className='flex flex-row md:gap-1'>
-                        <div><img/></div>
-                        <div className="mobileContactText">EMAIL</div>
-                    </div>
-                    <a href='mailto:info@veract.io'><div className="contactText">info@veract.io</div></a>
-                </div>
-            </div>
-
-        </div>
-        
       </div>
-    )
+
+      {/* Footer Section */}
+      {/* <footer className="flex flex-col items-center bg-black py-8 text-white">
+        <div className="flex flex-col items-center md:flex-row md:justify-between md:w-full px-6 md:px-20">
+          <div className="text-center md:text-left">
+            <p className="text-sm md:text-base">&copy; 2024 Veract Consultancy Pvt. Ltd. All Rights Reserved.</p>
+          </div>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <a href="#" className="text-[#4285F4]"><FaFacebook size={20} /></a>
+            <a href="#" className="text-[#4285F4]"><FaTwitter size={20} /></a>
+            <a href="#" className="text-[#4285F4]"><FaLinkedin size={20} /></a>
+            <a href="#" className="text-[#4285F4]"><FaInstagram size={20} /></a>
+          </div>
+        </div>
+      </footer> */}
+    </div>
+  );
 }

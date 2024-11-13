@@ -15,6 +15,10 @@ span {
   white-space: pre-wrap;
 }
 
+.nav-item.active  a{
+  color:  var(--secondary-colour) !important;
+}
+
 .scroll-transition {
   scroll-behavior: smooth;
   transition: scroll-behavior 0.5s ease-in-out;
@@ -816,6 +820,7 @@ ul {
   font-size: var(--logo-before-scroll);
   transition: 0.5s;
   animation: slideRightNavbar 2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -1442,6 +1447,12 @@ ul {
 
 }
 
+.centeredSidebar {
+  position: fixed;
+  top: 52%;
+  transform: translateY(-50%);
+}
+
 .menuDetails {
   padding-top: 30%;
   display: flex;
@@ -1674,7 +1685,7 @@ ul {
 .testimonialContainer {
   display: flex;
   flex-direction: row;
-  width: 91.3%;
+  width: 95%;
   gap: 20px;
 
 }
@@ -1842,7 +1853,7 @@ ul {
 
 .manufacturingHover {
 
-  border: 1px solid var(--black-colour);
+  /* border: 1px solid var(--black-colour); */
   transition: all 0.5s ease;
   /* border-radius:10px; */
   /* padding:5%; */

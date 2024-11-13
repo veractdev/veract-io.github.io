@@ -34,7 +34,7 @@ export default function TopnavBar() {
           //   pathname:"/",
           //   query:{
           //     "section":"Text"
-          //   }
+          //   }      
           // })
         const section=document.getElementById(sectionId);
         console.log(section);
@@ -45,10 +45,7 @@ export default function TopnavBar() {
        else{
          scrollToElement(sectionId); 
        }
-      
-    
-     
-    
+  
   };
   // const [isScrolling, setIsScrolling] = useState(false);
   // useEffect(() => {
@@ -68,6 +65,7 @@ export default function TopnavBar() {
   }
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsopen] = useState(false);
+
   const handleToggle = (e: { stopPropagation: () => void; }) => {
     if (typeof window !== 'undefined') {
       if (window.innerWidth <= 768) {
@@ -93,7 +91,12 @@ export default function TopnavBar() {
     };
   }, []);
 
+  const pathname = usePathname()
 
+  const [activeSection, setActiveSection] = useState(pathname === "/" ? "Home" : pathname === "/updatedCaseStudy/" ? "CustomerSuccess" : '');
+
+console.log("activeSection", activeSection)
+console.log("pathname", pathname)
   return (
     <div className={`navbar ${isOpen ? " padding" : "padding"}`}>
       {/* <div className="p-4 border-2  rounded-lg border-primary   bg-primary " > */}
@@ -126,59 +129,64 @@ export default function TopnavBar() {
             <div className={`nav-list ${isOpen ? "open" : "MediaHidden"}`}>
               <div className="flex nav-list fontFamilyNav  navFonts md:gap-10">
                 <div className="w-full">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "Home" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={() => scrollToSection('Home')}><Link href="/" className="home" onClick={handleToggle}>Home</Link></div>
+                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={(e) => { handleToggle(e); scrollToSection('Home'); setActiveSection('Home'); }}><a href="/" className="home" onClick={handleToggle}>Home</a></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
                 </div>
                 <div className="w-full">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "Founder" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                     <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap menu-item'onClick={handleToggle}><div  onClick={() => scrollToSection("Founder's")}>Founder's Desk</div></div>
-                     <div><hr className="seperator"></hr></div>
+                    
+                  <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap menu-item'onClick={(e)=>{handleToggle(e); setActiveSection("Founder")}}><a  onClick={() => {scrollToSection("Founder's");}}>Founder's Desk</a></div>
+                      <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
                 </div>
                 <div className="w-full">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "Services" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={() => scrollToSection("Services")}><a  className="services " onClick={handleToggle}><span onClick={() => scrollToSection("Services")}>Services</span></a></div>
+                    <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={(e) => {handleToggle(e); setActiveSection("Services")}}><a  className="services "  onClick={() => {scrollToSection("Services");}}>Services</a></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
                 </div>
                 <div className="caseMain_mobile">
                   <div className="w-full">
-                    <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                    <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "CustomerSuccess" ? "active" : ""}`}>
                       <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                        <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' onClick={() => scrollToSection("CustomerSuccess")} >Customer Success</div></div>
+                      <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={(e) => {handleToggle(e); setActiveSection("CustomerSuccess")}}><a  className="customer " href='/MobileCaseStudy/edTech/'  >Customer Success</a></div>
+
+                        {/* <div  className="caseMain_mobile " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' onClick={() => scrollToSection("CustomerSuccess")} >Customer Success</a></div> */}
                         <div><hr className="testimonialsHr"></hr></div>
                       </div>
                     </li>
                   </div>
                 </div>
                 <div className="caseMain_desktop">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "CustomerSuccess" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain_desktop " onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' onClick={() => scrollToSection("CustomerSuccess")}  >Customer Success</div></div>
+                    <div  className="caseMain_desktop " onClick={(e) => {handleToggle(e); setActiveSection("CustomerSuccess")}}><a className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item' href='/updatedCaseStudy/?id=content1' >Customer Success</a></div>
                     <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
                 </div>
                 <div className="w-full">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "Testimonials" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                  <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap menu-item'onClick={handleToggle}><div  onClick={() => scrollToSection("Testimonials")}>Clients Speak</div></div>
+                  <div className="flex items-center justify-center navbarCursor whitespace-nowrap menu-item" onClick={(e) => {handleToggle(e); setActiveSection("Testimonials")}}><a  className="customer "  onClick={() => {scrollToSection("Testimonials");}}>Clients Speak</a></div>
+
+                  {/* <div className='flex items-center founder justify-center navbarCursor whitespace-nowrap menu-item'onClick={handleToggle}><div  onClick={() => scrollToSection("Testimonials")}>Clients Speak</div></div> */}
                   <div><hr className="seperator"></hr></div>
                   </div>
                 </li>
                 </div>
                 <div className="w-full">
-                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"}`}>
+                <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "ContactUS" ? "active" : ""}`}>
                   <div className={`nav-align ${isOpen ? "visible" : "MediaHidden"}`}>
-                    <div  className="caseMain caseMain_mobile pl-3" onClick={handleToggle}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item'><div  onClick={() => scrollToSection("ContactUS")}>Contact Us</div></div></div>
+                    <div  className="caseMain caseMain_mobile pl-3" onClick={(e)=>{handleToggle(e);setActiveSection("ContactUS")}}><div className='desktopPortfolioText flex items-center justify-center navbarCursor  whitespace-nowrap menu-item'><a  onClick={() => scrollToSection("ContactUS")}>Contact Us</a></div></div>
                     <div><hr className="testimonialsHr1"></hr></div>
                   </div>
                 </li>

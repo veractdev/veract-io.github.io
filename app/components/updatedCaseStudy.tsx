@@ -7,33 +7,40 @@ import '../styles/testimonials.css';
 
 export default function UpdatedCaseStudy() {
 
-    const router = useRouter();
     const searchParams = useSearchParams();
 
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const [selectedTab, setSelectedTab] = useState<number>();
+    const [selectedTab, setSelectedTab] = useState<number>(1);
     const [showsite,setShowSite]=useState(true);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const contentRefs = useRef<(HTMLElement | null)[]>([]);
+    const [isSidebarCentered, setIsSidebarCentered] = useState(false);
 
     const scrollToSection = (sectionId: string) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+        const sectionRef = contentRefs.current.find(ref => ref?.id === sectionId); // Find the section by ref
+        if (sectionRef) {
+            sectionRef.scrollIntoView({ behavior: 'smooth' }); // Scroll to the section
+        } else {
+            console.error(`Section with ID ${sectionId} not found.`); // Log if the section is not found
         }
     };
+
     const handleMenuClick = (sectionId: string) => {
+        console.log("sectionId", sectionId)
         const removePrefix = sectionId.replace('content', '');
         const parseToInt = parseInt(removePrefix, 10);
         setSelectedTab(parseToInt);
-        scrollToSection(sectionId);
+        scrollToSection(sectionId.toString());
     };
+
+   
+    
     const sideNavDetails = [
         {
             id: 'content1',
             title: 'Ed Tech',
             titleImage: '/updatedCaseStudiesIcon/edTech.svg',
-            selectedTitleImage: '/updatedCaseStudiesIcon/edTechSelected.svg',
+            selectedTitleImage: '/updatedCaseStudiesIcon/edTech_new_icon.svg',
             hasAi: true,
         },
         {
@@ -95,8 +102,8 @@ export default function UpdatedCaseStudy() {
         {
             id: 'content10',
             title: 'Fin Tech',
-            titleImage: '/updatedCaseStudiesIcon/finTech.svg',
-            selectedTitleImage: '/updatedCaseStudiesIcon/finTechSelected.svg',
+            titleImage: '/updatedCaseStudiesIcon/finTech_inActive.svg',
+            selectedTitleImage: '/updatedCaseStudiesIcon/finTech_active.svg',
             hasAi: false,
         },
         {
@@ -110,16 +117,20 @@ export default function UpdatedCaseStudy() {
     const portfolio = [
         {
             id: 'content1',
-            caseTitle: ' AI-enabled Edtech platform',
-            caseTitleContent: 'Evollve is an edtech platform that revolutionizes augmented learning',
+            caseTitle: ' AI-enabled Edtech Platform',
+            caseTitleContent: (
+        <span>
+            <span style={{ color: '#4285F4', fontWeight:'bold' }}>Evollve</span> is an edtech platform that revolutionizes augmented learning
+        </span>
+    ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/edBookPurple.svg',
             challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
             challengePoints: ' ',
-            solution: 'The Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
+            solution: 'Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
             solutionPoints: '',
             services: 'Software architecture, Technology consulting,Front end development,Back end development,Deployment',
-            platform: 'Desktop application',
+            platform: 'Desktop application,Web',
             techstack: 'Next JS,Electron,NodeJS,MongoDB,Express,Elastic Search',
             name: "",
             designation: "",
@@ -133,19 +144,19 @@ export default function UpdatedCaseStudy() {
                 // }
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/evollveReflection.svg',
+                    image: '/caseStudyReflectionImages/Evollve_new_img.svg',
                 }
             ]
         },
         {
             id: 'content2',
-            caseTitle: 'Machine Vision for Manufacturing Quality Control',
+            caseTitle: 'Automated Machine Vision Inspection',
             caseTitleContent: 'A sheet metal pressings manufacturing company.',
             stampImage: "/portfolio/artificial-intelligence.png",
             caseImage: '/updatedCaseStudiesIcon/machineVisionPurple.svg',
-            challenges: 'Over 5 million pieces of parts must go through a comprehensive visual inspection each month. Hand inspection was tedious, and as inspector fatigue set in, accuracy levels dropped.',
+            challenges: 'Over 5 million parts must undergo a comprehensive visual inspection each month. Manual inspection proved to be tedious, and as inspector fatigue set in, accuracy levels declined.',
             challengePoints: '',
-            solution: "Veract developed a proprietary AI-powered visual inspection tool, boosting productivity and preventing part rejections and recalls. The manufacturer deemed the solution a complete success due to its cost-effectiveness.",
+            solution: "Veract developed a proprietary AI-powered visual inspection tool that significantly boosts productivity and helps prevent part rejections and recalls. The manufacturer deemed the solution a complete success, citing its cost-effectiveness as a key factor.",
             solutionPoints: '',
             services: 'Software architecture, Technology consulting, Software development, Deployment, End to end vision systems',
             platform: 'Web',
@@ -158,13 +169,17 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content3',
-            caseTitle: 'Health and Wellness Web and Mobile App',
-            caseTitleContent: 'Anyo is a health and wellness app that addresses the significant issue of mental health.',
+            caseTitle: 'Health and Wellness Tech',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Anyo</span> is a health and wellness app that addresses the significant issue of mental health.
+                </span>
+            ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/wellnessPurple.svg',
             challenges: 'The founders of Anyo were looking for a one-stop shop for technical advice and development of their live chat-enabled platform with streaming audio, video and chatbots',
             challengePoints: '',
-            solution: `Within five months, Veract's team of architects and developers successfully designed and deployed:  four online portals , the Anyo mobile app. Key technical decisions included:  architecture selection, framework choice`,
+            solution: `Within five months, Veract's team of architects and developers successfully designed and deployed:  four online portals , the Anyo mobile app. Key technical decisions included:  architecture selection, framework choice.`,
             solutionPoints: '',
             services: 'Software architecture, Technology consulting, Software development, Deployment',
             platform: 'Mobile, Web ',
@@ -181,7 +196,7 @@ export default function UpdatedCaseStudy() {
                 // }, 
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/anyoReflection.svg'
+                    image: '/caseStudyReflectionImages/anyo_new_img.svg'
                 },                
                 {
                     id: 2,
@@ -191,33 +206,37 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content4',
-            caseTitle: 'Social platform for the fast-growing data center businesses.',
-            caseTitleContent: 'Data Center Mart is an initiative of IBITS',
+            caseTitle: 'Data Center Innovation Platform',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Data Center Mart</span> is an initiative of IBITS
+                </span>
+            ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/socialPurple.svg',
-            challenges: 'comprehensive platform tailored for the data center industry. This site will enable users to create posts, comment, like, and share content. Additionally, it will feature a marketplace for products and services and a directory of suppliers specializing in data center solutions.',
+            challenges: 'Challenged with creating a comprehensive platform tailored specifically for the data center industry including post content, comment, like, and share within the community, with a integrated marketplace for products and services and a directory of suppliers specializing in data center solutions.',
             challengePoints: ' ',
-            solution: 'Designed and deployed a web and responsive app ',
+            solution: ' Developed a robust e-commerce  and social  platform tailored. The site features a robust backend system for managing product listings and user accounts. It includes functionalities like marketplace, quote requests, product filtering, and content management.',
             solutionPoints: '',
             services: 'Design Software architecture,Technology consulting,Front end development,Back end development,Deployment',
-            platform: 'Web application',
+            platform: 'Web',
             techstack: 'Next JS,Node JS,Mongo DB',
-            name: "",
-            designation: "",
-            company: "",
-            clientSpeak: "",
+            name: "Bijoy KT",
+            designation: "CEO",
+            company: "Data Center Mart",
+            clientSpeak: "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
             seperator: <hr className='separatorPortfolio'></hr>,
             referenceImage: [
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/dcmReflection.svg'
+                    image: '/caseStudyReflectionImages/DCM_new_img.svg'
                 },
             ]
         },
         {
             id: 'content5',
             caseTitle: 'Quality Documentation for Metal Foundry',
-            caseTitleContent: 'An automated quality report generation system was needed by the Grey Iron and Ductile Iron Foundry in order to submit reports to customers.',
+            caseTitleContent: 'An automated quality report generation system for Grey Iron and Ductile Iron Foundry.',
             stampImage: "",
             caseImage: '/output/quality_documetation_logo.svg',
             challenges: 'Submission of parts necessitates the submission of high-quality documentation on spectrometer readings, pouring properties, mould properties and sand properties.',
@@ -235,8 +254,12 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content6',
-            caseTitle: 'Agriculture Finance Ecosystem Web Application ',
-            caseTitleContent: 'Agrosperity KiVi is a phygital platform that makes it easy for farmers and other rural and agribusiness owners to obtain funds quickly and effectively.',
+            caseTitle: 'Agriculture Finance Ecosystem',
+            caseTitleContent: (
+                <span>
+                   Agrosperity <span style={{ color: '#4285F4', fontWeight:'bold' }}>KiVi</span> is a phygital platform in the area of agri supply chain and financing.
+                </span>
+            ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/agriTechPurple.svg',
             challenges: 'Kivi was seeking a development partner to fully assume responsibility for the design, development and implementation of Vision to text, Map interfaces for loan eligibility data, loan documents automation, dashboards with multiple authentication levels',
@@ -245,7 +268,7 @@ export default function UpdatedCaseStudy() {
             solutionPoints: '',
             services: 'Software architecture, Technology consulting, Software development, Deployment',
             platform: 'web',
-            techstack: ' Java,Spring Boot,PostgreSQL,Nginx,Kafka,Elasticsearch,Google APIs,CI/CD,Angular,Kibana',
+            techstack: 'Java, Spring Boot, PostgreSQL,Nginx,Kafka,Elasticsearch,Google APIs,CI/CD,Angular,Kibana',
             name: "Salil Nair",
             designation: "CTO",
             company: "Agrosperity Tech Solutions",
@@ -254,17 +277,21 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content7',
-            caseTitle: 'E-commerce site for agricultural produce',
-            caseTitleContent: 'Beanstalk operates in the exciting farm-to-table space',
+            caseTitle: 'E-Commerce for Seasonal Produce',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Beanstalk</span> operates in the exciting farm-to-table space
+                </span>
+            ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/eComPurple.svg',
-            challenges: 'Payment enabled E-COM site in time for customers produce season',
+            challenges: 'Payment enabled e-commerce site in time for customers produce season',
             challengePoints: ' ',
             solution: 'Veract team developed and deployed a payment enabled custom designed web application ',
             solutionPoints: '',
             services: 'Software architecture,Technology consulting,Front end development,Back end development ,Deployment',
-            platform: 'Responsive web application',
-            techstack: 'Next JS,Express,Node JS,Redis,PostgreSQL,Razorpay',
+            platform: 'Web',
+            techstack: 'Next JS,Express JS,Node JS,Redis,PostgreSQL,Razorpay',
             name: "",
             designation: "",
             company: "",
@@ -278,7 +305,7 @@ export default function UpdatedCaseStudy() {
                             // }                
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/BeanstalkfarmersReflection.svg',
+                    image: '/caseStudyReflectionImages/Beanstalk_new_img.svg',
                 }
             ]
 
@@ -286,10 +313,14 @@ export default function UpdatedCaseStudy() {
         {
             id: 'content8',
             caseTitle: 'Sales Enquiry and Quote Management',
-            caseTitleContent: 'Rajdeep is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Rajdeep</span> is a pune-based distributor of industrial products with multiple principals, multiple products, in multiple locations.
+                </span>
+            ),
             stampImage: "",
             caseImage: '/portfolio/salesPurple.png',
-            challenges: "Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine. On top is the complete offline functionality due to poor network connectivity phases.",
+            challenges: "Salesman attrition, inconsistent data, quotation production and reporting were the client's pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine.",
             challengePoints: '',
             solution: 'Veract created a mobile and online application that seamlessly integrated with the customers existing software.',
             solutionPoints: '',
@@ -304,23 +335,27 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/salesReflection.svg',
+                    image: '/caseStudyReflectionImages/CRM_new_img.svg',
                 }
             ]
         },
         {
             id: 'content9',
-            caseTitle: 'Data extraction for the audit industry',
-            caseTitleContent: 'Financial audit firm with over 100 associates',
+            caseTitle: 'Data Extraction for the Audit Industry',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Financial audit</span> firm with over 100 associates
+                </span>
+            ),
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/auditPurple.svg',
             challenges: 'Audit firm looking to reduce manual data entry processes required for compliance.',
             challengePoints: ' ',
-            solution: 'Veract team developed and deployed a easy to use Large language model +OCR based custom trained data extraction capablity ',
+            solution: 'Veract team developed and deployed a easy to use Large language model +OCR based custom trained data extraction capability ',
             solutionPoints: '',
             services: 'Software architecture,Technology consulting,Front end development,Back end development ,Deployment',
-            platform: 'Web application',
-            techstack: 'Python,Fast API,Next JS,React JS',
+            platform: 'Web',
+            techstack: 'Python,Fast API',
             name: "",
             designation: "",
             company: "",
@@ -330,9 +365,13 @@ export default function UpdatedCaseStudy() {
         {
             id: 'content10',
             caseTitle: ' Credit Risk Assessment and Risk Profiling ',
-            caseTitleContent: 'Northern Arc Capital is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.',
+            caseTitleContent: (
+                <span>
+                    <span style={{ color: '#4285F4', fontWeight:'bold' }}>Northern Arc Capital</span> is a financial services platform that was established primarily to meet various credit needs of businesses and households that are underserved.
+                </span>
+            ),
             stampImage: "",
-            caseImage: '/portfolio/fintechPurple.png',
+            caseImage: '/updatedCaseStudiesIcon/finTech_blue.svg',
             challenges: 'For the construction of their investor portal, Northern Arc Capital required a team with technical and financial domain experience. They needed to reduce risk by using risk analytics, risk profiles, etc.',
             challengePoints: ' ',
             solution: 'Veract implemented risk profiling in their investor tracking portal by fusing their core development skills with their expertise in financial domain.',
@@ -348,11 +387,11 @@ export default function UpdatedCaseStudy() {
         },
         {
             id: 'content11',
-            caseTitle: ' Infrared thermography',
-            caseTitleContent: 'The Institute of Buffalo Science focuses on improving buffalo health monitoring by tracking key parameters and mapping udder thermal profiles. This approach aims to correlate these thermal profiles with the early onset of mastitis, a prevalent and serious condition in dairy animals.',
+            caseTitle: ' Infrared Thermography',
+            caseTitleContent: 'The Institute of Buffalo Science focuses on improving buffalo health monitoring by tracking key parameters and mapping udder thermal profiles to detect early onset of mastitis in dairy animals.',
             stampImage: "",
             caseImage: '/updatedCaseStudiesIcon/thermalPurple.svg',
-            challenges: 'Challenged with creating a comprehensive platform tailored specifically for the data center industry. This platform needs to enable users to post content, comment, like, and share within the community, while also integrating a marketplace for products and services. Additionally, it must feature a directory of suppliers specializing in data center solutions.',
+            challenges: 'Integration of the thermal imaging camera with the monitoring system and IOT. Ensuring real-time data capture and processing. Compatibility between the camera hardware and software solutions.Reliable data transfer protocols to minimize latency.',
             challengePoints: ' ',
             solution: 'Software Development: Created custom software for real-time analysis and visualization of udder thermal profiles and camera control through a user-friendly interface.',
             solutionPoints: '',
@@ -367,7 +406,7 @@ export default function UpdatedCaseStudy() {
             referenceImage: [
                 {
                     id: 1,
-                    image: '/caseStudyReflectionImages/thermalReflection.svg',
+                    image: '/caseStudyReflectionImages/Thermal_new_img.svg',
                 }
             ]
         },
@@ -376,20 +415,23 @@ export default function UpdatedCaseStudy() {
     useEffect(() => {
         document.title = "Veract";
         const section = searchParams?.get("id") ?? "";
+        console.log("section", section);
+    
         if (section) {
             handleMenuClick(section);
-            setSelectedTab(parseInt(section.replace('content', ''), 10));
+            // scrollToSection(section);
         } else {
             setSelectedTab(1);
+            scrollToSection('content1');
         }
-
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 500);
-
+    
+        // setTimeout(() => {
+            // setIsLoading(false);
+        // }, 200);
+    
         window.history.replaceState(null, '', '/cutomer-success');
     }, [searchParams]);
-
+    
     useEffect(() => {
         if (!isLoading && selectedTab && showsite) {
             scrollToSection(`content${selectedTab}`);
@@ -398,30 +440,36 @@ export default function UpdatedCaseStudy() {
     }, [isLoading, selectedTab]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = contentRefs.current.indexOf(entry.target as HTMLElement);
-                        console.log(index, "index");
-                        setSelectedTab(index + 1);
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY; // Get current scroll position
+            contentRefs.current.forEach((ref, index) => {
+                if (ref) {
+                    const { top, bottom } = ref.getBoundingClientRect();
+                    // Check if the section is in the viewport
+                    if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+                        setSelectedTab(index + 1); // Update selected tab based on the visible section
                     }
-                });
-            },
-            {
-                root: null,
-                threshold: 0.2, // Adjust threshold as needed
-            }
-        );
+                }
+            });
+        };
 
-        contentRefs.current.forEach((ref) => {
-            if (ref) observer.observe(ref);
-        });
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            contentRefs.current.forEach((ref) => {
-                if (ref) observer.unobserve(ref);
-            });
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Check if the user has scrolled to the bottom of the page
+            const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+            setIsSidebarCentered(isAtBottom);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -432,9 +480,9 @@ export default function UpdatedCaseStudy() {
             ) : (
                 <div className="desktopCaseStudy">
                     <div id="portfolioDetails" className='fontFamily'>
-                        <div className={`dashboard ${isVisible ? 'h-[86.75vh]' : 'h-[74.5vh]'} overflow-auto`} id="container">
+                        <div className={`dashboard ${isVisible ? 'h-[86.75vh]' : 'h-[74.5vh]'} overflow-auto ${isSidebarCentered ? 'centeredSidebar' : ''}`} id="container">
                             {sideNavDetails.map((item: any, index: any) => (
-                                <div key={index} className='menuRowDetails ' onClick={() => { handleMenuClick(item.id) }}>
+                                <div key={index} className='menuRowDetails' onClick={() => { handleMenuClick(item.id) }}>
                                     <img src={`${selectedTab === index + 1 ? `${item.selectedTitleImage}` : `${item.titleImage}`}`} className="w-8" />
                                     <div className={`flex items-center ${selectedTab === index + 1 ? `text-white` : `text-[#7F7F7F]`}`}>{item.title}</div>
                                     {item.hasAi && (
@@ -444,8 +492,8 @@ export default function UpdatedCaseStudy() {
                             ))}
                         </div>
                         {portfolio.map((item, index) => (
-                            <section className='ml-[4%]' key={item.id} id={item.id} ref={(el) => { contentRefs.current[index] = el }}>
-                                <div className={`caseDetails ${item.id === 'content1' ? 'pt-[10%]' : 'pt-[5%]'}`}>
+                            <section  className='ml-[4%]' key={item.id} id={`content${index + 1}`} ref={(el) => { contentRefs.current[index] = el; }}>
+                                <div className={`caseDetails ${selectedTab === index + 1 ? 'pt-[10%]' : 'pt-[5%]'}`}>
                                     <div className='w-[95%] flex flex-col gap-[1rem] mt-[2rem] pb-[1rem]'>
                                         <div className='flex flex-row gap-[2.688rem] items-center mt-[0.5rem]'>
                                             <img src={item.caseImage} alt="" className='w-[4.563rem] aspect-square' />
@@ -455,7 +503,7 @@ export default function UpdatedCaseStudy() {
                                     </div>
                                     <div className='w-[95%] flex flex-row justify-between'>
                                         <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
-                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Challenges</div>
+                                            <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Challenge</div>
                                             <div className='text-[16px] text-black font-normal'>{item.challenges}</div>
                                         </div>
                                         <div className='w-[45%] p-[2rem] bg-white rounded-[26px] flex flex-col gap-[0.5rem] caseStudyContainerBoxShadow'>
@@ -477,22 +525,23 @@ export default function UpdatedCaseStudy() {
                                             <img src="/caseStudies/web.png" className='w-[3.625rem] aspect-square' />
                                             <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Platform</div>
                                             <div className='flex flex-col gap-[0.25rem] mt-[0.25rem]'>
-                                                {item.platform.split(',').map((temp) => (
-                                                    <div className='PlatformText'>{temp}</div>
+                                                {item.platform.split(',').map((temp, index) => (
+                                                    <div key={index} className='PlatformText'>{temp}</div>
                                                 ))}
                                             </div>
                                         </div>
+                                        
                                         <div className='w-[30%] max-h-[17rem] p-[2rem] bg-white rounded-[26px] flex flex-col items-center gap-[0.5rem] caseStudyContainerBoxShadow'>
                                             <img src="/caseStudies/tech-service.png" className='w-[3.625rem] aspect-square' />
                                             <div className='text-[18px] text-[#4285f4] font-semibold text-center'>Techstack</div>
                                             <div className='flex flex-row gap-[1.25rem]'>
                                                 <div className='flex flex-col gap-[0.25rem]'>
-                                                    {item.techstack.split(',').slice(0, 4).map((stack, index) => (
-                                                        <div key={index} className='techText text-center'>{stack}</div>
-                                                    ))}
+                                                        {item.techstack.split(',').slice(0, Math.ceil(item.techstack.split(',').length/2)).map((stack, index) => (
+                                                            <div key={index} className='techText text-center'>{stack}</div>
+                                                        ))}
                                                 </div>
                                                 <div className='flex flex-col gap-[0.25rem]'>
-                                                    {item.techstack.split(',').slice(4, 8).map((stack, index) => (
+                                                    {item.techstack.split(',').slice(Math.ceil(item.techstack.split(',').length/2), item.techstack.split(',').length).map((stack, index) => (
                                                         <div key={index} className='techText text-center'>{stack}</div>
                                                     ))}
                                                 </div>
@@ -500,16 +549,20 @@ export default function UpdatedCaseStudy() {
                                         </div>
                                     </div>
                                     {item.clientSpeak?.length !== 0 && (
-                                        <div className='testimonialContainer'>
-                                            <div className='clientContainer md:gap-4'>
-                                                <div className='flex pt-2'>
-                                                    <div className="challenges">Clients Speak</div>
+                                        <div className='testimonialContainer rounded-[26px] caseStudyContainerBoxShadow'>
+                                            <div className='clientContainer border-none md:gap-4'>
+                                                <div className='flex pt-6'>
+                                                    <div className="challenges"><span className='font-semibold'> Clients Speak</span></div>
                                                 </div>
                                                 <div className='flex pt-2 flex-row md:gap-3'>
-                                                    <div className=""><i className="quotes"></i></div>
+                                                <div className=""><i className="quotes"></i></div>
+
                                                     <div className='flex items-center'><span className='title whitespace-nowrap'>{item.name} - {item.designation}, </span><span className='title highlight '>{item.company}</span></div>
                                                 </div>
+
                                                 <div className="challengesContent pl-2 pr-2 flex-wrap pb-2">{item.clientSpeak}</div>
+                                                <div className="flex justify-end"><i className="quotesEnd"></i></div>
+
                                             </div>
                                         </div>
                                     )}

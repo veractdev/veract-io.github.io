@@ -42,6 +42,14 @@ export default function Testimonials() {
       image: "/images/AnanadShah_Modified.png",
       content: "Excellent prompt support in spite of remote location. "
     },
+    {
+      id: 5,
+      name: "Bijoy KT",
+      designation: "CEO",
+      company: "Datacenter Mart",
+      image: "/images/Bijoy profile.jpg",
+      content: "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected."
+    },
   ];
   const [isVisible, setIsVisible] = useState(false);
 
@@ -99,7 +107,7 @@ export default function Testimonials() {
                 </div>
               </div>
               <div className="flex flex-col w-4/5">
-                <div className={`scroll-animationY ${isVisible ? 'visibleFounderContent' : ''}`}>
+                <div className={`scroll-animationY  ${isVisible ? ' visibleFounderContent' : ''}`}>
                   <div className="flex flex-row mb-10 items-center">
                     <div className="quotesVisible"><i className="quotes"></i></div>
                     <div className="quotesVisible"><span className='title'>{item.name} - {item.designation}, </span><span className='title highlight'>{item.company}</span></div>
@@ -108,6 +116,9 @@ export default function Testimonials() {
                   <div className="text ml-10">
                     <p>{item.content}</p>
                   </div>
+                <div className="quotesVisibleMobile w-100 justify-end"><i className="quotesEnd"></i></div>
+                <div className="quotesVisible flex justify-end"><i className="quotesEnd"></i></div>
+
                 </div>
               </div>
             </div>

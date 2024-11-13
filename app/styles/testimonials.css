@@ -6,6 +6,15 @@
   vertical-align: middle;
   border-radius: 50%;
 }
+
+.quotesEnd {
+  display: inline-block;
+  padding: 25px;
+  background: url("/endQuote.png") no-repeat scroll 50% 50% var(--primary-colour);
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
 .testimonialAlignment{
   display:flex;
   flex-direction:row;

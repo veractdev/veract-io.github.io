@@ -42,7 +42,7 @@ export default function IndustrialPlatform() {
                             </div>
                             <div className='ChallengeContainer_mobile'>
                                 <div className="challenges_mobile">Solution</div>
-                                <div className='challengesContent_mobile'>Designed and deployed a web and responsive app.</div>
+                                <div className='challengesContent_mobile'>Developed a robust e-commerce  and social  platform tailored. The site features a robust backend system for managing product listings and user accounts. It includes functionalities like marketplace, quote requests, product filtering, and content management.</div>
                                 {/* <div className='flex flex-col pt-6'>
                                         <div className='solutionPoints_mobile'>Architecture.</div>
                                         <div className='solutionPoints_mobile'>Framework.</div>

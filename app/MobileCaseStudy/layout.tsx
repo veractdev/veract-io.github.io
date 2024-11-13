@@ -61,25 +61,25 @@ useEffect(()=>{
     if(pathname.includes("edTech")){
       setActivePage("content1");
       setSelectedPage(
-        mobileCustomerSuccess.filter((item) => item.id === 'content1')
+        mobileCustomerSuccess.filter((item) => item.id === 'content1') as MobileCustomerSuccessProps[]
       );
     }
     if(pathname === "/MobileCaseStudy/health/"){
       setActivePage("content3")
       setSelectedPage(
-        mobileCustomerSuccess.filter((item) => item.id === 'content3')
+        mobileCustomerSuccess.filter((item) => item.id === 'content3') as MobileCustomerSuccessProps[]
       );
     }
     if(pathname === "/MobileCaseStudy/industrialPlatform/"){
       setActivePage("content4")
       setSelectedPage(
-        mobileCustomerSuccess.filter((item) => item.id === 'content4')
+        mobileCustomerSuccess.filter((item) => item.id === 'content4') as MobileCustomerSuccessProps[]
       );
     }
     if(pathname === "/MobileCaseStudy/eCommerce/" ){
       setActivePage("content7")
       setSelectedPage(
-        mobileCustomerSuccess.filter((item) => item.id === 'content7')
+        mobileCustomerSuccess.filter((item) => item.id === 'content7') as MobileCustomerSuccessProps[]
       );
     }
     if(pathname === "/MobileCaseStudy/audit/" ){
@@ -91,7 +91,7 @@ useEffect(()=>{
   const handleClick = (id: string) => {
     setActivePage(id);
     setSelectedPage(
-      mobileCustomerSuccess.filter((item) => item.id === id)
+      mobileCustomerSuccess.filter((item) => item.id === id) as MobileCustomerSuccessProps[]
     );
   };
 
@@ -103,11 +103,11 @@ useEffect(()=>{
         <TopnavBar />
         {/* horizontal-scrollable-container n */}
         {/* ref={scrollableDivRef} */}
-        <div className="pt-16 pb-2">
+        <div className="pt-16 pb-2" style={{}}>
           {/* <div className="buttons"> */}
           <div className="mx-auto md:mx-0">
-            <div className="flex overflow-x-scroll customScroll hover:cursor-pointer   pl-2 pr-1 ">
-              <div className="flex flex-row justify-around "style={{alignItems:"flex-start"}}>
+            <div className="flex parentMobileCaseStudy overflow-x-scroll customScroll hover:cursor-pointer   pl-2 pr-1 ">
+              <div className="flex  flex-row justify-around "style={{alignItems:"flex-start"}}>
                 {mobileCustomerSuccess.map((item) => (
                   <button
                     key={item.id}
@@ -119,7 +119,7 @@ useEffect(()=>{
                      } cursor-pointer`}
                   >
                     <img
-                      className="w-15"
+                    style={{width: item.id === "content1" ? '1.8rem': "1.5rem", height: item.id === "content1" ? '1.8rem' : "1.5rem", margin: item.id === "content1" ? "0" : "0.2rem"}}
                       src={`${
                         item.id === activePage
                           ? item.activeIcon
@@ -203,7 +203,7 @@ useEffect(()=>{
               <div className="caseDetails_mobile">
                 <div className="caseHeader_mobile">
                   <div className="caseHeaderTitle_mobile flex flex-wrap pl-5">
-                    {selectedPage[0].caseTitle}
+                   <h1 className='text-center'> {selectedPage[0].caseTitle}</h1>
                   </div>
                   <div className="caseHeaderIcon_mobile pt-5 pb-5">
                     <p className="px-2"> {selectedPage[0].caseTitleContent}</p>
@@ -216,7 +216,7 @@ useEffect(()=>{
                         </div>}
                 <div className="ChallengeSolutionContainer_mobile">
                   <div className="ChallengeContainer_mobile">
-                    <div className="challenges_mobile">Challenges</div>
+                    <div className="challenges_mobile">Challenge</div>
                     <div className="challengesContent_mobile">
                       {selectedPage[0].challenges}
                     </div>
