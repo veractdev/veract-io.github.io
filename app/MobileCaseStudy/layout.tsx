@@ -64,6 +64,12 @@ useEffect(()=>{
         mobileCustomerSuccess.filter((item) => item.id === 'content1') as MobileCustomerSuccessProps[]
       );
     }
+    if(pathname.includes("machinevision")){
+      setActivePage("content2");
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content2') as MobileCustomerSuccessProps[]
+      );
+    }
     if(pathname === "/MobileCaseStudy/health/"){
       setActivePage("content3")
       setSelectedPage(
@@ -84,11 +90,22 @@ useEffect(()=>{
     }
     if(pathname === "/MobileCaseStudy/audit/" ){
       setActivePage("content9")
+      setSelectedPage(
+        mobileCustomerSuccess.filter((item) => item.id === 'content9') as MobileCustomerSuccessProps[]
+      );
     }
   }
 },[])
 
   const handleClick = (id: string) => {
+    const buttonRef = document.getElementById(id);
+    
+    buttonRef?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+    
     setActivePage(id);
     setSelectedPage(
       mobileCustomerSuccess.filter((item) => item.id === id) as MobileCustomerSuccessProps[]
@@ -117,6 +134,13 @@ useEffect(()=>{
                      ${
                        item.id === activePage ? "text-blue" : "text-gray-400"
                      } cursor-pointer`}
+                    ref={item.id === activePage ? (el) => {
+                      el?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                      });
+                    } : null}
                   >
                     <img
                     style={{width: item.id === "content1" ? '1.8rem': "1.5rem", height: item.id === "content1" ? '1.8rem' : "1.5rem", margin: item.id === "content1" ? "0" : "0.2rem"}}
@@ -202,7 +226,7 @@ useEffect(()=>{
             <div id="portfolioDetails" className="fontFamily">
               <div className="caseDetails_mobile">
                 <div className="caseHeader_mobile">
-                  <div className="caseHeaderTitle_mobile flex flex-wrap pl-5">
+                  <div className="caseHeaderTitle_mobile flex flex-wrap">
                    <h1 className='text-center'> {selectedPage[0].caseTitle}</h1>
                   </div>
                   <div className="caseHeaderIcon_mobile pt-5 pb-5">

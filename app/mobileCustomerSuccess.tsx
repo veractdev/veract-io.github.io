@@ -11,7 +11,7 @@ const mobileCustomerSuccess =
                 <span style={{ color: '#4285F4', fontWeight:'bold' }}>Evollve</span> is an edtech platform that revolutionizes augmented learning
             </span>
         ),
-        caseImage: '/caseStudies/mobile_Evo11ve.svg',
+        caseImage: '/webpImages/eVO11VE.webp',
         challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
         solution: 'Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
         services: ['Software architecture', 'Technology consulting', 'Front end development', 'Back end development', 'Deployment'],
@@ -49,7 +49,7 @@ const mobileCustomerSuccess =
                 <span style={{ color: '#4285F4', fontWeight:'bold' }}>Anyo</span> is a health and wellness app that addresses the significant issue of mental health.
             </span>
         ),
-        caseImage: '/caseStudyReflectionImages/anyo_new_img.svg',
+        caseImage: '/webpImages/anyo.webp',
         challenges: 'The founders of Anyo were looking for a one-stop shop for technical advice and development for their live chat-enabled platform with streaming audio, video along with chatbots.',
         solution: 'Within five months, Veract\'s team of architects and developers successfully designed and deployed: four online portals , the Anyo mobile app. Key technical decisions included: architecture selection, framework choice.',
         services: ['Software architecture','Technology consulting','Software development','Deployment'],
@@ -70,7 +70,7 @@ const mobileCustomerSuccess =
                 <span style={{ color: '#4285F4', fontWeight:'bold' }}>Data Center Mart</span> is an initiative of IBITS.
             </span>
         ),
-        caseImage: '/caseStudies/DataCenter_img.svg',
+        caseImage: '/webpImages/DCM.webp',
         challenges: 'Challenged with creating a comprehensive platform tailored specifically for the data center industry including post content, comment, like, and share within the community, with a integrated marketplace for products and services and a directory of suppliers specializing in data center solutions.',
         solution: 'Developed a robust e-commerce  and social  platform tailored. The site features a robust backend system for managing product listings and user accounts. It includes functionalities like marketplace, quote requests, product filtering, and content management.',
         services: ['Design Software architecture','Technology consulting' ,'Front end development','Back end development','Deployment'],
@@ -107,7 +107,7 @@ const mobileCustomerSuccess =
         caseTitle: 'Agriculture Finance Ecosystem',
         caseTitleContent: (
             <span>
-                <span style={{ color: '#4285F4', fontWeight:'bold' }}>Agrosperity KiVi</span> is a phygital platform in the area of agri supply chain and financing.
+                Agrosperity<span style={{ color: '#4285F4', fontWeight:'bold' }}> KiVi</span> is a phygital platform in the area of agri supply chain and financing.
             </span>
         ),
         caseImage: '',
@@ -131,7 +131,7 @@ const mobileCustomerSuccess =
     {
         id: 'content7',
         title:"Ecommerce",
-        activeIcon:"/caseStudies/eCom_icon_blue.svg",
+        activeIcon:"/caseStudies/ecom_icon_blue.svg",
         inActiveIcon:"/caseStudies/ecom_icon.svg",
         caseTitle: 'E-Commerce for Seasonal Produce',
         caseTitleContent: (
@@ -139,7 +139,7 @@ const mobileCustomerSuccess =
                 <span style={{ color: '#4285F4', fontWeight:'bold' }}>Beanstalk Farmers</span> operates in the exciting farm-to-table space.
             </span>
         ),
-        caseImage: '/caseStudies/eCom.svg',
+        caseImage: '/webpImages/BF.webp',
         challenges: 'Payment enabled e-commerce site in time for customers produce season.',
         solution: 'Veract team developed and deployed a payment enabled custom designed web application.',
         services: ['Software architecture','Technology consulting' ,'Frontend development','Backend Development','Deployment'],
@@ -160,7 +160,7 @@ const mobileCustomerSuccess =
                 <span style={{ color: '#4285F4', fontWeight:'bold' }}>Rajdeep</span> is a distributor of industrial products with multiple principals, multiple products, in multiple locations.
             </span>
         ),
-        caseImage: '/caseStudyReflectionImages/CRM_new_img.svg',
+        caseImage: '/webpImages/CRM.webp',
         challenges: 'Salesman attrition, inconsistent data, quotation production and reporting were the client’s pain concerns. Customer was searching for a solution that would operate with SAP integration and fit into their usual routine.',
         solution: 'Veract created a mobile and online application that seamlessly integrated with the customers existing software.',
         services: ['Software architecture','Technology consulting' ,'Software Development','Deployment'],
@@ -199,8 +199,8 @@ const mobileCustomerSuccess =
     {
         id: 'content10',
         title:"Fintech",
-        activeIcon:"/updatedCaseStudiesIcon/finTech_blue.svg",
-        inActiveIcon:"/updatedCaseStudiesIcon/finTech_inActive.svg",
+        activeIcon:"/updatedCaseStudiesIcon/fintechActivePurple.webp",
+        inActiveIcon:"/updatedCaseStudiesIcon/fintechInactive.webp",
         caseTitle: 'Credit Risk Assessment and Risk Profiling',
         caseTitleContent: (
             <span>
@@ -224,7 +224,7 @@ const mobileCustomerSuccess =
         inActiveIcon:"/caseStudies/thermal_gray_icon.svg",
         caseTitle: 'Infrared Thermography',
         caseTitleContent: 'The Institute of Buffalo Science focuses on improving buffalo health monitoring by tracking key parameters and mapping udder thermal profiles to detect early onset of mastitis in dairy animals.',
-        caseImage: '/caseStudies/thermal-img.svg',
+        caseImage: '/webpImages/THERMAL.webp',
         challenges: 'Integration of the thermal imaging camera with the monitoring system and IOT. Ensuring real-time data capture and processing. Compatibility between the camera hardware and software solutions. Reliable data transfer protocols to minimize latency.',
         solution: 'Software Development: Created custom software for real-time analysis and visualization of udder thermal profiles and camera control through a user-friendly interface.',
         services: ['Software architecture','Technology consulting' ,'Frontend development','Backend Development','Deployment'],

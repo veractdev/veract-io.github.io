@@ -65,6 +65,7 @@ export default function TopnavBar() {
   }
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsopen] = useState(false);
+  const [isLoaded,setIsLoaded]=useState(false);
 
   const handleToggle = (e: { stopPropagation: () => void; }) => {
     if (typeof window !== 'undefined') {
@@ -75,15 +76,25 @@ export default function TopnavBar() {
     }
     
   }
-  
+  const handleNavList=()=>{
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth <= 768) {
+        setTimeout(()=>{
+          setIsLoaded(true);
+        },500)
+      }else{
+        setIsLoaded(true);
+      }
+    }
+  }  
 
   useEffect(() => {
+    handleNavList()
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const triggerPoint = window.innerHeight * 0.05; // Adjust this value as needed
       setIsVisible(scrollTop > triggerPoint);
     };
-    
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -125,8 +136,9 @@ console.log("pathname", pathname)
                 </div> */}
 
         <nav className="pt-4 pb-4">
+          {isLoaded &&
           <ul >
-            <div className={`nav-list ${isOpen ? "open" : "MediaHidden"}`}>
+            <div className={`nav-list ${isOpen ? "open" : "MediaHidden" }`}>
               <div className="flex nav-list fontFamilyNav  navFonts md:gap-10">
                 <div className="w-full">
                 <li className={`nav-item ${isOpen ? "visible" : "MediaHidden"} ${activeSection === "Home" ? "active" : ""}`}>
@@ -204,6 +216,7 @@ console.log("pathname", pathname)
 
             </div>
           </ul>
+          }
         </nav>
         <div className="hamburger-icon " onClick={handleToggle}>
           <div className={`bar ${isOpen ? 'open' : ''}`}></div>
