@@ -62,7 +62,7 @@ export default function Casestudies() {
             id: 'content1',
             img: "/portfolio/Group.svg",
             heading: "EDTECH",
-            desc: "AI driven e learning application with state of the art voice to text and large language model capabilities"
+            desc: "AI driven e learning application with state of the art voice to text and large language model capabilities."
         },
         {
             id: 'content3',
@@ -79,7 +79,7 @@ export default function Casestudies() {
         {
             id: 'content4',
             img: "/portfolio/socialCaseStudy.svg",
-            heading: "Industrial Platform",
+            heading: "INDUSTRIAL PLATFORM",
             desc: "Specialized social platform connecting professionals in the data center industry for collaboration and networking."
         },
         {
@@ -132,8 +132,8 @@ export default function Casestudies() {
                                                     <div className='w-8 '><img src={item.img} /></div>
                                                     <div className='item-title flex textColorLogo pl-4 '>{item.heading}</div>
                                                 </div>
-                                                <div className=''>
-                                                    <img src="/images/info.png" className='w-6 h-6'></img>
+                                                <div className='ml-4'>
+                                                    <img src="/images/info.png" className='w-6 h-6 '></img>
                                                 </div>
                                             </div>
                                             <div className='flex flex-row item-desc manufacturingDesc'>
@@ -360,7 +360,7 @@ export default function Casestudies() {
                             <div className='flex flex-row  justify-between mb-2'>
                                 <div className='flex flex-row'>
                                     <div className='w-8 '><img src="/portfolio/socialCaseStudy.svg" /></div>
-                                    <div className='item-title flex textColorLogo pl-4' >SOCIAL</div>
+                                    <div className='item-title flex textColorLogo pl-4' >INDUSTRIAL PLATFORM</div>
                                 </div>
                                 <div className='infoIconMobile'>
                                     {/* <Link href="/MobileCaseStudy/industrialPlatform"> */}

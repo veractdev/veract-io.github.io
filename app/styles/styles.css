@@ -347,7 +347,7 @@ span {
   }
 
   50% {
-    border-color: black;
+    border-color: var(--black-colour);
   }
 }
 
@@ -474,7 +474,7 @@ span {
 }
 
 .mainPage {
-  /* background-image: url("/images/blackBgNoMark.jpg"); */
+  /* background-image: url("/images/var(--black-colour)BgNoMark.jpg"); */
   background-image: url("/images/backgroundImg.jpg");
 }
 
@@ -489,7 +489,7 @@ span {
 
   /* background: linear-gradient(90deg, hsla(240, 94%, 51%, 1) 0%, hsla(0, 0%, 0%, 1) 100%); */
   /* background: linear-gradient(90deg, rgb(13, 13, 248) 0%, rgb(0, 0, 0) 100%) center center / cover no-repeat; */
-  /* background:black; */
+  /* background:var(--black-colour); */
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -963,11 +963,11 @@ ul {
 }
 
 .servicesHeading {
-  color: var(--black-colour);
+  color: var(--var(--black-colour)-colour);
 }
 
 .servicesCardText {
-  color: var(--black-colour);
+  color: var(--var(--black-colour)-colour);
   font-size: var(--servicesInsideText);
   font-weight: var(--font-normal);
 }
@@ -1220,7 +1220,7 @@ ul {
 
 .case-studies {
   width: 100%;
-  /* background: var(--case-studies-background-colour); */
+  background: var(--black-colour) !important;
   border-left: 0px;
   border-right: 0px;
   padding-top: 90px;
@@ -1235,6 +1235,9 @@ ul {
 .case-studies-content-top {
   margin-bottom: 30px;
 }
+.veractTags{
+  display: none;
+}
 
 .section-title {
   font-family: var(tertiary-font);
@@ -1244,8 +1247,11 @@ ul {
   font-size: 32px;
   line-height: 60px;
   margin: 0 0 15px 0;
-  font-weight: 600;
+  font-weight: 700 !important;
+  -webkit-font-weight: 700;
   white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .section-desc {
@@ -1278,8 +1284,8 @@ ul {
 
 .portfolioFonts {
   color: var(--white-text-colour);
-  /* color:var(--black-colour); */
-  background: var(--black-colour);
+  /* color:var(--var(--black-colour)-colour); */
+  background: var(--var(--black-colour)-colour);
 }
 
 .contentWidth {
@@ -1327,7 +1333,12 @@ ul {
 .fintechHover:hover .fintechDesc{
   color:var(--secondary-colour);
 }
-
+@supports (-webkit-touch-callout: none) {
+  .section-title,
+  .section-title-highlight {
+    -webkit-text-stroke: 0.2px;
+  }
+}
 /* .................  Testimonials page ........................................ */
 
 .rounded-image {
@@ -1402,7 +1413,7 @@ ul {
 }
 
 .verifyBox {
-  border: 2px solid var(--black-colour);
+  border: 2px solid var(--var(--black-colour)-colour);
   border-radius: 10px;
   width: 120%;
   height: 100%;
@@ -1445,6 +1456,9 @@ ul {
   border-radius: 20px;
   transition: all 0.3s ease;
 
+}
+.footerLogoText{
+  display: none;
 }
 
 .centeredSidebar {
@@ -1857,7 +1871,7 @@ ul {
 
 .manufacturingHover {
 
-  /* border: 1px solid var(--black-colour); */
+  /* border: 1px solid var(--var(--black-colour)-colour); */
   transition: all 0.5s ease;
   /* border-radius:10px; */
   /* padding:5%; */
@@ -1883,7 +1897,7 @@ ul {
 }
 
 .wellnessHover {
-  border: 1px solid var(--black-colour);
+  border: 1px solid var(--var(--black-colour)-colour);
   /* border-radius:10px; */
   /* padding:5%; */
 }
@@ -1909,7 +1923,7 @@ ul {
 
 .salesHover {
 
-  border: 1px solid var(--black-colour);
+  border: 1px solid var(--var(--black-colour)-colour);
   /* border-radius:10px; */
   /* padding:5%; */
 }
@@ -1935,7 +1949,7 @@ ul {
 
 .agriHover {
 
-  border: 1px solid var(--black-colour);
+  border: 1px solid var(--var(--black-colour)-colour);
   /* border-radius:10px; */
   /* padding:5%; */
 }
@@ -1962,7 +1976,7 @@ ul {
 
 .hrHover {
 
-  border: 1px solid var(--black-colour);
+  border: 1px solid var(--var(--black-colour)-colour);
   /* border-radius:10px; */
   /* padding:5%; */
 }
@@ -2008,7 +2022,7 @@ ul {
 }
 
 .fintechHover {
-  border: 2px solid var(--black-colour);
+  border: 2px solid var(--var(--black-colour)-colour);
   /* border-radius:10px; */
   /* padding:5%; */
 }
@@ -2301,6 +2315,65 @@ ul {
   box-shadow: inset 2px 3px 10px 3px rgba(0, 0, 0, 0.10);
 }
 
+.veractDetailsLayout {
+  width: 100%;
+  background-color: var(--black-colour);
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: inherit;
+  background-color: var(--black-colour);
+  color: var(--secondary-header-text-color);;
+}
+/* flex flex-col gap-[1rem] */
 
+.veractDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.socialMediaSection {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
+.scaleTransition {
+  transition: all 0.3s ease;
+}
+
+.scaleTransition:hover {
+  transform: scale(110%);
+  cursor: pointer;
+}
+.footerFont {
+  font-size: 14px;
+  color: var(--secondary-header-text-color);
+  font-weight: 500;
+}
+
+.officeDetailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.officeDetailsInnerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactNo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}

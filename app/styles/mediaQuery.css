@@ -66,7 +66,12 @@ a{
     /* border: 2px solid var(--primary-colour); */
     /* border-radius: 50%; */
   }
-
+  .veractTags{
+    display: flex;
+  }
+  .footerTags{
+    display: none;
+  }
   .customTextLandingPage {
     padding-left: 0%;
     padding-top: 10%;
@@ -361,7 +366,7 @@ a{
   }
 
   .founderProfileWidth {
-    width: 7rem;
+    width: 9rem;
   }
 
   .left-column {
@@ -370,25 +375,29 @@ a{
 
   .firstPara {
     /* font-family: var(--founders-desk-font); */
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
+    line-height: 1.25;
     /* line-height: normal; */
   }
 
 
   .secondPara {
     /* font-family: var(--founders-desk-font); */
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
-
+    line-height: 1.5;
   }
 
   .thirdPara {
     /* font-family: var(--founders-desk-font); */
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
+    line-height: 1.5; 
   }
-
+.item-title{
+  font-size: 16px;
+}
   /*---------------------services ------------------------*/
   .serviceImageWidth {
     width: 8rem;
@@ -550,7 +559,13 @@ a{
     font-size: 20px;
     color: var(--primary-colour);
     font-weight: 500;
-    padding-left: 7%;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+  }
+  .quotesTopMobile{
+    padding-left: 5%;
+    padding-bottom: 3%;
   }
 
   .challengesContent_mobile {
@@ -1181,6 +1196,55 @@ a{
 .customScroll::-webkit-scrollbar-thumb:hover {
   background: #555; 
   border-radius: 30px;
+}
+
+.veractDetailsLayout {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  text-align: left; 
+  gap: 1.25rem;
+  width: 75%;
+}
+
+.veractDetailsContainer {
+  width: 100%;
+}
+
+.socialMediaSection {
+  width: 100%;
+  display: flex;
+  gap: 1rem; 
+}
+
+.officeDetailsSection {
+  width: 100%;
+  gap: 0.25rem;
+}
+
+.contactNo {
+  display: flex;
+  gap: 0.5rem; 
+}
+
+.footerLogo {
+ display: none;
+}
+.footerLogoText{
+  display: flex;
+  font-size: 2rem;
+  color: var(--white-text-colour);
+  font-weight: 600;
+  font-family: var(--secondary-font);
 }
 
 }

@@ -3,16 +3,16 @@ const mobileCustomerSuccess =
     {
         id: 'content1',
         title:"EdTech ",
-        activeIcon:"/caseStudies/edTech_icon.svg",
-        inActiveIcon:"/caseStudies/edtech_icon_gray.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_edTech_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_edTech_IA.svg",
         caseTitle: 'AI-enabled EdTech Platform',
         caseTitleContent: (
             <span>
-                <span style={{ color: '#4285F4', fontWeight:'bold' }}>Evollve</span> is an edtech platform that revolutionizes augmented learning
+                <span style={{ color: '#4285F4', fontWeight:'bold' }}>Evo11ve</span> is an edtech platform that revolutionizes augmented learning
             </span>
         ),
         caseImage: '/webpImages/eVO11VE.webp',
-        challenges: 'A custom-built, voice-to-text enabled personalized AI coach',
+        challenges: 'A custom-built, voice-to-text enabled personalized AI coach.',
         solution: 'Veract team designed and developed a desktop application with integrated voice-to-text functionality, implementing advanced noise cancellation features and incorporating seamless chat capabilities.',
         services: ['Software architecture', 'Technology consulting', 'Front end development', 'Back end development', 'Deployment'],
         platform: ['Desktop', 'Web'],
@@ -24,8 +24,8 @@ const mobileCustomerSuccess =
     {
         id: 'content2',
         title:"Machine Vision",
-        activeIcon:"/caseStudies/machine_icon_blue.svg",
-        inActiveIcon:"/updatedCaseStudiesIcon/carbon_industryUnselected.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_MachineVision_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_MachineVision_IA.svg",
         caseTitle: 'Automated Machine Vision Inspection',
         caseTitleContent: 'A sheet metal pressings manufacturing company.',
         caseImage: '',
@@ -41,8 +41,8 @@ const mobileCustomerSuccess =
     {
         id: 'content3',
         title:"Wellness",
-        activeIcon:"/caseStudies/wellness_icon_blue.svg",
-        inActiveIcon:"/caseStudies/wellness_icon.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_Wellness_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_Wellness_IA.svg",
         caseTitle: 'Health and Wellness Tech',
         caseTitleContent: (
             <span>
@@ -62,8 +62,8 @@ const mobileCustomerSuccess =
     {
         id: 'content4',
         title:"Industrial Platform",
-        activeIcon:"/caseStudies/social_icon_blue.svg",
-        inActiveIcon:"/updatedCaseStudiesIcon/industrialUnselected.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_IndustialPlatform_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_IndustialPlatform_IA.svg",
         caseTitle: 'Data Center Innovation Platform',
         caseTitleContent: (
             <span>
@@ -76,15 +76,15 @@ const mobileCustomerSuccess =
         services: ['Design Software architecture','Technology consulting' ,'Front end development','Back end development','Deployment'],
         platform: ['Web'],
         techstack: ['Next JS','Mongo DB','Node JS'],
-        clientSpeakName: "Bijoy KT",
+        clientSpeakName: "Bijoy KT - CEO",
         clientSpeakCmp: "Data Center Mart",
         clientSpeakDesc: "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
     },
     {
         id: 'content5',
         title:"Manufacturing",
-        activeIcon:"/caseStudies/manufacturing_icon.svg",
-        inActiveIcon:"/updatedCaseStudiesIcon/manufacturingUnselected.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_Manufacturing_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/manufacturing_IA.webp",
         caseTitle: 'Quality Documentation for Metal Foundry',
         caseTitleContent: 'An automated quality report generation system for Grey Iron and Ductile Iron Foundry.',
         caseImage: '',
@@ -102,8 +102,8 @@ const mobileCustomerSuccess =
     {
         id: 'content6',
         title:"AgriTech",
-        activeIcon:"/caseStudies/agriTech_icon.svg",
-        inActiveIcon:"/caseStudies/agriTech_icon_gray.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_agriTech_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_agriTech_IA.svg",
         caseTitle: 'Agriculture Finance Ecosystem',
         caseTitleContent: (
             <span>
@@ -131,8 +131,8 @@ const mobileCustomerSuccess =
     {
         id: 'content7',
         title:"Ecommerce",
-        activeIcon:"/caseStudies/ecom_icon_blue.svg",
-        inActiveIcon:"/caseStudies/ecom_icon.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_ecom_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_ecom_IA.svg",
         caseTitle: 'E-Commerce for Seasonal Produce',
         caseTitleContent: (
             <span>
@@ -152,8 +152,8 @@ const mobileCustomerSuccess =
     {
         id: 'content8',
         title:"Sales",
-        activeIcon:"/caseStudies/sales_icon.svg",
-        inActiveIcon:"/caseStudies/sales_icon_gray.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_sales_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_sales_IA.svg",
         caseTitle: 'Sales Enquiry and Quote Management',
         caseTitleContent: (
             <span>
@@ -178,8 +178,8 @@ const mobileCustomerSuccess =
     {
         id: 'content9',
         title:"Audit",
-        activeIcon:"/caseStudies/audit_icon_blue.svg",
-        inActiveIcon:"/caseStudies/audit_icon.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_audit_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_audit_IA.svg",
         caseTitle: 'Data Extraction for the Audit Industry',
         caseTitleContent: (
             <span>
@@ -199,8 +199,8 @@ const mobileCustomerSuccess =
     {
         id: 'content10',
         title:"Fintech",
-        activeIcon:"/updatedCaseStudiesIcon/fintechActivePurple.webp",
-        inActiveIcon:"/updatedCaseStudiesIcon/fintechInactive.webp",
+        activeIcon:"/mobileCaseStudiesIcons/M_finTech_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_finTech_IA.svg",
         caseTitle: 'Credit Risk Assessment and Risk Profiling',
         caseTitleContent: (
             <span>
@@ -220,11 +220,11 @@ const mobileCustomerSuccess =
     {
         id: 'content11',
         title:"Thermal Vision",
-        activeIcon:"/caseStudies/thermal_blue_icon.svg",
-        inActiveIcon:"/caseStudies/thermal_gray_icon.svg",
+        activeIcon:"/mobileCaseStudiesIcons/M_TV_A.svg",
+        inActiveIcon:"/mobileCaseStudiesIcons/M_TV_IA.svg",
         caseTitle: 'Infrared Thermography',
         caseTitleContent: 'The Institute of Buffalo Science focuses on improving buffalo health monitoring by tracking key parameters and mapping udder thermal profiles to detect early onset of mastitis in dairy animals.',
-        caseImage: '/webpImages/THERMAL.webp',
+        caseImage: '/caseStudyReflectionImages/thermal_mobile.webp',
         challenges: 'Integration of the thermal imaging camera with the monitoring system and IOT. Ensuring real-time data capture and processing. Compatibility between the camera hardware and software solutions. Reliable data transfer protocols to minimize latency.',
         solution: 'Software Development: Created custom software for real-time analysis and visualization of udder thermal profiles and camera control through a user-friendly interface.',
         services: ['Software architecture','Technology consulting' ,'Frontend development','Backend Development','Deployment'],
