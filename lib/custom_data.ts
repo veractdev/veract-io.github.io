@@ -2,26 +2,26 @@ export const navItems = [
     {
         id: 1,
         name: 'Case Studies',
-        link: ''
+        link: '/case-studies/EdTech'
     },
     {
         id: 2,
         name: 'Services',
-        link: ''
+        link: '/services/web-development'
     },
     {
         id: 3,
         name: 'Industries',
-        link: ''
+        link: '/industries/healthcare'
     },
     {
         id: 4,
         name: 'Company',
-        link: ''
+        link: '/company/about'
     },
     {
         id: 5,
         name: 'Blogs',
-        link: ''
+        link: '/blogs/latest'
     }
 ]

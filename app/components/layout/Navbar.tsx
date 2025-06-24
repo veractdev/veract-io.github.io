@@ -1,10 +1,12 @@
 'use client'
 import { navItems } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 export default function Navbar() {
 
+    const router = useRouter();
     const [selectedNav, setSelectedNav] = useState<number>();
     const [isHamburgerMenu, setIsHamburgerMenu] = useState<boolean>(false);
     const [loaded, setLoaded] = useState<boolean>(false);
@@ -44,7 +46,10 @@ export default function Navbar() {
                             <div
                                 key={item.id}
                                 className={`${isHamburgerMenu ? '' : 'first:ml-[210px] max-sm:hidden max-md:hidden max-lg:hidden'} relative flex items-center justify-center group`}
-                                onClick={() => setSelectedNav(item.id)}
+                                onClick={() => {
+                                    setSelectedNav(item.id)
+                                    router.push(item.link)
+                                }}
                             >
                                 <div
                                     className={`navFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
