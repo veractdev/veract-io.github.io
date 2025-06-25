@@ -29,8 +29,8 @@ export default function Casestudy_ShowReel() {
     });
 
     return (
-        <div ref={sectionRef} className="h-[300vh] relative">
-            <div className='absolute -top-[8.375rem] w-full h-[8.375rem] bg-linear-to-t from-[#0D0D0D] to-[#0D0D0D]/20 backdrop-blur-[84px]' />
+        <div ref={sectionRef} className="h-[300vh] relative mt-[100vh]">
+            {/* <div className='absolute -top-[8.375rem] w-full h-[8.375rem] bg-linear-to-t from-[#0D0D0D] to-[#0D0D0D]/20 backdrop-blur-[84px]' /> */}
             <motion.div
                 className='sticky z-10 top-0 w-screen syneFont  text-[11.563rem] leading-[1em] tracking-[-0.05em] font-bold text-white text-center'
                 style={{
