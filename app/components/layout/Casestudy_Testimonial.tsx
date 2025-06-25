@@ -5,7 +5,8 @@ export default function Casestudy_Testimonial() {
     <div className="w-full h-[100vh] bg-black flex items-center justify-center ">
     <div className="max-w-[47.125rem] h-[18.75rem] bg-transparent flex">
        <div className="w-[13.56rem] relative">
-       <div className="w-full h-full rounded-[0.75rem] bg-no-repeat bg-center bg-cover shadow-[-30px_-20px_1000px_rgba(255,122,59,0.5)]" style={{ backgroundImage: "url('/Images/testimonial_avatar.png')" }}></div>            <div className="w-full h-full absolute border top-0 left-[-100%] border-t-[1px] border-b-[1px] border-l-0 border-r-0 border-white/30"></div>
+       <div className="w-full h-full rounded-[0.75rem] bg-no-repeat bg-center bg-cover shadow-[-30px_-20px_1000px_rgba(255,122,59,0.5)]" style={{ backgroundImage: "url('/Images/testimonial_avatar.png')" }}></div>         
+            <div className="w-full h-full absolute border top-0 left-[-100%] border-t-[1px] border-b-[1px] border-l-0 border-r-0 border-white/30" ></div>
             <div className="w-full h-full  absolute border top-[-49.75%] left-[-0.25%] border-l-[1px] border-r-[1px] border-t-0 border-b-0 border-white/30"></div>
             <div className="w-full h-full absolute border top-[49.75%] left-[-0.25%] border-l-[1px] border-r-[1px] border-t-0 border-b-0 border-white/30"></div>
             <div className="w-[45rem] h-[50%] absolute border top-[99.75%] left-[99.75%] border-b-0 border-t-[1px] border-l-0 border-r-0 border-white/30"></div>
