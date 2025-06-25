@@ -25,7 +25,7 @@ export default function Navbar() {
                 }
             }
         };
-        // Initial check
+        // Initial check for window size
         handleResize();
         // Add resize listener
         window.addEventListener('resize', handleResize);
