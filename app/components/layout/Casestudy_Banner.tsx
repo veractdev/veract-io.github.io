@@ -35,7 +35,7 @@ export default function Casestudy_Banner() {
   return (
     <div
       ref={textContainerRef}
-      className="fixed top-0 w-full h-[100vh] overflow-hidden perspective-[1200px] flex items-center justify-center"
+      className="fixed top-0 w-full h-[100vh] overflow-hidden perspective-[1200px] flex items-center justify-center bg-[#0d0d0d]"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
