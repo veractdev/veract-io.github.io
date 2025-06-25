@@ -1,9 +1,11 @@
 'use client'
 import React, { useEffect } from 'react'
 import Navbar from './components/layout/Navbar';
+import UserServices from './components/layout/UserServices';
 import Casestudy_Banner from './components/layout/Casestudy_Banner';
 import Casestudy_ShowReel from './components/layout/Casestudy_ShowReel';
 import Casestudy_Testimonial from './components/layout/Casestudy_Testimonial';
+import Casestudy_Key_Features from './components/layout/Casestudy_Key_Features';
 
 export default function Page() {
   return (
@@ -12,6 +14,8 @@ export default function Page() {
       <Casestudy_Banner />
       <Casestudy_ShowReel />
       <Casestudy_Testimonial/>
+      <UserServices />
+      <Casestudy_Key_Features />
     </div>
   );
 }
