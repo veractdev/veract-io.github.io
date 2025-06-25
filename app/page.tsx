@@ -10,6 +10,7 @@ export default function Page() {
       <Navbar />
       <Casestudy_Banner />
       <Casestudy_ShowReel />
+      <div className='w-full h-[100vh] bg-red-500' />
     </div>
   );
 }

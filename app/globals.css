@@ -14,6 +14,11 @@
   display: none;
 }
 
+html, body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
 .syneFont {
   font-family: "Syne", sans-serif;
 }
@@ -24,4 +29,5 @@
 
 #casestudy-banner-container {
   transform-origin: center bottom;
+  transition: all 0.3s ease;
 }
