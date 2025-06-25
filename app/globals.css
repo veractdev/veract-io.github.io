@@ -16,3 +16,38 @@
 .navFont {
   font-family: "Syne", sans-serif;
 }
+
+@layer utilities {
+  @keyframes blob-move {
+    0% {
+      left: -20rem;
+      top: -3rem;
+    }
+    100% {
+      left: 40rem;
+      top: -3rem;
+    }
+  }
+  @keyframes blob-reverse {
+    0% {
+      left: 40rem;
+      top: -3rem;
+    }
+    100% {
+      left: -20rem;
+      top: -3rem;
+    }
+  }
+  .animate-blob-move {
+    animation: blob-move 0.5s ease-in forwards;
+    left: 40rem;
+    top:-3rem;
+    opacity: 100;
+  }
+  .animate-blob-reverse {
+    animation: blob-reverse 0.5s ease-out forwards;
+    left: -20rem;
+    top:-3rem;
+    opacity: 100;
+  }
+}
