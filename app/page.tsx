@@ -13,9 +13,9 @@ export default function Page() {
       <Navbar />
       <Casestudy_Banner />
       <Casestudy_ShowReel />
-      <Casestudy_Testimonial/>
+      {/* <Casestudy_Testimonial/>
       <UserServices />
-      <Casestudy_Key_Features />
+      <Casestudy_Key_Features /> */}
     </div>
   );
 }
