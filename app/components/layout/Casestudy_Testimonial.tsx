@@ -5,6 +5,7 @@ interface TestimonialProps {
   name: string;
   designation: string;
   quotesImage: string;
+  shadow?: string;
 }
 
 export default function Casestudy_Testimonial() {
@@ -15,7 +16,8 @@ export default function Casestudy_Testimonial() {
     image : "/Images/testimonial_avatar.png",
     name: "Gwan Sik",
     designation: "Director @ Thermal Vision",
-    quotesImage: "/Images/testimonial_quotes.png"
+    quotesImage: "/Images/testimonial_quotes.png",
+    shadow : "-30px -20px 1000px rgba(255,122,59,0.5)"
   }
 
   return (
@@ -23,7 +25,7 @@ export default function Casestudy_Testimonial() {
     <img src='Images/horizantal_design.png' alt="horizantal line"/>      
     <div className="max-w-[47.125rem] h-[18.75rem] bg-transparent flex">   
       <div className="w-[13.56rem] relative">
-          <div className="w-full h-full rounded-[0.75rem] bg-no-repeat bg-center bg-cover shadow-[-30px_-20px_1000px_rgba(255,122,59,0.5)]" style={{ backgroundImage:`url(${testimonialData.image})` }}></div> 
+          <div className="w-full h-full rounded-[0.75rem] bg-no-repeat bg-center bg-cover" style={{ backgroundImage:`url(${testimonialData.image})`,boxShadow:testimonialData.shadow }}></div> 
           <img src='/Images/vertical_design.png' alt="vertical line" className="absolute left-0 top-[-15%]"/>      
           <img src='/Images/vertical_design.png' alt="vertical line" className="absolute right-0 top-[-15%]"/>   
       </div>
