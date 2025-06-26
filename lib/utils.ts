@@ -6,9 +6,11 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isMobile() {
-  return window && typeof window !== 'undefined' && window.innerWidth < 768;
+  if (typeof window === 'undefined') return false;
+  return window.innerWidth < 768;
 }
 
 export function isTablet() {
-  return window && typeof window !== 'undefined' && window.innerWidth > 768 && window.innerWidth < 1024;
+  if (typeof window === 'undefined') return false;
+  return window.innerWidth > 768 && window.innerWidth < 1024;
 }

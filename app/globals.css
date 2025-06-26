@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 @import "tailwindcss";
 @theme{
   --color-background: #0d0d0d33;
@@ -22,12 +23,50 @@ html, body {
 .syneFont {
   font-family: "Syne", sans-serif;
 }
-
+.geistFont{
+  font-family: "Geist";
+}
 .interFont {
   font-family: "Inter", sans-serif;
 }
 
-#casestudy-banner-container {
+/* #casestudy-banner-container {
   transform-origin: center bottom;
   transition: all 0.3s ease;
+} */
+
+@layer utilities {
+  @keyframes blob-move {
+    0% {
+      left: -20rem;
+      top: -3rem;
+    }
+    100% {
+      left: 40rem;
+      top: -3rem;
+    }
+  }
+  @keyframes blob-reverse {
+    0% {
+      left: 40rem;
+      top: -3rem;
+    }
+    100% {
+      left: -20rem;
+      top: -3rem;
+    }
+  }
+  .animate-blob-move {
+    animation: blob-move 0.7s ease-in forwards;
+    left: 40rem;
+    top:-3rem;
+    opacity: 100;
+  }
+  .animate-blob-reverse {
+    animation: blob-reverse 0.7s ease-out forwards;
+    left: -20rem;
+    top:-3rem;
+    opacity: 100;
+  } 
+
 }
