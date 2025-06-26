@@ -52,9 +52,7 @@ export default function UserServices() {
   ];
 
   useEffect(() => {
-    if (!window || typeof window == undefined) {
-      return;
-    }
+    if (typeof window === 'undefined') return;
     if (!isMobile()) {
       const cards = document.querySelectorAll(".group");
       const blobs = document.querySelectorAll(".blob-placeholder");
