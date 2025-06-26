@@ -34,7 +34,7 @@ export default function Casestudy_Testimonial() {
                 <div className="text-[0.875rem] text-white/50 font-medium leading-[1.2em]">{testimonialData.designation}</div>
             </div>
       </div>
-      <div className="w-[7.765rem] flex flex-col flex-end items-center justify-end"><img src={testimonialData.quotesImage} className="mb-[2.75rem]"/></div>
+      <div className="w-[7.765rem] flex flex-col flex-end items-center justify-end"><img src={testimonialData.quotesImage} alt="quotes image" className="mb-[2.75rem]"/></div>
     </div>
     <img src='Images/horizantal_design.png' alt="horizantal line"/>       
     </div>
