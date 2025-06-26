@@ -7,7 +7,7 @@ interface TestimonialProps {
   quotesImage: string;
 }
 
-export default function Casestudy_Testimonial(testimonial : TestimonialProps) {
+export default function Casestudy_Testimonial() {
 
   // Sample data for the testimonial
   const testimonialData = {
