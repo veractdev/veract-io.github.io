@@ -37,7 +37,7 @@ const features = [
 
 export default function Casestudy_Key_Features(){
     return(
-        <div className="z-1 lg:w-[1100px] md:w-[710px] w-full  py-[57px] flex flex-col lg:px-[30px] px-[20px] bg-white mt-[135px] geistFont mb-[10rem]">
+        <div className="z-1 lg:w-[1100px] md:w-[710px] w-full py-[57px] flex flex-col lg:px-[30px] px-[20px] bg-white geistFont mb-[4.5rem] md:mb-[6.25rem] lg:mb-[8.438rem]">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function Casestudy_Key_Features(){
                 <div className="pr-[26px] text-[#FF7A3B] text-[18px] font-medium interFont leading-[1.4em]">{feature.number}</div>
                 <div className="lg:w-[488px] w-full ls:text-[40px] text-[28px] lg:mr-[270px] lg:pr-[1rem] text-[#0D0D0D] font-medium leading-[1.2em]">{feature.title}</div>
                 <div className="absolute right-[14rem] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[20px] backdrop-blur-[10px]">
-                  <img src={feature.img} className="w-[280px] h-[305px]"/>
+                  <img src={feature.img} alt='placeholder image' className="w-[280px] h-[305px]"/>
                 </div>
                 <div className="lg:w-[213px] lg:pl-[20px] text-[#282828] interFont text-[14px] font-medium leading-[1.4em]">{feature.desc}</div>
               </motion.div>

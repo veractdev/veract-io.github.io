@@ -138,8 +138,7 @@ export default function UserServices() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center syneFont relative py-[8.438rem]">
-      {/* <div className="w-full h-[100vh] bg-[#0d0d0d] absolute top-0" /> */}
+    <div className="flex justify-center flex-col items-center syneFont relative py-[4.5rem] md:py-[6.25rem] lg:py-[8.438rem]">
       <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
         <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[14px] leading-[1.4em] lg:mb-[10px] mb-[2.5rem] geistFont">
           HOW WE HELPED
