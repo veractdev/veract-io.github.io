@@ -38,7 +38,7 @@ export default function Navbar() {
     return (
         <React.Fragment>
             {loaded && (
-                <div className={`flex fixed top-0 z-[100] items-center justify-center ${isMobile() ? 'py-[0.625rem_0.375rem]' : `${isTablet() ? 'py-[0.625rem_0.375rem]' : 'py-[1.875rem_0.375rem]'}`}`}>
+                <div className={`flex fixed top-0 z-[999] items-center justify-center ${isMobile() ? 'py-[0.625rem_0.375rem]' : `${isTablet() ? 'py-[0.625rem_0.375rem]' : 'py-[1.875rem_0.375rem]'}`}`}>
                     <div
                         className={`lg:w-[56.25rem] md:w-[40.813rem] w-[21.875rem] ${isHamburgerMenu ? 'h-max' : 'h-[3.5rem]'} rounded-[2.75rem] flex ${isHamburgerMenu ? 'flex-col' : 'flex-row'} items-center lg:justify-between bg-background backdrop-blur-[0.563rem] ${isHamburgerMenu ? `${isMobile() ? 'py-[6.5rem_1.25rem]' : 'py-[4.125rem_1.25rem]'}` : 'p-[0.375rem_0.438rem_0.375rem_1.25rem]'} backdrop-blur-[0.563rem] transform transform-gpu transition-all duration-300 ease-in-out`}
                     >

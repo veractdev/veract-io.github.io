@@ -11,10 +11,10 @@ export default function Page() {
   return (
     <div className='w-screen flex items-center justify-center flex-col bg-black'>
       <Navbar />
-      {/* <Casestudy_Banner />
-      <Casestudy_ShowReel /> */}
+      <Casestudy_Banner />
+      <Casestudy_ShowReel />
       <UserServices />
-      <Casestudy_Key_Features />
+      {/* <Casestudy_Key_Features /> */}
       {/* <Casestudy_Testimonial/> */}
     </div>
   );
