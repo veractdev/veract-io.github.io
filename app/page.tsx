@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from './components/layout/Navbar';
 import UserServices from './components/layout/UserServices';
 import Casestudy_Banner from './components/layout/Casestudy_Banner';
@@ -9,12 +9,12 @@ import Casestudy_Key_Features from './components/layout/Casestudy_Key_Features';
 
 export default function Page() {
   return (
-    <div className='w-screen flex items-center justify-center flex-col bg-black'>
+    <div className='w-screen flex items-center justify-center flex-col bg-[#0d0d0d]'>
       <Navbar />
-      {/* <Casestudy_Banner />
+      <Casestudy_Banner />
       <Casestudy_ShowReel />
       <UserServices />
-      <Casestudy_Key_Features /> */}
+      <Casestudy_Key_Features />
       <Casestudy_Testimonial/>
     </div>
   );
