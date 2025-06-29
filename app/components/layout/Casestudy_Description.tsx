@@ -25,17 +25,17 @@ export default function Casestudy_Description() {
     }, []);
 
     return (
-        <div className='w-full h-max p-[6.25rem_3.125rem] bg-white relative z-50 flex flex-row gap-[0.625rem] items-start justify-center'>
+        <div className='w-full h-max p-[3.125rem_1.25rem] md:p-[6.25rem_3.125rem] bg-white relative z-50 flex flex-col lg:flex-row gap-[1.25rem] md:gap-[3.125rem] lg:gap-[0.625rem] items-start justify-center'>
             <div
                 ref={glimpseRef}
-                className={`syneFont min-w-[22.688rem] text-[1.875rem] text-black font-semibold leading-[1.2em] tracking-[-0.05em] ${
+                className={`syneFont lg:min-w-[22.688rem] md:min-w-0 text-[1.875rem] text-black font-semibold leading-[1.2em] tracking-[-0.05em] ${
                     isOverflowing ? 'translate-y-[250%]' : 'translate-y-0'
                 }`}
             >
                 A small glimpse
             </div>
             <div
-                className='interFont w-full text-[2.25rem] text-[#0d0d0d]/50 font-extralight leading-[1.2em] tracking-[-0.04em]'
+                className='interFont w-full md:w-[38.25rem] lg:w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-[#0d0d0d]/50 font-extralight leading-[1.2em] tracking-[-0.04em]'
             >
                 A thermal imaging system for
                 <span
