@@ -17,7 +17,7 @@ export default function Page() {
       <CaseStudy_Challenges />
       <UserServices />
       <Casestudy_Key_Features />
-      <Casestudy_Testimonial/>
+      {/* <Casestudy_Testimonial/>   */}
     </div>
   );
 }
