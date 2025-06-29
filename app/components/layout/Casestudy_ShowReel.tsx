@@ -11,7 +11,7 @@ export default function Casestudy_ShowReel() {
         target: sectionRef,
         offset: ['start end', 'end start'],
     });
-    const rawWidth = useTransform(scrollYProgress, [0, 1], ['50%', `${isTabView ? '90%' : '115%'}`]);
+    const rawWidth = useTransform(scrollYProgress, [0, 1], ['50%', `${isTabView ? '90%' : '100%'}`]);
     const rawHeight = useTransform(scrollYProgress, [0, 1], ['200px', '700px']);
     const rawScale = useTransform(scrollYProgress, [0, 1], [1, 0.75]);
 

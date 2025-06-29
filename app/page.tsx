@@ -7,6 +7,7 @@ import Casestudy_ShowReel from './components/layout/Casestudy_ShowReel';
 import Casestudy_Testimonial from './components/layout/Casestudy_Testimonial';
 import Casestudy_Key_Features from './components/layout/Casestudy_Key_Features';
 import CaseStudy_Challenges from './components/layout/CaseStudy_Challenges';
+import Casestudy_Description from './components/layout/Casestudy_Description';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <Navbar />
       <Casestudy_Banner />
       <Casestudy_ShowReel />
+      <Casestudy_Description />
       <CaseStudy_Challenges />
       <UserServices />
       <Casestudy_Key_Features />
