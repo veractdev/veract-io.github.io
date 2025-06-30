@@ -47,7 +47,7 @@ export default function UserServices() {
       description: "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
       gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
       blobWidth: "w-[10rem]",
-      isTall: true,
+      // isTall: true,
     },
   ];
 
@@ -138,12 +138,12 @@ export default function UserServices() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center syneFont">
-      <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center">
+    <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-[#0d0d0d] py-[4.5rem] md:py-[6.25rem] lg:py-[8.438rem] border-t border-[#0d0d0d] md:border-t-0">
+      <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
         <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[14px] leading-[1.4em] lg:mb-[10px] mb-[2.5rem] geistFont">
           HOW WE HELPED
         </div>
-        <div className="lg:text-[30px] md:text-[28px] text-[24px] text-white leading-[1.2em] lg:w-[550px] md:w-[356px] w-[full] text-center lg:mb-[2.5rem] mb-[10px] tracking-[-0.05em] font-semibold">
+        <div className="lg:text-[30px] md:text-[28px] text-[24px] text-white leading-[1.2em] lg:w-[550px] md:w-[356px] w-full text-center lg:mb-[2.5rem] mb-[10px] tracking-[-0.05em] font-semibold">
           We built a <span className="text-[#4285f4]">focused solution</span> to
           transform livestock health monitoring.
         </div>
@@ -151,7 +151,7 @@ export default function UserServices() {
       <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[10px] gap-[15px] lg:w-max w-full">
         <div className="flex flex-col lg:gap-[10px] gap-[15px] lg:w-max w-full">
           {/* First row */}
-          <div className="flex lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] justify-center items-center">
+          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] justify-center items-center">
             {cards.slice(0, 2).map((card, idx) => (
               <div
                 key={card.title}
@@ -201,7 +201,7 @@ export default function UserServices() {
             ))}
           </div>
           {/* Second row */}
-          <div className="flex lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] items-center justify-center">
+          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] items-center justify-center">
             {cards.slice(2, 4).map((card, idx) => (
               <div
                 key={card.title}
@@ -253,7 +253,7 @@ export default function UserServices() {
         </div>
         {/* The tall card on the right */}
         <div
-          className={`group relative transition-all duration-700 ease-in-out lg:h-[762px] lg:w-[248px] md:w-[708px] h-[376px] w-[80%] ${isMobile() && openedArr[4] ? 'h-[191px]' : 'h-[161px]'} overflow-clip rounded-[30px] hover:bg-black`}
+          className={`group relative transition-all duration-700 ease-in-out lg:h-[762px] lg:w-[248px] md:w-[708px] md:h-[376px] w-[80%] ${isMobile() && openedArr[4] ? 'h-[191px]' : 'h-[161px]'} overflow-clip rounded-[30px] hover:bg-black`}
           onClick={() => handleCardClick(4)}
         >
           {/* Animated background for mobile click */}

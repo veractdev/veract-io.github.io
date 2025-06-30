@@ -42,7 +42,7 @@ export default function Casestudy_Banner() {
       />
       {/* text overlays */}
       <div
-        className="w-[calc(100%-2.5rem)] lg:w-auto relative z-10 text-center text-white flex flex-col items-center justify-center gap-[2.188rem] lg:gap-[.625rem]"
+        className="w-[calc(100%-2.5rem)] lg:w-auto relative z-10 text-center text-white flex flex-col items-center justify-center gap-[2.188rem] md:gap-[0.625rem] lg:gap-[.625rem]"
         style={{
           opacity: opacity,
           transform: `scale(${scale}) translateY(${translateY2}px)`,
@@ -51,15 +51,13 @@ export default function Casestudy_Banner() {
       >
         <div
           id='case-study-banner-text'
-          className='
-            syneFont lg:w-[calc(100%-6.25rem)]
-            text-[2.25rem] lg:text-[4.375rem] text-white leading-[1em] tracking-[-0.05em] font-bold text-center
+          className='syneFont lg:w-[calc(100%-6.25rem)] text-[2.25rem] md:text-[4.375rem] md:px-[6.188rem] lg:px-0 lg:text-[4.375rem] text-white leading-[1em] tracking-[-0.05em] font-bold text-center
           '
         >
           Enhancing Animal Health with Thermography
         </div>
         <div
-          className='w-[calc(100%-4.75rem)] lg:w-[37.5rem] interFont text-white text-[1rem] lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center'
+          className='w-[calc(100%-4.75rem)] md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center'
         >
           A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.
         </div>
