@@ -37,7 +37,7 @@ const features = [
 
 export default function Casestudy_Key_Features(){
     return(
-        <div className="z-1 lg:w-[1100px] md:w-[710px] w-full py-[57px] flex flex-col lg:px-[30px] px-[20px] bg-white geistFont mb-[4.5rem] md:mb-[6.25rem] lg:mb-[8.438rem]">
+        <div className="z-1 lg:w-[1100px] md:w-[710px] w-full py-[57px] flex flex-col lg:px-[30px] px-[20px] bg-white geistFont mb-[4.5rem] md:mb-[6.25rem] lg:mb-[8.438rem] lg:mt-[8.438rem]">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
