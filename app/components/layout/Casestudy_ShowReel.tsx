@@ -44,7 +44,7 @@ export default function Casestudy_ShowReel() {
     return (
         <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-[#0d0d0d] flex flex-col`}>
             <div className='flex items-center justify-center w-full'>
-                <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-175px] h-[176px] z-[100]' />
+                <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
             </div>
             <motion.div
                 id='showreel-text'

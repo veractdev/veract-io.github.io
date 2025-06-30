@@ -140,24 +140,24 @@ export default function UserServices() {
   return (
     <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-[#0d0d0d] py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-[#0d0d0d] md:border-t-0">
       <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
-        <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[14px] leading-[1.4em] lg:mb-[10px] mb-[2.5rem] geistFont">
+        <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] lg:mb-[0.625rem] mb-[2.5rem] geistFont">
           HOW WE HELPED
         </div>
-        <div className="lg:text-[30px] md:text-[28px] text-[24px] text-white leading-[1.2em] lg:w-[550px] md:w-[356px] w-full text-center lg:mb-[2.5rem] mb-[10px] tracking-[-0.05em] font-semibold">
+        <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center lg:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
           We built a <span className="text-[#4285f4]">focused solution</span> to
           transform livestock health monitoring.
         </div>
       </div>
-      <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[10px] gap-[15px] lg:w-max w-full">
-        <div className="flex flex-col lg:gap-[10px] gap-[15px] lg:w-max w-full">
+      <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
+        <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
           {/* First row */}
-          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] justify-center items-center">
+          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] justify-center items-center">
             {cards.slice(0, 2).map((card, idx) => (
               <div
                 key={card.title}
                 className={`group relative transition-all duration-700 ease-in-out ${
-                  (isMobile() || isTablet()) && openedArr[idx] ? 'h-[191px]' : (idx === 0 ? 'lg:h-[376px] lg:w-[544px]' : 'lg:h-[376px] lg:w-[272px]')
-                } md:w-[349px] md:h-[376px] w-[80%] h-[161px] overflow-clip rounded-[30px]`}
+                  (isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
+                } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
                 onClick={() => handleCardClick(idx)}
               >
                 {/* Animated background for mobile click */}
@@ -165,18 +165,18 @@ export default function UserServices() {
                   className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${
                     isMobile()|| isTablet() && openedArr[idx] ? 'scale-200' : 'scale-100'
                   } ${(isMobile() || isTablet()) && scaledArr[idx] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
-                  style={{ borderRadius: '30px' }}
+                  style={{ borderRadius: '1.875rem' }}
                 ></div>
                 {/* Overlay image or black with 50% opacity when opened on mobile */}
                 {(isMobile() || isTablet()) && openedArr[idx] && (
-                  <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '30px' }}></div>
+                  <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
                 )}
                 {/* Overlay for text clarity */}
                 <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
                 <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                 <div
                   className={
-                    `absolute lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] leading-[1.5em] text-[22px] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile()||isTablet()) && openedArr[idx]
                       ? `${card.gradient} bg-clip-text text-transparent `
                       : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
@@ -186,28 +186,28 @@ export default function UserServices() {
                   {card.title}
                 </div>
                 {(isMobile() || isTablet()) && openedArr[idx] ? (
-                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white text-[14px] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                  <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
                     {card.description}
                   </div>
                 ) : (
-                  <div className="lg:opacity-0 absolute  md:bottom-[40px] bottom-[20px] left-[20px] interFont text-white md:text-[18px] text-[14px] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                  <div className="lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
                     Learn More →
                   </div>
                 )}
-                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                   {card.description}
                 </div>
               </div>
             ))}
           </div>
           {/* Second row */}
-          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] items-center justify-center">
+          <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] items-center justify-center">
             {cards.slice(2, 4).map((card, idx) => (
               <div
                 key={card.title}
                 className={`group relative transition-all duration-700 ease-in-out ${
-                  (isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[191px]' : (idx === 1 ? 'lg:h-[376px] lg:w-[544px]' : 'lg:h-[376px] lg:w-[272px]')
-                } md:w-[349px] md:h-[376px] w-[80%] h-[161px] overflow-clip rounded-[30px]`}
+                  (isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
+                } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
                 onClick={() => handleCardClick(idx + 2)}
               >
                 {/* Animated background for mobile click */}
@@ -215,18 +215,18 @@ export default function UserServices() {
                   className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${
                     (isMobile() || isTablet()) && openedArr[idx + 2] ? 'scale-200' : 'scale-100'
                   } ${(isMobile() || isTablet()) && scaledArr[idx + 2] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
-                  style={{ borderRadius: '30px' }}
+                  style={{ borderRadius: '1.875rem' }}
                 ></div>
                 {/* Overlay image or black with 50% opacity when opened on mobile */}
                 {(isMobile() || isTablet()) && openedArr[idx + 2] && (
-                  <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '30px' }}></div>
+                  <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
                 )}
                 {/* Overlay for text clarity */}
                 <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
                 <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                 <div
                   className={
-                    `absolute lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px]  text-[22px] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile() || isTablet()) && openedArr[idx + 2]
                       ? `${card.gradient} bg-clip-text text-transparent`
                       : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
@@ -236,15 +236,15 @@ export default function UserServices() {
                   {card.title}
                 </div>
                 {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white md:text-[15px] font-light text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
+                  <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
                     {card.description}
                   </div>
                 ) : (
-                  <div className="lg:opacity-0 absolute md:bottom-[40px] bottom-[20px] left-[20px] interFont text-white md:text-[18px]  text-[14px] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                  <div className="lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
                     Learn More →
                   </div>
                 )}
-                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                   {card.description}
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function UserServices() {
         </div>
         {/* The tall card on the right */}
         <div
-          className={`group relative transition-all duration-700 ease-in-out lg:h-[762px] lg:w-[248px] md:w-[708px] md:h-[376px] w-[80%] ${isMobile() && openedArr[4] ? 'h-[191px]' : 'h-[161px]'} overflow-clip rounded-[30px] hover:bg-black`}
+          className={`group relative transition-all duration-700 ease-in-out lg:h-[47.625rem] lg:w-[15.5rem] md:w-[44.25rem] md:h-[23.5rem] w-[80%] ${isMobile() && openedArr[4] ? 'h-[11.938rem]' : 'h-[10.063rem]'} overflow-clip rounded-[1.875rem] hover:bg-black`}
           onClick={() => handleCardClick(4)}
         >
           {/* Animated background for mobile click */}
@@ -261,17 +261,17 @@ export default function UserServices() {
             className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${
               (isMobile() || isTablet()) && openedArr[4] ? 'scale-200' : 'scale-100'
             } ${(isMobile() || isTablet()) && scaledArr[4] ? 'opacity-30' : 'opacity-100'} ${cards[4].bg}`}
-            style={{ borderRadius: '30px' }}
+            style={{ borderRadius: '1.875rem' }}
           ></div>
           {/* Overlay image or black with 50% opacity when opened on mobile */}
           {(isMobile() || isTablet()) && openedArr[4] && (
-            <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '30px' }}></div>
+            <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
           )}
           <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
           <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
           <div
                   className={
-                    `absolute  lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] text-[22px] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile() || isTablet()) && openedArr[4]
                       ? `${cards[4].gradient} bg-clip-text text-transparent`
                       : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${cards[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
@@ -281,15 +281,15 @@ export default function UserServices() {
             {cards[4].title}
           </div>
           {(isMobile() || isTablet()) && openedArr[4] ? (
-            <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
+            <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
               {cards[4].description}
             </div>
           ) : (
-            <div className="lg:opacity-0 absolute md:bottom-[40px] bottom-[20px] left-[20px] interFont text-white md:text-[18px] text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
+            <div className="lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
               Learn More →
             </div>
           )}
-          <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+          <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
             {cards[4].description}
           </div>
         </div>
