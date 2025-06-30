@@ -148,8 +148,8 @@ export default function UserServices() {
           transform livestock health monitoring.
         </div>
       </div>
-      <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[10px] gap-[15px] w-full">
-        <div className="flex flex-col lg:gap-[10px] gap-[15px] w-full">
+      <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[10px] gap-[15px] lg:w-max w-full">
+        <div className="flex flex-col lg:gap-[10px] gap-[15px] lg:w-max w-full">
           {/* First row */}
           <div className="flex lg:flex-row md:flex-row flex-col lg:gap-[10px] gap-[15px] justify-center items-center">
             {cards.slice(0, 2).map((card, idx) => (
@@ -176,17 +176,17 @@ export default function UserServices() {
                 <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                 <div
                   className={
-                    `absolute md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] leading-[1.5em] text-[22px] md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] leading-[1.5em] text-[22px] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile()||isTablet()) && openedArr[idx]
                       ? `${card.gradient} bg-clip-text text-transparent `
-                      : `text-white group-hover:top-[3rem] group-hover:left-[3rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
+                      : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
                   }
                   style={{ zIndex: 30 }}
                 >
                   {card.title}
                 </div>
                 {(isMobile() || isTablet()) && openedArr[idx] ? (
-                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
+                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white text-[14px] font-light tracking-[-0.04em] leading-[1.5em] z-30">
                     {card.description}
                   </div>
                 ) : (
@@ -194,7 +194,7 @@ export default function UserServices() {
                     Learn More →
                   </div>
                 )}
-                <div className="absolute bottom-[3rem] left-[1rem] pr-[2rem] md:text-[15px] md:font-light text-[15px] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[3rem] z-30">
+                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                   {card.description}
                 </div>
               </div>
@@ -226,17 +226,17 @@ export default function UserServices() {
                 <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                 <div
                   className={
-                    `absolute md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px]  text-[22px] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px]  text-[22px] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile() || isTablet()) && openedArr[idx + 2]
                       ? `${card.gradient} bg-clip-text text-transparent`
-                      : `text-white group-hover:top-[3rem] group-hover:left-[3rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
+                      : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
                   }
                   style={{ zIndex: 30 }}
                 >
                   {card.title}
                 </div>
                 {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white md:text-[15px] md:font-light text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
+                  <div className="absolute md:bottom-[40px] bottom-[20px] left-[20px] mr-[20px] interFont text-white md:text-[15px] font-light text-[14px] tracking-[-0.04em] leading-[1.5em] z-30">
                     {card.description}
                   </div>
                 ) : (
@@ -244,7 +244,7 @@ export default function UserServices() {
                     Learn More →
                   </div>
                 )}
-                <div className="absolute md:bottom-[40px] bottom-[20px] left-[1rem] pr-[2rem] text-[15px] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[3rem] z-30">
+                <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                   {card.description}
                 </div>
               </div>
@@ -271,10 +271,10 @@ export default function UserServices() {
           <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
           <div
                   className={
-                    `absolute md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] text-[22px] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                    `absolute  lg:top-[12px] md:top-[12px] top-[20px] left-[20px] lg:text-[26px] md:text-[26px] text-[22px] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
                     ((isMobile() || isTablet()) && openedArr[4]
                       ? `${cards[4].gradient} bg-clip-text text-transparent`
-                      : `text-white group-hover:top-[3rem] group-hover:left-[3rem] group-hover:${cards[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
+                      : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${cards[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
                   }
                   style={{ zIndex: 30 }}
           >
@@ -289,7 +289,7 @@ export default function UserServices() {
               Learn More →
             </div>
           )}
-          <div className="absolute bottom-[3rem] left-[1rem] pr-[2rem] md:text-[15px] md:font-light text-[14px] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[3rem] z-30">
+          <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[40px] bottom-[20px] left-[1rem] text-[15px] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
             {cards[4].description}
           </div>
         </div>
