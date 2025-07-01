@@ -8,8 +8,8 @@ export default function Casestudy_Banner() {
   const [rotateX, setRotateX] = useState<number>(0);
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
-
   const [loaded, setLoaded] = useState(false);
+  const [animationDelay, setAnimationDelay] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,10 @@ export default function Casestudy_Banner() {
   }, []);
 
   useEffect(() => {
-    setLoaded(true)
+    setLoaded(true);
+    setTimeout(() => {
+      setAnimationDelay(0.3);
+    }, 100);
   }, [])
 
   return (
@@ -57,13 +60,13 @@ export default function Casestudy_Banner() {
       >
         <div
           id='case-study-banner-text'
-          className='syneFont lg:w-[calc(100%-6.25rem)] text-[2.25rem] md:text-[4.375rem] md:px-[6.188rem] lg:px-0 lg:text-[4.375rem] text-white leading-[1em] tracking-[-0.05em] font-bold text-center
+          className='syneFont fadeInAnimation lg:w-[calc(100%-6.25rem)] text-[2.25rem] md:text-[4.375rem] md:px-[6.188rem] lg:px-0 lg:text-[4.375rem] text-white leading-[1em] tracking-[-0.05em] font-bold text-center
           '
         >
           Enhancing Animal Health with Thermography
         </div>
         <div
-          className='w-[calc(100%-4.75rem)] md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center'
+          className={`w-[calc(100%-4.75rem)] ${animationDelay ? 'fadeInAnimation' : 'opacity-0'} md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center`}
         >
           A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.
         </div>
