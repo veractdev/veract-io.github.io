@@ -66,7 +66,7 @@ export default function Casestudy_Key_Features(){
               >
                 <div className="pr-[1.625rem] text-[#FF7A3B] text-[1.125rem] font-medium interFont leading-[1.4em]">{feature.number}</div>
                 <div className="lg:w-[30.5rem] w-full ls:text-[2.5rem] text-[1.75rem] lg:mr-[16.875rem] lg:pr-[9rem] text-[#0D0D0D] font-medium leading-[1.2em] geistFont">{feature.title}</div>
-                <div className="absolute right-[18rem] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
+                <div className="absolute right-[18rem] top-[-7rem] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
                   <img src={feature.img} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image'/>
                 </div>
                 <div className="lg:w-[13.313rem] lg:pl-[1.25rem] text-[#282828] interFont text-[0.875rem] font-medium leading-[1.4em]">{feature.desc}</div>
