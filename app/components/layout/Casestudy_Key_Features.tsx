@@ -58,7 +58,7 @@ export default function Casestudy_Key_Features(){
           {features.map((feature, idx) =>
               <motion.div
                 key={feature.number}
-                className="group relative flex lg:flex-row md:flex-col flex-col lg:items-center items-start md:py-[1.875rem] py-[3.125rem] lg:opacity-60 hover:!opacity-100 border-b-[1px] border-[#282828] lg:gap-0 gap-[0.938rem]"
+                className="group relative flex lg:flex-row md:flex-col flex-col lg:items-center items-start md:py-[1.875rem] py-[3.125rem] lg:opacity-60 hover:!opacity-100 border-b-[0.063rem] border-[#282828] lg:gap-0 gap-[0.938rem]"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: isMobile() || isTablet() ? 1 :0.6, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}

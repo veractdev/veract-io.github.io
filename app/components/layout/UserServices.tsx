@@ -148,12 +148,12 @@ export default function UserServices() {
 
   return (
     loaded && (
-      <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-[#0d0d0d] py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-[#0d0d0d] md:border-t-0">
+      <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-[#0d0d0d] py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-[#0d0d0d] md:border-t-0 lg:mt-[8.563rem]">
         <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
-          <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] lg:mb-[0.625rem] mb-[2.5rem] geistFont">
+          <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
             HOW WE HELPED
           </div>
-          <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center lg:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
+          <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
             We built a <span className="text-[#4285f4]">focused solution</span> to
             transform livestock health monitoring.
           </div>

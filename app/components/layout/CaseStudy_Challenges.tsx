@@ -62,7 +62,7 @@ export default function CaseStudy_Challenges() {
                         <span className='text-[#868586]'>{' '}livestock health with accuracy, reliability, and real-time insights.</span>
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row lg:flex-row gap-[0.625rem] md:gap-[3.125rem] lg:gap-[3.125rem] ml-0 lg:ml-[13%] items-start md:items-center justify-center md:justify-between lg:items-center'>
+                <div className='flex flex-col md:flex-row lg:flex-row gap-[0.625rem] md:gap-[3.125rem] lg:gap-[2.125rem] ml-0 lg:ml-[11.5%] items-start md:items-center justify-center md:justify-between lg:items-center'>
                     <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start md:items-center lg:items-center justify-center'>
                         {challenges.slice(0, 3).map((challenge, index) => (
                             <div key={index} className='flex flex-row items-center justify-center gap-[.875rem]'>

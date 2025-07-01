@@ -12,9 +12,7 @@ export default function Navbar() {
     const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
-        // if (window && typeof window !== 'undefined') {
-            setLoaded(true);
-        // }
+        setLoaded(true);
     }, [])
 
     useEffect(() => {
@@ -54,7 +52,6 @@ export default function Navbar() {
                             {navItems.map((item) => (
                                 <div
                                     key={item.id}
-                                    // first:ml-[210px]
                                     className={`${isHamburgerMenu ? '' : ' max-sm:hidden max-md:hidden max-lg:hidden'} relative flex items-center justify-center group`}
                                     onClick={() => {
                                         setSelectedNav(item.id)

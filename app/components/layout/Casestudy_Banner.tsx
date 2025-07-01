@@ -32,7 +32,7 @@ export default function Casestudy_Banner() {
   return (
     loaded && (
     <div
-      className="fixed top-0 w-full h-[100vh] overflow-hidden perspective-[1200px] flex items-center justify-center bg-[#0d0d0d]"
+      className="fixed top-0 w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-[#0d0d0d]"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}

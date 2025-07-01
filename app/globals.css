@@ -34,11 +34,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* #casestudy-banner-container {
-  transform-origin: center bottom;
-  transition: all 0.3s ease;
-} */
-
 @layer utilities {
   @keyframes blob-move {
     0% {
@@ -85,7 +80,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 #case-study-banner-text {
