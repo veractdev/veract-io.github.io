@@ -12,9 +12,9 @@ export default function Navbar() {
     const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
-        if (window && typeof window !== 'undefined') {
+        // if (window && typeof window !== 'undefined') {
             setLoaded(true);
-        }
+        // }
     }, [])
 
     useEffect(() => {
