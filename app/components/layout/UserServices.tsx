@@ -53,61 +53,63 @@ export default function UserServices() {
   ];
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (!isMobile() && !isTablet()) {
-      const cards = document.querySelectorAll(".group");
-      const blobs = document.querySelectorAll(".blob-placeholder");
+    if (loaded) {
+      if (typeof window === 'undefined') return;
+      if (!isMobile() && !isTablet()) {
+        const cards = document.querySelectorAll(".services-group");
+        const blobs = document.querySelectorAll(".blob-placeholder");
 
-      let lastActiveIndex: number | null = null;
+        let lastActiveIndex: number | null = null;
 
-      const handleMouseOver = (idx: number) => {
-        // Reverse previous
-        if (lastActiveIndex !== null && lastActiveIndex !== idx) {
-          blobs[lastActiveIndex]?.classList.remove("animate-blob-move");
-          blobs[lastActiveIndex]?.classList.add("animate-blob-reverse");
-        }
-
-        // Animate current
-        blobs[idx]?.classList.remove("animate-blob-reverse");
-        blobs[idx]?.classList.add("animate-blob-move");
-
-        lastActiveIndex = idx;
-      };
-
-      const handleMouseLeave = (idx: number) => {
-        blobs[idx]?.classList.remove("animate-blob-move");
-        blobs[idx]?.classList.add("animate-blob-reverse");
-
-        lastActiveIndex = null;
-      };
-
-      cards.forEach((card, idx) => {
-        const cardEl = card as HTMLElement;
-
-        const mouseOverHandler = () => handleMouseOver(idx);
-        const mouseLeaveHandler = () => handleMouseLeave(idx);
-
-        cardEl.addEventListener("mouseenter", mouseOverHandler);
-        cardEl.addEventListener("mouseleave", mouseLeaveHandler);
-
-        // Save both for cleanup
-        (cardEl as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void })._mouseOverHandler = mouseOverHandler;
-        (cardEl as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void })._mouseLeaveHandler = mouseLeaveHandler;
-      });
-
-      return () => {
-        cards.forEach((card) => {
-          const cardEl = card as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void };
-          if (cardEl._mouseOverHandler) {
-            cardEl.removeEventListener("mouseenter", cardEl._mouseOverHandler);
+        const handleMouseOver = (idx: number) => {
+          // Reverse previous
+          if (lastActiveIndex !== null && lastActiveIndex !== idx) {
+            blobs[lastActiveIndex]?.classList.remove("animate-blob-move");
+            blobs[lastActiveIndex]?.classList.add("animate-blob-reverse");
           }
-          if (cardEl._mouseLeaveHandler) {
-            cardEl.removeEventListener("mouseleave", cardEl._mouseLeaveHandler);
-          }
+
+          // Animate current
+          blobs[idx]?.classList.remove("animate-blob-reverse");
+          blobs[idx]?.classList.add("animate-blob-move");
+
+          lastActiveIndex = idx;
+        };
+
+        const handleMouseLeave = (idx: number) => {
+          blobs[idx]?.classList.remove("animate-blob-move");
+          blobs[idx]?.classList.add("animate-blob-reverse");
+
+          lastActiveIndex = null;
+        };
+
+        cards.forEach((card, idx) => {
+          const cardEl = card as HTMLElement;
+
+          const mouseOverHandler = () => handleMouseOver(idx);
+          const mouseLeaveHandler = () => handleMouseLeave(idx);
+
+          cardEl.addEventListener("mouseenter", mouseOverHandler);
+          cardEl.addEventListener("mouseleave", mouseLeaveHandler);
+
+          // Save both for cleanup
+          (cardEl as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void })._mouseOverHandler = mouseOverHandler;
+          (cardEl as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void })._mouseLeaveHandler = mouseLeaveHandler;
         });
-      };
+
+        return () => {
+          cards.forEach((card) => {
+            const cardEl = card as HTMLElement & { _mouseOverHandler?: () => void; _mouseLeaveHandler?: () => void };
+            if (cardEl._mouseOverHandler) {
+              cardEl.removeEventListener("mouseenter", cardEl._mouseOverHandler);
+            }
+            if (cardEl._mouseLeaveHandler) {
+              cardEl.removeEventListener("mouseleave", cardEl._mouseLeaveHandler);
+            }
+          });
+        };
+      }
     }
-  }, []);
+  }, [loaded]);
 
   // Handle card click for open/close with delayed bg swap
   const handleCardClick = (idx: number) => {
@@ -165,7 +167,7 @@ export default function UserServices() {
               {cards.slice(0, 2).map((card, idx) => (
                 <div
                   key={card.title}
-                  className={`group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
+                  className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
                     } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
                   onClick={() => handleCardClick(idx)}
                 >
@@ -181,7 +183,7 @@ export default function UserServices() {
                   )}
                   {/* Overlay for text clarity */}
                   <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
+                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-201`}></div>
                   <div
                     className={
                       `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
@@ -213,7 +215,7 @@ export default function UserServices() {
               {cards.slice(2, 4).map((card, idx) => (
                 <div
                   key={card.title}
-                  className={`group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
+                  className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
                     } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
                   onClick={() => handleCardClick(idx + 2)}
                 >
@@ -259,7 +261,7 @@ export default function UserServices() {
           </div>
           {/* The tall card on the right */}
           <div
-            className={`group relative transition-all duration-700 ease-in-out lg:h-[47.625rem] lg:w-[15.5rem] md:w-[44.25rem] md:h-[23.5rem] w-[80%] ${isMobile() && openedArr[4] ? 'h-[11.938rem]' : 'h-[10.063rem]'} overflow-clip rounded-[1.875rem] hover:bg-black`}
+            className={`group services-group relative transition-all duration-700 ease-in-out lg:h-[47.625rem] lg:w-[15.5rem] md:w-[44.25rem] md:h-[23.5rem] w-[80%] ${isMobile() && openedArr[4] ? 'h-[11.938rem]' : 'h-[10.063rem]'} overflow-clip rounded-[1.875rem] hover:bg-black`}
             onClick={() => handleCardClick(4)}
           >
             {/* Animated background for mobile click */}
