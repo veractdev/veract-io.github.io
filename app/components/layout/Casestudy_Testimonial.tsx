@@ -18,7 +18,7 @@ export default function Casestudy_Testimonial() {
     image: "https://www.veract.io/images/harepriyaa.jpeg",
     name: "Gwan Sik",
     designation: "Director @ Thermal Vision",
-    quotesImage: "/Images/testimonial_quotes.png",
+    quotesImage: "/Images/testimonial_quotes.svg",
     shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
   };
 
@@ -93,7 +93,7 @@ export default function Casestudy_Testimonial() {
           <img
             src={testimonialData.quotesImage}
             alt="Quotes"
-            className="absolute lg:right-[-3.125rem] lg:bottom-[2.25rem] md:right-[-1.25rem] md:bottom-[2.25rem] hidden lg:block md:block"
+            className="absolute lg:right-[-6.125rem] lg:bottom-[2.25rem] md:right-[-1.25rem] md:bottom-[2.25rem] hidden lg:block md:block"
           />
         </div>
       </div>
