@@ -116,9 +116,9 @@ export default function Navbar() {
                                     <div
                                         className={`syneFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
                                             tracking-[-0.05em] text-nowrap ${selectedNav === item.id
-                                                ? "text-[#4285F4]"
-                                                : "text-[#FFFFFF]"
-                                            } group-hover:text-[#4285F4] font-semibold cursor-pointer 
+                                                ? "text-primary-blue"
+                                                : "text-white"
+                                            } group-hover:text-primary-blue font-semibold cursor-pointer 
                                             transition-all duration-300 rounded-[1.625rem] 
                                             group-hover:bg-[#FFFFFF1A]`}
                                     >
@@ -128,7 +128,7 @@ export default function Navbar() {
                                         className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${selectedNav === item.id
                                             ? "w-[calc(100%-3.563rem)]"
                                             : "w-0"
-                                            } group-hover:w-[calc(100%-3.563rem)] bg-[#4285F4] transition-all duration-300`}
+                                            } group-hover:w-[calc(100%-3.563rem)] bg-primary-blue transition-all duration-300`}
                                     />
                                 </div>
                             ))}
@@ -136,7 +136,7 @@ export default function Navbar() {
                                 className={`${isHamburgerMenu
                                     ? `${isMobile() ? "mt-[3.875rem]" : "mt-[3.125rem]"}`
                                     : "max-sm:hidden max-md:hidden max-lg:hidden"
-                                    } syneFont bg-white text-black font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer hover:bg-[#FF7A3B] hover:text-white transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
+                                    } syneFont bg-[#FFFFFF] text-black font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer hover:bg-orange hover:text-white transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
                                     } text-nowrap`}
                             >
                                 Talk to us
@@ -157,15 +157,15 @@ export default function Navbar() {
                                     } justify-center transition-all duration-300 ease-in`}
                             >
                                 <div
-                                    className={`w-[1.375rem] h-[0.125rem] bg-white transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute rotate-45" : ""
+                                    className={`w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute rotate-45" : ""
                                         }`}
                                 />
                                 <div
                                     className={`${isHamburgerMenu ? "hidden" : ""
-                                        } w-[.75rem] h-[0.125rem] bg-white`}
+                                        } w-[.75rem] h-[0.125rem] bg-[#FFFFFF]`}
                                 />
                                 <div
-                                    className={`w-[1.375rem] h-[0.125rem] bg-white transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute -rotate-45" : ""
+                                    className={`w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute -rotate-45" : ""
                                         }`}
                                 />
                             </div>

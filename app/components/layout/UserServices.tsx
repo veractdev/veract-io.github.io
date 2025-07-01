@@ -2,7 +2,7 @@
 import { isMobile, isTablet } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
-export default function UserServices() {    
+export default function UserServices() {
   const cardCount = 5;
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
@@ -148,13 +148,13 @@ export default function UserServices() {
 
   return (
     loaded && (
-      <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-[#0d0d0d] py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-[#0d0d0d] md:border-t-0 lg:mt-[8.563rem]">
+      <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-primary-text py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-primary-text md:border-t-0 lg:mt-[8.563rem]">
         <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
           <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
             HOW WE HELPED
           </div>
           <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
-            We built a <span className="text-[#4285f4]">focused solution</span> to
+            We built a <span className="text-primary-blue">focused solution</span> to
             transform livestock health monitoring.
           </div>
         </div>
@@ -181,7 +181,7 @@ export default function UserServices() {
                   )}
                   {/* Overlay for text clarity */}
                   <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
+                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                   <div
                     className={
                       `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
@@ -202,7 +202,7 @@ export default function UserServices() {
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function UserServices() {
                   )}
                   {/* Overlay for text clarity */}
                   <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
+                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                   <div
                     className={
                       `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
@@ -250,7 +250,7 @@ export default function UserServices() {
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function UserServices() {
               <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
             )}
             <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-            <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white/5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
+            <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
             <div
               className={
                 `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
@@ -294,7 +294,7 @@ export default function UserServices() {
                 Learn More →
               </div>
             )}
-            <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white/80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+            <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
               {cards[4].description}
             </div>
           </div>

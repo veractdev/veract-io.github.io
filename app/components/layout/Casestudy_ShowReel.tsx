@@ -56,13 +56,13 @@ export default function Casestudy_ShowReel() {
 
     return (
         loaded && (
-            <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-[#0d0d0d] flex flex-col`}>
+            <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col`}>
                 <div className='flex items-center justify-center w-full'>
                     <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
                 </div>
                 <motion.div
                     id='showreel-text'
-                    className={`static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-[#0d0d0d]`}
+                    className={`static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
                     style={{
                         // scale,
                         scale: springTextScale,
@@ -76,7 +76,7 @@ export default function Casestudy_ShowReel() {
                             scale: springScale,
                             transformOrigin: 'center center',
                         }}
-                        className={`bg-white rounded-xl w-screen h-screen relative z-11`}
+                        className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11`}
                     />
                 </div>
                 <div className='flex items-center justify-center'>

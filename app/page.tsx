@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     loaded && (
-    <div className='w-screen flex items-center justify-center flex-col bg-[#0d0d0d]'>
+    <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
       <Navbar />
       <Casestudy_Banner />
       <Casestudy_ShowReel />

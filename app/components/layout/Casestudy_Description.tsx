@@ -35,7 +35,7 @@ export default function Casestudy_Description() {
     loaded && (
       <div
         ref={containerRef}
-        className='w-full h-max p-[3.125rem_1.25rem] md:p-[6.25rem_3.125rem] bg-white relative z-50 flex lg:flex-row flex-col gap-[1.25rem] md:gap-[3.125rem] lg:gap-[0.625rem] items-start justify-center'
+        className='w-full h-max p-[3.125rem_1.25rem] md:p-[6.25rem_3.125rem] bg-[#FFFFFF] relative z-50 flex lg:flex-row flex-col gap-[1.25rem] md:gap-[3.125rem] lg:gap-[0.625rem] items-start justify-center'
       >
         <motion.div
           initial={{ y: '0%' }}
@@ -46,12 +46,12 @@ export default function Casestudy_Description() {
           A small glimpse
         </motion.div>
 
-        <div className='interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-[#0d0d0d]/50 font-extralight leading-[1.2em] tracking-[-0.04em]'>
+        <div className='interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-primary-text-50 font-extralight leading-[1.2em] tracking-[-0.04em]'>
           A thermal imaging system for
-          <span className='text-[#0d0d0d]'> monitoring buffalo udder health</span> using
-          <span className='text-[#FF7A3B]'> infrared thermography</span>
-          <span className='text-[#0d0d0d]'> —</span>
-          <span className='text-[#0d0d0d]/70'>
+          <span className='text-primary-text'> monitoring buffalo udder health</span> using
+          <span className='text-orange'> infrared thermography</span>
+          <span className='text-primary-text'> —</span>
+          <span className='text-primary-text-70'>
             enabling early mastitis detection, temperature analysis, and session-based tracking
           </span>{' '}
           with offline support and seamless integration into veterinary workflows.
