@@ -1,5 +1,4 @@
 'use client';
-import { isMobile, isTablet } from '@/lib/utils';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
@@ -7,6 +6,7 @@ export default function Casestudy_ShowReel() {
     const sectionRef = useRef(null);
     const [isMobileView, setIsMobileView] = useState(false);
     const [isTabView, setTabView] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ['start end', 'end start'],
@@ -41,7 +41,12 @@ export default function Casestudy_ShowReel() {
         }
     }, [])
 
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
+
     return (
+        loaded && (
         <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-[#0d0d0d] flex flex-col`}>
             <div className='flex items-center justify-center w-full'>
                 <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
@@ -70,5 +75,6 @@ export default function Casestudy_ShowReel() {
                 </div>
             </div>
         </div>
+        )
     );
 }

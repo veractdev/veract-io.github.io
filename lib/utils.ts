@@ -8,7 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 export function isMobile() {
   // if (typeof window === 'undefined') return false;
   // return window.innerWidth < 768;
-  if(window && typeof window !== undefined ) {
+  if (!window) return false
+  if (window && typeof window !== undefined) {
     return window.innerWidth < 768
   }
 }
@@ -16,7 +17,8 @@ export function isMobile() {
 export function isTablet() {
   // if (typeof window === 'undefined') return false;
   // return window.innerWidth >= 768 && window.innerWidth <= 1024;
-  if(window && typeof window !== undefined) {
+  if (!window) return false
+  if (window && typeof window !== undefined) {
     return window.innerWidth >= 768 && window.innerWidth <= 1024;
   }
 }

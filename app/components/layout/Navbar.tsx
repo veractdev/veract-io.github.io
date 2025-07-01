@@ -12,11 +12,11 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
 
-  useEffect(() => {
-    if (window && typeof window !== "undefined") {
-      setLoaded(true);
-    }
-  }, []);
+    useEffect(() => {
+        // if (window && typeof window !== 'undefined') {
+            setLoaded(true);
+        // }
+    }, [])
 
   useEffect(() => {
     const handleResize = () => {

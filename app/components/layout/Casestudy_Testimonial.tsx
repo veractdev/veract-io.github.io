@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 
 interface TestimonialProps {
   testimonial: string;
@@ -10,16 +11,23 @@ interface TestimonialProps {
 }
 
 export default function Casestudy_Testimonial() {
+  const [loaded, setLoaded] = useState(false)
   const testimonialData: TestimonialProps = {
     testimonial: `"Veract brought our vision to life with precision. The voice-to-text AI solution exceeded expectations—intuitive, responsive, and impactful. Our users love it. A truly seamless collaboration"`,
-    image: "/Images/testimonial_avatar.png",
+    // image: "/Images/testimonial_avatar.png",
+    image: "https://www.veract.io/images/harepriyaa.jpeg",
     name: "Gwan Sik",
     designation: "Director @ Thermal Vision",
     quotesImage: "/Images/testimonial_quotes.png",
     shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
   };
 
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   return (
+    loaded && (
     <div className="interFont w-full h-[100vh] flex flex-col justify-center items-center syneFont relative z-200 bg-[#0d0d0d] pb-[5rem]">
       <img
         src="Images/horizantal_design.png"
@@ -95,5 +103,6 @@ export default function Casestudy_Testimonial() {
         className="hidden lg:block md:block"
       />
     </div>
+    )
   );
 }

@@ -1,6 +1,9 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 
 export default function CaseStudy_Challenges() {
+
+    const [loaded, setLoaded] = useState(false)
 
     const challenges = [
         {
@@ -28,7 +31,13 @@ export default function CaseStudy_Challenges() {
             title: 'Enable Seamless Communication',
         },
     ]
+
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
+
     return (
+        loaded && (
         <div className='w-full h-max flex flex-col lg:flex-row items-start justify-center md:gap-[3.125rem] p-[4.5rem_1.25rem_0_1.25rem] md:p-[10.25rem_3.25rem_0_3.25rem] lg:p-[4rem_0_0.125rem_0] relative z-50 bg-[#0d0d0d]'>
             <div className='w-full lg:w-auto flex flex-col items-start justify-center gap-[1.875rem] md:gap-[2.5rem]'>
                 <div
@@ -73,5 +82,6 @@ export default function CaseStudy_Challenges() {
                 </div>
             </div>
         </div>
+        )
     )
 }

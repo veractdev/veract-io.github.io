@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 
 export default function Casestudy_Banner() {
@@ -9,6 +8,8 @@ export default function Casestudy_Banner() {
   const [rotateX, setRotateX] = useState<number>(0);
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
+
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +25,12 @@ export default function Casestudy_Banner() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   return (
+    loaded && (
     <div
       className="fixed top-0 w-full h-[100vh] overflow-hidden perspective-[1200px] flex items-center justify-center bg-[#0d0d0d]"
       style={{ transformStyle: 'preserve-3d' }}
@@ -62,7 +68,7 @@ export default function Casestudy_Banner() {
           A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.
         </div>
       </div>
-    </div>
-
+      </div>
+    )
   )
 }

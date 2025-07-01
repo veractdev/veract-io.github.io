@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { isMobile, isTablet } from '@/lib/utils'
 
@@ -36,9 +37,16 @@ const features = [
 ]
 
 export default function Casestudy_Key_Features(){
-    return(
-        <div className="z-1 lg:w-[68.75rem] md:w-[44.375rem] w-full py-[3.563rem] flex flex-col lg:px-[1.875rem] px-[1.25rem] bg-white geistFont mb-[4.5rem] md:mb-[6.25rem] lg:mb-[8.438rem] lg:mt-[8.438rem]">
-          <motion.div
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
+  return(
+    loaded && (
+      <div className="z-1 lg:w-[68.75rem] md:w-[44.375rem] w-full py-[3.563rem] flex flex-col lg:px-[1.875rem] px-[1.25rem] bg-white geistFont mb-[4.5rem] md:mb-[6.25rem] lg:mb-[8.438rem] lg:mt-[8.438rem]">
+        <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -67,4 +75,5 @@ export default function Casestudy_Key_Features(){
         </div>
       </div>
     )
+  )
 }
