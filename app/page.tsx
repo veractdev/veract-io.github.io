@@ -1,44 +1,29 @@
-// 'use client'
-// import React, { useEffect, useState } from 'react'
-// import Navbar from './components/layout/Navbar';
-// import UserServices from './components/layout/UserServices';
-// import Casestudy_Banner from './components/layout/Casestudy_Banner';
-// import Casestudy_ShowReel from './components/layout/Casestudy_ShowReel';
-// import Casestudy_Testimonial from './components/layout/Casestudy_Testimonial';
-// import Casestudy_Key_Features from './components/layout/Casestudy_Key_Features';
-// import CaseStudy_Challenges from './components/layout/CaseStudy_Challenges';
-// import Casestudy_Description from './components/layout/Casestudy_Description';
-
-// export default function Page() {
-//   const [loaded, setLoaded] = useState(false)
-
-//   useEffect(() => {
-//     setLoaded(true)
-//   }, [])
-
-//   return (
-//     loaded && (
-//     <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
-//       <Navbar />
-//       <Casestudy_Banner />
-//       <Casestudy_ShowReel />
-//       <Casestudy_Description />
-//       <CaseStudy_Challenges />
-//       <UserServices />
-//       <Casestudy_Key_Features />
-//       <Casestudy_Testimonial/>  
-//     </div>
-//     )
-//   );
-// }
-
 import React from 'react'
 import Navbar from './components/layout/Navbar'
+import Banner from './components/layout/Landing_Page/Banner'
+import ShowReel from './components/layout/Landing_Page/ShowReel'
+import About_Us from './components/layout/Landing_Page/About_Us'
+import Advantages from './components/layout/Landing_Page/Advantages'
+import Services from './components/layout/Landing_Page/Services'
+import We_Work_With from './components/layout/Landing_Page/We_Work_With'
+import Testimonials from './components/layout/Landing_Page/Testimonials'
+import Footer from './components/layout/Landing_Page/Footer'
+import LenisProvider from './LenisProvider'
 
 export default function Page() {
   return (
-    <React.Fragment>
-      <Navbar />
-    </React.Fragment>
+    <LenisProvider>
+      <div className='w-full flex flex-col items-center justify-center'>
+        <Navbar />
+        <Banner />
+        <ShowReel />
+        <About_Us />
+        <Advantages />
+        <Services />
+        <We_Work_With />
+        <Testimonials />
+        <Footer />
+      </div>
+    </LenisProvider>
   )
 }
