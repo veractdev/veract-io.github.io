@@ -19,50 +19,6 @@ export default function UserServices({ user_services_props }: { user_services_pr
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
   const [loaded, setLoaded] = useState(false);
 
-  // Card data array
-  // const cards = [
-  //   {
-  //     title: "Health Issue Detection",
-  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-  //     description:
-  //       "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
-  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-  //     blobWidth: "w-[8rem]",
-  //   },
-  //   {
-  //     title: "Seamless Integration",
-  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-  //     description:
-  //       "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
-  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-  //     blobWidth: "w-[8rem]",
-  //   },
-  //   {
-  //     title: "Health Monitoring System",
-  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-  //     description:
-  //       "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
-  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-  //     blobWidth: "w-[10rem]",
-  //   },
-  //   {
-  //     title: "Actionable Insights",
-  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-  //     description:
-  //       "Facilitated timely, data-backed decisions to improve overall animal well-being.",
-  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-  //     blobWidth: "w-[10rem]",
-  //   },
-  //   {
-  //     title: "User Experience Focus",
-  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-  //     description: "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
-  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-  //     blobWidth: "w-[10rem]",
-  //     // isTall: true,
-  //   },
-  // ];
-
   useEffect(() => {
     if (loaded) {
       if (typeof window === 'undefined') return;
@@ -166,9 +122,7 @@ export default function UserServices({ user_services_props }: { user_services_pr
           <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
             {user_services_props.title}
           </div>
-          {/* <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold"> */}
           <div dangerouslySetInnerHTML={{ __html: user_services_props.description }} />
-          {/* </div> */}
         </div>
         <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
           <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">

@@ -12,15 +12,8 @@ type testimonial_props = {
 }
 
 export default function Casestudy_Testimonial({ testimonial_props }: { testimonial_props: testimonial_props }) {
+  
   const [loaded, setLoaded] = useState(false)
-  // const testimonialData: testimonial_props = {
-  //   testimonial: testimonial_props.testimonial,
-  //   image: testimonial_props.image,
-  //   name: testimonial_props.name,
-  //   designation: testimonial_props.designation,
-  //   quotesImage: "/Images/testimonial_quotes.svg",
-  //   shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
-  // };
 
   useEffect(() => {
     setLoaded(true)

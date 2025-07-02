@@ -17,33 +17,6 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
 
     const [loaded, setLoaded] = useState(false)
 
-    const challenges = [
-        {
-            id: 1,
-            title: 'Enable Seamless Communication',
-        },
-        {
-            id: 2,
-            title: 'Enable Seamless Communication',
-        },
-        {
-            id: 3,
-            title: 'Enable Seamless Communication',
-        },
-        {
-            id: 4,
-            title: 'Enable Seamless Communication',
-        },
-        {
-            id: 5,
-            title: 'Enable Seamless Communication',
-        },
-        {
-            id: 6,
-            title: 'Enable Seamless Communication',
-        },
-    ]
-
     useEffect(() => {
         setLoaded(true)
     }, [])

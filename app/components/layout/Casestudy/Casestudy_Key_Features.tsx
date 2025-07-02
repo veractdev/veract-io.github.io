@@ -3,39 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { isMobile, isTablet } from '@/lib/utils'
 
-// const features = [
-//   {
-//     number: '[01]',
-//     title: 'Thermal Imaging Integration',
-//     img: '/Images/CaseStudies/Thermal/img1.jpg',
-//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-//   },
-//   {
-//     number: '[02]',
-//     title: 'Real-Time Data Processing',
-//     img: '/Images/CaseStudies/Thermal/img1.jpg',
-//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-//   },
-//   {
-//     number: '[03]',
-//     title: 'Camera & IoT Synchronization',
-//     img: '/Images/CaseStudies/Thermal/img1.jpg',
-//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-//   },
-//   {
-//     number: '[04]',
-//     title: 'Low-Latency Data Transfer',
-//     img: '/Images/CaseStudies/Thermal/img1.jpg',
-//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-//   },
-//   {
-//     number: '[05]',
-//     title: 'User-Friendly Desktop Interface',
-//     img: '/Images/CaseStudies/Thermal/img1.jpg',
-//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-//   },
-// ]
-
 type key_features_props = {
   title: string;
   key_features_list: {

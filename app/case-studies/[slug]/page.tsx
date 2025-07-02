@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../../components/layout/Navbar';
-import UserServices from '../../components/layout/UserServices';
-import Casestudy_Banner from '../../components/layout/Casestudy_Banner';
-import Casestudy_ShowReel from '../../components/layout/Casestudy_ShowReel';
-import Casestudy_Testimonial from '../../components/layout/Casestudy_Testimonial';
-import Casestudy_Key_Features from '../../components/layout/Casestudy_Key_Features';
-import CaseStudy_Challenges from '../../components/layout/CaseStudy_Challenges';
-import Casestudy_Description from '../../components/layout/Casestudy_Description';
+import UserServices from '../../components/layout/Casestudy/Casestudy_UserServices';
+import Casestudy_Banner from '../../components/layout/Casestudy/Casestudy_Banner';
+import Casestudy_ShowReel from '../../components/layout/Casestudy/Casestudy_ShowReel';
+import Casestudy_Testimonial from '../../components/layout/Casestudy/Casestudy_Testimonial';
+import Casestudy_Key_Features from '../../components/layout/Casestudy/Casestudy_Key_Features';
+import CaseStudy_Challenges from '../../components/layout/Casestudy/CaseStudy_Challenges';
+import Casestudy_Description from '../../components/layout/Casestudy/Casestudy_Description';
 import LenisProvider from '@/app/LenisProvider';
 import { caseStudyData } from '@/lib/custom_data';
 
@@ -16,7 +16,7 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  let data = caseStudyData[slug as keyof typeof caseStudyData] as any;
+  const data = caseStudyData[slug as keyof typeof caseStudyData];
 
   return (
       <LenisProvider>
