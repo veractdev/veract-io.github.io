@@ -3,40 +3,49 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { isMobile, isTablet } from '@/lib/utils'
 
-const features = [
-  {
-    number: '[01]',
-    title: 'Thermal Imaging Integration',
-    img: '/Images/CaseStudies/Thermal/img1.jpg',
-    desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-  },
-  {
-    number: '[02]',
-    title: 'Real-Time Data Processing',
-    img: '/Images/CaseStudies/Thermal/img1.jpg',
-    desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-  },
-  {
-    number: '[03]',
-    title: 'Camera & IoT Synchronization',
-    img: '/Images/CaseStudies/Thermal/img1.jpg',
-    desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-  },
-  {
-    number: '[04]',
-    title: 'Low-Latency Data Transfer',
-    img: '/Images/CaseStudies/Thermal/img1.jpg',
-    desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-  },
-  {
-    number: '[05]',
-    title: 'User-Friendly Desktop Interface',
-    img: '/Images/CaseStudies/Thermal/img1.jpg',
-    desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
-  },
-]
+// const features = [
+//   {
+//     number: '[01]',
+//     title: 'Thermal Imaging Integration',
+//     img: '/Images/CaseStudies/Thermal/img1.jpg',
+//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
+//   },
+//   {
+//     number: '[02]',
+//     title: 'Real-Time Data Processing',
+//     img: '/Images/CaseStudies/Thermal/img1.jpg',
+//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
+//   },
+//   {
+//     number: '[03]',
+//     title: 'Camera & IoT Synchronization',
+//     img: '/Images/CaseStudies/Thermal/img1.jpg',
+//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
+//   },
+//   {
+//     number: '[04]',
+//     title: 'Low-Latency Data Transfer',
+//     img: '/Images/CaseStudies/Thermal/img1.jpg',
+//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
+//   },
+//   {
+//     number: '[05]',
+//     title: 'User-Friendly Desktop Interface',
+//     img: '/Images/CaseStudies/Thermal/img1.jpg',
+//     desc: 'Enables precise monitoring of temperature variations to identify early signs of health issues.'
+//   },
+// ]
 
-export default function Casestudy_Key_Features() {
+type key_features_props = {
+  title: string;
+  key_features_list: {
+    number: string;
+    title: string;
+    img: string;
+    desc: string;
+  }[];
+}
+export default function Casestudy_Key_Features({ key_features_props }: { key_features_props: key_features_props }) {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
@@ -52,10 +61,10 @@ export default function Casestudy_Key_Features() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div className="text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont">KEY FEATURES</div>
+          <div className="text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont">{key_features_props.title}</div>
         </motion.div>
         <div className="flex flex-col lg:w-[65rem] w-full">
-          {features.map((feature, idx) =>
+          {key_features_props.key_features_list.map((feature, idx) =>
             <motion.div
               key={feature.number}
               className="group relative flex lg:flex-row md:flex-col flex-col lg:items-center items-start md:py-[1.875rem] py-[3.125rem] lg:opacity-60 hover:!opacity-100 border-b-[0.063rem] border-[#282828] lg:gap-0 gap-[0.938rem]"

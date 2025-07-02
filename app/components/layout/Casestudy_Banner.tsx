@@ -1,7 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-export default function Casestudy_Banner() {
+type banner_props = {
+  title: string;
+  description: string;
+  image: string;
+}
+
+export default function Casestudy_Banner({ banner_props }: { banner_props: banner_props }) {
 
   const [translateY, setTranslateY] = useState<number>(0);
   const [translateY2, setTranslateY2] = useState<number>(0);
@@ -40,8 +46,8 @@ export default function Casestudy_Banner() {
       >
         {/* background image */}
         <img
-          src="/Images/case-studies/case_study_banner_image.png"
-          alt="Banner"
+          src={`${banner_props.image}`}
+          alt={`placeholder image`}
           className="absolute w-full h-full object-cover"
           style={{
             transform: `translateY(-${translateY}px) rotateX(-${rotateX}deg) scale(${scale})`,
@@ -63,12 +69,12 @@ export default function Casestudy_Banner() {
             className='syneFont fadeInAnimation lg:w-[calc(100%-6.25rem)] text-[2.25rem] md:text-[4.375rem] md:px-[6.188rem] lg:px-0 lg:text-[4.375rem] text-white leading-[1em] tracking-[-0.05em] font-bold text-center
           '
           >
-            Enhancing Animal Health with Thermography
+            {banner_props.title}
           </div>
           <div
             className={`w-[calc(100%-4.75rem)] ${animationDelay ? 'fadeInAnimation' : 'opacity-0'} md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center`}
           >
-            A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.
+            {banner_props.description}
           </div>
         </div>
       </div>

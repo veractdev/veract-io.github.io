@@ -27,37 +27,38 @@ export const navItems = [
 ]
 
 export const caseStudyData = {
-    Thermal: {
+    thermal: {
         banner: {
             title: 'Enhancing Animal Health with Thermography',
-            description: 'A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.'
+            description: 'A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.',
+            image: '/Images/case-studies/case_study_banner_image.png'
         },
         showReel: {
             title: 'SHOWREEL',
-            video: 'https://www.youtube.com/watch?v=mF9yOwlunWk&t',
+            video: 'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
         },
         description: {
             title: 'A small glimpse',
             description:
-            `
-                <div className='interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-primary-text-50 font-extralight leading-[1.2em] tracking-[-0.04em]'>
+                `
+                <div class="interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-primary-text-50 font-extralight leading-[1.2em] tracking-[-0.04em]">
                 A thermal imaging system for
-                <span className='text-primary-text'> monitoring buffalo udder health</span> using
-                <span className='text-orange'> infrared thermography</span>
-                <span className='text-primary-text'> —</span>
-                <span className='text-primary-text-70'>
+                <span class="text-primary-text"> monitoring buffalo udder health</span> using
+                <span class="text-orange"> infrared thermography</span>
+                <span class="text-primary-text"> —</span>
+                <span class="text-primary-text-70">
                     enabling early mastitis detection, temperature analysis, and session-based tracking
-                </span>{' '}
+                </span>
                 with offline support and seamless integration into veterinary workflows.
                 </div>
             `
         },
         challenges: {
             title: 'Challenges & Goals',
-            video: 'https://www.youtube.com/watch?v=mF9yOwlunWk&t',
+            video: 'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
             challenge_description: 'BOTTLENECK',
             challenge_solution: 'Designing an integrated system that connects thermal cameras and IoT devices to monitor',
-            challenge_solution_highlighted: 'livestock health with accuracy, reliability, and real-time insights.   ',
+            challenge_solution_highlighted: 'livestock health with accuracy, reliability, and real-time insights.',
             solution_list: [
                 {
                     id: 1,
@@ -87,10 +88,12 @@ export const caseStudyData = {
         },
         services: {
             title: 'How we helped',
-            description: `<div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
-            We built a <span className="text-primary-blue">focused solution</span> to
-            transform livestock health monitoring.
-          </div>`,
+            description: `
+                <div class="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
+                We built a <span class="text-primary-blue">focused solution</span> to
+                transform livestock health monitoring.
+                </div>
+            `,
             service_list: [
                 {
                     title: "Health Issue Detection",
@@ -173,6 +176,7 @@ export const caseStudyData = {
             name: "Harepriyaa",
             image: 'https://www.veract.io/images/harepriyaa.jpeg',
             quote_image: '/Images/testimonial_quotes.svg',
+            shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
             profession: 'Director',
             profession_at: 'Thermal vision',
         }

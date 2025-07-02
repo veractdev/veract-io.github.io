@@ -2,7 +2,12 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
-export default function Casestudy_ShowReel() {
+type showreel_props = {
+    title: string;
+    video: string;
+}
+
+export default function Casestudy_ShowReel({ showreel_props }: { showreel_props: showreel_props }) {
     const sectionRef = useRef(null);
     const [isMobileView, setIsMobileView] = useState(false);
     const [isTabView, setTabView] = useState(false);
@@ -12,22 +17,9 @@ export default function Casestudy_ShowReel() {
         offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
     });
 
-    const rawWidth = useTransform(scrollYProgress, [0, 1], ['50%', `${isTabView ? '90%' : '90%'}`]);
-    const rawHeight = useTransform(scrollYProgress, [0, 1], ['25vh', '100vh']);
     // const rawScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 3]);
     const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
     const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
-
-
-    const width = useSpring(rawWidth, {
-        stiffness: 100,
-        damping: 20,
-    });
-
-    const height = useSpring(rawHeight, {
-        stiffness: 100,
-        damping: 20,
-    });
 
     const springScale = useSpring(scale, {
         stiffness: 100,
@@ -68,7 +60,7 @@ export default function Casestudy_ShowReel() {
                         scale: springTextScale,
                     }}
                 >
-                    SHOWREEL
+                    {showreel_props.title}
                 </motion.div>
                 <div className={`hidden md:flex lg:flex flex-col items-center justify-center sticky top-[0%] transform z-10 bg-transparent`}>
                     <motion.div
@@ -76,12 +68,34 @@ export default function Casestudy_ShowReel() {
                             scale: springScale,
                             transformOrigin: 'center center',
                         }}
-                        className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11`}
-                    />
+                        className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
+                    >
+                        <video
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            // muted
+                            loop
+                            playsInline
+                            controls={true}
+                        >
+                            <source src={showreel_props.video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </motion.div>
                 </div>
                 <div className='flex items-center justify-center'>
-                    <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-red-500 my-[3.938rem_5.563rem]'>
-                        <div className='w-[18.75rem] h-[18.75rem] bg-blue-500'></div>
+                    <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
+                        <video
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            controls={false}
+                        >
+                            <source src={showreel_props.video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>

@@ -2,55 +2,66 @@
 import { isMobile, isTablet } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
-export default function UserServices() {
+type user_services_props = {
+  title: string;
+  description: string;
+  service_list: {
+    title: string;
+    bg: string;
+    description: string;
+    gradient: string;
+    blobWidth: string;
+  }[];
+}
+export default function UserServices({ user_services_props }: { user_services_props: user_services_props }) {
   const cardCount = 5;
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
   const [loaded, setLoaded] = useState(false);
 
   // Card data array
-  const cards = [
-    {
-      title: "Health Issue Detection",
-      bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-      description:
-        "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
-      gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-      blobWidth: "w-[8rem]",
-    },
-    {
-      title: "Seamless Integration",
-      bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-      description:
-        "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
-      gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-      blobWidth: "w-[8rem]",
-    },
-    {
-      title: "Health Monitoring System",
-      bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-      description:
-        "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
-      gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-      blobWidth: "w-[10rem]",
-    },
-    {
-      title: "Actionable Insights",
-      bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-      description:
-        "Facilitated timely, data-backed decisions to improve overall animal well-being.",
-      gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-      blobWidth: "w-[10rem]",
-    },
-    {
-      title: "User Experience Focus",
-      bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
-      description: "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
-      gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
-      blobWidth: "w-[10rem]",
-      // isTall: true,
-    },
-  ];
+  // const cards = [
+  //   {
+  //     title: "Health Issue Detection",
+  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+  //     description:
+  //       "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
+  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+  //     blobWidth: "w-[8rem]",
+  //   },
+  //   {
+  //     title: "Seamless Integration",
+  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+  //     description:
+  //       "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
+  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+  //     blobWidth: "w-[8rem]",
+  //   },
+  //   {
+  //     title: "Health Monitoring System",
+  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+  //     description:
+  //       "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
+  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+  //     blobWidth: "w-[10rem]",
+  //   },
+  //   {
+  //     title: "Actionable Insights",
+  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+  //     description:
+  //       "Facilitated timely, data-backed decisions to improve overall animal well-being.",
+  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+  //     blobWidth: "w-[10rem]",
+  //   },
+  //   {
+  //     title: "User Experience Focus",
+  //     bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+  //     description: "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
+  //     gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+  //     blobWidth: "w-[10rem]",
+  //     // isTall: true,
+  //   },
+  // ];
 
   useEffect(() => {
     if (loaded) {
@@ -153,18 +164,17 @@ export default function UserServices() {
       <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-primary-text py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-primary-text md:border-t-0 lg:mt-[8.563rem]">
         <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
           <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
-            HOW WE HELPED
+            {user_services_props.title}
           </div>
-          <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
-            We built a <span className="text-primary-blue">focused solution</span> to
-            transform livestock health monitoring.
-          </div>
+          {/* <div className="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold"> */}
+          <div dangerouslySetInnerHTML={{ __html: user_services_props.description }} />
+          {/* </div> */}
         </div>
         <div className="flex lg:flex-row md:flex-col flex-col items-center justify-center lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
           <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
             {/* First row */}
             <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] justify-center items-center">
-              {cards.slice(0, 2).map((card, idx) => (
+              {user_services_props.service_list.slice(0, 2).map((card, idx) => (
                 <div
                   key={card.title}
                   className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
@@ -186,7 +196,7 @@ export default function UserServices() {
                   <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-201`}></div>
                   <div
                     className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
                       ((isMobile() || isTablet()) && openedArr[idx]
                         ? `${card.gradient} bg-clip-text text-transparent `
                         : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
@@ -212,7 +222,7 @@ export default function UserServices() {
             </div>
             {/* Second row */}
             <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] items-center justify-center">
-              {cards.slice(2, 4).map((card, idx) => (
+              {user_services_props.service_list.slice(2, 4).map((card, idx) => (
                 <div
                   key={card.title}
                   className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[34rem]' : 'lg:h-[23.5rem] lg:w-[17rem]')
@@ -234,7 +244,7 @@ export default function UserServices() {
                   <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                   <div
                     className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
                       ((isMobile() || isTablet()) && openedArr[idx + 2]
                         ? `${card.gradient} bg-clip-text text-transparent`
                         : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
@@ -267,7 +277,7 @@ export default function UserServices() {
             {/* Animated background for mobile click */}
             <div
               className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[4] ? 'scale-200' : 'scale-100'
-                } ${(isMobile() || isTablet()) && scaledArr[4] ? 'opacity-30' : 'opacity-100'} ${cards[4].bg}`}
+                } ${(isMobile() || isTablet()) && scaledArr[4] ? 'opacity-30' : 'opacity-100'} ${user_services_props.service_list[4].bg}`}
               style={{ borderRadius: '1.875rem' }}
             ></div>
             {/* Overlay image or black with 50% opacity when opened on mobile */}
@@ -278,18 +288,18 @@ export default function UserServices() {
             <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
             <div
               className={
-                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${cards[4].gradient} bg-clip-text text-transparent   ` +
+                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${user_services_props.service_list[4].gradient} bg-clip-text text-transparent   ` +
                 ((isMobile() || isTablet()) && openedArr[4]
-                  ? `${cards[4].gradient} bg-clip-text text-transparent`
-                  : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${cards[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
+                  ? `${user_services_props.service_list[4].gradient} bg-clip-text text-transparent`
+                  : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${user_services_props.service_list[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
               }
               style={{ zIndex: 30 }}
             >
-              {cards[4].title}
+              {user_services_props.service_list[4].title}
             </div>
             {(isMobile() || isTablet()) && openedArr[4] ? (
               <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
-                {cards[4].description}
+                {user_services_props.service_list[4].description}
               </div>
             ) : (
               <div className="lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
@@ -297,7 +307,7 @@ export default function UserServices() {
               </div>
             )}
             <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
-              {cards[4].description}
+              {user_services_props.service_list[4].description}
             </div>
           </div>
         </div>

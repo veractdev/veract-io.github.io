@@ -2,11 +2,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
-export default function Casestudy_Description() {
+type description_props = {
+  title: string;
+  description: string;
+}
+
+export default function Casestudy_Description({ description_props }: { description_props: description_props }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isPastTop, setIsPastTop] = useState(false)
   const [enableMotion, setEnableMotion] = useState(false)
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(false) // for lazy loading
 
   useEffect(() => {
     const isLargeScreen = window.innerWidth >= 1024 // Tailwind's lg breakpoint
@@ -43,19 +48,9 @@ export default function Casestudy_Description() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className='syneFont lg:min-w-[22.688rem] min-w-0 text-[1.875rem] text-black font-semibold leading-[1.2em] tracking-[-0.05em]'
         >
-          A small glimpse
+          {description_props.title}
         </motion.div>
-
-        <div className='interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-primary-text-50 font-extralight leading-[1.2em] tracking-[-0.04em]'>
-          A thermal imaging system for
-          <span className='text-primary-text'> monitoring buffalo udder health</span> using
-          <span className='text-orange'> infrared thermography</span>
-          <span className='text-primary-text'> —</span>
-          <span className='text-primary-text-70'>
-            enabling early mastitis detection, temperature analysis, and session-based tracking
-          </span>{' '}
-          with offline support and seamless integration into veterinary workflows.
-        </div>
+        <div dangerouslySetInnerHTML={{ __html: description_props.description }} />
       </div>
     )
   )
