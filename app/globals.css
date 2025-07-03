@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -20,6 +21,7 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1656px;
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +44,10 @@ body {
 
 .interFont {
   font-family: "Inter", sans-serif;
+}
+
+.chakraPetchFont {
+  font-family: "Chakra Petch", sans-serif;
 }
 
 @layer utilities {
