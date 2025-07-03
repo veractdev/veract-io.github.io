@@ -28,7 +28,6 @@ export default function We_Work_With() {
             gradientColor="#0D0D0D"
             gradientWidth={100}
             speed={50}
-            pauseOnHover={true}
             direction="right"
             className="flex items-center gap-4"
           >
