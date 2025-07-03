@@ -1,14 +1,18 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 export default function Advantages() {
 
+  const router = useRouter();
   const cardCount = 4;
   const [loaded, setLoaded] = useState(false)
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
@@ -106,114 +110,199 @@ export default function Advantages() {
     }
   };
 
+  const featuredWorks_list = [
+    {
+      id: 1,
+      image: '/Images/case-studies/case_study_banner_image.png',
+      title: 'project title',
+      description: 'category',
+    },
+    {
+      id: 2,
+      image: '/Images/case-studies/case_study_banner_image.png',
+      title: 'project title',
+      description: 'category',
+    },
+    {
+      id: 3,
+      image: '/Images/case-studies/case_study_banner_image.png',
+      title: 'project title',
+      description: 'category',
+    },
+    {
+      id: 4,
+      image: '/Images/case-studies/case_study_banner_image.png',
+      title: 'project title',
+      description: 'category',
+    },
+
+  ];
+
   return (
     loaded && (
       <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_3.125rem_6.25rem_3.125rem]'>
-        <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
-          <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-white'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
-          <div className='uppercase interFont text-[1.125rem] text-secondary-gray font-normal leading-[2.125rem]'>Collaborating with us is a smart move for growth</div>
-        </div>
-        <div className='w-full h-max flex flex-col items-center justify-center'>
-          <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-[100%] w-full">
-            {/* First row */}
-            <div className="flex lg:w-full lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] justify-center items-center">
-              {LandingPageData.advantages.advantages_list.slice(0, 2).map((card, idx) => (
-                <div
-                  key={card.title}
-                  className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
-                    } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
-                  onClick={() => handleCardClick(idx)}
-                >
-                  {/* Animated background for mobile click */}
+        <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center'>
+          <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
+            <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-white'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
+            <div className='uppercase interFont text-[1.125rem] text-secondary-gray font-normal leading-[2.125rem]'>Collaborating with us is a smart move for growth</div>
+          </div>
+          <div className='w-full h-max flex flex-col items-center justify-center'>
+            <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-[100%] w-full">
+              {/* First row */}
+              <div className="flex lg:w-full lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] justify-center items-center">
+                {LandingPageData.advantages.advantages_list.slice(0, 2).map((card, idx) => (
                   <div
-                    className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${isMobile() || isTablet() && openedArr[idx] ? 'scale-200' : 'scale-100'
-                      } ${(isMobile() || isTablet()) && scaledArr[idx] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
-                    style={{ borderRadius: '1.875rem' }}
-                  ></div>
-                  {/* Overlay image or black with 50% opacity when opened on mobile */}
-                  {(isMobile() || isTablet()) && openedArr[idx] && (
-                    <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
-                  )}
-                  {/* Overlay for text clarity */}
-                  <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-201`}></div>
-                  <div
-                    className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
-                      ((isMobile() || isTablet()) && openedArr[idx]
-                        ? `${card.gradient} bg-clip-text text-transparent `
-                        : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
-                    }
-                    style={{ zIndex: 30 }}
+                    key={card.title}
+                    className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
+                      } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
+                    onClick={() => handleCardClick(idx)}
                   >
-                    {card.title}
-                  </div>
-                  {(isMobile() || isTablet()) && openedArr[idx] ? (
-                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                    {/* Animated background for mobile click */}
+                    <div
+                      className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${isMobile() || isTablet() && openedArr[idx] ? 'scale-200' : 'scale-100'
+                        } ${(isMobile() || isTablet()) && scaledArr[idx] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
+                      style={{ borderRadius: '1.875rem' }}
+                    ></div>
+                    {/* Overlay image or black with 50% opacity when opened on mobile */}
+                    {(isMobile() || isTablet()) && openedArr[idx] && (
+                      <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
+                    )}
+                    {/* Overlay for text clarity */}
+                    <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
+                    <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-201`}></div>
+                    <div
+                      className={
+                        `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
+                        ((isMobile() || isTablet()) && openedArr[idx]
+                          ? `${card.gradient} bg-clip-text text-transparent `
+                          : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
+                      }
+                      style={{ zIndex: 30 }}
+                    >
+                      {card.title}
+                    </div>
+                    {(isMobile() || isTablet()) && openedArr[idx] ? (
+                      <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                        {card.description}
+                      </div>
+                    ) : (
+                      <div className="lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                        Learn More →
+                      </div>
+                    )}
+                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                       {card.description}
                     </div>
-                  ) : (
-                    <div className="lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
-                      Learn More →
+                  </div>
+                ))}
+              </div>
+              {/* Second row */}
+              <div className="flex lg:w-full lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] items-center justify-center">
+                {LandingPageData.advantages.advantages_list.slice(2, 4).map((card, idx) => (
+                  <div
+                    key={card.title}
+                    className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
+                      } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
+                    onClick={() => handleCardClick(idx + 2)}
+                  >
+                    {/* Animated background for mobile click */}
+                    <div
+                      className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'scale-200' : 'scale-100'
+                        } ${(isMobile() || isTablet()) && scaledArr[idx + 2] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
+                      style={{ borderRadius: '1.875rem' }}
+                    ></div>
+                    {/* Overlay image or black with 50% opacity when opened on mobile */}
+                    {(isMobile() || isTablet()) && openedArr[idx + 2] && (
+                      <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
+                    )}
+                    {/* Overlay for text clarity */}
+                    <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
+                    <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
+                    <div
+                      className={
+                        `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
+                        ((isMobile() || isTablet()) && openedArr[idx + 2]
+                          ? `${card.gradient} bg-clip-text text-transparent`
+                          : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
+                      }
+                      style={{ zIndex: 30 }}
+                    >
+                      {card.title}
                     </div>
-                  )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
-                    {card.description}
+                    {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
+                      <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
+                        {card.description}
+                      </div>
+                    ) : (
+                      <div className="lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                        Learn More →
+                      </div>
+                    )}
+                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                      {card.description}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-full h-max bg-white flex flex-col items-center justify-center gap-[2.5rem] p-[6.25rem_3.125rem]'>
+          <div className='flex flex-col items-center justify-center gap-[.625rem]'>
+            <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-primary-text'>Featured<span className='text-primary-blue'>{' '}works</span></div>
+            <div className='interFont text-[1.125rem] text-primary-text font-normal leading-[1.8em] px-[12.5rem] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
+          </div>
+          <div className='flex flex-col items-center justify-center gap-[2.5rem] px-[6.25rem]'>
+            <div className='flex flex-row items-center justify-center gap-[2.75rem]'>
+              {featuredWorks_list.slice(0, 2).map((item, index) => (
+                <div key={index} className='flex flex-col items-center justify-center gap-[1.25rem] py-[2.5rem]'>
+                  <div className='w-[25rem] h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden'>
+                    <div className='w-[100%] h-[100%] bg-primary-blue'></div>
+                    {/* <img src="" alt="placeholder text" className='w-[100%] h-[100%] object-cover' /> */}
+                  </div>
+                  <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
+                    <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold leading-[1.2em]'>{item.title}</div>
+                    <div className='uppercase interFont text-[0.875rem] text-[#71717A] font-normal leading-[1.4em] tracking-[0.05em]'>{item.description}</div>
                   </div>
                 </div>
               ))}
             </div>
-            {/* Second row */}
-            <div className="flex lg:w-full lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] items-center justify-center">
-              {LandingPageData.advantages.advantages_list.slice(2, 4).map((card, idx) => (
-                <div
-                  key={card.title}
-                  className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
-                    } md:w-[21.813rem] md:h-[23.5rem] w-[80%] h-[10.063rem] overflow-clip rounded-[1.875rem]`}
-                  onClick={() => handleCardClick(idx + 2)}
-                >
-                  {/* Animated background for mobile click */}
-                  <div
-                    className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'scale-200' : 'scale-100'
-                      } ${(isMobile() || isTablet()) && scaledArr[idx + 2] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
-                    style={{ borderRadius: '1.875rem' }}
-                  ></div>
-                  {/* Overlay image or black with 50% opacity when opened on mobile */}
-                  {(isMobile() || isTablet()) && openedArr[idx + 2] && (
-                    <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
-                  )}
-                  {/* Overlay for text clarity */}
-                  <div className="absolute top-0 left-0 w-full h-[100%] bg-[linear-gradient(165deg,_#000000_0%,_rgba(0,0,0,0)_100%)] opacity-[0.79] z-10"></div>
-                  <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
-                  <div
-                    className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
-                      ((isMobile() || isTablet()) && openedArr[idx + 2]
-                        ? `${card.gradient} bg-clip-text text-transparent`
-                        : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
-                    }
-                    style={{ zIndex: 30 }}
-                  >
-                    {card.title}
+            <div className='flex flex-row items-center justify-center gap-[2.75rem]'>
+              {featuredWorks_list.slice(2, 4).map((item, index) => (
+                <div key={index} className='flex flex-col items-center justify-center gap-[1.25rem] py-[2.5rem]'>
+                  <div className='w-[25rem] h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden'>
+                    <div className='w-[100%] h-[100%] bg-primary-blue'></div>
+                    {/* <img src="" alt="placeholder text" className='w-[100%] h-[100%] object-cover' /> */}
                   </div>
-                  {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
-                      {card.description}
-                    </div>
-                  ) : (
-                    <div className="lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
-                      Learn More →
-                    </div>
-                  )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
-                    {card.description}
+                  <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
+                    <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold leading-[1.2em]'>{item.title}</div>
+                    <div className='uppercase interFont text-[0.875rem] text-[#71717A] font-normal leading-[1.4em] tracking-[0.05em]'>{item.description}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          <div
+            onMouseOver={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+            onClick={() => {
+              router.push('/case-studies/thermal');
+            }}
+            className='w-[8.688rem] h-[2.75rem] relative flex flex-row items-center justify-center rounded-[2.5rem] hover:bg-primary-blue transition-all duration-300 easeTransition cursor-pointer group'
+          >
+            <div
+              className={`absolute ${isHovered ? 'left-[1rem]' : 'left-[1.5rem]'} poppinsFont text-[1rem] text-black font-normal leading-[1.8em] text-center group-hover:text-white transition-all duration-300 easeTransition`}
+            >
+              More Works
+            </div>
+            <img src="/Icons/arrow-right.png" alt="arrow-right" className={`absolute ${isHovered ? 'left-[calc(100%-2rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} />
+          </div>
         </div>
-      </div>
+      </div >
     )
   )
 }
