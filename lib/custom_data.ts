@@ -194,6 +194,49 @@ export const caseStudyData = {
   },
 };
 
+export const LandingPageData = {
+  advantages: {
+    advantages_list: [
+      {
+        title: "Health Issue Detection",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        description:
+          "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
+        gradient:
+          "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+        blobWidth: "w-[8rem]",
+      },
+      {
+        title: "Seamless Integration",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        description:
+          "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
+        gradient:
+          "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+        blobWidth: "w-[8rem]",
+      },
+      {
+        title: "Health Monitoring System",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        description:
+          "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
+        gradient:
+          "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+        blobWidth: "w-[10rem]",
+      },
+      {
+        title: "Actionable Insights",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        description:
+          "Facilitated timely, data-backed decisions to improve overall animal well-being.",
+        gradient:
+          "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+        blobWidth: "w-[10rem]",
+      },
+    ]
+  }
+};
+
 export const brandData = [
   {
     id: 1,
