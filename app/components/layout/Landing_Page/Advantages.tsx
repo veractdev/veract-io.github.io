@@ -141,7 +141,7 @@ export default function Advantages() {
   return (
     loaded && (
       <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_3.125rem_6.25rem_3.125rem]'>
-        <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center'>
+        <div className='sticky top-0 w-full h-max flex flex-col gap-[2.5rem] items-center justify-center'>
           <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
             <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-white'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
             <div className='uppercase interFont text-[1.125rem] text-secondary-gray font-normal leading-[2.125rem]'>Collaborating with us is a smart move for growth</div>
@@ -247,7 +247,7 @@ export default function Advantages() {
             </div>
           </div>
         </div>
-        <div className='w-full h-max bg-white flex flex-col items-center justify-center gap-[2.5rem] p-[6.25rem_3.125rem]'>
+        <div className='relative z-20 w-full h-max bg-white flex flex-col items-center justify-center gap-[2.5rem] p-[6.25rem_3.125rem]'>
           <div className='flex flex-col items-center justify-center gap-[.625rem]'>
             <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-primary-text'>Featured<span className='text-primary-blue'>{' '}works</span></div>
             <div className='interFont text-[1.125rem] text-primary-text font-normal leading-[1.8em] px-[12.5rem] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
