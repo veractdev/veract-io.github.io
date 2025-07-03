@@ -13,11 +13,11 @@ import LenisProvider from './LenisProvider'
 export default function Page() {
   return (
     <LenisProvider>
-      <div className='w-full flex flex-col items-center justify-center'>
+      <div className='w-full flex flex-col items-center justify-center bg-black'>
         <Navbar />
-        <Banner />
+        {/* <Banner />
         <ShowReel />
-        <About_Us />
+        <About_Us /> */}
         <Advantages />
         <Services />
         <We_Work_With />

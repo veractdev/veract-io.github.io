@@ -95,6 +95,9 @@ export default function Navbar() {
                                 }
                                 lg:static lg:top-auto lg:left-auto
                             `}
+                            onClick={() => {
+                                router.push("/");
+                            }}
                         />
 
                         <div

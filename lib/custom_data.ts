@@ -182,3 +182,42 @@ export const caseStudyData = {
         }
     }
 }
+
+export const LandingPageData = {
+    advantages: {
+        advantages_list: [
+            {
+                title: "Bespoke Software, Tailored to Your Business Needs",
+                bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+                description:
+                    "Custom software solutions designed around your workflows — not off-the-shelf",
+                gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+                blobWidth: "w-[8rem]",
+            },
+            {
+                title: "Digital Transformation Strategy with the Right Technologies",
+                bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+                description:
+                    "Modernize operations with digital tools that serve real business goals",
+                gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+                blobWidth: "w-[8rem]",
+            },
+            {
+                title: "Flexible Engagement Models for Agile Development",
+                bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+                description:
+                    "Start small, scale fast, or pause — flexibility built into the process",
+                gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+                blobWidth: "w-[10rem]",
+            },
+            {
+                title: "Measurable Outcomes Through AI, IoT, and Machine Vision",
+                bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+                description:
+                    "Drive impact with intelligent systems and real-time performance insights",
+                gradient: "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
+                blobWidth: "w-[10rem]",
+            },
+        ],
+    }
+}
