@@ -1,38 +1,51 @@
-'use client';
-import React from "react";
+"use client";
+import { brandData } from "@/lib/custom_data";
+import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 export default function We_Work_With() {
-  return (
-    <div className="w-full min-h-screen bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-4">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-5xl font-semibold">WE WORK WITH</h2>
-        <h2 className="text-3xl md:text-5xl font-semibold">BRANDS IN</h2>
-      </div>
+  const [loaded, setLoaded] = useState(false);
 
-      <div className="w-[100%] py-6 rotate-[-3deg]">
-        <Marquee
-          gradient={true}
-          gradientColor="#0D0D0D"
-          gradientWidth={100}
-          speed={50}
-          pauseOnHover={true}
-          direction="right"
-          className="flex items-center gap-4"
-        >
-          {Array(10)
-            .fill(0)
-            .map((_, index) => (
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  return (
+    loaded && (
+      <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-[1rem] pt-[6.25rem] pb-[4.4375rem]">
+        <div className="text-center mb-[2.5rem]">
+          <div className="syneFont text-[1.875rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#fff]">
+            WE WORK WITH
+          </div>
+          <div className="syneFont text-[1.875rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#4285F4]">
+            BRANDS IN
+          </div>
+        </div>
+        <div className="w-full [@media(min-width:1550px)]:w-[80%] [@media(min-width:1600px)]:w-[90%] py-[1.5rem] rotate-[-3deg] mt-[3.1875rem]">
+          <Marquee
+            gradient={true}
+            autoFill={true}
+            gradientColor="#0D0D0D"
+            gradientWidth={100}
+            speed={50}
+            direction="right"
+            className="flex items-center gap-4"
+          >
+            {brandData.map((brand, index) => (
               <div
                 key={index}
-                className="w-[300px] h-[200px] bg-amber-500 flex items-center justify-center text-black font-bold text-xl"
-                style={index != 0 ? {marginLeft: "10px"} : {marginLeft: "-5px"}}
+                className="chakraPetchFont w-[18.75rem] h-[12.5rem] flex items-center justify-center text-white text-[2.25rem] font-medium"
+                style={{
+                  backgroundImage: `url(${brand.image})`,
+                  marginLeft: index !== 0 ? "0.625rem" : "-0.3125rem",
+                }}
               >
-                Logo {index + 1}
+                {brand.name}
               </div>
             ))}
-        </Marquee>
+          </Marquee>
+        </div>
       </div>
-    </div>
+    )
   );
 }
