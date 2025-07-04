@@ -76,6 +76,7 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
           >
             {banner_props.description}
           </div>
+          
         </div>
       </div>
     )
