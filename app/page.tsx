@@ -16,8 +16,8 @@ export default function Page() {
       <div className='w-full flex flex-col items-center justify-center bg-black'>
         <Navbar />
         <Banner />
-        {/* <ShowReel />
-        <About_Us /> */}
+        <ShowReel />
+        <About_Us />
         <Advantages />
         <Services />
         <We_Work_With />
