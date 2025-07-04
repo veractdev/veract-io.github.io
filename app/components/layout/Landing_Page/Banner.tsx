@@ -78,7 +78,7 @@ export default function Banner() {
   }, [charIndex, typing, wordIndex]);
 
   // Images
-  const animateImages = ['/landingPageBanner/IBITS.png', '/landingPageBanner/Evo11ve.png', '/landingPageBanner/Mako.png', '/landingPageBanner/Suyash.png', '/landingPageBanner/Anyo.png']
+  const animateImages = ['/Images/LandingPage/Banner/IBITS.png', '/Images/LandingPage/Banner/Evo11ve.png', '/Images/LandingPage/Banner/Mako.png', '/Images/LandingPage/Banner/Suyash.png', '/Images/LandingPage/Banner/Anyo.png']
   const variants = {
     initial: (isHover: boolean) => ({
       y: isHover ? "0%" : "-100%",
@@ -252,7 +252,7 @@ export default function Banner() {
                   Get in touch
                   <img
 
-                    src="/landingPageBanner/arrowIconUp.png"
+                    src="/Images/LandingPage/Banner/arrowIconUp.png"
                     alt="arrow_icon"
                     className={`w-[1rem] h-[1rem] object-contain `}
                   />
@@ -270,7 +270,7 @@ export default function Banner() {
                   Get in touch
                   <img
 
-                    src="/landingPageBanner/arrowIconUp.png"
+                    src="/Images/LandingPage/Banner/arrowIconUp.png"
                     alt="arrow_icon"
                     className={`w-[1rem] h-[1rem] object-contain rotate-45`}
                   />
@@ -316,7 +316,7 @@ export default function Banner() {
           {/* pb-[5.438rem] */}
           <div className="flex items-start justify-center gap-[1.5rem]">
             <motion.img
-              src="/landingPageBanner/BNI.png"
+              src="/Images/LandingPage/Banner/BNI.png"
               alt="BNI"
               className="w-[2.563rem] object-cover"
               initial={{ opacity: 0 }}
@@ -326,7 +326,7 @@ export default function Banner() {
 
             <div className="flex flex-col items-center justify-center gap-[0.08rem]">
               <motion.img
-                src="/landingPageBanner/Clutch.png"
+                src="/Images/LandingPage/Banner/Clutch.png"
                 alt="Clutch"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0 }}
@@ -335,7 +335,7 @@ export default function Banner() {
               />
 
               <motion.img
-                src="/landingPageBanner/Stars.png"
+                src="/Images/LandingPage/Banner/Stars.png"
                 alt="Stars"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0, y: 20 }}
@@ -345,7 +345,7 @@ export default function Banner() {
             </div>
 
             <motion.img
-              src="/landingPageBanner/EtherCat.png"
+              src="/Images/LandingPage/Banner/EtherCat.png"
               alt="EtherCat"
               className="w-[3.563rem] object-cover"
               initial={{ opacity: 0 }}
@@ -361,6 +361,7 @@ export default function Banner() {
           initial={{ x: 100, y: 15, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
+          
         >
           <Marquee
             gradient={true}
@@ -370,12 +371,13 @@ export default function Banner() {
             speed={30}
             direction="left" // or "right" as needed
             className="flex items-center "
+            play={true}
           >
             {animateImages.map((src, idx) => (
               <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
                 <img
                   src={src}
-                  alt={`slide-${idx}`}
+                  alt={`${src.split('/').pop()?.split('.').shift()}`}
                   className="w-[6.625rem] object-cover flex-shrink-0"
                 />
               </div>
