@@ -140,8 +140,8 @@ export default function Advantages() {
 
   return (
     loaded && (
-      <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_3.125rem_6.25rem_3.125rem]'>
-        <div className='sticky top-[calc(100%-934px)] w-full h-max flex flex-col gap-[2.5rem] items-center justify-center'>
+      <div className='w-full h-max flex flex-col gap-[2.5rem] items-center justify-center'>
+        <div className='sticky top-[calc(100%-934px)] w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_3.125rem_6.25rem_3.125rem]'>
           <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
             <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] leading-[3.125rem] text-white'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
             <div className='uppercase interFont text-[1.125rem] text-secondary-gray font-normal leading-[2.125rem]'>Collaborating with us is a smart move for growth</div>
