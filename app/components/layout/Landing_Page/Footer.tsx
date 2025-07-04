@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Footer() {
   const socialMediaIcons = [
@@ -115,10 +115,111 @@ export default function Footer() {
     }
   }
 
+
+
+
+
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    // Set canvas size and draw text
+    canvas.width = 1000;
+    canvas.height = 300;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "bold 285px 'Open Sans'";
+    ctx.fillStyle = "#000";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("veract", canvas.width / 2, canvas.height / 2);
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const canvas = canvasRef.current;
+    const glow = glowRef.current;
+    const container = containerRef.current;
+
+    if (!canvas || !glow || !container) return;
+
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const pixel = ctx.getImageData(x, y, 1, 1).data;
+    const alpha = pixel[3]; // 0–255
+
+    if (alpha > 10) {
+      setShow(true);
+      glow.style.left = `${e.clientX}px`;
+      glow.style.top = `${e.clientY}px`;
+    } else {
+      setShow(false);
+    }
+  };
+
+  
+
   return (
     <div className='w-full flex flex-col items-center justify-center relative'>
-      <div className='openSansFont text-[17.813rem] text-[#1C1C1C] font-bold leading-[1.2] tracking-[0em]'>veract</div>
-      <div className='w-[70rem] h-[41.813rem] rounded-[1.375rem] bg-[#0F0E14] relative z-20 -mt-[6.938rem]'>
+      {/* Glowing dot */}
+      <div
+        id="cursor-glow"
+        className="fixed w-6 h-6 rounded-full bg-blue-500 opacity-80 pointer-events-none blur-md mix-blend-screen"
+        style={{
+          transform: "translate(-50%, -50%)",
+          boxShadow: "0 0 20px #4285f4, 0 0 40px #4285f4, 0 0 60px #4285f4",
+          display: "none",
+          zIndex: 999,
+        }}
+      />
+
+      {/* Tight text bounding box for precise glow region */}
+      <svg
+        width="auto"
+        height="320px"
+        viewBox="0 0 1400 160"
+        className="overflow-visible"
+        style={{ pointerEvents: "none" }}
+      >
+        <text
+          x="50%"
+          y="75%" // Adjusted to better align vertically
+          textAnchor="middle"
+          fill="#1C1C1C"
+          fontFamily="'Open Sans', sans-serif"
+          fontWeight="700"
+          fontSize="285" // Reduced to match 17.813rem visually
+          style={{ pointerEvents: "visiblePainted", cursor: "default" }}
+          onMouseMove={(e) => {
+            const glow = document.getElementById("cursor-glow");
+            if (glow) {
+              glow.style.display = "block";
+              glow.style.left = `${e.clientX}px`;
+              glow.style.top = `${e.clientY}px`;
+            }
+          }}
+          onMouseLeave={() => {
+            const glow = document.getElementById("cursor-glow");
+            if (glow) glow.style.display = "none";
+          }}
+        >
+          veract
+        </text>
+      </svg>
+      {/* <div className='openSansFont text-[17.813rem] text-[#1C1C1C] font-bold leading-[1.2] tracking-[0em]'>veract</div> */}
+      <div className='w-[70rem] h-[41.813rem] rounded-[1.375rem] bg-[#0F0E14] relative z-20 -mt-[10.95rem]'>
         <div className='absolute top-[4.938rem] left-[3.75rem] w-[28.125rem] h-max flex flex-col items-start justify-center gap-[1.563rem] z-20'>
           <div className='openSansFont text-[3.25rem] text-white font-bold leading-[1.2em] tracking-[0em]'>ver<span className='text-primary-blue'>act</span></div>
           <div className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em]'>At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.</div>
