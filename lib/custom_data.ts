@@ -358,7 +358,45 @@ export const LandingPageData = {
       },
     ],
   },
-  testimonials: {},
+  testimonials: {
+    testimonial_list: [
+      {
+        name: "John Doe",
+        quote:
+          "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "Evo11ve",
+      },
+      {
+        name: "Jane Smith",
+        quote:
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "TechSpark",
+      },
+      {
+        name: "Alice Johnson",
+        quote:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "InnoVibe",
+      },
+      {
+        name: "Bob Brown",
+        quote:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "NextWare",
+      },
+      {
+        name: "Bob Brown",
+        quote:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "NextWare",
+      },
+    ],
+  },
   footer: {
     description: 'At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.',
     socialMediaIcons: [
@@ -471,30 +509,3 @@ export const LandingPageData = {
     },
   },
 };
-
-export const achievements = [
-  {
-    id: 1,
-    category: "clients",
-    numbers: "50+",
-    description: "Amazing clients",
-  },
-  {
-    id: 2,
-    category: "Industries",
-    numbers: "5+",
-    description: "Industries",
-  },
-  {
-    id: 3,
-    category: "Projects",
-    numbers: "70+",
-    description: "Successfull Projects",
-  },
-  {
-    id: 4,
-    category: "Founded",
-    numbers: "2016",
-    description: "Founded",
-  },
-];

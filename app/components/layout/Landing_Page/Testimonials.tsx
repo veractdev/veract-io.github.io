@@ -1,4 +1,5 @@
 'use client'
+import { LandingPageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 
@@ -15,43 +16,6 @@ export default function Testimonials() {
     }
   };
 
-  const testimonials = [
-    {
-      name: "John Doe",
-      quote:
-        "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
-      image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-      company: "Evo11ve",
-    },
-    {
-      name: "Jane Smith",
-      quote:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-      company: "TechSpark",
-    },
-    {
-      name: "Alice Johnson",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-      company: "InnoVibe",
-    },
-    {
-      name: "Bob Brown",
-      quote:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-      company: "NextWare",
-    },
-    {
-      name: "Bob Brown",
-      quote:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-      company: "NextWare",
-    },
-  ];
   return (
     <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex items-center justify-center relative z-20">
       <div className="flex w-[75rem] gap-[2.75rem] h-full px-[6.25rem] py-[3.125rem] items-center justify-between">
@@ -93,7 +57,7 @@ export default function Testimonials() {
         </div>
 
         <div className='w-[70%] h-[27.5rem]  flex gap-[1.125rem]'>
-          {testimonials.map((t, index) => {
+          {LandingPageData.testimonials.testimonial_list.map((t, index) => {
             // Expanded card
             if (activeIndex === index) {
               return (
@@ -103,7 +67,7 @@ export default function Testimonials() {
                   animate={{ width: "20.125rem" }}
                   transition={{ duration: 0.7, ease: "easeInOut" }}
                   style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                  className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border border-[0.25rem] border-[#4285F4] overflow-hidden"
+                  className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                 >
                   {/* Full Card Content */}
                   <div
@@ -122,10 +86,10 @@ export default function Testimonials() {
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                       className='flex flex-col gap-[0.625rem]'>
                       <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
-                        {testimonials[activeIndex].name}
+                        {LandingPageData.testimonials.testimonial_list[activeIndex].name}
                       </div>
                       <div className="interFont text-[#E3E3E3] text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
-                        {testimonials[activeIndex].company}
+                        {LandingPageData.testimonials.testimonial_list[activeIndex].company}
                       </div>
                     </motion.div>
                   </div>
@@ -139,7 +103,7 @@ export default function Testimonials() {
                       <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
                     </div>
                     <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
-                      {testimonials[activeIndex].quote}
+                      {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
                     </p>
                   </motion.div>
                 </motion.div>
@@ -161,7 +125,7 @@ export default function Testimonials() {
                   animate={{ width: "5.125rem" }}
                   transition={{ duration: 0.7, ease: "easeInOut" }}
                   onMouseEnter={() => handleSetActiveIndex(index)}
-                  className="relative h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border border-[0.25rem] border-[#4285F4] overflow-hidden"
+                  className="relative h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
                 >
                   {visibleMiniIndex === index ? (
                     // Mini card content (after 3s)
@@ -238,7 +202,7 @@ export default function Testimonials() {
               <button
                 key={index}
                 onMouseEnter={() => handleSetActiveIndex(index)}
-                className="relative w-[5.125rem] h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border border-[0.25rem] border-[#4285F4]"
+                className="relative w-[5.125rem] h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
               >
                 <div className="absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-[-90deg] interFont font-semibold text-[1.25rem] text-white whitespace-nowrap text-center">
                   {t.name}
