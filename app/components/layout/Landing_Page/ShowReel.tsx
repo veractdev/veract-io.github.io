@@ -1,6 +1,7 @@
 'use client';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { LandingPageData } from '@/lib/custom_data';
 
 export default function ShowReel() {
   const sectionRef = useRef(null);
@@ -55,7 +56,7 @@ export default function ShowReel() {
             scale: springTextScale,
           }}
         >
-          showreel
+          {LandingPageData.showReel.title}
         </motion.div>
         <div className={`hidden md:flex lg:flex flex-col items-center justify-center sticky top-[0%] transform z-10 bg-transparent`}>
           <motion.div
@@ -73,7 +74,7 @@ export default function ShowReel() {
               playsInline
               controls={true}
             >
-              <source src={'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4'} type="video/mp4" />
+              <source src={LandingPageData.showReel.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
@@ -88,7 +89,7 @@ export default function ShowReel() {
               playsInline
               controls={false}
             >
-              <source src={'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4'} type="video/mp4" />
+              <source src={LandingPageData.showReel.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

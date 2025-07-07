@@ -19,7 +19,7 @@ export default function Page() {
         <ShowReel />
         <About_Us />
         <Advantages />
-        <Services />
+        {/* <Services /> */}
         <We_Work_With /> 
         {/* <Testimonials /> */}
         {/* <Footer /> */}

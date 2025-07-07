@@ -195,6 +195,94 @@ export const caseStudyData = {
 };
 
 export const LandingPageData = {
+  banner: {
+    title_primary: 'Driving Digital Transformation with',
+    title_secondary: 'custom',
+    typwriting_animation_list: [
+      {
+        id: 1,
+        word: 'mobile app',
+      }
+    ],
+    description_primary: 'Delivering scalable technology that powers modern digital experiences, AI',
+    description_secondary: 'systems, and connected IoT solutions.',
+    get_in_touch: 'Get in touch',
+    get_in_touch_arrow: '/Images/LandingPage/Banner/arrowIconUp.png',
+    view_services_text: 'View services',
+    banner_image_list: [
+      {
+        id: 1,
+        image: '/Images/LandingPage/Banner/BNI.png',
+      },
+      {
+        id: 2,
+        image: '/Images/LandingPage/Banner/Clutch.png',
+      },
+      {
+        id: 3,
+        image: '/Images/LandingPage/Banner/Stars.png',
+      },
+      {
+        id: 4,
+        image: '/Images/LandingPage/Banner/EtherCat.png',
+      },
+    ],
+    banner_carousel_list: [
+      {
+        id: 1,
+        img: '/Images/LandingPage/Banner/IBITS.png',
+      },
+      {
+        id: 2,
+        img: '/Images/LandingPage/Banner/Evo11ve.png',
+      },
+      {
+        id: 3,
+        img: '/Images/LandingPage/Banner/Mako.png',
+      },
+      {
+        id: 4,
+        img: '/Images/LandingPage/Banner/Suyash.png',
+      },
+      {
+        id: 5,
+        img: '/Images/LandingPage/Banner/Anyo.png',
+      }
+    ]
+  },
+  showReel: {
+    title: "SHOWREEL",
+    video:
+      "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+  },
+  aboutUs: {
+    achievementsList: [
+      {
+        id: 1,
+        category: "clients",
+        numbers: "50+",
+        description: "Amazing clients",
+      },
+      {
+        id: 2,
+        category: "Industries",
+        numbers: "5+",
+        description: "Industries",
+      },
+      {
+        id: 3,
+        category: "Projects",
+        numbers: "70+",
+        description: "Successfull Projects",
+      },
+      {
+        id: 4,
+        category: "Founded",
+        numbers: "2016",
+        description: "Founded",
+      },
+    ],
+  },
   advantages: {
     advantages_list: [
       {
@@ -234,90 +322,242 @@ export const LandingPageData = {
         blobWidth: "w-[10rem]",
       },
     ],
+    featuredWorks_list: [
+      {
+        id: 1,
+        image: '/Images/case-studies/case_study_banner_image.png',
+        title: 'project title',
+        description: 'category',
+      },
+      {
+        id: 2,
+        image: '/Images/case-studies/case_study_banner_image.png',
+        title: 'project title',
+        description: 'category',
+      },
+      {
+        id: 3,
+        image: '/Images/case-studies/case_study_banner_image.png',
+        title: 'project title',
+        description: 'category',
+      },
+      {
+        id: 4,
+        image: '/Images/case-studies/case_study_banner_image.png',
+        title: 'project title',
+        description: 'category',
+      },
+    ],
+  },
+  we_work_with: {
+    title: "We Work With",
+    sub_title: "brands in",
+    carouselData: [
+      {
+        id: 1,
+        name: "Accessibility",
+        image: "/Images/LandingPage/WeWorkWith/accessibility.png",
+      },
+      {
+        id: 2,
+        name: "Agri Tech",
+        image: "/Images/LandingPage/WeWorkWith/agri-tech.png",
+      },
+      {
+        id: 3,
+        name: "Audit",
+        image: "/Images/LandingPage/WeWorkWith/Audit.png",
+      },
+      {
+        id: 4,
+        name: "E-commerce",
+        image: "/Images/LandingPage/WeWorkWith/e-commerce.png",
+      },
+      {
+        id: 5,
+        name: "Ed-Tech",
+        image: "/Images/LandingPage/WeWorkWith/Ed-Tech.png",
+      },
+      {
+        id: 6,
+        name: "FinTech",
+        image: "/Images/LandingPage/WeWorkWith/fintech.png",
+      },
+      {
+        id: 7,
+        name: "Machine Vision",
+        image: "/Images/LandingPage/WeWorkWith/machine-vision.png",
+      },
+      {
+        id: 8,
+        name: "Manufacturing",
+        image: "/Images/LandingPage/WeWorkWith/manufacturing.png",
+      },
+      {
+        id: 9,
+        name: "Sales",
+        image: "/Images/LandingPage/WeWorkWith/sales.png",
+      },
+      {
+        id: 10,
+        name: "Thermal Vision",
+        image: "/Images/LandingPage/WeWorkWith/thermal-vision.png",
+      },
+      {
+        id: 11,
+        name: "Wellness",
+        image: "/Images/LandingPage/WeWorkWith/wellness.png",
+      },
+    ],
+  },
+  testimonials: {
+    testimonial_list: [
+      {
+        name: "John Doe",
+        quote:
+          "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "Evo11ve",
+      },
+      {
+        name: "Jane Smith",
+        quote:
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "TechSpark",
+      },
+      {
+        name: "Alice Johnson",
+        quote:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "InnoVibe",
+      },
+      {
+        name: "Bob Brown",
+        quote:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "NextWare",
+      },
+      {
+        name: "Bob Brown",
+        quote:
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
+        company: "NextWare",
+      },
+    ],
+  },
+  footer: {
+    description: 'At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.',
+    socialMediaIcons: [
+      {
+        id: 1,
+        image: '/Images/LandingPage/Footer/veract-linkedIn.svg',
+        link: 'https://www.linkedin.com/company/veract-consultancy-private-limited/'
+      },
+      {
+        id: 2,
+        image: '/Images/LandingPage/Footer/veract-youtube.svg',
+        link: ''
+      },
+      {
+        id: 3,
+        image: '/Images/LandingPage/Footer/veract-whatsapp.svg',
+        link: ''
+      },
+      {
+        id: 4,
+        image: '/Images/LandingPage/Footer/veract-instagram.svg',
+        link: 'https://www.instagram.com/veractconsultancy?igsh=amVzcWEwdzVtbnk5'
+      },
+    ],
+    quickLinks: {
+      company: {
+        title: 'Company',
+        links: [
+          {
+            id: 1,
+            title: 'Case studies',
+            link: '/case-studies/thermal'
+          },
+          {
+            id: 2,
+            title: 'Services',
+            link: ''
+          },
+          {
+            id: 3,
+            title: 'Blogs',
+            link: ''
+          },
+          {
+            id: 4,
+            title: 'About Us',
+            link: ''
+          },
+          {
+            id: 5,
+            title: 'Contact Us',
+            link: ''
+          },
+        ]
+      },
+      services: {
+        title: 'Services',
+        links: [
+          {
+            id: 1,
+            title: 'Digital Transformation',
+            link: ''
+          },
+          {
+            id: 2,
+            title: 'Development Services',
+            link: ''
+          },
+          {
+            id: 3,
+            title: 'Industrial IoT',
+            link: ''
+          },
+          {
+            id: 4,
+            title: 'AI Agent',
+            link: ''
+          },
+          {
+            id: 5,
+            title: 'Machine Vision',
+            link: ''
+          },
+        ]
+      },
+      contact: {
+        title: 'Contact Us',
+        links: [
+          {
+            id: 1,
+            type: 'phone',
+            title: '+91 97899 91565',
+          },
+          {
+            id: 2,
+            type: 'phone',
+            title: '+91 99628 37650',
+          },
+          {
+            id: 3,
+            type: 'email',
+            title: 'info@veract.io',
+          },
+        ]
+      },
+      address: {
+        title: 'Location',
+        address: '37,Aspace,Brindavan Street Srinivasa Nagar, Madipakkam, Chennai - 600 091'
+      }
+    },
   },
 };
-
-export const brandData = [
-  {
-    id: 1,
-    name: "Accessibility",
-    image: "/Images/LandingPage/WeWorkWith/accessibility.png",
-  },
-  {
-    id: 2,
-    name: "Agri Tech",
-    image: "/Images/LandingPage/WeWorkWith/agri-tech.png",
-  },
-  {
-    id: 3,
-    name: "Audit",
-    image: "/Images/LandingPage/WeWorkWith/Audit.png",
-  },
-  {
-    id: 4,
-    name: "E-commerce",
-    image: "/Images/LandingPage/WeWorkWith/e-commerce.png",
-  },
-  {
-    id: 5,
-    name: "Ed-Tech",
-    image: "/Images/LandingPage/WeWorkWith/Ed-Tech.png",
-  },
-  {
-    id: 6,
-    name: "FinTech",
-    image: "/Images/LandingPage/WeWorkWith/fintech.png",
-  },
-  {
-    id: 7,
-    name: "Machine Vision",
-    image: "/Images/LandingPage/WeWorkWith/machine-vision.png",
-  },
-  {
-    id: 8,
-    name: "Manufacturing",
-    image: "/Images/LandingPage/WeWorkWith/manufacturing.png",
-  },
-  {
-    id: 9,
-    name: "Sales",
-    image: "/Images/LandingPage/WeWorkWith/sales.png",
-  },
-  {
-    id: 10,
-    name: "Thermal Vision",
-    image: "/Images/LandingPage/WeWorkWith/thermal-vision.png",
-  },
-  {
-    id: 11,
-    name: "Wellness",
-    image: "/Images/LandingPage/WeWorkWith/wellness.png",
-  },
-];
-
-export const achievements = [
-  {
-    id: 1,
-    category: "clients",
-    numbers: "50+",
-    description: "Amazing clients",
-  },
-  {
-    id: 2,
-    category: "Industries",
-    numbers: "5+",
-    description: "Industries",
-  },
-  {
-    id: 3,
-    category: "Projects",
-    numbers: "70+",
-    description: "Successfull Projects",
-  },
-  {
-    id: 4,
-    category: "Founded",
-    numbers: "2016",
-    description: "Founded",
-  },
-];

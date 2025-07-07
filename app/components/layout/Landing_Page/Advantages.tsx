@@ -109,34 +109,6 @@ export default function Advantages() {
     }
   };
 
-  const featuredWorks_list = [
-    {
-      id: 1,
-      image: '/Images/case-studies/case_study_banner_image.png',
-      title: 'project title',
-      description: 'category',
-    },
-    {
-      id: 2,
-      image: '/Images/case-studies/case_study_banner_image.png',
-      title: 'project title',
-      description: 'category',
-    },
-    {
-      id: 3,
-      image: '/Images/case-studies/case_study_banner_image.png',
-      title: 'project title',
-      description: 'category',
-    },
-    {
-      id: 4,
-      image: '/Images/case-studies/case_study_banner_image.png',
-      title: 'project title',
-      description: 'category',
-    },
-
-  ];
-
   return (
     loaded && (
       <div className='w-full h-max flex flex-col items-center justify-center relative z-20 bg-primary-text'>
@@ -253,7 +225,7 @@ export default function Advantages() {
           </div>
           <div className='w-full lg:w-max flex flex-col items-center justify-center gap-[2.5rem] px-0 lg:px-[6.25rem]'>
             <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
-              {featuredWorks_list.slice(0, 2).map((item, index) => (
+              {LandingPageData.advantages.featuredWorks_list.slice(0, 2).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden'>
                     <div className='w-[100%] h-[100%] bg-primary-blue'></div>
@@ -266,7 +238,7 @@ export default function Advantages() {
               ))}
             </div>
             <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
-              {featuredWorks_list.slice(2, 4).map((item, index) => (
+              {LandingPageData.advantages.featuredWorks_list.slice(2, 4).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden'>
                     <div className='w-[100%] h-[100%] bg-primary-blue'></div>
