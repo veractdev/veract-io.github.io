@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import bannerBg from '@/public/landingPageBanner/bannerBg.png'
 import { AnimatePresence, motion } from "framer-motion";
+import Marquee from 'react-fast-marquee';
 
 const words = ["mobile app"];
 
@@ -77,7 +78,7 @@ export default function Banner() {
   }, [charIndex, typing, wordIndex]);
 
   // Images
-  const animateImages = ['/landingPageBanner/IBITS.png', '/landingPageBanner/Evo11ve.png', '/landingPageBanner/Mako.png', '/landingPageBanner/Suyash.png', '/landingPageBanner/Anyo.png']
+  const animateImages = ['/Images/LandingPage/Banner/IBITS.png', '/Images/LandingPage/Banner/Evo11ve.png', '/Images/LandingPage/Banner/Mako.png', '/Images/LandingPage/Banner/Suyash.png', '/Images/LandingPage/Banner/Anyo.png']
   const variants = {
     initial: (isHover: boolean) => ({
       y: isHover ? "0%" : "-100%",
@@ -90,9 +91,7 @@ export default function Banner() {
   };
   return (
     // loaded && (
-    <div
-
-      className="pt-[5.938rem] px-[5.438rem] w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
+    <div className="fixed top-0 select-none pt-[5.938rem] px-[5.438rem] w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
@@ -105,9 +104,20 @@ export default function Banner() {
         transformOrigin: 'center center',
         transition: 'transform 0.1s ease',
         position: 'absolute',
-        top: '-12.688rem'
+        top: '-12.688rem ',
+        left: '-39.688rem'
       }}
     /> */}
+         <img
+          src={`/Images/case-studies/case_study_banner_image.png`}
+          alt={`placeholder image`}
+          className="absolute w-full h-full object-cover"
+          style={{
+            transform: `translateY(-${translateY}px) rotateX(-${rotateX}deg) scale(${scale})`,
+            transformOrigin: 'center center',
+            transition: 'transform 0.1s ease',
+          }}
+        />
       {/* text overlays */}
       <div
         className=" w-[calc(100%-2.5rem)] lg:w-auto relative z-10 text-center text-white flex flex-col items-center justify-center gap-[2.188rem] md:gap-[0.625rem] lg:gap-[.625rem]"
@@ -222,63 +232,63 @@ export default function Banner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3, ease: "easeOut" }}
             className=' flex items-center justify-center gap-[0.938rem] pb-[2.688rem]'>
-        
-            <div
-              // onClick={() =>}
-              onMouseEnter={() => setHoveredTouch(true)}
-              onMouseLeave={() => setHoveredTouch(false)}
-              className="bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-primary-text text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
-            >
-              {/* Default Text */}
-              <motion.div
-                initial={false}
-                animate={{
-                  y: hoveredTouch ? "100%" : "0%",
-                  opacity: hoveredTouch ? 0 : 1,
-                }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="bg-primary-blue absolute inset-0 flex items-center justify-center"
-              >
-                Get in touch
-                <img
 
-                  src="/landingPageBanner/arrowIconUp.png"
-                  alt="arrow_icon"
-                  className={`w-[1rem] h-[1rem] object-contain `}
-                />
-              </motion.div>
-              {/* Hover Text */}
-              <motion.div
-                initial={false}
-                animate={{
-                  y: hoveredTouch ? "0%" : "-100%",
-                  opacity: hoveredTouch ? 1 : 0,
-                }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="absolute inset-0 flex items-center justify-center bg-primary-blue"
+              <div
+                // onClick={() =>}
+                onMouseEnter={() => setHoveredTouch(true)}
+                onMouseLeave={() => setHoveredTouch(false)}
+                className="bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
               >
-                Get in touch
-                <img
+                {/* Default Text */}
+                <motion.div
+                  initial={false}
+                  animate={{
+                    y: hoveredTouch ? "-100%" : "0%",
+                    opacity: hoveredTouch ? 0 : 1,
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="bg-primary-blue absolute inset-0 flex items-center justify-center"
+                >
+                  Get in touch
+                  <img
 
-                  src="/landingPageBanner/arrowIconUp.png"
-                  alt="arrow_icon"
-                  className={`w-[1rem] h-[1rem] object-contain rotate-45`}
-                />
-              </motion.div>
-            </div>
+                    src="/Images/LandingPage/Banner/arrowIconUp.png"
+                    alt="arrow_icon"
+                    className={`w-[1rem] h-[1rem] object-contain `}
+                  />
+                </motion.div>
+                {/* Hover Text */}
+                <motion.div
+                  initial={false}
+                  animate={{
+                    y: hoveredTouch ? "0%" : "100%",
+                    opacity: hoveredTouch ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="absolute inset-0 flex items-center justify-center bg-primary-blue"
+                >
+                  Get in touch
+                  <img
+
+                    src="/Images/LandingPage/Banner/arrowIconUp.png"
+                    alt="arrow_icon"
+                    className={`w-[1rem] h-[1rem] object-contain rotate-45`}
+                  />
+                </motion.div>
+              </div>
 
 
             <div
               // onClick={() => }
               onMouseEnter={() => setHoveredServices(true)}
               onMouseLeave={() => setHoveredServices(false)}
-              className="relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-primary-text text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
+              className="bg-[#0D0D0D] relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
             >
               {/* Default Text */}
               <motion.div
                 initial={false}
                 animate={{
-                  y: hoveredServices ? "100%" : "0%",
+                  y: hoveredServices ? "-100%" : "0%",
                   opacity: hoveredServices ? 0 : 1,
                 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -291,7 +301,7 @@ export default function Banner() {
               <motion.div
                 initial={false}
                 animate={{
-                  y: hoveredServices ? "0%" : "-100%",
+                  y: hoveredServices ? "0%" : "100%",
                   opacity: hoveredServices ? 1 : 0,
                 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -306,7 +316,7 @@ export default function Banner() {
           {/* pb-[5.438rem] */}
           <div className="flex items-start justify-center gap-[1.5rem]">
             <motion.img
-              src="/landingPageBanner/BNI.png"
+              src="/Images/LandingPage/Banner/BNI.png"
               alt="BNI"
               className="w-[2.563rem] object-cover"
               initial={{ opacity: 0 }}
@@ -316,7 +326,7 @@ export default function Banner() {
 
             <div className="flex flex-col items-center justify-center gap-[0.08rem]">
               <motion.img
-                src="/landingPageBanner/Clutch.png"
+                src="/Images/LandingPage/Banner/Clutch.png"
                 alt="Clutch"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0 }}
@@ -325,7 +335,7 @@ export default function Banner() {
               />
 
               <motion.img
-                src="/landingPageBanner/Stars.png"
+                src="/Images/LandingPage/Banner/Stars.png"
                 alt="Stars"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0, y: 20 }}
@@ -335,7 +345,7 @@ export default function Banner() {
             </div>
 
             <motion.img
-              src="/landingPageBanner/EtherCat.png"
+              src="/Images/LandingPage/Banner/EtherCat.png"
               alt="EtherCat"
               className="w-[3.563rem] object-cover"
               initial={{ opacity: 0 }}
@@ -346,26 +356,34 @@ export default function Banner() {
 
         </div>
 
-        <div className="overflow-hidden w-[95%] ">
-          <motion.div
-            className="flex w-max gap-[2rem]"
-            animate={{ x: ["0%", "-50%"] }} // shift by half, since we double the content
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
+        <motion.div
+          className='w-[95%]'
+          initial={{ x: 100, y: 15, opacity: 0 }}
+          animate={{ x: 0, y: 0, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
+          
+        >
+          <Marquee
+            gradient={true}
+            autoFill={true}
+            gradientColor="black"
+            gradientWidth={100}
+            speed={30}
+            direction="left" // or "right" as needed
+            className="flex items-center "
+            play={true}
           >
-            {[...animateImages, ...animateImages].map((src, idx) => (
-              <img
-                key={idx}
-                src={src}
-                alt={`slide-${idx}`}
-                className="w-[6.625rem]  object-cover flex-shrink-0"
-              />
+            {animateImages.map((src, idx) => (
+              <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
+                <img
+                  src={src}
+                  alt={`${src.split('/').pop()?.split('.').shift()}`}
+                  className="w-[6.625rem] object-cover flex-shrink-0"
+                />
+              </div>
             ))}
-          </motion.div>
-        </div>
+          </Marquee>
+        </motion.div>
 
       </div>
     </div>

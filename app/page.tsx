@@ -15,7 +15,7 @@ export default function Page() {
     <LenisProvider>
       <div className='w-full flex flex-col items-center justify-center bg-black'>
         <Navbar />
-        <Banner />
+        {/* <Banner /> */}
         <ShowReel />
         <About_Us />
         <Advantages />
