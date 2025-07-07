@@ -14,7 +14,7 @@ export default function About_Us() {
         <div className="w-[100%] h-[24.5rem] bg-[#030810] relative rounded-[36px]">
           <img
             src="/Images/LandingPage/AboutUs/about_us_bg.png"
-            alt="placeholder image"
+            alt='placeholder image'
             className="absolute top-0 object-center object-cover w-[100%] h-[100%] rounded-[36px]"
           />
           <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
