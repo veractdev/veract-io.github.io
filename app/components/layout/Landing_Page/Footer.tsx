@@ -157,7 +157,7 @@ export default function Footer() {
       <svg
         ref={svgRef}
         viewBox="0 20.34 156.69 33.59"
-        className="w-[902px] h-[342px]"
+        className="w-[902px] h-[342px] hidden lg:block"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -198,8 +198,7 @@ export default function Footer() {
           />
         )}
       </svg>
-      {/* <div className='openSansFont text-[17.813rem] text-[#1C1C1C] font-bold leading-[1.2] tracking-[0em]'>veract</div> */}
-      <div className='w-[70rem] h-[41.813rem] rounded-[1.375rem] bg-[#0F0E14] relative z-20 -mt-[7.95rem]'>
+      <div className='hidden lg:block w-[70rem] h-[41.813rem] rounded-[1.375rem] bg-[#0F0E14] relative z-20 -mt-[7.95rem]'>
         <div className='absolute top-[4.938rem] left-[3.75rem] w-[28.125rem] h-max flex flex-col items-start justify-center gap-[1.563rem] z-20'>
           <div className='openSansFont text-[3.25rem] text-white font-bold leading-[1.2em] tracking-[0em]'>ver<span className='text-primary-blue'>act</span></div>
           <div className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em]'>At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.</div>
@@ -277,6 +276,88 @@ export default function Footer() {
           </div>
         </div>
         <div className='absolute bottom-[1.5rem] left-1/2 transform -translate-x-1/2 w-[13.375rem] text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20'>
+          <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>
+          <div>All Rights reserved</div>
+        </div>
+      </div>
+
+      <div className='lg:hidden block openSansFont text-[6.563rem] md:text-[14.875rem] text-[#1C1C1C] font-bold leading-[1.2em] tracking-[0em] mt-[7.375rem] md:mt-0'>veract</div>
+      <div className="w-[calc(100%-0.625rem)] lg:hidden flex flex-col items-center mx-[0.625rem] md:mx-[1.125rem] md:rounded-none px-[0.875rem] md:px-0 md:pl-[1.875rem] rounded-[1.375rem] bg-[#0F0E14] z-20 -mt-[2.85rem] md:-mt-[5.25rem]">
+        <div className='pt-[4.938rem] w-full text-left openSansFont text-[3.25rem] text-white font-bold leading-[1.2em] tracking-[0em]'>ver<span className='text-primary-blue'>act</span></div>
+        <div className='py-[3.125rem_6.25rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em]'>At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.</div>
+        <div className='md:w-full flex flex-row items-start justify-center md:justify-start gap-[3.063rem] md:gap-[8.125rem] z-20'>
+          <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
+            <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
+            <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
+              {details.quickLinks.company.links.map((link) => (
+                <div key={link.id} className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{link.title}</div>
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
+            <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.services.title}</div>
+            <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
+              {details.quickLinks.services.links.map((link) => (
+                <div key={link.id} className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{link.title}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='w-full py-[3.125rem] flex flex-row items-center justify-start gap-[4.125rem] md:gap-[8.125rem]'>
+          <div className='flex flex-col items-center justify-center gap-[0.625rem] z-20'>
+            <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
+              {socialMediaIcons.slice(0, 2).map((icon) => (
+                <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
+                  <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
+                    <img src={icon.image} alt="social-media icon" />
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
+              {socialMediaIcons.slice(2, 4).map((icon) => (
+                <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
+                  <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
+                    <img src={icon.image} alt="social-media icon" />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
+            <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.contact.title}</div>
+            <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
+              {details.quickLinks.contact.links.map((link) => (
+                <div key={link.id}>
+                  {link.type === 'phone' ? (
+                    <a
+                      href={`tel:${link.title.replace(/\s+/g, '')}`}
+                      className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'
+                    >
+                      {link.title}
+                    </a>
+                  ) : link.type === 'email' ? (
+                    <a
+                      href={`mailto:${link.title}`}
+                      className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'
+                    >
+                      {link.title}
+                    </a>
+                  ) : (
+                    <div className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>
+                      {link.title}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='pb-[5rem] md:pb-[3.125rem] w-full flex flex-col items-start justify-center gap-[1.25rem]'>
+          <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.address.title}</div>
+          <div className='w-[15.75rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{details.quickLinks.address.address}</div>
+        </div>
+        <div className='pb-[0.75rem] md:pb-[1rem] openSansFont text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20'>
           <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>
           <div>All Rights reserved</div>
         </div>
