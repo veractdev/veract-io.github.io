@@ -21,8 +21,8 @@ export default function Page() {
         <Advantages />
         <Services />
         <We_Work_With /> 
-        <Testimonials />
-        <Footer />
+        {/* <Testimonials /> */}
+        {/* <Footer /> */}
       </div>
     </LenisProvider>
   )

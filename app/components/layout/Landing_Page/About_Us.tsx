@@ -24,40 +24,20 @@ export default function About_Us() {
             <div className="roaming-ball2" />
             <div className="roaming-ball3" />
           </div>
-          <div className="syneFont w-full h-full text-white flex items-center justify-start relative gap-[5rem]">
-            {/* First two items in a row */}
-            <div className="flex flex-row w-[50%] gap-[5rem] justify-end">
-              {achievements.slice(0, 2).map((category, index) => (
+          <div className="syneFont w-full h-full text-white flex items-center justify-evenly relative gap-[2rem] flex-wrap">
+            {achievements.map((category, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-[20px] items-center w-fit lg:w-[254px]"
+                  className="flex flex-col gap-[20px] items-center w-[155px]"
                 >
-                  <div className="text-[54px] tracking-[-1.9px] leading-[50px] text-center">
+                  <div className="md:text-[54px] lg:text-[54px] text-[32px] tracking-[-1.9px] leading-[50px] text-center">
                     {category.numbers}
                   </div>
-                  <div className="text-[32px] tracking-[-1.9px] leading-[50px] text-center">
+                  <div className="lg:text-[32px] md:text-[32px] text-[26px] tracking-[-1.9px] leading-[50px] text-center text-wrap">
                     {category.description}
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Last two items in a column */}
-            <div className="flex flex-row w-[50%] gap-[5rem] justify-start">
-              {achievements.slice(2, 4).map((category, index) => (
-                <div
-                  key={index + 2}
-                  className="flex flex-col gap-[20px] items-center w-fit lg:w-[254px]"
-                >
-                  <div className="text-[54px] tracking-[-1.9px] leading-[50px] text-center">
-                    {category.numbers}
-                  </div>
-                  <div className="text-[32px] tracking-[-1.9px] leading-[50px] text-center">
-                    {category.description}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
