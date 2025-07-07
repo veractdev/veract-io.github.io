@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import bannerBg from '@/public/landingPageBanner/bannerBg.png'
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import Marquee from 'react-fast-marquee';
 
 const words = ["mobile app"];
@@ -12,8 +11,7 @@ export default function Banner() {
   const [rotateX, setRotateX] = useState<number>(0);
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
-  const [loaded, setLoaded] = useState(false);
-  const [animationDelay, setAnimationDelay] = useState<number>(0);
+  // const [loaded, setLoaded] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -35,15 +33,6 @@ export default function Banner() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Loading Effect
-  useEffect(() => {
-    setLoaded(true);
-    setTimeout(() => {
-      setAnimationDelay(0.3);
-    }, 100);
-  }, [])
-
 
   // Typing Effect
   useEffect(() => {
@@ -79,16 +68,7 @@ export default function Banner() {
 
   // Images
   const animateImages = ['/Images/LandingPage/Banner/IBITS.png', '/Images/LandingPage/Banner/Evo11ve.png', '/Images/LandingPage/Banner/Mako.png', '/Images/LandingPage/Banner/Suyash.png', '/Images/LandingPage/Banner/Anyo.png']
-  const variants = {
-    initial: (isHover: boolean) => ({
-      y: isHover ? "0%" : "-100%",
-      opacity: isHover ? 1 : 0,
-    }),
-    exit: (isHover: boolean) => ({
-      y: isHover ? "100%" : "0%",
-      opacity: isHover ? 0 : 1,
-    }),
-  };
+
   return (
     // loaded && (
     <div className="fixed top-0 select-none pt-[5.938rem] px-[5.438rem] w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"

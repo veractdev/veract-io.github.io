@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -102,7 +102,7 @@ export default function Testimonials() {
                   initial={{ width: "5.125rem" }}
                   animate={{ width: "20.125rem" }}
                   transition={{ duration: 0.7, ease: "easeInOut" }}
-                  style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' } as any}
+                  style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
                   className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border border-[0.25rem] border-[#4285F4] overflow-hidden"
                 >
                   {/* Full Card Content */}
@@ -188,7 +188,7 @@ export default function Testimonials() {
                     <motion.div
                       key={index}
                       transition={{ duration: 0.4, ease: "easeInOut" }}
-                      style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' } as any}
+                      style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
                       className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                     >
                       <div
