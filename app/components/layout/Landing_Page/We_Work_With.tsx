@@ -12,7 +12,7 @@ export default function We_Work_With() {
 
   return (
     loaded && (
-      <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-[1rem] pt-[6.25rem] pb-[4.4375rem]">
+      <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-[1rem] pt-[6.25rem] pb-[4.4375rem] relative z-20">
         <div className="text-center mb-[2.5rem]">
           <div className="syneFont text-[2.25rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#fff]">
             WE WORK WITH
