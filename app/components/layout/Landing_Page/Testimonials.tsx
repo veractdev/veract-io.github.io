@@ -1,14 +1,16 @@
 'use client'
-import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = React.useRef<number>(0);
+  const [visibleMiniIndex, setVisibleMiniIndex] = useState<number | null>(null);
 
   const handleSetActiveIndex = (newIndex: number) => {
     if (newIndex !== activeIndex) {
       prevIndexRef.current = activeIndex;
+      setVisibleMiniIndex(null);
       setActiveIndex(newIndex);
     }
   };
@@ -42,7 +44,7 @@ export default function Testimonials() {
       image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
       company: "NextWare",
     },
-    { 
+    {
       name: "Bob Brown",
       quote:
         "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -99,33 +101,39 @@ export default function Testimonials() {
                   key={index}
                   initial={{ width: "5.125rem" }}
                   animate={{ width: "20.125rem" }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
                   style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' } as any}
                   className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border border-[0.25rem] border-[#4285F4] overflow-hidden"
                 >
                   {/* Full Card Content */}
-                  <motion.div
-                    initial={{ x: 100, y: -50, opacity: 0 }}
-                    animate={{ x: 0, y: 0, opacity: 1 }}
-                    transition={{ duration: 0.7, ease: "easeInOut" }}
-                    exit={{ x: -100, y: 50, opacity: 0 }}  
-                    className="flex items-center gap-[0.625rem] pb-[2.438rem]">
-                    <img className="w-[3.688rem] h-[3.688rem]  rounded-full" src={t.image} alt="Testimonial_Client" />
+                  <div
 
-                    <div className='flex flex-col gap-[0.625rem]'>
+                    className="flex items-center gap-[0.625rem] pb-[2.438rem]">
+                    <motion.img
+                      initial={{ x: -100, y: -50, opacity: 0 }}
+                      animate={{ x: 0, y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+
+                      className="w-[3.688rem] h-[3.688rem]  rounded-full" src={t.image} alt="Testimonial_Client" />
+
+                    <motion.div
+                      initial={{ x: 100, y: -50, opacity: 0 }}
+                      animate={{ x: 0, y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      className='flex flex-col gap-[0.625rem]'>
                       <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                         {testimonials[activeIndex].name}
                       </div>
                       <div className="interFont text-[#E3E3E3] text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
                         {testimonials[activeIndex].company}
                       </div>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </div>
 
                   <motion.div
                     initial={{ x: 100, y: 100, opacity: 0 }}
-                    animate={{ x: 0, y: 0, opacity: 1,}}
-                    transition={{ duration: 0.7, delay: 0.4, ease: "easeInOut" }}
+                    animate={{ x: 0, y: 0, opacity: 1, }}
+                    transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
                     className="relative pl-[1.438rem] text-base leading-relaxed">
                     <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                       <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
@@ -140,41 +148,109 @@ export default function Testimonials() {
 
             // Recently closed card (animate shrink)
             if (prevIndexRef.current === index) {
+              if (visibleMiniIndex !== index) {
+                setTimeout(() => {
+                  setVisibleMiniIndex(index);
+                }, 500); // Delay before showing mini view
+              }
+
               return (
                 <motion.button
                   key={index}
                   initial={{ width: "20.125rem" }}
                   animate={{ width: "5.125rem" }}
-                  transition={{ duration: 0.8,ease: "easeInOut" }}
-                  // onClick={() => handleSetActiveIndex(index)}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
                   onMouseEnter={() => handleSetActiveIndex(index)}
                   className="relative h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border border-[0.25rem] border-[#4285F4] overflow-hidden"
                 >
-                  <div className='absolute top-[10rem]'>
-                    <div className="interFont font-semibold text-[1.25rem] text-white rotate-[-90deg] whitespace-nowrap">
-                      {t.name}
-                    </div>
-                  </div>
-                  <img className="w-[3.688rem] h-[3.688rem] mx-[0.75rem] my-[0.50rem] rounded-full" src={t.image} alt="Testimonial_Client" />
+                  {visibleMiniIndex === index ? (
+                    // Mini card content (after 3s)
+                    <>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-[-90deg] interFont font-semibold text-[1.25rem] text-white whitespace-nowrap text-center">
+                        {t.name}
+                      </motion.div>
+
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="w-[3.688rem] h-[3.688rem] mx-[0.75rem] my-[0.50rem] rounded-full"
+                        src={t.image}
+                        alt="Testimonial_Client"
+                      />
+                    </>
+                  ) : (
+                    // Placeholder content while waiting
+                    <motion.div
+                      key={index}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' } as any}
+                      className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
+                    >
+                      <div
+                        className="flex items-center gap-[0.625rem] pb-[2.438rem]">
+                        <motion.img
+                          initial={{ x: 0, y: 0, opacity: 0 }}
+                          animate={{ x: -100, y: -50, opacity: 1 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+
+                          className="w-[3.688rem] h-[3.688rem]  rounded-full" src={t.image} alt="Testimonial_Client" />
+
+                        <motion.div
+                          initial={{ x: 0, y: 0, opacity: 0 }}
+                          animate={{ x: 100, y: -50, opacity: 1 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          className='flex flex-col gap-[0.625rem]'>
+                          <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
+                            {t.name}
+                          </div>
+                          <div className="interFont text-[#E3E3E3] text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                            {t.company}
+                          </div>
+                        </motion.div>
+                      </div>
+
+                      <motion.div
+                        initial={{ x: 0, y: 0, opacity: 0 }}
+                        animate={{ x: 100, y: 100, opacity: 1, }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="relative pl-[1.438rem] text-base leading-relaxed">
+                        <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
+                          <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
+                        </div>
+                        <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
+                          {t.quote}
+                        </p>
+                      </motion.div>
+                    </motion.div>
+                  )}
                 </motion.button>
               );
             }
+
 
             // All other small buttons (static)
             return (
               <button
                 key={index}
-                // onClick={() => handleSetActiveIndex(index)}
                 onMouseEnter={() => handleSetActiveIndex(index)}
                 className="relative w-[5.125rem] h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-col items-center justify-end rounded-[2.5rem] border border-[0.25rem] border-[#4285F4]"
               >
-                <div className='absolute top-[10rem]'>
-                  <div className="interFont font-semibold text-[1.25rem] text-white rotate-[-90deg] whitespace-nowrap">
-                    {t.name}
-                  </div>
+                <div className="absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-[-90deg] interFont font-semibold text-[1.25rem] text-white whitespace-nowrap text-center">
+                  {t.name}
                 </div>
-                <img className="w-[3.688rem] h-[3.688rem] mx-[0.75rem] my-[0.50rem] rounded-full" src={t.image} alt="Testimonial_Client" />
+
+                <img
+                  className="w-[3.688rem] h-[3.688rem] mx-[0.75rem] my-[0.50rem] rounded-full"
+                  src={t.image}
+                  alt="Testimonial_Client"
+                />
               </button>
+
             );
           })}
 
