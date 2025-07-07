@@ -14,15 +14,15 @@ export default function Page() {
   return (
     <LenisProvider>
       <div className='w-full flex flex-col items-center justify-center bg-black'>
-        <Navbar />
+        {/* <Navbar />
         <Banner />
-        <ShowReel />
+        <ShowReel /> */}
         <About_Us />
-        <Advantages />
+        {/* <Advantages />
         <Services />
         <We_Work_With />
         <Testimonials />
-        <Footer />
+        <Footer /> */}
       </div>
     </LenisProvider>
   )

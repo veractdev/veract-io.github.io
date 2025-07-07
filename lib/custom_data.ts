@@ -233,8 +233,8 @@ export const LandingPageData = {
           "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
         blobWidth: "w-[10rem]",
       },
-    ]
-  }
+    ],
+  },
 };
 
 export const brandData = [
@@ -292,5 +292,32 @@ export const brandData = [
     id: 11,
     name: "Wellness",
     image: "/Images/LandingPage/WeWorkWith/wellness.png",
-  }
+  },
+];
+
+export const achievements = [
+  {
+    id: 1,
+    category: "clients",
+    numbers: "50+",
+    description: "Amazing clients",
+  },
+  {
+    id: 2,
+    category: "Industries",
+    numbers: "5+",
+    description: "Industries",
+  },
+  {
+    id: 3,
+    category: "Projects",
+    numbers: "70+",
+    description: "Successfull Projects",
+  },
+  {
+    id: 4,
+    category: "Founded",
+    numbers: "2016",
+    description: "Founded",
+  },
 ];

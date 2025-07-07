@@ -14,10 +14,10 @@ export default function We_Work_With() {
     loaded && (
       <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-[1rem] pt-[6.25rem] pb-[4.4375rem]">
         <div className="text-center mb-[2.5rem]">
-          <div className="syneFont text-[1.875rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#fff]">
+          <div className="syneFont text-[2.25rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#fff]">
             WE WORK WITH
           </div>
-          <div className="syneFont text-[1.875rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#4285F4]">
+          <div className="syneFont text-[2.25rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#4285F4]">
             BRANDS IN
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function We_Work_With() {
             {brandData.map((brand, index) => (
               <div
                 key={index}
-                className="chakraPetchFont w-[18.75rem] h-[12.5rem] flex items-center justify-center text-white text-[2.25rem] font-medium"
+                className="chakraPetchFont w-[18.75rem] h-[7.875rem] lg:h-[12.5rem] md:h-[12.5rem] flex items-center justify-center text-white text-[2.25rem] font-medium"
                 style={{
                   backgroundImage: `url(${brand.image})`,
                   marginLeft: index !== 0 ? "0.625rem" : "-0.3125rem",
