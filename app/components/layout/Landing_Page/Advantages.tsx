@@ -139,7 +139,7 @@ export default function Advantages() {
 
   return (
     loaded && (
-      <div className='w-full h-max flex flex-col items-center justify-center'>
+      <div className='w-full h-max flex flex-col items-center justify-center relative z-20 bg-black'>
         <div className='static lg:sticky top-[calc(100%-934px)] w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_1.5rem_6.25rem_1.5rem] md:p-[0_3.125rem_6.25rem_3.125rem]'>
           <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
             <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] md:-tracking-[0.05rem] leading-[3.125rem] text-white text-center'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
