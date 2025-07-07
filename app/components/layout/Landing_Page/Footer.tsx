@@ -84,7 +84,7 @@ export default function Footer() {
             filter="url(#glow)"
             clipPath="url(#text-clip)"
             style={{ pointerEvents: "none" }}
-            className="w-[80.33px] h-[119.31px] backdrop-blur-[60px]"
+            className="w-[80.33px] h-[119.31px] blur-[8px]"
           />
         )}
       </svg>
