@@ -35,7 +35,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <div className="w-full py-[6.25rem] pl-[6.188rem] pr-[3.25rem] h-[100vh] bg-[#0D0D0D] text-white text-4xl flex items-center justify-center">
+    <div className="w-full py-[6.25rem] pl-[6.188rem] pr-[3.25rem] h-[100vh] bg-[#0D0D0D] text-white text-4xl flex items-center justify-center relative z-20">
       <div className="flex w-full h-full items-center justify-between">
         <div className="w-[30%] relative">
           <img

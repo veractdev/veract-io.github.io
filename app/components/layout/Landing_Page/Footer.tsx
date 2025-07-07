@@ -1,119 +1,9 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
+import { LandingPageData } from "@/lib/custom_data";
 
 export default function Footer() {
-  const socialMediaIcons = [
-    {
-      id: 1,
-      image: '/Images/LandingPage/Footer/veract-linkedIn.svg',
-      link: 'https://www.linkedin.com/company/veract-consultancy-private-limited/'
-    },
-    {
-      id: 2,
-      image: '/Images/LandingPage/Footer/veract-youtube.svg',
-      link: ''
-    },
-    {
-      id: 3,
-      image: '/Images/LandingPage/Footer/veract-whatsapp.svg',
-      link: ''
-    },
-    {
-      id: 4,
-      image: '/Images/LandingPage/Footer/veract-instagram.svg',
-      link: 'https://www.instagram.com/veractconsultancy?igsh=amVzcWEwdzVtbnk5'
-    },
-
-  ]
-
-  const details = {
-    quickLinks: {
-      company: {
-        title: 'Company',
-        links: [
-          {
-            id: 1,
-            title: 'Case studies',
-            link: '/case-studies/thermal'
-          },
-          {
-            id: 2,
-            title: 'Services',
-            link: ''
-          },
-          {
-            id: 3,
-            title: 'Blogs',
-            link: ''
-          },
-          {
-            id: 4,
-            title: 'About Us',
-            link: ''
-          },
-          {
-            id: 5,
-            title: 'Contact Us',
-            link: ''
-          },
-        ]
-      },
-      services: {
-        title: 'Services',
-        links: [
-          {
-            id: 1,
-            title: 'Digital Transformation',
-            link: ''
-          },
-          {
-            id: 2,
-            title: 'Development Services',
-            link: ''
-          },
-          {
-            id: 3,
-            title: 'Industrial IoT',
-            link: ''
-          },
-          {
-            id: 4,
-            title: 'AI Agent',
-            link: ''
-          },
-          {
-            id: 5,
-            title: 'Machine Vision',
-            link: ''
-          },
-        ]
-      },
-      contact: {
-        title: 'Contact Us',
-        links: [
-          {
-            id: 1,
-            type: 'phone',
-            title: '+91 97899 91565',
-          },
-          {
-            id: 2,
-            type: 'phone',
-            title: '+91 99628 37650',
-          },
-          {
-            id: 3,
-            type: 'email',
-            title: 'info@veract.io',
-          },
-        ]
-      },
-      address: {
-        title: 'Location',
-        address: '37,Aspace,Brindavan Street Srinivasa Nagar, Madipakkam, Chennai - 600 091'
-      }
-    }
-  }
+  const details = LandingPageData.footer; 
 
   const svgRef = useRef<SVGSVGElement>(null);
   const circleRef = useRef<SVGCircleElement>(null);
@@ -153,7 +43,7 @@ export default function Footer() {
   };
 
   return (
-    <div className='w-full flex flex-col items-center justify-center relative'>
+    <div className='w-full flex flex-col items-center justify-center relative bg-primary-text'>
       <svg
         ref={svgRef}
         viewBox="0 20.34 156.69 33.59"
@@ -205,7 +95,7 @@ export default function Footer() {
         </div>
         <div className='absolute top-[21.438rem] left-[3.75rem] flex flex-col items-center justify-center gap-[0.625rem] z-20'>
           <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
-            {socialMediaIcons.slice(0, 2).map((icon) => (
+            {details.socialMediaIcons.slice(0, 2).map((icon) => (
               <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                 <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
                   <img src={icon.image} alt="social-media icon" />
@@ -214,7 +104,7 @@ export default function Footer() {
             ))}
           </div>
           <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
-            {socialMediaIcons.slice(2, 4).map((icon) => (
+            {details.socialMediaIcons.slice(2, 4).map((icon) => (
               <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                 <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
                   <img src={icon.image} alt="social-media icon" />
@@ -306,7 +196,7 @@ export default function Footer() {
         <div className='w-full py-[3.125rem] flex flex-row items-center justify-start gap-[4.125rem] md:gap-[8.125rem]'>
           <div className='flex flex-col items-center justify-center gap-[0.625rem] z-20'>
             <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
-              {socialMediaIcons.slice(0, 2).map((icon) => (
+              {details.socialMediaIcons.slice(0, 2).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
                     <img src={icon.image} alt="social-media icon" />
@@ -315,7 +205,7 @@ export default function Footer() {
               ))}
             </div>
             <div className='flex flex-row items-center justify-center gap-[0.625rem]'>
-              {socialMediaIcons.slice(2, 4).map((icon) => (
+              {details.socialMediaIcons.slice(2, 4).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
                     <img src={icon.image} alt="social-media icon" />
