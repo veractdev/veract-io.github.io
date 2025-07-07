@@ -196,7 +196,59 @@ export const caseStudyData = {
 
 export const LandingPageData = {
   banner: {
-
+    title_primary: 'Driving Digital Transformation with',
+    title_secondary: 'custom',
+    typwriting_animation_list: [
+      {
+        id: 1,
+        word: 'mobile app',
+      }
+    ],
+    description_primary: 'Delivering scalable technology that powers modern digital experiences, AI',
+    description_secondary: 'systems, and connected IoT solutions.',
+    get_in_touch: 'Get in touch',
+    get_in_touch_arrow: '/Images/LandingPage/Banner/arrowIconUp.png',
+    view_services_text: 'View services',
+    banner_image_list: [
+      {
+        id: 1,
+        image: '/Images/LandingPage/Banner/BNI.png',
+      },
+      {
+        id: 2,
+        image: '/Images/LandingPage/Banner/Clutch.png',
+      },
+      {
+        id: 3,
+        image: '/Images/LandingPage/Banner/Stars.png',
+      },
+      {
+        id: 4,
+        image: '/Images/LandingPage/Banner/EtherCat.png',
+      },
+    ],
+    banner_carousel_list: [
+      {
+        id: 1,
+        img: '/Images/LandingPage/Banner/IBITS.png',
+      },
+      {
+        id: 2,
+        img: '/Images/LandingPage/Banner/Evo11ve.png',
+      },
+      {
+        id: 3,
+        img: '/Images/LandingPage/Banner/Mako.png',
+      },
+      {
+        id: 4,
+        img: '/Images/LandingPage/Banner/Suyash.png',
+      },
+      {
+        id: 5,
+        img: '/Images/LandingPage/Banner/Anyo.png',
+      }
+    ]
   },
   showReel: {
     title: "SHOWREEL",
