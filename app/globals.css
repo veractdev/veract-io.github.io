@@ -288,24 +288,26 @@ body {
 
 @keyframes grow-line {
   0% {
-    transform: scaleX(0);
+    transform: scaleX(0) scaleY(1);
     transform-origin: left;
   }
-
-  /* 80% {
-    transform: translateY(0)
-  } */
-
-  100% {
-    transform: scaleX(1);
+  50% {
+    transform: scaleX(1) scaleY(1);
     transform-origin: left;
+  }
+  60%{
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1) scaleX(0);
+    transform-origin: right;
   }
 }
 
 .animate-grow-line {
-  width: 5rem;
+  width: 8rem;
   height: 2px;
-  animation: grow-line 1.75s ease infinite;
+  animation: grow-line 1.75s ease-in infinite;
   transform: scaleX(0);
   transform-origin: left;
 }

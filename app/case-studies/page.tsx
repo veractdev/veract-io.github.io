@@ -19,7 +19,7 @@ export default function Page() {
                     </div>
                     <div className='absolute top-[90%] -left-[1.5rem] flex flex-row gap-[1rem] items-center justify-center transform rotate-90'>
                         <div className='uppercase interFont text-[0.875rem] text-white font-light leading-[1.5em] -tracking-[0.02em]'>Scroll</div>
-                        <div className="h-full bg-gradient-to-r from-blue-500 to-pink-500 animate-grow-line" />
+                        <div className="h-full bg-white animate-grow-line" />
                     </div>
                 </div>
                 <div className='w-full flex flex-row flex-wrap p-[3.125rem] items-center justify-center gap-[0.5rem]'>
