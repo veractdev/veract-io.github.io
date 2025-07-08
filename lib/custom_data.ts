@@ -196,59 +196,60 @@ export const caseStudyData = {
 
 export const LandingPageData = {
   banner: {
-    title_primary: 'Driving Digital Transformation with',
-    title_secondary: 'custom',
+    title_primary: "Driving Digital Transformation with",
+    title_secondary: "custom",
     typwriting_animation_list: [
       {
         id: 1,
-        word: 'mobile app',
-      }
+        word: "mobile app",
+      },
     ],
-    description_primary: 'Delivering scalable technology that powers modern digital experiences, AI',
-    description_secondary: 'systems, and connected IoT solutions.',
-    get_in_touch: 'Get in touch',
-    get_in_touch_arrow: '/Images/LandingPage/Banner/arrowIconUp.png',
-    view_services_text: 'View services',
+    description_primary:
+      "Delivering scalable technology that powers modern digital experiences, AI",
+    description_secondary: "systems, and connected IoT solutions.",
+    get_in_touch: "Get in touch",
+    get_in_touch_arrow: "/Images/LandingPage/Banner/arrowIconUp.png",
+    view_services_text: "View services",
     banner_image_list: [
       {
         id: 1,
-        image: '/Images/LandingPage/Banner/BNI.png',
+        image: "/Images/LandingPage/Banner/BNI.png",
       },
       {
         id: 2,
-        image: '/Images/LandingPage/Banner/Clutch.png',
+        image: "/Images/LandingPage/Banner/Clutch.png",
       },
       {
         id: 3,
-        image: '/Images/LandingPage/Banner/Stars.png',
+        image: "/Images/LandingPage/Banner/Stars.png",
       },
       {
         id: 4,
-        image: '/Images/LandingPage/Banner/EtherCat.png',
+        image: "/Images/LandingPage/Banner/EtherCat.png",
       },
     ],
     banner_carousel_list: [
       {
         id: 1,
-        img: '/Images/LandingPage/Banner/IBITS.png',
+        img: "/Images/LandingPage/Banner/IBITS.png",
       },
       {
         id: 2,
-        img: '/Images/LandingPage/Banner/Evo11ve.png',
+        img: "/Images/LandingPage/Banner/Evo11ve.png",
       },
       {
         id: 3,
-        img: '/Images/LandingPage/Banner/Mako.png',
+        img: "/Images/LandingPage/Banner/Mako.png",
       },
       {
         id: 4,
-        img: '/Images/LandingPage/Banner/Suyash.png',
+        img: "/Images/LandingPage/Banner/Suyash.png",
       },
       {
         id: 5,
-        img: '/Images/LandingPage/Banner/Anyo.png',
-      }
-    ]
+        img: "/Images/LandingPage/Banner/Anyo.png",
+      },
+    ],
   },
   showReel: {
     title: "SHOWREEL",
@@ -325,27 +326,27 @@ export const LandingPageData = {
     featuredWorks_list: [
       {
         id: 1,
-        image: '/Images/case-studies/case_study_banner_image.png',
-        title: 'project title',
-        description: 'category',
+        image: "/Images/case-studies/case_study_banner_image.png",
+        title: "project title",
+        description: "category",
       },
       {
         id: 2,
-        image: '/Images/case-studies/case_study_banner_image.png',
-        title: 'project title',
-        description: 'category',
+        image: "/Images/case-studies/case_study_banner_image.png",
+        title: "project title",
+        description: "category",
       },
       {
         id: 3,
-        image: '/Images/case-studies/case_study_banner_image.png',
-        title: 'project title',
-        description: 'category',
+        image: "/Images/case-studies/case_study_banner_image.png",
+        title: "project title",
+        description: "category",
       },
       {
         id: 4,
-        image: '/Images/case-studies/case_study_banner_image.png',
-        title: 'project title',
-        description: 'category',
+        image: "/Images/case-studies/case_study_banner_image.png",
+        title: "project title",
+        description: "category",
       },
     ],
   },
@@ -450,114 +451,143 @@ export const LandingPageData = {
     ],
   },
   footer: {
-    description: 'At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.',
+    description:
+      "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
     socialMediaIcons: [
       {
         id: 1,
-        image: '/Images/LandingPage/Footer/veract-linkedIn.svg',
-        link: 'https://www.linkedin.com/company/veract-consultancy-private-limited/'
+        image: "/Images/LandingPage/Footer/veract-linkedIn.svg",
+        link: "https://www.linkedin.com/company/veract-consultancy-private-limited/",
       },
       {
         id: 2,
-        image: '/Images/LandingPage/Footer/veract-youtube.svg',
-        link: ''
+        image: "/Images/LandingPage/Footer/veract-youtube.svg",
+        link: "",
       },
       {
         id: 3,
-        image: '/Images/LandingPage/Footer/veract-whatsapp.svg',
-        link: ''
+        image: "/Images/LandingPage/Footer/veract-whatsapp.svg",
+        link: "",
       },
       {
         id: 4,
-        image: '/Images/LandingPage/Footer/veract-instagram.svg',
-        link: 'https://www.instagram.com/veractconsultancy?igsh=amVzcWEwdzVtbnk5'
+        image: "/Images/LandingPage/Footer/veract-instagram.svg",
+        link: "https://www.instagram.com/veractconsultancy?igsh=amVzcWEwdzVtbnk5",
       },
     ],
     quickLinks: {
       company: {
-        title: 'Company',
+        title: "Company",
         links: [
           {
             id: 1,
-            title: 'Case studies',
-            link: '/case-studies/thermal'
+            title: "Case studies",
+            link: "/case-studies/thermal",
           },
           {
             id: 2,
-            title: 'Services',
-            link: ''
+            title: "Services",
+            link: "",
           },
           {
             id: 3,
-            title: 'Blogs',
-            link: ''
+            title: "Blogs",
+            link: "",
           },
           {
             id: 4,
-            title: 'About Us',
-            link: ''
+            title: "About Us",
+            link: "",
           },
           {
             id: 5,
-            title: 'Contact Us',
-            link: ''
+            title: "Contact Us",
+            link: "",
           },
-        ]
+        ],
       },
       services: {
-        title: 'Services',
+        title: "Services",
         links: [
           {
             id: 1,
-            title: 'Digital Transformation',
-            link: ''
+            title: "Digital Transformation",
+            link: "",
           },
           {
             id: 2,
-            title: 'Development Services',
-            link: ''
+            title: "Development Services",
+            link: "",
           },
           {
             id: 3,
-            title: 'Industrial IoT',
-            link: ''
+            title: "Industrial IoT",
+            link: "",
           },
           {
             id: 4,
-            title: 'AI Agent',
-            link: ''
+            title: "AI Agent",
+            link: "",
           },
           {
             id: 5,
-            title: 'Machine Vision',
-            link: ''
+            title: "Machine Vision",
+            link: "",
           },
-        ]
+        ],
       },
       contact: {
-        title: 'Contact Us',
+        title: "Contact Us",
         links: [
           {
             id: 1,
-            type: 'phone',
-            title: '+91 97899 91565',
+            type: "phone",
+            title: "+91 97899 91565",
           },
           {
             id: 2,
-            type: 'phone',
-            title: '+91 99628 37650',
+            type: "phone",
+            title: "+91 99628 37650",
           },
           {
             id: 3,
-            type: 'email',
-            title: 'info@veract.io',
+            type: "email",
+            title: "info@veract.io",
           },
-        ]
+        ],
       },
       address: {
-        title: 'Location',
-        address: '37,Aspace,Brindavan Street Srinivasa Nagar, Madipakkam, Chennai - 600 091'
-      }
+        title: "Location",
+        address:
+          "37,Aspace,Brindavan Street Srinivasa Nagar, Madipakkam, Chennai - 600 091",
+      },
     },
+  },
+};
+
+export const AgentPageData = {
+  banner: {
+    about: "AI-DRIVEN EFFICIENCY",
+    title: "Optimize Your Business Operations with AI Agents",
+    subtitle: "Unlock productivity like never before. Get a free consultation, see our AI agents in action, and deploy 1 intelligent agent in your workflow-mat no cost",
+    book_demo: "Book a free demo",
+    view_case_study: "View case studies",
+    banner_features: [
+      {
+        features_icon: "/Icons/blinkEffect.png",
+        features_title: "Free Business consultation",
+        features_subtitle: "Get expert insights into where AI can deliver the most value in your operations.",
+      },
+      {
+        features_icon: "/Icons/blinkEffect.png",
+        features_title: "Live Product Demo",
+        features_subtitle: "Watch how our AI agents automate real tasks across your tools — customized to your case.",
+      },
+      {
+        features_icon: "/Icons/blinkEffect.png",
+        features_title: "Deploy 1 AI Agent Free",
+        features_subtitle: "Test, drive one fully trained AI agent for your business — no commitment, no cost.",
+      },
+    ],
   },
 };
