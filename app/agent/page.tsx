@@ -11,8 +11,7 @@ export default async function Page() {
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-[#080808]'>
           <Navbar />
-          <AgentTitle title='Agentic Layer' />
-          <AgenticLayer />
+          {/* <AgenticLayer /> */}
           <OurProcess />
         </div>
       </LenisProvider>
