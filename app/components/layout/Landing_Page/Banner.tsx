@@ -50,10 +50,6 @@ export default function Banner() {
     return () => clearTimeout(timeout);
   }, [charIndex, typing, wordIndex]);
 
-
-  // Images
-  const animateImages = ['/Images/LandingPage/Banner/IBITS.png', '/Images/LandingPage/Banner/Evo11ve.png', '/Images/LandingPage/Banner/Mako.png', '/Images/LandingPage/Banner/Suyash.png', '/Images/LandingPage/Banner/Anyo.png']
-
   // Background Effect
   useEffect(() => {
     const handleScroll = () => {
@@ -350,11 +346,11 @@ export default function Banner() {
             className="flex items-center "
             play={true}
           >
-            {LandingPageData.banner.banner_carousel_list.map((src: any, idx: number) => (
+            {LandingPageData.banner.banner_carousel_list.map((src, idx: number) => (
               <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
                 <img
                   src={src.img}
-                  alt={`${src.img.split('/').pop()?.split('.').shift()}`}
+                  alt={`brand logo`}
                   className="w-[6.625rem] object-cover flex-shrink-0"
                 />
               </div>

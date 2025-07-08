@@ -1,6 +1,5 @@
 "use client";
 import { AgentPageData, LandingPageData } from "@/lib/custom_data";
-import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 export default function AgentBanner() {
