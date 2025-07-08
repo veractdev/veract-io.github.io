@@ -1,12 +1,13 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = React.useRef<number>(0);
   const [visibleMiniIndex, setVisibleMiniIndex] = useState<number | null>(null);
+  const [loader, setLoader] = useState(false);
 
   const handleSetActiveIndex = (newIndex: number) => {
     if (newIndex !== activeIndex) {
@@ -16,7 +17,14 @@ export default function Testimonials() {
     }
   };
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setLoader(true);
+    });
+  }, []);
+
   return (
+    loader && (
     <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex items-center justify-center relative z-20">
       <div className="flex w-[75rem] gap-[2.75rem] h-full px-[6.25rem] py-[3.125rem] items-center justify-between">
         <div className="w-[30%] relative">
@@ -45,7 +53,7 @@ export default function Testimonials() {
               our
             </span>
             <span style={{
-              background: 'linear-gradient(97deg, rgb(66, 133, 244) 24%, rgba(255, 255, 255, 0.63) 100%);',
+              background: 'linear-gradient(97deg, rgb(66, 133, 244) 24%, rgba(255, 255, 255, 0.63) 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               display: 'inline-block'
@@ -222,5 +230,6 @@ export default function Testimonials() {
 
       </div>
     </div>
+    )
   );
 }

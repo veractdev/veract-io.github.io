@@ -259,7 +259,7 @@ export default function Advantages() {
               setIsHovered(false);
             }}
             onClick={() => {
-              router.push('/case-studies/thermal');
+              router.push('/case-studies');
             }}
             className='w-[8.688rem] h-[2.75rem] relative flex flex-row items-center justify-center rounded-[2.5rem] hover:bg-primary-blue transition-all duration-300 easeTransition cursor-pointer group'
           >
