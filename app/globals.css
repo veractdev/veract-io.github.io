@@ -252,3 +252,51 @@ body {
   animation-name: roam-found;
   animation-duration: 7s;
 }
+
+.gradient-text {
+  background: linear-gradient(160deg, rgb(255, 255, 255) 66.90644266773134%, rgba(0, 0, 0, 0) 94.2195452108111%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animate {
+  height: 2px;
+  background-color: #FFFFFF;
+  /* transition: all 0.3s ease-in-out; */
+  animation: animate_keyframe 1.5s ease forwards;
+}
+
+@keyframes animate_keyframe {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 5rem;
+  }
+}
+
+@keyframes grow-line {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  /* 80% {
+    transform: translateY(0)
+  } */
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.animate-grow-line {
+  width: 5rem;
+  height: 2px;
+  animation: grow-line 1.75s ease infinite;
+  transform: scaleX(0);
+  transform-origin: left;
+}
