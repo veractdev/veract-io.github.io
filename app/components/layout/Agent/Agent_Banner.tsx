@@ -20,10 +20,10 @@ export default function AgentBanner() {
               {AgentPageData.banner.about}
             </div>
           </div>
-          <div className="text-[50px] text-wrap w-[40%] text-center font-medium tracking-[-0.01em] leading-[1.2em] mt-[12px]">
+          <div className="text-[50px] text-wrap w-[45%] text-center font-medium tracking-[-0.01em] leading-[1.2em] mt-[12px]">
             {AgentPageData.banner.title}
           </div>
-          <div className="text-[16px] text-wrap w-[25%] text-center text-white/70 font-normal tracking-[-0.02em] leading-[1.6em] mt-[12px]">
+          <div className="text-[16px] text-wrap w-[30%] text-center text-white/70 font-normal tracking-[-0.02em] leading-[1.6em] mt-[12px]">
             {AgentPageData.banner.subtitle}
           </div>
           <div className="flex items-center justify-center mt-[14px] gap-[15px]">
