@@ -2,7 +2,7 @@ export const navItems = [
   {
     id: 1,
     name: "Case Studies",
-    link: "/case-studies/thermal",
+    link: "/case-studies",
   },
   {
     id: 2,
