@@ -17,11 +17,11 @@ export default function Page() {
         <Navbar />
         <Banner />
         <ShowReel />
-        <About_Us />
+        {/* <About_Us /> */}
         <Advantages />
         {/* <Services /> */}
         <We_Work_With /> 
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Footer />
       </div>
     </LenisProvider>

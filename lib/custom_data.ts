@@ -196,8 +196,9 @@ export const caseStudyData = {
 
 export const LandingPageData = {
   banner: {
-    title_primary: 'Driving Digital Transformation with',
-    title_secondary: 'custom',
+    title_primary: 'Driving Digital Transformation',
+    title_secondary: 'with',
+    title_tertiary: 'custom',
     typwriting_animation_list: [
       {
         id: 1,
