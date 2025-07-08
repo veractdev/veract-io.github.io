@@ -25,7 +25,7 @@ export default function AgenticLayer() {
           <div className="relative w-[401px] h-[401px] rounded-full flex items-center justify-center overflow-visible">
             <div className="absolute agenticLayerBase w-[401px] h-[401px] rounded-full z-0"></div>
             <div
-              className="absolute z-20 top-[51px] left-[51px] w-[394px] h-[394px] pointer-events-none"
+              className="absolute z-20 top-[51px] left-[51px] w-[394px] h-[394px] pointer-events-none animate-agentic-layer"
               style={{
                 filter: "url(#filter0_g_1_1075)",
                 mask: "url(#intersectionMask)",
@@ -39,7 +39,7 @@ export default function AgenticLayer() {
               />
             </div>
 
-            <div className="absolute z-30 text-[#FAFAFA] syneFont text-[60px] text-center font-semibold leading-[60px]">
+            <div className="absolute z-30 text-[#FAFAFA] syneFont text-[60px] text-center font-semibold leading-[60px] top-[176px] left-[141px] animate-agentic-layer-opacity">
               Ai Agent Layer
             </div>
 
@@ -92,7 +92,7 @@ export default function AgenticLayer() {
               </mask>
             </svg>
           </div>
-          <div className="flex top-[51px] left-[54px] relative">
+          <div className="flex top-[51px] left-[54px] relative animate-agentic-layer-opacity">
             <img
               src="/Images/agent/agenticLayerVeins.svg"
               alt="agenticLayer_2"
@@ -103,15 +103,15 @@ export default function AgenticLayer() {
             <img
               src="/Images/agent/top-blur.svg"
               alt="blurry effect"
-              className="absolute top-[-51px] left-[-54px] z-10"
+              className="absolute top-[-51px] left-[-54px] z-10 animate-agentic-layer-opacity"
             />
             <img
               src="/Images/agent/bottom-blur.svg"
               alt="blurry effect"
-              className="absolute bottom-[-102px] left-[-54px] z-10"
+              className="absolute bottom-[-102px] left-[-54px] z-10 animate-agentic-layer-opacity"
             />
 
-            <div className="relative z-20 top-[51px] left-[54px] flex flex-col w-[411px] h-max pt-[57px] pb-[50px] rounded-[30px] bg-[#0D0D0D] shadow-[0px_0px_12px_1px_#008FFF_inset]">
+            <div className="relative z-20 top-[51px] left-[54px] flex flex-col w-[411px] h-max pt-[57px] pb-[50px] rounded-[30px] bg-[#0D0D0D] animate-agentic-layer-shadow">
               <div className="flex flex-col pl-[41px] pr-[68px] gap-[25px] pb-[101px]">
                 <div className="flex flex-row gap-[13px]">
                   <div>
