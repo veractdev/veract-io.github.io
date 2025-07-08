@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 
-export default function AgentTitle() {
+export default function AgentTitle({ title }: { title: string }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -9,9 +9,10 @@ export default function AgentTitle() {
   }, []);
   return (
     loaded && (
-        <div className="w-[213px] h-[46px] flex flex-row items-center justify-center gap-[10px]">
-            <div className="w-[10px] h-[9px] bg-[#FAFAFA] rounded-full"></div>
-            <div className="text-white text-[24px] font-bold">Agentic Layer</div>
+        <div className="flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-[linear-gradient(181deg,rgba(0,85,254,0.08)_0.51%,rgba(153,153,153,0.10)_99.49%)] relative px-[14px] py-[6px]">
+            <div className="absolute top-[2px] w-[61px] h-[1px] bg-[linear-gradient(90deg,rgba(66,133,244,0)_0%,#4285F4_50%,rgba(66,133,244,0)_100%)]"></div>
+            <div className="w-[10px] h-[10px] bg-[#FAFAFA] rounded-full"></div>
+            <div className="text-white text-center dmSansFont text-[26px] font-normal leading-normal">{title}</div>
         </div>
     )
   );
