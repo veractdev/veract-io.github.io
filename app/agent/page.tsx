@@ -17,7 +17,7 @@ export default async function Page({ params }: Props) {
       <LenisProvider>
         <div className='w-screen h-screen flex items-center justify-center flex-col bg-[#080808]'>
           <Navbar />
-          {/* <AgentTitle /> */}
+          <AgentTitle />
           <AgentBanner/>
         </div>
       </LenisProvider>
