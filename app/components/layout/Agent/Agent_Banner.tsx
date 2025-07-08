@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 
 export default function AgentBanner() {
   const [loaded, setLoaded] = useState(false);
-  const [hoveredTouch, setHoveredTouch] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
@@ -13,7 +12,7 @@ export default function AgentBanner() {
 
   return (
     loaded && (
-      <div className="w-full h-max overflow-scroll flex flex-col items-center justify-start bg-[#0d0d0d] pt-[107px] pb-[100px]">
+      <div className="w-full h-max overflow-scroll flex flex-col items-center justify-start bg-[#0d0d0d] pt-[107px] pb-[100px] relative">
         <div className="text-white w-[100%] flex flex-col items-center justify-center mt-[107px]">
           <div className="p-[2px] rounded-[26px] bg-[linear-gradient(105deg,_rgb(41,52,255)_-2%,_rgba(36,65,212,0)_50%)]">
             <div className="pl-[16px] pr-[16px] pt-[8px] pb-[8px] bg-black rounded-[26px] text-[#8AA5FF] font-semibold">
@@ -27,7 +26,7 @@ export default function AgentBanner() {
             {AgentPageData.banner.subtitle}
           </div>
           <div className="flex items-center justify-center mt-[14px] gap-[15px]">
-            <div onMouseEnter={() => setHoveredTouch(true)} onMouseLeave={() => setHoveredTouch(false)} className="relative overflow-hidden w-[170px] h-[36px] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-primary-blue group">
+            <div className="relative overflow-hidden w-[170px] h-[36px] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-primary-blue group">
               <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                 <div className="flex items-center justify-center h-[36px] w-full font-medium">
                   {AgentPageData.banner.book_demo}
@@ -39,7 +38,7 @@ export default function AgentBanner() {
                 </div>
               </div>
             </div>
-            <div onMouseEnter={() => setHoveredTouch(true)} onMouseLeave={() => setHoveredTouch(false)} className="relative overflow-hidden w-[170px] h-[36px] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#0d0d0d]/80 group border border-[#FFFFFF]/10">
+            <div className="relative overflow-hidden w-[170px] h-[36px] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#0d0d0d]/80 group border border-[#FFFFFF]/10">
               <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                 <div className="flex items-center justify-center h-[36px] w-full font-medium">
                   {AgentPageData.banner.view_case_study}
