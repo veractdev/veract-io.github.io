@@ -13,7 +13,7 @@ export default function AgentBanner() {
 
   return (
     loaded && (
-      <div className="w-full h-max overflow-scroll flex flex-col items-center justify-start bg-[#0d0d0d]">
+      <div className="w-full h-max overflow-scroll flex flex-col items-center justify-start bg-[#0d0d0d] pt-[107px] pb-[100px]">
         <div className="text-white w-[100%] flex flex-col items-center justify-center mt-[107px]">
           <div className="p-[2px] rounded-[26px] bg-[linear-gradient(105deg,_rgb(41,52,255)_-2%,_rgba(36,65,212,0)_50%)]">
             <div className="pl-[16px] pr-[16px] pt-[8px] pb-[8px] bg-black rounded-[26px] text-[#8AA5FF] font-semibold">
