@@ -70,7 +70,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="fixed top-0 select-none px-[1rem] lg:pt-[1.5rem] md:pt-[4.5rem] pt-[4.5rem] md:pt-[4.5rem] md:px-[2.5rem] lg:pt-[5.938rem] lg:px-[5.438rem] w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-start justify-center bg-black"
+    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-start justify-center bg-black"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
@@ -107,7 +107,7 @@ export default function Banner() {
         }}
       >
         {/* Main content */}
-        <div className='z-10 text-center pt-[8.063rem] md:pt-[18.563rem] lg:pt-[8.375rem] '>
+        <div className='z-10 text-center px-[1rem]  pt-[12.563rem] md:pt-[23rem] lg:pt-[9.575rem] '>
           <div className=" text-[2.5rem] lg:text-[3rem] md:text-[3rem]  font-semibold lg:w-[55.938rem] syneFont mx-auto pb-[3.5rem] md:pb-[0.625rem] lg:pb-[0.625rem] leading-[1.1em] tracking-[0rem] lg:tracking-[-0.179rem] md:tracking-[-0.173rem]">
             <motion.span
               initial={{
@@ -334,7 +334,7 @@ export default function Banner() {
           </div>
         </div>
         <motion.div
-          className='lg:w-[95%]'
+          className='w-[95%]'
           initial={{ x: 100, y: 15, opacity: 0 }}
           animate={{ x: 0, y: 0, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
