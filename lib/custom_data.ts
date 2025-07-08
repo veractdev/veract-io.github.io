@@ -196,8 +196,9 @@ export const caseStudyData = {
 
 export const LandingPageData = {
   banner: {
-    title_primary: "Driving Digital Transformation with",
-    title_secondary: "custom",
+    title_primary: 'Driving Digital Transformation',
+    title_secondary: 'with',
+    title_tertiary: 'custom',
     typwriting_animation_list: [
       {
         id: 1,
@@ -591,3 +592,38 @@ export const AgentPageData = {
     ],
   },
 };
+
+
+export const caseStudiesHomePageData = {
+  header: 'Page Heading',
+  subHeader: 'Join us on a journey where ideas transform into captivating video content, with a dash of creativity and a whole lot of fun.',
+  caseStudiesTitleList: [
+    {
+      id: 1,
+      name: "Audio video"
+    },
+    { id: 2, name: "Accessibility" },
+    { id: 3, name: "Chat bot" },
+    { id: 4, name: "Ed Tech" },
+    { id: 5, name: "Machine Vision" },
+    { id: 6, name: "Wellness" },
+    { id: 7, name: "Industry Platform" },
+    { id: 8, name: "Manufacturing" },
+    { id: 9, name: "Agri Tech" },
+    { id: 10, name: "Ecommerce" },
+    { id: 11, name: "Sales" },
+    { id: 12, name: "Audit" },
+    { id: 13, name: "Fintech" },
+    { id: 14, name: "Thermal Vision" },
+    { id: 15, name: "Accessibility" }
+  ],
+  caseStudiesList: [
+    {
+      id: 1,
+      image: '/Images/case-studies/project_image.png',
+      header: 'Client Name',
+      subHeader: 'project title',
+      routeTo: ''
+    }
+  ],
+}
