@@ -1,15 +1,16 @@
 "use client";
 import { navItems } from "@/lib/custom_data";
+import { getNavbarState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
     const router = useRouter();
-    const [selectedNav, setSelectedNav] = useState<number>();
     const [isHamburgerMenu, setIsHamburgerMenu] = useState<boolean>(false);
     const [loaded, setLoaded] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
+    const { navbarState, setNavbarState } = getNavbarState();
 
 
     useEffect(() => {
@@ -112,13 +113,13 @@ export default function Navbar() {
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
-                                        setSelectedNav(item.id);
+                                        setNavbarState(item.id);
                                         router.push(item.link);
                                     }}
                                 >
                                     <div
                                         className={`syneFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
-                                            tracking-[-0.05em] text-nowrap ${selectedNav === item.id
+                                            tracking-[-0.05em] text-nowrap ${navbarState === item.id
                                                 ? "text-primary-blue"
                                                 : "text-white"
                                             } group-hover:text-primary-blue font-semibold cursor-pointer 
@@ -128,7 +129,7 @@ export default function Navbar() {
                                         {item.name}
                                     </div>
                                     <div
-                                        className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${selectedNav === item.id
+                                        className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id
                                             ? "w-[calc(100%-3.563rem)]"
                                             : "w-0"
                                             } group-hover:w-[calc(100%-3.563rem)] bg-primary-blue transition-all duration-300`}

@@ -17,19 +17,19 @@ type Props = {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const data = caseStudyData[slug as keyof typeof caseStudyData];
-
+  
   return (
-      <LenisProvider>
-        <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
-          <Navbar />
-          <Casestudy_Banner banner_props={data.banner} />
-          <Casestudy_ShowReel showreel_props={data.showReel} />
-          <Casestudy_Description description_props={data.description} />
-          <CaseStudy_Challenges challenges_props={data.challenges} />
-          <UserServices user_services_props={data.services} />
-          <Casestudy_Key_Features key_features_props={data.key_features} />
-          <Casestudy_Testimonial testimonial_props={data.testimonials} />
-        </div>
-      </LenisProvider>
+    <LenisProvider>
+      <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
+        <Navbar />
+        <Casestudy_Banner banner_props={data.banner} />
+        <Casestudy_ShowReel showreel_props={data.showReel} />
+        <Casestudy_Description description_props={data.description} />
+        <CaseStudy_Challenges challenges_props={data.challenges} />
+        <UserServices user_services_props={data.services} />
+        <Casestudy_Key_Features key_features_props={data.key_features} />
+        <Casestudy_Testimonial testimonial_props={data.testimonials} />
+      </div>
+    </LenisProvider>
   );
 }
