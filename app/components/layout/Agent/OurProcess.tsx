@@ -40,7 +40,7 @@ export default function OurProcess() {
             <div className='max-w-[43.75rem] text-center syneFont font-medium md:font-normal text-[1.75rem] md:text-[3.125rem] text-white leading-[1.1em] -tracking-[0.04em] py-[1.563rem_0.938rem]'>{ourProcessData.title}</div>
             <div className='max-w-[37.5rem] text-center interFont font-normal md:font-medium text-[#CCCCCC] text-[0.875rem] md:text-[1.125rem] leading-[1.5em] -tracking-[0.02em]'>{ourProcessData.description}</div>
             <div className='flex flex-col items-center justify-center gap-[1.25rem] pt-[3.75rem]'>
-                <div className='flex flex-row items-center justify-center gap-[1.25rem]'>
+                <div className='flex lg:flex-row md:flex-row flex-col items-center justify-center gap-[1.25rem]'>
                     {ourProcessData.cards.slice(0, 2).map((card) => (
                         <div key={card.id} className='flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset]'>
                             <div className='flex flex-col gap-[0.625rem]'>
@@ -92,7 +92,7 @@ export default function OurProcess() {
                         </div>
                     ))}
                 </div>
-                <div className='flex flex-row items-center justify-center gap-[1.25rem]'>
+                <div className='flex lg:flex-row md:flex-row flex-col items-center justify-center gap-[1.25rem]'>
                     {ourProcessData.cards.slice(2, 4).map((card) => (
                         <div key={card.id} className='flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset]'>
                             <div className='flex flex-col gap-[0.625rem]'>
