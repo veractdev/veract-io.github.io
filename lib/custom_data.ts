@@ -196,9 +196,9 @@ export const caseStudyData = {
 
 export const LandingPageData = {
   banner: {
-    title_primary: 'Driving Digital Transformation',
-    title_secondary: 'with',
-    title_tertiary: 'custom',
+    title_primary: "Driving Digital Transformation",
+    title_secondary: "with",
+    title_tertiary: "custom",
     typwriting_animation_list: [
       {
         id: 1,
@@ -570,33 +570,77 @@ export const AgentPageData = {
   banner: {
     about: "AI-DRIVEN EFFICIENCY",
     title: "Optimize Your Business Operations with AI Agents",
-    subtitle: "Unlock productivity like never before. Get a free consultation, see our AI agents in action, and deploy 1 intelligent agent in your workflow-mat no cost",
+    subtitle:
+      "Unlock productivity like never before. Get a free consultation, see our AI agents in action, and deploy 1 intelligent agent in your workflow-mat no cost",
     book_demo: "Book a free demo",
     view_case_study: "View case studies",
     banner_features: [
       {
         features_icon: "/Icons/blinkEffect.png",
         features_title: "Free Business consultation",
-        features_subtitle: "Get expert insights into where AI can deliver the most value in your operations.",
+        features_subtitle:
+          "Get expert insights into where AI can deliver the most value in your operations.",
       },
       {
         features_icon: "/Icons/blinkEffect.png",
         features_title: "Live Product Demo",
-        features_subtitle: "Watch how our AI agents automate real tasks across your tools — customized to your case.",
+        features_subtitle:
+          "Watch how our AI agents automate real tasks across your tools — customized to your case.",
       },
       {
         features_icon: "/Icons/blinkEffect.png",
         features_title: "Deploy 1 AI Agent Free",
-        features_subtitle: "Test, drive one fully trained AI agent for your business — no commitment, no cost.",
+        features_subtitle:
+          "Test, drive one fully trained AI agent for your business — no commitment, no cost.",
+      },
+    ],
+  },
+  ourprocess: {
+    pageTitle: "Our Process",
+    title: "Our Simple, Smart, and Scalable Process",
+    description:
+      "We design, develop, and implement automation tools that help you work smarter, not harder",
+    cards: [
+      {
+        id: 1,
+        header: "Smart Analyzing",
+        subHeader:
+          "We assess your business goals, challenges, and processes to identify where custom AI agents deliver maximum impact.",
+        video:
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+      },
+      {
+        id: 2,
+        header: "AI Agent Development",
+        subHeader:
+          "Our team designs and develops intelligent AI agents, trained and fine-tuned to adapt to your specific workflows and use cases.",
+        video:
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+      },
+      {
+        id: 3,
+        header: "Seamless Integration",
+        subHeader:
+          "We embed your custom AI agent into your systems, tools, and processes, ensuring seamless interaction with minimal disruption.",
+        video:
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+      },
+      {
+        id: 4,
+        header: "Continuous Optimization",
+        subHeader:
+          "We continuously monitor your AI agent’s performance, enhance its capabilities, and retrain it to improve outcomes over time.",
+        video:
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
       },
     ],
   },
 };
 
-
 export const caseStudiesHomePageData = {
-  header: 'Page Heading',
-  subHeader: 'Join us on a journey where ideas transform into captivating video content, with a dash of creativity and a whole lot of fun.',
+  header: "Page Heading",
+  subHeader:
+    "Join us on a journey where ideas transform into captivating video content, with a dash of creativity and a whole lot of fun.",
   caseStudiesTitleList: [
     { id: 1, name: "Audio video" },
     { id: 2, name: "Accessibility" },
@@ -617,128 +661,128 @@ export const caseStudiesHomePageData = {
     audiovideo: [
       {
         id: 1,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Audio Video Client',
-        subHeader: 'Audio Video Project',
-        routeTo: '/case-studies/audio-video'
+        image: "/Images/case-studies/project_image.png",
+        header: "Audio Video Client",
+        subHeader: "Audio Video Project",
+        routeTo: "/case-studies/audio-video",
       },
     ],
     accessibility: [
       {
         id: 2,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Accessibility Client',
-        subHeader: 'Accessibility Project',
-        routeTo: '/case-studies/accessibility'
+        image: "/Images/case-studies/project_image.png",
+        header: "Accessibility Client",
+        subHeader: "Accessibility Project",
+        routeTo: "/case-studies/accessibility",
       },
     ],
     chatbot: [
       {
         id: 3,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Chat Bot Client',
-        subHeader: 'Chat Bot Project',
-        routeTo: '/case-studies/chatbot'
+        image: "/Images/case-studies/project_image.png",
+        header: "Chat Bot Client",
+        subHeader: "Chat Bot Project",
+        routeTo: "/case-studies/chatbot",
       },
     ],
     edtech: [
       {
         id: 4,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Ed Tech Client',
-        subHeader: 'Ed Tech Project',
-        routeTo: '/case-studies/edtech'
+        image: "/Images/case-studies/project_image.png",
+        header: "Ed Tech Client",
+        subHeader: "Ed Tech Project",
+        routeTo: "/case-studies/edtech",
       },
     ],
     machinevision: [
       {
         id: 5,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Machine Vision Client',
-        subHeader: 'Machine Vision Project',
-        routeTo: '/case-studies/machine-vision'
+        image: "/Images/case-studies/project_image.png",
+        header: "Machine Vision Client",
+        subHeader: "Machine Vision Project",
+        routeTo: "/case-studies/machine-vision",
       },
     ],
     wellness: [
       {
         id: 6,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Wellness Client',
-        subHeader: 'Wellness Project',
-        routeTo: '/case-studies/wellness'
+        image: "/Images/case-studies/project_image.png",
+        header: "Wellness Client",
+        subHeader: "Wellness Project",
+        routeTo: "/case-studies/wellness",
       },
     ],
     industryplatform: [
       {
         id: 7,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Industry Platform Client',
-        subHeader: 'Industry Platform Project',
-        routeTo: '/case-studies/industry-platform'
+        image: "/Images/case-studies/project_image.png",
+        header: "Industry Platform Client",
+        subHeader: "Industry Platform Project",
+        routeTo: "/case-studies/industry-platform",
       },
     ],
     manufacturing: [
       {
         id: 8,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Manufacturing Client',
-        subHeader: 'Manufacturing Project',
-        routeTo: '/case-studies/manufacturing'
+        image: "/Images/case-studies/project_image.png",
+        header: "Manufacturing Client",
+        subHeader: "Manufacturing Project",
+        routeTo: "/case-studies/manufacturing",
       },
     ],
     agritech: [
       {
         id: 9,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Agri Tech Client',
-        subHeader: 'Agri Tech Project',
-        routeTo: '/case-studies/agri-tech'
+        image: "/Images/case-studies/project_image.png",
+        header: "Agri Tech Client",
+        subHeader: "Agri Tech Project",
+        routeTo: "/case-studies/agri-tech",
       },
     ],
     ecommerce: [
       {
         id: 10,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Ecommerce Client',
-        subHeader: 'Ecommerce Project',
-        routeTo: '/case-studies/ecommerce'
+        image: "/Images/case-studies/project_image.png",
+        header: "Ecommerce Client",
+        subHeader: "Ecommerce Project",
+        routeTo: "/case-studies/ecommerce",
       },
     ],
     sales: [
       {
         id: 11,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Sales Client',
-        subHeader: 'Sales Project',
-        routeTo: '/case-studies/sales'
+        image: "/Images/case-studies/project_image.png",
+        header: "Sales Client",
+        subHeader: "Sales Project",
+        routeTo: "/case-studies/sales",
       },
     ],
     audit: [
       {
         id: 12,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Audit Client',
-        subHeader: 'Audit Project',
-        routeTo: '/case-studies/audit'
+        image: "/Images/case-studies/project_image.png",
+        header: "Audit Client",
+        subHeader: "Audit Project",
+        routeTo: "/case-studies/audit",
       },
     ],
     fintech: [
       {
         id: 13,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Fintech Client',
-        subHeader: 'Fintech Project',
-        routeTo: '/case-studies/fintech'
+        image: "/Images/case-studies/project_image.png",
+        header: "Fintech Client",
+        subHeader: "Fintech Project",
+        routeTo: "/case-studies/fintech",
       },
     ],
     thermalvision: [
       {
         id: 14,
-        image: '/Images/case-studies/project_image.png',
-        header: 'Thermal Vision Client',
-        subHeader: 'Thermal Vision Project',
-        routeTo: '/case-studies/thermal'
+        image: "/Images/case-studies/project_image.png",
+        header: "Thermal Vision Client",
+        subHeader: "Thermal Vision Project",
+        routeTo: "/case-studies/thermal",
       },
     ],
   },
-}
+};
