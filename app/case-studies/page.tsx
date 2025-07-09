@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import LenisProvider from '../LenisProvider'
 import { useRouter } from 'next/navigation';
 import { caseStudiesHomePageData } from '@/lib/custom_data';
+import { motion } from 'framer-motion';
 
 export default function Page() {
 
@@ -27,9 +28,9 @@ export default function Page() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleTileClick = (item: { name: string; keyWord: string }) => {
+    const handleTileClick = (item: { name: string }) => {
         setActiveTile(item.name);
-        let filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item.keyWord as keyof typeof caseStudiesHomePageData.caseStudiesList];
+        let filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item.name as keyof typeof caseStudiesHomePageData.caseStudiesList];
         console.log(filteredCardsArray);
         setCaseStudyCards(filteredCardsArray || []);
     }
@@ -69,19 +70,21 @@ export default function Page() {
                 </div>
                 <div className='flex flex-row flex-wrap items-start gap-[0.563rem] px-[3.125rem] pb-[3.125rem]'>
                     {caseStudyCards.map((item: any, index: number) => (
-                        <div
+                        <motion.div
                             key={index}
                             className='w-[22.313rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem] cursor-pointer'
                             onClick={() => {
                                 router.push(item.routeTo)
                             }}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeIn', delay: 0.1 * (index * 0.5) } }}
                         >
                             <img src={item.image} alt="project image" className='w-full h-[14.75rem] rounded-[0.875rem]' />
                             <div className='flex flex-col w-full flex-wrap pl-[1.25rem]'>
                                 <div className='uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[2em]'>{item.header}</div>
                                 <div className='uppercase text-left interFont text-[0.875rem] text-[#71717A] font-medium leading-[150%] -tracking-[0.05em]'>{item.subHeader}</div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
