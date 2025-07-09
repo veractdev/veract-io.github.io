@@ -11,16 +11,8 @@ export default function AgenticLayer() {
   return (
     loaded && (
       <div>
-        <div className="w-full h-max flex flex-col items-center justify-center gap-[45px] px-[70px] pt-[69px]">
-          <AgentTitle title="Agentic Layer" />
-          <div className="text-[#FAFAFA] text-center syneFont text-[54px] font-semibold leading-normal">
-            Transform Your Existing Stack with Intelligent Automation
-          </div>
-          <div className="text-[#CECECE] text-center dmSansFont text-[26px] font-normal leading-normal pb-[136px]">
-            Automation that works with what you already use — effortlessly,
-            intelligently, reliably.
-          </div>
-        </div>
+        <AgentTitle title="Agentic Layer" title_description="Transform Your Existing Stack with Intelligent Automation" description="Automation that works with what you already use — effortlessly,
+            intelligently, reliably."/>
         <div className="flex flex-row items-center justify-center pb-[217px]">
           <div className="relative w-[401px] h-[401px] rounded-full flex items-center justify-center overflow-visible">
             <div className="absolute agenticLayerBase w-[401px] h-[401px] rounded-full z-0"></div>
