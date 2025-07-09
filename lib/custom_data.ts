@@ -213,8 +213,8 @@ export const caseStudyData = {
                   A lightweight, plug-and-play
                   <span class="text-[#009DCC]">accessibility widget</span>
                   designed to
-                  <span class="text-primary-text">enhance digital experiences for users with visual, motor, and cognitive impairments</span> Fully compliant with
-                  <span class="text-primary-text">WCAG standards</span>
+                  <span class="text-primary-text">enhance digital experiences for users with visual, motor, and cognitive impairments.</span> Fully compliant with
+                  <span class="text-primary-text">WCAG standards,</span>
                   <span class="text-primary-text-50">
                       it offers real-time personalization, cross-browser support, and performance optimization—seamlessly integrating into any website or platform with minimal setup.
                   </span>
