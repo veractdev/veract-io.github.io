@@ -4,6 +4,8 @@ import LenisProvider from '@/app/LenisProvider';
 import AgenticLayer from '../components/layout/Agent/AgenticLayer';
 import AgentBanner from '../components/layout/Agent/Agent_Banner';
 import OurProcess from '../components/layout/Agent/OurProcess';
+import MutliAgent from '../components/layout/Agent/MutliAgent';
+import AiAgent from '../components/layout/Agent/AiAgent';
 
 export default async function Page() {
 
@@ -13,7 +15,9 @@ export default async function Page() {
           <Navbar />
           <AgentBanner/>
           <AgenticLayer />
+          <AiAgent />
           <OurProcess />
+          <MutliAgent />
         </div>
       </LenisProvider>
   );
