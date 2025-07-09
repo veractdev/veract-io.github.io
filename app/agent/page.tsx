@@ -13,11 +13,11 @@ export default async function Page() {
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-[#080808]'>
           <Navbar />
-          {/* <AgentBanner/>
+          <AgentBanner/>
           <AgenticLayer />
-          <AiAgent /> */}
+          <AiAgent />
           <OurProcess />
-          {/* <MutliAgent /> */}
+          <MutliAgent />
         </div>
       </LenisProvider>
   );
