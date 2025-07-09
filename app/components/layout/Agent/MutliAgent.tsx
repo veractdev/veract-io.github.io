@@ -55,17 +55,17 @@ export default function MutliAgent() {
             id: 8,
             name: "Performance Reporting Agent",
             image: "/Images/Agent/agent-8.svg",
-            position: "bottom-[5%] right-[5%]"
+            position: "bottom-[2%] right-[5%]"
         }
     ])
   }, []);
   return (
     loaded && (
-      <div className="relative w-full h-max flex flex-col items-center justify-center pb-[364.5px]">
+      <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[364.5px]  pb-[159px]">
         <AgentTitle title="Multi Agent" title_description="Optimize Operations Using Intelligent Collaborative Agents" description="By coordinating multiple AI agents, your everyday business tasks become smoother, faster, and more efficient"/>
         <div>
-            <div className="relative w-[1059.5px] h-[891.5px]">
-            <img src="/Images/Agent/multi-agent-layer.svg" alt="MultiAgent" className="absolute z-[1000]"/>
+            <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px]">
+            <img src="/Images/Agent/multi-agent-layers.svg" alt="MultiAgent" className="absolute z-[1000]"/>
             {agentsList.map((agent) => (
                 <div key={agent.id} className={`absolute ${agent.position}`}>
                     <AgentRobot agent={agent}/>

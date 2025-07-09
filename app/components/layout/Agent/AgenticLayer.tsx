@@ -14,7 +14,7 @@ export default function AgenticLayer() {
       <div>
         <AgentTitle title="Agentic Layer" title_description="Transform Your Existing Stack with Intelligent Automation" description="Automation that works with what you already use — effortlessly,
             intelligently, reliably."/>
-        <div className="flex md:flex-row flex-col items-center justify-center pb-[217px]">
+        <div className="flex md:flex-row flex-col items-center justify-center lg:pb-[217px] pb-[136px]">
           <div className="relative lg:w-[401px] lg:h-[401px] md:w-[13.66906rem] md:h-[14.25881rem] w-[218px] h-[218px] rounded-full flex items-center justify-center overflow-visible">
             <div className="absolute agenticLayerBase lg:w-[401px] lg:h-[401px] md:w-[13.66906rem] md:h-[14.25881rem] w-[218px] h-[218px] rounded-full z-0"></div>
             <div

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function OurProcess() {
     return (
-        <div className='w-full p-[4rem_2.75rem] md:p-[6.25rem_4.375rem]  flex flex-col items-center'>
+        <div className='w-full p-[0rem_2.75rem_4rem_2.75rem] md:p-[6.25rem_4.375rem]  flex flex-col items-center'>
             <div className='w-max p-[0.5rem_0.75rem] rounded-[0.375rem] bg-primary-text border-[1px] border-[#222222] figTreeFont text-[0.875rem] text-white font-medium leading-[1.2em] -tracking-[0.02em]'>{AgentPageData.ourprocess.pageTitle}</div>
             <div className='max-w-[43.75rem] text-center syneFont font-medium md:font-normal text-[1.75rem] md:text-[3.125rem] text-white leading-[1.1em] -tracking-[0.04em] py-[1.563rem_0.938rem]'>{AgentPageData.ourprocess.title}</div>
             <div className='max-w-[37.5rem] text-center interFont font-normal md:font-medium text-[#CCCCCC] text-[0.875rem] md:text-[1.125rem] leading-[1.5em] -tracking-[0.02em]'>{AgentPageData.ourprocess.description}</div>

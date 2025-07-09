@@ -12,12 +12,12 @@ export default async function Page() {
   return (
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-[#080808]'>
-          {/* <Navbar /> */}
-          {/* <AgentBanner/> */}
+          <Navbar />
+          <AgentBanner/>
           <AgenticLayer />
-          {/* <AiAgent /> */}
-          {/* <OurProcess />
-          <MutliAgent /> */}
+          <AiAgent />
+          <OurProcess />
+          <MutliAgent />
         </div>
       </LenisProvider>
   );
