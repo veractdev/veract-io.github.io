@@ -31,7 +31,8 @@ export default function Page() {
 
     const handleTileClick = (item: { name: string }) => {
         setActiveTile(item.name);
-        let filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item.name as keyof typeof caseStudiesHomePageData.caseStudiesList];
+        let name = item.name.split(' ').join('').toLowerCase();
+        let filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList];
         console.log(filteredCardsArray);
         setCaseStudyCards(filteredCardsArray || []);
     }
@@ -65,6 +66,9 @@ export default function Page() {
                             <div
                                 key={item.id}
                                 className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name ? 'border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]' : 'border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]'} `}
+                                onClick={() => {
+                                    handleTileClick(item);
+                                }}
                             >
                                 {item.name}
                             </div>
