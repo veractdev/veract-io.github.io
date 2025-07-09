@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { isMobile, isTablet } from '@/lib/utils';
 
 type description_props = {
   title: string;
@@ -39,7 +40,7 @@ export default function Casestudy_Description({ description_props }: { descripti
   return (
     loaded && (
       <div
-        ref={containerRef}
+        ref={isMobile() || isTablet() ? null : containerRef}
         className='w-full h-max p-[3.125rem_1.25rem] md:p-[6.25rem_3.125rem] bg-[#FFFFFF] relative z-50 flex lg:flex-row flex-col gap-[1.25rem] md:gap-[3.125rem] lg:gap-[0.625rem] items-start justify-center'
       >
         <motion.div
