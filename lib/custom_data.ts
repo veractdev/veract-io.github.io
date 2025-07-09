@@ -4,26 +4,26 @@ export const navItems = [
     name: "Case Studies",
     link: "/case-studies",
   },
-  {
-    id: 2,
-    name: "Services",
-    link: "/services/web-development",
-  },
-  {
-    id: 3,
-    name: "Industries",
-    link: "/industries/healthcare",
-  },
-  {
-    id: 4,
-    name: "Company",
-    link: "/company/about",
-  },
-  {
-    id: 5,
-    name: "Blogs",
-    link: "/blogs/latest",
-  },
+  // {
+  //   id: 2,
+  //   name: "Services",
+  //   link: "/services/web-development",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Industries",
+  //   link: "/industries/healthcare",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Company",
+  //   link: "/company/about",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Blogs",
+  //   link: "/blogs/latest",
+  // },
 ];
 
 export const caseStudyData = {
@@ -193,13 +193,13 @@ export const caseStudyData = {
       profession_at: "Thermal vision",
     },
   },
-  "audio-video": {
+  "incluway": {
     id: 2,
     banner: {
-      title: "Enhancing Animal Health with Thermography",
+      title: "Empowering Inclusive Web Experiences through Accessibility",
       description:
-        "A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.",
-      image: "/Images/case-studies/case_study_banner_image.png",
+        "A seamless, customizable solution to ensure digital accessibility for users with diverse abilities.",
+      image: "/Images/case-studies/incluway_background.png",
     },
     showReel: {
       title: "SHOWREEL",
