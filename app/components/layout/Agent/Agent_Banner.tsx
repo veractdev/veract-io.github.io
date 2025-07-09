@@ -39,10 +39,10 @@ export default function AgentBanner() {
             </div>
             <div className="relative overflow-hidden w-[170px] h-[36px] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#0d0d0d]/80 group border border-[#FFFFFF]/10">
               <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
-                <div className="flex items-center justify-center h-[36px] w-full font-medium">
+                <div className="flex items-center justify-center h-[36px] w-full font-medium mt-[-0.15rem]">
                   {AgentPageData.banner.view_case_study}
                 </div>
-                <div className="flex items-center justify-center h-[36px] w-full font-medium mt-[-0.25rem]">
+                <div className="flex items-center justify-center h-[36px] w-full font-medium mt-[-0.1rem]">
                   {AgentPageData.banner.view_case_study}
                 </div>
               </div>
