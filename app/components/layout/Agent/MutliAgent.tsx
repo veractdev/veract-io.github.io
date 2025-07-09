@@ -61,7 +61,7 @@ export default function MutliAgent() {
   }, []);
   return (
     loaded && (
-      <div className="relative w-full h-max flex flex-col items-center justify-center">
+      <div className="relative w-full h-max flex flex-col items-center justify-center pb-[364.5px]">
         <AgentTitle title="Multi Agent" title_description="Optimize Operations Using Intelligent Collaborative Agents" description="By coordinating multiple AI agents, your everyday business tasks become smoother, faster, and more efficient"/>
         <div>
             <div className="relative w-[1059.5px] h-[891.5px]">

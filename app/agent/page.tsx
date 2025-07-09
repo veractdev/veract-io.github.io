@@ -15,9 +15,9 @@ export default async function Page() {
           <Navbar />
           <AgentBanner/>
           <AgenticLayer />
+          <AiAgent />
           <OurProcess />
           <MutliAgent />
-          <AiAgent />
         </div>
       </LenisProvider>
   );
