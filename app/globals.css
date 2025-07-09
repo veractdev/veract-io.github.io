@@ -305,7 +305,7 @@ body {
 }
 
 .animate-grow-line {
-  width: 8rem;
+  width: 5rem;
   height: 2px;
   animation: grow-line 1.75s ease-in infinite;
   transform: scaleX(0);
