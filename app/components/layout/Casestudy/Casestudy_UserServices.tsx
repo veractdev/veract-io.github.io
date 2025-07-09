@@ -137,7 +137,7 @@ export default function UserServices({ user_services_props }: { user_services_pr
                 >
                   {/* Animated background for mobile click */}
                   <div
-                    className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${isMobile() || isTablet() && openedArr[idx] ? 'scale-200' : 'scale-100'
+                    className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'scale-200' : 'scale-100'
                       } ${(isMobile() || isTablet()) && scaledArr[idx] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
                     style={{ borderRadius: '1.875rem' }}
                   ></div>
@@ -150,9 +150,9 @@ export default function UserServices({ user_services_props }: { user_services_pr
                   <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-201`}></div>
                   <div
                     className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
+                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent ease-in duration-300 transition-all  ` +
                       ((isMobile() || isTablet()) && openedArr[idx]
-                        ? `${card.gradient} bg-clip-text text-transparent `
+                        ? `${card.gradient} bg-clip-text text-transparent  md:left-[2.5rem] md:top-[2.5rem] ease-in duration-300 transition-all  `
                         : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
                     }
                     style={{ zIndex: 30 }}
@@ -198,9 +198,9 @@ export default function UserServices({ user_services_props }: { user_services_pr
                   <div className={`opacity-0 blob-placeholder left-[-3rem] top-[-3rem] absolute h-[30rem] ${card.blobWidth} rotate-[18deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20`}></div>
                   <div
                     className={
-                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent   ` +
+                      `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent ease-in duration-300 transition-all  ` +
                       ((isMobile() || isTablet()) && openedArr[idx + 2]
-                        ? `${card.gradient} bg-clip-text text-transparent`
+                        ? `${card.gradient} bg-clip-text text-transparent md:left-[2.5rem] md:top-[2.5rem] md:w-[60%] ease-in duration-300 transition-all`
                         : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
                     }
                     style={{ zIndex: 30 }}
@@ -208,7 +208,7 @@ export default function UserServices({ user_services_props }: { user_services_pr
                     {card.title}
                   </div>
                   {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
+                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30 ">
                       {card.description}
                     </div>
                   ) : (
@@ -242,9 +242,9 @@ export default function UserServices({ user_services_props }: { user_services_pr
             <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
             <div
               className={
-                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${user_services_props.service_list[4].gradient} bg-clip-text text-transparent   ` +
+                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] lg:font-semibold md:font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${user_services_props.service_list[4].gradient} bg-clip-text text-transparent ease-in duration-300 transition-all  ` +
                 ((isMobile() || isTablet()) && openedArr[4]
-                  ? `${user_services_props.service_list[4].gradient} bg-clip-text text-transparent`
+                  ? `${user_services_props.service_list[4].gradient} bg-clip-text text-transparent  md:left-[2.5rem] md:top-[2.5rem] md:w-[60%] ease-in duration-300 transition-all `
                   : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${user_services_props.service_list[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
               }
               style={{ zIndex: 30 }}
