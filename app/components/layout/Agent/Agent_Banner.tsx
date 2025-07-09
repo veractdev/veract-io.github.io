@@ -13,7 +13,15 @@ export default function AgentBanner() {
     loaded && (
       <div className="w-full h-max overflow-scroll flex flex-col items-center justify-start bg-[#0d0d0d] pt-0 lg:pt-[107px] md:pt-[107px] pb-[100px]">
         <div className="flex flex-col items-center justify-center relative">
-          <div className="w-[400px] md:w-[800px] lg:w-[800px] h-[300px] md:h-[700px] lg:h-[700px] absolute z-0 left-1/2 top-0 translate-y-1/2 -translate-x-1/2 md:-translate-x-1/2 md:translate-y-0 lg:-translate-x-1/2 lg:translate-y-0 animate-spin [animation-duration:6s] [animation-timing-function:linear]" style={{backgroundImage:`url(${'/Images/agent/radar_component_banner.png'})`,backgroundRepeat:"no-repeat", backgroundPosition:"center" , backgroundSize:"contain"}}></div>
+          <div
+            className="w-[400px] md:w-[800px] lg:w-[800px] h-[300px] md:h-[700px] lg:h-[700px] absolute z-0 left-1/2 top-0 translate-y-1/2 -translate-x-1/2 md:-translate-x-1/2 md:translate-y-0 lg:-translate-x-1/2 lg:translate-y-0 animate-spin [animation-duration:6s] [animation-timing-function:linear] blur-[12px] md:blur-none lg:blur-none"
+            style={{
+              backgroundImage: `url(${"/Images/agent/radar_component_banner.png"})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "contain",
+            }}
+          ></div>
           <div className="w-[400px] md:w-[800px] lg:w-[800px] h-[300px] md:h-[500px] lg:h-[500px] absolute bottom-0 overflow-hidden pointer-events-none">
             <div className="absolute inset-0 bg-[#0d0d0d]/50 backdrop-blur-md [mask-image:linear-gradient(to_top,black_85%,transparent_100%)]"></div>
           </div>
