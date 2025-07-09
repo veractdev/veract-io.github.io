@@ -44,7 +44,7 @@ export default function ShowReel() {
 
   return (
     loaded && (
-      <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-max' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
+      <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
         <div className='flex items-center justify-center w-full'>
           <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
         </div>

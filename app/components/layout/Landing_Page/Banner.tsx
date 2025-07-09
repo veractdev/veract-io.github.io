@@ -66,7 +66,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-start justify-center bg-black"
+    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center md:items-start justify-center bg-black"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
@@ -103,7 +103,8 @@ export default function Banner() {
         }}
       >
         {/* Main content */}
-        <div className='z-10 text-center px-[1rem]  pt-[12.563rem] md:pt-[23rem] lg:pt-[9.575rem] '>
+        {/* pt-[12.563rem] */}
+        <div className='z-10 text-center px-[1rem]  pt-0 md:pt-[23rem] lg:pt-[9.575rem] '>
           <div className=" text-[2.5rem] lg:text-[3rem] md:text-[3rem]  font-semibold lg:w-[55.938rem] syneFont mx-auto pb-[3.5rem] md:pb-[0.625rem] lg:pb-[0.625rem] leading-[1.1em] tracking-[0rem] lg:tracking-[-0.179rem] md:tracking-[-0.173rem]">
             <motion.span
               initial={{
@@ -292,7 +293,7 @@ export default function Banner() {
           <div className="flex items-start justify-center gap-[1.5rem]">
             <motion.img
               src={LandingPageData.banner.banner_image_list[0].image}
-              alt="BNI"
+              alt="logo image"
               className="w-[2.563rem] object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -302,7 +303,7 @@ export default function Banner() {
             <div className="flex flex-col items-center justify-center gap-[0.08rem]">
               <motion.img
                 src={LandingPageData.banner.banner_image_list[1].image}
-                alt="Clutch"
+                alt="logo image"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -311,7 +312,7 @@ export default function Banner() {
 
               <motion.img
                 src={LandingPageData.banner.banner_image_list[2].image}
-                alt="Stars"
+                alt="logo image"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -321,7 +322,7 @@ export default function Banner() {
 
             <motion.img
               src={LandingPageData.banner.banner_image_list[3].image}
-              alt="EtherCat"
+              alt="logo image"
               className="w-[3.563rem] object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -329,35 +330,35 @@ export default function Banner() {
             />
           </div>
         </div>
-        <motion.div
-          className='w-[95%]'
-          initial={{ x: 100, y: 15, opacity: 0 }}
-          animate={{ x: 0, y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
-
-        >
-          <Marquee
-            gradient={true}
-            autoFill={true}
-            gradientColor="transparent"
-            gradientWidth={100}
-            speed={30}
-            direction="left"
-            className="flex items-center "
-            play={true}
-          >
-            {LandingPageData.banner.banner_carousel_list.map((src, idx: number) => (
-              <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
-                <img
-                  src={src.img}
-                  alt={`brand logo`}
-                  className="w-[6.625rem] object-cover flex-shrink-0"
-                />
-              </div>
-            ))}
-          </Marquee>
-        </motion.div>
       </div>
+      <motion.div
+        className='w-[95%] absolute bottom-[1rem] md:bottom-[2rem]'
+        initial={{ x: 100, y: 15, opacity: 0 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
+
+      >
+        <Marquee
+          gradient={true}
+          autoFill={true}
+          gradientColor="transparent"
+          gradientWidth={100}
+          speed={30}
+          direction="left"
+          className="flex items-center "
+          play={true}
+        >
+          {LandingPageData.banner.banner_carousel_list.map((src, idx: number) => (
+            <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
+              <img
+                src={src.img}
+                alt={`brand logo`}
+                className="w-[6.625rem] object-cover flex-shrink-0"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </motion.div>
     </div>
   )
 }
