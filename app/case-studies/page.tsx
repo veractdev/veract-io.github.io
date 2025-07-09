@@ -5,19 +5,23 @@ import { useRouter } from 'next/navigation';
 import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
+import { getNavbarState } from '@/lib/globalState';
 
 export default function Page() {
 
     const router = useRouter();
     const [activeTile, setActiveTile] = useState<string>('');
     const [caseStudyCards, setCaseStudyCards] = useState<any>([]);
+    const [translateY, setTranslateY] = useState<number>(0);
+
+    const { setNavbarState } = getNavbarState();
 
     // Initialize with all cards when component mounts
     useEffect(() => {
+        setNavbarState(1);
         const allCards = Object.values(caseStudiesHomePageData.caseStudiesList).flat();
         setCaseStudyCards(allCards);
     }, []);
-    const [translateY, setTranslateY] = useState<number>(0);
 
     useEffect(() => {
         const handleScroll = () => {
