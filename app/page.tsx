@@ -27,11 +27,11 @@ export default function Page() {
     <LenisProvider>
       {loader && (
         <div className='w-full flex flex-col items-center justify-center bg-black'>
-          {/* <Navbar />
+          <Navbar />
           <Banner />
           <ShowReel />
           <About_Us />
-          <Advantages /> */}
+          <Advantages />
           {/* <Services /> */}
           <We_Work_With />
           <Testimonials />
