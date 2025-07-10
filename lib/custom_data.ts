@@ -44,7 +44,7 @@ export const caseStudyData = {
       title: "Enhancing Animal Health with Thermography",
       description:
         "A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.",
-      image: "/Images/case-studies/incluway/Hero.png",
+      image: "/Images/case-studies/thermal_hero_image.png",
     },
     showReel: {
       title: "SHOWREEL",
@@ -211,7 +211,7 @@ export const caseStudyData = {
       title: "Empowering Inclusive Web Experiences through Accessibility",
       description:
         "A seamless, customizable solution to ensure digital accessibility for users with diverse abilities.",
-      image: "/Images/case-studies/incluway_background.png",
+      image: "/Images/case-studies/incluway/incluway_hero_image.png",
     },
     showReel: {
       title: "SHOWREEL",
@@ -282,7 +282,7 @@ export const caseStudyData = {
       service_list: [
         {
           title: "Inclusive Accessibility Features",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/incluway/Services/Inclusive_Accessibility_Features.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Offered real-time controls like text resizing, contrast modes, screen reader compatibility, and animation toggles to serve users with varied accessibility needs.",
           gradient:
@@ -291,7 +291,7 @@ export const caseStudyData = {
         },
         {
           title: "Seamless Integration",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/incluway/Services/Seamless_Integration.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Developed a plug-and-play widget that can be embedded on any website with minimal code—supporting fast adoption and cross-platform reliability.",
           gradient:
@@ -300,7 +300,7 @@ export const caseStudyData = {
         },
         {
           title: "Widget Management System",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/incluway/Services/Widget_Management_System.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Built a modular, customizable web-based widget with admin control for managing display, placement, and feature toggling without code changes.",
           gradient:
@@ -309,7 +309,7 @@ export const caseStudyData = {
         },
         {
           title: "Actionable Accessibility Data",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/incluway/Services/Actionable_Accessibility_Data.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Enabled tracking of widget usage and accessibility feature adoption to help website owners improve their inclusivity efforts.",
           gradient:
@@ -318,7 +318,7 @@ export const caseStudyData = {
         },
         {
           title: "User-Centered Design",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/incluway/Services/markus-spiske-i_dT4tseXD8-unsplash.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Focused on clarity, simplicity, and intuitiveness to deliver an accessible experience for end-users.",
           gradient:
@@ -333,31 +333,31 @@ export const caseStudyData = {
         {
           number: "[01]",
           title: "Seamless Web Integration",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/incluway/KeyFeatures/Lowvision.png",
           desc: "Effortlessly integrates into any website with a single line of code, ensuring rapid deployment and minimal development effort.",
         },
         {
           number: "[02]",
           title: "Real-Time Accessibility Controls",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/incluway/KeyFeatures/Content.png",
           desc: "Offers live adjustments for text size, contrast, animation toggles, and more—empowering users to personalize their browsing experience instantly.",
         },
         {
           number: "[03]",
           title: "Cross-Platform Compatibility",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/incluway/KeyFeatures/mocks3.png",
           desc: "Ensures consistent performance across all major browsers and devices, maintaining accessibility regardless of user environment.",
         },
         {
           number: "[04]",
           title: "Lightweight & Optimized Performance",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/incluway/KeyFeatures/Color.png",
           desc: "Built with performance in mind, the widget loads quickly, consumes minimal resources, and doesn’t interfere with site speed or SEO.",
         },
         {
           number: "[05]",
           title: "Customizable Interface",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/incluway/KeyFeatures/Customize.png",
           desc: "Designed with modularity, allowing brands to style, position, and configure the widget to match their visual identity and user needs.",
         },
       ],
@@ -484,8 +484,7 @@ export const LandingPageData = {
       {
         title: "Bespoke Software, Tailored to Your Business Needs",
         bg: "bg-[url('/Images/LandingPage/Advantages/Bespoke_Software_Tailored_to_Your_Business_Needs.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
-        description:
-          "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
+        description: "Custom software solutions designed around your workflows — not off-the-shelf",
         gradient:
           "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
         blobWidth: "w-[8rem]",
@@ -493,8 +492,7 @@ export const LandingPageData = {
       {
         title: "Digital Transformation Strategy with the Right Technologies",
         bg: "bg-[url('/Images/LandingPage/Advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
-        description:
-          "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
+        description: "Modernize operations with digital tools that serve real business goals",
         gradient:
           "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
         blobWidth: "w-[8rem]",
@@ -502,8 +500,7 @@ export const LandingPageData = {
       {
         title: "Flexible Engagement Models for Agile Development",
         bg: "bg-[url('/Images/LandingPage/Advantages/Flexible_Engagement_Models_for_Agile_Development.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
-        description:
-          "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
+        description: "Start small, scale fast, or pause — flexibility built into the process",
         gradient:
           "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
         blobWidth: "w-[10rem]",
@@ -511,8 +508,7 @@ export const LandingPageData = {
       {
         title: "Measurable Outcomes Through AI, IoT, and Machine Vision",
         bg: "bg-[url('/Images/LandingPage/Advantages/Measurable_Outcomes_Through_AI_IoT_and_Machine_Vision.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
-        description:
-          "Facilitated timely, data-backed decisions to improve overall animal well-being.",
+        description: "Drive impact with intelligent systems and real-time performance insights",
         gradient:
           "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
         blobWidth: "w-[10rem]",
