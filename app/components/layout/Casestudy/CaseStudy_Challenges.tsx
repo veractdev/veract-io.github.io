@@ -49,7 +49,7 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
                         </div>
                     </div>
                     <div className='flex flex-col md:flex-row lg:flex-row gap-[0.625rem] md:gap-[3.125rem] lg:gap-[2.125rem] ml-0 lg:ml-[11.5%] items-start md:items-center justify-center md:justify-between lg:items-center'>
-                        <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start md:items-center lg:items-center justify-center'>
+                        <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start justify-center'>
                             {challenges_props.solution_list.slice(0, 3).map((challenge, index) => (
                                 <div key={index} className='flex flex-row items-center justify-center gap-[.875rem]'>
                                     <img src="/Images/case-studies/challenges_lisiting_icon.png" alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
@@ -57,7 +57,7 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
                                 </div>
                             ))}
                         </div>
-                        <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start md:items-center lg:items-center justify-center'>
+                        <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start justify-center'>
                             {challenges_props.solution_list.slice(3, 6).map((challenge, index) => (
                                 <div key={index} className='flex flex-row items-center justify-center gap-[.875rem]'>
                                     <img src="/Images/case-studies/challenges_lisiting_icon.png" alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
