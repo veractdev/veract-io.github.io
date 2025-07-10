@@ -76,7 +76,7 @@ export default function Testimonials() {
                     animate={{ width: isTablet() ? '38.25rem' : "20.125rem" }}
                     transition={{ duration: 0.7, ease: "easeInOut" }}
                     style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                    className="md:h-[19.938rem] h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
+                    className="md:h-[19.938rem] h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {/* Full Card Content */}
                     <div
@@ -94,10 +94,10 @@ export default function Testimonials() {
                         animate={{ x: 0, y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                         className='flex flex-col gap-[0.625rem]'>
-                        <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
+                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                           {LandingPageData.testimonials.testimonial_list[activeIndex].name}
                         </div>
-                        <div className="interFont text-[#E3E3E3] text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
                           {LandingPageData.testimonials.testimonial_list[activeIndex].company}
                         </div>
                       </motion.div>
@@ -138,7 +138,7 @@ export default function Testimonials() {
                   >
                     {visibleMiniIndex === index ? (
                       // Mini card content (after 3s)
-                      <div className='p-[0.625rem] lg:p-0 flex flex-row items-center justify-center gap-[2.063rem]'>
+                      <div className='p-[0.625rem] lg:p-0 flex flex-row items-center justify-center gap-[2.063rem] md:gap-[10.063rem]'>
                         <motion.img
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
@@ -177,10 +177,10 @@ export default function Testimonials() {
                             animate={{ x: 100, y: -50, opacity: 1 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className='flex flex-col gap-[0.625rem]'>
-                            <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
+                            <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                               {t.name}
                             </div>
-                            <div className="interFont text-[#E3E3E3] text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                            <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
                               {t.company}
                             </div>
                           </motion.div>
@@ -210,7 +210,7 @@ export default function Testimonials() {
                 <button
                   key={index}
                   onMouseEnter={() => handleSetActiveIndex(index)}
-                  className="relative w-full p-[0.625rem] gap-[2.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
+                  className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
                 >
                   <img
                     className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0 lg:mx-[0.75rem] lg:my-[0.50rem] rounded-full"
