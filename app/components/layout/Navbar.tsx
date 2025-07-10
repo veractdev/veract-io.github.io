@@ -119,20 +119,20 @@ export default function Navbar() {
                                 >
                                     <div
                                         className={`syneFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
-                                            tracking-[-0.05em] text-nowrap ${navbarState === item.id
+                                            tracking-[-0.05em] text-nowrap ${navbarState === item.id && item.status == 'active'
                                                 ? "text-primary-blue"
                                                 : "text-white"
-                                            } group-hover:text-primary-blue font-semibold cursor-pointer 
+                                            } font-semibold ${item.status == 'inactive' ? "opacity-50 pointer-events-none" : "cursor-pointer group-hover:bg-[#FFFFFF1A] group-hover:text-primary-blue"}  
                                             transition-all duration-300 rounded-[1.625rem] 
-                                            group-hover:bg-[#FFFFFF1A]`}
+                                            `}
                                     >
                                         {item.name}
                                     </div>
                                     <div
-                                        className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id
+                                        className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id && item.status == 'active'
                                             ? "w-[calc(100%-3.563rem)]"
                                             : "w-0"
-                                            } group-hover:w-[calc(100%-3.563rem)] bg-primary-blue transition-all duration-300`}
+                                            } group-hover:w-[calc(100%-3.563rem)] ${item.status == 'active' ? 'bg-primary-blue' :''} transition-all duration-300`}
                                     />
                                 </div>
                             ))}
