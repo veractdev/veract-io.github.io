@@ -34,13 +34,13 @@ export default function We_Work_With() {
             {LandingPageData.we_work_with.carouselData.map((brand, index) => (
               <div
                 key={index}
-                className="chakraPetchFont w-[18.75rem] h-[7.875rem] lg:h-[12.5rem] md:h-[12.5rem] flex items-center justify-center text-white text-[2.25rem] font-medium"
+                className="relative chakraPetchFont w-[18.75rem] h-[7.875rem] lg:h-[12.5rem] md:h-[12.5rem] flex items-center justify-center text-white text-[2.25rem] font-medium"
                 style={{
-                  backgroundImage: `url(${brand.image})`,
                   marginLeft: index !== 0 ? "0.625rem" : "-0.3125rem",
                 }}
               >
-                {brand.name}
+                <img src={brand.image} className="absolute top-0 left-0 z-10 w-[18.75rem] h-[12.5rem]" />
+                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 text-center">{brand.name}</div>
               </div>
             ))}
           </Marquee>
