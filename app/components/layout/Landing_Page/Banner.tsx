@@ -311,14 +311,14 @@ export default function Banner() {
                 transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
               />
 
-              <motion.img
+              {/* <motion.img
                 src={LandingPageData.banner.banner_image_list[2].image}
                 alt="logo image"
                 className="w-[3.938rem] object-cover"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.8, ease: "easeOut" }}
-              />
+              /> */}
             </div>
 
             <motion.img

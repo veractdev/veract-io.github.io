@@ -104,7 +104,7 @@ export const caseStudyData = {
       service_list: [
         {
           title: "Health Issue Detection",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
           gradient:
@@ -113,7 +113,7 @@ export const caseStudyData = {
         },
         {
           title: "Seamless Integration",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
           gradient:
@@ -122,7 +122,7 @@ export const caseStudyData = {
         },
         {
           title: "Health Monitoring System",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
           gradient:
@@ -131,7 +131,7 @@ export const caseStudyData = {
         },
         {
           title: "Actionable Insights",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Facilitated timely, data-backed decisions to improve overall animal well-being.",
           gradient:
@@ -140,7 +140,7 @@ export const caseStudyData = {
         },
         {
           title: "User Experience Focus",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
           gradient:
@@ -272,7 +272,7 @@ export const caseStudyData = {
       service_list: [
         {
           title: "Inclusive Accessibility Features",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Offered real-time controls like text resizing, contrast modes, screen reader compatibility, and animation toggles to serve users with varied accessibility needs.",
           gradient:
@@ -281,7 +281,7 @@ export const caseStudyData = {
         },
         {
           title: "Seamless Integration",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Developed a plug-and-play widget that can be embedded on any website with minimal code—supporting fast adoption and cross-platform reliability.",
           gradient:
@@ -290,7 +290,7 @@ export const caseStudyData = {
         },
         {
           title: "Widget Management System",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Built a modular, customizable web-based widget with admin control for managing display, placement, and feature toggling without code changes.",
           gradient:
@@ -299,7 +299,7 @@ export const caseStudyData = {
         },
         {
           title: "Actionable Accessibility Data",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Enabled tracking of widget usage and accessibility feature adoption to help website owners improve their inclusivity efforts.",
           gradient:
@@ -308,7 +308,7 @@ export const caseStudyData = {
         },
         {
           title: "User-Centered Design",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Focused on clarity, simplicity, and intuitiveness to deliver an accessible experience for end-users.",
           gradient:
@@ -386,41 +386,41 @@ export const LandingPageData = {
     banner_image_list: [
       {
         id: 1,
-        image: "/Images/LandingPage/Banner/BNI.png",
+        image: "/Images/LandingPage/Banner/BNI.svg",
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Banner/Clutch.png",
+        image: "/Images/LandingPage/Banner/clutch.svg",
       },
       {
         id: 3,
-        image: "/Images/LandingPage/Banner/Stars.png",
+        image: "",
       },
       {
         id: 4,
-        image: "/Images/LandingPage/Banner/EtherCat.png",
+        image: "/Images/LandingPage/Banner/ethercat.gif",
       },
     ],
     banner_carousel_list: [
       {
         id: 1,
-        img: "/Images/LandingPage/Banner/IBITS.png",
+        img: "/Images/LandingPage/Banner/carousel_images/ibits_logo.svg",
       },
       {
         id: 2,
-        img: "/Images/LandingPage/Banner/Evo11ve.png",
+        img: "/Images/LandingPage/Banner/carousel_images/evo11ve_logo.svg",
       },
       {
         id: 3,
-        img: "/Images/LandingPage/Banner/Mako.png",
+        img: "/Images/LandingPage/Banner/carousel_images/mako-logo (1) 1.svg",
       },
       {
         id: 4,
-        img: "/Images/LandingPage/Banner/Suyash.png",
+        img: "/Images/LandingPage/Banner/carousel_images/suyash-logo.svg",
       },
       {
         id: 5,
-        img: "/Images/LandingPage/Banner/Anyo.png",
+        img: "/Images/LandingPage/Banner/carousel_images/anyo-logo (1) 1.svg",
       },
     ],
   },
@@ -462,7 +462,7 @@ export const LandingPageData = {
     advantages_list: [
       {
         title: "Health Issue Detection",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
         gradient:
@@ -471,7 +471,7 @@ export const LandingPageData = {
       },
       {
         title: "Seamless Integration",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
         gradient:
@@ -480,7 +480,7 @@ export const LandingPageData = {
       },
       {
         title: "Health Monitoring System",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
         gradient:
@@ -489,7 +489,7 @@ export const LandingPageData = {
       },
       {
         title: "Actionable Insights",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
+        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Facilitated timely, data-backed decisions to improve overall animal well-being.",
         gradient:
@@ -500,27 +500,27 @@ export const LandingPageData = {
     featuredWorks_list: [
       {
         id: 1,
-        image: "/Images/case-studies/case_study_banner_image.png",
-        title: "project title",
-        description: "category",
+        image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
+        title: "ed tech",
+        description: "education platform",
       },
       {
         id: 2,
-        image: "/Images/case-studies/case_study_banner_image.png",
-        title: "project title",
-        description: "category",
+        image: "/Images/LandingPage/FeaturedWorks/DCM.png",
+        title: "data center",
+        description: "data center innovation platform",
       },
       {
         id: 3,
-        image: "/Images/case-studies/case_study_banner_image.png",
-        title: "project title",
-        description: "category",
+        image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
+        title: "e-commerce",
+        description: "payment enabled e-commerce web application",
       },
       {
         id: 4,
-        image: "/Images/case-studies/case_study_banner_image.png",
-        title: "project title",
-        description: "category",
+        image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        title: "infrared thermography",
+        description: "thermal imaging detects mastitis in dairy cattle",
       },
     ],
   },

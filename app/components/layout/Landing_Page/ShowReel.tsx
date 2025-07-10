@@ -80,8 +80,8 @@ export default function ShowReel() {
   //     document.body.style.overflow = '';
   //   };
   // }, [isVideo, lenis]);
-  
-  
+
+
   return (
     loaded && (
       <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
@@ -130,18 +130,18 @@ export default function ShowReel() {
               ease: "easeInOut",
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
-            // onClick={() => setVideo(true)}
+          // onClick={() => setVideo(true)}
           >
             <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-[#FFFFFF]/16 flex items-center justify-center relative'>
               {/* Base icon */}
               <img
-                src="/Images/LandingPage/play_icon.png"
+                src="/Images/LandingPage/showReel/play- default.svg"
                 alt="play icon"
                 className='absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
               />
               {/* Hover icon */}
               <img
-                src="/Images/LandingPage/play_icon_active.png"
+                src="/Images/LandingPage/showReel/play- hover.svg"
                 alt="play icon"
                 className='absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
               />
