@@ -101,13 +101,13 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                         <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-[#FFFFFF]/16 flex items-center justify-center relative'>
                             {/* Base icon */}
                             <img
-                                src="/Images/LandingPage/play_icon.png"
+                                src="/Images/LandingPage/showReel/play- default.svg"
                                 alt="play icon"
                                 className='absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
                             />
                             {/* Hover icon */}
                             <img
-                                src="/Images/LandingPage/play_icon_active.png"
+                                src="/Images/LandingPage/showReel/play- hover.svg"
                                 alt="play icon"
                                 className='absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
                             />

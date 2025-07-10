@@ -3,25 +3,25 @@ export const navItems = [
     id: 1,
     name: "Home",
     link: "/",
-    status:"active"
+    status: "active"
   },
   {
     id: 2,
     name: "Services",
     link: "/",
-    status:"inactive"
+    status: "inactive"
   },
   {
     id: 3,
     name: "Custom Agent",
     link: "/agent",
-    status:"active"
+    status: "active"
   },
   {
     id: 4,
     name: "Case Studies",
     link: "/case-studies",
-    status:"active"
+    status: "active"
   },
   // {
   //   id: 5,
@@ -33,7 +33,7 @@ export const navItems = [
     id: 5,
     name: "Blogs",
     link: "/",
-    status:"inactive"
+    status: "inactive"
   }
 ];
 
@@ -44,13 +44,13 @@ export const caseStudyData = {
       title: "Enhancing Animal Health with Thermography",
       description:
         "A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.",
-      image: "/Images/case-studies/case_study_banner_image.png",
+      image: "/Images/case-studies/incluway/Hero.png",
     },
     showReel: {
       title: "SHOWREEL",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        // "",
+      // "",
     },
     description: {
       title: "A small glimpse",
@@ -71,7 +71,7 @@ export const caseStudyData = {
       title: "Challenges & Goals",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        // "",
+      // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
         "Designing an integrated system that connects thermal cameras and IoT devices to monitor",
@@ -196,13 +196,13 @@ export const caseStudyData = {
       ],
     },
     testimonials: {
-      testimonial:"I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
-      name: "Harepriyaa",
-      image: "https://www.veract.io/images/harepriyaa.jpeg",
+      testimonial: "",
+      name: "",
+      image: "",
       quote_image: "/Images/testimonial_quotes.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
-      profession: "Director",
-      profession_at: "Thermal vision",
+      profession: "",
+      profession_at: "",
     },
   },
   "incluway": {
@@ -217,7 +217,7 @@ export const caseStudyData = {
       title: "SHOWREEL",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        // "",
+      // "",
     },
     description: {
       title: "A small glimpse",
@@ -238,7 +238,7 @@ export const caseStudyData = {
       title: "Challenges & Goals",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        // "",
+      // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
         "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
@@ -364,13 +364,13 @@ export const caseStudyData = {
     },
     testimonials: {
       testimonial:
-        "Veract brought our vision to life with precision. The voice-to-text AI solution exceeded expectations—intuitive, responsive, and impactful. Our users love it. A truly seamless collaboration",
-      name: "Harepriyaa",
-      image: "https://www.veract.io/images/harepriyaa.jpeg",
+        "",
+      name: "",
+      image: "",
       quote_image: "/Images/testimonial_quotes.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
-      profession: "Director",
-      profession_at: "Thermal vision",
+      profession: "",
+      profession_at: "",
     },
   }
 };
@@ -449,7 +449,7 @@ export const LandingPageData = {
     title: "SHOWREEL",
     video:
       "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-      // "",
+    // "",
   },
   aboutUs: {
     achievementsList: [
@@ -482,8 +482,8 @@ export const LandingPageData = {
   advantages: {
     advantages_list: [
       {
-        title: "Health Issue Detection",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+        title: "Bespoke Software, Tailored to Your Business Needs",
+        bg: "bg-[url('/Images/LandingPage/Advantages/Bespoke_Software_Tailored_to_Your_Business_Needs.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
         gradient:
@@ -491,8 +491,8 @@ export const LandingPageData = {
         blobWidth: "w-[8rem]",
       },
       {
-        title: "Seamless Integration",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+        title: "Digital Transformation Strategy with the Right Technologies",
+        bg: "bg-[url('/Images/LandingPage/Advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
         gradient:
@@ -500,8 +500,8 @@ export const LandingPageData = {
         blobWidth: "w-[8rem]",
       },
       {
-        title: "Health Monitoring System",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+        title: "Flexible Engagement Models for Agile Development",
+        bg: "bg-[url('/Images/LandingPage/Advantages/Flexible_Engagement_Models_for_Agile_Development.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
         gradient:
@@ -509,8 +509,8 @@ export const LandingPageData = {
         blobWidth: "w-[10rem]",
       },
       {
-        title: "Actionable Insights",
-        bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+        title: "Measurable Outcomes Through AI, IoT, and Machine Vision",
+        bg: "bg-[url('/Images/LandingPage/Advantages/Measurable_Outcomes_Through_AI_IoT_and_Machine_Vision.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
         description:
           "Facilitated timely, data-backed decisions to improve overall animal well-being.",
         gradient:
@@ -610,31 +610,31 @@ export const LandingPageData = {
     testimonial_list: [
       {
         name: "hare priya",
-        quote:"I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
+        quote: "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
         image: "/Images/LandingPage/Testimonial/harepriyaa.jpeg",
         company: "",
       },
       {
         name: "Mahendra vadivelu",
-        quote:"We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
+        quote: "We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
         image: "/Images/LandingPage/Testimonial/mahendra.jpg",
         company: "",
       },
       {
         name: "salil nair",
-        quote:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
+        quote: "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
         image: "/Images/LandingPage/Testimonial/salil.png",
         company: "",
       },
       {
         name: "anand shah",
-        quote:"Excellent prompt support in spite of remote location. ",
+        quote: "Excellent prompt support in spite of remote location. ",
         image: "/Images/LandingPage/Testimonial/AnanadShah.png",
         company: "",
       },
       {
         name: "Bijoy kt",
-        quote:"Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
+        quote: "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
         image: "/Images/LandingPage/Testimonial/Bijoy.jpg",
         company: "",
       },
@@ -673,37 +673,37 @@ export const LandingPageData = {
             id: 1,
             title: "Home",
             link: "/",
-            status:"active"
+            status: "active"
           },
           {
             id: 2,
             title: "Services",
             link: "",
-            status:"inactive"
+            status: "inactive"
           },
           {
             id: 3,
             title: "Custom Agent",
             link: "/agent",
-            status:"active"
+            status: "active"
           },
           {
             id: 4,
             title: "Case Studies",
             link: "/case-studies",
-            status:"active"
+            status: "active"
           },
           {
             id: 5,
             title: "Contact Us",
             link: "/contact-us",
-            status:"inactive"
+            status: "inactive"
           },
           {
             id: 6,
             title: "Blogs",
             link: "",
-            status:"inactive"
+            status: "inactive"
           }
         ],
       },
@@ -714,25 +714,25 @@ export const LandingPageData = {
             id: 1,
             title: "Digital Transformation",
             link: "",
-            status:"inactive"
+            status: "inactive"
           },
           {
             id: 2,
             title: "Development Services",
             link: "",
-            status:"inactive"
+            status: "inactive"
           },
           {
             id: 3,
             title: "Industrial IoT",
             link: "",
-            status:"inactive"
+            status: "inactive"
           },
           {
             id: 4,
             title: "Machine Vision",
             link: "",
-            status:"inactive"
+            status: "inactive"
           },
         ],
       },
@@ -807,7 +807,7 @@ export const AgentPageData = {
           "We assess your business goals, challenges, and processes to identify where custom AI agents deliver maximum impact.",
         video:
           "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          // "",
+        // "",
       },
       {
         id: 2,
@@ -816,7 +816,7 @@ export const AgentPageData = {
           "Our team designs and develops intelligent AI agents, trained and fine-tuned to adapt to your specific workflows and use cases.",
         video:
           "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          // "",
+        // "",
       },
       {
         id: 3,
@@ -825,7 +825,7 @@ export const AgentPageData = {
           "We embed your custom AI agent into your systems, tools, and processes, ensuring seamless interaction with minimal disruption.",
         video:
           "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          // "",
+        // "",
       },
       {
         id: 4,
@@ -834,16 +834,15 @@ export const AgentPageData = {
           "We continuously monitor your AI agent’s performance, enhance its capabilities, and retrain it to improve outcomes over time.",
         video:
           "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          // "",
+        // "",
       },
     ],
   },
 };
 
 export const caseStudiesHomePageData = {
-  header: "Page Heading",
-  subHeader:
-    "Join us on a journey where ideas transform into captivating video content, with a dash of creativity and a whole lot of fun.",
+  header: "Our Projects",
+  subHeader: "From coming up with creative concepts to delivering outstanding campaigns, we're your friendly, fun-loving crew ready to turn your project dreams into reality!",
   caseStudiesTitleList: [
     // { id: 1, name: "Audio video" },
     { id: 2, name: "Accessibility" },
@@ -873,9 +872,9 @@ export const caseStudiesHomePageData = {
     accessibility: [
       {
         id: 2,
-        image: "/Images/case-studies/project_image.png",
-        header: "Accessibility Client",
-        subHeader: "Accessibility Project",
+        image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
+        header: "accessibility",
+        subHeader: "accessibility project",
         routeTo: "/case-studies/incluway",
       },
     ],
@@ -981,9 +980,9 @@ export const caseStudiesHomePageData = {
     thermalvision: [
       {
         id: 14,
-        image: "/Images/case-studies/project_image.png",
-        header: "Thermal Vision Client",
-        subHeader: "Thermal Vision Project",
+        image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        header: "infrared thermography",
+        subHeader: "thermal imaging detects mastitis in dairy cattle",
         routeTo: "/case-studies/thermal",
       },
     ],
