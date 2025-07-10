@@ -6,12 +6,18 @@ import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { getNavbarState } from '@/lib/globalState';
-
+interface CaseStudyCard {
+    name: string;
+    routeTo: string;
+    image: string;
+    header: string;
+    subHeader: string;
+}
 export default function Page() {
 
     const router = useRouter();
     const [activeTile, setActiveTile] = useState<string>('');
-    const [caseStudyCards, setCaseStudyCards] = useState<any>([]);
+    const [caseStudyCards, setCaseStudyCards] = useState<CaseStudyCard[]>([]);
     const [translateY, setTranslateY] = useState<number>(0);
 
     const { setNavbarState } = getNavbarState();
@@ -20,7 +26,7 @@ export default function Page() {
     useEffect(() => {
         setNavbarState(1);
         const allCards = Object.values(caseStudiesHomePageData.caseStudiesList).flat();
-        setCaseStudyCards(allCards);
+        setCaseStudyCards(allCards as unknown as CaseStudyCard[]);
     }, []);
 
     useEffect(() => {
@@ -35,10 +41,9 @@ export default function Page() {
 
     const handleTileClick = (item: { name: string }) => {
         setActiveTile(item.name);
-        let name = item.name.split(' ').join('').toLowerCase();
-        let filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList];
-        console.log(filteredCardsArray);
-        setCaseStudyCards(filteredCardsArray || []);
+        const name = item.name.split(' ').join('').toLowerCase();
+        const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
+        setCaseStudyCards(filteredCardsArray);
     }
 
     return (
@@ -79,7 +84,7 @@ export default function Page() {
                         ))}
                     </div>
                     <div className='flex flex-row flex-wrap items-start gap-[0.563rem] px-[3.125rem] pb-[3.125rem]'>
-                        {caseStudyCards.map((item: any, index: number) => (
+                        {caseStudyCards.map((item: CaseStudyCard, index: number) => (
                             <motion.div
                                 key={index}
                                 className='w-[22.313rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem] cursor-pointer'

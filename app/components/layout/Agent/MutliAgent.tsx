@@ -3,9 +3,15 @@ import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
 import AgentRobot from "./AgentRobot";
 
+interface Agent {
+    id: number;
+    name: string;
+    image: string;
+    position: string;
+}
 export default function MutliAgent() {
   const [loaded, setLoaded] = useState(false);
-    const [agentsList , setAgentsList] = useState<any[]>([]);
+    const [agentsList , setAgentsList] = useState<Agent[]>([]);
   useEffect(() => {
     setLoaded(true);
     setAgentsList([
@@ -66,7 +72,7 @@ export default function MutliAgent() {
         <div>
             <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px]">
             <img src="/Images/Agent/multi-agent-layers.svg" alt="MultiAgent" className="absolute z-[1000]"/>
-            {agentsList.map((agent) => (
+            {agentsList.map((agent : Agent) => (
                 <div key={agent.id} className={`absolute ${agent.position}`}>
                     <AgentRobot agent={agent}/>
                 </div>

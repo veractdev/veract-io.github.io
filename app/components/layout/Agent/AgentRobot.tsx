@@ -1,7 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-export default function AgentRobot({ agent }: { agent: any }) {
+interface Agent {
+    id: number;
+    name: string;
+    image: string;
+    position: string;
+}
+export default function AgentRobot({ agent }: { agent: Agent }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {

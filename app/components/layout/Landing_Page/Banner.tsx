@@ -228,7 +228,7 @@ export default function Banner() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="bg-primary-blue absolute inset-0 flex items-center justify-center"
               >
-                Get in touch
+                {LandingPageData.banner.get_in_touch}
                 <img
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"
@@ -246,7 +246,7 @@ export default function Banner() {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center justify-center bg-primary-blue"
               >
-                Get in touch
+                {LandingPageData.banner.get_in_touch}
                 <img
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"

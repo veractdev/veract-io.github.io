@@ -373,15 +373,16 @@ export const LandingPageData = {
     typwriting_animation_list: [
       {
         id: 1,
-        word: "mobile app",
+        word: "", //mobile app
       },
+      
     ],
     description_primary:
       "Delivering scalable technology that powers modern digital experiences, AI",
     description_secondary: "systems, and connected IoT solutions.",
-    get_in_touch: "Get in touch",
+    get_in_touch: "", //Get in touch
     get_in_touch_arrow: "/Images/LandingPage/Banner/arrowIconUp.png",
-    view_services_text: "View services",
+    view_services_text: "", //View services
     banner_image_list: [
       {
         id: 1,

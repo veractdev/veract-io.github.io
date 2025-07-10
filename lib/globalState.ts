@@ -7,5 +7,5 @@ interface navbarState {
 
 export const getNavbarState = create<navbarState>()((set) => ({
     navbarState: null,
-    setNavbarState: (navbarState: any) => set({ navbarState })
+    setNavbarState: (navbarState: number | null) => set({ navbarState })
 }))
