@@ -21,6 +21,8 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
     const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
     const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
+    const [isHover, setHover] = useState<boolean>(false);
+
     const springScale = useSpring(scale, {
         stiffness: 100,
         damping: 20,
@@ -81,6 +83,39 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                             <source src={showreel_props.video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                    </motion.div>
+                    <motion.div
+                        layout
+                        onMouseOver={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                        animate={{
+                            gap: isHover ? '0.938rem' : '0rem',
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}
+                        className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+                    // onClick={() => setVideo(true)}
+                    >
+                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-[#FFFFFF]/16 flex items-center justify-center relative'>
+                            {/* Base icon */}
+                            <img
+                                src="/Images/LandingPage/play_icon.png"
+                                alt="play icon"
+                                className='absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
+                            />
+                            {/* Hover icon */}
+                            <img
+                                src="/Images/LandingPage/play_icon_active.png"
+                                alt="play icon"
+                                className='absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                            />
+                        </div>
+
+                        <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
+                            play showreel
+                        </div>
                     </motion.div>
                 </div>
                 <div className='flex items-center justify-center'>
