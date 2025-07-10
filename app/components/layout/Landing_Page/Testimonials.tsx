@@ -79,20 +79,14 @@ export default function Testimonials() {
                     className="h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {/* Full Card Content */}
-                    <div
-
+                    <motion.div
+                      initial={{ x: -50, y: -100, opacity: 0 }}
+                      animate={{ x: 0, y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="flex items-center gap-[0.625rem] pb-[2.438rem]">
                       <motion.img
-                        initial={{ x: -100, y: -50, opacity: 0 }}
-                        animate={{ x: 0, y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-
                         className="w-[2.75rem] h-[2.75rem] md:w-[3.688rem] md:h-[3.688rem] mx-0 my-0 md:mx-[0.75rem] md:my-[0.50rem] rounded-full" src={t.image} alt="Testimonial_Client" />
-
                       <motion.div
-                        initial={{ x: 100, y: -50, opacity: 0 }}
-                        animate={{ x: 0, y: 0, opacity: 1 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
                         className='flex flex-col gap-[0.625rem]'>
                         <div className="interFont text-[#E3E3E3] text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                           {LandingPageData.testimonials.testimonial_list[activeIndex].name}
@@ -101,12 +95,12 @@ export default function Testimonials() {
                           {LandingPageData.testimonials.testimonial_list[activeIndex].company}
                         </div>
                       </motion.div>
-                    </div>
+                    </motion.div>
 
                     <motion.div
-                      initial={{ x: 100, y: 100, opacity: 0 }}
+                      initial={{ x: 50, y: 100, opacity: 0 }}
                       animate={{ x: 0, y: 0, opacity: 1, }}
-                      transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.5, delay: 0.38, ease: "easeInOut", }}
                       className="relative pl-[1.438rem] text-base leading-relaxed">
                       <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                         <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
