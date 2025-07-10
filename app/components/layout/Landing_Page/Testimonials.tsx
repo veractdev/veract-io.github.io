@@ -27,14 +27,14 @@ export default function Testimonials() {
   return (
     loader && (
       <div className="w-full h-max bg-[#0D0D0D] text-white flex items-center justify-center relative z-20">
-        <div className="flex flex-col md:flex-row w-[75rem] gap-[2.75rem] h-full px-[1.5rem] md:px-[6.25rem] py-[3.125rem] items-center justify-between">
-          <div className="w-full relative">
+        <div className="flex flex-col md:flex-row w-[75rem] gap-[3.125rem] md:gap-[2.75rem] h-full px-[1.5rem] md:px-[6.25rem] py-[3.125rem] items-center justify-between">
+          <div className="w-full flex flex-col md:flex-row items-center justify-center relative">
             <img
-              className="absolute top-[-3.4rem] left-[-3rem] w-[6rem] md:w-[7.438rem] h-[6rem] md:h-[6.938rem] object-contain z-0"
+              className="absolute top-[-3.4rem] left-1/2 transform -translate-x-1/2 md:left-[-3rem] md:-translate-x-0 w-[6rem] md:w-[7.438rem] h-[6rem] md:h-[6.938rem] object-contain z-0"
               src="/Images/LandingPage/Testimonial/TestimonialDots.png"
               alt="Testimonial_Quotes"
             />
-            <div className="relative z-10 syneFont text-[3.125rem] md:text-[5rem] leading-[1.2em] font-semibold flex flex-col">
+            <div className="w-max relative z-10 syneFont text-[3.125rem] md:text-[5rem] leading-[1.2em] font-semibold flex flex-col gap-[0.625rem]">
               <span
                 style={{
                   background: 'linear-gradient(355deg, rgb(156, 156, 161) 48%, rgba(250, 250, 250, 0) 100%)',
