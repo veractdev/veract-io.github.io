@@ -210,14 +210,14 @@ export const caseStudyData = {
       title: "A small glimpse",
       description: `
                   <div class="interFont w-full text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] text-primary-text-50 font-extralight leading-[1.2em] tracking-[-0.04em]">
-                  A thermal imaging system for
-                  <span class="text-primary-text"> monitoring buffalo udder health</span> using
-                  <span class="text-orange"> infrared thermography</span>
-                  <span class="text-primary-text"> —</span>
-                  <span class="text-primary-text-70">
-                      enabling early mastitis detection, temperature analysis, and session-based tracking
+                  A lightweight, plug-and-play
+                  <span class="text-[#009DCC]">accessibility widget</span>
+                  designed to
+                  <span class="text-primary-text">enhance digital experiences for users with visual, motor, and cognitive impairments.</span> Fully compliant with
+                  <span class="text-primary-text">WCAG standards,</span>
+                  <span class="text-primary-text-50">
+                      it offers real-time personalization, cross-browser support, and performance optimization—seamlessly integrating into any website or platform with minimal setup.
                   </span>
-                  with offline support and seamless integration into veterinary workflows.
                   </div>
               `,
     },
@@ -227,33 +227,33 @@ export const caseStudyData = {
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
       challenge_description: "BOTTLENECK",
       challenge_solution:
-        "Designing an integrated system that connects thermal cameras and IoT devices to monitor",
+        "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
       challenge_solution_highlighted:
         "livestock health with accuracy, reliability, and real-time insights.",
       solution_list: [
         {
           id: 1,
-          title: "Enable Seamless Communication",
+          title: "Ensure WCAG Compliance",
         },
         {
           id: 2,
-          title: "Enable Seamless Communication",
+          title: "Support User Personalization",
         },
         {
           id: 3,
-          title: "Enable Seamless Communication",
+          title: "Optimize for Cross-Device Compatibility",
         },
         {
           id: 4,
-          title: "Enable Seamless Communication",
+          title: "Enable Easy Integration",
         },
         {
           id: 5,
-          title: "Enable Seamless Communication",
+          title: "Maintain High Performance",
         },
         {
           id: 6,
-          title: "Enable Seamless Communication",
+          title: "Improve Web Accessibility Awareness",
         },
       ],
     },
@@ -261,16 +261,16 @@ export const caseStudyData = {
       title: "How we helped",
       description: `
                   <div class="lg:text-[1.875rem] md:text-[1.75rem] text-[1.5rem] text-white leading-[1.2em] lg:w-[34.375rem] md:w-[22.25rem] w-full text-center md:mb-[2.5rem] mb-[0.625rem] tracking-[-0.05em] font-semibold">
-                  We built a <span class="text-primary-blue">focused solution</span> to
-                  transform livestock health monitoring.
+                  We built a focused solution to enhance 
+                  <span class="text-primary-blue">digital accessibility</span>
                   </div>
               `,
       service_list: [
         {
-          title: "Health Issue Detection",
+          title: "Inclusive Accessibility Features",
           bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
           description:
-            "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
+            "Offered real-time controls like text resizing, contrast modes, screen reader compatibility, and animation toggles to serve users with varied accessibility needs.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[8rem]",
@@ -279,34 +279,34 @@ export const caseStudyData = {
           title: "Seamless Integration",
           bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
           description:
-            "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
+            "Developed a plug-and-play widget that can be embedded on any website with minimal code—supporting fast adoption and cross-platform reliability.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[8rem]",
         },
         {
-          title: "Health Monitoring System",
+          title: "Widget Management System",
           bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
           description:
-            "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
+            "Built a modular, customizable web-based widget with admin control for managing display, placement, and feature toggling without code changes.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[10rem]",
         },
         {
-          title: "Actionable Insights",
+          title: "Actionable Accessibility Data",
           bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
           description:
-            "Facilitated timely, data-backed decisions to improve overall animal well-being.",
+            "Enabled tracking of widget usage and accessibility feature adoption to help website owners improve their inclusivity efforts.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[10rem]",
         },
         {
-          title: "User Experience Focus",
+          title: "User-Centered Design",
           bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://images.pexels.com/photos/808822/pexels-photo-808822.jpeg')]",
           description:
-            "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
+            "Focused on clarity, simplicity, and intuitiveness to deliver an accessible experience for end-users.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[10rem]",
@@ -318,33 +318,33 @@ export const caseStudyData = {
       key_features_list: [
         {
           number: "[01]",
-          title: "Thermal Imaging Integration",
+          title: "Seamless Web Integration",
           img: "/Images/CaseStudies/Thermal/img1.jpg",
-          desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
+          desc: "Effortlessly integrates into any website with a single line of code, ensuring rapid deployment and minimal development effort.",
         },
         {
           number: "[02]",
-          title: "Real-Time Data Processing",
+          title: "Real-Time Accessibility Controls",
           img: "/Images/CaseStudies/Thermal/img1.jpg",
-          desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
+          desc: "Offers live adjustments for text size, contrast, animation toggles, and more—empowering users to personalize their browsing experience instantly.",
         },
         {
           number: "[03]",
-          title: "Camera & IoT Synchronization",
+          title: "Cross-Platform Compatibility",
           img: "/Images/CaseStudies/Thermal/img1.jpg",
-          desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
+          desc: "Ensures consistent performance across all major browsers and devices, maintaining accessibility regardless of user environment.",
         },
         {
           number: "[04]",
-          title: "Low-Latency Data Transfer",
+          title: "Lightweight & Optimized Performance",
           img: "/Images/CaseStudies/Thermal/img1.jpg",
-          desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
+          desc: "Built with performance in mind, the widget loads quickly, consumes minimal resources, and doesn’t interfere with site speed or SEO.",
         },
         {
           number: "[05]",
-          title: "User-Friendly Desktop Interface",
+          title: "Customizable Interface",
           img: "/Images/CaseStudies/Thermal/img1.jpg",
-          desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
+          desc: "Designed with modularity, allowing brands to style, position, and configure the widget to match their visual identity and user needs.",
         },
       ],
     },
