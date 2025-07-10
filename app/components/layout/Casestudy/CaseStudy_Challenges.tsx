@@ -23,7 +23,7 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
 
     return (
         loaded && (
-            <div className='w-full h-max flex flex-col lg:flex-row items-start justify-center md:gap-[3.125rem] p-[4.5rem_1.25rem_0_1.25rem] md:p-[10.25rem_3.25rem_0_3.25rem] lg:p-[4rem_0_0.125rem_0] relative z-50 bg-primary-text'>
+            <div className='w-full h-max flex flex-col lg:flex-row items-start justify-center md:gap-[3.125rem] p-[4.5rem_1.25rem_0_1.25rem] md:p-[10.25rem_3.25rem_0_3.25rem] lg:p-[4rem_0_0.125rem_0] relative z-50 bg-primary-text lg:pt-[6.25rem] md:pt-[6.25rem]'>
                 <div className='w-full lg:w-auto flex flex-col items-start justify-center gap-[1.875rem] md:gap-[2.5rem]'>
                     <div
                         className='geistFont text-[0.875rem] md:text-[1rem] text-[#868586] font-semibold tracking-[0em] uppercase leading-[1.4em]'
