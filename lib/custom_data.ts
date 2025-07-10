@@ -23,14 +23,14 @@ export const navItems = [
     link: "/case-studies",
     status:"active"
   },
+  // {
+  //   id: 5,
+  //   name: "Contact Us",
+  //   link: "/contact-us",
+  //   status:"inactive"
+  // },
   {
     id: 5,
-    name: "Contact Us",
-    link: "/contact-us",
-    status:"inactive"
-  },
-  {
-    id: 6,
     name: "Blogs",
     link: "/",
     status:"inactive"
@@ -567,12 +567,12 @@ export const LandingPageData = {
       {
         id: 4,
         name: "E-commerce",
-        image: "/Images/LandingPage/WeWorkWith/e-commerce.png",
+        image: "/Images/LandingPage/WeWorkWith/Ecom.png",
       },
       {
         id: 5,
         name: "Ed-Tech",
-        image: "/Images/LandingPage/WeWorkWith/Ed-Tech.png",
+        image: "/Images/LandingPage/WeWorkWith/Evo11ve.png",
       },
       {
         id: 6,
@@ -582,7 +582,7 @@ export const LandingPageData = {
       {
         id: 7,
         name: "Machine Vision",
-        image: "/Images/LandingPage/WeWorkWith/machine-vision.png",
+        image: "/Images/LandingPage/WeWorkWith/Machine Vision.png",
       },
       {
         id: 8,
@@ -597,12 +597,12 @@ export const LandingPageData = {
       {
         id: 10,
         name: "Thermal Vision",
-        image: "/Images/LandingPage/WeWorkWith/thermal-vision.png",
+        image: "/Images/LandingPage/WeWorkWith/thermal.png",
       },
       {
         id: 11,
         name: "Wellness",
-        image: "/Images/LandingPage/WeWorkWith/wellness.png",
+        image: "/Images/LandingPage/WeWorkWith/Anyo.png",
       },
     ],
   },
@@ -611,32 +611,32 @@ export const LandingPageData = {
       {
         name: "hare priya",
         quote:"I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
-        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-        company: "Evo11ve",
+        image: "/Images/LandingPage/Testimonial/harepriyaa.jpeg",
+        company: "",
       },
       {
         name: "Mahendra vadivelu",
         quote:"We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
-        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-        company: "TechSpark",
+        image: "/Images/LandingPage/Testimonial/mahendra.jpg",
+        company: "",
       },
       {
         name: "salil nair",
         quote:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
-        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-        company: "InnoVibe",
+        image: "/Images/LandingPage/Testimonial/salil.png",
+        company: "",
       },
       {
         name: "anand shah",
         quote:"Excellent prompt support in spite of remote location. ",
-        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-        company: "NextWare",
+        image: "/Images/LandingPage/Testimonial/AnanadShah.png",
+        company: "",
       },
       {
         name: "Bijoy kt",
         quote:"Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
-        image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
-        company: "NextWare",
+        image: "/Images/LandingPage/Testimonial/Bijoy.jpg",
+        company: "",
       },
     ],
   },
@@ -646,22 +646,22 @@ export const LandingPageData = {
     socialMediaIcons: [
       {
         id: 1,
-        image: "/Images/LandingPage/Footer/veract-linkedIn.svg",
+        image: "/Images/LandingPage/Footer/linkedin.svg",
         link: "https://www.linkedin.com/company/veract-consultancy-private-limited/",
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Footer/veract-youtube.svg",
+        image: "/Images/LandingPage/Footer/youtube.svg",
         link: "https://youtube.com/@veract-consultancy?si=tGt9K1cCpnNgzFkJ",
       },
       {
         id: 3,
-        image: "/Images/LandingPage/Footer/veract-whatsapp.svg",
+        image: "/Images/LandingPage/Footer/whatsapp.svg",
         link: "https://www.whatsapp.com/channel/0029VahNUEB90x31HeDatt2o",
       },
       {
         id: 4,
-        image: "/Images/LandingPage/Footer/veract-instagram.svg",
+        image: "/Images/LandingPage/Footer/insta.svg",
         link: "https://www.instagram.com/veractconsultancy/",
       },
     ],
