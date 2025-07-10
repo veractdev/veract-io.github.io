@@ -22,11 +22,14 @@ export default function Banner() {
 
   // Typing Effect
   useEffect(() => {
+    console.log(wordIndex);
     const currentWord = LandingPageData.banner.typwriting_animation_list[wordIndex];
+    console.log(currentWord);
     let timeout: ReturnType<typeof setTimeout>;
     if (typing) {
       if (charIndex < currentWord.word.length) {
         timeout = setTimeout(() => {
+          console.log(currentWord.word[charIndex]);
           setDisplayText((prev) => prev + currentWord.word[charIndex]);
           setCharIndex((prev) => prev + 1);
         }, 120);

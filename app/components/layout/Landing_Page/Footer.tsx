@@ -1,10 +1,11 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 import { LandingPageData } from "@/lib/custom_data";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const details = LandingPageData.footer;
-
+  const router = useRouter();
   const svgRef = useRef<SVGSVGElement>(null);
   const circleRef = useRef<SVGCircleElement>(null);
   const [showGlow, setShowGlow] = useState(false);
@@ -124,7 +125,13 @@ export default function Footer() {
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
                 {details.quickLinks.company.links.map((link) => (
-                  <div key={link.id} className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{link.title}</div>
+                  <div key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}
+                    onClick={() => {
+                      if (link.status == 'active') {
+                        router.push(link.link);
+                      }
+                    }}
+                  >{link.title}</div>
                 ))}
               </div>
             </div>
@@ -132,7 +139,13 @@ export default function Footer() {
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.services.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
                 {details.quickLinks.services.links.map((link) => (
-                  <div key={link.id} className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{link.title}</div>
+                  <div key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}
+                    onClick={() => {
+                      if (link.status == 'active') {
+                        router.push(link.link);
+                      }
+                    }}
+                  >{link.title}</div>
                 ))}
               </div>
             </div>
@@ -168,7 +181,7 @@ export default function Footer() {
             </div>
             <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.address.title}</div>
-              <div className='w-[15.75rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{details.quickLinks.address.address}</div>
+              <div className='w-[15.75rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em]'>{details.quickLinks.address.address}</div>
             </div>
           </div>
           <div className='absolute bottom-[1.5rem] left-1/2 transform -translate-x-1/2 w-[13.375rem] text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20'>
@@ -185,7 +198,7 @@ export default function Footer() {
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
                 {details.quickLinks.company.links.map((link) => (
-                  <div key={link.id} className='openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{link.title}</div>
+                  <div key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}>{link.title}</div>
                 ))}
               </div>
             </div>
@@ -250,7 +263,7 @@ export default function Footer() {
           </div>
           <div className='pb-[5rem] md:pb-[3.125rem] w-full flex flex-col items-start justify-center gap-[1.25rem]'>
             <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.address.title}</div>
-            <div className='w-[15.75rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] cursor-pointer'>{details.quickLinks.address.address}</div>
+            <div className='w-[15.75rem] openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em]'>{details.quickLinks.address.address}</div>
           </div>
           <div className='pb-[0.75rem] md:pb-[1rem] openSansFont text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20'>
             <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>

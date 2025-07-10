@@ -1,29 +1,40 @@
 export const navItems = [
   {
     id: 1,
+    name: "Home",
+    link: "/",
+    status:"active"
+  },
+  {
+    id: 2,
+    name: "Services",
+    link: "/",
+    status:"inactive"
+  },
+  {
+    id: 3,
+    name: "Custom Agent",
+    link: "/agent",
+    status:"active"
+  },
+  {
+    id: 4,
     name: "Case Studies",
     link: "/case-studies",
+    status:"active"
   },
-  // {
-  //   id: 2,
-  //   name: "Services",
-  //   link: "/services/web-development",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Industries",
-  //   link: "/industries/healthcare",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Company",
-  //   link: "/company/about",
-  // },
-  // {
-  //   id: 5,
-  //   name: "Blogs",
-  //   link: "/blogs/latest",
-  // },
+  {
+    id: 5,
+    name: "Contact Us",
+    link: "/contact-us",
+    status:"inactive"
+  },
+  {
+    id: 6,
+    name: "Blogs",
+    link: "/",
+    status:"inactive"
+  }
 ];
 
 export const caseStudyData = {
@@ -38,8 +49,8 @@ export const caseStudyData = {
     showReel: {
       title: "SHOWREEL",
       video:
-        // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        "",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        // "",
     },
     description: {
       title: "A small glimpse",
@@ -59,8 +70,8 @@ export const caseStudyData = {
     challenges: {
       title: "Challenges & Goals",
       video:
-        // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        "",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
         "Designing an integrated system that connects thermal cameras and IoT devices to monitor",
@@ -185,8 +196,7 @@ export const caseStudyData = {
       ],
     },
     testimonials: {
-      testimonial:
-        "Veract brought our vision to life with precision. The voice-to-text AI solution exceeded expectations—intuitive, responsive, and impactful. Our users love it. A truly seamless collaboration",
+      testimonial:"I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
       name: "Harepriyaa",
       image: "https://www.veract.io/images/harepriyaa.jpeg",
       quote_image: "/Images/testimonial_quotes.svg",
@@ -206,8 +216,8 @@ export const caseStudyData = {
     showReel: {
       title: "SHOWREEL",
       video:
-        //  "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        "",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        // "",
     },
     description: {
       title: "A small glimpse",
@@ -227,8 +237,8 @@ export const caseStudyData = {
     challenges: {
       title: "Challenges & Goals",
       video:
-        // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-        "",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
         "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
@@ -373,9 +383,20 @@ export const LandingPageData = {
     typwriting_animation_list: [
       {
         id: 1,
-        word: "", //mobile app
+        word: "mobile app", //mobile app
       },
-      
+      // {
+      //   id: 2,
+      //   word: "web solution", //web app
+      // },
+      // {
+      //   id: 3,
+      //   word: "ai powered solution", //AI
+      // },
+      // {
+      //   id: 4,
+      //   word: "iot solution", //IoT
+      // }
     ],
     description_primary:
       "Delivering scalable technology that powers modern digital experiences, AI",
@@ -427,8 +448,8 @@ export const LandingPageData = {
   showReel: {
     title: "SHOWREEL",
     video:
-      // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-      "",
+      "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+      // "",
   },
   aboutUs: {
     achievementsList: [
@@ -588,37 +609,32 @@ export const LandingPageData = {
   testimonials: {
     testimonial_list: [
       {
-        name: "John Doe",
-        quote:
-          "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
+        name: "hare priya",
+        quote:"I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
         image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
         company: "Evo11ve",
       },
       {
-        name: "Jane Smith",
-        quote:
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        name: "Mahendra vadivelu",
+        quote:"We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
         image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
         company: "TechSpark",
       },
       {
-        name: "Alice Johnson",
-        quote:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        name: "salil nair",
+        quote:"We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
         image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
         company: "InnoVibe",
       },
       {
-        name: "Bob Brown",
-        quote:
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        name: "anand shah",
+        quote:"Excellent prompt support in spite of remote location. ",
         image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
         company: "NextWare",
       },
       {
-        name: "Bob Brown",
-        quote:
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        name: "Bijoy kt",
+        quote:"Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
         image: "/Images/LandingPage/Testimonial/testimonial_profile.png",
         company: "NextWare",
       },
@@ -633,20 +649,20 @@ export const LandingPageData = {
         image: "/Images/LandingPage/Footer/veract-linkedIn.svg",
         link: "https://www.linkedin.com/company/veract-consultancy-private-limited/",
       },
-      // {
-      //   id: 2,
-      //   image: "/Images/LandingPage/Footer/veract-youtube.svg",
-      //   link: "",
-      // },
-      // {
-      //   id: 3,
-      //   image: "/Images/LandingPage/Footer/veract-whatsapp.svg",
-      //   link: "",
-      // },
+      {
+        id: 2,
+        image: "/Images/LandingPage/Footer/veract-youtube.svg",
+        link: "https://youtube.com/@veract-consultancy?si=tGt9K1cCpnNgzFkJ",
+      },
+      {
+        id: 3,
+        image: "/Images/LandingPage/Footer/veract-whatsapp.svg",
+        link: "https://www.whatsapp.com/channel/0029VahNUEB90x31HeDatt2o",
+      },
       {
         id: 4,
         image: "/Images/LandingPage/Footer/veract-instagram.svg",
-        link: "https://www.instagram.com/veractconsultancy?igsh=amVzcWEwdzVtbnk5",
+        link: "https://www.instagram.com/veractconsultancy/",
       },
     ],
     quickLinks: {
@@ -655,59 +671,69 @@ export const LandingPageData = {
         links: [
           {
             id: 1,
-            title: "Case studies",
-            link: "/case-studies",
+            title: "Home",
+            link: "/",
+            status:"active"
           },
-          // {
-          //   id: 2,
-          //   title: "Services",
-          //   link: "",
-          // },
-          // {
-          //   id: 3,
-          //   title: "Blogs",
-          //   link: "",
-          // },
-          // {
-          //   id: 4,
-          //   title: "About Us",
-          //   link: "",
-          // },
-          // {
-          //   id: 5,
-          //   title: "Contact Us",
-          //   link: "",
-          // },
+          {
+            id: 2,
+            title: "Services",
+            link: "",
+            status:"inactive"
+          },
+          {
+            id: 3,
+            title: "Custom Agent",
+            link: "/agent",
+            status:"active"
+          },
+          {
+            id: 4,
+            title: "Case Studies",
+            link: "/case-studies",
+            status:"active"
+          },
+          {
+            id: 5,
+            title: "Contact Us",
+            link: "/contact-us",
+            status:"inactive"
+          },
+          {
+            id: 6,
+            title: "Blogs",
+            link: "",
+            status:"inactive"
+          }
         ],
       },
       services: {
         title: "Services",
         links: [
-          // {
-          //   id: 1,
-          //   title: "Digital Transformation",
-          //   link: "",
-          // },
-          // {
-          //   id: 2,
-          //   title: "Development Services",
-          //   link: "",
-          // },
-          // {
-          //   id: 3,
-          //   title: "Industrial IoT",
-          //   link: "",
-          // },
+          {
+            id: 1,
+            title: "Digital Transformation",
+            link: "",
+            status:"inactive"
+          },
+          {
+            id: 2,
+            title: "Development Services",
+            link: "",
+            status:"inactive"
+          },
+          {
+            id: 3,
+            title: "Industrial IoT",
+            link: "",
+            status:"inactive"
+          },
           {
             id: 4,
-            title: "AI Agent",
-            link: "/agent",
+            title: "Machine Vision",
+            link: "",
+            status:"inactive"
           },
-          // {
-          //   id: 5,
-          //   title: "Machine Vision",
-          //   link: "",
-          // },
         ],
       },
       contact: {
@@ -780,8 +806,8 @@ export const AgentPageData = {
         subHeader:
           "We assess your business goals, challenges, and processes to identify where custom AI agents deliver maximum impact.",
         video:
-          // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          "",
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+          // "",
       },
       {
         id: 2,
@@ -789,8 +815,8 @@ export const AgentPageData = {
         subHeader:
           "Our team designs and develops intelligent AI agents, trained and fine-tuned to adapt to your specific workflows and use cases.",
         video:
-          // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          "",
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+          // "",
       },
       {
         id: 3,
@@ -798,8 +824,8 @@ export const AgentPageData = {
         subHeader:
           "We embed your custom AI agent into your systems, tools, and processes, ensuring seamless interaction with minimal disruption.",
         video:
-          // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          "",
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+          // "",
       },
       {
         id: 4,
@@ -807,8 +833,8 @@ export const AgentPageData = {
         subHeader:
           "We continuously monitor your AI agent’s performance, enhance its capabilities, and retrain it to improve outcomes over time.",
         video:
-          // "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
-          "",
+          "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+          // "",
       },
     ],
   },
