@@ -27,43 +27,43 @@ export default function Testimonials() {
   return (
     loader && (
       <div className="w-full h-max bg-[#0D0D0D] text-white flex items-center justify-center relative z-20">
-        <div className="flex w-[75rem] gap-[2.75rem] h-full px-[6.25rem] py-[3.125rem] items-center justify-between">
-          <div className="w-[30%] relative">
-          <img
-            className="absolute top-[-3.4rem] left-[-3rem] w-[6rem] md:w-[7.438rem] h-[6rem] md:h-[6.938rem] object-contain z-0"
-            src="/Images/LandingPage/Testimonial/TestimonialDots.png"
-            alt="Testimonial_Quotes"
-          />
-          <div className="relative z-10 syneFont leading-[1.2em] text-[5rem] font-semibold flex flex-col">
-            <span
-              style={{
-                background: 'linear-gradient(355deg, rgb(156, 156, 161) 48%, rgba(250, 250, 250, 0) 100%)',
+        <div className="flex flex-col md:flex-row w-[75rem] gap-[2.75rem] h-full px-[1.5rem] md:px-[6.25rem] py-[3.125rem] items-center justify-between">
+          <div className="w-full relative">
+            <img
+              className="absolute top-[-3.4rem] left-[-3rem] w-[6rem] md:w-[7.438rem] h-[6rem] md:h-[6.938rem] object-contain z-0"
+              src="/Images/LandingPage/Testimonial/TestimonialDots.png"
+              alt="Testimonial_Quotes"
+            />
+            <div className="relative z-10 syneFont text-[3.125rem] md:text-[5rem] leading-[1.2em] font-semibold flex flex-col">
+              <span
+                style={{
+                  background: 'linear-gradient(355deg, rgb(156, 156, 161) 48%, rgba(250, 250, 250, 0) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}>
+                What
+              </span>
+              <span
+                style={{
+                  background: 'linear-gradient(0deg, rgb(184, 184, 184) 100%, rgba(250, 250, 250, 0) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}>
+                our
+              </span>
+              <span style={{
+                background: 'linear-gradient(97deg, rgb(66, 133, 244) 24%, rgba(255, 255, 255, 0.63) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 display: 'inline-block'
               }}>
-              What
-            </span>
-            <span
-              style={{
-                background: 'linear-gradient(0deg, rgb(184, 184, 184) 100%, rgba(250, 250, 250, 0) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                display: 'inline-block'
-              }}>
-              our
-            </span>
-            <span style={{
-              background: 'linear-gradient(97deg, rgb(66, 133, 244) 24%, rgba(255, 255, 255, 0.63) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              display: 'inline-block'
-            }}>
-              Clients
-            </span>
-            <span className="text-[#E3E3E3]">Say?</span>
+                Clients
+              </span>
+              <span className="text-[#E3E3E3]">Say?</span>
+            </div>
           </div>
-        </div>
 
           <div className='w-full h-max flex flex-col items-center justify-center md:flex-row gap-[1.125rem]'>
             {LandingPageData.testimonials.testimonial_list.map((t, index) => {
@@ -120,7 +120,7 @@ export default function Testimonials() {
               }
 
               // Recently closed card (animate shrink)
-              if (prevIndexRef.current === index) {
+              if (prevIndexRef.current === index && activeIndex !== index) {
                 if (visibleMiniIndex !== index) {
                   setTimeout(() => {
                     setVisibleMiniIndex(index);
@@ -131,7 +131,7 @@ export default function Testimonials() {
                   <motion.button
                     key={index}
                     initial={{ width: "20.125rem" }}
-                    animate={{ width: isMobile() ? "100%" : "20.125rem" }}
+                    animate={{ width: isMobile() ? "100%" : "5.125rem" }}
                     transition={{ duration: 0.7, ease: "easeInOut" }}
                     onMouseEnter={() => handleSetActiveIndex(index)}
                     className="relative h-max md:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row md:flex-col items-center justify-start md:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
