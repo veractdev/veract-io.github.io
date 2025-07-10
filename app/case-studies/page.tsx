@@ -56,7 +56,7 @@ export default function Page() {
                         <img src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
                         <img src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
                         <div
-                            className='w-full static md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center'
+                            className='w-max static md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center'
                             style={{
                                 transform: `translateY(${translateY}px)`,
                                 willChange: 'transform',
