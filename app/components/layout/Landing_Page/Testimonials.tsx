@@ -72,16 +72,16 @@ export default function Testimonials() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ width: "5.125rem" }}
-                    animate={{ width: isTablet() ? '38.25rem' : "20.125rem" }}
-                    transition={{ duration: 0.7, ease: "easeInOut" }}
+                    initial={ !isMobile() && !isTablet() ? {width: "5.125rem"} : isTablet() ? {height: "5rem"} : {height: "5rem"} }
+                    animate={ !isMobile() && !isTablet() ? {width: "20.125rem"} : isTablet() ? {height: "19.938rem"} : {height: "27.5rem"} }
+                    transition={  { duration: 0.7, ease: "easeInOut" }}
                     style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
                     className="md:h-[19.938rem] h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {/* Full Card Content */}
                     <motion.div
-                      initial={{ x: -50, y: -100, opacity: 0 }}
-                      animate={{ x: 0, y: 0, opacity: 1 }}
+                      initial={ !isMobile() && !isTablet() ? { x: -50, y: -100, opacity: 0 } : false }
+                      animate={ !isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false }
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="flex items-center gap-[0.625rem] pb-[2.438rem]">
                       <motion.img
@@ -103,16 +103,16 @@ export default function Testimonials() {
                     </motion.div>
 
                     <motion.div
-                      initial={{ x: 50, y: 100, opacity: 0 }}
-                      animate={{ x: 0, y: 0, opacity: 1, }}
-                      transition={{ duration: 0.5, delay: 0.38, ease: "easeInOut", }}
+                      initial={ !isMobile() && !isTablet() ? { x: 50, y: 100, opacity: 0 } : false }
+                      animate={ !isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false }
+                      transition={{ duration: 0.5, ease: "easeInOut", } }
                       className="relative pl-[1.438rem] text-base leading-relaxed">
                       <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                         <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
                       </div>
-                      <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
+                      <div className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
                         {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
-                      </p>
+                      </div>
                     </motion.div>
                   </motion.div>
                 );
@@ -123,32 +123,33 @@ export default function Testimonials() {
                 if (visibleMiniIndex !== index) {
                   setTimeout(() => {
                     setVisibleMiniIndex(index);
-                  }, 500); // Delay before showing mini view
+                  }, 500); 
                 }
 
                 return (
                   <motion.button
                     key={index}
-                    initial={{ width: "20.125rem" }}
-                    animate={{ width: isMobile() || isTablet() ? "100%" : "5.125rem" }}
+                    initial={ !isMobile() && !isTablet() ? { width: "20.125rem" } : isMobile()?{width: '100%', height: '27.5rem'}:{width: '100%', height: '19.938rem'} }
+                    animate={ !isMobile() && !isTablet() ? { width: "5.125rem" } : isMobile()? {width: '100%', height: '5rem'}:{width: '100%', height: '5rem'} }
                     transition={{ duration: 0.7, ease: "easeInOut" }}
-                    onMouseEnter={() => handleSetActiveIndex(index)}
-                    className="relative h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
+                    onMouseEnter={() => !isMobile() && handleSetActiveIndex(index)}
+                    onClick={() => isMobile() && handleSetActiveIndex(index)}
+                    className="relative lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {visibleMiniIndex === index ? (
                       // Mini card content (after 3s)
                       <div className='p-[0.625rem] lg:p-0 flex flex-row items-center justify-center gap-[2.063rem] md:gap-[10.063rem]'>
                         <motion.img
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          initial={ { opacity: 0 }}
+                          animate={ { opacity: 1 } }
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0 lg:mx-[0.75rem] lg:my-[0.50rem] rounded-full"
                           src={t.image}
                           alt="Testimonial_Client"
                         />
                         <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          initial={ { opacity: 0 } }
+                          animate={ { opacity: 1 } }
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           className="static lg:absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-0 lg:rotate-[-90deg] interFont font-semibold text-[0.938rem] leading-[1.2em] lg:text-[1.25rem] text-white whitespace-nowrap text-center">
                           {t.name}
@@ -160,20 +161,20 @@ export default function Testimonials() {
                         key={index}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                        className="h-max lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
+                        className="h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                       >
                         <div
                           className="flex items-center gap-[0.625rem] pb-[2.438rem]">
                           <motion.img
-                            initial={{ x: 0, y: 0, opacity: 0 }}
-                            animate={{ x: -100, y: -50, opacity: 1 }}
+                            initial={ !isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 0 } : false }
+                            animate={ !isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 1 } : false }
                             transition={{ duration: 0.5, ease: "easeInOut" }}
 
                             className="w-[3.688rem] h-[3.688rem]  rounded-full" src={t.image} alt="Testimonial_Client" />
 
                           <motion.div
-                            initial={{ x: 0, y: 0, opacity: 0 }}
-                            animate={{ x: 100, y: -50, opacity: 1 }}
+                            initial={ !isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 0 } : false }
+                            animate={ !isMobile() && !isTablet() ? { x: 100, y: -50, opacity: 1 } : false }
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className='flex flex-col gap-[0.625rem]'>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
@@ -186,14 +187,14 @@ export default function Testimonials() {
                         </div>
 
                         <motion.div
-                          initial={{ x: 0, y: 0, opacity: 0 }}
-                          animate={{ x: 100, y: 100, opacity: 1, }}
+                          initial={ !isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 0 } : false }
+                          animate={ !isMobile() && !isTablet() ? { x: 100, y: 100, opacity: 1, } : false }
                           transition={{ duration: 0.4, ease: "easeInOut" }}
                           className="relative pl-[1.438rem] text-base leading-relaxed">
                           <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                             <img className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
                           </div>
-                          <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
+                          <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em] text-left'>
                             {t.quote}
                           </p>
                         </motion.div>
@@ -208,7 +209,8 @@ export default function Testimonials() {
               return (
                 <button
                   key={index}
-                  onMouseEnter={() => handleSetActiveIndex(index)}
+                  onMouseEnter={() => !isMobile() && handleSetActiveIndex(index)}
+                  onClick={() => isMobile() && handleSetActiveIndex(index)}
                   className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
                 >
                   <img
