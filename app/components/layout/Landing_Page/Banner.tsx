@@ -83,6 +83,7 @@ export default function Banner() {
         left: '-39.688rem'
       }}
     /> */}
+      {/* <div className='absolute z-[10] top-0 left-0 w-[600px] h-[20px] rounded-[50%] bg-[#8AA5FF] blur-[30px] rotate-45 origin-left'></div> */}
       <img
         src={`/Images/case-studies/case_study_banner_image.png`}
         alt={`placeholder image`}
