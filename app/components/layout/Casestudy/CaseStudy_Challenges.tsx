@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 type challenges_props = {
     title: string;
+    indication_icon : string,
     video: string;
     challenge_description: string;
     challenge_solution: string;
@@ -13,7 +14,7 @@ type challenges_props = {
     }[];
 }
 
-export default function CaseStudy_Challenges({ challenges_props }: { challenges_props: challenges_props }) {
+export default function CaseStudy_Challenges({  challenges_props }: { challenges_props: challenges_props }) {
 
     const [loaded, setLoaded] = useState(false)
 
@@ -52,7 +53,7 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
                         <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start justify-center'>
                             {challenges_props.solution_list.slice(0, 3).map((challenge, index) => (
                                 <div key={index} className='flex flex-row items-center justify-center gap-[.875rem]'>
-                                    <img src="/Images/case-studies/challenges_lisiting_icon.png" alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
+                                    <img src={challenges_props.indication_icon} alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
                                     <div className='interFont text-[1rem] md:text-[0.875rem] lg:text-[1.125rem] font-medium text-white tracking-[-0.02em] leading-[1.4em] lg:leading-[1.5em]'>{challenge.title}</div>
                                 </div>
                             ))}
@@ -60,7 +61,7 @@ export default function CaseStudy_Challenges({ challenges_props }: { challenges_
                         <div className='flex flex-col gap-[0.625rem] md:gap-[1.25rem] items-start justify-center'>
                             {challenges_props.solution_list.slice(3, 6).map((challenge, index) => (
                                 <div key={index} className='flex flex-row items-center justify-center gap-[.875rem]'>
-                                    <img src="/Images/case-studies/challenges_lisiting_icon.png" alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
+                                    <img src={challenges_props.indication_icon} alt="placeholder image" className='w-[1.25rem] h-[1.25rem] md:w-[1.375rem] md:h-[1.375rem] lg:w-[1.563rem] lg:h-[1.563rem]' />
                                     <div className='interFont text-[1rem] md:text-[0.875rem] lg:text-[1.125rem] font-medium text-white tracking-[-0.02em] leading-[1.4em] lg:leading-[1.5em]'>{challenge.title}</div>
                                 </div>
                             ))}
