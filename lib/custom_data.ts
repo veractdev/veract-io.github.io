@@ -69,6 +69,7 @@ export const caseStudyData = {
     },
     challenges: {
       title: "Challenges & Goals",
+      indication_icon:"/Images/case-studies/challenges_lisiting_icon.png",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
       // "",
@@ -162,6 +163,7 @@ export const caseStudyData = {
     },
     key_features: {
       title: "Key Features",
+      indication_color : "#FF7A3B",
       key_features_list: [
         {
           number: "[01]",
@@ -236,6 +238,7 @@ export const caseStudyData = {
     },
     challenges: {
       title: "Challenges & Goals",
+      indication_icon:"",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
       // "",
@@ -329,6 +332,7 @@ export const caseStudyData = {
     },
     key_features: {
       title: "Key Features",
+      indication_color:"#1F8BFF",
       key_features_list: [
         {
           number: "[01]",
@@ -368,7 +372,7 @@ export const caseStudyData = {
       name: "",
       image: "",
       quote_image: "/Images/testimonial_quotes.svg",
-      shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
+      shadow: "-1.875rem -1.25rem 62.5rem rgba(66,133,244,1)",
       profession: "",
       profession_at: "",
     },
