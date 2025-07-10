@@ -70,10 +70,10 @@ export default function MutliAgent() {
       <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[364.5px]  pb-[159px]">
         <AgentTitle title="Multi Agent" title_description="Optimize Operations Using Intelligent Collaborative Agents" description="By coordinating multiple AI agents, your everyday business tasks become smoother, faster, and more efficient"/>
         <div>
-            <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px]">
+            <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px] right-[-1rem]">
             <img src="/Images/Agent/multi-agent-layers.svg" alt="MultiAgent" className="absolute z-[1000]"/>
             {agentsList.map((agent : Agent) => (
-                <div key={agent.id} className={`absolute ${agent.position}`}>
+                <div key={agent.id} className={`absolute ${agent.position} lg:drop-shadow-[0px_0px_15.7px_#4285F4] drop-shadow-[0px_0px_4.89px_#4285F4] `}>
                     <AgentRobot agent={agent}/>
                 </div>
             ))}
