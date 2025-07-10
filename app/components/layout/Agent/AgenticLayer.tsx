@@ -32,7 +32,7 @@ export default function AgenticLayer() {
               />
             </div>
 
-            <div className="absolute z-30 text-[#FAFAFA] syneFont lg:text-[60px] md:text-[30px] text-[26px] text-center font-semibold lg:leading-[60px] leading-[2.03863rem] lg:top-[176px] lg:left-[141px] md:top-[6.5rem] md:left-[4.5rem] top-[6rem] lg:w-full md:w-[7.935rem] w-[6.875rem] animate-agentic-layer-opacity">
+            <div className="absolute z-30 text-[#FAFAFA] syneFont lg:text-[60px] md:text-[30px] text-[26px] text-center font-semibold lg:leading-[60px] leading-[2.03863rem] lg:top-[176px] lg:left-[141px] md:top-[6.5rem] md:left-[4.5rem] top-[6rem] lg:w-[65%] md:w-[7.935rem] w-[6.875rem] animate-agentic-layer-opacity">
               Ai Agent Layer
             </div>
 
