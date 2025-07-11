@@ -132,8 +132,8 @@ export default function Testimonials() {
                     initial={!isMobile() && !isTablet() ? { width: "20.125rem" } : isMobile() ? { width: '100%', height: '27.5rem' } : { width: '100%', height: '19.938rem' }}
                     animate={!isMobile() && !isTablet() ? { width: "5.125rem" } : isMobile() ? { width: '100%', height: '5rem' } : { width: '100%', height: '5rem' }}
                     transition={{ duration: 0.7, ease: "easeInOut" }}
-                    onMouseEnter={() => !isMobile() && handleSetActiveIndex(index)}
-                    onClick={() => isMobile() && handleSetActiveIndex(index)}
+                    onMouseEnter={() => (!isMobile() && !isTablet()) && handleSetActiveIndex(index)}
+                    onClick={() => (isMobile() || isTablet()) && handleSetActiveIndex(index)}
                     className="relative lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {visibleMiniIndex === index ? (
@@ -160,7 +160,7 @@ export default function Testimonials() {
                       <motion.div
                         key={index}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
+                        style={{ }}
                         className="h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                       >
                         <div
@@ -209,8 +209,8 @@ export default function Testimonials() {
               return (
                 <button
                   key={index}
-                  onMouseEnter={() => !isMobile() && handleSetActiveIndex(index)}
-                  onClick={() => isMobile() && handleSetActiveIndex(index)}
+                  onMouseEnter={() => (!isMobile() && !isTablet()) && handleSetActiveIndex(index)}
+                  onClick={() => (isMobile() || isTablet()) && handleSetActiveIndex(index)}
                   className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
                 >
                   <img loading="lazy"
