@@ -526,7 +526,7 @@ export const LandingPageData = {
         title: "accessibility",
         description: "accessibility project",
         status: "active",
-        route: 'Accessibility',
+        route: 'incluway',
       },
       {
         id: 2,
@@ -534,7 +534,7 @@ export const LandingPageData = {
         title: "infrared thermography",
         description: "thermal imaging detects mastitis in dairy cattle",
         status: "active",
-        route: 'Thermal Vision',
+        route: 'thermal',
       },
       {
         id: 3,
@@ -542,7 +542,7 @@ export const LandingPageData = {
         title: "e-commerce",
         description: "payment enabled e-commerce web application",
         status: "inactive",
-        route: 'Ecommerce',
+        route: 'ecommerce',
       },
       {
         id: 4,
@@ -550,7 +550,7 @@ export const LandingPageData = {
         title: "ed tech",
         description: "education platform",
         status: "inactive",
-        route: 'Edtech',
+        route: 'edtech',
       },
     ],
   },

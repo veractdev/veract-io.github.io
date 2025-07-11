@@ -237,8 +237,8 @@ export default function Advantages() {
                   <div
                     onClick={() => {
                       if (item.status === 'active') {
-                        router.push(`/case-studies/`);
-                        setCaseStudyState(item.route);
+                        router.push(`/case-studies/${item.route}`);
+                        // setCaseStudyState(item.route);
                       }
                     }}
                     className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
@@ -259,8 +259,8 @@ export default function Advantages() {
                   <div
                     onClick={() => {
                       if (item.status === 'active') {
-                        router.push(`/case-studies/`);
-                        setCaseStudyState(item.route);
+                        router.push(`/case-studies/${item.route}`);
+                        // setCaseStudyState(item.route);
                       }
                     }}
                     className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
