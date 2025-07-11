@@ -12,7 +12,7 @@ type testimonial_props = {
 }
 
 export default function Casestudy_Testimonial({ testimonial_props }: { testimonial_props: testimonial_props }) {
-  
+
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
@@ -22,51 +22,51 @@ export default function Casestudy_Testimonial({ testimonial_props }: { testimoni
   return (
     loaded && (
       <div className="interFont w-full h-[100vh] flex flex-col justify-center items-center syneFont relative z-200 bg-primary-text pb-[5rem]">
-        <img
+        <img loading="lazy"
           src="/Images/horizantal_design.png"
           alt="horizantal_design"
           className="hidden lg:block md:block"
         />
         <div className="w-[90%] h-[30.625rem] bg-transparent flex flex-col items-center justify-center relative z-200 lg:flex-row lg:w-[41.25rem] lg:h-[18.75rem] md:flex-row md:w-[41.25rem] md:h-[18.75rem]">
-          <img
+          <img loading="lazy"
             src="/Images/vertical_design.png"
             alt="vertical line"
             className="hidden lg:block md:block"
           />
-          <img
+          <img loading="lazy"
             src="/Images/horizantal_design.png"
             alt="horizantal_design"
             className="block lg:hidden md:hidden"
           />
           <div className="flex w-[13.4375rem] h-[13.4375rem] relative lg:h-[18.75rem] lg:w-[45%] md:h-[18.75rem] md:w-[45%]">
-            <img
+            <img loading="lazy"
               src="/Images/vertical_design.png"
               alt="vertical line"
               className="absolute top-[-1.5625rem] left-0 h-[20rem]"
             />
-            <img
+            <img loading="lazy"
               src={testimonial_props.image}
               alt={testimonial_props.name}
               className="w-full h-full object-cover object-top bg-transparent rounded-[1.25rem]"
               style={{ boxShadow: testimonial_props.shadow }}
             />
-            <img
+            <img loading="lazy"
               src="/Images/vertical_design.png"
               alt="vertical line"
               className="absolute top-[-1.5625rem] right-0 h-[20rem]"
             />
-            <img
+            <img loading="lazy"
               src={testimonial_props.quote_image}
               alt="Quotes"
               className="absolute w-[2.5rem] h-[1.875rem] right-[-25%] bottom-0 block lg:hidden md:hidden"
             />
           </div>
-          <img
+          <img loading="lazy"
             src="/Images/horizantal_design.png"
             alt="horizantal_design"
             className="block lg:hidden md:hidden"
           />
-          <img
+          <img loading="lazy"
             src="/Images/vertical_design.png"
             alt="vertical line"
             className="hidden lg:block md:block"
@@ -83,14 +83,14 @@ export default function Casestudy_Testimonial({ testimonial_props }: { testimoni
                 {testimonial_props.profession} @ {testimonial_props.profession_at}
               </div> */}
             </div>
-            <img
+            <img loading="lazy"
               src={testimonial_props.quote_image}
               alt="Quotes"
               className="absolute md:w-[4.688rem] md:h-[3.438rem] lg:w-[5.875rem] lg:h-[4.688rem] lg:right-[-6.125rem] lg:bottom-[2.25rem] md:right-[-1.25rem] md:bottom-[2.25rem] hidden lg:block md:block"
             />
           </div>
         </div>
-        <img
+        <img loading="lazy"
           src="/Images/horizantal_design.png"
           alt="horizantal_design"
           className="hidden lg:block md:block"

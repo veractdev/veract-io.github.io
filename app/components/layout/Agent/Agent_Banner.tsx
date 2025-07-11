@@ -42,7 +42,7 @@ export default function AgentBanner() {
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium text-[0.875rem] md:text-[0.875rem] lg:text-[1rem]">
                     {AgentPageData.banner.book_demo}
-                    <img
+                    <img loading="lazy"
                       src={LandingPageData.banner.get_in_touch_arrow}
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem]"
@@ -50,7 +50,7 @@ export default function AgentBanner() {
                   </div>
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium">
                     {AgentPageData.banner.book_demo}
-                    <img
+                    <img loading="lazy"
                       src={LandingPageData.banner.get_in_touch_arrow}
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem] rotate-45"
@@ -79,7 +79,7 @@ export default function AgentBanner() {
                           shadow-[0px_1px_2px_0px_#000000] border border-t-[#8AA5FF]/70 
                           ${index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}`}
               >
-                <img src={feature.features_icon} alt={feature.features_title} />
+                <img loading="lazy" src={feature.features_icon} alt={feature.features_title} />
                 <div className="text-[1.375rem] mt-[1.5rem] tracking-[-0.02em] leading-[1.75rem] text-white font-bold">
                   {feature.features_title}
                 </div>

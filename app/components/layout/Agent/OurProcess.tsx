@@ -25,23 +25,23 @@ export default function OurProcess() {
                                 </div>
                                 <div className='p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]'>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                 </div> */}
@@ -77,23 +77,23 @@ export default function OurProcess() {
                                 </div>
                                 <div className='p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]'>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                     <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                        <img src="/shield_icon.png" alt="placeholder image" />
+                                        <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                         <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                     </div>
                                 </div>
@@ -121,23 +121,23 @@ export default function OurProcess() {
                             </div>
                             <div className='p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]'>
                                 <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                    <img src="/shield_icon.png" alt="placeholder image" />
+                                    <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                     <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                 </div>
                                 <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                    <img src="/shield_icon.png" alt="placeholder image" />
+                                    <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                     <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                 </div>
                                 <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                    <img src="/shield_icon.png" alt="placeholder image" />
+                                    <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                     <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                 </div>
                                 <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                    <img src="/shield_icon.png" alt="placeholder image" />
+                                    <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                     <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                 </div>
                                 <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                    <img src="/shield_icon.png" alt="placeholder image" />
+                                    <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                     <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                                 </div>
                             </div>
@@ -170,23 +170,23 @@ export default function OurProcess() {
                         </div>
                         <div className='p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]'>
                             <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                <img src="/shield_icon.png" alt="placeholder image" />
+                                <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                 <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                             </div>
                             <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                <img src="/shield_icon.png" alt="placeholder image" />
+                                <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                 <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                             </div>
                             <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                <img src="/shield_icon.png" alt="placeholder image" />
+                                <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                 <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                             </div>
                             <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                <img src="/shield_icon.png" alt="placeholder image" />
+                                <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                 <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                             </div>
                             <div className='rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]'>
-                                <img src="/shield_icon.png" alt="placeholder image" />
+                                <img loading="lazy" src="/shield_icon.png" alt="placeholder image" />
                                 <div className='interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]'>System Check</div>
                             </div>
                         </div>

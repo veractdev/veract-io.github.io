@@ -52,9 +52,9 @@ export default function Page() {
                 <Navbar />
                 <div className='w-full flex flex-col overflow-y-scroll bg-primary-text select-none'>
                     <div className='w-full h-[100vh] md:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative'>
-                        <img src="/Images/case-studies/case_study_banner_image.png" alt="background image" className='absolute top-0 left-0 w-full h-full' />
-                        <img src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
-                        <img src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
+                        <img loading="lazy" src="/Images/case-studies/case_study_banner_image.png" alt="background image" className='absolute top-0 left-0 w-full h-full' />
+                        <img loading="lazy" src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
+                        <img loading="lazy" src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
                         <div
                             className='w-max static md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center'
                             style={{
@@ -94,7 +94,7 @@ export default function Page() {
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeIn', delay: 0.1 * (index * 0.5) } }}
                             >
-                                <img src={item.image} alt="project image" className='w-full h-[14.75rem] rounded-[0.875rem]' />
+                                <img loading="lazy" src={item.image} alt="project image" className='w-full h-[14.75rem] rounded-[0.875rem]' />
                                 <div className='flex flex-col w-full flex-wrap pl-[1.25rem]'>
                                     <div className='uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[2em]'>{item.header}</div>
                                     <div className='uppercase text-left interFont text-[0.875rem] text-[#71717A] font-medium leading-[150%] -tracking-[0.05em]'>{item.subHeader}</div>

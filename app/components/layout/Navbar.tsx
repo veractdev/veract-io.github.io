@@ -84,7 +84,7 @@ export default function Navbar() {
                                 : "p-[0.375rem_0.438rem_0.375rem_1.25rem]"
                             } backdrop-blur-[0.563rem] transform transform-gpu transition-all duration-300 ease-in`}
                     >
-                        <img
+                        <img loading="lazy"
                             src="/Icons/veract-logo.png"
                             alt="veract-logo"
                             className={`
@@ -132,7 +132,7 @@ export default function Navbar() {
                                         className={`absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id && item.status == 'active'
                                             ? "w-[calc(100%-3.563rem)]"
                                             : "w-0"
-                                            } group-hover:w-[calc(100%-3.563rem)] ${item.status == 'active' ? 'bg-primary-blue' :''} transition-all duration-300`}
+                                            } group-hover:w-[calc(100%-3.563rem)] ${item.status == 'active' ? 'bg-primary-blue' : ''} transition-all duration-300`}
                                     />
                                 </div>
                             ))}

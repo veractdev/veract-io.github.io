@@ -5,7 +5,7 @@ import { isMobile, isTablet } from '@/lib/utils'
 
 type key_features_props = {
   title: string;
-  indication_color:string,
+  indication_color: string,
   key_features_list: {
     number: string;
     title: string;
@@ -41,10 +41,10 @@ export default function Casestudy_Key_Features({ key_features_props }: { key_fea
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: idx === 0 ? 0.15 : idx * 0.15, }}
             >
-              <div className="pr-[1.625rem] text-[1.125rem] font-medium interFont leading-[1.4em]" style={{color:key_features_props.indication_color}}>{feature.number}</div>
+              <div className="pr-[1.625rem] text-[1.125rem] font-medium interFont leading-[1.4em]" style={{ color: key_features_props.indication_color }}>{feature.number}</div>
               <div className="lg:w-[30.5rem] w-full ls:text-[2.5rem] text-[1.75rem] lg:mr-[16.875rem] lg:pr-[9rem] text-primary-text font-medium leading-[1.2em] geistFont">{feature.title}</div>
               <div className="absolute right-[18rem] top-[-7rem] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
-                <img src={feature.img} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image' />
+                <img loading="lazy" src={feature.img} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image' />
               </div>
               <div className="lg:w-[13.313rem] lg:pl-[1.25rem] text-[#282828] interFont text-[0.875rem] font-medium leading-[1.4em]">{feature.desc}</div>
             </motion.div>

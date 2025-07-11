@@ -71,7 +71,7 @@ export default function Banner() {
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
-      {/* <img
+      {/* <img loading="lazy"
       src={`${bannerBg.src}`}
       alt={`placeholder image`}
       className="absolute w-full h-full object-cover"
@@ -85,7 +85,7 @@ export default function Banner() {
       }}
     /> */}
       {/* <div className='absolute z-[10] top-0 left-0 w-[600px] h-[20px] rounded-[50%] bg-[#8AA5FF] blur-[30px] rotate-45 origin-left'></div> */}
-      <img
+      <img loading="lazy"
         src={`/Images/case-studies/case_study_banner_image.png`}
         alt={`placeholder image`}
         className="absolute w-full h-full object-cover"
@@ -233,7 +233,7 @@ export default function Banner() {
                 className="bg-primary-blue absolute inset-0 flex items-center justify-center"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img
+                <img loading="lazy"
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"
                   alt="arrow_icon"
@@ -251,7 +251,7 @@ export default function Banner() {
                 className="absolute inset-0 flex items-center justify-center bg-primary-blue"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img
+                <img loading="lazy"
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"
                   alt="arrow_icon"
@@ -354,7 +354,7 @@ export default function Banner() {
         >
           {LandingPageData.banner.banner_carousel_list.map((src, idx: number) => (
             <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
-              <img
+              <img loading="lazy"
                 src={src.img}
                 alt={`brand logo`}
                 className="w-[6.625rem] object-cover flex-shrink-0"

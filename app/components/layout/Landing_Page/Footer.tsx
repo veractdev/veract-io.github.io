@@ -105,7 +105,7 @@ export default function Footer() {
               {details.socialMediaIcons.slice(0, 2).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                    <img src={icon.image} alt="social-media icon" />
+                    <img loading="lazy" src={icon.image} alt="social-media icon" />
                   </div>
                 </a>
               ))}
@@ -114,7 +114,7 @@ export default function Footer() {
               {details.socialMediaIcons.slice(2, 4).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                    <img src={icon.image} alt="social-media icon" />
+                    <img loading="lazy" src={icon.image} alt="social-media icon" />
                   </div>
                 </a>
               ))}
@@ -217,7 +217,7 @@ export default function Footer() {
                 {details.socialMediaIcons.slice(0, 2).map((icon) => (
                   <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                     <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                      <img src={icon.image} alt="social-media icon" />
+                      <img loading="lazy" src={icon.image} alt="social-media icon" />
                     </div>
                   </a>
                 ))}
@@ -226,7 +226,7 @@ export default function Footer() {
                 {details.socialMediaIcons.slice(2, 4).map((icon) => (
                   <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                     <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                      <img src={icon.image} alt="social-media icon" />
+                      <img loading="lazy" src={icon.image} alt="social-media icon" />
                     </div>
                   </a>
                 ))}

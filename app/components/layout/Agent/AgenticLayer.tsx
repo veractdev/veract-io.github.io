@@ -25,7 +25,7 @@ export default function AgenticLayer() {
                 WebkitMask: "url(#intersectionMask)",
               }}
             >
-              <img
+              <img loading="lazy"
                 src="/Images/agent/agenticLayer.png"
                 alt="agenticLayer_distorted"
                 className="object-cover w-full h-full rounded-full"
@@ -86,31 +86,31 @@ export default function AgenticLayer() {
             </svg>
           </div>
           <div className="flex lg:top-[3.188rem] lg:left-[3.375rem] relative animate-agentic-layer-opacity">
-            <img
+            <img loading="lazy"
               src="/Images/agent/agenticLayerVeins.svg"
               alt="agenticLayer_2"
-            className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg]"
+              className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg]"
             />
           </div>
           <div className="relative">
-            <img
+            <img loading="lazy"
               src="/Images/agent/top-blur.svg"
               alt="blurry effect"
               className="absolute top-[-3.188rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
-            <img
+            <img loading="lazy"
               src="/Images/agent/bottom-blur.svg"
               alt="blurry effect"
               className="absolute md:bottom-[-5.313rem] bottom-[-6.375rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
 
             <div className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D] animate-agentic-layer-shadow"
-            style={isMobile() ? {boxShadow: '0px 0px 12px 1px #008FFF inset'} : {}}
+              style={isMobile() ? { boxShadow: '0px 0px 12px 1px #008FFF inset' } : {}}
             >
               <div className="flex flex-col lg:pl-[2.563rem] pl-[1.8rem] lg:pr-[4.25rem] pr-[2.99rem] lg:gap-[1.563rem] md:gap-[0.87rem]  gap-[1.1rem] lg:pb-[6.313rem] md:pb-[1.69rem] pb-[4.54rem]">
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
-                    <img
+                    <img loading="lazy"
                       src="/Images/agent/ai-magic.svg"
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
@@ -122,7 +122,7 @@ export default function AgenticLayer() {
                 </div>
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
-                    <img
+                    <img loading="lazy"
                       src="/Images/agent/ai-magic.svg"
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
@@ -134,7 +134,7 @@ export default function AgenticLayer() {
                 </div>
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
-                    <img
+                    <img loading="lazy"
                       src="/Images/agent/ai-magic.svg"
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
@@ -146,7 +146,7 @@ export default function AgenticLayer() {
                 </div>
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
-                    <img
+                    <img loading="lazy"
                       src="/Images/agent/ai-magic.svg"
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
@@ -158,7 +158,7 @@ export default function AgenticLayer() {
                 </div>
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
-                    <img
+                    <img loading="lazy"
                       src="/Images/agent/ai-magic.svg"
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
