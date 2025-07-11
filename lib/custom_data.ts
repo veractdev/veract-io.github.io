@@ -200,7 +200,7 @@ export const caseStudyData = {
     testimonials: {
       testimonial: "",
       name: "",
-      image: "",
+      image: "/Images/case-studies/incluway/Testimonials/quote.svg",
       quote_image: "/Images/testimonial_quotes.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
       profession: "",
@@ -370,7 +370,7 @@ export const caseStudyData = {
       testimonial:
         "",
       name: "",
-      image: "",
+      image: "/Images/case-studies/incluway/Testimonials/quote.svg",
       quote_image: "/Images/case-studies/incluway/Testimonials/quote.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(66,133,244,1)",
       profession: "",

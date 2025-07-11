@@ -44,6 +44,57 @@ export default function ShowReel() {
     setLoaded(true)
   }, [])
 
+  // useEffect(() => {
+  //   /** handle dropdown outside clicks */
+  //   const handleOutSideClick = (event: MouseEvent) => {
+  //     if (videoRef.current && !videoRef.current.contains(event.target as Node)) {
+  //       setVideo(false);
+  //     }
+  //   }
+  //   window.addEventListener('mousedown', handleOutSideClick)
+  //   return () => {
+  //     window.removeEventListener('mousedown', handleOutSideClick)
+  //   }
+  // }, [videoRef]);
+
+  // useEffect(() => {
+  //   console.log('lenis', lenis);
+  //   if (!lenis) return;
+
+  //   if (isVideo) {
+  //     lenis.stop();
+  //     document.documentElement.style.overflow = 'hidden';
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     lenis.start();
+  //     document.documentElement.style.overflow = '';
+  //     document.body.style.overflow = '';
+  //   }
+
+  //   return () => {
+  //     lenis.start();
+  //     document.documentElement.style.overflow = '';
+  //     document.body.style.overflow = '';
+  //   };
+  // }, [isVideo, lenis]);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRefMobile = useRef<HTMLVideoElement>(null);
+  const handleToggleVideo = () => {
+    if (videoRef.current || videoRefMobile.current) {
+      if (videoRef.current?.paused) {
+        videoRef.current?.play();
+      } else {
+        videoRef.current?.pause();
+      }
+      if (videoRefMobile.current?.paused) {
+        videoRefMobile.current?.play();
+      } else {
+        videoRefMobile.current?.pause();
+      }
+    }
+  };
+
   return (
     loaded && (
       <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
@@ -68,13 +119,14 @@ export default function ShowReel() {
             className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
           >
             <video
+              ref={videoRef}
               className="w-full h-full object-cover"
               autoPlay
               loop
               playsInline
               controls={true}
             >
-              <source src={LandingPageData.showReel.video} type="video/mp4" />
+              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
@@ -90,6 +142,8 @@ export default function ShowReel() {
               ease: "easeInOut",
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+            onClick={handleToggleVideo}
+          // onClick={() => setVideo(true)}
           >
             <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
               {/* Base icon */}
@@ -115,14 +169,15 @@ export default function ShowReel() {
         <div className='flex items-center justify-center'>
           <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
             <video
+              ref={videoRefMobile}
               className="w-full h-full object-cover"
               autoPlay
-              muted
+              // muted
               loop
               playsInline
-              controls={false}
+              controls={true}
             >
-              <source src={LandingPageData.showReel.video} type="video/mp4" />
+              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

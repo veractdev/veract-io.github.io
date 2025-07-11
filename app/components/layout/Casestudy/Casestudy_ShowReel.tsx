@@ -47,109 +47,116 @@ export default function Casestudy_ShowReel({
     }
   }, []);
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
 
-  return (
-    loaded && (
-      <div
-        ref={sectionRef}
-        className={`${
-          isMobileView ? "h-max" : `${isTabView ? "h-[180vh]" : "h-[300vh]"}`
-        } relative mt-[100vh] bg-primary-text flex flex-col`}
-      >
-        <div className="flex items-center justify-center w-full">
-          <img
-            loading="lazy"
-            src="/Images/case-studies/Overlay.png"
-            alt="overlay"
-            className="absolute top-[-10.938rem] h-[11rem] z-[100]"
-          />
-        </div>
-        <motion.div
-          id="showreel-text"
-          className={`static md:sticky lg:sticky z-10 ${
-            isTabView ? "top-[7rem]" : "top-0"
-          } w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
-          style={{
-            scale: springTextScale,
-          }}
-        >
-          {showreel_props.title}
-        </motion.div>
-        <div
-          className={`hidden md:flex lg:flex flex-col items-center justify-center sticky top-[0%] transform z-10 bg-transparent`}
-        >
-          <motion.div
-            style={{
-              scale: springScale,
-              transformOrigin: "center center",
-            }}
-            className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
-          >
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              playsInline
-              controls={true}
-            >
-              <source src={showreel_props.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </motion.div>
-          <motion.div
-            layout
-            onMouseOver={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            animate={{
-              gap: isHover ? "0.938rem" : "0rem",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "easeInOut",
-            }}
-            className="absolute z-[25] flex flex-col items-center justify-center group cursor-pointer"
-          >
-            <div className="w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative">
-              {/* Base icon */}
-              <img
-                loading="lazy"
-                src="/Images/LandingPage/showReel/play- default.svg"
-                alt="play icon"
-                className="w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300"
-              />
-              {/* Hover icon */}
-              <img
-                loading="lazy"
-                src="/Images/LandingPage/showReel/play- hover.svg"
-                alt="play icon"
-                className="w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRefMobile = useRef<HTMLVideoElement>(null);
+    const handleToggleVideo = () => {
+        if (videoRef.current || videoRefMobile.current) {
+            if (videoRef.current?.paused) {
+                videoRef.current?.play();
+            } else {
+                videoRef.current?.pause();
+            }
+            if (videoRefMobile.current?.paused) {
+                videoRefMobile.current?.play();
+            } else {
+                videoRefMobile.current?.pause();
+            }
+        }
+    };
 
-            <div className="syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300">
-              play showreel
+    return (
+        loaded && (
+            <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col`}>
+                <div className='flex items-center justify-center w-full'>
+                    <img loading="lazy" src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
+                </div>
+                <motion.div
+                    id='showreel-text'
+                    className={`static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
+                    style={{
+                        // scale,
+                        scale: springTextScale,
+                    }}
+                >
+                    {showreel_props.title}
+                </motion.div>
+                <div className={`hidden md:flex lg:flex flex-col items-center justify-center sticky top-[0%] transform z-10 bg-transparent`}>
+                    <motion.div
+                        style={{
+                            scale: springScale,
+                            transformOrigin: 'center center',
+                        }}
+                        className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
+                    >
+                        <video
+                            ref={videoRef}
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            // muted
+                            loop
+                            playsInline
+                            controls={true}
+                        >
+                            <source src={showreel_props.video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </motion.div>
+                    <motion.div
+                        layout
+                        onMouseOver={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                        animate={{
+                            gap: isHover ? '0.938rem' : '0rem',
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}
+                        className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+                        onClick={handleToggleVideo}
+                    // onClick={() => setVideo(true)}
+                    >
+                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
+                            {/* Base icon */}
+                            <img loading="lazy"
+                                src="/Images/LandingPage/showReel/play- default.svg"
+                                alt="play icon"
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
+                            />
+                            {/* Hover icon */}
+                            <img loading="lazy"
+                                src="/Images/LandingPage/showReel/play- hover.svg"
+                                alt="play icon"
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                            />
+                        </div>
+
+                        <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
+                            play showreel
+                        </div>
+                    </motion.div>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
+                        <video
+                            ref={videoRefMobile}
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            // muted
+                            loop
+                            playsInline
+                            controls={true}
+                        >
+                            <source src={showreel_props.video} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             </div>
-          </motion.div>
-        </div>
-        <div className="flex items-center justify-center">
-          <div className="flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls={false}
-            >
-              <source src={showreel_props.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    )
-  );
+        )
+    );
 }
