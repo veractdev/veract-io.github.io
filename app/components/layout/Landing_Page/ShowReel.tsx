@@ -2,9 +2,21 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { LandingPageData } from '@/lib/custom_data';
+// Add at the top of your file
+declare global {
+  interface Window {
+    lenis?: {
+      stop: () => void;
+      start: () => void;
+    };
+  }
+}
 
 export default function ShowReel() {
   const sectionRef = useRef(null);
+  const scrollYRef = useRef(0);
+  const videoRef = useRef<HTMLIFrameElement>(null);
+  const [isVideo, setVideo] = useState<boolean>(false);
 
   const [isMobileView, setIsMobileView] = useState(false);
   const [isTabView, setTabView] = useState(false);
@@ -47,40 +59,55 @@ export default function ShowReel() {
     setLoaded(true)
   }, [])
 
-  // useEffect(() => {
-  //   /** handle dropdown outside clicks */
-  //   const handleOutSideClick = (event: MouseEvent) => {
-  //     if (videoRef.current && !videoRef.current.contains(event.target as Node)) {
-  //       setVideo(false);
-  //     }
-  //   }
-  //   window.addEventListener('mousedown', handleOutSideClick)
-  //   return () => {
-  //     window.removeEventListener('mousedown', handleOutSideClick)
-  //   }
-  // }, [videoRef]);
-
-  // useEffect(() => {
-  //   console.log('lenis', lenis);
-  //   if (!lenis) return;
-
-  //   if (isVideo) {
-  //     lenis.stop();
-  //     document.documentElement.style.overflow = 'hidden';
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     lenis.start();
-  //     document.documentElement.style.overflow = '';
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     lenis.start();
-  //     document.documentElement.style.overflow = '';
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [isVideo, lenis]);
-
+  useEffect(() => {
+    const body = document.body;
+  
+    if (isVideo) {
+      const scrollY = window.scrollY;
+      scrollYRef.current = scrollY;
+  
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollY}px`;
+      body.style.left = '0';
+      body.style.right = '0';
+      body.style.width = '100%';
+      body.style.overflow = 'hidden';
+  
+      // Optional: Prevent scrollbar jump if there's vertical scrollbar
+      body.style.paddingRight = '0px';
+  
+      // Stop Lenis if available
+      window.lenis?.stop?.();
+    } else {
+      // Restore scroll position from ref
+      const scrollY = scrollYRef.current;
+  
+      body.style.position = '';
+      body.style.top = '';
+      body.style.left = '';
+      body.style.right = '';
+      body.style.width = '';
+      body.style.overflow = '';
+      body.style.paddingRight = '';
+  
+      window.scrollTo(0, scrollY);
+  
+      // Restart Lenis
+      window.lenis?.start?.();
+    }
+  
+    return () => {
+      body.style.position = '';
+      body.style.top = '';
+      body.style.left = '';
+      body.style.right = '';
+      body.style.width = '';
+      body.style.overflow = '';
+      body.style.paddingRight = '';
+      window.lenis?.start?.();
+    };
+  }, [isVideo]);
+  
 
   return (
     loaded && (
@@ -109,7 +136,7 @@ export default function ShowReel() {
             <video
               className="w-full h-full object-cover"
               autoPlay
-              // muted
+              muted
               loop
               playsInline
               controls={true}
@@ -122,6 +149,7 @@ export default function ShowReel() {
             layout
             onMouseOver={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
+            onClick={() => setVideo(true)}
             animate={{
               gap: isHover ? '0.938rem' : '0rem',
             }}
@@ -168,11 +196,24 @@ export default function ShowReel() {
             </video>
           </div>
         </div>
-        {/* {isVideo && (
-          <div className='fixed z-[997] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-[100vh] bg-[#000000]/20 flex items-center justify-center'>
-            <iframe ref={videoRef} src={'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw'} className='w-[80%] h-[80vh]'></iframe>
+        {isVideo && (
+          <div
+            className="fixed z-[997] inset-0 bg-[#000000]/60 flex items-center justify-center"
+            onClick={() =>{ setVideo(false)}} // ⬅️ close on outside click
+          >
+            <div
+              className="w-[80%] h-[80vh] bg-black"
+              onClick={(e) => e.stopPropagation()} // ⬅️ prevent close when clicking inside
+            >
+              <iframe
+                ref={videoRef}
+                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
+                className="w-full h-full"
+              />
+            </div>
           </div>
-        )} */}
+        )}
+
       </div>
     )
   );
