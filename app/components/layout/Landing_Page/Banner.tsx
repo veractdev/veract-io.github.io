@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import Marquee from 'react-fast-marquee';
 import { LandingPageData } from '@/lib/custom_data';
+import { isMobile, isTablet } from '@/lib/utils';
 
 export default function Banner() {
   const words = ["mobile app"];
@@ -22,14 +23,11 @@ export default function Banner() {
 
   // Typing Effect
   useEffect(() => {
-    console.log(wordIndex);
     const currentWord = LandingPageData.banner.typwriting_animation_list[wordIndex];
-    console.log(currentWord);
     let timeout: ReturnType<typeof setTimeout>;
     if (typing) {
       if (charIndex < currentWord.word.length) {
         timeout = setTimeout(() => {
-          console.log(currentWord.word[charIndex]);
           setDisplayText((prev) => prev + currentWord.word[charIndex]);
           setCharIndex((prev) => prev + 1);
         }, 120);
@@ -134,13 +132,13 @@ export default function Banner() {
             <motion.span
               className=""
               initial={{
-                clipPath: "inset(0 60% 0 0)",
+                // clipPath: "inset(0 60% 0 0)",
                 opacity: 0,
                 filter: "blur(5px)",
                 y: 10,
               }}
               animate={{
-                clipPath: "inset(0 0% 0 0)",
+                // clipPath: "inset(0 0% 0 0)",
                 opacity: 1,
                 filter: "blur(0px)",
                 y: 0,
@@ -148,16 +146,16 @@ export default function Banner() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
 
             >
-              <span className="inline-flex flex items-baseline whitespace-nowrap">
+              <span className="inline-flex flex items-baseline md:w-[40rem]">
                 <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}&nbsp;</span>
                 <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}&nbsp;</span>
-
-                <span className={`text-primary-blue text-left overflow-hidden`}
+                <span className={`text-primary-blue text-center md:text-left lg:absolute lg:left-[12rem]`}
                   style={{
-                    width: `${words[wordIndex].length}ch`,
+                    width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}
                 >
                   {displayText}
+                  {/* ai powered solution */}
                   <span className="animate-pulse">|</span>
                 </span>
               </span>

@@ -389,18 +389,18 @@ export const LandingPageData = {
         id: 1,
         word: "mobile app", //mobile app
       },
-      // {
-      //   id: 2,
-      //   word: "web solution", //web app
-      // },
-      // {
-      //   id: 3,
-      //   word: "ai powered solution", //AI
-      // },
-      // {
-      //   id: 4,
-      //   word: "iot solution", //IoT
-      // }
+      {
+        id: 2,
+        word: "web solution", //web app
+      },
+      {
+        id: 3,
+        word: "ai powered solution", //AI
+      },
+      {
+        id: 4,
+        word: "iot solution", //IoT
+      }
     ],
     description_primary:
       "Delivering scalable technology that powers modern digital experiences, AI",
