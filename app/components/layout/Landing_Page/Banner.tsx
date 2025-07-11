@@ -146,10 +146,12 @@ export default function Banner() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
 
             >
-              <span className="inline-flex flex items-baseline md:w-[40rem]">
-                <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}&nbsp;</span>
-                <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}&nbsp;</span>
-                <span className={`text-primary-blue text-center md:text-left lg:absolute lg:left-[12rem]`}
+              <span className="inline-flex md:flex md:flex-col lg:inline-flex md:items-center lg:items-baseline items-baseline md:w-[40rem]">
+                <div className=''>
+                  <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}&nbsp;</span>
+                  <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}&nbsp;</span>
+                </div>
+                <span className={`text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
                   style={{
                     width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}
@@ -262,7 +264,7 @@ export default function Banner() {
             <div
               onMouseEnter={() => setHoveredServices(true)}
               onMouseLeave={() => setHoveredServices(false)}
-              className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} lg:bg-[#0D0D0D] md:bg-[#050505] bg-[#050505] relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
+              className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} lg:bg-[#0D0D0D] md:bg-[#050505]/80 bg-[#050505]/80 relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
               <motion.div
