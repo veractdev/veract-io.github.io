@@ -228,7 +228,6 @@ export default function Advantages() {
               {LandingPageData.advantages.featuredWorks_list.slice(0, 2).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
-                    {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
@@ -242,7 +241,6 @@ export default function Advantages() {
               {LandingPageData.advantages.featuredWorks_list.slice(2, 4).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
-                    {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>

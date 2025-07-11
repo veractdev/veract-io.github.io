@@ -107,7 +107,6 @@ export default function Navbar() {
                             {navItems.map((item) => (
                                 <div
                                     key={item.id}
-                                    // first:ml-[210px]
                                     className={`${isHamburgerMenu
                                         ? ""
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"

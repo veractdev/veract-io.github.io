@@ -14,7 +14,6 @@ export default function ShowReel() {
     offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
   });
 
-  // const rawScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 3]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
   const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
@@ -29,8 +28,6 @@ export default function ShowReel() {
   });
 
   const [isHover, setHover] = useState<boolean>(false);
-  // const [isVideo, setVideo] = useState<boolean>(false);
-  // const videoRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (window) {
@@ -47,41 +44,6 @@ export default function ShowReel() {
     setLoaded(true)
   }, [])
 
-  // useEffect(() => {
-  //   /** handle dropdown outside clicks */
-  //   const handleOutSideClick = (event: MouseEvent) => {
-  //     if (videoRef.current && !videoRef.current.contains(event.target as Node)) {
-  //       setVideo(false);
-  //     }
-  //   }
-  //   window.addEventListener('mousedown', handleOutSideClick)
-  //   return () => {
-  //     window.removeEventListener('mousedown', handleOutSideClick)
-  //   }
-  // }, [videoRef]);
-
-  // useEffect(() => {
-  //   console.log('lenis', lenis);
-  //   if (!lenis) return;
-
-  //   if (isVideo) {
-  //     lenis.stop();
-  //     document.documentElement.style.overflow = 'hidden';
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     lenis.start();
-  //     document.documentElement.style.overflow = '';
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     lenis.start();
-  //     document.documentElement.style.overflow = '';
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [isVideo, lenis]);
-
-
   return (
     loaded && (
       <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
@@ -92,7 +54,6 @@ export default function ShowReel() {
           id='showreel-text'
           className={`uppercase static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
           style={{
-            // scale,
             scale: springTextScale,
           }}
         >
@@ -109,7 +70,6 @@ export default function ShowReel() {
             <video
               className="w-full h-full object-cover"
               autoPlay
-              // muted
               loop
               playsInline
               controls={true}
@@ -130,7 +90,6 @@ export default function ShowReel() {
               ease: "easeInOut",
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
-          // onClick={() => setVideo(true)}
           >
             <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
               {/* Base icon */}
@@ -168,11 +127,6 @@ export default function ShowReel() {
             </video>
           </div>
         </div>
-        {/* {isVideo && (
-          <div className='fixed z-[997] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-[100vh] bg-[#000000]/20 flex items-center justify-center'>
-            <iframe ref={videoRef} src={'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw'} className='w-[80%] h-[80vh]'></iframe>
-          </div>
-        )} */}
       </div>
     )
   );
