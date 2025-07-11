@@ -76,7 +76,7 @@ export default function Testimonials() {
                     animate={ !isMobile() && !isTablet() ? {width: "20.125rem"} : isTablet() ? {height: "19.938rem"} : {height: "27.5rem"} }
                     transition={  { duration: 0.7, ease: "easeInOut" }}
                     style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                    className="md:h-[19.938rem] h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
+                    className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {/* Full Card Content */}
                     <motion.div
