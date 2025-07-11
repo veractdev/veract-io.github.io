@@ -160,7 +160,7 @@ export default function Testimonials() {
                       <motion.div
                         key={index}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
+                        style={{ }}
                         className="h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                       >
                         <div
