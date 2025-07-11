@@ -78,12 +78,12 @@ export default function MultiAgent() {
             <img
               src="/Images/Agent/multi-agent-layers.svg"
               alt="MultiAgent"
-              className="absolute z-[1000]"
+              className="absolute z-[100]"
             />
             {agentsList.map((agent: Agent) => (
               <div
                 key={agent.id}
-                className={`absolute ${agent.position} lg:drop-shadow-[0px_0px_15.7px_#4285F4] drop-shadow-[0px_0px_4.89px_#4285F4] `}
+                className={`absolute ${agent.position} lg:drop-shadow-[0px_0px_15.7px_#4285F4] drop-shadow-[0px_0px_4.89px_#4285F4] z-[200]`}
               >
                 <AgentRobot agent={agent} />
               </div>
