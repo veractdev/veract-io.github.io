@@ -1,5 +1,6 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
+import { getCaseStudyState } from '@/lib/globalState';
 import { isMobile, isTablet } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
@@ -12,6 +13,8 @@ export default function Advantages() {
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
   const [isHovered, setIsHovered] = useState(false);
+
+  const { caseStudyState, setCaseStudyState } = getCaseStudyState();
 
   useEffect(() => {
     setLoaded(true);
@@ -108,6 +111,10 @@ export default function Advantages() {
       }
     }
   };
+
+  useEffect(() => {
+    console.log('caseStudyState: ', caseStudyState);
+  }, [caseStudyState])
 
   return (
     loaded && (
@@ -227,7 +234,15 @@ export default function Advantages() {
             <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
               {LandingPageData.advantages.featuredWorks_list.slice(0, 2).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
-                  <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
+                  <div
+                    onClick={() => {
+                      if (item.status === 'active') {
+                        router.push(`/case-studies/`);
+                        setCaseStudyState(item.route);
+                      }
+                    }}
+                    className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                  >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
@@ -241,7 +256,15 @@ export default function Advantages() {
             <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
               {LandingPageData.advantages.featuredWorks_list.slice(2, 4).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
-                  <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
+                  <div
+                    onClick={() => {
+                      if (item.status === 'active') {
+                        router.push(`/case-studies/`);
+                        setCaseStudyState(item.route);
+                      }
+                    }}
+                    className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                  >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
-import { getNavbarState } from '@/lib/globalState';
+import { getCaseStudyState, getNavbarState } from '@/lib/globalState';
 interface CaseStudyCard {
     name: string;
     routeTo: string;
@@ -16,11 +16,12 @@ interface CaseStudyCard {
 export default function Page() {
 
     const router = useRouter();
-    const [activeTile, setActiveTile] = useState<string>('');
+    // const [activeTile, setActiveTile] = useState<string>('');
     const [caseStudyCards, setCaseStudyCards] = useState<CaseStudyCard[]>([]);
     const [translateY, setTranslateY] = useState<number>(0);
 
     const { setNavbarState } = getNavbarState();
+    const { caseStudyState, setCaseStudyState } = getCaseStudyState();
 
     // Initialize with all cards when component mounts
     useEffect(() => {
@@ -40,11 +41,16 @@ export default function Page() {
     }, []);
 
     const handleTileClick = (item: { name: string }) => {
-        setActiveTile(item.name);
+        console.log('item: ', item.name);
+        setCaseStudyState(item.name);
         const name = item.name.split(' ').join('').toLowerCase();
         const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
         setCaseStudyCards(filteredCardsArray);
     }
+
+    useEffect(() => {
+        console.log('caseStudyState: ', caseStudyState);
+    })
 
     return (
         <LenisProvider>
@@ -74,7 +80,7 @@ export default function Page() {
                         {caseStudiesHomePageData.caseStudiesTitleList.map((item) => (
                             <div
                                 key={item.id}
-                                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name ? 'border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]' : 'border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]'} `}
+                                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${caseStudyState === item.name ? 'border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]' : 'border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]'} `}
                                 onClick={() => {
                                     handleTileClick(item);
                                 }}
