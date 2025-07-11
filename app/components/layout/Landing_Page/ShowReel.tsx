@@ -81,6 +81,22 @@ export default function ShowReel() {
   //   };
   // }, [isVideo, lenis]);
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRefMobile = useRef<HTMLVideoElement>(null);
+  const handleToggleVideo = () => {
+    if (videoRef.current || videoRefMobile.current) {
+      if (videoRef.current?.paused) {
+        videoRef.current?.play();
+      } else {
+        videoRef.current?.pause();
+      }
+      if (videoRefMobile.current?.paused) {
+        videoRefMobile.current?.play();
+      } else {
+        videoRefMobile.current?.pause();
+      }
+    }
+  };
 
   return (
     loaded && (
@@ -107,6 +123,7 @@ export default function ShowReel() {
             className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
           >
             <video
+              ref={videoRef}
               className="w-full h-full object-cover"
               autoPlay
               // muted
@@ -114,7 +131,7 @@ export default function ShowReel() {
               playsInline
               controls={true}
             >
-              <source src={LandingPageData.showReel.video} type="video/mp4" />
+              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
@@ -130,6 +147,7 @@ export default function ShowReel() {
               ease: "easeInOut",
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+            onClick={handleToggleVideo}
           // onClick={() => setVideo(true)}
           >
             <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
@@ -156,14 +174,15 @@ export default function ShowReel() {
         <div className='flex items-center justify-center'>
           <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
             <video
+              ref={videoRefMobile}
               className="w-full h-full object-cover"
               autoPlay
-              muted
+              // muted
               loop
               playsInline
-              controls={false}
+              controls={true}
             >
-              <source src={LandingPageData.showReel.video} type="video/mp4" />
+              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
