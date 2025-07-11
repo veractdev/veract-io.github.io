@@ -98,18 +98,18 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                         className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
                     // onClick={() => setVideo(true)}
                     >
-                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-[#FFFFFF]/16 flex items-center justify-center relative'>
+                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
                             {/* Base icon */}
                             <img
                                 src="/Images/LandingPage/showReel/play- default.svg"
                                 alt="play icon"
-                                className='absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
                             />
                             {/* Hover icon */}
                             <img
                                 src="/Images/LandingPage/showReel/play- hover.svg"
                                 alt="play icon"
-                                className='absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
                             />
                         </div>
 

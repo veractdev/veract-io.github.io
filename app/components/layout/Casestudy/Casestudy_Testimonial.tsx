@@ -86,7 +86,7 @@ export default function Casestudy_Testimonial({ testimonial_props }: { testimoni
             <img
               src={testimonial_props.quote_image}
               alt="Quotes"
-              className="absolute lg:right-[-6.125rem] lg:bottom-[2.25rem] md:right-[-1.25rem] md:bottom-[2.25rem] hidden lg:block md:block"
+              className="absolute md:w-[4.688rem] md:h-[3.438rem] lg:w-[5.875rem] lg:h-[4.688rem] lg:right-[-6.125rem] lg:bottom-[2.25rem] md:right-[-1.25rem] md:bottom-[2.25rem] hidden lg:block md:block"
             />
           </div>
         </div>

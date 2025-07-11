@@ -238,7 +238,7 @@ export const caseStudyData = {
     },
     challenges: {
       title: "Challenges & Goals",
-      indication_icon:"",
+      indication_icon:"/Images/case-studies/incluway/Challenges/icon.svg",
       video:
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
       // "",
@@ -371,7 +371,7 @@ export const caseStudyData = {
         "",
       name: "",
       image: "",
-      quote_image: "/Images/testimonial_quotes.svg",
+      quote_image: "/Images/case-studies/incluway/Testimonials/quote.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(66,133,244,1)",
       profession: "",
       profession_at: "",
