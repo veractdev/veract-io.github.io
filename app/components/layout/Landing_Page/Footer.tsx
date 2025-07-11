@@ -105,7 +105,7 @@ export default function Footer() {
               {details.socialMediaIcons.slice(0, 2).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                    <img src={icon.image} alt="social-media icon" />
+                    <img loading="lazy" src={icon.image} alt="social-media icon" />
                   </div>
                 </a>
               ))}
@@ -114,13 +114,13 @@ export default function Footer() {
               {details.socialMediaIcons.slice(2, 4).map((icon) => (
                 <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                   <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                    <img src={icon.image} alt="social-media icon" />
+                    <img loading="lazy" src={icon.image} alt="social-media icon" />
                   </div>
                 </a>
               ))}
             </div>
           </div>
-          <div className='absolute top-[5.688rem] right-0 w-[55%] flex flex-row items-center justify-center gap-[5rem] z-20'>
+          <div className='absolute top-[5.688rem] right-0 w-[55%] flex flex-row items-start justify-center gap-[5rem] z-20'>
             <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
@@ -217,7 +217,7 @@ export default function Footer() {
                 {details.socialMediaIcons.slice(0, 2).map((icon) => (
                   <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                     <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                      <img src={icon.image} alt="social-media icon" />
+                      <img loading="lazy" src={icon.image} alt="social-media icon" />
                     </div>
                   </a>
                 ))}
@@ -226,7 +226,7 @@ export default function Footer() {
                 {details.socialMediaIcons.slice(2, 4).map((icon) => (
                   <a key={icon.id} href={icon.link} target='_blank' rel='noopener noreferrer'>
                     <div key={icon.id} className='w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer'>
-                      <img src={icon.image} alt="social-media icon" />
+                      <img loading="lazy" src={icon.image} alt="social-media icon" />
                     </div>
                   </a>
                 ))}

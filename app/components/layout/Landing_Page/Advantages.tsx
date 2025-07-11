@@ -228,8 +228,7 @@ export default function Advantages() {
               {LandingPageData.advantages.featuredWorks_list.slice(0, 2).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
-                    {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
+                    <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
@@ -242,8 +241,7 @@ export default function Advantages() {
               {LandingPageData.advantages.featuredWorks_list.slice(2, 4).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div className='w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group'>
-                    {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
+                    <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
@@ -270,7 +268,7 @@ export default function Advantages() {
             >
               More Works
             </div>
-            <img src="/Icons/arrow-right.png" alt="arrow-right" className={`absolute ${isHovered ? 'left-[calc(100%-2rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} />
+            <img loading="lazy" src="/Icons/arrow-right.png" alt="arrow-right" className={`absolute ${isHovered ? 'left-[calc(100%-2rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} />
           </div>
         </div>
       </div >

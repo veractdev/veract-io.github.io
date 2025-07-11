@@ -45,7 +45,7 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
         style={{ transformStyle: 'preserve-3d' }}
       >
         {/* background image */}
-        <img
+        <img loading="lazy"
           src={`${banner_props.image}`}
           alt={`placeholder image`}
           className="absolute w-full h-full object-cover"
@@ -76,7 +76,7 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
           >
             {banner_props.description}
           </div>
-          
+
         </div>
       </div>
     )

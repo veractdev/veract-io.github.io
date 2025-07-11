@@ -37,7 +37,6 @@
 html,
 body {
   height: 100%;
-  /* overflow: hidden; */
 }
 
 .syneFont {
@@ -272,7 +271,6 @@ body {
 .animate {
   height: 2px;
   background-color: #FFFFFF;
-  /* transition: all 0.3s ease-in-out; */
   animation: animate_keyframe 1.5s ease forwards;
 }
 

@@ -12,7 +12,7 @@ export default function We_Work_With() {
 
   return (
     loaded && (
-      <div className="w-full h-[100vh] bg-[#0D0D0D] text-white flex flex-col items-center justify-center px-[1rem] pt-[6.25rem] pb-[10.687rem] relative z-20">
+      <div className="w-full h-max bg-[#0D0D0D] text-white flex flex-col items-center  px-[1rem] pt-[11.25rem] pb-[10.625rem] lg:pt-[6.25rem] lg:pb-[10.687rem] md:pb-[5.125rem] relative z-20">
         <div className="text-center mb-[2.5rem]">
           <div className="uppercase syneFont text-[2.25rem] lg:text-[4.5rem] md:text-[4.5rem] tracking-[0em] leading-[1.2em] font-bold text-[#fff]">
             {LandingPageData.we_work_with.title}
@@ -39,7 +39,7 @@ export default function We_Work_With() {
                   marginLeft: index !== 0 ? "0.625rem" : "-0.3125rem",
                 }}
               >
-                <img src={brand.image} className="absolute top-0 left-0 z-10 w-[18.75rem] h-[12.5rem]" />
+                <img loading="lazy" src={brand.image} className="absolute top-0 left-0 z-10 w-[18.75rem] h-[12.5rem]" />
                 <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-20 text-center">{brand.name}</div>
               </div>
             ))}

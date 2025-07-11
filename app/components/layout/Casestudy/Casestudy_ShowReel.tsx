@@ -1,58 +1,78 @@
-'use client';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 type showreel_props = {
-    title: string;
-    video: string;
-}
+  title: string;
+  video: string;
+};
 
-export default function Casestudy_ShowReel({ showreel_props }: { showreel_props: showreel_props }) {
-    const sectionRef = useRef(null);
-    const [isMobileView, setIsMobileView] = useState(false);
-    const [isTabView, setTabView] = useState(false);
-    const [loaded, setLoaded] = useState(false);
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
-    });
+export default function Casestudy_ShowReel({
+  showreel_props,
+}: {
+  showreel_props: showreel_props;
+}) {
+  const sectionRef = useRef(null);
+  const [isMobileView, setIsMobileView] = useState(false);
+  const [isTabView, setTabView] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
+  });
 
-    // const rawScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 3]);
-    const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
-    const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
+  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
-    const [isHover, setHover] = useState<boolean>(false);
+  const [isHover, setHover] = useState<boolean>(false);
 
-    const springScale = useSpring(scale, {
-        stiffness: 100,
-        damping: 20,
-    });
+  const springScale = useSpring(scale, {
+    stiffness: 100,
+    damping: 20,
+  });
 
-    const springTextScale = useSpring(textScale, {
-        stiffness: 500,
-        damping: 50,
-    });
+  const springTextScale = useSpring(textScale, {
+    stiffness: 500,
+    damping: 50,
+  });
 
-    useEffect(() => {
-        if (window) {
-            if (window.innerWidth < 1024) {
-                setTabView(true);
-            }
-            if (window.innerWidth < 768) {
-                setIsMobileView(true);
-            }
-        }
-    }, [])
+  useEffect(() => {
+    if (window) {
+      if (window.innerWidth < 1024) {
+        setTabView(true);
+      }
+      if (window.innerWidth < 768) {
+        setIsMobileView(true);
+      }
+    }
+  }, []);
 
     useEffect(() => {
         setLoaded(true)
     }, [])
 
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRefMobile = useRef<HTMLVideoElement>(null);
+    const handleToggleVideo = () => {
+        if (videoRef.current || videoRefMobile.current) {
+            if (videoRef.current?.paused) {
+                videoRef.current?.play();
+            } else {
+                videoRef.current?.pause();
+            }
+            if (videoRefMobile.current?.paused) {
+                videoRefMobile.current?.play();
+            } else {
+                videoRefMobile.current?.pause();
+            }
+        }
+    };
+
     return (
         loaded && (
             <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col`}>
                 <div className='flex items-center justify-center w-full'>
-                    <img src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
+                    <img loading="lazy" src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
                 </div>
                 <motion.div
                     id='showreel-text'
@@ -73,6 +93,7 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                         className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
                     >
                         <video
+                            ref={videoRef}
                             className="w-full h-full object-cover"
                             autoPlay
                             // muted
@@ -96,17 +117,18 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                             ease: "easeInOut",
                         }}
                         className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+                        onClick={handleToggleVideo}
                     // onClick={() => setVideo(true)}
                     >
                         <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
                             {/* Base icon */}
-                            <img
+                            <img loading="lazy"
                                 src="/Images/LandingPage/showReel/play- default.svg"
                                 alt="play icon"
                                 className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
                             />
                             {/* Hover icon */}
-                            <img
+                            <img loading="lazy"
                                 src="/Images/LandingPage/showReel/play- hover.svg"
                                 alt="play icon"
                                 className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
@@ -121,12 +143,13 @@ export default function Casestudy_ShowReel({ showreel_props }: { showreel_props:
                 <div className='flex items-center justify-center'>
                     <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
                         <video
+                            ref={videoRefMobile}
                             className="w-full h-full object-cover"
                             autoPlay
-                            muted
+                            // muted
                             loop
                             playsInline
-                            controls={false}
+                            controls={true}
                         >
                             <source src={showreel_props.video} type="video/mp4" />
                             Your browser does not support the video tag.

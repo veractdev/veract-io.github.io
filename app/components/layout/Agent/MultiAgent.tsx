@@ -75,7 +75,7 @@ export default function MultiAgent() {
         />
         <div>
           <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px] right-[-1rem]">
-            <img
+            <img loading="lazy"
               src="/Images/Agent/multi-agent-layers.svg"
               alt="MultiAgent"
               className="absolute z-[100]"

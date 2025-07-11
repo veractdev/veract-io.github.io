@@ -71,21 +71,7 @@ export default function Banner() {
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
-      {/* <img
-      src={`${bannerBg.src}`}
-      alt={`placeholder image`}
-      className="absolute w-full h-full object-cover"
-      style={{
-        transform: `translateY(-${translateY}px) rotateX(-${rotateX}deg) scale(${scale})`,
-        transformOrigin: 'center center',
-        transition: 'transform 0.1s ease',
-        position: 'absolute',
-        top: '-12.688rem ',
-        left: '-39.688rem'
-      }}
-    /> */}
-      {/* <div className='absolute z-[10] top-0 left-0 w-[600px] h-[20px] rounded-[50%] bg-[#8AA5FF] blur-[30px] rotate-45 origin-left'></div> */}
-      <img
+      <img loading="lazy"
         src={`/Images/case-studies/case_study_banner_image.png`}
         alt={`placeholder image`}
         className="absolute w-full h-full object-cover"
@@ -105,7 +91,6 @@ export default function Banner() {
         }}
       >
         {/* Main content */}
-        {/* pt-[12.563rem] */}
         <div className='z-10 text-center px-[1rem]  pt-0 md:pt-[23rem] lg:pt-[9.575rem] '>
           <div className=" text-[2.5rem] lg:text-[3rem] md:text-[3rem]  font-semibold lg:w-[55.938rem] syneFont mx-auto pb-[3.5rem] md:pb-[0.625rem] lg:pb-[0.625rem] leading-[1.1em] tracking-[0rem] lg:tracking-[-0.179rem] md:tracking-[-0.173rem]">
             <motion.span
@@ -132,13 +117,11 @@ export default function Banner() {
             <motion.span
               className=""
               initial={{
-                // clipPath: "inset(0 60% 0 0)",
                 opacity: 0,
                 filter: "blur(5px)",
                 y: 10,
               }}
               animate={{
-                // clipPath: "inset(0 0% 0 0)",
                 opacity: 1,
                 filter: "blur(0px)",
                 y: 0,
@@ -217,7 +200,6 @@ export default function Banner() {
             className=' flex items-center justify-center gap-[0.938rem]  pb-[1.75rem] lg:pb-[2.688rem] md:pb-[1.75rem] '>
 
             <div
-              // onClick={() =>}
               onMouseEnter={() => setHoveredTouch(true)}
               onMouseLeave={() => setHoveredTouch(false)}
               className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
@@ -233,7 +215,7 @@ export default function Banner() {
                 className="bg-primary-blue absolute inset-0 flex items-center justify-center"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img
+                <img loading="lazy"
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"
                   alt="arrow_icon"
@@ -251,7 +233,7 @@ export default function Banner() {
                 className="absolute inset-0 flex items-center justify-center bg-primary-blue"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img
+                <img loading="lazy"
 
                   src="/Images/LandingPage/Banner/arrowIconUp.png"
                   alt="arrow_icon"
@@ -313,15 +295,6 @@ export default function Banner() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
               />
-
-              {/* <motion.img
-                src={LandingPageData.banner.banner_image_list[2].image}
-                alt="logo image"
-                className="w-[3.938rem] object-cover"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.8, ease: "easeOut" }}
-              /> */}
             </div>
 
             <motion.img
@@ -354,7 +327,7 @@ export default function Banner() {
         >
           {LandingPageData.banner.banner_carousel_list.map((src, idx: number) => (
             <div key={idx} className="mr-[4.125rem]"> {/* 2rem gap */}
-              <img
+              <img loading="lazy"
                 src={src.img}
                 alt={`brand logo`}
                 className="w-[6.625rem] object-cover flex-shrink-0"

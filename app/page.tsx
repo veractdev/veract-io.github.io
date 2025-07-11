@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <LenisProvider>
       {loader && (
-        <div className='w-full flex flex-col items-center justify-center bg-black'>
+        <div className='w-full flex flex-col items-center justify-center bg-primaty-text'>
           <Navbar />
           <Banner />
           <ShowReel />
