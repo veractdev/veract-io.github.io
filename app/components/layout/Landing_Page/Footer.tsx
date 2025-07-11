@@ -120,7 +120,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className='absolute top-[5.688rem] right-0 w-[55%] flex flex-row items-center justify-center gap-[5rem] z-20'>
+          <div className='absolute top-[5.688rem] right-0 w-[55%] flex flex-row items-start justify-center gap-[5rem] z-20'>
             <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>

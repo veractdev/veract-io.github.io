@@ -27,7 +27,7 @@ export default function Testimonials() {
   return (
     loader && (
       <div className="w-full h-max bg-[#0D0D0D] text-white flex items-center justify-center relative z-20">
-        <div className="flex flex-col lg:flex-row w-[75rem] gap-[3.125rem] lg:gap-[2.75rem] h-full px-[1.5rem] lg:px-[6.25rem] py-[6.125rem] items-center justify-between">
+        <div className="flex flex-col lg:flex-row w-[75rem] gap-[3.125rem] lg:gap-[2.75rem] h-full px-[1.5rem] lg:px-[6.25rem] py-[0] lg:py-[12.813rem_6.125rem] md:py-[9.938rem_6.25rem] items-center justify-between">
           <div className="w-full flex flex-col lg:flex-row items-center justify-center relative">
             <img
               className="absolute top-[-3.4rem] left-1/2 transform -translate-x-1/2 lg:left-[-3rem] lg:-translate-x-0 w-[6rem] lg:w-[7.438rem] h-[6rem] lg:h-[6.938rem] object-contain z-0"
