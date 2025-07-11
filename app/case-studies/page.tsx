@@ -49,8 +49,12 @@ export default function Page() {
     }
 
     useEffect(() => {
-        console.log('caseStudyState: ', caseStudyState);
-    })
+        if (caseStudyState) {
+            let item = caseStudyState.split(' ').join('').toLowerCase();
+            const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
+            setCaseStudyCards(filteredCardsArray);
+        }
+    }, [])
 
     return (
         <LenisProvider>
