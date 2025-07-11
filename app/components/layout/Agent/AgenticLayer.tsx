@@ -89,7 +89,7 @@ export default function AgenticLayer() {
             <img loading="lazy"
               src="/Images/agent/agenticLayerVeins.svg"
               alt="agenticLayer_2"
-              className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg]"
+            className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg] scale-130 md:scale-170 lg:scale-190 "
             />
           </div>
           <div className="relative">

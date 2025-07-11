@@ -16,6 +16,9 @@ export default function Casestudy_ShowReel({
   const [isMobileView, setIsMobileView] = useState(false);
   const [isTabView, setTabView] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const videoRef = useRef<HTMLIFrameElement>(null);
+  const [isVideo, setVideo] = useState<boolean>(false);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
@@ -51,23 +54,6 @@ export default function Casestudy_ShowReel({
         setLoaded(true)
     }, [])
 
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const videoRefMobile = useRef<HTMLVideoElement>(null);
-    const handleToggleVideo = () => {
-        if (videoRef.current || videoRefMobile.current) {
-            if (videoRef.current?.paused) {
-                videoRef.current?.play();
-            } else {
-                videoRef.current?.pause();
-            }
-            if (videoRefMobile.current?.paused) {
-                videoRefMobile.current?.play();
-            } else {
-                videoRefMobile.current?.pause();
-            }
-        }
-    };
-
     return (
         loaded && (
             <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col`}>
@@ -93,10 +79,9 @@ export default function Casestudy_ShowReel({
                         className={`bg-[#FFFFFF] rounded-xl w-screen h-screen relative z-11 overflow-hidden`}
                     >
                         <video
-                            ref={videoRef}
                             className="w-full h-full object-cover"
                             autoPlay
-                            // muted
+                            muted
                             loop
                             playsInline
                             controls={true}
@@ -117,8 +102,7 @@ export default function Casestudy_ShowReel({
                             ease: "easeInOut",
                         }}
                         className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
-                        onClick={handleToggleVideo}
-                    // onClick={() => setVideo(true)}
+                        onClick={() => setVideo(true)}
                     >
                         <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
                             {/* Base icon */}
@@ -143,19 +127,68 @@ export default function Casestudy_ShowReel({
                 <div className='flex items-center justify-center'>
                     <div className='flex md:hidden lg:hidden items-center justify-center w-[calc(100%-2.5rem)] h-[60vh] bg-white rounded-xl my-[3.938rem_5.563rem] overflow-hidden'>
                         <video
-                            ref={videoRefMobile}
                             className="w-full h-full object-cover"
                             autoPlay
-                            // muted
+                            muted
                             loop
                             playsInline
-                            controls={true}
+                            controls={false}
                         >
                             <source src={showreel_props.video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                        <motion.div
+                        layout
+                        onMouseOver={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                        animate={{
+                            gap: isHover ? '0.938rem' : '0rem',
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeInOut",
+                        }}
+                        className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+                        onClick={() => setVideo(true)}
+                    >
+                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
+                            {/* Base icon */}
+                            <img loading="lazy"
+                                src="/Images/LandingPage/showReel/play- default.svg"
+                                alt="play icon"
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
+                            />
+                            {/* Hover icon */}
+                            <img loading="lazy"
+                                src="/Images/LandingPage/showReel/play- hover.svg"
+                                alt="play icon"
+                                className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                            />
+                        </div>
+
+                        <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
+                            play showreel
+                        </div>
+                    </motion.div>
                     </div>
                 </div>
+                {isVideo && (
+          <div
+            className="fixed z-[997] inset-0 bg-[#000000]/60 flex items-center justify-center"
+            onClick={() =>{ setVideo(false)}} // ⬅️ close on outside click
+          >
+            <div
+              className="w-[80%] h-[80vh] bg-black"
+              onClick={(e) => e.stopPropagation()} // ⬅️ prevent close when clicking inside
+            >
+              <iframe
+                ref={videoRef}
+                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        )}
             </div>
         )
     );
