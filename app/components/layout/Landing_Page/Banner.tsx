@@ -220,7 +220,7 @@ export default function Banner() {
               // onClick={() =>}
               onMouseEnter={() => setHoveredTouch(true)}
               onMouseLeave={() => setHoveredTouch(false)}
-              className="bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
+              className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
               <motion.div
@@ -264,7 +264,7 @@ export default function Banner() {
             <div
               onMouseEnter={() => setHoveredServices(true)}
               onMouseLeave={() => setHoveredServices(false)}
-              className="lg:bg-[#0D0D0D] md:bg-[#050505] bg-[#050505] relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full cursor-pointer flex items-center justify-center interFont text-[0.938rem]"
+              className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} lg:bg-[#0D0D0D] md:bg-[#050505] bg-[#050505] relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
               <motion.div
