@@ -1,48 +1,51 @@
-'use client';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 type showreel_props = {
-    title: string;
-    video: string;
-}
+  title: string;
+  video: string;
+};
 
-export default function Casestudy_ShowReel({ showreel_props }: { showreel_props: showreel_props }) {
-    const sectionRef = useRef(null);
-    const [isMobileView, setIsMobileView] = useState(false);
-    const [isTabView, setTabView] = useState(false);
-    const [loaded, setLoaded] = useState(false);
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
-    });
+export default function Casestudy_ShowReel({
+  showreel_props,
+}: {
+  showreel_props: showreel_props;
+}) {
+  const sectionRef = useRef(null);
+  const [isMobileView, setIsMobileView] = useState(false);
+  const [isTabView, setTabView] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
+  });
 
-    // const rawScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 3]);
-    const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
-    const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
+  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
-    const [isHover, setHover] = useState<boolean>(false);
+  const [isHover, setHover] = useState<boolean>(false);
 
-    const springScale = useSpring(scale, {
-        stiffness: 100,
-        damping: 20,
-    });
+  const springScale = useSpring(scale, {
+    stiffness: 100,
+    damping: 20,
+  });
 
-    const springTextScale = useSpring(textScale, {
-        stiffness: 500,
-        damping: 50,
-    });
+  const springTextScale = useSpring(textScale, {
+    stiffness: 500,
+    damping: 50,
+  });
 
-    useEffect(() => {
-        if (window) {
-            if (window.innerWidth < 1024) {
-                setTabView(true);
-            }
-            if (window.innerWidth < 768) {
-                setIsMobileView(true);
-            }
-        }
-    }, [])
+  useEffect(() => {
+    if (window) {
+      if (window.innerWidth < 1024) {
+        setTabView(true);
+      }
+      if (window.innerWidth < 768) {
+        setIsMobileView(true);
+      }
+    }
+  }, []);
 
     useEffect(() => {
         setLoaded(true)

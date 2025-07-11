@@ -10,7 +10,6 @@ export default function AgentTitle({ title, title_description, description }: { 
   return (
     loaded && (
       <div className="w-full h-max flex flex-col items-center justify-center gap-[45px] lg:px-[70px] px-[2.03863rem]">
-          {/* <AgentTitle title="Agentic Layer" /> */}
           <div className="flex flex-row items-center justify-center gap-[10px] rounded-[10px] bg-[linear-gradient(181deg,rgba(0,85,254,0.08)_0.51%,rgba(153,153,153,0.10)_99.49%)] relative px-[14px] py-[6px]">
             <div className="absolute top-[2px] w-[61px] h-[1px] bg-[linear-gradient(90deg,rgba(66,133,244,0)_0%,#4285F4_50%,rgba(66,133,244,0)_100%)]"></div>
             <div className="w-[10px] h-[10px] bg-[#FAFAFA] rounded-full"></div>
