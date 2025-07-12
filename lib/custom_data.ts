@@ -213,7 +213,7 @@ export const caseStudyData = {
       title: "Empowering Inclusive Web Experiences through Accessibility",
       description:
         "A seamless, customizable solution to ensure digital accessibility for users with diverse abilities.",
-      image: "/Images/case-studies/incluway/incluway_hero_image.png",
+      image: "/Images/case-studies/incluway/Incluway_hero_black patch.png",
     },
     showReel: {
       title: "SHOWREEL",
@@ -412,11 +412,11 @@ export const LandingPageData = {
     banner_image_list: [
       {
         id: 1,
-        image: "/Images/LandingPage/Banner/BNI.svg",
+        image: "/Images/LandingPage/Banner/BNI logo.svg",
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Banner/clutch.svg",
+        image: "/Images/LandingPage/Banner/clutch_without_star.svg",
       },
       {
         id: 3,

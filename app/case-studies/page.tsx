@@ -6,6 +6,7 @@ import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { getNavbarState } from '@/lib/globalState';
+import { isMobile, isTablet } from '@/lib/utils';
 interface CaseStudyCard {
   name: string;
   routeTo: string;
@@ -15,17 +16,35 @@ interface CaseStudyCard {
 }
 export default function Page() {
 
-    const router = useRouter();
-    const [activeTile, setActiveTile] = useState<string>('');
-    const [caseStudyCards, setCaseStudyCards] = useState<CaseStudyCard[]>([]);
-    const [translateY, setTranslateY] = useState<number>(0);
+  const router = useRouter();
+  const [activeTile, setActiveTile] = useState<string>('');
+  const [caseStudyCards, setCaseStudyCards] = useState<CaseStudyCard[]>([]);
+  const [translateY, setTranslateY] = useState<number>(0);
+  const [fetchVideo, setVideo] = useState<string>('');
+  const [isClient, setIsClient] = useState(false);
 
-    const { setNavbarState } = getNavbarState();
-    // const { caseStudyState, setCaseStudyState } = getCaseStudyState();
+  const { setNavbarState } = getNavbarState();
+  // const { caseStudyState, setCaseStudyState } = getCaseStudyState();
 
   // Initialize with all cards when component mounts
   useEffect(() => {
+    setIsClient(true);
     setNavbarState(1);
+
+    // Set video source after client-side detection
+    const setVideoSource = () => {
+      const isMobileDevice = isMobile();
+      const isTabletDevice = isTablet();
+
+      if (isMobileDevice || isTabletDevice) {
+        setVideo('/Images/case-studies/List/our projects hero video-mobile & tab view.mp4');
+      } else {
+        setVideo('/Images/case-studies/List/our_projects_hero_video_web_view.mp4');
+      }
+    };
+
+    setVideoSource();
+
     const allCards = Object.values(
       caseStudiesHomePageData.caseStudiesList
     ).flat();
@@ -42,21 +61,21 @@ export default function Page() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-    const handleTileClick = (item: { name: string }) => {
-        console.log('item: ', item.name);
-        setActiveTile(item.name);
-        const name = item.name.split(' ').join('').toLowerCase();
-        const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
-        setCaseStudyCards(filteredCardsArray);
-    }
+  const handleTileClick = (item: { name: string }) => {
+    console.log('item: ', item.name);
+    setActiveTile(item.name);
+    const name = item.name.split(' ').join('').toLowerCase();
+    const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[name as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
+    setCaseStudyCards(filteredCardsArray);
+  }
 
-    // useEffect(() => {
-    //     if (caseStudyState) {
-    //         let item = caseStudyState.split(' ').join('').toLowerCase();
-    //         const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
-    //         setCaseStudyCards(filteredCardsArray);
-    //     }
-    // }, [])
+  // useEffect(() => {
+  //     if (caseStudyState) {
+  //         let item = caseStudyState.split(' ').join('').toLowerCase();
+  //         const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
+  //         setCaseStudyCards(filteredCardsArray);
+  //     }
+  // }, [])
 
   return (
     <LenisProvider>
@@ -65,23 +84,27 @@ export default function Page() {
         <div className="w-full flex flex-col overflow-y-scroll bg-primary-text select-none">
           <div className="w-full h-[100vh] md:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
             <div className="absolute top-0 left-0 w-full h-full">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                playsInline
-                controls={false}
-              >
-                <source
-                  src={`/SampleVideo_1280x720_10mb.mp4`}
-                  type="video/mp4"
-                />
-              </video>
+              {isClient && fetchVideo && (
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls={false}
+                >
+                  <source
+                    src={fetchVideo}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
             <img loading="lazy" src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
             <img loading="lazy" src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
             <div
-              className="w-max static md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center"
+              className="w-[80%] static md:w-[80%] lg:w-[90%] md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center"
               style={{
                 transform: `translateY(${translateY}px)`,
                 willChange: "transform",
@@ -90,7 +113,7 @@ export default function Page() {
               <div className="syneFont text-[2rem] md:text-[6rem] gradient-text font-bold leading-[1em] -tracking-[0.05em]">
                 {caseStudiesHomePageData.header}
               </div>
-              <div className="interFont max-w-full md:max-w-1/2 text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
+              <div className="interFont max-w-full lg:max-w-1/2 text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
                 {caseStudiesHomePageData.subHeader}
               </div>
             </div>
@@ -105,11 +128,10 @@ export default function Page() {
             {caseStudiesHomePageData.caseStudiesTitleList.map((item) => (
               <div
                 key={item.id}
-                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${
-                  activeTile === item.name
+                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name
                     ? "border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]"
                     : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]"
-                } `}
+                  } `}
                 onClick={() => {
                   handleTileClick(item);
                 }}

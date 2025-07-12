@@ -85,7 +85,7 @@ export default function Navbar() {
                             } backdrop-blur-[0.563rem] transform transform-gpu transition-all duration-300 ease-in`}
                     >
                         <img loading="lazy"
-                            src="/Icons/veract-logo.png"
+                            src="/Images/LandingPage/Navbar/veract-logo-white-font.svg"
                             alt="veract-logo"
                             className={`
                                 absolute left-[1.25rem] w-[9.5rem] h-[2.75rem] object-contain cursor-pointer 
