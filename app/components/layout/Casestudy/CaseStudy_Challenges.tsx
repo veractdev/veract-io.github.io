@@ -1,10 +1,11 @@
 "use client";
+import { isMobile, isTablet } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
 type challenges_props = {
   title: string;
   indication_icon: string;
-  video: string;
+  video: string[];
   challenge_description: string;
   challenge_solution: string;
   challenge_solution_highlighted: string;
@@ -20,9 +21,19 @@ export default function CaseStudy_Challenges({
   challenges_props: challenges_props;
 }) {
   const [loaded, setLoaded] = useState(false);
+  const [videoURL, setVideoURL] = useState<number>(0);
 
   useEffect(() => {
-    setLoaded(true);
+    if (typeof window !== 'undefined') {
+      if (isMobile()) {
+        setVideoURL(2);
+      } else if (isTablet()) {
+        setVideoURL(1);
+      } else {
+        setVideoURL(0);
+      }
+      setLoaded(true);
+    }
   }, []);
 
   return (
@@ -33,13 +44,20 @@ export default function CaseStudy_Challenges({
             {challenges_props.title}
           </div>
           <div className="w-full h-[16.875rem] md:h-[22.5rem] lg:w-[20.375rem] lg:h-[18.125rem] rounded-[0.313rem] backdrop-blur-[0.625rem] border border-[#282828] p-[0.625rem] md:p-[1.25rem]">
-            <video
-              src={challenges_props.video}
-              autoPlay
-              loop
-              controls={true}
-              className="w-full h-full object-cover"
-            />
+            {loaded && challenges_props.video[videoURL] && (
+              <video
+                // src={challenges_props.video[videoURL]}
+                playsInline
+                autoPlay
+                loop
+                muted
+                controls={false}
+                className="w-full h-full object-cover"
+              >
+                <source src={challenges_props.video[videoURL]} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
         </div>
         <div className="relative w-full lg:w-[45.313rem]">

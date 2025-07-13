@@ -44,12 +44,16 @@ export const caseStudyData = {
       title: "Enhancing Animal Health with Thermography",
       description:
         "A reliable, stress-free method for monitoring livestock health and preventing disease outbreaks.",
-      image: "/Images/case-studies/thermal_hero_image.png",
+      image: "/Images/case-studies/thermal/Hero bg img.png",
     },
     showReel: {
       title: "SHOWREEL",
       video:
-        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        [
+          '/Images/case-studies/thermal/ShowReel/web view-thermal showwreel.mp4',
+          '/Images/case-studies/thermal/ShowReel/tab view-thermal showreel.mp4',
+          '/Images/case-studies/thermal/ShowReel/mobile view-thermal showreel.mp4',
+        ],
       // "",
     },
     description: {
@@ -69,9 +73,12 @@ export const caseStudyData = {
     },
     challenges: {
       title: "Challenges & Goals",
-      indication_icon:"/Images/case-studies/challenges_lisiting_icon.png",
-      video:
-        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+      indication_icon: "/Images/case-studies/challenges and goals-icon.svg",
+      video: [
+        '/Images/case-studies/thermal/bottleneck video- web view.mp4',
+        '/Images/case-studies/thermal/bottleneck-tab view video.mp4',
+        '/Images/case-studies/thermal/bottleneck video-mobile view.mp4'
+      ],
       // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
@@ -116,7 +123,7 @@ export const caseStudyData = {
       service_list: [
         {
           title: "Health Issue Detection",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/thermal/Services/Group_35986.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Enhance your brand's impact with our corporate video expertise. We create engaging content for businesses, from promotions to training materials.",
           gradient:
@@ -125,7 +132,7 @@ export const caseStudyData = {
         },
         {
           title: "Seamless Integration",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/thermal/Services/seamless_integration.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Ensured smooth interaction between thermal cameras, IoT devices, and software components.",
           gradient:
@@ -134,7 +141,7 @@ export const caseStudyData = {
         },
         {
           title: "Health Monitoring System",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/thermal/Services/health_and_monitoring.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Built a comprehensive desktop-based platform tailored for monitoring animal health efficiently.",
           gradient:
@@ -143,7 +150,7 @@ export const caseStudyData = {
         },
         {
           title: "Actionable Insights",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/thermal/Services/Actionable_insights.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Facilitated timely, data-backed decisions to improve overall animal well-being.",
           gradient:
@@ -152,7 +159,7 @@ export const caseStudyData = {
         },
         {
           title: "User Experience Focus",
-          bg: "bg-[url('/Images/CaseStudies/Thermal/img1.jpg')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
+          bg: "bg-[url('/Images/case-studies/thermal/Services/Group_35985.png')] bg-cover bg-center object-center group-hover:bg-[url('/Images/LandingPage/Hover.png')]",
           description:
             "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
           gradient:
@@ -163,36 +170,36 @@ export const caseStudyData = {
     },
     key_features: {
       title: "Key Features",
-      indication_color : "#FF7A3B",
+      indication_color: "#FF7A3B",
       key_features_list: [
         {
           number: "[01]",
           title: "Thermal Imaging Integration",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/Thermal imaging integration.png",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[02]",
           title: "Real-Time Data Processing",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/real time data processing.png",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[03]",
           title: "Camera & IoT Synchronization",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/camera and iot.jpg",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[04]",
           title: "Low-Latency Data Transfer",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/LOW latency data transfer.png",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[05]",
           title: "User-Friendly Desktop Interface",
-          img: "/Images/CaseStudies/Thermal/img1.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/user friendly desktop interface.png",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
       ],
@@ -218,7 +225,11 @@ export const caseStudyData = {
     showReel: {
       title: "SHOWREEL",
       video:
-        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        [
+          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
+          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
+          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
+        ],
       // "",
     },
     description: {
@@ -238,9 +249,12 @@ export const caseStudyData = {
     },
     challenges: {
       title: "Challenges & Goals",
-      indication_icon:"/Images/case-studies/incluway/Challenges/icon.svg",
-      video:
+      indication_icon: "/Images/case-studies/incluway/Challenges/icon.svg",
+      video: [
         "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4",
+        "https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4"
+      ],
       // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
@@ -332,7 +346,7 @@ export const caseStudyData = {
     },
     key_features: {
       title: "Key Features",
-      indication_color:"#1F8BFF",
+      indication_color: "#1F8BFF",
       key_features_list: [
         {
           number: "[01]",

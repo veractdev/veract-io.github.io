@@ -1,57 +1,57 @@
 "use client";
+import { isMobile, isTablet } from "@/lib/utils";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 type showreel_props = {
-  title: string;
-  video: string;
+    title: string;
+    video: string[];
 };
 
 export default function Casestudy_ShowReel({
-  showreel_props,
+    showreel_props,
 }: {
-  showreel_props: showreel_props;
+    showreel_props: showreel_props;
 }) {
-  const sectionRef = useRef(null);
-  const [isMobileView, setIsMobileView] = useState(false);
-  const [isTabView, setTabView] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const videoRef = useRef<HTMLIFrameElement>(null);
-  const [isVideo, setVideo] = useState<boolean>(false);
+    const sectionRef = useRef(null);
+    const [isMobileView, setIsMobileView] = useState(false);
+    const [isTabView, setTabView] = useState(false);
+    const [loaded, setLoaded] = useState(false);
+    const videoRef = useRef<HTMLIFrameElement>(null);
+    const [isVideo, setVideo] = useState<boolean>(false);
+    const [videoURL, setVideoURL] = useState<number>(0);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
-  });
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
+    });
 
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
-  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+    const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
+    const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
-  const [isHover, setHover] = useState<boolean>(false);
+    const [isHover, setHover] = useState<boolean>(false);
 
-  const springScale = useSpring(scale, {
-    stiffness: 100,
-    damping: 20,
-  });
+    const springScale = useSpring(scale, {
+        stiffness: 100,
+        damping: 20,
+    });
 
-  const springTextScale = useSpring(textScale, {
-    stiffness: 500,
-    damping: 50,
-  });
-
-  useEffect(() => {
-    if (window) {
-      if (window.innerWidth < 1024) {
-        setTabView(true);
-      }
-      if (window.innerWidth < 768) {
-        setIsMobileView(true);
-      }
-    }
-  }, []);
+    const springTextScale = useSpring(textScale, {
+        stiffness: 500,
+        damping: 50,
+    });
 
     useEffect(() => {
-        setLoaded(true)
+        if (typeof window !== 'undefined') {
+            if (isMobile()) {
+                setVideoURL(2);
+            } else if (isTablet()) {
+                setVideoURL(1);
+            } else {
+                setVideoURL(0);
+            }
+            setLoaded(true);
+        }
     }, [])
 
     return (
@@ -86,7 +86,7 @@ export default function Casestudy_ShowReel({
                             playsInline
                             controls={true}
                         >
-                            <source src={showreel_props.video} type="video/mp4" />
+                            <source src={showreel_props.video[videoURL]} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </motion.div>
@@ -134,61 +134,61 @@ export default function Casestudy_ShowReel({
                             playsInline
                             controls={false}
                         >
-                            <source src={showreel_props.video} type="video/mp4" />
+                            <source src={showreel_props.video[videoURL]} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <motion.div
-                        layout
-                        onMouseOver={() => setHover(true)}
-                        onMouseLeave={() => setHover(false)}
-                        animate={{
-                            gap: isHover ? '0.938rem' : '0rem',
-                        }}
-                        transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                        }}
-                        className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
-                        onClick={() => setVideo(true)}
-                    >
-                        <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
-                            {/* Base icon */}
-                            <img loading="lazy"
-                                src="/Images/LandingPage/showReel/play- default.svg"
-                                alt="play icon"
-                                className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
-                            />
-                            {/* Hover icon */}
-                            <img loading="lazy"
-                                src="/Images/LandingPage/showReel/play- hover.svg"
-                                alt="play icon"
-                                className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
-                            />
-                        </div>
+                            layout
+                            onMouseOver={() => setHover(true)}
+                            onMouseLeave={() => setHover(false)}
+                            animate={{
+                                gap: isHover ? '0.938rem' : '0rem',
+                            }}
+                            transition={{
+                                duration: 0.3,
+                                ease: "easeInOut",
+                            }}
+                            className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
+                            onClick={() => setVideo(true)}
+                        >
+                            <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
+                                {/* Base icon */}
+                                <img loading="lazy"
+                                    src="/Images/LandingPage/showReel/play- default.svg"
+                                    alt="play icon"
+                                    className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
+                                />
+                                {/* Hover icon */}
+                                <img loading="lazy"
+                                    src="/Images/LandingPage/showReel/play- hover.svg"
+                                    alt="play icon"
+                                    className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                                />
+                            </div>
 
-                        <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
-                            play showreel
-                        </div>
-                    </motion.div>
+                            <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
+                                play showreel
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
                 {isVideo && (
-          <div
-            className="fixed z-[997] inset-0 bg-[#000000]/60 flex items-center justify-center"
-            onClick={() =>{ setVideo(false)}} // ⬅️ close on outside click
-          >
-            <div
-              className="w-[80%] h-[80vh] bg-black"
-              onClick={(e) => e.stopPropagation()} // ⬅️ prevent close when clicking inside
-            >
-              <iframe
-                ref={videoRef}
-                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        )}
+                    <div
+                        className="fixed z-[997] inset-0 bg-[#000000]/60 flex items-center justify-center"
+                        onClick={() => { setVideo(false) }} // ⬅️ close on outside click
+                    >
+                        <div
+                            className="w-[80%] h-[80vh] bg-black"
+                            onClick={(e) => e.stopPropagation()} // ⬅️ prevent close when clicking inside
+                        >
+                            <iframe
+                                ref={videoRef}
+                                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
+                                className="w-full h-full"
+                            />
+                        </div>
+                    </div>
+                )}
             </div>
         )
     );
