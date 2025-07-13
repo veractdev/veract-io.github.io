@@ -42,6 +42,17 @@ export default function Casestudy_ShowReel({
     });
 
     useEffect(() => {
+        if (window) {
+          if (window.innerWidth < 1024) {
+            setTabView(true);
+          }
+          if (window.innerWidth < 768) {
+            setIsMobileView(true);
+          }
+        }
+      }, [])
+
+    useEffect(() => {
         if (typeof window !== 'undefined') {
             if (isMobile()) {
                 setVideoURL(2);
