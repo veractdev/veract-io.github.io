@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-tabs": "^1.1.11",
     "class-variance-authority": "^0.7.1",
+    "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "daisyui": "^5.0.35",
     "framer-motion": "^12.23.0",
@@ -23,6 +24,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
+    "react-phone-input-2": "^2.15.1",
     "tailwind-merge": "^3.3.0",
     "zustand": "^5.0.6"
   },

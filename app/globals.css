@@ -400,3 +400,34 @@ box-shadow: 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.50) inset, 2px 2px 1px -2
     animation: none !important;
   }
 }
+
+.react-tel-input .country-list .country:hover {
+  background-color: #333 !important;
+  color: white !important;
+}
+.react-tel-input .flag-dropdown {
+  background: transparent;
+  border: none;
+}
+
+.react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background-color: #333 !important;
+}
+
+/* In your global CSS file, e.g., styles/globals.css */
+.react-tel-input .country-list .country.highlight,
+.react-tel-input .country-list .country:focus,
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.active {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+.react-tel-input .country-list .country.highlight .country-name,
+.react-tel-input .country-list .country.active .country-name {
+  color: #fff !important;
+}
