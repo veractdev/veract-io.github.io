@@ -2,11 +2,12 @@
 import { navItems } from "@/lib/custom_data";
 import { getNavbarState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
     const router = useRouter();
+    const pathname = usePathname();
     const [isHamburgerMenu, setIsHamburgerMenu] = useState<boolean>(false);
     const [loaded, setLoaded] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
@@ -16,6 +17,19 @@ export default function Navbar() {
     useEffect(() => {
         setLoaded(true);
     }, [])
+
+    useEffect(() => {
+        if (!pathname) return;
+        if (pathname === "/") {
+            setNavbarState(1);
+        } else if (pathname.startsWith("/case-studies")) {
+            setNavbarState(4);
+        } else if (pathname.startsWith("/agent")) {
+            setNavbarState(3);
+        } else {
+            setNavbarState(0); // default/fallback
+        }
+    }, [pathname]);
 
     useEffect(() => {
         const handleResize = () => {

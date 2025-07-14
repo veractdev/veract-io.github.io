@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
-import { getNavbarState } from '@/lib/globalState';
 import { isMobile, isTablet } from '@/lib/utils';
 interface CaseStudyCard {
   name: string;
@@ -22,14 +21,11 @@ export default function Page() {
   const [translateY, setTranslateY] = useState<number>(0);
   const [fetchVideo, setVideo] = useState<string>('');
   const [isClient, setIsClient] = useState(false);
-
-  const { setNavbarState } = getNavbarState();
   // const { caseStudyState, setCaseStudyState } = getCaseStudyState();
 
   // Initialize with all cards when component mounts
   useEffect(() => {
     setIsClient(true);
-    setNavbarState(1);
 
     // Set video source after client-side detection
     const setVideoSource = () => {
@@ -88,7 +84,7 @@ export default function Page() {
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
-                  loop
+                  // loop
                   muted
                   playsInline
                   controls={false}
