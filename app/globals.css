@@ -331,11 +331,13 @@ box-shadow: 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.50) inset, 2px 2px 1px -2
     opacity: 0;
     top: -100px;
     left: -100px;
+    scale: 0.25;
   }
   100% {
     opacity: 1;
     top: 51px;
     left: 51px;
+    scale: 1;
   }
 }
 
@@ -398,5 +400,121 @@ box-shadow: 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.50) inset, 2px 2px 1px -2
 @media (min-width: 0) and (max-width: 480px) {
   .animate-agentic-layer {
     animation: none !important;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-clockwise {
+  animation: spin-clockwise 4s linear infinite;
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 4s linear infinite;
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
+
+
+.animate-coding {
+  animation: coding 10s ease-in-out infinite;
+}
+
+@keyframes coding {
+  from {
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-100%);
+  }
+}
+
+.animate-processing-line {
+  animation: processing-line 2s ease-in-out infinite;
+}
+
+@keyframes processing-line {
+  0% {
+    left: -3rem;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-processing-applications {
+  animation: processing-applications 20s ease-in-out infinite;
+}
+
+@keyframes processing-applications {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(-21%);
+  }
+  40%{
+    transform: translateY(-21%);
+  }
+  45%{
+    transform: translateY(-42%);
+  }
+  65%{
+    transform: translateY(-42%);
+  }
+  70%{
+    transform: translateY(-63%);
+  }
+  95%{
+    transform: translateY(-63%);
+  }
+  100% {
+    transform: translateY(-85%);
+  }
+}
+
+.animate-arrow-upwards{
+  animation: arrow-upwards 1.75s ease infinite;
+}
+
+@keyframes arrow-upwards{
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-135%);
   }
 }
