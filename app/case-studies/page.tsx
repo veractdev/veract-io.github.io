@@ -163,8 +163,8 @@ export default function Page() {
                     }}
                   />
                 </div>
-                <div className="flex flex-col w-full flex-wrap pl-[1.25rem]">
-                  <div className="uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[2em]">
+                <div className="flex flex-col w-full flex-wrap pl-[1.25rem] gap-[0.875rem]">
+                  <div className="uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[1.2em]">
                     {item.header}
                   </div>
                   <div className="uppercase text-left interFont text-[0.875rem] text-[#71717A] font-medium leading-[150%] -tracking-[0.05em]">
