@@ -23,8 +23,9 @@ export default function OurProcess() {
                                     className="w-full h-full object-cover"
                                     autoPlay
                                     loop
+                                    muted
                                     playsInline
-                                    controls={true}
+                                    controls={false}
                                 >
                                     <source src={card.video} type="video/mp4" />
                                     Your browser does not support the video tag.

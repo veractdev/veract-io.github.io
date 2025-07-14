@@ -92,10 +92,10 @@ export default function Casestudy_ShowReel({
                         <video
                             className="w-full h-full object-cover"
                             autoPlay
-                            muted
+                            // muted
                             loop
                             playsInline
-                            controls={true}
+                            controls={false}
                         >
                             <source src={showreel_props.video[videoURL]} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -140,7 +140,7 @@ export default function Casestudy_ShowReel({
                         <video
                             className="w-full h-full object-cover"
                             autoPlay
-                            muted
+                            // muted
                             loop
                             playsInline
                             controls={false}

@@ -226,11 +226,10 @@ export const caseStudyData = {
       title: "SHOWREEL",
       video:
         [
-          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
-          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
-          'https://evo11ve-prod.s3.amazonaws.com/uploads/help-video/Explore.mp4',
+          '/Images/case-studies/incluway/ShowReel/Incluway showreel- web view.mp4',
+          '/Images/case-studies/incluway/ShowReel/Incluway showreel- tab view.mp4',
+          '/Images/case-studies/incluway/ShowReel/Incluway showreel Mobile view.mp4',
         ],
-      // "",
     },
     description: {
       title: "A small glimpse",

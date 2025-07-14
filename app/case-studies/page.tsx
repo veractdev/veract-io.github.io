@@ -129,8 +129,8 @@ export default function Page() {
               <div
                 key={item.id}
                 className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name
-                    ? "border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]"
-                    : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]"
+                  ? "border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]"
+                  : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]"
                   } `}
                 onClick={() => {
                   handleTileClick(item);
@@ -144,10 +144,7 @@ export default function Page() {
             {caseStudyCards.map((item: CaseStudyCard, index: number) => (
               <motion.div
                 key={index}
-                className="w-[22.313rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem] cursor-pointer"
-                onClick={() => {
-                  router.push(item.routeTo);
-                }}
+                className="w-[23.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{
                   opacity: 1,
@@ -159,12 +156,17 @@ export default function Page() {
                   },
                 }}
               >
-                <img
-                  loading="lazy"
-                  src={item.image}
-                  alt="project image"
-                  className="w-full h-[14.75rem] rounded-[0.875rem]"
-                />
+                <div className='w-[22.313rem] h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'>
+                  <img
+                    loading="lazy"
+                    src={item.image}
+                    alt="project image"
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                    onClick={() => {
+                      router.push(item.routeTo);
+                    }}
+                  />
+                </div>
                 <div className="flex flex-col w-full flex-wrap pl-[1.25rem]">
                   <div className="uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[2em]">
                     {item.header}
