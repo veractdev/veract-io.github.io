@@ -71,7 +71,7 @@ export default function Banner() {
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
-      <img loading="lazy"
+      {/* <img loading="lazy"
         src={`/Images/case-studies/case_study_banner_image.png`}
         alt={`placeholder image`}
         className="absolute w-full h-full object-cover"
@@ -80,7 +80,19 @@ export default function Banner() {
           transformOrigin: 'center center',
           transition: 'transform 0.1s ease',
         }}
-      />
+      /> */}
+      {/* background video */}
+      <video
+        className='absolute w-full h-full object-cover'
+        autoPlay
+        muted
+        playsInline
+        loop
+        controls={false}
+      >
+        <source src="/Images/LandingPage/Banner/hero banner video.mp4" type="video/mp4" />
+      </video>
+
       {/* text overlays */}
       <div
         className=" w-[calc(100%-2.5rem)]  lg:w-auto relative z-10 text-center text-white flex flex-col items-center justify-center gap-[2.188rem] md:gap-[0.625rem] lg:gap-[3.125rem]"
