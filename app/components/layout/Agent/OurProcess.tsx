@@ -1,7 +1,7 @@
 "use client"
 import { AgentPageData } from "@/lib/custom_data";
 import React from "react";
-import { Chat , Gear, Funnel , CircleNotch , Check , ArrowUp , File , MagnifyingGlass , PuzzlePiece , ArrowLeft , ArrowRight , Cards , Minus , X, ShieldCheck, Cpu , Gauge , FinnTheHuman , Repeat} from "phosphor-react";
+import { Chat , Gear, Funnel , CircleNotch , Check , ArrowUp , File , MagnifyingGlass , PuzzlePiece , ArrowLeft , ArrowRight , Cards , Minus , X, ShieldCheck, Cpu  , FinnTheHuman , Repeat} from "phosphor-react";
 
 export default function OurProcess() {
   return (
@@ -63,7 +63,7 @@ export default function OurProcess() {
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
-                      <Gauge size={13} weight="light" className="text-white"/>
+                      <img src="/Images/agent/speedometer.svg" className="w-[13px] h-[13px]"/>
                       <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Speed check
                       </div>
