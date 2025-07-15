@@ -66,6 +66,14 @@ export default function Page() {
     setCaseStudyCards(filteredCardsArray);
   }
 
+  const handleAllClick = () => {
+    setActiveTile('All');
+    const allCards = Object.values(
+      caseStudiesHomePageData.caseStudiesList
+    ).flat();
+    setCaseStudyCards(allCards as unknown as CaseStudyCard[]);
+  }
+
   const handleSeeMoreClick = () => {
     setShowAllTitles(true);
   }
@@ -143,6 +151,17 @@ export default function Page() {
               </div>
             </div>
             <div className="w-full flex flex-row flex-wrap p-[0_1.25rem_3.125rem_1.25rem] md:p-[3.125rem_3.75rem] items-center justify-start gap-[0.5rem]">
+              {/* All button - initially selected */}
+              <div
+                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#4285F4]/20 border-[1px]  hover:border-[#4285F4] hover:shadow-[0px_6px_12px_0px_#4285F440] cursor-pointer transition-all duration-300 easeTransition ${activeTile === 'All' || activeTile === ''
+                  ? "border-[#4285F4] shadow-none bg-[#4285F4]/20 text-[#4285F4]"
+                  : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#4285F4]"
+                  } `}
+                onClick={handleAllClick}
+              >
+                All
+              </div>
+
               {getTitlesToDisplay().map((item) => (
                 <div
                   key={item.id}
