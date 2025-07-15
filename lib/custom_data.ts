@@ -887,17 +887,31 @@ export const caseStudiesHomePageData = {
   ],
   caseStudiesList: {
     audiovideo: [
-      {
-        id: 1,
-        image: "/Images/case-studies/project_image.png",
-        header: "Audio Video Client",
-        subHeader: "Audio Video Project",
-        routeTo: "/case-studies/audio-video",
-      },
+        {
+          id: 1,
+          image: "/Images/case-studies/project_image.png",
+          header: "Audio Video Client",
+          subHeader: "Audio Video Project",
+          routeTo: "/case-studies/audio-video",
+        },
+        {
+          id: 2,
+          image: "/Images/case-studies/project_image.png",
+          header: "Audio Video Client",
+          subHeader: "Audio Video Project",
+          routeTo: "/case-studies/audio-video",
+        },
+        {
+          id: 3,
+          image: "/Images/case-studies/project_image.png",
+          header: "Audio Video Client",
+          subHeader: "Audio Video Project",
+          routeTo: "/case-studies/audio-video",
+        },
     ],
     accessibility: [
       {
-        id: 2,
+        id: 1,
         image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
         header: "accessibility",
         subHeader: "accessibility project",
@@ -906,7 +920,7 @@ export const caseStudiesHomePageData = {
     ],
     chatbot: [
       {
-        id: 3,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Chat Bot Client",
         subHeader: "Chat Bot Project",
@@ -915,7 +929,7 @@ export const caseStudiesHomePageData = {
     ],
     edtech: [
       {
-        id: 4,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Ed Tech Client",
         subHeader: "Ed Tech Project",
@@ -924,7 +938,7 @@ export const caseStudiesHomePageData = {
     ],
     machinevision: [
       {
-        id: 5,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Machine Vision Client",
         subHeader: "Machine Vision Project",
@@ -933,7 +947,7 @@ export const caseStudiesHomePageData = {
     ],
     wellness: [
       {
-        id: 6,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Wellness Client",
         subHeader: "Wellness Project",
@@ -942,7 +956,7 @@ export const caseStudiesHomePageData = {
     ],
     industryplatform: [
       {
-        id: 7,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Industry Platform Client",
         subHeader: "Industry Platform Project",
@@ -951,7 +965,7 @@ export const caseStudiesHomePageData = {
     ],
     manufacturing: [
       {
-        id: 8,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Manufacturing Client",
         subHeader: "Manufacturing Project",
@@ -960,7 +974,7 @@ export const caseStudiesHomePageData = {
     ],
     agritech: [
       {
-        id: 9,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Agri Tech Client",
         subHeader: "Agri Tech Project",
@@ -969,7 +983,7 @@ export const caseStudiesHomePageData = {
     ],
     ecommerce: [
       {
-        id: 10,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Ecommerce Client",
         subHeader: "Ecommerce Project",
@@ -978,7 +992,7 @@ export const caseStudiesHomePageData = {
     ],
     sales: [
       {
-        id: 11,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Sales Client",
         subHeader: "Sales Project",
@@ -987,7 +1001,7 @@ export const caseStudiesHomePageData = {
     ],
     audit: [
       {
-        id: 12,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Audit Client",
         subHeader: "Audit Project",
@@ -996,7 +1010,7 @@ export const caseStudiesHomePageData = {
     ],
     fintech: [
       {
-        id: 13,
+        id: 1,
         image: "/Images/case-studies/project_image.png",
         header: "Fintech Client",
         subHeader: "Fintech Project",
@@ -1005,7 +1019,7 @@ export const caseStudiesHomePageData = {
     ],
     thermalvision: [
       {
-        id: 14,
+        id: 1,
         image: "/Images/LandingPage/FeaturedWorks/thermal.png",
         header: "infrared thermography",
         subHeader: "thermal imaging detects mastitis in dairy cattle",
