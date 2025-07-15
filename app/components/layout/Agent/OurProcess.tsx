@@ -36,7 +36,7 @@ export default function OurProcess() {
                 </div>
               </div>
               {card.id === 1 && (
-                <div className="w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center p-[0.625rem]">
+                <div className="w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center">
                   <div className="relative flex flex-col items-center gap-[0.625rem] p-[0.625rem_0.813rem_0_0.813rem] shadow-[0px_0px_0px_1px_#222222_inset]">
                     <div className="relative w-[107px] h-[107px] mb-[2.688rem] border-[1px] border-[#222222] rounded-full justify-center items-center duration-500 animate-spin-slow">
                       <img
@@ -52,31 +52,31 @@ export default function OurProcess() {
                   <div className="p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]">
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <ShieldCheck size={13} weight="light" className="text-white"/>
-                      <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         System Check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <Cpu size={13} weight="light" className="text-white"/>
-                      <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Process check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <img src="/Images/agent/speedometer.svg" className="w-[13px] h-[13px]"/>
-                      <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Speed check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <FinnTheHuman size={13} weight="light" className="text-white"/>
-                      <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Manual work
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <Repeat size={13} weight="light" className="text-white"/>
-                      <div className="interFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Repetative task
                       </div>
                     </div>
@@ -85,7 +85,7 @@ export default function OurProcess() {
               )}
 
               {card.id === 2 && (
-                <div className="flex flex-col w-full h-max">
+                <div className="flex flex-col w-full h-[180px]">
                   <div className="w-full h-[22px] bg-[#FFFFFF]/5 flex flex-row justify-between items-center p-[6px]">
                     <div className="flex gap-[4px]">
                     <ArrowLeft size={10} weight="light" className="text-white"/>
@@ -100,14 +100,28 @@ export default function OurProcess() {
                     </div>
                   </div>
                   <div className="flex flex-row">
-                    <div className="w-[30px] h-[128px] bg-[#FFFFFF]/5 flex flex-col gap-[9px] items-center pt-[9px]">
+                    <div className="w-[30px] h-[100%] bg-[#FFFFFF]/5 flex flex-col gap-[9px] items-center pt-[9px]">
                         <File size={18} weight="light" className="text-white"/>
                         <MagnifyingGlass size={18} weight="light" className="text-white"/>
                         <PuzzlePiece size={18} weight="light" className="text-white"/>
                     </div>
                     <div className="w-[230px] h-[128px] overflow-hidden mt-[15px] pl-[5px] ">
                     <div className="relative w-[230px] h-[128px] text-white text-[12px] interFont animate-coding duration-500">
-                        <img src="/Images/agent/code.png" className="absolute"/>
+                        {/* <img src="/Images/agent/code.png" className="absolute"/> */}
+                        class AutomationTrigger:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-primary-blue">def __init__</span>(self, threshold):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.threshold = threshold<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.status = "inactive"<br/><br/>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-primary-blue">def check_trigger</span>(self, value):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if value &gt; self.threshold:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.status = "active"<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Automation triggered!"<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "No action taken."<br/><br/>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-primary-blue">def get_status</span>(self):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return f"Status: {self.status}"
                     </div>
                     </div>
                   </div>
@@ -136,7 +150,7 @@ export default function OurProcess() {
                 </div>
               </div>
               {card.id === 3 && (
-              <div className="w-full h-[11.25rem] lg:py-[40px] lg:px-[38px]">
+              <div className="w-full h-[11.25rem] lg:py-[40px] lg:px-[38px] flex items-center justify-center">
                 <div className="flex flex-row justify-center items-center">
                     <div className="flex relative w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] items-center justify-center z-[200]">
                         <div className="absolute w-[48px] h-[48px] bg-[#4285F4]/5 rounded-full animate-spin-clockwise" style={{background: "linear-gradient(141deg, rgb(66, 133, 244) 13%, rgba(66, 133, 244, 0) 35.0236%, rgba(66, 133, 244, 0) 64.1724%, rgb(66, 133, 244) 88%)"}}></div>
@@ -158,7 +172,7 @@ export default function OurProcess() {
                         
                     </div>
                     <div className="w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] z-[200] overflow-hidden items-center justify-center">
-                        <div className="flex flex-col gap-[1rem] items-center justify-center mt-[0.3rem] animate-processing-applications">
+                        <div className="flex flex-col gap-[1rem] items-center justify-center mt-[0.5rem] animate-processing-applications">
                             <img src="/Images/agent/Slack.svg" className="w-[80%] h-[80%]"/>
                             <img src="/Images/agent/Chatgpt.svg" className="w-[80%] h-[80%]"/>
                             <img src="/Images/agent/Gmail.svg" className="w-[80%] h-[80%]"/>
@@ -170,9 +184,9 @@ export default function OurProcess() {
               </div>
               )}
               {card.id === 4 && (
-                <div className="w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center p-[0.625rem]">
+                <div className="w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center">
                   <div className="w-[260px] h-[160px] border border-[#222222] px-[10px] py-[13px] flex flex-col gap-[10px]">
-                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px]">
+                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px] items-center">
                         <div className="w-[201px] flex flex-row gap-[10px]">
                         <div className="w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]">
                           <Chat size={18} weight="bold" className="text-white"/>
@@ -184,7 +198,7 @@ export default function OurProcess() {
                           </div>
                         <CircleNotch size={18} weight="bold" className="text-primary-blue animate-spin-slow"/>
                     </div>
-                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px]">
+                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px] items-center">
                         <div className="w-[201px] flex flex-row gap-[10px]">
                         <div className="w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]">
                           <Gear size={18} weight="bold" className="text-white"/>
@@ -196,7 +210,7 @@ export default function OurProcess() {
                           </div>
                         <div className="relative flex items-center justify-center overflow-hidden w-[19px] h-[19px] bg-[#FFFFFF]/5 rounded-[4px]"><ArrowUp size={18} weight="bold" className="text-primary-blue animate-arrow-upwards absolute"/></div>
                     </div>
-                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px]">
+                    <div className="w-[240px] h-[38px] flex flex-row pr-[5px] items-center">
                         <div className="w-[201px] flex flex-row gap-[10px]">
                         <div className="w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]">
                           <Funnel size={18} weight="bold" className="text-white"/>

@@ -28,7 +28,7 @@ export default function Agent_Footer() {
             <div className='z-10 dmSansFont w-full md:w-[32.5rem] text-[1rem] text-[#FFFFFF]/60 font-normal leading-[1.625rem] -tracking-[0.013rem] text-center'>Step into a new era of intelligent automation. Transform operations with AI agents that grow with you.</div>
             <div
                 onClick={() => {
-                    router.push('/');
+                    router.push('/contact-us');
                 }}
                 className='z-10 p-[0.625rem_1.125rem] bg-primary-blue rounded-[0.625rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] cursor-pointer'
             >
