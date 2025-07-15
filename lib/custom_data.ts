@@ -418,10 +418,10 @@ export const LandingPageData = {
     description_primary:
       "Delivering scalable technology that powers modern digital experiences, AI",
     description_secondary: "systems, and connected IoT solutions.",
-    get_in_touch: "Get in touch", //Get in touch
+    get_in_touch: "Get in touch",
     get_in_touch_arrow: "/Images/LandingPage/Banner/arrowIconUp.png",
     view_services_text: "View services", //View services
-    banner_CTA_status: 'inactive',
+    banner_CTA_status: 'active',
     banner_image_list: [
       {
         id: 1,
@@ -723,7 +723,7 @@ export const LandingPageData = {
             id: 5,
             title: "Contact Us",
             link: "/contact-us",
-            status: "inactive"
+            status: "active"
           },
           {
             id: 6,

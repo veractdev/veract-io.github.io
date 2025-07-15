@@ -150,6 +150,9 @@ export default function Navbar() {
                                 </div>
                             ))}
                             <div
+                                onClick={() => {
+                                    router.push("/contact-us");
+                                }}
                                 className={`${isHamburgerMenu
                                     ? `${isMobile() ? "mt-[3.875rem]" : "mt-[3.125rem]"}`
                                     : "max-sm:hidden max-md:hidden max-lg:hidden"

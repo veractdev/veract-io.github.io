@@ -73,7 +73,7 @@ export default function MultiAgent() {
           title_description="Optimize Operations Using Intelligent Collaborative Agents"
           description="By coordinating multiple AI agents, your everyday business tasks become smoother, faster, and more efficient"
         />
-        <div>
+        <div className="scale-down">
           <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px] right-[-1rem]">
             <img loading="lazy"
               src="/Images/Agent/multi-agent-layers.svg"

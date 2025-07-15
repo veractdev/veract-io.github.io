@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import Marquee from 'react-fast-marquee';
 import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 export default function Banner() {
+  const router = useRouter();
   const [translateY2, setTranslateY2] = useState<number>(0);
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
@@ -208,6 +210,9 @@ export default function Banner() {
             <div
               onMouseEnter={() => setHoveredTouch(true)}
               onMouseLeave={() => setHoveredTouch(false)}
+              onClick={() => {
+                router.push('/contact-us');
+              }}
               className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} bg-primary-blue relative overflow-hidden w-[7.75rem] h-[2.25rem] text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
@@ -252,7 +257,7 @@ export default function Banner() {
             <div
               onMouseEnter={() => setHoveredServices(true)}
               onMouseLeave={() => setHoveredServices(false)}
-              className={`${LandingPageData.banner.banner_CTA_status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'} lg:bg-[#0D0D0D] md:bg-[#050505]/80 bg-[#050505]/80 relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
+              className={`cursor-not-allowed lg:bg-[#0D0D0D] md:bg-[#050505]/80 bg-[#050505]/80 relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
               <motion.div

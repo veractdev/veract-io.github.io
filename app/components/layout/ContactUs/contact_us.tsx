@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import emailjs from "@emailjs/browser";
@@ -22,7 +22,7 @@ export default function Contact_Us() {
     email: false,
     mobileNumber: false,
   });
-
+  const [loaded, setLoaded] = useState(false);
   // Error messages
   const [errors, setErrors] = useState({
     firstName: "",
@@ -98,20 +98,35 @@ export default function Contact_Us() {
     setErrors({ firstName: "", email: "", mobileNumber: "" });
   };
 
+    useEffect(() => {
+      setLoaded(true);
+    }, [])
+
+    useEffect(() => {
+      function wheelHandler(e:Event) {
+        if (e.target instanceof HTMLElement && e.target.closest('.custom-phone-dropdown')) {
+          e.stopPropagation();
+        }
+      }
+      document.addEventListener('wheel', wheelHandler, { passive: false, capture: true });
+      return () => document.removeEventListener('wheel', wheelHandler, { capture: true });
+    }, []);
+    
   return (
-    <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[160px]">
-      <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3px] leading-[90px] font-medium">
+    loaded && (
+    <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[40px]">
+      <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3.8px] leading-[90px] font-medium">
         Got an idea?
       </div>
-      <div className="syneFont mt-[10px] text-center text-white text-[86px] tracking-[-3px] leading-[90px] font-semibold w-[70%]">
+      <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_230px] syneFont text-center text-white text-[36px] md:text-[54px] lg:text-[86px] tracking-[-3.4px] md:tracking-[-3.8px] leading-[55px] md:leading-[54px] lg:leading-[90px] font-semibold">
         Let's build something great together
       </div>
-      <div className="w-[80%] flex items-start justify-center mt-[90px]">
-        <div className="w-[75%] rounded-[30px] p-[11px] border border-white/8 z-10">
-          <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[40px]">
+      <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_120px] flex flex-col lg:flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
+        <div className="w-full max-w-[888px] rounded-[30px] p-[11px] border border-white/8 z-10">
+          <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[1.875rem] md:p-[40px]">
             {/* First & Last Name */}
-            <div className="flex w-full items-center gap-[24px]">
-              <div className="w-1/2">
+            <div className="flex flex-col md:flex-row  w-full items-center gap-[24px]">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">First name*</div>
                 <input
                   required
@@ -137,7 +152,7 @@ export default function Contact_Us() {
                 )}
               </div>
 
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Last name</div>
                 <input
                   type="text"
@@ -162,8 +177,8 @@ export default function Contact_Us() {
             </div>
 
             {/* Email & Phone */}
-            <div className="flex w-full items-center gap-[24px] mt-[30px]">
-              <div className="w-1/2">
+            <div className="flex flex-col md:flex-row w-full items-center gap-[24px] mt-[30px]">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Email*</div>
                 <input
                   required
@@ -189,7 +204,7 @@ export default function Contact_Us() {
                 )}
               </div>
 
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Mobile number*</div>
                 <div
                   className="mt-[14px]"
@@ -224,12 +239,13 @@ export default function Contact_Us() {
                       display: "flex",
                       flexDirection: "column",
                       overflowY: "auto",
-                      height: "200px",
+                      maxHeight: "200px",
                       gap: "10px",
                     }}
                     containerStyle={{
                       width: "100%",
                     }}
+                    dropdownClass="custom-phone-dropdown"
                   />
                   {errors.mobileNumber && touchedFields.mobileNumber && (
                     <p className="text-red-500 text-[12px] mt-[4px]">
@@ -273,10 +289,10 @@ export default function Contact_Us() {
         </div>
 
         {/* Right Side Info (same as before, not repeated here for brevity) */}
-        <div className="w-[25%] ml-[20px]">
+        <div className="w-full flex flex-col md:flex-row lg:flex-col flex-wrap gap-[1.5rem] items-start justify-between max-w-full lg:max-w-[292px]">
           {/* email */}
-          <div className="dmSansFont w-full rounded-[30px] p-[11px] border border-white/8">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full dmSansFont rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/mail.svg" alt="mail-icon"/>
                 <div className="text-[16px] font-bold">Email</div>
@@ -287,16 +303,17 @@ export default function Contact_Us() {
               <img src="/Images/horizantal_design.png"  alt="design-icon"/>
               <a
                 href="mailto:info@veract.io"
-                className="text-[16px] font-medium text-white/50 hover:text-white"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="mailto:info@veract.io hover:text-white"
               >
-                info@veract.io
+                  info@veract.io
+                </a>
               </a>
             </div>
           </div>
-
           {/* phone */}
-          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/contact.svg" alt="contact-us-icon" />
                 <div className="text-[16px] font-bold">Phone</div>
@@ -304,22 +321,25 @@ export default function Contact_Us() {
               <img src="/Images/horizantal_design.png" alt="design-icon" />
               <a
                 href="tel:+919789991565"
-                className="text-[16px] font-medium text-white/50 hover:text-white"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919789991565 hover:text-white"
               >
-                +91 97899 91565
+                  +91 97899 91565
+                </a>
               </a>
               <a
                 href="tel:+919962837650"
-                className="text-[16px] font-medium text-white/50 hover:text-white"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919962837650 hover:text-white"
               >
-                +91 99628 37650
+                  +91 99628 37650
+                </a>
               </a>
             </div>
           </div>
-
           {/* address */}
-          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/location.svg" alt="loaction-icon" />
                 <div className="text-[16px] font-bold">Address</div>
@@ -338,5 +358,6 @@ export default function Contact_Us() {
         </div>
       </div>
     </div>
+    )
   );
 }
