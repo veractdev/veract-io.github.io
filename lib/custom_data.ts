@@ -801,19 +801,19 @@ export const AgentPageData = {
     view_case_study: "View case studies",
     banner_features: [
       {
-        features_icon: "/Icons/blinkEffect.png",
+        features_icon: "/Images/agent/Banner/Free business consultation.svg",
         features_title: "Free Business consultation",
         features_subtitle:
           "Get expert insights into where AI can deliver the most value in your operations.",
       },
       {
-        features_icon: "/Icons/blinkEffect.png",
+        features_icon: "/Images/agent/Banner/Live Product Demo.svg",
         features_title: "Live Product Demo",
         features_subtitle:
           "Watch how our AI agents automate real tasks across your tools — customized to your case.",
       },
       {
-        features_icon: "/Icons/blinkEffect.png",
+        features_icon: "/Images/agent/Banner/Deploy 1 agent.svg",
         features_title: "Deploy 1 AI Agent Free",
         features_subtitle:
           "Test, drive one fully trained AI agent for your business — no commitment, no cost.",
