@@ -215,8 +215,10 @@ export default function Contact_Us() {
                 </div>
               </div>
               <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
-                info@veract.io
+              <div className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="mailto:info@veract.io">
+                  info@veract.io
+                </a>
               </div>
             </div>
           </div>
@@ -228,11 +230,15 @@ export default function Contact_Us() {
                 <div className="text-[16px] font-bold">Phone</div>
               </div>
               <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
-                +91 97899 91565
+              <div className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919789991565">
+                  +91 97899 91565
+                </a>
               </div>
-              <div className="text-[16px] font-medium text-white/50">
-                +91 99628 37650
+              <div className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919962837650">
+                  +91 99628 37650
+                </a>
               </div>
             </div>
           </div>

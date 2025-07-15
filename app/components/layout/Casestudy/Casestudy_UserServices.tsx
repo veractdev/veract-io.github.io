@@ -242,9 +242,9 @@ export default function UserServices({ user_services_props }: { user_services_pr
             <div className="opacity-0 blob-placeholder left-[-13rem] top-[-3rem] absolute h-[100rem] w-[10rem] rotate-[9deg] overflow-hidden bg-white-5 backdrop-blur-[5rem] transition-all duration-300 ease-in z-20"></div>
             <div
               className={
-                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] lg:font-semibold md:font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${user_services_props.service_list[4].gradient} bg-clip-text text-transparent ease-in duration-300 transition-all  ` +
+                `absolute  lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] text-[1.375rem] lg:font-semibold md:font-semibold font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${user_services_props.service_list[4].gradient} bg-clip-text text-transparent ease-in duration-300 transition-all  ` +
                 ((isMobile() || isTablet()) && openedArr[4]
-                  ? `${user_services_props.service_list[4].gradient} bg-clip-text text-transparent  md:left-[2.5rem] md:top-[2.5rem] md:w-[60%] ease-in duration-300 transition-all `
+                  ? `${user_services_props.service_list[4].gradient} font-semibold bg-clip-text text-transparent  md:left-[2.5rem] md:top-[2.5rem] md:w-[60%] ease-in duration-300 transition-all `
                   : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${user_services_props.service_list[4].gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[75%]`)
               }
               style={{ zIndex: 30 }}

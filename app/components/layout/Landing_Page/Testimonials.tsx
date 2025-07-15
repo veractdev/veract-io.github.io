@@ -73,7 +73,7 @@ export default function Testimonials() {
                   <motion.div
                     key={index}
                     initial={!isMobile() && !isTablet() ? { width: "5.125rem" } : isTablet() ? { height: "5rem" } : { height: "5rem" }}
-                    animate={!isMobile() && !isTablet() ? { width: "20.125rem" } : isTablet() ? { height: "100%" } : { height: "100%" }}
+                    animate={!isMobile() && !isTablet() ? { width: "20.125rem" } : isTablet() ? { height: "19.938rem" } : { height: "24.5rem" }}
                     transition={{ duration: 0.7, ease: "easeInOut" }}
                     style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
                     className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
@@ -103,7 +103,7 @@ export default function Testimonials() {
                     </motion.div>
 
                     <motion.div
-                      initial={!isMobile() && !isTablet() ? { x: -100, y: 0, opacity: 0 } : false}
+                      initial={!isMobile() && !isTablet() ? { x: 100, y: 0, opacity: 0 } : false}
                       animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false}
                       transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
                       className="relative pl-[1.438rem] text-base leading-relaxed">
