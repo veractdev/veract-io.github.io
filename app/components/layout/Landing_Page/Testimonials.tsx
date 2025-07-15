@@ -103,9 +103,9 @@ export default function Testimonials() {
                     </motion.div>
 
                     <motion.div
-                      initial={!isMobile() && !isTablet() ? { x: 50, y: 100, opacity: 0 } : false}
+                      initial={!isMobile() && !isTablet() ? { x: -100, y: 0, opacity: 0 } : false}
                       animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false}
-                      transition={{ duration: 0.5, ease: "easeInOut", }}
+                      transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
                       className="relative pl-[1.438rem] text-base leading-relaxed">
                       <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                         <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
