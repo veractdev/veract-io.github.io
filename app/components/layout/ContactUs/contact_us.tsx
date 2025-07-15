@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import emailjs from "@emailjs/browser";
@@ -16,7 +16,7 @@ export default function Contact_Us() {
   const [countryCode, setCountryCode] = useState("+91");
   const [submitted, setSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-
+  const [loaded, setLoaded] = useState(false);
   // Submission handler
 
   // for mail purpose use it if needed by dev-shiva :)
@@ -55,7 +55,22 @@ export default function Contact_Us() {
     mobileNumber.trim() !== "" &&
     !isOnlyCountryCode(mobileNumber, countryCode);
 
+    useEffect(() => {
+      setLoaded(true);
+    }, [])
+
+    useEffect(() => {
+      function wheelHandler(e:Event) {
+        if (e.target instanceof HTMLElement && e.target.closest('.custom-phone-dropdown')) {
+          e.stopPropagation();
+        }
+      }
+      document.addEventListener('wheel', wheelHandler, { passive: false, capture: true });
+      return () => document.removeEventListener('wheel', wheelHandler, { capture: true });
+    }, []);
+    
   return (
+    loaded && (
     <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[40px]">
       <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3.8px] leading-[90px] font-medium">
         Got an idea?
@@ -146,12 +161,13 @@ export default function Contact_Us() {
                       display: "flex",
                       flexDirection: "column",
                       overflowY: "auto",
-                      height: "200px",
+                      maxHeight: "200px",
                       gap: "10px",
                     }}
                     containerStyle={{
                       width: "100%",
                     }}
+                    dropdownClass="custom-phone-dropdown"
                   />
                 </div>
               </div>
@@ -236,5 +252,6 @@ export default function Contact_Us() {
         </div>
       </div>
     </div>
+    )
   );
 }
