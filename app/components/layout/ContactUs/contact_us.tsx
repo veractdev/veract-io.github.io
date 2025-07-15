@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -15,17 +14,76 @@ export default function Contact_Us() {
   const [message, setMessage] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
   const [submitted, setSubmitted] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Submission handler
+  // Touched fields for onBlur tracking
+  const [touchedFields, setTouchedFields] = useState({
+    firstName: false,
+    email: false,
+    mobileNumber: false,
+  });
+  const [loaded, setLoaded] = useState(false);
+  // Error messages
+  const [errors, setErrors] = useState({
+    firstName: "",
+    email: "",
+    mobileNumber: "",
+  });
 
-  // for mail purpose use it if needed by dev-shiva :)
-  // public key : qwdRlJDtP3rT8oyie
-  // service key : service_pvsdbjm
-  // template id : template_qm07hdm
+  const handleBlur = (field: keyof typeof touchedFields) => {
+    // setTouchedFields((prev) => ({ ...prev, [field]: true }));
+    // this line is commented out for future purpose and error red are for placeholder purpose in future changes with respect to design
+
+    switch (field) {
+      case "firstName":
+        setErrors((prev) => ({
+          ...prev,
+          firstName: firstName.trim() === "" ? "First name is required." : "",
+        }));
+        break;
+      case "email":
+        setErrors((prev) => ({
+          ...prev,
+          email:
+            email.trim() === ""
+              ? "Email is required."
+              : !isValidEmail(email)
+              ? "Invalid email format."
+              : "",
+        }));
+        break;
+      case "mobileNumber":
+        setErrors((prev) => ({
+          ...prev,
+          mobileNumber:
+            isOnlyCountryCode(mobileNumber, countryCode) ||
+            mobileNumber.trim() === ""
+              ? "Mobile number is required."
+              : "",
+        }));
+        break;
+    }
+  };
+
+  const isOnlyCountryCode = (mobile: string, code: string) => {
+    return mobile === code.replace("+", "");
+  };
+
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const formValid =
+    firstName.trim() !== "" &&
+    isValidEmail(email) &&
+    mobileNumber.trim() !== "" &&
+    !isOnlyCountryCode(mobileNumber, countryCode);
+
   const handleSubmitContact = () => {
-    if (!formValid) return;
-    setSubmitted(true);
+    if (!formValid || isLoading) return;
+
+    setIsLoading(true);
+    
   };
 
   const resetFormFields = () => {
@@ -36,26 +94,26 @@ export default function Contact_Us() {
     setMobileNumber("91");
     setMessage("");
     setCountryCode("+91");
+    setTouchedFields({ firstName: false, email: false, mobileNumber: false });
+    setErrors({ firstName: "", email: "", mobileNumber: "" });
   };
 
-  // Check if the mobile number is only the country code
-  const isOnlyCountryCode = (mobile: string, code: string) => {
-    return mobile === code.replace("+", "");
-  };
+    useEffect(() => {
+      setLoaded(true);
+    }, [])
 
-  // Validate email format
-  const isValidEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  //form validation
-  const formValid =
-    firstName.trim() !== "" &&
-    isValidEmail(email) &&
-    mobileNumber.trim() !== "" &&
-    !isOnlyCountryCode(mobileNumber, countryCode);
-
+    useEffect(() => {
+      function wheelHandler(e:Event) {
+        if (e.target instanceof HTMLElement && e.target.closest('.custom-phone-dropdown')) {
+          e.stopPropagation();
+        }
+      }
+      document.addEventListener('wheel', wheelHandler, { passive: false, capture: true });
+      return () => document.removeEventListener('wheel', wheelHandler, { capture: true });
+    }, []);
+    
   return (
+    loaded && (
     <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[40px]">
       <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3.8px] leading-[90px] font-medium">
         Got an idea?
@@ -64,10 +122,9 @@ export default function Contact_Us() {
         Let's build something great together
       </div>
       <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_120px] flex flex-col lg:flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
-        {/* form info */}
         <div className="w-full max-w-[888px] rounded-[30px] p-[11px] border border-white/8 z-10">
           <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[1.875rem] md:p-[40px]">
-            {/* name row */}
+            {/* First & Last Name */}
             <div className="flex flex-col md:flex-row  w-full items-center gap-[24px]">
               <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">First name*</div>
@@ -76,10 +133,25 @@ export default function Contact_Us() {
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
+                  onBlur={() => handleBlur("firstName")}
                   placeholder="First name"
-                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
+                    errors.firstName && touchedFields.firstName
+                      ? "border-red-500"
+                      : "border-white/15"
+                  } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${
+                    errors.firstName && touchedFields.firstName
+                      ? "focus:ring-red-500"
+                      : "focus:ring-[#4287F5]"
+                  } transition-all duration-300 ease-in-out`}
                 />
+                {errors.firstName && touchedFields.firstName && (
+                  <p className="text-red-500 text-[12px] mt-[4px]">
+                    {errors.firstName}
+                  </p>
+                )}
               </div>
+
               <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Last name</div>
                 <input
@@ -92,7 +164,7 @@ export default function Contact_Us() {
               </div>
             </div>
 
-            {/* company row */}
+            {/* Company Name */}
             <div className="mt-[30px]">
               <div className="text-[14px] font-bold">Company name</div>
               <input
@@ -104,7 +176,7 @@ export default function Contact_Us() {
               />
             </div>
 
-            {/* mail and phone */}
+            {/* Email & Phone */}
             <div className="flex flex-col md:flex-row w-full items-center gap-[24px] mt-[30px]">
               <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Email*</div>
@@ -113,13 +185,31 @@ export default function Contact_Us() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onBlur={() => handleBlur("email")}
                   placeholder="you@company.com"
-                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
+                    errors.email && touchedFields.email
+                      ? "border-red-500"
+                      : "border-white/15"
+                  } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${
+                    errors.email && touchedFields.email
+                      ? "focus:ring-red-500"
+                      : "focus:ring-[#4287F5]"
+                  } transition-all duration-300 ease-in-out`}
                 />
+                {errors.email && touchedFields.email && (
+                  <p className="text-red-500 text-[12px] mt-[4px]">
+                    {errors.email}
+                  </p>
+                )}
               </div>
+
               <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Mobile number*</div>
-                <div className="mt-[14px]">
+                <div
+                  className="mt-[14px]"
+                  onBlur={() => handleBlur("mobileNumber")}
+                >
                   <PhoneInput
                     country={"in"}
                     value={mobileNumber}
@@ -132,7 +222,10 @@ export default function Contact_Us() {
                       height: "52px",
                       borderRadius: "5px",
                       background: "rgba(255, 255, 255, 0.1)",
-                      border: "1px solid rgba(255, 255, 255, 0.15)",
+                      border:
+                        errors.mobileNumber && touchedFields.mobileNumber
+                          ? "1px solid red"
+                          : "1px solid rgba(255, 255, 255, 0.15)",
                       paddingLeft: "50px",
                       color: "white",
                     }}
@@ -146,18 +239,24 @@ export default function Contact_Us() {
                       display: "flex",
                       flexDirection: "column",
                       overflowY: "auto",
-                      height: "200px",
+                      maxHeight: "200px",
                       gap: "10px",
                     }}
                     containerStyle={{
                       width: "100%",
                     }}
+                    dropdownClass="custom-phone-dropdown"
                   />
+                  {errors.mobileNumber && touchedFields.mobileNumber && (
+                    <p className="text-red-500 text-[12px] mt-[4px]">
+                      {errors.mobileNumber}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
 
-            {/* message row */}
+            {/* Message */}
             <div className="mt-[30px]">
               <div className="text-[14px] font-bold">Message</div>
               <textarea
@@ -168,73 +267,97 @@ export default function Contact_Us() {
               ></textarea>
             </div>
 
-            {/* submit */}
+            {/* Submit Button */}
             <div
-              className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] ${
-                formValid && !submitted
+              className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
+                formValid && !isLoading && !submitted
                   ? "bg-[#4285F4] cursor-pointer text-white"
+                  : isLoading
+                  ? "bg-[#4285F4]/80 text-white cursor-wait"
                   : submitted
-                  ? "bg-[#4285F4] cursor-pointer text-white"
+                  ? "bg-[#4285F4] text-white cursor-default"
                   : "bg-[#4285F4]/50 cursor-not-allowed text-white/15"
               }`}
               onClick={() => {
-                if (formValid && !submitted) handleSubmitContact();
+                if (formValid && !submitted && !isLoading)
+                  handleSubmitContact();
               }}
             >
-              {submitted ? "Thank You" : "Submit"}
+              {isLoading ? <img src='/Icons/contact-us/loader.png' alt="loader" className="w-[22px] h-[22px] animate-spin"/> : submitted ? "Thank You" : "Submit"}
             </div>
           </div>
         </div>
 
-        {/* right side info */}
+        {/* Right Side Info (same as before, not repeated here for brevity) */}
         <div className="w-full flex flex-col md:flex-row lg:flex-col flex-wrap gap-[1.5rem] items-start justify-between max-w-full lg:max-w-[292px]">
           {/* email */}
           <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full dmSansFont rounded-[30px] p-[11px] border border-white/8">
             <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
-                <img src="/Icons/contact-us/mail.svg" />
+                <img src="/Icons/contact-us/mail.svg" alt="mail-icon"/>
                 <div className="text-[16px] font-bold">Email</div>
                 <div className="bg-[#0055FE] rounded-[8px] px-[10px] py-[4px] text-[12px] font-bold">
                   24/7
                 </div>
               </div>
-              <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
-                info@veract.io
-              </div>
+              <img src="/Images/horizantal_design.png"  alt="design-icon"/>
+              <a
+                href="mailto:info@veract.io"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="mailto:info@veract.io hover:text-white"
+              >
+                  info@veract.io
+                </a>
+              </a>
             </div>
           </div>
           {/* phone */}
           <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
             <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
-                <img src="/Icons/contact-us/contact.svg" />
+                <img src="/Icons/contact-us/contact.svg" alt="contact-us-icon" />
                 <div className="text-[16px] font-bold">Phone</div>
               </div>
-              <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
-                +91 97899 91565
-              </div>
-              <div className="text-[16px] font-medium text-white/50">
-                +91 99628 37650
-              </div>
+              <img src="/Images/horizantal_design.png" alt="design-icon" />
+              <a
+                href="tel:+919789991565"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919789991565 hover:text-white"
+              >
+                  +91 97899 91565
+                </a>
+              </a>
+              <a
+                href="tel:+919962837650"
+                className="text-[16px] font-medium text-white/50 cursor-pointer">
+                <a href="tel:+919962837650 hover:text-white"
+              >
+                  +91 99628 37650
+                </a>
+              </a>
             </div>
           </div>
           {/* address */}
           <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
             <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
-                <img src="/Icons/contact-us/location.svg" />
+                <img src="/Icons/contact-us/location.svg" alt="loaction-icon" />
                 <div className="text-[16px] font-bold">Address</div>
               </div>
-              <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
+              <img src="/Images/horizantal_design.png" alt="design-icon" />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=17,+First+street,+Tansi+Nagar,+Velachery,+Chennai+-+600042"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[16px] font-medium text-white/50 hover:text-white"
+              >
                 17, First street, Tansi Nagar, Velachery, Chennai - 600042
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    )
   );
 }
