@@ -52,31 +52,31 @@ export default function OurProcess() {
                   <div className="p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]">
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <ShieldCheck size={13} weight="light" className="text-white"/>
-                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         System Check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <Cpu size={13} weight="light" className="text-white"/>
-                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Process check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <img src="/Images/agent/speedometer.svg" className="w-[13px] h-[13px]"/>
-                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Speed check
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <FinnTheHuman size={13} weight="light" className="text-white"/>
-                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Manual work
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
                       <Repeat size={13} weight="light" className="text-white"/>
-                      <div className="interFont md:text-[0.5rem] text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
+                      <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Repetative task
                       </div>
                     </div>
