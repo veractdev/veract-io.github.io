@@ -476,8 +476,21 @@ body {
 
 @media (min-width: 0) and (max-width: 480px) {
   .animate-agentic-layer {
-    animation: none !important;
+    animation-name: agenticLayerAnimationMobile !important;
   }
+  @keyframes agenticLayerAnimationMobile {
+    0% {
+      opacity: 0;
+      top: 0;
+      scale: 0.25;
+    }
+
+    100% {
+      opacity: 1;
+      top: 1.25rem;
+      scale: 1;
+    }
+  } 
 }
 
 .page-not-found-CTA-boxShadow {
@@ -650,5 +663,11 @@ body {
   }
   100% {
     transform: translateY(-135%);
+  }
+}
+
+@media (max-width: 374px) {
+  .scale-down {
+    scale: 0.9;
   }
 }
