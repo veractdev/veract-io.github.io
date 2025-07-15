@@ -1,10 +1,17 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Agent_Footer() {
     const router = useRouter();
+    const [loaded, setLoaded] = useState(false);
+    
+    useEffect(() => {
+        setLoaded(true);
+    },[])
+
     return (
+        loaded && (
         <div className='relative w-[calc(100%-3.75rem)] md:w-[41.75rem] lg:w-[60rem] h-max p-[1.875rem] md:p-[3.125rem] flex flex-col items-center justify-center gap-[1.875rem] rounded-[1.25rem] bg-transparent shadow-[0px_0px_0px_1px_#FFFFFF12_inset] overflow-hidden'>
             <video
                 autoPlay
@@ -30,10 +37,11 @@ export default function Agent_Footer() {
                 onClick={() => {
                     router.push('/contact-us');
                 }}
-                className='z-10 p-[0.625rem_1.125rem] bg-primary-blue rounded-[0.625rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] cursor-pointer'
+                className='z-10 text-center p-[0.625rem_1.125rem] bg-primary-blue rounded-[0.625rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] cursor-pointer'
             >
                 Book a Free Consultation
             </div>
         </div>
+        )
     )
 }

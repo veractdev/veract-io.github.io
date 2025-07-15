@@ -103,7 +103,7 @@ export default function Testimonials() {
                     </motion.div>
 
                     <motion.div
-                      initial={!isMobile() && !isTablet() ? { x: 100, y: 0, opacity: 0 } : false}
+                      initial={!isMobile() && !isTablet() ? { x: -100, y: 0, opacity: 0 } : false}
                       animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false}
                       transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
                       className="relative pl-[1.438rem] text-base leading-relaxed">

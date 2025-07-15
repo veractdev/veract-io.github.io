@@ -26,6 +26,9 @@ export default function Navbar() {
             setNavbarState(4);
         } else if (pathname.startsWith("/agent")) {
             setNavbarState(3);
+        }
+        else if (pathname.startsWith("/contact-us")) {
+            setNavbarState(6);
         } else {
             setNavbarState(0); // default/fallback
         }
@@ -80,7 +83,7 @@ export default function Navbar() {
         <React.Fragment>
             {loaded && (
                 <div
-                    className={`flex fixed top-0 z-[999] items-center justify-center ${isMobile()
+                    className={`flex fixed top-0 z-[999] items-center justify-center select-none ${isMobile()
                         ? "py-[0.625rem_0.375rem]"
                         : `${isTablet()
                             ? "py-[0.625rem_0.375rem]"
@@ -156,7 +159,7 @@ export default function Navbar() {
                                 className={`${isHamburgerMenu
                                     ? `${isMobile() ? "mt-[3.875rem]" : "mt-[3.125rem]"}`
                                     : "max-sm:hidden max-md:hidden max-lg:hidden"
-                                    } syneFont bg-[#FFFFFF] text-black font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer hover:bg-orange hover:text-white transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
+                                    } syneFont hover:bg-orange hover:text-white ${navbarState === 6 ? "bg-orange text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
                                     } text-nowrap`}
                             >
                                 Talk to us
