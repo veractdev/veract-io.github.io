@@ -159,7 +159,7 @@ export default function Page() {
               ))}
               {!showAllTitles && isMobile() && caseStudiesHomePageData.caseStudiesTitleList.length > 5 && (
                 <div
-                  className="syneFont text-[1rem] font-medium leading-[1.2] bg-white"
+                  className="syneFont text-[1rem] font-medium leading-[1.2] text-white pl-[0.5rem]"
                   onClick={handleSeeMoreClick}
                 >
                   See More
