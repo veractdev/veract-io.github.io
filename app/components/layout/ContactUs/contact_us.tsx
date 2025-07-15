@@ -2,36 +2,30 @@
 import { useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function Contact_Us() {
-  const [countrycodeDropdown, setCountrycodeDropdown] = useState(false);
-
-  //form input control fields
+  // Form input control fields
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("91");
   const [message, setMessage] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
-  const [successFullSubmisiion, setSuccessFullSubmission] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  //submission handler
+  // Submission handler
+
+  // for mail purpose use it if needed by dev-shiva :)
+  // public key : qwdRlJDtP3rT8oyie
+  // service key : service_pvsdbjm
+  // template id : template_qm07hdm
   const handleSubmitContact = () => {
-    setSuccessFullSubmission(true);
-    //the form data to your server or API
-    console.log({
-      firstName,
-      lastName,
-      companyName,
-      email,
-      mobileNumber,
-      message,
-    });
-
-    // Reset form fields after submission
-    resetFormFields();
-    setSuccessFullSubmission(false);
+    if (!formValid) return;
+    setSubmitted(true);
   };
 
   const resetFormFields = () => {
@@ -39,17 +33,27 @@ export default function Contact_Us() {
     setLastName("");
     setCompanyName("");
     setEmail("");
-    setMobileNumber("");
+    setMobileNumber("91");
     setMessage("");
+    setCountryCode("+91");
   };
 
+  // Check if the mobile number is only the country code
+  const isOnlyCountryCode = (mobile: string, code: string) => {
+    return mobile === code.replace("+", "");
+  };
+
+  // Validate email format
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  //form validation
   const formValid =
-    firstName.trim() &&
-    lastName.trim() &&
-    companyName.trim() &&
-    email.trim() &&
-    mobileNumber.trim() &&
-    message.trim();
+    firstName.trim() !== "" &&
+    isValidEmail(email) &&
+    mobileNumber.trim() !== "" &&
+    !isOnlyCountryCode(mobileNumber, countryCode);
 
   return (
     <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[160px]">
@@ -64,132 +68,61 @@ export default function Contact_Us() {
         <div className="w-[75%] rounded-[30px] p-[11px] border border-white/8 z-10">
           <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[40px]">
             {/* name row */}
-            <div className="flex w-[100%] items-center gap-[24px]">
-              {/* first name */}
-              <div className="w-full">
-                <div className="text-[14px] dmSansFont font-bold">
-                  First name*
-                </div>
-                <div className="mt-[14px]">
-                  <input
-                    type="text"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="First name"
-                    className="w-full h-[52px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        px-[20px] 
-                        text-white placeholder-white/60 
-                        bg-white/10 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out"
-                  />
-                </div>
+            <div className="flex w-full items-center gap-[24px]">
+              <div className="w-1/2">
+                <div className="text-[14px] font-bold">First name*</div>
+                <input
+                  required
+                  type="text"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="First name"
+                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                />
               </div>
-              {/* last name */}
-              <div className="w-full">
-                <div className="text-[14px] dmSansFont font-bold">
-                  Last name*
-                </div>
-                <div className="mt-[14px]">
-                  <input
-                    type="text"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    placeholder="Last name"
-                    className="w-full h-[52px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        px-[20px] 
-                        text-white placeholder-white/60 
-                        bg-white/10 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out"
-                  />
-                </div>
+              <div className="w-1/2">
+                <div className="text-[14px] font-bold">Last name</div>
+                <input
+                  type="text"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  placeholder="Last name"
+                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                />
               </div>
             </div>
+
             {/* company row */}
-            <div className="flex w-[100%] items-center gap-[24px] mt-[30px]">
-              {/* company name */}
-              <div className="w-[100%]">
-                <div className="text-[14px] dmSansFont font-bold">
-                  Enter your company name*
-                </div>
-                <div className="mt-[14px]">
-                  <input
-                    type="text"
-                    value={companyName}
-                    onChange={(e) => setCompanyName(e.target.value)}
-                    placeholder="Company name"
-                    className="w-full h-[52px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        px-[20px] 
-                        text-white placeholder-white/60 
-                        bg-white/10 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out"
-                  />
-                </div>
-              </div>
+            <div className="mt-[30px]">
+              <div className="text-[14px] font-bold">Company name</div>
+              <input
+                type="text"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+                placeholder="Company name"
+                className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+              />
             </div>
-            {/* mail and mobile row */}
-            <div className="flex w-[100%] items-center gap-[24px] mt-[30px]">
-              {/* mail id row */}
-              <div className="w-full">
-                <div className="text-[14px] dmSansFont font-bold">
-                  Enter your mail id*
-                </div>
-                <div className="mt-[14px]">
-                  <input
-                    type="text"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@company.com"
-                    className="w-full h-[52px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        px-[20px] 
-                        text-white placeholder-white/60 
-                        bg-white/10 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out"
-                  />
-                </div>
+
+            {/* mail and phone */}
+            <div className="flex w-full items-center gap-[24px] mt-[30px]">
+              <div className="w-1/2">
+                <div className="text-[14px] font-bold">Email*</div>
+                <input
+                  required
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@company.com"
+                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                />
               </div>
-              {/* mobile number row */}
-              <div className="w-full">
-                <div className="text-[14px] dmSansFont font-bold z-[1000]">
-                  Enter your mobile number*
-                </div>
-                <div
-                  className="w-full h-[52px] mt-[14px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        text-white placeholder-white/60 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out flex items-center"
-                >
+              <div className="w-1/2">
+                <div className="text-[14px] font-bold">Mobile number*</div>
+                <div className="mt-[14px]">
                   <PhoneInput
-                    country={"in"} // Sets default country to India
-                    value={mobileNumber || "91"} // Starts with 91 if mobileNumber is empty
+                    country={"in"}
+                    value={mobileNumber}
                     onChange={(phone: string, countryData: CountryData) => {
                       setMobileNumber(phone);
                       setCountryCode(`+${countryData.dialCode}`);
@@ -223,97 +156,82 @@ export default function Contact_Us() {
                 </div>
               </div>
             </div>
-            <div className="flex w-[100%] items-center gap-[24px] mt-[30px]">
-              {/* add message row */}
-              <div className="flex flex-col w-[100%] z-[-1]">
-                <div className="text-[14px] dmSansFont font-bold">
-                  Add a message*
-                </div>
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="w-full h-[100px] mt-[14px] 
-                        text-[14px] font-medium
-                        rounded-[5px] 
-                        p-[18px] 
-                        text-white placeholder-white/60 
-                        bg-white/10 
-                        backdrop-blur-md 
-                        border border-white/15 
-                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] 
-                        outline-none focus:ring-2 focus:ring-[#4287F5]
-                        transition-all duration-300 ease-in-out"
-                  placeholder="Tell us a little about your enquiry..."
-                ></textarea>
-              </div>
+
+            {/* message row */}
+            <div className="mt-[30px]">
+              <div className="text-[14px] font-bold">Message</div>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Tell us a little about your enquiry..."
+                className="mt-[14px] w-full h-[100px] text-[14px] font-medium rounded-[5px] p-[18px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+              ></textarea>
             </div>
+
+            {/* submit */}
             <div
-              className={`w-[100%] px-[77px] py-[12px] flex items-center justify-center mt-[30px] rounded-[5px] 
-                ${
-                  formValid
-                    ? "bg-[#4285F4] cursor-pointer text-white"
-                    : "bg-[#4285F4]/50 cursor-not-allowed text-white/15"
-                }`}
+              className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] ${
+                formValid && !submitted
+                  ? "bg-[#4285F4] cursor-pointer text-white"
+                  : submitted
+                  ? "bg-[#4285F4] cursor-pointer text-white"
+                  : "bg-[#4285F4]/50 cursor-not-allowed text-white/15"
+              }`}
               onClick={() => {
-                if (formValid) handleSubmitContact();
+                if (formValid && !submitted) handleSubmitContact();
               }}
             >
-              Submit
+              {submitted ? "Thank You" : "Submit"}
             </div>
           </div>
         </div>
-        {/* other info */}
-        <div className="w-[25%]">
+
+        {/* right side info */}
+        <div className="w-[25%] ml-[20px]">
           {/* email */}
-          <div className="dmSansFont w-[100%] rounded-[30px] p-[11px] border border-white/8">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px]">
-              <div className="flex flex-col gap-[14px]">
-                <div className="flex items-center gap-[10px]">
-                  <img src="/Icons/contact-us/mail.svg" />
-                  <div className="text-[16px] font-bold">Email</div>
-                  <div className="bg-[#0055FE] shadow-[0px_0px_0px_2px_#FFFFFF26_inset] rounded-[8px] pl-[10px] pr-[10px] pt-[4px] py-[4px] text-[12px] font-bold flex items-center justify-center">
-                    24/7
-                  </div>
+          <div className="dmSansFont w-full rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+              <div className="flex items-center gap-[10px]">
+                <img src="/Icons/contact-us/mail.svg" />
+                <div className="text-[16px] font-bold">Email</div>
+                <div className="bg-[#0055FE] rounded-[8px] px-[10px] py-[4px] text-[12px] font-bold">
+                  24/7
                 </div>
-                <img src="/Images/horizantal_design.png" />
-                <div className="text-[16px] font-medium text-white/50">
-                  info@veract.io
-                </div>
+              </div>
+              <img src="/Images/horizantal_design.png" />
+              <div className="text-[16px] font-medium text-white/50">
+                info@veract.io
               </div>
             </div>
           </div>
+
           {/* phone */}
-          <div className="w-[100%] rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px]">
-              <div className="flex flex-col gap-[14px]">
-                <div className="flex items-center gap-[10px]">
-                  <img src="/Icons/contact-us/contact.svg" />
-                  <div className="text-[16px] font-bold">Phone</div>
-                </div>
-                <img src="/Images/horizantal_design.png" />
-                <div>
-                  <div className="text-[16px] font-medium text-white/50">
-                    +91 97899 91565
-                  </div>
-                  <div className="text-[16px] font-medium text-white/50">
-                    +91 99628 37650
-                  </div>
-                </div>
+          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+              <div className="flex items-center gap-[10px]">
+                <img src="/Icons/contact-us/contact.svg" />
+                <div className="text-[16px] font-bold">Phone</div>
+              </div>
+              <img src="/Images/horizantal_design.png" />
+              <div className="text-[16px] font-medium text-white/50">
+                +91 97899 91565
+              </div>
+              <div className="text-[16px] font-medium text-white/50">
+                +91 99628 37650
               </div>
             </div>
           </div>
+
           {/* address */}
-          <div className="w-[100%] rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px]">
-              <div className="flex flex-col gap-[14px]">
-                <div className="flex items-center gap-[10px]">
-                  <img src="/Icons/contact-us/location.svg" />
-                  <div className="text-[16px] font-bold">Address</div>
-                </div>
-                <img src="/Images/horizantal_design.png" />
-                <div className="text-[16px] font-medium text-white/50">
-                  17, First street, Tansi nagar, Velachery, Chennai - 600 042
-                </div>
+          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+              <div className="flex items-center gap-[10px]">
+                <img src="/Icons/contact-us/location.svg" />
+                <div className="text-[16px] font-bold">Address</div>
+              </div>
+              <img src="/Images/horizantal_design.png" />
+              <div className="text-[16px] font-medium text-white/50">
+                17, First street, Tansi Nagar, Velachery, Chennai - 600042
               </div>
             </div>
           </div>
