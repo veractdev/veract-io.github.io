@@ -59,14 +59,14 @@ export default function Contact_Us() {
       <div className="syneFont mt-[10px] text-center text-white text-[86px] tracking-[-3px] leading-[90px] font-semibold w-[70%]">
         Let's build something great together
       </div>
-      <div className="w-[80%] flex items-start justify-center mt-[90px]">
+      <div className="w-full p-[0_120px] flex flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
         {/* form info */}
         <div className="w-[75%] rounded-[30px] p-[11px] border border-white/8 z-10">
           <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[40px]">
             {/* name row */}
             <div className="flex w-[100%] items-center gap-[24px]">
               {/* first name */}
-              <div className="w-[50%]">
+              <div className="w-full">
                 <div className="text-[14px] dmSansFont font-bold">
                   First name*
                 </div>
@@ -91,7 +91,7 @@ export default function Contact_Us() {
                 </div>
               </div>
               {/* last name */}
-              <div className="w-[50%]">
+              <div className="w-full">
                 <div className="text-[14px] dmSansFont font-bold">
                   Last name*
                 </div>
@@ -147,7 +147,7 @@ export default function Contact_Us() {
             {/* mail and mobile row */}
             <div className="flex w-[100%] items-center gap-[24px] mt-[30px]">
               {/* mail id row */}
-              <div className="w-[50%]">
+              <div className="w-full">
                 <div className="text-[14px] dmSansFont font-bold">
                   Enter your mail id*
                 </div>
@@ -172,7 +172,7 @@ export default function Contact_Us() {
                 </div>
               </div>
               {/* mobile number row */}
-              <div className="w-[50%]">
+              <div className="w-full">
                 <div className="text-[14px] dmSansFont font-bold z-[1000]">
                   Enter your mobile number*
                 </div>
@@ -263,7 +263,7 @@ export default function Contact_Us() {
           </div>
         </div>
         {/* other info */}
-        <div className="w-[25%] ml-[20px]">
+        <div className="w-[25%]">
           {/* email */}
           <div className="dmSansFont w-[100%] rounded-[30px] p-[11px] border border-white/8">
             <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px]">
@@ -271,7 +271,7 @@ export default function Contact_Us() {
                 <div className="flex items-center gap-[10px]">
                   <img src="/Icons/contact-us/mail.svg" />
                   <div className="text-[16px] font-bold">Email</div>
-                  <div className="bg-[#0055FE] rounded-[8px] pl-[10px] pr-[10px] pt-[4px] py-[4px] text-[12px] font-bold flex items-center justify-center">
+                  <div className="bg-[#0055FE] shadow-[0px_0px_0px_2px_#FFFFFF26_inset] rounded-[8px] pl-[10px] pr-[10px] pt-[4px] py-[4px] text-[12px] font-bold flex items-center justify-center">
                     24/7
                   </div>
                 </div>
