@@ -6,11 +6,7 @@ import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
 
 export default function Banner() {
-  const words = ["mobile app"];
-
-  const [translateY, setTranslateY] = useState<number>(0);
   const [translateY2, setTranslateY2] = useState<number>(0);
-  const [rotateX, setRotateX] = useState<number>(0);
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
   const [displayText, setDisplayText] = useState("");
@@ -55,9 +51,7 @@ export default function Banner() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setTranslateY(scrollY / 2.5);
       setTranslateY2(scrollY / 6);
-      setRotateX(Math.min(scrollY / 10, 20));
       setScale(Math.max(0.88, 1 - scrollY / 300 / 2));
       setOpacity(Math.max(0.65, 1 - scrollY / 600 / 2));
     };
@@ -71,7 +65,7 @@ export default function Banner() {
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
-      <img loading="lazy"
+      {/* <img loading="lazy"
         src={`/Images/case-studies/case_study_banner_image.png`}
         alt={`placeholder image`}
         className="absolute w-full h-full object-cover"
@@ -80,7 +74,19 @@ export default function Banner() {
           transformOrigin: 'center center',
           transition: 'transform 0.1s ease',
         }}
-      />
+      /> */}
+      {/* background video */}
+      <video
+        className='absolute w-full h-full object-cover'
+        autoPlay
+        muted
+        playsInline
+        loop
+        controls={false}
+      >
+        <source src="/Images/LandingPage/Banner/hero banner video.mp4" type="video/mp4" />
+      </video>
+
       {/* text overlays */}
       <div
         className=" w-[calc(100%-2.5rem)]  lg:w-auto relative z-10 text-center text-white flex flex-col items-center justify-center gap-[2.188rem] md:gap-[0.625rem] lg:gap-[3.125rem]"

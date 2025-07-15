@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
 import { isMobile } from "../../../../lib/utils";
+import { useRouter } from "next/navigation";
 
 export default function AgenticLayer() {
   const [loaded, setLoaded] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     setLoaded(true);
   }, []);
@@ -173,7 +174,11 @@ export default function AgenticLayer() {
                 Your tools stay the same. The way you work changes forever!
               </div>
               <div className="lg:px-[3.625rem] md:px-[1.99rem] px-[2.55rem]">
-                <div className="flex lg:px-[0.875rem] lg:py-[0.375rem] md:py-[0.21rem] md:px-[0.49rem] px-[0.62rem] py-[0.26rem] justify-center items-center gap-[0.625rem] bg-[#4285F4] lg:rounded-[10px] rounded-[0.43988rem] text-center dmSansFont lg:text-[1.25rem] md:text-[0.69388rem] text-[0.875rem] font-normal leading-normal text-white">
+                <div 
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
+                className="flex lg:px-[0.875rem] lg:py-[0.375rem] md:py-[0.21rem] md:px-[0.49rem] px-[0.62rem] py-[0.26rem] justify-center items-center gap-[0.625rem] bg-[#4285F4] lg:rounded-[10px] rounded-[0.43988rem] text-center dmSansFont lg:text-[1.25rem] md:text-[0.69388rem] text-[0.875rem] font-normal leading-normal text-white cursor-pointer">
                   Supercharge Your Tools Now
                 </div>
               </div>

@@ -9,17 +9,14 @@ import We_Work_With from './components/layout/Landing_Page/We_Work_With'
 import Testimonials from './components/layout/Landing_Page/Testimonials'
 import Footer from './components/layout/Landing_Page/Footer'
 import LenisProvider from './LenisProvider'
-import { getNavbarState } from '@/lib/globalState'
 
 export default function Page() {
 
   const [loader, setLoader] = useState(false);
-  const { setNavbarState } = getNavbarState();
 
   useEffect(() => {
     requestAnimationFrame(() => {
       setLoader(true);
-      setNavbarState(null);
     });
   }, []);
 

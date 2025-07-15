@@ -28,7 +28,7 @@ export default async function Page({ params }: Props) {
         <CaseStudy_Challenges challenges_props={data.challenges} />
         <UserServices user_services_props={data.services} />
         <Casestudy_Key_Features key_features_props={data.key_features} />
-        {/* <Casestudy_Testimonial testimonial_props={data.testimonials} /> */}
+        <Casestudy_Testimonial testimonial_props={data.testimonials} />
       </div>
     </LenisProvider>
   );
