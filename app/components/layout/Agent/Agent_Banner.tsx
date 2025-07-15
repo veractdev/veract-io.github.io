@@ -1,8 +1,11 @@
 "use client";
 import { AgentPageData, LandingPageData } from "@/lib/custom_data";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export default function AgentBanner() {
+
+  const router = useRouter();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -38,7 +41,12 @@ export default function AgentBanner() {
               {AgentPageData.banner.subtitle}
             </div>
             <div className="flex items-center justify-center md:mt-[0.875rem] lg:mt-[0.875rem] mt-[2.125rem] gap-[0.938rem]">
-              <div className="relative overflow-hidden w-[9.75rem] md:w-[10.625rem] lg:[10.625rem] h-[2.25rem] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#4285F4] group">
+              <div
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
+                className="relative overflow-hidden w-[9.75rem] md:w-[10.625rem] lg:[10.625rem] h-[2.25rem] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#4285F4] group"
+              >
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium text-[0.875rem] md:text-[0.875rem] lg:text-[1rem]">
                     {AgentPageData.banner.book_demo}

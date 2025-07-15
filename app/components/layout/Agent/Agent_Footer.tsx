@@ -30,7 +30,7 @@ export default function Agent_Footer() {
                 onClick={() => {
                     router.push('/contact-us');
                 }}
-                className='z-10 p-[0.625rem_1.125rem] bg-primary-blue rounded-[0.625rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] cursor-pointer'
+                className='z-10 text-center p-[0.625rem_1.125rem] bg-primary-blue rounded-[0.625rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] cursor-pointer'
             >
                 Book a Free Consultation
             </div>
