@@ -40,10 +40,10 @@ export default function OurProcess() {
     return () => ctx.revert();
   }, [loaded]);
 
-  
   useEffect(() => {
     setLoaded(true);
   }, []);
+  
   return (
     loaded && (
     <div ref={sectionRef} className="w-full p-[0rem_2.75rem_4rem_2.75rem] md:p-[6.25rem_4.375rem]  flex flex-col items-center">
