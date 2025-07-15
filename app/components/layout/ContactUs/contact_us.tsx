@@ -56,20 +56,20 @@ export default function Contact_Us() {
     !isOnlyCountryCode(mobileNumber, countryCode);
 
   return (
-    <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[160px]">
-      <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3px] leading-[90px] font-medium">
+    <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[40px]">
+      <div className="dmSansFont mt-[160px] text-center text-[#4285F4] text-[36px] tracking-[-3.8px] leading-[90px] font-medium">
         Got an idea?
       </div>
-      <div className="syneFont mt-[10px] text-center text-white text-[86px] tracking-[-3px] leading-[90px] font-semibold w-[70%]">
+      <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_230px] syneFont text-center text-white text-[36px] md:text-[54px] lg:text-[86px] tracking-[-3.4px] md:tracking-[-3.8px] leading-[55px] md:leading-[54px] lg:leading-[90px] font-semibold">
         Let's build something great together
       </div>
-      <div className="w-[80%] flex items-start justify-center mt-[90px]">
+      <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_120px] flex flex-col lg:flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
         {/* form info */}
-        <div className="w-[75%] rounded-[30px] p-[11px] border border-white/8 z-10">
-          <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[40px]">
+        <div className="w-full max-w-[888px] rounded-[30px] p-[11px] border border-white/8 z-10">
+          <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[1.875rem] md:p-[40px]">
             {/* name row */}
-            <div className="flex w-full items-center gap-[24px]">
-              <div className="w-1/2">
+            <div className="flex flex-col md:flex-row  w-full items-center gap-[24px]">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">First name*</div>
                 <input
                   required
@@ -80,7 +80,7 @@ export default function Contact_Us() {
                   className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 />
               </div>
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Last name</div>
                 <input
                   type="text"
@@ -105,8 +105,8 @@ export default function Contact_Us() {
             </div>
 
             {/* mail and phone */}
-            <div className="flex w-full items-center gap-[24px] mt-[30px]">
-              <div className="w-1/2">
+            <div className="flex flex-col md:flex-row w-full items-center gap-[24px] mt-[30px]">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Email*</div>
                 <input
                   required
@@ -117,7 +117,7 @@ export default function Contact_Us() {
                   className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 />
               </div>
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2">
                 <div className="text-[14px] font-bold">Mobile number*</div>
                 <div className="mt-[14px]">
                   <PhoneInput
@@ -187,10 +187,10 @@ export default function Contact_Us() {
         </div>
 
         {/* right side info */}
-        <div className="w-[25%] ml-[20px]">
+        <div className="w-full flex flex-col md:flex-row lg:flex-col flex-wrap gap-[1.5rem] items-start justify-between max-w-full lg:max-w-[292px]">
           {/* email */}
-          <div className="dmSansFont w-full rounded-[30px] p-[11px] border border-white/8">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full dmSansFont rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/mail.svg" />
                 <div className="text-[16px] font-bold">Email</div>
@@ -204,10 +204,9 @@ export default function Contact_Us() {
               </div>
             </div>
           </div>
-
           {/* phone */}
-          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/contact.svg" />
                 <div className="text-[16px] font-bold">Phone</div>
@@ -221,10 +220,9 @@ export default function Contact_Us() {
               </div>
             </div>
           </div>
-
           {/* address */}
-          <div className="w-full rounded-[30px] p-[11px] border border-white/8 mt-[24px]">
-            <div className="flex flex-col border border-white/8 rounded-[20px] p-[40px] gap-[14px]">
+          <div className="w-full md:w-[calc(50%-1.5rem)] lg:w-full rounded-[30px] p-[11px] border border-white/8">
+            <div className="flex flex-col border border-white/8 rounded-[20px] p-[36px] md:p-[40px] gap-[14px]">
               <div className="flex items-center gap-[10px]">
                 <img src="/Icons/contact-us/location.svg" />
                 <div className="text-[16px] font-bold">Address</div>
