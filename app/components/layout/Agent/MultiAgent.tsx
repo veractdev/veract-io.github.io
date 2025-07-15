@@ -67,7 +67,7 @@ export default function MultiAgent() {
   }, []);
   return (
     loaded && (
-      <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[364.5px]  pb-[159px]">
+      <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[260px]  pb-[159px]">
         <AgentTitle
           title="Multi Agent"
           title_description="Optimize Operations Using Intelligent Collaborative Agents"

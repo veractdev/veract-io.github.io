@@ -475,7 +475,7 @@ export const LandingPageData = {
         id: 1,
         category: "clients",
         numbers: "50+",
-        description: "Amazing clients",
+        description: "Amazing Clients",
       },
       {
         id: 2,
@@ -487,7 +487,7 @@ export const LandingPageData = {
         id: 3,
         category: "Projects",
         numbers: "70+",
-        description: "Successfull Projects",
+        description: "Successful Projects",
       },
       {
         id: 4,

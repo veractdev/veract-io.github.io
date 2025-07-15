@@ -250,7 +250,7 @@ export default function Contact_Us() {
                 <div className="text-[16px] font-bold">Address</div>
               </div>
               <img src="/Images/horizantal_design.png" />
-              <div className="text-[16px] font-medium text-white/50">
+              <div className="text-[16px] font-medium text-white/50 select-all">
                 17, First street, Tansi Nagar, Velachery, Chennai - 600042
               </div>
             </div>

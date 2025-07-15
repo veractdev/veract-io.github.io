@@ -1,18 +1,59 @@
 "use client"
 import { AgentPageData } from "@/lib/custom_data";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Chat , Gear, Funnel , CircleNotch , Check , ArrowUp , File , MagnifyingGlass , PuzzlePiece , ArrowLeft , ArrowRight , Cards , Minus , X, ShieldCheck, Cpu  , FinnTheHuman , Repeat} from "phosphor-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function OurProcess() {
+  const [loaded, setLoaded] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    if (!loaded) return;
+  
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray<HTMLElement>('.fade-in-up').forEach((el) => {
+        gsap.fromTo(
+          el,
+          {
+            opacity: 0,
+            y: 50,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+    });
+  
+    ScrollTrigger.refresh();
+  
+    return () => ctx.revert();
+  }, [loaded]);
+
+  
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   return (
-    <div className="w-full p-[0rem_2.75rem_4rem_2.75rem] md:p-[6.25rem_4.375rem]  flex flex-col items-center">
-      <div className="w-max p-[0.5rem_0.75rem] rounded-[0.375rem] bg-primary-text border-[1px] border-[#222222] figTreeFont text-[0.875rem] text-white font-medium leading-[1.2em] -tracking-[0.02em]">
+    loaded && (
+    <div ref={sectionRef} className="w-full p-[0rem_2.75rem_4rem_2.75rem] md:p-[6.25rem_4.375rem]  flex flex-col items-center">
+      <div className="fade-in-up w-max p-[0.5rem_0.75rem] rounded-[0.375rem] bg-primary-text border-[1px] border-[#222222] figTreeFont text-[0.875rem] text-white font-medium leading-[1.2em] -tracking-[0.02em]">
         {AgentPageData.ourprocess.pageTitle}
       </div>
-      <div className="max-w-[43.75rem] text-center syneFont font-medium md:font-normal text-[1.75rem] md:text-[3.125rem] text-white leading-[1.1em] -tracking-[0.04em] py-[1.563rem_0.938rem]">
+      <div className="fade-in-up max-w-[43.75rem] text-center syneFont font-medium md:font-normal text-[1.75rem] md:text-[3.125rem] text-white leading-[1.1em] -tracking-[0.04em] py-[1.563rem_0.938rem]">
         {AgentPageData.ourprocess.title}
       </div>
-      <div className="max-w-[37.5rem] text-center interFont font-normal md:font-medium text-[#CCCCCC] text-[0.875rem] md:text-[1.125rem] leading-[1.5em] -tracking-[0.02em]">
+      <div className="fade-in-up max-w-[37.5rem] text-center interFont font-normal md:font-medium text-[#CCCCCC] text-[0.875rem] md:text-[1.125rem] leading-[1.5em] -tracking-[0.02em]">
         {AgentPageData.ourprocess.description}
       </div>
       <div className="flex flex-col items-center justify-center gap-[1.25rem] pt-[3.75rem]">
@@ -20,7 +61,7 @@ export default function OurProcess() {
           {AgentPageData.ourprocess.cards.slice(0, 2).map((card) => (
             <div
               key={card.id}
-              className="flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset] items-center"
+              className="fade-in-up flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset] items-center"
             >
               <div className="flex flex-col gap-[0.625rem]">
                 <div className="w-max bg-transparent shadow-[0px_0px_0px_1px_#222222_inset] rounded-[0.25rem] p-[0.375rem_0.563rem] figTreeFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
@@ -134,7 +175,7 @@ export default function OurProcess() {
           {AgentPageData.ourprocess.cards.slice(2, 4).map((card) => (
             <div
               key={card.id}
-              className="flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset]"
+              className="fade-in-up flex flex-col gap-[1.25rem] p-[0.625rem] md:p-[1.25rem_1.875rem] rounded-[0.5rem] bg-[#0D0D0D]/80 shadow-[0px_0px_0px_1px_#222222_inset]"
             >
               <div className="flex flex-col gap-[0.625rem]">
                 <div className="w-max bg-transparent shadow-[0px_0px_0px_1px_#222222_inset] rounded-[0.25rem] p-[0.375rem_0.563rem] figTreeFont text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
@@ -231,5 +272,6 @@ export default function OurProcess() {
         </div>
       </div>
     </div>
+    )
   );
 }
