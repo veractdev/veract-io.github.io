@@ -870,31 +870,31 @@ export const caseStudiesHomePageData = {
   header: "Our Projects",
   subHeader: "From coming up with creative concepts to delivering outstanding campaigns, we're your friendly, fun-loving crew ready to turn your project dreams into reality!",
   caseStudiesTitleList: [
-    // { id: 1, name: "Audio video" },
+    { id: 1, name: "Audio video" },
     { id: 2, name: "Accessibility" },
-    // { id: 3, name: "Chat bot" },
-    // { id: 4, name: "Ed Tech" },
-    // { id: 5, name: "Machine Vision" },
-    // { id: 6, name: "Wellness" },
-    // { id: 7, name: "Industry Platform" },
-    // { id: 8, name: "Manufacturing" },
-    // { id: 9, name: "Agri Tech" },
-    // { id: 10, name: "Ecommerce" },
-    // { id: 11, name: "Sales" },
-    // { id: 12, name: "Audit" },
-    // { id: 13, name: "Fintech" },
+    { id: 3, name: "Chat bot" },
+    { id: 4, name: "Ed Tech" },
+    { id: 5, name: "Machine Vision" },
+    { id: 6, name: "Wellness" },
+    { id: 7, name: "Industry Platform" },
+    { id: 8, name: "Manufacturing" },
+    { id: 9, name: "Agri Tech" },
+    { id: 10, name: "Ecommerce" },
+    { id: 11, name: "Sales" },
+    { id: 12, name: "Audit" },
+    { id: 13, name: "Fintech" },
     { id: 14, name: "Thermal Vision" },
   ],
   caseStudiesList: {
-    // audiovideo: [
-    //   {
-    //     id: 1,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Audio Video Client",
-    //     subHeader: "Audio Video Project",
-    //     routeTo: "/case-studies/audio-video",
-    //   },
-    // ],
+    audiovideo: [
+      {
+        id: 1,
+        image: "/Images/case-studies/project_image.png",
+        header: "Audio Video Client",
+        subHeader: "Audio Video Project",
+        routeTo: "/case-studies/audio-video",
+      },
+    ],
     accessibility: [
       {
         id: 2,
@@ -904,105 +904,105 @@ export const caseStudiesHomePageData = {
         routeTo: "/case-studies/incluway",
       },
     ],
-    // chatbot: [
-    //   {
-    //     id: 3,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Chat Bot Client",
-    //     subHeader: "Chat Bot Project",
-    //     routeTo: "/case-studies/chatbot",
-    //   },
-    // ],
-    // edtech: [
-    //   {
-    //     id: 4,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Ed Tech Client",
-    //     subHeader: "Ed Tech Project",
-    //     routeTo: "/case-studies/edtech",
-    //   },
-    // ],
-    // machinevision: [
-    //   {
-    //     id: 5,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Machine Vision Client",
-    //     subHeader: "Machine Vision Project",
-    //     routeTo: "/case-studies/machine-vision",
-    //   },
-    // ],
-    // wellness: [
-    //   {
-    //     id: 6,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Wellness Client",
-    //     subHeader: "Wellness Project",
-    //     routeTo: "/case-studies/wellness",
-    //   },
-    // ],
-    // industryplatform: [
-    //   {
-    //     id: 7,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Industry Platform Client",
-    //     subHeader: "Industry Platform Project",
-    //     routeTo: "/case-studies/industry-platform",
-    //   },
-    // ],
-    // manufacturing: [
-    //   {
-    //     id: 8,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Manufacturing Client",
-    //     subHeader: "Manufacturing Project",
-    //     routeTo: "/case-studies/manufacturing",
-    //   },
-    // ],
-    // agritech: [
-    //   {
-    //     id: 9,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Agri Tech Client",
-    //     subHeader: "Agri Tech Project",
-    //     routeTo: "/case-studies/agri-tech",
-    //   },
-    // ],
-    // ecommerce: [
-    //   {
-    //     id: 10,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Ecommerce Client",
-    //     subHeader: "Ecommerce Project",
-    //     routeTo: "/case-studies/ecommerce",
-    //   },
-    // ],
-    // sales: [
-    //   {
-    //     id: 11,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Sales Client",
-    //     subHeader: "Sales Project",
-    //     routeTo: "/case-studies/sales",
-    //   },
-    // ],
-    // audit: [
-    //   {
-    //     id: 12,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Audit Client",
-    //     subHeader: "Audit Project",
-    //     routeTo: "/case-studies/audit",
-    //   },
-    // ],
-    // fintech: [
-    //   {
-    //     id: 13,
-    //     image: "/Images/case-studies/project_image.png",
-    //     header: "Fintech Client",
-    //     subHeader: "Fintech Project",
-    //     routeTo: "/case-studies/fintech",
-    //   },
-    // ],
+    chatbot: [
+      {
+        id: 3,
+        image: "/Images/case-studies/project_image.png",
+        header: "Chat Bot Client",
+        subHeader: "Chat Bot Project",
+        routeTo: "/case-studies/chatbot",
+      },
+    ],
+    edtech: [
+      {
+        id: 4,
+        image: "/Images/case-studies/project_image.png",
+        header: "Ed Tech Client",
+        subHeader: "Ed Tech Project",
+        routeTo: "/case-studies/edtech",
+      },
+    ],
+    machinevision: [
+      {
+        id: 5,
+        image: "/Images/case-studies/project_image.png",
+        header: "Machine Vision Client",
+        subHeader: "Machine Vision Project",
+        routeTo: "/case-studies/machine-vision",
+      },
+    ],
+    wellness: [
+      {
+        id: 6,
+        image: "/Images/case-studies/project_image.png",
+        header: "Wellness Client",
+        subHeader: "Wellness Project",
+        routeTo: "/case-studies/wellness",
+      },
+    ],
+    industryplatform: [
+      {
+        id: 7,
+        image: "/Images/case-studies/project_image.png",
+        header: "Industry Platform Client",
+        subHeader: "Industry Platform Project",
+        routeTo: "/case-studies/industry-platform",
+      },
+    ],
+    manufacturing: [
+      {
+        id: 8,
+        image: "/Images/case-studies/project_image.png",
+        header: "Manufacturing Client",
+        subHeader: "Manufacturing Project",
+        routeTo: "/case-studies/manufacturing",
+      },
+    ],
+    agritech: [
+      {
+        id: 9,
+        image: "/Images/case-studies/project_image.png",
+        header: "Agri Tech Client",
+        subHeader: "Agri Tech Project",
+        routeTo: "/case-studies/agri-tech",
+      },
+    ],
+    ecommerce: [
+      {
+        id: 10,
+        image: "/Images/case-studies/project_image.png",
+        header: "Ecommerce Client",
+        subHeader: "Ecommerce Project",
+        routeTo: "/case-studies/ecommerce",
+      },
+    ],
+    sales: [
+      {
+        id: 11,
+        image: "/Images/case-studies/project_image.png",
+        header: "Sales Client",
+        subHeader: "Sales Project",
+        routeTo: "/case-studies/sales",
+      },
+    ],
+    audit: [
+      {
+        id: 12,
+        image: "/Images/case-studies/project_image.png",
+        header: "Audit Client",
+        subHeader: "Audit Project",
+        routeTo: "/case-studies/audit",
+      },
+    ],
+    fintech: [
+      {
+        id: 13,
+        image: "/Images/case-studies/project_image.png",
+        header: "Fintech Client",
+        subHeader: "Fintech Project",
+        routeTo: "/case-studies/fintech",
+      },
+    ],
     thermalvision: [
       {
         id: 14,

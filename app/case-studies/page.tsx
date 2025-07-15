@@ -78,7 +78,7 @@ export default function Page() {
       <div className="flex items-center justify-center">
         <Navbar />
         <div className="w-full flex flex-col overflow-y-scroll bg-primary-text select-none">
-          <div className="w-full h-[100vh] md:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
+          <div className="w-full h-[100vh] md:h-[100vh] lg:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
             <div className="absolute top-0 left-0 w-full h-full">
               {isClient && fetchVideo && (
                 <video
@@ -100,33 +100,33 @@ export default function Page() {
             <img loading="lazy" src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
             <img loading="lazy" src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
             <div
-              className="w-[80%] static md:w-[80%] lg:w-[90%] md:absolute top-[15.25rem] left-[3.125rem] flex flex-wrap flex-col gap-[0.625rem] items-start justify-center"
+              className="w-[80%] absolute left-[1.25rem] bottom-[4.75rem] md:w-[80%] lg:w-[90%] md:left-[3.125rem] md:bottom-[2.5rem] md:top-auto lg:top-[15.25rem] lg:left-[3.125rem] lg:bottom-auto flex flex-wrap flex-col gap-[0.625rem] items-start justify-center"
               style={{
                 transform: `translateY(${translateY}px)`,
                 willChange: "transform",
               }}
             >
-              <div className="syneFont text-[2rem] md:text-[6rem] gradient-text font-bold leading-[1em] -tracking-[0.05em]">
+              <div className="syneFont text-[3.75rem] md:text-[6rem] gradient-text font-bold leading-[1em] -tracking-[0.05em]">
                 {caseStudiesHomePageData.header}
               </div>
-              <div className="interFont max-w-full lg:max-w-1/2 text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
+              <div className="interFont max-w-full lg:max-w-1/2 text-[1rem] md:text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
                 {caseStudiesHomePageData.subHeader}
               </div>
             </div>
-            <div className="absolute top-[85%] -left-[1.5rem] flex flex-row gap-[1rem] items-center justify-center transform rotate-90">
+            <div className="absolute top-[35%] md:top-[50%] left-[-2.85rem] translate-y-[50%] md:translate-y-[-50%] lg:translate-none lg:top-[85%] md:-left-[1.5rem] flex flex-row gap-[1rem] items-center justify-center transform rotate-90">
               <div className="uppercase interFont text-[0.875rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
                 Scroll
               </div>
               <div className="h-full bg-white animate-grow-line" />
             </div>
           </div>
-          <div className="w-full flex flex-row flex-wrap p-[3.125rem] items-center justify-center gap-[0.5rem]">
+          <div className="w-full flex flex-row flex-wrap p-[0_1.25rem_3.125rem_1.25rem] md:p-[3.125rem_3.75rem] items-center justify-start gap-[0.5rem]">
             {caseStudiesHomePageData.caseStudiesTitleList.map((item) => (
               <div
                 key={item.id}
-                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#FF7A3B]/20 border-[1px]  hover:border-[#FF7A3B] hover:shadow-[0px_6px_12px_0px_#FF7A3B40] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name
-                  ? "border-[#FF7A3B] shadow-none bg-[#FF7A3B]/20 text-[#FF7A3B]"
-                  : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#FF7A3B]"
+                className={`syneFont p-[0.625rem_1.25rem] rounded-[2rem] text-[1rem] font-normal leading-[1.2] hover:bg-[#4285F4]/20 border-[1px]  hover:border-[#4285F4] hover:shadow-[0px_6px_12px_0px_#4285F440] cursor-pointer transition-all duration-300 easeTransition ${activeTile === item.name
+                  ? "border-[#4285F4] shadow-none bg-[#4285F4]/20 text-[#4285F4]"
+                  : "border-[#FFFFFF]/50 bg-[#FFFFFF]/4 text-white hover:text-[#4285F4]"
                   } `}
                 onClick={() => {
                   handleTileClick(item);
@@ -136,11 +136,11 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <div className="flex flex-row flex-wrap items-start gap-[0.563rem] px-[3.125rem] pb-[3.125rem]">
+          <div className="flex flex-row flex-wrap items-start justify-center lg:justify-start md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-[3.125rem]">
             {caseStudyCards.map((item: CaseStudyCard, index: number) => (
               <motion.div
                 key={index}
-                className="w-[23.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
+                className="w-full md:w-[20.75rem] lg:w-[23.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{
                   opacity: 1,
@@ -152,7 +152,7 @@ export default function Page() {
                   },
                 }}
               >
-                <div className='w-[22.313rem] h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'>
+                <div className='w-full h-full md:w-[19.5rem] md:h-[11.5rem] lg:w-[22.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'>
                   <img
                     loading="lazy"
                     src={item.image}
@@ -163,11 +163,11 @@ export default function Page() {
                     }}
                   />
                 </div>
-                <div className="flex flex-col w-full flex-wrap pl-[1.25rem] gap-[0.875rem]">
-                  <div className="uppercase text-left syneFont text-[1.5rem] text-white font-semibold leading-[1.2em]">
+                <div className="flex flex-col w-full flex-wrap">
+                  <div className="uppercase text-left syneFont text-[1.375rem] md:text-[1.25rem] text-white font-semibold leading-[2em]">
                     {item.header}
                   </div>
-                  <div className="uppercase text-left interFont text-[0.875rem] text-[#71717A] font-medium leading-[150%] -tracking-[0.05em]">
+                  <div className="text-left interFont text-[0.875rem] text-[#71717A] font-medium leading-[150%] -tracking-[0.05em]">
                     {item.subHeader}
                   </div>
                 </div>
