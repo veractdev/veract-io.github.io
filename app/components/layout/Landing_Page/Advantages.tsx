@@ -14,7 +14,7 @@ export default function Advantages() {
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
   const [isHovered, setIsHovered] = useState(false);
 
-  const { caseStudyState, setCaseStudyState } = getCaseStudyState();
+  const { caseStudyState } = getCaseStudyState();
 
   useEffect(() => {
     setLoaded(true);
