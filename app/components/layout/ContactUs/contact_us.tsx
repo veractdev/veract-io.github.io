@@ -15,6 +15,7 @@ export default function Contact_Us() {
   const [countryCode, setCountryCode] = useState("+91");
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submissionFailed, setSubmissionFailed] = useState(false);
 
   // Touched fields for onBlur tracking
   const [touchedFields, setTouchedFields] = useState({
@@ -33,34 +34,6 @@ export default function Contact_Us() {
   const handleBlur = (field: keyof typeof touchedFields) => {
     // setTouchedFields((prev) => ({ ...prev, [field]: true }));
     // this line is commented out for future purpose and error red are for placeholder purpose in future changes with respect to design
-    emailjs
-      .send(
-        "service_pvsdbjm",
-        "template_qm07hdm",
-        {
-          title: "New Contact Submission",
-          first_name: firstName,
-          last_name: lastName,
-          company_name: companyName,
-          email: email,
-          phone: `${mobileNumber}`,
-          message: message,
-          name: `${firstName} ${lastName}`,
-        },
-        "qwdRlJDtP3rT8oyie"
-      )
-      .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          resetFormFields();
-          setTimeout(() => setSubmitted(false), 3000);
-        },
-        (error) => {
-          console.error("Email error:", error.text);
-          setSubmitted(false);
-        }
-      );
-
     switch (field) {
       case "firstName":
         setErrors((prev) => ({
@@ -106,10 +79,37 @@ export default function Contact_Us() {
     mobileNumber.trim() !== "" &&
     !isOnlyCountryCode(mobileNumber, countryCode);
 
-  const handleSubmitContact = () => {
+  const handleSubmitContact = async () => {
     if (!formValid || isLoading) return;
-
     setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/contact-us", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${firstName} ${lastName}`.trim(),
+          email,
+          phone: `+${mobileNumber}`,
+          message,
+          company: companyName,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        resetFormFields();
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        setSubmissionFailed(true);
+        setTimeout(() => setSubmissionFailed(false), 3000);
+      }
+    } catch (error) {
+      setSubmissionFailed(true);
+      setTimeout(() => setSubmissionFailed(false), 3000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const resetFormFields = () => {
@@ -303,12 +303,14 @@ export default function Contact_Us() {
               {/* Submit Button */}
               <div
                 className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
-                  formValid && !isLoading && !submitted
+                  formValid && !isLoading && !submitted && !submissionFailed
                     ? "bg-[#4285F4] cursor-pointer text-white"
                     : isLoading
                     ? "bg-[#4285F4]/80 text-white cursor-wait"
                     : submitted
                     ? "bg-[#4285F4] text-white cursor-default"
+                    : submissionFailed
+                    ? "bg-red-500 cursor-not-allowed text-white/15"
                     : "bg-[#4285F4]/50 cursor-not-allowed text-white/15"
                 }`}
                 onClick={() => {
@@ -324,13 +326,14 @@ export default function Contact_Us() {
                   />
                 ) : submitted ? (
                   "Thank You"
+                ) : submissionFailed ? (
+                  "Something went wrong"
                 ) : (
-                  "Submit"
+                  "Submit Now"
                 )}
               </div>
             </div>
           </div>
-
           {/* Right Side Info (same as before, not repeated here for brevity) */}
           <div className="w-full flex flex-col md:flex-row lg:flex-col flex-wrap gap-[1.5rem] items-start justify-between max-w-full lg:max-w-[292px]">
             {/* email */}
@@ -346,11 +349,9 @@ export default function Contact_Us() {
                 <img src="/Images/horizantal_design.png" alt="design-icon" />
                 <a
                   href="mailto:info@veract.io"
-                  className="text-[16px] font-medium text-white/50 cursor-pointer"
+                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
-                  <a href="mailto:info@veract.io hover:text-white">
-                    info@veract.io
-                  </a>
+                  info@veract.io
                 </a>
               </div>
             </div>
@@ -367,19 +368,15 @@ export default function Contact_Us() {
                 <img src="/Images/horizantal_design.png" alt="design-icon" />
                 <a
                   href="tel:+919789991565"
-                  className="text-[16px] font-medium text-white/50 cursor-pointer"
+                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
-                  <a href="tel:+919789991565 hover:text-white">
-                    +91 97899 91565
-                  </a>
+                  +91 97899 91565
                 </a>
                 <a
                   href="tel:+919962837650"
-                  className="text-[16px] font-medium text-white/50 cursor-pointer"
+                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
-                  <a href="tel:+919962837650 hover:text-white">
-                    +91 99628 37650
-                  </a>
+                  +91 99628 37650
                 </a>
               </div>
             </div>
@@ -395,12 +392,12 @@ export default function Contact_Us() {
                 </div>
                 <img src="/Images/horizantal_design.png" alt="design-icon" />
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=17,+First+street,+Tansi+Nagar,+Velachery,+Chennai+-+600042"
+                  href="https://maps.app.goo.gl/raqAmwGuLW77jdLf8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[16px] font-medium text-white/50 hover:text-white"
                 >
-                  17, First street, Tansi Nagar, Velachery, Chennai - 600042
+                 37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam, Chennai - 600 091
                 </a>
               </div>
             </div>

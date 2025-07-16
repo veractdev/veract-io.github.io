@@ -103,6 +103,12 @@ export default function Page() {
   //     }
   // }, [])
 
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     loaded && (
       <LenisProvider>
@@ -205,7 +211,11 @@ export default function Page() {
                   <div
                     className='relative group w-full h-[13.188rem] md:w-[19.5rem] md:h-[11.5rem] lg:w-[24.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
                     onClick={() => {
-                      router.push(item.routeTo);
+                      if (item.routeTo) {
+                        router.push(item.routeTo);
+                      } else {
+                        router.push('/contact-us');
+                      }
                     }}
                   >
                     <img

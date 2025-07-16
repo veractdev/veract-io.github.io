@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Navbar from '../../components/layout/Navbar';
 import UserServices from '../../components/layout/Casestudy/Casestudy_UserServices';

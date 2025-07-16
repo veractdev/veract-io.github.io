@@ -893,7 +893,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Audio Video Client",
         subHeader: "Audio Video Project",
-        routeTo: "/case-studies/audio-video",
+        routeTo: "",
       },
     ],
     accessibility: [
@@ -913,7 +913,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Chat Bot Client",
         subHeader: "Chat Bot Project",
-        routeTo: "/case-studies/chatbot",
+        routeTo: "",
       },
     ],
     edtech: [
@@ -923,7 +923,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Ed Tech Client",
         subHeader: "Ed Tech Project",
-        routeTo: "/case-studies/edtech",
+        routeTo: "",
       },
     ],
     machinevision: [
@@ -933,7 +933,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Machine Vision Client",
         subHeader: "Machine Vision Project",
-        routeTo: "/case-studies/machine-vision",
+        routeTo: "",
       },
     ],
     wellness: [
@@ -943,7 +943,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Wellness Client",
         subHeader: "Wellness Project",
-        routeTo: "/case-studies/wellness",
+        routeTo: "",
       },
     ],
     industryplatform: [
@@ -953,7 +953,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Industry Platform Client",
         subHeader: "Industry Platform Project",
-        routeTo: "/case-studies/industry-platform",
+        routeTo: "",
       },
     ],
     ecommerce: [
@@ -963,7 +963,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Ecommerce Client",
         subHeader: "Ecommerce Project",
-        routeTo: "/case-studies/ecommerce",
+        routeTo: "",
       },
     ],
     sales: [
@@ -973,7 +973,7 @@ export const caseStudiesHomePageData = {
         hover_image: "https://picsum.photos/200/300",
         header: "Sales Client",
         subHeader: "Sales Project",
-        routeTo: "/case-studies/sales",
+        routeTo: "",
       },
     ],
     thermalvision: [
