@@ -134,10 +134,10 @@ export default function Navbar() {
                                     }}
                                 >
                                     {item.id === 3 && (
-                                        <img src="/Images/LandingPage/Banner/Join.svg" alt="star icon" className="absolute top-0 right-[-5px]" />
+                                        <img src="/Images/LandingPage/Banner/Join.svg" alt="star icon" className="absolute top-[7px] right-[9px]" />
                                     )}
                                     <div
-                                        className={`syneFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
+                                        className={`syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem]' : 'p-[0.875rem_1rem]'} text-[1rem] leading-[1em] 
                                             tracking-[-0.05em] text-nowrap ${navbarState === item.id && item.status == 'active'
                                                 ? "text-primary-blue"
                                                 : "text-white"
