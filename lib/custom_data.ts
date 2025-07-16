@@ -892,21 +892,21 @@ export const caseStudiesHomePageData = {
           image: "/Images/case-studies/project_image.png",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
+          routeTo: "",
         },
         {
           id: 2,
           image: "/Images/case-studies/project_image.png",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
+          routeTo: "",
         },
         {
           id: 3,
           image: "/Images/case-studies/project_image.png",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
+          routeTo: "",
         },
     ],
     accessibility: [
@@ -924,7 +924,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Chat Bot Client",
         subHeader: "Chat Bot Project",
-        routeTo: "/case-studies/chatbot",
+        routeTo: "",
       },
     ],
     edtech: [
@@ -933,7 +933,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Ed Tech Client",
         subHeader: "Ed Tech Project",
-        routeTo: "/case-studies/edtech",
+        routeTo: "",
       },
     ],
     machinevision: [
@@ -942,7 +942,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Machine Vision Client",
         subHeader: "Machine Vision Project",
-        routeTo: "/case-studies/machine-vision",
+        routeTo: "",
       },
     ],
     wellness: [
@@ -951,7 +951,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Wellness Client",
         subHeader: "Wellness Project",
-        routeTo: "/case-studies/wellness",
+        routeTo: "",
       },
     ],
     industryplatform: [
@@ -960,7 +960,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Industry Platform Client",
         subHeader: "Industry Platform Project",
-        routeTo: "/case-studies/industry-platform",
+        routeTo: "",
       },
     ],
     manufacturing: [
@@ -969,7 +969,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Manufacturing Client",
         subHeader: "Manufacturing Project",
-        routeTo: "/case-studies/manufacturing",
+        routeTo: "",
       },
     ],
     agritech: [
@@ -978,7 +978,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Agri Tech Client",
         subHeader: "Agri Tech Project",
-        routeTo: "/case-studies/agri-tech",
+        routeTo: "",
       },
     ],
     ecommerce: [
@@ -987,7 +987,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Ecommerce Client",
         subHeader: "Ecommerce Project",
-        routeTo: "/case-studies/ecommerce",
+        routeTo: "",
       },
     ],
     sales: [
@@ -996,7 +996,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Sales Client",
         subHeader: "Sales Project",
-        routeTo: "/case-studies/sales",
+        routeTo: "",
       },
     ],
     audit: [
@@ -1005,7 +1005,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Audit Client",
         subHeader: "Audit Project",
-        routeTo: "/case-studies/audit",
+        routeTo: "",
       },
     ],
     fintech: [
@@ -1014,7 +1014,7 @@ export const caseStudiesHomePageData = {
         image: "/Images/case-studies/project_image.png",
         header: "Fintech Client",
         subHeader: "Fintech Project",
-        routeTo: "/case-studies/fintech",
+        routeTo: "",
       },
     ],
     thermalvision: [

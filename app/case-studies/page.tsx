@@ -102,6 +102,12 @@ export default function Page() {
   //     }
   // }, [])
 
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     loaded && (
       <LenisProvider>
@@ -208,7 +214,11 @@ export default function Page() {
                       alt="project image"
                       className="w-full h-full object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                       onClick={() => {
-                        router.push(item.routeTo);
+                        if (item.routeTo) {
+                          router.push(item.routeTo);
+                        } else {
+                          router.push('/contact-us');
+                        }
                       }}
                     />
                   </div>
