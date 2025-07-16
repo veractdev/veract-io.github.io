@@ -137,7 +137,7 @@ export default function ShowReel() {
               playsInline
               controls={false}
             >
-              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
+              <source src={`${isMobileView ? LandingPageData.showReel.video[2] : isTabView ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </motion.div>
@@ -186,7 +186,7 @@ export default function ShowReel() {
               playsInline
               controls={false}
             >
-              <source src={`/SampleVideo_1280x720_10mb.mp4`} type="video/mp4" />
+              <source src={`${isMobileView ? LandingPageData.showReel.video[2] : isTabView ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <motion.div
