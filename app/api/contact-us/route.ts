@@ -14,11 +14,9 @@ export async function POST(request: NextRequest) {
   }
 
   /** Create email passkey in gmail account */
-  const smtpUser = "sruthiamutharani@gmail.com";
-  const smtpPass = "bibn ruvm dswr rxuj";
-
-  /** Create receiver email */
-  const receiver = "sruthiamutharani@gmail.com";
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const receiver = process.env.SMTP_RECEIVER || smtpUser;
 
   // Create a transporter
   const transporter = nodemailer.createTransport({
