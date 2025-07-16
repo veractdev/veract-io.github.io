@@ -713,7 +713,7 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            title: "Custom Agent",
+            title: "Agentic AI",
             link: "/agent",
             status: "active"
           },
