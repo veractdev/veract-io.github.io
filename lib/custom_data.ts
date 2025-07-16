@@ -400,19 +400,19 @@ export const LandingPageData = {
     typwriting_animation_list: [
       {
         id: 1,
-        word: "mobile app", //mobile app
+        word: "Custom/Mobile Application", //mobile app
       },
       {
         id: 2,
-        word: "web solution", //web app
+        word: "Industrial IoT Solutions", //web app
       },
       {
         id: 3,
-        word: "ai powered solution", //AI
+        word: "Web Application Development", //AI
       },
       {
         id: 4,
-        word: "iot solution", //IoT
+        word: "AI Agentic Workflows", //IoT
       }
     ],
     description_primary:
@@ -872,7 +872,7 @@ export const AgentPageData = {
 
 export const caseStudiesHomePageData = {
   header: "Our Projects",
-  subHeader: "From coming up with creative concepts to delivering outstanding campaigns, we're your friendly, fun-loving crew ready to turn your project dreams into reality!",
+  subHeader: "From designing intelligent concepts to delivering scalable solutions, we're your agile, expert-driven team making technology work for you!",
   caseStudiesTitleList: [
     { id: 1, name: "Thermal Vision" },
     { id: 2, name: "Accessibility" },
