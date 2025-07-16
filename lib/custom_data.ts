@@ -774,8 +774,8 @@ export const LandingPageData = {
           {
             id: 2,
             title: "Services",
-            link: "",
-            status: "inactive"
+            link: "scroll-to-section",
+            status: "active"
           },
           {
             id: 3,

@@ -124,15 +124,33 @@ export default function Footer() {
             <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
               <div className='openSansFont text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]'>{details.quickLinks.company.title}</div>
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
-                {details.quickLinks.company.links.map((link) => (
-                  <div key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}
-                    onClick={() => {
-                      if (link.status == 'active') {
-                        router.push(link.link);
-                      }
-                    }}
-                  >{link.title}</div>
-                ))}
+                {
+                  details.quickLinks.company.links.map(
+                    (link) => (
+                      <div
+                        key={link.id}
+                        className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}
+                        onClick={
+                          () => {
+                            if (link.status == 'active' && !link.link.startsWith('scroll-to-section')) {
+                              router.push(link.link);
+                            }
+                            if (link.link.startsWith('scroll-to-section')) {
+                              window.scrollTo(
+                                {
+                                  top: document.getElementById(link.title.toLowerCase())?.offsetTop,
+                                  behavior: 'smooth'
+                                }
+                              );
+                            }
+                          }
+                        }
+                      >
+                        {link.title}
+                      </div>
+                    )
+                  )
+                }
               </div>
             </div>
             <div className='flex flex-col items-start justify-center gap-[1.25rem]'>
@@ -201,12 +219,12 @@ export default function Footer() {
               <div className='flex flex-col items-start justify-center gap-[0.625rem]'>
                 {details.quickLinks.company.links.map((link) => (
                   <div
-                  onClick={() => {
-                    if (link.status == 'active') {
-                      router.push(link.link);
-                    }
-                  }}
-                  key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}>{link.title}</div>
+                    onClick={() => {
+                      if (link.status == 'active') {
+                        router.push(link.link);
+                      }
+                    }}
+                    key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}>{link.title}</div>
                 ))}
               </div>
             </div>
