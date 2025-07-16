@@ -408,7 +408,7 @@ export const LandingPageData = {
       },
       {
         id: 3,
-        word: "Web Application Development", //AI
+        word: "Web Application", //AI
       },
       {
         id: 4,
