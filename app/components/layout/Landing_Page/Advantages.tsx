@@ -112,10 +112,6 @@ export default function Advantages() {
     }
   };
 
-  useEffect(() => {
-    console.log('caseStudyState: ', caseStudyState);
-  }, [caseStudyState])
-
   return (
     loaded && (
       <div className='w-full h-max flex flex-col items-center justify-center relative z-20 bg-primary-text'>
