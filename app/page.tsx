@@ -9,6 +9,7 @@ import We_Work_With from "./components/layout/Landing_Page/We_Work_With";
 import Testimonials from "./components/layout/Landing_Page/Testimonials";
 import Footer from "./components/layout/Landing_Page/Footer";
 import LenisProvider from "./LenisProvider";
+import Services from "./components/layout/Landing_Page/Services";
 
 export default function Page() {
   const [loader, setLoader] = useState(false);
@@ -42,7 +43,7 @@ export default function Page() {
           <ShowReel />
           <About_Us />
           <Advantages />
-          {/* <Services /> */}
+          <Services />
           <We_Work_With />
           <Testimonials />
           <Footer />

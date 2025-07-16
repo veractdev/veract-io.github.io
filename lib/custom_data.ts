@@ -575,6 +575,72 @@ export const LandingPageData = {
       },
     ],
   },
+  services: {
+    title: "Our Service",
+    description: "Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.",
+    service_list: [
+      {
+        number: "[01]",
+        title: "Digital Transformation Strategy for Modern Businesses",
+        desc: [
+          'Modernize operations using proven digital transformation tools and workflows.',
+          'Web, mobile, or desktop applications — your stack is fully covered.'
+        ],
+        highlighted_desc: [
+          'Modernize operations using proven <span class="text-primary-blue">digital transformation</span> tools and workflows.',
+          '<span class="text-primary-blue">Web, mobile, or desktop</span> applications — your stack is fully covered.'
+        ]
+      },
+      {
+        number: "[02]",
+        title: "Development Services for Startup Founders",
+        desc: [
+          'Build faster, smarter, and with clarity.',
+          'Our research-backed approach helps founders make informed product decisions.'
+        ],
+        highlighted_desc: [
+          'Build <span class="text-primary-blue">faster, smarter</span>, and with clarity.',
+          'Our research-backed approach helps founders make informed <span class="text-primary-blue">product decisions</span>.'
+        ]
+      },
+      {
+        number: "[03]",
+        title: "Industrial IoT for Smarter Operations",
+        desc: [
+          'Connect IoT devices to monitor, analyze, and automate in real time.',
+          'Improve efficiency, reduce downtime, and act on actionable insights.'
+        ],
+        highlighted_desc: [
+          'Connect <span class="text-primary-blue">IoT devices</span> to monitor, analyze, and automate in real time.',
+          'Improve <span class="text-primary-blue">efficiency</span>, reduce <span class="text-primary-blue">downtime</span>, and act on actionable <span class="text-primary-blue">insights</span>.'
+        ]
+      },
+      {
+        number: "[04]",
+        title: "AI & Agentic AI for Intelligent Decision-Making",
+        desc: [
+          'Leverage AI for smarter decisions and data-driven growth.',
+          'Deploy agentic AI to automate tasks and adapt intelligently.'
+        ],
+        highlighted_desc: [
+          'Leverage <span class="text-primary-blue">AI</span> for smarter decisions and data-driven growth.',
+          'Deploy <span class="text-primary-blue">agentic AI</span> to automate tasks and adapt intelligently.'
+        ]
+      },
+      {
+        number: "[05]",
+        title: "Machine Vision for Quality Control and Inspection",
+        desc: [
+          'Automated defect detection, inspection, and classification at industrial scale.',
+          'Boost precision, reduce errors, and scale with confidence.'
+        ],
+        highlighted_desc: [
+          'Automated defect <span class="text-primary-blue">detection, inspection</span>, and classification at industrial scale.',
+          'Boost precision, <span class="text-primary-blue">reduce errors</span>, and scale with <span class="text-primary-blue">confidence</span>.'
+        ]
+      },
+    ]
+  },
   we_work_with: {
     title: "We Work With",
     sub_title: "brands in",
