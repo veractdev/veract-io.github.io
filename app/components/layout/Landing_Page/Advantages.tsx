@@ -241,10 +241,11 @@ export default function Advantages() {
                         // setCaseStudyState(item.route);
                       }
                     }}
-                    className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
+                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
+                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
@@ -263,11 +264,11 @@ export default function Advantages() {
                         // setCaseStudyState(item.route);
                       }
                     }}
-                    className={`w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img loading="lazy" src={item.image} alt={item.title} className='w-[100%] h-[100%] object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' />
-                  </div>
+                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
+                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out' />                  </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
                     <div className='uppercase interFont text-[0.875rem] text-[#71717A] font-normal leading-[1.4em] tracking-[0.05em]'>{item.description}</div>

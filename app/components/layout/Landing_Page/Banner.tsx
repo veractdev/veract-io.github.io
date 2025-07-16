@@ -292,36 +292,38 @@ export default function Banner() {
               src={LandingPageData.banner.banner_image_list[0].image}
               alt="logo image"
               className="w-[2.563rem] object-cover"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3, delay: 1, ease: "easeOut" }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1.3, ease: "easeOut" }}
             />
 
-            <div className="flex flex-col items-center justify-center gap-[0.08rem]">
+            <div className="flex flex-col items-center justify-center gap-[0.5rem]">
               <motion.img
+                loading='lazy'
                 src={LandingPageData.banner.banner_image_list[1].image}
                 alt="logo image"
                 className="w-[3.938rem] object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
               />
-              {/* <motion.img
+              <motion.img
+                loading='lazy'
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 1.5, ease: "easeOut" }}
                 src={LandingPageData.banner.banner_image_list[2].image}
                 alt="logo image"
                 className="w-[3.938rem] object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
-              /> */}
+              />
             </div>
 
             <motion.img
               src={LandingPageData.banner.banner_image_list[3].image}
               alt="logo image"
               className="w-[3.563rem] object-cover"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}
             />
           </div>

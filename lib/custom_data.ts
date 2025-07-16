@@ -175,31 +175,31 @@ export const caseStudyData = {
         {
           number: "[01]",
           title: "Thermal Imaging Integration",
-          img: "/Images/case-studies/thermal/KeyFeatures/Thermal imaging integration.png",
+          img: "/Images/case-studies/thermal/KeyFeatures/Customizable Interface.webp",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[02]",
           title: "Real-Time Data Processing",
-          img: "/Images/case-studies/thermal/KeyFeatures/real time data processing.png",
+          img: "/Images/case-studies/thermal/KeyFeatures/Seamless Web Integration.webp",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[03]",
           title: "Camera & IoT Synchronization",
-          img: "/Images/case-studies/thermal/KeyFeatures/camera and iot.jpg",
+          img: "/Images/case-studies/thermal/KeyFeatures/Lightweight & Optimized Performance.webp",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[04]",
           title: "Low-Latency Data Transfer",
-          img: "/Images/case-studies/thermal/KeyFeatures/LOW latency data transfer.png",
+          img: "/Images/case-studies/thermal/KeyFeatures/Real-Time Accessibility Controls.webp",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
         {
           number: "[05]",
           title: "User-Friendly Desktop Interface",
-          img: "/Images/case-studies/thermal/KeyFeatures/user friendly desktop interface.png",
+          img: "/Images/case-studies/thermal/KeyFeatures/Cross-Platform Compatibility.webp",
           desc: "Enables precise monitoring of temperature variations to identify early signs of health issues.",
         },
       ],
@@ -350,31 +350,31 @@ export const caseStudyData = {
         {
           number: "[01]",
           title: "Seamless Web Integration",
-          img: "/Images/case-studies/incluway/KeyFeatures/Lowvision.png",
+          img: "/Images/case-studies/incluway/KeyFeatures/Seamless Web Integration.webp",
           desc: "Effortlessly integrates into any website with a single line of code, ensuring rapid deployment and minimal development effort.",
         },
         {
           number: "[02]",
           title: "Real-Time Accessibility Controls",
-          img: "/Images/case-studies/incluway/KeyFeatures/Content.png",
+          img: "/Images/case-studies/incluway/KeyFeatures/Real-Time Accessibility Controls.webp",
           desc: "Offers live adjustments for text size, contrast, animation toggles, and more—empowering users to personalize their browsing experience instantly.",
         },
         {
           number: "[03]",
           title: "Cross-Platform Compatibility",
-          img: "/Images/case-studies/incluway/KeyFeatures/mocks3.png",
+          img: "/Images/case-studies/incluway/KeyFeatures/Cross-Platform Compatibility.webp",
           desc: "Ensures consistent performance across all major browsers and devices, maintaining accessibility regardless of user environment.",
         },
         {
           number: "[04]",
           title: "Lightweight & Optimized Performance",
-          img: "/Images/case-studies/incluway/KeyFeatures/Color.png",
+          img: "/Images/case-studies/incluway/KeyFeatures/Lightweight & Optimized Performance.webp",
           desc: "Built with performance in mind, the widget loads quickly, consumes minimal resources, and doesn’t interfere with site speed or SEO.",
         },
         {
           number: "[05]",
           title: "Customizable Interface",
-          img: "/Images/case-studies/incluway/KeyFeatures/Customize.png",
+          img: "/Images/case-studies/incluway/KeyFeatures/Customizable Interface.webp",
           desc: "Designed with modularity, allowing brands to style, position, and configure the widget to match their visual identity and user needs.",
         },
       ],
@@ -425,19 +425,19 @@ export const LandingPageData = {
     banner_image_list: [
       {
         id: 1,
-        image: "/Images/LandingPage/Banner/BNI logo.svg",
+        image: "/Images/LandingPage/Banner/BNI.svg",
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Banner/clutch_without_star.svg",
+        image: "/Images/LandingPage/Banner/Clutch.svg",
       },
       {
         id: 3,
-        image: "",
+        image: "/Images/LandingPage/Banner/5 stars.svg",
       },
       {
         id: 4,
-        image: "/Images/LandingPage/Banner/ethercat.gif",
+        image: "/Images/LandingPage/Banner/Ethercat_logo.svg",
       },
     ],
     banner_carousel_list: [
@@ -540,6 +540,7 @@ export const LandingPageData = {
       {
         id: 1,
         image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
+        hover_image: "https://picsum.photos/200/300",
         title: "accessibility",
         description: "accessibility project",
         status: "active",
@@ -548,6 +549,7 @@ export const LandingPageData = {
       {
         id: 2,
         image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        hover_image: "https://picsum.photos/200/300",
         title: "infrared thermography",
         description: "thermal imaging detects mastitis in dairy cattle",
         status: "active",
@@ -556,6 +558,7 @@ export const LandingPageData = {
       {
         id: 3,
         image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
+        hover_image: "https://picsum.photos/200/300",
         title: "e-commerce",
         description: "payment enabled e-commerce web application",
         status: "inactive",
@@ -564,6 +567,7 @@ export const LandingPageData = {
       {
         id: 4,
         image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
+        hover_image: "https://picsum.photos/200/300",
         title: "ed tech",
         description: "education platform",
         status: "inactive",
@@ -890,6 +894,7 @@ export const caseStudiesHomePageData = {
         {
           id: 1,
           image: "/Images/case-studies/project_image.png",
+          hover_image: "https://picsum.photos/200/300",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
           routeTo: "/case-studies/audio-video",
@@ -897,6 +902,7 @@ export const caseStudiesHomePageData = {
         {
           id: 2,
           image: "/Images/case-studies/project_image.png",
+          hover_image: "https://picsum.photos/200/300",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
           routeTo: "/case-studies/audio-video",
@@ -904,6 +910,7 @@ export const caseStudiesHomePageData = {
         {
           id: 3,
           image: "/Images/case-studies/project_image.png",
+          hover_image: "https://picsum.photos/200/300",
           header: "Audio Video Client",
           subHeader: "Audio Video Project",
           routeTo: "/case-studies/audio-video",
@@ -913,6 +920,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "accessibility",
         subHeader: "accessibility project",
         routeTo: "/case-studies/incluway",
@@ -922,6 +930,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Chat Bot Client",
         subHeader: "Chat Bot Project",
         routeTo: "/case-studies/chatbot",
@@ -931,6 +940,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Ed Tech Client",
         subHeader: "Ed Tech Project",
         routeTo: "/case-studies/edtech",
@@ -940,6 +950,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Machine Vision Client",
         subHeader: "Machine Vision Project",
         routeTo: "/case-studies/machine-vision",
@@ -949,6 +960,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Wellness Client",
         subHeader: "Wellness Project",
         routeTo: "/case-studies/wellness",
@@ -958,6 +970,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Industry Platform Client",
         subHeader: "Industry Platform Project",
         routeTo: "/case-studies/industry-platform",
@@ -967,6 +980,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Manufacturing Client",
         subHeader: "Manufacturing Project",
         routeTo: "/case-studies/manufacturing",
@@ -976,6 +990,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Agri Tech Client",
         subHeader: "Agri Tech Project",
         routeTo: "/case-studies/agri-tech",
@@ -985,6 +1000,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Ecommerce Client",
         subHeader: "Ecommerce Project",
         routeTo: "/case-studies/ecommerce",
@@ -994,6 +1010,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Sales Client",
         subHeader: "Sales Project",
         routeTo: "/case-studies/sales",
@@ -1003,6 +1020,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Audit Client",
         subHeader: "Audit Project",
         routeTo: "/case-studies/audit",
@@ -1012,6 +1030,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/project_image.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "Fintech Client",
         subHeader: "Fintech Project",
         routeTo: "/case-studies/fintech",
@@ -1021,6 +1040,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        hover_image: "https://picsum.photos/200/300",
         header: "infrared thermography",
         subHeader: "thermal imaging detects mastitis in dairy cattle",
         routeTo: "/case-studies/thermal",

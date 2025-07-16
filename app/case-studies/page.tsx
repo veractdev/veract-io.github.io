@@ -12,6 +12,7 @@ interface CaseStudyCard {
   image: string;
   header: string;
   subHeader: string;
+  hover_image: string;
 }
 export default function Page() {
 
@@ -201,15 +202,23 @@ export default function Page() {
                     },
                   }}
                 >
-                  <div className='w-full h-full md:w-[19.5rem] md:h-[11.5rem] lg:w-[22.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'>
+                  <div
+                    className='relative group w-full h-full md:w-[19.5rem] md:h-[11.5rem] lg:w-[22.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
+                    onClick={() => {
+                      router.push(item.routeTo);
+                    }}
+                  >
                     <img
                       loading="lazy"
                       src={item.image}
                       alt="project image"
-                      className="w-full h-full object-cover hover:scale-105 transition-all duration-300 ease-in-out"
-                      onClick={() => {
-                        router.push(item.routeTo);
-                      }}
+                      className="absolute w-full h-full object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out"
+                    />
+                    <img
+                      loading='lazy'
+                      src={item.hover_image}
+                      alt={item.header}
+                      className='absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out'
                     />
                   </div>
                   <div className="flex flex-col w-full flex-wrap">
