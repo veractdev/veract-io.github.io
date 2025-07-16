@@ -19,9 +19,9 @@ export default function Services() {
         <div className='w-full h-max bg-black overflow-x-hidden flex flex-col items-center justify-center relative z-50 py-[0_6.25rem]'>
             <div className='w-full flex flex-col items-center justify-center gap-[0.625rem] py-[6.25rem_3.125rem] lg:py-[5.875rem_3.125rem]'>
                 <div className='uppercase syneFont text-[2.5rem] text-white font-bold -tracking-[0.05rem] leading-[3.125rem]'>Our <span className='text-primary-blue'>Service</span></div>
-                <div className='w-full lg:w-[50rem] px-[1.5rem] lg:px-0 interFont text-[1.125rem] text-white font-normal leading-[1.8em] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
+                <div className='w-full lg:w-[50rem] px-[1.5rem] md:px-[4.375rem] lg:px-0 interFont text-[1.125rem] text-white font-normal leading-[1.8em] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
             </div>
-            <div className="flex flex-col w-full lg:w-[65rem] px-[1.5rem] lg:px-0 overflow-x-hidden">
+            <div className="flex flex-col w-full lg:w-[65rem] px-[1.5rem] md:px-[4.375rem] lg:px-0 overflow-x-hidden">
                 {LandingPageData.services.service_list.map((feature, idx) =>
                     <motion.div
                         layout
@@ -33,7 +33,7 @@ export default function Services() {
                         transition={{ duration: 0.6, delay: idx === 0 ? 0.15 : idx * 0.15, }}
                     >
                         <div className='flex flex-col lg:flex-row items-start justify-start gap-[0.938rem] lg:gap-[1.25rem]'>
-                            <div className="interFont pt-[0.5rem] text-[1.125rem] text-white font-medium leading-[1.4em]">{feature.number}</div>
+                            <div className="interFont pt-0 lg:pt-[0.5rem] text-[1.125rem] text-white font-medium leading-[1.4em]">{feature.number}</div>
                             <div className="geistFont w-full lg:w-[30.5rem] text-[1.75rem] lg:text-[2.5rem] text-white font-medium leading-[1.2em]">{feature.title}</div>
                         </div>
                         <div className='w-full lg:w-[30rem] static pl-0 lg:pl-[1.25rem] lg:absolute right-0 transform lg:group-hover:delay-200 lg:translate-x-full lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 transition-all duration-300 ease-in-out interFont text-white text-[0.875rem] lg:text-[1.125rem] font-medium leading-[1.4em] flex flex-col'>
