@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
 import AgentRobot from "./AgentRobot";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 interface Agent {
   id: number;
   name: string;
@@ -12,6 +13,7 @@ interface Agent {
 export default function MultiAgent() {
   const [loaded, setLoaded] = useState(false);
   const [agentsList, setAgentsList] = useState<Agent[]>([]);
+  
   useEffect(() => {
     setLoaded(true);
     setAgentsList([
@@ -65,9 +67,41 @@ export default function MultiAgent() {
       },
     ]);
   }, []);
+  
+  useEffect(() => {
+    if (!loaded) return;
+  
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray<HTMLElement>('.fade-in-up').forEach((el) => {
+        gsap.fromTo(
+          el,
+          {
+            opacity: 0,
+            y: 50,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+    });
+  
+    ScrollTrigger.refresh();
+  
+    return () => ctx.revert();
+  }, [loaded]);
+
   return (
     loaded && (
-      <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[364.5px]  pb-[159px]">
+      <div className="relative w-full h-max flex flex-col items-center justify-center lg:pb-[260px]  pb-[159px]">
         <AgentTitle
           title="Multi Agent"
           title_description="Optimize Operations Using Intelligent Collaborative Agents"
@@ -83,7 +117,7 @@ export default function MultiAgent() {
             {agentsList.map((agent: Agent) => (
               <div
                 key={agent.id}
-                className={`absolute ${agent.position} lg:drop-shadow-[0px_0px_15.7px_#4285F4] drop-shadow-[0px_0px_4.89px_#4285F4] z-[200]`}
+                className={`fade-in-up absolute ${agent.position} lg:drop-shadow-[0px_0px_15.7px_#4285F4] drop-shadow-[0px_0px_4.89px_#4285F4] z-[200]`}
               >
                 <AgentRobot agent={agent} />
               </div>

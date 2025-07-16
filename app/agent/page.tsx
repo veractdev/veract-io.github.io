@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
       <LenisProvider>
-        <div className='w-screen flex items-center justify-center flex-col bg-[#080808]'>
+        <div className='w-screen flex items-center justify-center flex-col bg-[#080808] select-none'>
           <Navbar />
           <AgentBanner/>
           <AgenticLayer />
