@@ -133,6 +133,9 @@ export default function Navbar() {
                                         router.push(item.link);
                                     }}
                                 >
+                                    {item.id === 3 && (
+                                        <img src="/Images/LandingPage/Banner/Join.svg" alt="star icon" className="absolute top-0 right-[-5px]" />
+                                    )}
                                     <div
                                         className={`syneFont p-[0.875rem_1rem] text-[1rem] leading-[1em] 
                                             tracking-[-0.05em] text-nowrap ${navbarState === item.id && item.status == 'active'

@@ -14,6 +14,7 @@ export const navItems = [
   {
     id: 3,
     name: "Custom Agent",
+    icon: '/Images/LandingPage/Banner/Join.svg',
     link: "/agent",
     status: "active"
   },
@@ -600,7 +601,7 @@ export const LandingPageData = {
         ],
         highlighted_desc: [
           'Build <span class="text-primary-blue">faster, smarter</span>, and with clarity.',
-          'Our research-backed approach helps founders make informed <span class="text-primary-blue">product decisions</span>.'
+          'Our <span class="text-primary-blue">research-backed approach</span> helps founders make informed product decisions.'
         ]
       },
       {
@@ -612,7 +613,7 @@ export const LandingPageData = {
         ],
         highlighted_desc: [
           'Connect <span class="text-primary-blue">IoT devices</span> to monitor, analyze, and automate in real time.',
-          'Improve <span class="text-primary-blue">efficiency</span>, reduce <span class="text-primary-blue">downtime</span>, and act on actionable <span class="text-primary-blue">insights</span>.'
+          'Improve <span class="text-primary-blue">efficiency</span>, reduce <span class="text-primary-blue">downtime</span>, and act on actionable insights.'
         ]
       },
       {
@@ -635,8 +636,8 @@ export const LandingPageData = {
           'Boost precision, reduce errors, and scale with confidence.'
         ],
         highlighted_desc: [
-          'Automated defect <span class="text-primary-blue">detection, inspection</span>, and classification at industrial scale.',
-          'Boost precision, <span class="text-primary-blue">reduce errors</span>, and scale with <span class="text-primary-blue">confidence</span>.'
+          '<span class="text-primary-blue">Automated defect detection</span>, inspection, and classification at industrial scale.',
+          'Boost precision, reduce errors, and scale with confidence.'
         ]
       },
     ]
