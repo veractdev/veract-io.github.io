@@ -220,8 +220,16 @@ export default function Footer() {
                 {details.quickLinks.company.links.map((link) => (
                   <div
                     onClick={() => {
-                      if (link.status == 'active') {
+                      if (link.status == 'active' && !link.link.startsWith('scroll-to-section')) {
                         router.push(link.link);
+                      }
+                      if (link.link.startsWith('scroll-to-section')) {
+                        window.scrollTo(
+                          {
+                            top: document.getElementById(link.title.toLowerCase())?.offsetTop,
+                            behavior: 'smooth'
+                          }
+                        );
                       }
                     }}
                     key={link.id} className={`openSansFont text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == 'active' ? 'cursor-pointer' : 'opacity-50 pointer-events-none'}`}>{link.title}</div>
