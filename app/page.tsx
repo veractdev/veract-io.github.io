@@ -31,6 +31,7 @@ export default function Page() {
         <div className="w-full flex flex-col items-center justify-center bg-primaty-text select-none  ">
           {preloadImages.map((image, index) => (
             <link
+              key={index}
               rel="preload"
               as="image"
               href={image}
