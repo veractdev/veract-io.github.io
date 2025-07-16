@@ -92,7 +92,7 @@ export default function Casestudy_ShowReel({
                         <video
                             className="w-full h-full object-cover"
                             autoPlay
-                            // muted
+                            muted
                             loop
                             playsInline
                             controls={false}
@@ -140,7 +140,7 @@ export default function Casestudy_ShowReel({
                         <video
                             className="w-full h-full object-cover"
                             autoPlay
-                            // muted
+                            muted
                             loop
                             playsInline
                             controls={false}
