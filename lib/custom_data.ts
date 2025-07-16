@@ -800,7 +800,7 @@ export const AgentPageData = {
     about: "AI-DRIVEN EFFICIENCY",
     title: "Optimize Your Business Operations with AI Agents",
     subtitle:
-      "Unlock productivity like never before. Get a free consultation, see our AI agents in action, and deploy 1 intelligent agent in your workflow-mat no cost",
+      "Unlock productivity like never before. Get a free consultation, see our AI agents in action, and deploy 1 intelligent agent in your workflow-at no cost",
     book_demo: "Book a free demo",
     view_case_study: "View case studies",
     banner_features: [
@@ -881,45 +881,25 @@ export const caseStudiesHomePageData = {
     { id: 5, name: "Machine Vision" },
     { id: 6, name: "Wellness" },
     { id: 7, name: "Industry Platform" },
-    { id: 8, name: "Manufacturing" },
-    { id: 9, name: "Agri Tech" },
-    { id: 10, name: "Ecommerce" },
-    { id: 11, name: "Sales" },
-    { id: 12, name: "Audit" },
-    { id: 13, name: "Fintech" },
-    { id: 14, name: "Thermal Vision" },
+    { id: 8, name: "Ecommerce" },
+    { id: 9, name: "Sales" },
+    { id: 10, name: "Thermal Vision" },
   ],
   caseStudiesList: {
     audiovideo: [
-        {
-          id: 1,
-          image: "/Images/case-studies/project_image.png",
-          hover_image: "https://picsum.photos/200/300",
-          header: "Audio Video Client",
-          subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
-        },
-        {
-          id: 2,
-          image: "/Images/case-studies/project_image.png",
-          hover_image: "https://picsum.photos/200/300",
-          header: "Audio Video Client",
-          subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
-        },
-        {
-          id: 3,
-          image: "/Images/case-studies/project_image.png",
-          hover_image: "https://picsum.photos/200/300",
-          header: "Audio Video Client",
-          subHeader: "Audio Video Project",
-          routeTo: "/case-studies/audio-video",
-        },
+      {
+        id: 1,
+        image: "/Images/case-studies/List/AV Room Designer.webp",
+        hover_image: "https://picsum.photos/200/300",
+        header: "Audio Video Client",
+        subHeader: "Audio Video Project",
+        routeTo: "/case-studies/audio-video",
+      },
     ],
     accessibility: [
       {
         id: 1,
-        image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
+        image: "/Images/case-studies/List/Accessible Web Widget.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "accessibility",
         subHeader: "accessibility project",
@@ -929,7 +909,7 @@ export const caseStudiesHomePageData = {
     chatbot: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/AI Chat Assistant.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Chat Bot Client",
         subHeader: "Chat Bot Project",
@@ -939,7 +919,7 @@ export const caseStudiesHomePageData = {
     edtech: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Learning Platform.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Ed Tech Client",
         subHeader: "Ed Tech Project",
@@ -949,7 +929,7 @@ export const caseStudiesHomePageData = {
     machinevision: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Visual Inspection AI.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Machine Vision Client",
         subHeader: "Machine Vision Project",
@@ -959,7 +939,7 @@ export const caseStudiesHomePageData = {
     wellness: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Digital Wellness App.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Wellness Client",
         subHeader: "Wellness Project",
@@ -969,37 +949,17 @@ export const caseStudiesHomePageData = {
     industryplatform: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Smart Industry Portal.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Industry Platform Client",
         subHeader: "Industry Platform Project",
         routeTo: "/case-studies/industry-platform",
       },
     ],
-    manufacturing: [
-      {
-        id: 1,
-        image: "/Images/case-studies/project_image.png",
-        hover_image: "https://picsum.photos/200/300",
-        header: "Manufacturing Client",
-        subHeader: "Manufacturing Project",
-        routeTo: "/case-studies/manufacturing",
-      },
-    ],
-    agritech: [
-      {
-        id: 1,
-        image: "/Images/case-studies/project_image.png",
-        hover_image: "https://picsum.photos/200/300",
-        header: "Agri Tech Client",
-        subHeader: "Agri Tech Project",
-        routeTo: "/case-studies/agri-tech",
-      },
-    ],
     ecommerce: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Ecommerce Client",
         subHeader: "Ecommerce Project",
@@ -1009,37 +969,17 @@ export const caseStudiesHomePageData = {
     sales: [
       {
         id: 1,
-        image: "/Images/case-studies/project_image.png",
+        image: "/Images/case-studies/List/Sales Dashboard.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "Sales Client",
         subHeader: "Sales Project",
         routeTo: "/case-studies/sales",
       },
     ],
-    audit: [
-      {
-        id: 1,
-        image: "/Images/case-studies/project_image.png",
-        hover_image: "https://picsum.photos/200/300",
-        header: "Audit Client",
-        subHeader: "Audit Project",
-        routeTo: "/case-studies/audit",
-      },
-    ],
-    fintech: [
-      {
-        id: 1,
-        image: "/Images/case-studies/project_image.png",
-        hover_image: "https://picsum.photos/200/300",
-        header: "Fintech Client",
-        subHeader: "Fintech Project",
-        routeTo: "/case-studies/fintech",
-      },
-    ],
     thermalvision: [
       {
         id: 1,
-        image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        image: "/Images/case-studies/List/Infrared Health Scan.webp",
         hover_image: "https://picsum.photos/200/300",
         header: "infrared thermography",
         subHeader: "thermal imaging detects mastitis in dairy cattle",

@@ -182,15 +182,15 @@ export default function Page() {
                   className="syneFont text-[1rem] font-medium leading-[1.2] text-white pl-[0.5rem]"
                   onClick={handleSeeMoreClick}
                 >
-                  See More
+                  See more
                 </div>
               )}
             </div>
-            <div className="flex flex-row flex-wrap items-start justify-center lg:justify-start md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-[3.125rem]">
+            <div className={`flex flex-row flex-wrap items-start justify-center ${activeTile != 'All' ? 'lg:justify-start' : 'lg:justify-center'} md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-[3.125rem]`}>
               {caseStudyCards.map((item: CaseStudyCard, index: number) => (
                 <motion.div
                   key={index}
-                  className="w-full md:w-[20.75rem] lg:w-[23.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
+                  className="w-full md:w-[20.75rem] lg:w-[25.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{
                     opacity: 1,
@@ -198,12 +198,12 @@ export default function Page() {
                     transition: {
                       duration: 0.3,
                       ease: "easeIn",
-                      delay: 0.1 * (index * 0.5),
+                      delay: 0.1 * (index * 0.35),
                     },
                   }}
                 >
                   <div
-                    className='relative group w-full h-full md:w-[19.5rem] md:h-[11.5rem] lg:w-[22.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
+                    className='relative group w-full h-[13.188rem] md:w-[19.5rem] md:h-[11.5rem] lg:w-[24.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
                     onClick={() => {
                       router.push(item.routeTo);
                     }}
@@ -221,7 +221,7 @@ export default function Page() {
                       className='absolute w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out'
                     />
                   </div>
-                  <div className="flex flex-col w-full flex-wrap">
+                  <div className="flex flex-col w-full flex-wrap pl-[1rem]">
                     <div className="uppercase text-left syneFont text-[1.375rem] md:text-[1.25rem] text-white font-semibold leading-[2em]">
                       {item.header}
                     </div>
