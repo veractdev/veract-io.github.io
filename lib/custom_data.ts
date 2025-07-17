@@ -534,7 +534,7 @@ export const LandingPageData = {
       {
         id: 1,
         image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
         title: "accessibility",
         description: "accessibility project",
         status: "active",
@@ -543,7 +543,7 @@ export const LandingPageData = {
       {
         id: 2,
         image: "/Images/LandingPage/FeaturedWorks/thermal.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/thermal.png",
         title: "infrared thermography",
         description: "thermal imaging detects mastitis in dairy cattle",
         status: "active",
@@ -552,7 +552,7 @@ export const LandingPageData = {
       {
         id: 3,
         image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
         title: "e-commerce",
         description: "payment enabled e-commerce web application",
         status: "inactive",
@@ -561,7 +561,7 @@ export const LandingPageData = {
       {
         id: 4,
         image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
         title: "ed tech",
         description: "education platform",
         status: "inactive",
@@ -1005,7 +1005,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Infrared Health Scan.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Infrared Health Scan.webp",
         header: "Infrared Thermography",
         subHeader: "Infrared Imaging for Animal Health",
         routeTo: "/case-studies/thermal",
@@ -1015,7 +1015,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Accessible Web Widget.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Accessible Web Widget.webp",
         header: "Accessible Web Widget",
         subHeader: "Smart Widget for Enhanced Digital Access",
         routeTo: "/case-studies/incluway",
@@ -1025,7 +1025,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/AI Chat Assistant.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/AI Chat Assistant.webp",
         header: "AI Chat Assistant",
         subHeader: "Conversational AI for Real-Time Support",
         routeTo: "",
@@ -1035,7 +1035,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Learning Platform.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Learning Platform.webp",
         header: "Learning Platform",
         subHeader: "AI-Based Learning and Course Portal",
         routeTo: "",
@@ -1045,7 +1045,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Visual Inspection AI.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Visual Inspection AI.webp",
         header: "Visual Inspection AI",
         subHeader: "AI Visual QC for Industrial Inspection",
         routeTo: "",
@@ -1055,7 +1055,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Digital Wellness App.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Digital Wellness App.webp",
         header: "Digital Wellness",
         subHeader: "Health & Wellness App for Daily Tracking",
         routeTo: "",
@@ -1065,7 +1065,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Smart Industry Portal.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Smart Industry Portal.webp",
         header: "Smart Industry Portal",
         subHeader: "Innovative Data Center Platform",
         routeTo: "",
@@ -1075,7 +1075,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
         header: "Seasonal E-Commerce",
         subHeader: "Online Store for Seasonal Organic Goods",
         routeTo: "",
@@ -1085,7 +1085,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Sales Dashboard.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Sales Dashboard.webp",
         header: "Sales Dashboard",
         subHeader: "Quote & Enquiry Management Dashboard",
         routeTo: "",
@@ -1095,7 +1095,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/AV Room Designer.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/AV Room Designer.webp",
         header: "Audio Visual Interior",
         subHeader: "Immersive AV Conference Room Planner",
         routeTo: "",
