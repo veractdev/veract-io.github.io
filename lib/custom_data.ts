@@ -460,7 +460,7 @@ export const LandingPageData = {
   showReel: {
     title: "SHOWREEL",
     video:
-      ["/Images/LandingPage/showReel/web-showreel.mp4","/Images/LandingPage/showReel/tab-showreel.mp4","/Images/LandingPage/showReel/mobile-showreel.mp4"]
+      ["/Images/LandingPage/showReel/web-showreel.mp4", "/Images/LandingPage/showReel/tab-showreel.mp4", "/Images/LandingPage/showReel/mobile-showreel.mp4"]
     // "",
   },
   aboutUs: {
@@ -734,24 +734,24 @@ export const LandingPageData = {
     description:
       "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
     footer_logo_list: [
-        {
-          id: 1,
-          image: "/Images/LandingPage/Banner/BNI.svg",
-        },
-        {
-          id: 2,
-          image: "/Images/LandingPage/Banner/Clutch.svg",
-        },
-        {
-          id: 3,
-          image: "/Images/LandingPage/Banner/5 stars.svg",
-        },
-        {
-          id: 4,
-          image: "/Images/LandingPage/Banner/Ethercat_logo.svg",
-        },
+      {
+        id: 1,
+        image: "/Images/LandingPage/Banner/BNI.svg",
+      },
+      {
+        id: 2,
+        image: "/Images/LandingPage/Banner/Clutch.svg",
+      },
+      {
+        id: 3,
+        image: "/Images/LandingPage/Banner/5 stars.svg",
+      },
+      {
+        id: 4,
+        image: "/Images/LandingPage/Banner/Ethercat_logo.svg",
+      },
     ],
-      socialMediaIcons: [
+    socialMediaIcons: [
       {
         id: 1,
         image: "/Images/LandingPage/Footer/linkedin.svg",
@@ -1098,3 +1098,36 @@ export const caseStudiesHomePageData = {
     ],
   },
 };
+
+export const metadata = [
+  {
+    slug: 'thermal',
+    title: 'Infrared Thermography',
+    description: '',
+    openGraph: {
+      title: '',
+      description: '',
+      type: 'website',
+    },
+    twitter: {
+      card: '',
+      title: '',
+      description: '',
+    }
+  },
+  {
+    slug: 'incluway',
+    title: 'Accessible Web Widget',
+    description: '',
+    openGraph: {
+      title: '',
+      description: '',
+      type: 'website',
+    },
+    twitter: {
+      card: '',
+      title: '',
+      description: '',
+    }
+  },
+]

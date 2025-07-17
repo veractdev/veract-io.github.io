@@ -13,11 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "Landing Page",
-};
-
 const schema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -32,6 +27,11 @@ const schema = {
   ]
 }
 
+export const metadata: Metadata = {
+  title: "Veract.io | AI, Agentic Systems & IoT Solutions for Digital Transformation",
+  description: "Veract.io builds Agentic AI systems, Machine Vision pipelines, and Industrial IoT solutions to modernize and automate businesses.",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,19 +40,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>
+        {/* <title>
           Veract.io | AI, Agentic Systems & IoT Solutions for Digital Transformation
-        </title>
+        </title> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schema)
           }}
         />
-        <meta
+        {/* <meta
           name="description"
           content="Veract.io empowers startups and businesses with Agentic AI, Machine Vision, and Industrial IoT solutions to automate workflows and accelerate innovation."
-        />
+        /> */}
         <meta
           name="keywords"
           content="Agentic AI, Industrial IoT, Machine Vision, AI Automation, Digital Transformation, Startup Automation, Custom Software Development"

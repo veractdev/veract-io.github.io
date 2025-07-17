@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { metadata } from '@/lib/custom_data';
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -6,19 +7,25 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    console.log(slug);
+    const data = metadata.find(item => item.slug === slug);
+    if (!data) {
+        return {
+            title: 'Veract.io',
+            description: 'Veract.io builds Agentic AI systems, Machine Vision pipelines, and Industrial IoT solutions to modernize and automate businesses.',
+        }
+    }
     return {
-        title: slug,
-        description: 'Case Studies',
+        title: data.title,
+        description: data.description,
         openGraph: {
             title: slug,
-            description: 'Case Studies',
+            description: data.description,
             type: 'website',
         },
         twitter: {
             card: 'summary_large_image',
             title: slug,
-            description: 'Case Studies',
+            description: data.description,
         }
     }
 }
