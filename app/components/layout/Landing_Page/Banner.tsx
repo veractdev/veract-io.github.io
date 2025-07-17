@@ -137,7 +137,7 @@ export default function Banner() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
 
             >
-              <span className="inline-flex md:flex md:flex-col lg:inline-flex md:items-center lg:items-baseline items-baseline md:w-[40rem]">
+              <span className="inline-flex md:flex md:flex-col lg:inline-flex md:items-center lg:items-baseline items-baseline md:w-[40rem] lg:w-[47rem]">
                 <div className=''>
                   <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}&nbsp;</span>
                   <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}&nbsp;</span>

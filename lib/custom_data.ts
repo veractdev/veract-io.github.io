@@ -14,6 +14,7 @@ export const navItems = [
   {
     id: 3,
     name: "Agentic AI",
+    icon: '/Images/LandingPage/Banner/Join.svg',
     link: "/agent",
     status: "active"
   },
@@ -408,7 +409,7 @@ export const LandingPageData = {
       },
       {
         id: 3,
-        word: "Web Application Development", //AI
+        word: "Web Application", //AI
       },
       {
         id: 4,
@@ -575,6 +576,72 @@ export const LandingPageData = {
       },
     ],
   },
+  services: {
+    title: "Our Service",
+    description: "Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.",
+    service_list: [
+      {
+        number: "[01]",
+        title: "Digital Transformation Strategy for Modern Businesses",
+        desc: [
+          'Modernize operations using proven digital transformation tools and workflows.',
+          'Web, mobile, or desktop applications — your stack is fully covered.'
+        ],
+        highlighted_desc: [
+          'Modernize operations using proven <span class="text-primary-blue">digital transformation</span> tools and workflows.',
+          '<span class="text-primary-blue">Web, mobile, or desktop</span> applications — your stack is fully covered.'
+        ]
+      },
+      {
+        number: "[02]",
+        title: "Development Services for Startup Founders",
+        desc: [
+          'Build faster, smarter, and with clarity.',
+          'Our research-backed approach helps founders make informed product decisions.'
+        ],
+        highlighted_desc: [
+          'Build <span class="text-primary-blue">faster, smarter</span>, and with clarity.',
+          'Our <span class="text-primary-blue">research-backed approach</span> helps founders make informed product decisions.'
+        ]
+      },
+      {
+        number: "[03]",
+        title: "Industrial IoT for Smarter Operations",
+        desc: [
+          'Connect IoT devices to monitor, analyze, and automate in real time.',
+          'Improve efficiency, reduce downtime, and act on actionable insights.'
+        ],
+        highlighted_desc: [
+          'Connect <span class="text-primary-blue">IoT devices</span> to monitor, analyze, and automate in real time.',
+          'Improve <span class="text-primary-blue">efficiency</span>, reduce <span class="text-primary-blue">downtime</span>, and act on actionable insights.'
+        ]
+      },
+      {
+        number: "[04]",
+        title: "AI & Agentic AI for Intelligent Decision-Making",
+        desc: [
+          'Leverage AI for smarter decisions and data-driven growth.',
+          'Deploy agentic AI to automate tasks and adapt intelligently.'
+        ],
+        highlighted_desc: [
+          'Leverage <span class="text-primary-blue">AI</span> for smarter decisions and data-driven growth.',
+          'Deploy <span class="text-primary-blue">agentic AI</span> to automate tasks and adapt intelligently.'
+        ]
+      },
+      {
+        number: "[05]",
+        title: "Machine Vision for Quality Control and Inspection",
+        desc: [
+          'Automated defect detection, inspection, and classification at industrial scale.',
+          'Boost precision, reduce errors, and scale with confidence.'
+        ],
+        highlighted_desc: [
+          '<span class="text-primary-blue">Automated defect detection</span>, inspection, and classification at industrial scale.',
+          'Boost precision, reduce errors, and scale with confidence.'
+        ]
+      },
+    ]
+  },
   we_work_with: {
     title: "We Work With",
     sub_title: "brands in",
@@ -708,8 +775,8 @@ export const LandingPageData = {
           {
             id: 2,
             title: "Services",
-            link: "",
-            status: "inactive"
+            link: "scroll-to-section",
+            status: "active"
           },
           {
             id: 3,

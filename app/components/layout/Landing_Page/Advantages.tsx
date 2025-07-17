@@ -234,10 +234,12 @@ export default function Advantages() {
                     onClick={() => {
                       if (item.status === 'active') {
                         router.push(`/case-studies/${item.route}`);
-                        // setCaseStudyState(item.route);
+                      }
+                      else {
+                        router.push('/contact-us/');
                       }
                     }}
-                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group cursor-pointer`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
@@ -257,10 +259,12 @@ export default function Advantages() {
                     onClick={() => {
                       if (item.status === 'active') {
                         router.push(`/case-studies/${item.route}`);
-                        // setCaseStudyState(item.route);
+                      }
+                      else {
+                        router.push('/contact-us/');
                       }
                     }}
-                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group ${item.status === 'active' ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                    className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group cursor-pointer`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
                     <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
