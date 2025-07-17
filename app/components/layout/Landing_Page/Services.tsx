@@ -1,18 +1,7 @@
 import { LandingPageData } from '@/lib/custom_data';
-import { isMobile, isTablet } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import React from 'react'
 
-type services_props = {
-    title: string;
-    description: string;
-    service_list: {
-        number: string;
-        title: string;
-        img: string;
-        desc: string[];
-    }[];
-}
 export default function Services() {
 
     return (

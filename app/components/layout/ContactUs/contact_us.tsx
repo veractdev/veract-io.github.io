@@ -1,8 +1,7 @@
 "use client";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import emailjs from "@emailjs/browser";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -105,6 +104,7 @@ export default function Contact_Us() {
         setTimeout(() => setSubmissionFailed(false), 3000);
       }
     } catch (error) {
+      console.log(error);
       setSubmissionFailed(true);
       setTimeout(() => setSubmissionFailed(false), 3000);
     } finally {
@@ -152,7 +152,7 @@ export default function Contact_Us() {
           Got an idea?
         </div>
         <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_230px] syneFont text-center text-white text-[36px] md:text-[54px] lg:text-[86px] tracking-[-3.4px] md:tracking-[-3.8px] leading-[55px] md:leading-[54px] lg:leading-[90px] font-semibold">
-          Let's build something great together
+          Let&apos;s build something great together
         </div>
         <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_120px] flex flex-col lg:flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
           <div className="w-full max-w-[888px] rounded-[30px] p-[11px] border border-white/8 z-10">
