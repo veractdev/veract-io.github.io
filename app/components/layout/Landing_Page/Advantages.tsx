@@ -1,6 +1,5 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
-import { getCaseStudyState } from '@/lib/globalState';
 import { isMobile, isTablet } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
@@ -13,8 +12,6 @@ export default function Advantages() {
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
   const [scaledArr, setScaledArr] = useState(Array(cardCount).fill(false));
   const [isHovered, setIsHovered] = useState(false);
-
-  const { caseStudyState } = getCaseStudyState();
 
   useEffect(() => {
     setLoaded(true);
