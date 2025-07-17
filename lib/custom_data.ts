@@ -15,7 +15,7 @@ export const navItems = [
     id: 3,
     name: "Agentic AI",
     icon: '/Images/LandingPage/Banner/Join.svg',
-    link: "/agent",
+    link: "/agentic-ai",
     status: "active"
   },
   {
@@ -33,7 +33,7 @@ export const navItems = [
 ];
 
 export const caseStudyData = {
-  "thermal": {
+  "infrared-thermography": {
     id: 1,
     banner: {
       title: "Enhancing Animal Health with Thermography",
@@ -209,7 +209,7 @@ export const caseStudyData = {
       profession_at: "",
     },
   },
-  "incluway": {
+  "accessible-web-widget": {
     id: 2,
     banner: {
       title: "Empowering Inclusive Web Experiences through Accessibility",
@@ -785,7 +785,7 @@ export const LandingPageData = {
           {
             id: 1,
             title: "Agentic AI",
-            link: "/agent",
+            link: "/agentic-ai",
             status: "active"
           },
           {
@@ -1008,7 +1008,7 @@ export const caseStudiesHomePageData = {
         hover_image: "/Images/case-studies/List/Infrared Health Scan.webp",
         header: "Infrared Thermography",
         subHeader: "Infrared Imaging for Animal Health",
-        routeTo: "/case-studies/thermal",
+        routeTo: "/case-studies/infrared-thermography",
       },
     ],
     accessibility: [
@@ -1018,7 +1018,7 @@ export const caseStudiesHomePageData = {
         hover_image: "/Images/case-studies/List/Accessible Web Widget.webp",
         header: "Accessible Web Widget",
         subHeader: "Smart Widget for Enhanced Digital Access",
-        routeTo: "/case-studies/incluway",
+        routeTo: "/case-studies/accessible-web-widget",
       },
     ],
     chatbot: [
@@ -1106,7 +1106,7 @@ export const caseStudiesHomePageData = {
 
 export const metadata = [
   {
-    slug: 'thermal',
+    slug: 'infrared-thermography',
     title: 'Infrared Thermography',
     description: '',
     openGraph: {
@@ -1121,7 +1121,7 @@ export const metadata = [
     }
   },
   {
-    slug: 'incluway',
+    slug: 'accessible-web-widget',
     title: 'Accessible Web Widget',
     description: '',
     openGraph: {
