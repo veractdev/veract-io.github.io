@@ -8,7 +8,7 @@ export const navItems = [
   {
     id: 2,
     name: "Services",
-    link: "/",
+    link: "",
     status: "inactive"
   },
   {
@@ -24,16 +24,10 @@ export const navItems = [
     link: "/case-studies",
     status: "active"
   },
-  // {
-  //   id: 5,
-  //   name: "Contact Us",
-  //   link: "/contact-us",
-  //   status:"inactive"
-  // },
   {
     id: 5,
     name: "Blogs",
-    link: "/",
+    link: "",
     status: "inactive"
   }
 ];
