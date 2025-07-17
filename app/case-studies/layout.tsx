@@ -49,13 +49,13 @@ const schema = {
         {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://veract.io/case-studies/thermal",
+            "url": "https://veract.io/case-studies/infrared-thermography",
             "name": "Infrared Thermography for Animal Health"
         },
         {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://veract.io/case-studies/incluway",
+            "url": "https://veract.io/case-studies/accessible-web-widget",
             "name": "Accessible Web Widget"
         },
     ]
