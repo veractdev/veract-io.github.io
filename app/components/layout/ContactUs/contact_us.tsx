@@ -378,6 +378,12 @@ export default function Contact_Us() {
                 >
                   +91 99628 37650
                 </a>
+                <a
+                  href="tel:+17377101523"
+                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
+                >
+                  +17377101523
+                </a>
               </div>
             </div>
             {/* address */}

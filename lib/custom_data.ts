@@ -740,7 +740,25 @@ export const LandingPageData = {
   footer: {
     description:
       "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
-    socialMediaIcons: [
+    footer_logo_list: [
+        {
+          id: 1,
+          image: "/Images/LandingPage/Banner/BNI.svg",
+        },
+        {
+          id: 2,
+          image: "/Images/LandingPage/Banner/Clutch.svg",
+        },
+        {
+          id: 3,
+          image: "/Images/LandingPage/Banner/5 stars.svg",
+        },
+        {
+          id: 4,
+          image: "/Images/LandingPage/Banner/Ethercat_logo.svg",
+        },
+    ],
+      socialMediaIcons: [
       {
         id: 1,
         image: "/Images/LandingPage/Footer/linkedin.svg",
@@ -768,8 +786,8 @@ export const LandingPageData = {
         links: [
           {
             id: 1,
-            title: "Home",
-            link: "/",
+            title: "Agentic AI",
+            link: "/agent",
             status: "active"
           },
           {
@@ -780,24 +798,18 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            title: "Agentic AI",
-            link: "/agent",
-            status: "active"
-          },
-          {
-            id: 4,
             title: "Case Studies",
             link: "/case-studies",
             status: "active"
           },
           {
-            id: 5,
+            id: 4,
             title: "Contact Us",
             link: "/contact-us",
             status: "active"
           },
           {
-            id: 6,
+            id: 5,
             title: "Blogs",
             link: "",
             status: "inactive"
@@ -821,7 +833,7 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            title: "Industrial IoT",
+            title: "Internet of things - IoT",
             link: "",
             status: "inactive"
           },
@@ -831,6 +843,39 @@ export const LandingPageData = {
             link: "",
             status: "inactive"
           },
+          {
+            id: 5,
+            title: "Infrared Thermography",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 6,
+            title: "Workflow Automation",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 7,
+            title: "Agentic AI",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 8,
+            title: "Custom Mobile Application",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 9,
+            title: "Custom Web Application",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 10,
+          }
         ],
       },
       contact: {
@@ -848,6 +893,11 @@ export const LandingPageData = {
           },
           {
             id: 3,
+            type: "phone",
+            title: "+1 7377101523",
+          },
+          {
+            id: 4,
             type: "email",
             title: "info@veract.io",
           },
