@@ -1108,17 +1108,33 @@ export const metadata = [
   {
     slug: 'infrared-thermography',
     title: 'Infrared Thermography',
-    description: '',
+    description: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
     openGraph: {
-      title: '',
-      description: '',
+      title: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+      description: 'Monitor buffalo udder health with infrared thermography...',
       type: 'website',
     },
     twitter: {
-      card: '',
-      title: '',
-      description: '',
-    }
+      card: 'summary_large_image',
+      title: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+      description: 'Smart infrared system for mastitis detection in buffaloes.',
+    },
+    keywords: [
+      'buffalo udder health',
+      'mastitis detection',
+      'thermal imaging',
+      'infrared thermography',
+      'veterinary technology',
+      'livestock health monitoring',
+      'dairy farm management',
+      'non-invasive diagnosis',
+      'animal health AI',
+      'smart veterinary system'
+    ],
+    author: 'Veract.io',
+    language: 'en',
+    image: 'https://veract.io/images/infrared-thermography.jpg',
+    url: 'https://veract.io/projects/infrared-thermography',
   },
   {
     slug: 'accessible-web-widget',
