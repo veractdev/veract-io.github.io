@@ -69,9 +69,6 @@ export default function CaseStudy_Challenges({
               TEXT
             </div>
             <div className="w-full lg:w-[45.313rem] h-max py-[2.5rem] md:py-[1.25rem_3.125rem] lg:py-[1.25rem_3.125rem] text-[1.5rem] md:text-[2.375rem] lg:text-[3rem] text-white font-medium leading-[1.2em] tracking-[0]">
-              <span className="hidden lg:inline-flex geistFont md:interFont lg:interFont w-[7rem] opacity-0">
-                Text
-              </span>
               {challenges_props.challenge_solution}
               <span className="text-[#868586]">
                 {" "}
