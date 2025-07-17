@@ -45,8 +45,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-export default function ProductLayout({ children, params }: { children: React.ReactNode; params: { slug: string } }) {
-    const data = metadata.find((item) => item.slug === params.slug)
+export default async function ProductLayout({ children, params }: { children: React.ReactNode; params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const data = metadata.find((item) => item.slug === slug)
     console.log(data)
     return (
         <>
