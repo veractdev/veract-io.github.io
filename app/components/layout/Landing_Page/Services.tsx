@@ -1,10 +1,17 @@
 import { LandingPageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Services() {
 
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setLoaded(true)
+    },[])
+
     return (
+        loaded &&
         <div id='services' className='w-full h-max bg-black overflow-x-hidden flex flex-col items-center justify-center relative z-50 py-[0_6.25rem]'>
             <div className='w-full flex flex-col items-center justify-center gap-[0.625rem] py-[6.25rem_3.125rem] lg:py-[5.875rem_3.125rem]'>
                 <div className='uppercase syneFont text-[2.5rem] text-white font-bold -tracking-[0.05rem] leading-[3.125rem]'>Our <span className='text-primary-blue'>Service</span></div>
