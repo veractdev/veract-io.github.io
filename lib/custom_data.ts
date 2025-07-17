@@ -13,7 +13,7 @@ export const navItems = [
   },
   {
     id: 3,
-    name: "Custom Agent",
+    name: "Agentic AI",
     link: "/agent",
     status: "active"
   },
