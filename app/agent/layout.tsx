@@ -1,28 +1,5 @@
 import { Metadata } from 'next';
 
-type Props = {
-    params: Promise<{ slug: string }>
-}
-
-// export async function generateMetadata(): Promise<Metadata> {
-//     // const { slug } = await params;
-//     // console.log(slug);
-//     return {
-//         title: 'Agentic AI for Workflow Automation | Veract.io',
-//         description: 'Optimize your operations with intelligent Agentic AI. Veract.io helps you deploy collaborative AI agents to automate workflows, integrate with tools, and drive smarter decisions.',
-//         openGraph: {
-//             title: '',
-//             description: 'Agentic AI',
-//             type: 'website',
-//         },
-//         twitter: {
-//             card: 'summary_large_image',
-//             title: '',
-//             description: 'Agentic AI',
-//         }
-//     }
-// }
-
 const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
