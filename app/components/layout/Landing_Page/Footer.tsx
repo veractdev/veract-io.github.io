@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LandingPageData } from "@/lib/custom_data";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   const details = LandingPageData.footer;
