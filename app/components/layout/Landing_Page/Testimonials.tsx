@@ -83,20 +83,20 @@ export default function Testimonials() {
                       initial={!isMobile() && !isTablet() ? { x: -50, y: -100, opacity: 0 } : false}
                       animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="flex items-center gap-[0.625rem] pb-[2.438rem]">
+                      className="flex flex-row flex-wrap items-center gap-[0.625rem] pb-[2.438rem]">
                       <motion.img
                         initial={{ x: -100, y: -50, opacity: 0 }}
                         animate={{ x: 0, y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
 
-                        className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0 lg:mx-[0.75rem] lg:my-[0.50rem] rounded-full" src={t.image} alt="Testimonial_Client" />
+                        className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0  rounded-full" src={t.image} alt="Testimonial_Client" />
 
                       <motion.div
-                        className='flex flex-col gap-[0.625rem]'>
+                        className='flex flex-col'>
                         <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                           {LandingPageData.testimonials.testimonial_list[activeIndex].name}
                         </div>
-                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.125rem] font-normal leading-[1.2rem] whitespace-nowrap">
                           {LandingPageData.testimonials.testimonial_list[activeIndex].company}
                         </div>
                       </motion.div>
@@ -176,11 +176,11 @@ export default function Testimonials() {
                             initial={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 0 } : false}
                             animate={!isMobile() && !isTablet() ? { x: 100, y: -50, opacity: 1 } : false}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className='flex flex-col gap-[0.625rem]'>
+                            className='flex flex-col'>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
                               {t.name}
                             </div>
-                            <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                            <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.125rem] font-normal leading-[1.2rem] whitespace-nowrap">
                               {t.company}
                             </div>
                           </motion.div>
