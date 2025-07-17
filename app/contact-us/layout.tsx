@@ -1,32 +1,98 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
-type Props = {
-    params: Promise<{ slug: string }>
-}
+export const metadata: Metadata = {
+    title: "Contact Veract.io – Mobile, Web, AI & IoT Experts",
+    description:
+        "Get in touch with Veract.io for custom mobile apps, web applications, agentic AI, and IoT development services. Let’s collaborate to build cutting-edge digital solutions tailored to your business.",
+    keywords:
+        "Veract.io contact, mobile app development India, web app development, agentic AI solutions, IoT development company, custom software services",
+    openGraph: {
+        title: "Contact Veract.io – Custom Mobile, Web, AI & IoT Development",
+        description:
+            "Reach out to Veract.io for high-impact mobile apps, web development, agentic AI systems, and IoT solutions.",
+        url: "https://www.veract.io/contact",
+        type: "website",
+        images: [
+            {
+                url: "https://www.veract.io/assets/contact-preview.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Contact Veract.io – Mobile, Web, AI & IoT Experts",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact Veract.io – Mobile, Web, AI & IoT Experts",
+        description:
+            "Get in touch for powerful mobile and web apps, agentic AI tools, and IoT development services.",
+        images: ["https://www.veract.io/assets/contact-preview.jpg"],
+    },
+    metadataBase: new URL("https://www.veract.io"),
+};
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
-    console.log(slug);
-    return {
-        title: slug,
-        description: 'Contact Us',
-        openGraph: {
-            title: slug,
-            description: 'Contact Us',
-            type: 'website',
+const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Us",
+    description:
+        "Contact Veract.io for mobile app development, web apps, AI systems, and IoT solutions.",
+    url: "https://www.veract.io/contact",
+    mainEntity: {
+        "@type": "Organization",
+        name: "Veract.io",
+        url: "https://www.veract.io",
+        logo: "https://www.veract.io/Images/LandingPage/Navbar/veract-logo-white-font.svg",
+        contactPoint: {
+            "@type": "ContactPoint",
+            telephone: [
+                "+919789991565",
+                "+919789991565",
+                "+17377101523",
+            ],
+            contactType: "Customer Service",
+            areaServed: "IN",
+            availableLanguage: ["English", "Hindi"],
         },
-        twitter: {
-            card: 'summary_large_image',
-            title: slug,
-            description: 'Contact Us',
-        }
-    }
-}
+    },
+};
 
-export default function ProductLayout({
+export default function ContactLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    return children;
-} 
+    return (
+        <>
+            <head>
+                <meta
+                    name="keywords"
+                    content="Veract.io contact, mobile app development India, web app development, agentic AI solutions, IoT development company, custom software services"
+                />
+                <meta
+                    name="author"
+                    content="Veract.io"
+                />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <meta
+                    name="robots"
+                    content="index, follow"
+                />
+                <meta
+                    name="llm:summary_hint"
+                    content="Contact Veract.io to discuss your needs for custom mobile apps, web solutions, AI agents, or IoT systems tailored to your business goals."
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(contactSchema),
+                    }}
+                />
+            </head>
+            {children}
+        </>
+    );
+}

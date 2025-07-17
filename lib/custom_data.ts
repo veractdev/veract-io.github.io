@@ -1133,22 +1133,57 @@ export const metadata = [
     ],
     author: 'Veract.io',
     language: 'en',
+    subject: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+    industry: 'Infrared Thermography',
     image: 'https://veract.io/images/infrared-thermography.jpg',
-    url: 'https://veract.io/projects/infrared-thermography',
+    url: 'https://veract.io/case-studies/infrared-thermography',
+    geo: {
+      region: 'IN-TN',
+      placename: 'Velachery, Chennai',
+      position: "12.9784;80.2214",
+      icbm: '12.9784, 80.2214',
+    },
   },
   {
     slug: 'accessible-web-widget',
-    title: 'Accessible Web Widget',
-    description: '',
+    title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+    description:
+      'Enhance website accessibility for users with visual, motor, and cognitive impairments. Our lightweight, WCAG-compliant widget offers real-time personalization, cross-browser support, and easy integration.',
     openGraph: {
-      title: '',
-      description: '',
+      title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+      description:
+        "Boost your website's inclusivity with our easy-to-integrate accessibility widget supporting visual, motor, and cognitive impairments. Fully WCAG-compliant and optimized for performance.",
       type: 'website',
     },
     twitter: {
-      card: '',
-      title: '',
-      description: '',
-    }
+      card: 'summary_large_image',
+      title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+      description:
+        'Enhance website accessibility with our lightweight widget designed for all users. Real-time personalization and seamless integration.',
+    },
+    keywords: [
+      'accessibility widget',
+      'WCAG compliance',
+      'digital accessibility',
+      'accessibility plugin',
+      'visual impairment support',
+      'motor impairment accessibility',
+      'cognitive accessibility tool',
+      'ADA compliance',
+      'inclusive web design',
+      'accessibility software'
+    ],
+    author: 'Veract.io',
+    language: 'en',
+    subject: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+    industry: 'Accessibility, Web Development',
+    image: 'https://veract.io/images/accessibility-widget-preview.png',
+    url: 'https://veract.io/case-studies/accessible-web-widget',
+    geo: {
+      region: 'IN-TN',
+      placename: 'Velachery, Chennai',
+      position: "12.9784;80.2214",
+      icbm: '12.9784, 80.2214',
+    },
   },
 ]
