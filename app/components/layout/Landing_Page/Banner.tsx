@@ -157,7 +157,7 @@ export default function Banner() {
 
 
 
-          <motion.div className="interFont text-[1rem] lg:text-[1.125rem] md:text-[1rem] font-medium w-[90%] md:w-[90%] lg:w-[37.188rem] leading-[1.5em] mx-auto pb-[1.75rem] md:pb-[1.75rem]  lg:pb-[1rem] tracking-[-0.02em] space-y-1">
+          <motion.div className="interFont text-[1rem] lg:text-[1.125rem] md:text-[1rem] font-medium w-[90%] md:w-[90%] lg:w-[39.188rem] leading-[1.5em] mx-auto pb-[1.75rem] md:pb-[1.75rem]  lg:pb-[1rem] tracking-[-0.02em] space-y-1">
             {/* Line 1 */}
             <div className="overflow-hidden">
               <motion.span
