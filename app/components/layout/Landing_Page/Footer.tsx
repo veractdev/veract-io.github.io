@@ -99,8 +99,8 @@ export default function Footer() {
         <div className="lg:hidden block openSansFont text-[6.563rem] md:text-[14.875rem] text-[#1C1C1C] font-bold leading-[1.2em] tracking-[0em] mt-[7.375rem] md:mt-0 z-[10]">
           veract
         </div>
-        <div className="flex flex-col items-center justify-center gap-[88px] pb-[15px]">
-          <div className="flex z-[100] md:flex-row flex-col lg:w-[70rem] w-full md:h-[41.813rem] h-max rounded-[1.375rem] bg-[#0F0E14] lg:-mt-[7.95rem] md:-mt-[6.95rem] -mt-[2.95rem] gap-[77px] md:gap-[60px] lg:gap-[142px] md:pt-[79px] pt-[48px] md:px-[50px] px-[26px] md:justify-center justify-start items-start">
+        <div className="flex flex-col items-center justify-center gap-[88px] pb-[15px] rounded-[1.375rem] bg-[#0F0E14] lg:mt-[-7.95rem] md:mt-[-6.95rem] mt-[-2.95rem] z-[100]">
+          <div className="flex z-[100] md:flex-row flex-col lg:w-[70rem] w-full h-max  gap-[77px] md:gap-[60px] lg:gap-[142px] md:pt-[79px] pt-[48px] md:px-[50px] px-[26px] md:justify-center justify-start items-start">
             <div className="flex flex-col gap-[165px] items-start">
               <div className="lg:w-[272px] md:w-[228px] w-full h-max flex flex-col items-start justify-center gap-[28px]">
                 <div className="openSansFont text-[3.25rem] text-white font-bold leading-[1.2em] tracking-[0em]">
