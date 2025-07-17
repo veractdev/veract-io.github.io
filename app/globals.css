@@ -669,3 +669,17 @@ body {
     scale: 0.9;
   }
 }
+
+.contact_us_shadow {
+  box-shadow: 0px 8px 40px 0px #0055FF80,
+  0px 0px 10px 1px #FFFFFF00;
+}
+
+.contact_us_shadow:hover {
+  box-shadow: 0px 8px 40px 0px #0055FFB3,
+  0px 0px 10px 1px #FFFFFF4D;
+}
+
+.error_contact_us_shadow {
+  box-shadow: 0px 8px 40px 0px #FF224480;
+}
