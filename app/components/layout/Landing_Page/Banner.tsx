@@ -257,7 +257,15 @@ export default function Banner() {
             <div
               onMouseEnter={() => setHoveredServices(true)}
               onMouseLeave={() => setHoveredServices(false)}
-              className={`cursor-not-allowed lg:bg-[#0D0D0D] md:bg-[#050505]/80 bg-[#050505]/80 relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
+              onClick={() => {
+                window.scrollTo(
+                  {
+                    top: document.getElementById('services')?.offsetTop,
+                    behavior: 'instant'
+                  }
+                );
+              }}
+              className={`cursor-pointer lg:bg-[#0D0D0D] md:bg-[#050505]/80 bg-[#050505]/80 relative overflow-hidden w-[7.75rem] h-[2.25rem] border border-gray-700 text-white rounded-full flex items-center justify-center interFont text-[0.938rem]`}
             >
               {/* Default Text */}
               <motion.div

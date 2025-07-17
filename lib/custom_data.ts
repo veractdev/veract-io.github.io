@@ -8,7 +8,7 @@ export const navItems = [
   {
     id: 2,
     name: "Services",
-    link: "/",
+    link: "",
     status: "inactive"
   },
   {
@@ -24,16 +24,10 @@ export const navItems = [
     link: "/case-studies",
     status: "active"
   },
-  // {
-  //   id: 5,
-  //   name: "Contact Us",
-  //   link: "/contact-us",
-  //   status:"inactive"
-  // },
   {
     id: 5,
     name: "Blogs",
-    link: "/",
+    link: "",
     status: "inactive"
   }
 ];
@@ -89,23 +83,23 @@ export const caseStudyData = {
       solution_list: [
         {
           id: 1,
-          title: "Enable Seamless Communication",
+          title: "Capture Data Accurately",
         },
         {
           id: 2,
-          title: "Enable Seamless Communication",
+          title: "Support Timely Decisions",
         },
         {
           id: 3,
-          title: "Enable Seamless Communication",
+          title: "Improve Veterinary Efficiency",
         },
         {
           id: 4,
-          title: "Enable Seamless Communication",
+          title: "Visualize Udder Health",
         },
         {
           id: 5,
-          title: "Enable Seamless Communication",
+          title: "Ensure System Stability",
         },
         {
           id: 6,
@@ -208,7 +202,7 @@ export const caseStudyData = {
     testimonials: {
       testimonial: "",
       name: "",
-      image: "",
+      image: "https://picsum.photos/200/300",
       quote_image: "/Images/testimonial_quotes.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(255,122,59,0.5)",
       profession: "",
@@ -381,10 +375,9 @@ export const caseStudyData = {
       ],
     },
     testimonials: {
-      testimonial:
-        "",
+      testimonial: "",
       name: "",
-      image: "",
+      image: "https://picsum.photos/200/300",
       quote_image: "/Images/case-studies/incluway/Testimonials/quote.svg",
       shadow: "-1.875rem -1.25rem 62.5rem rgba(66,133,244,1)",
       profession: "",
