@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: "Optimize your operations with intelligent Agentic AI. Veract.io helps you deploy collaborative AI agents to automate workflows, integrate with tools, and drive smarter decisions.",
 }
 
-export default function ProductLayout({ children, }: { children: React.ReactNode; }) {
+export default function AgentLayout({ children, }: { children: React.ReactNode; }) {
     <head>
         <meta name="keywords" content="Agentic AI, AI agents, Workflow Automation, Business Automation, Collaborative AI, LangChain, Gemini, AI for startups, Veract.io" />
         <meta property="og:title" content="Agentic AI for Workflow Automation | Veract.io" />
