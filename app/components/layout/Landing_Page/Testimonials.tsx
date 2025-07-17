@@ -85,15 +85,15 @@ export default function Testimonials() {
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="flex flex-row flex-wrap items-center gap-[0.625rem] pb-[2.438rem]">
                       <motion.img
-                        initial={{ x: -100, y: -50, opacity: 0 }}
-                        animate={{ x: 0, y: 0, opacity: 1 }}
+                        initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
+                        animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
                         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
 
                         className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0  rounded-full" src={t.image} alt="Testimonial_Client" />
 
                       <motion.div
-                        initial={{ x: -100, y: -50, opacity: 0 }}
-                        animate={{ x: 0, y: 0, opacity: 1 }}
+                        initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
+                        animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
                         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                         className='flex flex-col'>
                         <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-semibold leading-[1.2rem] whitespace-nowrap">
