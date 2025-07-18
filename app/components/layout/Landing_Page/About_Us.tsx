@@ -29,7 +29,7 @@ export default function About_Us() {
 
           {/* Grid Content Centered */}
           <div className="relative z-10 w-full h-full flex items-center justify-center">
-            <div className="syneFont grid text-white gap-y-10 gap-x-22 grid-cols-2 md:grid-cols-4 place-items-center px-4 sm:px-8">
+            <div className="syneFont grid text-white gap-y-10 gap-x-0 lg:gap-x-22 md:gap-x-22 grid-cols-2 md:grid-cols-4 place-items-center px-4 sm:px-8">
               {LandingPageData.aboutUs.achievementsList.map(
                 (category, index) => (
                   <div
