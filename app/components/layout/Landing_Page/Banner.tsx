@@ -63,7 +63,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center md:items-start justify-center bg-black"
+    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* background image */}
@@ -99,8 +99,8 @@ export default function Banner() {
         }}
       >
         {/* Main content */}
-        <div className='z-10 text-center px-[1rem]  pt-0 md:pt-[23rem] lg:pt-[9.575rem] '>
-          <div className=" text-[2.5rem] lg:text-[3rem] md:text-[3rem]  font-semibold lg:w-[55.938rem] syneFont mx-auto pb-[3.5rem] md:pb-[0.625rem] lg:pb-[0.625rem] leading-[1.1em] tracking-[0rem] lg:tracking-[-0.179rem] md:tracking-[-0.173rem]">
+        <div className='z-10 text-center px-[1rem] '>
+          <div className=" text-[2.5rem] lg:text-[3rem] md:text-[3rem]  font-semibold lg:w-[55.938rem] syneFont mx-auto pb-[2rem] md:pb-[0.625rem] lg:pb-[0.625rem] leading-[1.1em] tracking-[0rem] lg:tracking-[-0.179rem] md:tracking-[-0.173rem]">
             <motion.span
               initial={{
                 clipPath: "inset(0 60% 0 0)",
