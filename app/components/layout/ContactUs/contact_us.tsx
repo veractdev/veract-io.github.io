@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useLenis } from "lenis/react";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -23,6 +24,7 @@ export default function Contact_Us() {
     mobileNumber: false,
   });
   const [loaded, setLoaded] = useState(false);
+  const lenis = useLenis();
   // Error messages
   const [errors, setErrors] = useState({
     firstName: "",
@@ -148,10 +150,10 @@ export default function Contact_Us() {
   }, []);
 
   useEffect(() => {
-    return () => {
-      window.scrollTo(0, 0);
+    if (loaded && lenis) {
+      lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
     }
-  }, []);
+  }, [loaded, lenis]);
 
   return (
     loaded && (
