@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 type showreel_props = {
     title: string;
     video: string[];
+    youtube_url: string;
 };
 
 export default function Casestudy_ShowReel({
@@ -194,7 +195,7 @@ export default function Casestudy_ShowReel({
                         >
                             <iframe
                                 ref={videoRef}
-                                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
+                                src={showreel_props.youtube_url}
                                 className="w-full h-full"
                             />
                         </div>

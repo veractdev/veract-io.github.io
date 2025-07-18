@@ -49,7 +49,7 @@ export const caseStudyData = {
           '/Images/case-studies/thermal/ShowReel/tab view-thermal showreel.mp4',
           '/Images/case-studies/thermal/ShowReel/mobile view-thermal showreel.mp4',
         ],
-      // "",
+      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
     },
     description: {
       title: "A small glimpse",
@@ -225,6 +225,7 @@ export const caseStudyData = {
           '/Images/case-studies/incluway/ShowReel/Incluway showreel- tab view.mp4',
           '/Images/case-studies/incluway/ShowReel/Incluway showreel Mobile view.mp4',
         ],
+      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
     },
     description: {
       title: "A small glimpse",
@@ -460,8 +461,8 @@ export const LandingPageData = {
   showReel: {
     title: "SHOWREEL",
     video:
-      ["/Images/LandingPage/showReel/web-showreel.mp4", "/Images/LandingPage/showReel/tab-showreel.mp4", "/Images/LandingPage/showReel/mobile-showreel.mp4"]
-    // "",
+      ["/Images/LandingPage/showReel/web-showreel.mp4", "/Images/LandingPage/showReel/tab-showreel.mp4", "/Images/LandingPage/showReel/mobile-showreel.mp4"],
+    youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
   },
   aboutUs: {
     achievementsList: [
