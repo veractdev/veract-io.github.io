@@ -284,10 +284,10 @@ export default function Advantages() {
             onClick={() => {
               router.push('/case-studies');
             }}
-            className='w-[8.688rem] h-[2.75rem] relative flex flex-row items-center justify-center rounded-[2.5rem] hover:bg-primary-blue transition-all duration-300 easeTransition cursor-pointer group'
+            className='w-[8.688rem] h-[2.75rem] relative flex flex-row items-center justify-center rounded-[2.5rem] bg-primary-blue lg:bg-transparent hover:bg-primary-blue transition-all duration-300 easeTransition cursor-pointer group'
           >
             <div
-              className={`absolute ${isHovered ? 'left-[1rem]' : 'left-[1.75rem] md:left-[1.5rem]'} poppinsFont text-[1rem] text-black font-normal leading-[1.8em] text-center group-hover:text-white transition-all duration-300 easeTransition`}
+              className={`absolute ${isHovered ? 'left-[1rem]' : 'left-[1.75rem] md:left-[1.5rem]'} poppinsFont text-[1rem] text-white lg:text-black font-normal leading-[1.8em] text-center group-hover:text-white transition-all duration-300 easeTransition`}
             >
               More Works
             </div>
