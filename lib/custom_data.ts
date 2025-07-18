@@ -49,7 +49,7 @@ export const caseStudyData = {
           '/Images/case-studies/thermal/ShowReel/tab view-thermal showreel.mp4',
           '/Images/case-studies/thermal/ShowReel/mobile view-thermal showreel.mp4',
         ],
-      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
+      youtube_url: 'https://www.youtube.com/embed/SI8GxhQg_oA?si=zzuciOt549NiVPer',
     },
     description: {
       title: "A small glimpse",
@@ -225,7 +225,7 @@ export const caseStudyData = {
           '/Images/case-studies/incluway/Challenges/TAblet.mp4',
           '/Images/case-studies/incluway/Challenges/Mobile.mp4',
         ],
-      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
+      youtube_url: 'https://www.youtube.com/embed/p22KMPdGIv0?si=yTUz-9F6k9d7gNMs',
     },
     description: {
       title: "A small glimpse",
