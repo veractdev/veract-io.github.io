@@ -24,6 +24,9 @@ export default function Page() {
     requestAnimationFrame(() => {
       setLoader(true);
     });
+    return () => {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
