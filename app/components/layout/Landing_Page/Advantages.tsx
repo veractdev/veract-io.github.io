@@ -1,7 +1,6 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -114,15 +113,10 @@ export default function Advantages() {
     loaded && (
       <div className='w-full h-max flex flex-col items-center justify-center relative z-20 bg-primary-text'>
         <div className='static lg:sticky top-[calc(100%-934px)] w-full h-max flex flex-col gap-[2.5rem] items-center justify-center p-[0_1.5rem_6.25rem_1.5rem] md:p-[0_3.125rem_6.25rem_3.125rem]'>
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ amount: 'all' }}
-            className='flex flex-col items-center justify-center gap-[0.625rem]'
-          >
+          <div className='flex flex-col items-center justify-center gap-[0.625rem]'>
             <div className='uppercase syneFont text-[2.5rem] font-bold -tracking-[0.05rem] md:-tracking-[0.05rem] leading-[3.125rem] text-white text-center'>veract<span className='text-primary-blue'>{' '}advantage</span></div>
             <div className='uppercase interFont text-[1.125rem] text-secondary-gray font-normal leading-[2.125rem] text-center'>Collaborating with us is a smart move for growth</div>
-          </motion.div>
+          </div>
           <div className='w-full h-max flex flex-col items-center justify-center'>
             <div className="flex flex-col lg:gap-[0.625rem] gap-[0.625rem] lg:w-[100%] w-full">
               {/* First row */}
