@@ -23,10 +23,10 @@ export default function Services() {
                         layout
                         key={feature.number}
                         className="group relative flex lg:flex-row md:flex-col flex-col lg:items-center items-start py-[1.125rem] md:py-[1.875rem] lg:py-[3.125rem] border-b-[0.063rem] border-[#282828] lg:gap-0 gap-[0.938rem]"
-                        initial={{ y: 40 }}
-                        whileInView={{ y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6, delay: idx === 0 ? 0.15 : idx * 0.15, }}
+                        // initial={{ y: 40 }}
+                        // whileInView={{ y: 0 }}
+                        // viewport={{ once: true, amount: 0.3 }}
+                        // transition={{ duration: 0.6, delay: idx === 0 ? 0.15 : idx * 0.15, }}
                     >
                         <div className='flex flex-col lg:flex-row items-start justify-start gap-[0.938rem] lg:gap-[1.25rem]'>
                             <div className="interFont pt-0 lg:pt-[0.5rem] text-[1.125rem] text-white font-medium leading-[1.4em]">{feature.number}</div>
