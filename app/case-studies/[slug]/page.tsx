@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/layout/Navbar';
 import UserServices from '../../components/layout/Casestudy/Casestudy_UserServices';
 import Casestudy_Banner from '../../components/layout/Casestudy/Casestudy_Banner';
@@ -10,6 +10,7 @@ import CaseStudy_Challenges from '../../components/layout/Casestudy/CaseStudy_Ch
 import Casestudy_Description from '../../components/layout/Casestudy/Casestudy_Description';
 import LenisProvider from '@/app/LenisProvider';
 import { caseStudyData } from '@/lib/custom_data';
+import { useLenis } from 'lenis/react';
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -18,11 +19,18 @@ type Props = {
 export default function Page({ params }: Props) {
   const { slug } = React.use(params);
   const data = caseStudyData[slug as keyof typeof caseStudyData];
-  
+  const lenis = useLenis();
+
+useEffect(() => {
+  if (lenis) {
+    lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
+  }
+}, [lenis]);
+
   return (
-    <LenisProvider>
-      <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
-        <Navbar />
+      <LenisProvider>
+        <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
+          <Navbar />
         <Casestudy_Banner banner_props={data.banner} />
         <Casestudy_ShowReel showreel_props={data.showReel} />
         <Casestudy_Description description_props={data.description} />
@@ -30,7 +38,7 @@ export default function Page({ params }: Props) {
         <UserServices user_services_props={data.services} />
         <Casestudy_Key_Features key_features_props={data.key_features} />
         <Casestudy_Testimonial testimonial_props={data.testimonials} />
-      </div>
-    </LenisProvider>
+        </div>
+      </LenisProvider>
   );
 }

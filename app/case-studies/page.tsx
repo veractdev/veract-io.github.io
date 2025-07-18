@@ -6,6 +6,7 @@ import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
+import { useLenis } from 'lenis/react';
 interface CaseStudyCard {
   name: string;
   routeTo: string;
@@ -95,19 +96,13 @@ export default function Page() {
     return caseStudiesHomePageData.caseStudiesTitleList;
   }
 
-  // useEffect(() => {
-  //     if (caseStudyState) {
-  //         let item = caseStudyState.split(' ').join('').toLowerCase();
-  //         const filteredCardsArray = caseStudiesHomePageData.caseStudiesList[item as keyof typeof caseStudiesHomePageData.caseStudiesList] as unknown as CaseStudyCard[];
-  //         setCaseStudyCards(filteredCardsArray);
-  //     }
-  // }, [])
+  const lenis = useLenis();
 
-  useEffect(() => {
-    return () => {
-      window.scrollTo(0, 0);
-    }
-  }, []);
+useEffect(() => {
+  if (loaded && lenis) {
+    lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
+  }
+}, [loaded, lenis]);
 
   return (
     loaded && (
