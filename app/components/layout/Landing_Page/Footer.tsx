@@ -183,7 +183,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-col items-start justify-center md:gap-[100px] gap-[44px] mt-[12px]">
-              <div className="flex flex-row items-start justify-center lg:gap-[113px] md:gap-[44px] gap-[36px]">
+              <div className="flex flex-row items-start justify-start lg:gap-[113px] md:gap-[44px] gap-[23px] flex-wrap">
                 <div className="flex flex-col items-start justify-center gap-[1.25rem] md:w-[130px] w-[116px]">
                   <div className="openSansFont text-[16px] lg:text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]">
                     {details.quickLinks.company.title}
@@ -244,8 +244,8 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row items-start md:justify-center justify-start lg:gap-[101px] md:gap-[32px] gap-[36px]">
-                <div className="flex flex-col items-start justify-center gap-[1.25rem] lg:w-max md:w-[127px] w-[116px]">
+              <div className="flex flex-row items-start md:justify-center justify-start lg:gap-[101px] md:gap-[32px] gap-[23px] flex-wrap">
+                <div className="flex flex-col items-start justify-center gap-[1.25rem] lg:w-max md:w-[130px] w-[116px]">
                   <div className="openSansFont text-[16px] md:text-[1rem] lg:text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]">
                     {details.quickLinks.contact.title}
                   </div>
@@ -275,7 +275,7 @@ export default function Footer() {
                     ))}
                   </div>
                 </div>
-                <div className="flex flex-col items-start justify-center gap-[1.25rem] md-w-[180px]">
+                <div className="flex flex-col items-start md:justify-start justify-center gap-[1.25rem] md-w-[180px]">
                   <div className="openSansFont text-[16px] lg:text-[1.125rem] text-white font-bold leading-[1.2em] tracking-[0em]">
                     {details.quickLinks.address.title}
                   </div>
@@ -284,7 +284,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="md:w-[15.75rem] w-[184px] openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal md:leading-[1.2em] leading-[1.6em] tracking-[0em] pr-[1rem] md:pr-[0rem]">
+                    <div className="lg:w-[15.75rem] w-[184px] openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal md:leading-[1.2em] leading-[1.6em] tracking-[0em] pr-[1rem] md:pr-[0rem]">
                       {details.quickLinks.address.address}
                     </div>
                   </a>

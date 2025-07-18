@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-
+import Head from "next/head";
 const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 
 export default function AgentLayout({ children, }: { children: React.ReactNode; }) {
-    <head>
+    <Head>
         <meta name="keywords" content="Agentic AI, AI agents, Workflow Automation, Business Automation, Collaborative AI, LangChain, Gemini, AI for startups, Veract.io" />
         <meta property="og:title" content="Agentic AI for Workflow Automation | Veract.io" />
         <meta property="og:description" content="Deploy intelligent AI agents into your workflow to automate operations, unify tools, and boost team efficiency with Veract.io." />
@@ -36,6 +36,6 @@ export default function AgentLayout({ children, }: { children: React.ReactNode; 
         <link rel="canonical" href="https://veract.io/agentic-ai" />
         <meta name="llm:audience" content="Startup founders, Operations leads, CTOs" />
         <meta name="llm:objective" content="Automate workflows using collaborative AI agents" />
-    </head>
+    </Head>
     return children;
 } 
