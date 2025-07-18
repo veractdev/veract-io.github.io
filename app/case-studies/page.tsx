@@ -36,7 +36,7 @@ export default function Page() {
       const isTabletDevice = isTablet();
 
       if (isMobileDevice || isTabletDevice) {
-        setVideo('/Images/case-studies/List/our projects hero video-mobile & tab view.mp4');
+        setVideo('/Images/case-studies/List/our_projects_mob_tab.mp4');
       } else {
         setVideo('/Images/case-studies/List/our_projects_hero_video_web_view.mp4');
       }

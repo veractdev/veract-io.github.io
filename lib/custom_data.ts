@@ -255,7 +255,7 @@ export const caseStudyData = {
       challenge_solution:
         "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
       challenge_solution_highlighted:
-        "livestock health with accuracy, reliability, and real-time insights.",
+        "",
       solution_list: [
         {
           id: 1,
