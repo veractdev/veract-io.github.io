@@ -170,7 +170,7 @@ export default function ShowReel() {
               />
             </div>
 
-            <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
+            <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-100 translate-y-6 transition-all duration-300'>
               play showreel
             </div>
           </motion.div>
