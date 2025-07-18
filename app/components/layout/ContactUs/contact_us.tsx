@@ -147,6 +147,12 @@ export default function Contact_Us() {
       document.removeEventListener("wheel", wheelHandler, { capture: true });
   }, []);
 
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     loaded && (
       <div className="text-white flex flex-col items-center justify-center w-full h-max bg-[#0d0d0d] pb-[40px]">
