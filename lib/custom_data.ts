@@ -15,7 +15,7 @@ export const navItems = [
     id: 3,
     name: "Agentic AI",
     icon: '/Images/LandingPage/Banner/Join.svg',
-    link: "/agent",
+    link: "/agentic-ai",
     status: "active"
   },
   {
@@ -33,7 +33,7 @@ export const navItems = [
 ];
 
 export const caseStudyData = {
-  "thermal": {
+  "infrared-thermography": {
     id: 1,
     banner: {
       title: "Enhancing Animal Health with Thermography",
@@ -209,7 +209,7 @@ export const caseStudyData = {
       profession_at: "",
     },
   },
-  "incluway": {
+  "accessible-web-widget": {
     id: 2,
     banner: {
       title: "Empowering Inclusive Web Experiences through Accessibility",
@@ -460,7 +460,7 @@ export const LandingPageData = {
   showReel: {
     title: "SHOWREEL",
     video:
-      ["/Images/LandingPage/showReel/web-showreel.mp4","/Images/LandingPage/showReel/tab-showreel.mp4","/Images/LandingPage/showReel/mobile-showreel.mp4"]
+      ["/Images/LandingPage/showReel/web-showreel.mp4", "/Images/LandingPage/showReel/tab-showreel.mp4", "/Images/LandingPage/showReel/mobile-showreel.mp4"]
     // "",
   },
   aboutUs: {
@@ -534,7 +534,7 @@ export const LandingPageData = {
       {
         id: 1,
         image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
         title: "accessibility",
         description: "accessibility project",
         status: "active",
@@ -543,7 +543,7 @@ export const LandingPageData = {
       {
         id: 2,
         image: "/Images/LandingPage/FeaturedWorks/thermal.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/thermal.png",
         title: "infrared thermography",
         description: "thermal imaging detects mastitis in dairy cattle",
         status: "active",
@@ -552,7 +552,7 @@ export const LandingPageData = {
       {
         id: 3,
         image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
         title: "e-commerce",
         description: "payment enabled e-commerce web application",
         status: "inactive",
@@ -561,7 +561,7 @@ export const LandingPageData = {
       {
         id: 4,
         image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
         title: "ed tech",
         description: "education platform",
         status: "inactive",
@@ -699,40 +699,63 @@ export const LandingPageData = {
   testimonials: {
     testimonial_list: [
       {
-        name: "hare priya",
+        name: "Hare Priyaa Rajendran",
         quote: "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
         image: "/Images/LandingPage/Testimonial/harepriyaa.jpeg",
-        company: "",
+        company: "Geeraj Business Solutions",
+        role: "Founder",
       },
       {
-        name: "Mahendra vadivelu",
+        name: "Mahendra Vadivelu",
         quote: "We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
         image: "/Images/LandingPage/Testimonial/mahendra.jpg",
-        company: "",
+        company: "Mako IT Lab",
+        role: "CEO",
       },
       {
-        name: "salil nair",
+        name: "Salil Nair",
         quote: "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
         image: "/Images/LandingPage/Testimonial/salil.png",
-        company: "",
+        company: "Agrosperity Tech Solutions",
+        role: "",
       },
       {
-        name: "anand shah",
+        name: "Anand Shah",
         quote: "Excellent prompt support in spite of remote location. ",
         image: "/Images/LandingPage/Testimonial/AnanadShah.png",
-        company: "",
+        company: "Rajdeep Industrial Products",
+        role: "",
       },
       {
-        name: "Bijoy kt",
+        name: "Bijoy KT",
         quote: "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
         image: "/Images/LandingPage/Testimonial/Bijoy.jpg",
-        company: "",
+        company: "Data Center Mart",
+        role: "",
       },
     ],
   },
   footer: {
     description:
       "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
+    footer_logo_list: [
+      {
+        id: 1,
+        image: "/Images/LandingPage/Banner/BNI.svg",
+      },
+      {
+        id: 2,
+        image: "/Images/LandingPage/Banner/Clutch.svg",
+      },
+      {
+        id: 3,
+        image: "/Images/LandingPage/Banner/5 stars.svg",
+      },
+      {
+        id: 4,
+        image: "/Images/LandingPage/Banner/Ethercat_logo.svg",
+      },
+    ],
     socialMediaIcons: [
       {
         id: 1,
@@ -761,8 +784,8 @@ export const LandingPageData = {
         links: [
           {
             id: 1,
-            title: "Home",
-            link: "/",
+            title: "Agentic AI",
+            link: "/agentic-ai",
             status: "active"
           },
           {
@@ -773,24 +796,18 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            title: "Agentic AI",
-            link: "/agent",
-            status: "active"
-          },
-          {
-            id: 4,
             title: "Case Studies",
             link: "/case-studies",
             status: "active"
           },
           {
-            id: 5,
+            id: 4,
             title: "Contact Us",
             link: "/contact-us",
             status: "active"
           },
           {
-            id: 6,
+            id: 5,
             title: "Blogs",
             link: "",
             status: "inactive"
@@ -814,7 +831,7 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            title: "Industrial IoT",
+            title: "Internet of things - IoT",
             link: "",
             status: "inactive"
           },
@@ -824,6 +841,39 @@ export const LandingPageData = {
             link: "",
             status: "inactive"
           },
+          {
+            id: 5,
+            title: "Infrared Thermography",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 6,
+            title: "Workflow Automation",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 7,
+            title: "Agentic AI",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 8,
+            title: "Custom Mobile Application",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 9,
+            title: "Custom Web Application",
+            link: "",
+            status: "inactive"
+          },
+          {
+            id: 10,
+          }
         ],
       },
       contact: {
@@ -841,6 +891,11 @@ export const LandingPageData = {
           },
           {
             id: 3,
+            type: "phone",
+            title: "+1 7377101523",
+          },
+          {
+            id: 4,
             type: "email",
             title: "info@veract.io",
           },
@@ -950,27 +1005,27 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Infrared Health Scan.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Infrared Health Scan.webp",
         header: "Infrared Thermography",
         subHeader: "Infrared Imaging for Animal Health",
-        routeTo: "/case-studies/thermal",
+        routeTo: "/case-studies/infrared-thermography",
       },
     ],
     accessibility: [
       {
         id: 1,
         image: "/Images/case-studies/List/Accessible Web Widget.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Accessible Web Widget.webp",
         header: "Accessible Web Widget",
         subHeader: "Smart Widget for Enhanced Digital Access",
-        routeTo: "/case-studies/incluway",
+        routeTo: "/case-studies/accessible-web-widget",
       },
     ],
     chatbot: [
       {
         id: 1,
         image: "/Images/case-studies/List/AI Chat Assistant.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/AI Chat Assistant.webp",
         header: "AI Chat Assistant",
         subHeader: "Conversational AI for Real-Time Support",
         routeTo: "",
@@ -980,7 +1035,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Learning Platform.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Learning Platform.webp",
         header: "Learning Platform",
         subHeader: "AI-Based Learning and Course Portal",
         routeTo: "",
@@ -990,7 +1045,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Visual Inspection AI.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Visual Inspection AI.webp",
         header: "Visual Inspection AI",
         subHeader: "AI Visual QC for Industrial Inspection",
         routeTo: "",
@@ -1000,7 +1055,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Digital Wellness App.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Digital Wellness App.webp",
         header: "Digital Wellness",
         subHeader: "Health & Wellness App for Daily Tracking",
         routeTo: "",
@@ -1010,7 +1065,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Smart Industry Portal.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Smart Industry Portal.webp",
         header: "Smart Industry Portal",
         subHeader: "Innovative Data Center Platform",
         routeTo: "",
@@ -1020,7 +1075,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
         header: "Seasonal E-Commerce",
         subHeader: "Online Store for Seasonal Organic Goods",
         routeTo: "",
@@ -1030,7 +1085,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/Sales Dashboard.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/Sales Dashboard.webp",
         header: "Sales Dashboard",
         subHeader: "Quote & Enquiry Management Dashboard",
         routeTo: "",
@@ -1040,7 +1095,7 @@ export const caseStudiesHomePageData = {
       {
         id: 1,
         image: "/Images/case-studies/List/AV Room Designer.webp",
-        hover_image: "https://picsum.photos/200/300",
+        hover_image: "/Images/case-studies/List/AV Room Designer.webp",
         header: "Audio Visual Interior",
         subHeader: "Immersive AV Conference Room Planner",
         routeTo: "",
@@ -1048,3 +1103,87 @@ export const caseStudiesHomePageData = {
     ],
   },
 };
+
+export const metadata = [
+  {
+    slug: 'infrared-thermography',
+    title: 'Infrared Thermography',
+    description: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+    openGraph: {
+      title: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+      description: 'Monitor buffalo udder health with infrared thermography...',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+      description: 'Smart infrared system for mastitis detection in buffaloes.',
+    },
+    keywords: [
+      'buffalo udder health',
+      'mastitis detection',
+      'thermal imaging',
+      'infrared thermography',
+      'veterinary technology',
+      'livestock health monitoring',
+      'dairy farm management',
+      'non-invasive diagnosis',
+      'animal health AI',
+      'smart veterinary system'
+    ],
+    author: 'Veract.io',
+    language: 'en',
+    subject: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
+    industry: 'Infrared Thermography',
+    image: 'https://veract.io/images/infrared-thermography.jpg',
+    url: 'https://veract.io/case-studies/infrared-thermography',
+    geo: {
+      region: 'IN-TN',
+      placename: 'Velachery, Chennai',
+      position: "12.9784;80.2214",
+      icbm: '12.9784, 80.2214',
+    },
+  },
+  {
+    slug: 'accessible-web-widget',
+    title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+    description:
+      'Enhance website accessibility for users with visual, motor, and cognitive impairments. Our lightweight, WCAG-compliant widget offers real-time personalization, cross-browser support, and easy integration.',
+    openGraph: {
+      title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+      description:
+        "Boost your website's inclusivity with our easy-to-integrate accessibility widget supporting visual, motor, and cognitive impairments. Fully WCAG-compliant and optimized for performance.",
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+      description:
+        'Enhance website accessibility with our lightweight widget designed for all users. Real-time personalization and seamless integration.',
+    },
+    keywords: [
+      'accessibility widget',
+      'WCAG compliance',
+      'digital accessibility',
+      'accessibility plugin',
+      'visual impairment support',
+      'motor impairment accessibility',
+      'cognitive accessibility tool',
+      'ADA compliance',
+      'inclusive web design',
+      'accessibility software'
+    ],
+    author: 'Veract.io',
+    language: 'en',
+    subject: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
+    industry: 'Accessibility, Web Development',
+    image: 'https://veract.io/images/accessibility-widget-preview.png',
+    url: 'https://veract.io/case-studies/accessible-web-widget',
+    geo: {
+      region: 'IN-TN',
+      placename: 'Velachery, Chennai',
+      position: "12.9784;80.2214",
+      icbm: '12.9784, 80.2214',
+    },
+  },
+]

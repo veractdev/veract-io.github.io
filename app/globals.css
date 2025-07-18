@@ -24,10 +24,8 @@
   --color-primary-text-50: #0D0D0D80;
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1656px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1700px;
 }
 
 ::-webkit-scrollbar {
@@ -670,4 +668,18 @@ body {
   .scale-down {
     scale: 0.9;
   }
+}
+
+.contact_us_shadow {
+  box-shadow: 0px 8px 40px 0px #0055FF80,
+  0px 0px 10px 1px #FFFFFF00;
+}
+
+.contact_us_shadow:hover {
+  box-shadow: 0px 8px 40px 0px #0055FFB3,
+  0px 0px 10px 1px #FFFFFF4D;
+}
+
+.error_contact_us_shadow {
+  box-shadow: 0px 8px 40px 0px #FF224480;
 }

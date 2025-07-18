@@ -1,8 +1,7 @@
 "use client";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import emailjs from "@emailjs/browser";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -102,10 +101,13 @@ export default function Contact_Us() {
         setTimeout(() => setSubmitted(false), 3000);
       } else {
         setSubmissionFailed(true);
+        resetFormFields();
         setTimeout(() => setSubmissionFailed(false), 3000);
       }
     } catch (error) {
+      console.log(error);
       setSubmissionFailed(true);
+      resetFormFields();
       setTimeout(() => setSubmissionFailed(false), 3000);
     } finally {
       setIsLoading(false);
@@ -152,7 +154,7 @@ export default function Contact_Us() {
           Got an idea?
         </div>
         <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_230px] syneFont text-center text-white text-[36px] md:text-[54px] lg:text-[86px] tracking-[-3.4px] md:tracking-[-3.8px] leading-[55px] md:leading-[54px] lg:leading-[90px] font-semibold">
-          Let's build something great together
+          Let&apos;s build something great together
         </div>
         <div className="w-full p-[0_1.875rem] md:p-[0_3.125rem] lg:p-[0_120px] flex flex-col lg:flex-row items-start justify-center gap-[1.25rem] mt-[90px]">
           <div className="w-full max-w-[888px] rounded-[30px] p-[11px] border border-white/8 z-10">
@@ -304,14 +306,14 @@ export default function Contact_Us() {
               <div
                 className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
                   formValid && !isLoading && !submitted && !submissionFailed
-                    ? "bg-[#4285F4] cursor-pointer text-white"
+                    ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
                     : isLoading
-                    ? "bg-[#4285F4]/80 text-white cursor-wait"
+                    ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                     : submitted
-                    ? "bg-[#4285F4] text-white cursor-default"
+                    ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
                     : submissionFailed
-                    ? "bg-red-500 cursor-not-allowed text-white/15"
-                    : "bg-[#4285F4]/50 cursor-not-allowed text-white/15"
+                    ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
+                    : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                 }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
@@ -377,6 +379,12 @@ export default function Contact_Us() {
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
                   +91 99628 37650
+                </a>
+                <a
+                  href="tel:+17377101523"
+                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
+                >
+                  +1 7377101523
                 </a>
               </div>
             </div>
