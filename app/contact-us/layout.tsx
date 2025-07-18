@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-
+import Head from "next/head";
 export const metadata: Metadata = {
     title: "Contact Veract.io – Mobile, Web, AI & IoT Experts",
     description:
@@ -64,7 +64,7 @@ export default function ContactLayout({
 }) {
     return (
         <>
-            <head>
+            <Head>
                 <meta
                     name="keywords"
                     content="Veract.io contact, mobile app development India, web app development, agentic AI solutions, IoT development company, custom software services"
@@ -91,7 +91,7 @@ export default function ContactLayout({
                         __html: JSON.stringify(contactSchema),
                     }}
                 />
-            </head>
+            </Head>
             {children}
         </>
     );

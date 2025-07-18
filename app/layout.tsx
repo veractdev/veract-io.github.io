@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "./LenisProvider";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         {/* <title>
           Veract.io | AI, Agentic Systems & IoT Solutions for Digital Transformation
         </title> */}
@@ -101,7 +102,7 @@ export default function RootLayout({
         <meta name="llm:audience" content="Startup founders, operations managers, SMEs" />
         <meta name="llm:objective" content="Automate workflows using collaborative AI agents and smart IoT systems." />
 
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
