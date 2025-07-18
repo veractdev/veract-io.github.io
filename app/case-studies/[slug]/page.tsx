@@ -4,7 +4,7 @@ import Navbar from '../../components/layout/Navbar';
 import UserServices from '../../components/layout/Casestudy/Casestudy_UserServices';
 import Casestudy_Banner from '../../components/layout/Casestudy/Casestudy_Banner';
 import Casestudy_ShowReel from '../../components/layout/Casestudy/Casestudy_ShowReel';
-import Casestudy_Testimonial from '../../components/layout/Casestudy/Casestudy_Testimonial';
+// import Casestudy_Testimonial from '../../components/layout/Casestudy/Casestudy_Testimonial';
 import Casestudy_Key_Features from '../../components/layout/Casestudy/Casestudy_Key_Features';
 import CaseStudy_Challenges from '../../components/layout/Casestudy/CaseStudy_Challenges';
 import Casestudy_Description from '../../components/layout/Casestudy/Casestudy_Description';
@@ -29,7 +29,7 @@ export default function Page({ params }: Props) {
         <CaseStudy_Challenges challenges_props={data.challenges} />
         <UserServices user_services_props={data.services} />
         <Casestudy_Key_Features key_features_props={data.key_features} />
-        <Casestudy_Testimonial testimonial_props={data.testimonials} />
+        {/* <Casestudy_Testimonial testimonial_props={data.testimonials} /> */}
       </div>
     </LenisProvider>
   );
