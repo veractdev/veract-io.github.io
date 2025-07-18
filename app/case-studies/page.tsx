@@ -209,7 +209,7 @@ export default function Page() {
                       loading="lazy"
                       src={item.image}
                       alt="project image"
-                      className="absolute w-full h-full object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out"
+                      className="absolute w-full h-full object-contain md:object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out"
                     />
                     <img
                       loading='lazy'
