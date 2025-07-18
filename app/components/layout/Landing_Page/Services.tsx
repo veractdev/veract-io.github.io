@@ -18,7 +18,7 @@ export default function Services() {
                 <div className='w-full lg:w-[50rem] px-[1.5rem] md:px-[4.375rem] lg:px-0 interFont text-[1.125rem] text-white font-normal leading-[1.8em] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
             </div>
             <div className="flex flex-col w-full px-[1.5rem] md:px-[4.375rem] lg:px-[3.125rem] overflow-x-hidden">
-                {LandingPageData.services.service_list.map((feature, idx) =>
+                {LandingPageData.services.service_list.map((feature) =>
                     <motion.div
                         layout
                         key={feature.number}
