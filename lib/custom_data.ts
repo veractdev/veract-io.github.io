@@ -424,7 +424,7 @@ export const LandingPageData = {
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Banner/Clutch.svg",
+        image: "/Images/LandingPage/Banner/clutch.svg",
       },
       {
         id: 3,
@@ -746,7 +746,7 @@ export const LandingPageData = {
       },
       {
         id: 2,
-        image: "/Images/LandingPage/Banner/Clutch.svg",
+        image: "/Images/LandingPage/Banner/clutch.svg",
       },
       {
         id: 3,
