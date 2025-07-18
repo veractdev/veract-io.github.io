@@ -235,7 +235,7 @@ export default function ShowReel() {
             >
               <iframe
                 ref={videoRef}
-                src="https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw"
+                src={LandingPageData.showReel.youtube_url}
                 className="w-full h-full"
               />
             </div>
