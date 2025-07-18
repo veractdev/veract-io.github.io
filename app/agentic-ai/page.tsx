@@ -10,12 +10,6 @@ import AiAgent from '../components/layout/Agent/AiAgent';
 import Agent_Footer from '../components/layout/Agent/Agent_Footer';
 
 export default function Page() {
-  
-  useEffect(() => {
-    return () => {
-    };
-  }, []);
-
   return (
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-[#080808] select-none'>

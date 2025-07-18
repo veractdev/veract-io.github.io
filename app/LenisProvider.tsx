@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import Lenis from 'lenis'   
+import Lenis from 'lenis'
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -10,6 +10,8 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     })
+
+    window.lenis = lenis
 
     const raf = (time: number) => {
       lenis.raf(time)
@@ -20,6 +22,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
 
     return () => {
       lenis.destroy()
+      window.lenis = undefined
     }
   }, [])
 

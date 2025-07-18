@@ -2,15 +2,6 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { LandingPageData } from '@/lib/custom_data';
-// Add at the top of your file
-declare global {
-  interface Window {
-    lenis?: {
-      stop: () => void;
-      start: () => void;
-    };
-  }
-}
 
 export default function ShowReel() {
   const sectionRef = useRef(null);

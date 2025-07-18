@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/layout/Navbar';
 import UserServices from '../../components/layout/Casestudy/Casestudy_UserServices';
 import Casestudy_Banner from '../../components/layout/Casestudy/Casestudy_Banner';
@@ -10,7 +10,6 @@ import CaseStudy_Challenges from '../../components/layout/Casestudy/CaseStudy_Ch
 import Casestudy_Description from '../../components/layout/Casestudy/Casestudy_Description';
 import LenisProvider from '@/app/LenisProvider';
 import { caseStudyData } from '@/lib/custom_data';
-import { useLenis } from 'lenis/react';
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -19,14 +18,13 @@ type Props = {
 export default function Page({ params }: Props) {
   const { slug } = React.use(params);
   const data = caseStudyData[slug as keyof typeof caseStudyData];
-  const lenis = useLenis();
-
-useEffect(() => {
-  if (lenis) {
-    lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
-  }
-}, [lenis]);
-
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+    setTimeout(() => {
+    window.lenis?.scrollTo(0);
+    }, 500);
+  }, [loaded]);
   return (
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>

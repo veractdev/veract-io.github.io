@@ -6,7 +6,6 @@ import { caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
-import { useLenis } from 'lenis/react';
 interface CaseStudyCard {
   name: string;
   routeTo: string;
@@ -96,13 +95,6 @@ export default function Page() {
     return caseStudiesHomePageData.caseStudiesTitleList;
   }
 
-  const lenis = useLenis();
-
-useEffect(() => {
-  if (loaded && lenis) {
-    lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
-  }
-}, [loaded, lenis]);
 
   return (
     loaded && (
