@@ -19,12 +19,14 @@ export default function Page({ params }: Props) {
   const { slug } = React.use(params);
   const data = caseStudyData[slug as keyof typeof caseStudyData];
   const [loaded, setLoaded] = useState(false);
+ 
   useEffect(() => {
     setLoaded(true);
     setTimeout(() => {
     window.lenis?.scrollTo(0);
     }, 500);
   }, [loaded]);
+ 
   return (
       <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>

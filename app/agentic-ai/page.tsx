@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from '../components/layout/Navbar';
 import LenisProvider from '@/app/LenisProvider';
 import AgenticLayer from '../components/layout/Agent/AgenticLayer';
