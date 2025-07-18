@@ -222,8 +222,8 @@ export const caseStudyData = {
       video:
         [
           '/Images/case-studies/incluway/ShowReel/Incluway showreel- web view.mp4',
-          '/Images/case-studies/incluway/ShowReel/Incluway showreel- tab view.mp4',
-          '/Images/case-studies/incluway/ShowReel/Incluway showreel Mobile view.mp4',
+          '/Images/case-studies/incluway/Challenges/TAblet.mp4',
+          '/Images/case-studies/incluway/Challenges/Mobile.mp4',
         ],
       youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
     },
