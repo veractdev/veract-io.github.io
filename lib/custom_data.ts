@@ -49,7 +49,7 @@ export const caseStudyData = {
           '/Images/case-studies/thermal/ShowReel/tab view-thermal showreel.mp4',
           '/Images/case-studies/thermal/ShowReel/mobile view-thermal showreel.mp4',
         ],
-      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
+      youtube_url: 'https://www.youtube.com/embed/SI8GxhQg_oA?si=zzuciOt549NiVPer',
     },
     description: {
       title: "A small glimpse",
@@ -225,7 +225,7 @@ export const caseStudyData = {
           '/Images/case-studies/incluway/Challenges/TAblet.mp4',
           '/Images/case-studies/incluway/Challenges/Mobile.mp4',
         ],
-      youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
+      youtube_url: 'https://www.youtube.com/embed/p22KMPdGIv0?si=yTUz-9F6k9d7gNMs',
     },
     description: {
       title: "A small glimpse",
@@ -534,7 +534,7 @@ export const LandingPageData = {
     featuredWorks_list: [
       {
         id: 1,
-        image: "/Images/LandingPage/FeaturedWorks/accessibility.png",
+        image: "/Images/case-studies/List/Accessible Web Widget.webp",
         hover_image: "/Images/case-studies/List/Hover/Accessible Web Widget.webp",
         title: "accessibility",
         description: "accessibility project",
@@ -543,7 +543,7 @@ export const LandingPageData = {
       },
       {
         id: 2,
-        image: "/Images/LandingPage/FeaturedWorks/thermal.png",
+        image: "/Images/case-studies/List/Infrared Health Scan.webp",
         hover_image: "/Images/case-studies/List/Hover/Infrared Thermography.webp",
         title: "infrared thermography",
         description: "thermal imaging detects mastitis in dairy cattle",
@@ -552,7 +552,7 @@ export const LandingPageData = {
       },
       {
         id: 3,
-        image: "/Images/LandingPage/FeaturedWorks/Ecom.png",
+        image: "/Images/case-studies/List/Seasonal E-Commerce.webp",
         hover_image: "/Images/case-studies/List/Hover/Seasonal E-Commerce.webp",
         title: "e-commerce",
         description: "payment enabled e-commerce web application",
@@ -561,7 +561,7 @@ export const LandingPageData = {
       },
       {
         id: 4,
-        image: "/Images/LandingPage/FeaturedWorks/Evo11ve.png",
+        image: "/Images/case-studies/List/Learning Platform.webp",
         hover_image: "/Images/case-studies/List/Hover/Learning Platform.webp",
         title: "ed tech",
         description: "education platform",
