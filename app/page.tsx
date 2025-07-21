@@ -10,6 +10,7 @@ import Testimonials from "./components/layout/Landing_Page/Testimonials";
 import Footer from "./components/layout/Landing_Page/Footer";
 import LenisProvider from "./LenisProvider";
 import Services from "./components/layout/Landing_Page/Services";
+import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
   const [loader, setLoader] = useState(false);
@@ -41,15 +42,16 @@ export default function Page() {
               href={image}
             />
           ))}
-          <Navbar />
+          {/* <Navbar />
           <Banner />
           <ShowReel />
           <About_Us />
           <Advantages />
           <Services />
           <We_Work_With />
-          <Testimonials />
-          <Footer />
+          <Testimonials /> */}
+          <FAQ />
+          {/* <Footer /> */}
         </div>
       )}
     </LenisProvider>
