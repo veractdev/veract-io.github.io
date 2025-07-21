@@ -52,7 +52,7 @@ const contactSchema = {
             ],
             contactType: "Customer Service",
             areaServed: "IN",
-            availableLanguage: ["English", "Hindi"],
+            availableLanguage: ["English", "Hindi","Tamil"],
         },
     },
 };
