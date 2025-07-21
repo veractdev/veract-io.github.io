@@ -687,7 +687,9 @@ body {
 .animate-active-faq-hover{
   position: absolute;
   height: 322px;
-  animation: faq-hover-active 0.3s ease-in-out forwards;
+  animation: faq-hover-active 0.3s ease-in-out;
+  animation-direction: alternate;
+  top: -125%;
 }
 
 @keyframes faq-hover-active{

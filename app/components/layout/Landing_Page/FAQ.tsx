@@ -62,7 +62,7 @@ export default function FAQ() {
                         >
                             <div className='reltive flex flex-row items-center justify-between'>
                                 <motion.div
-                                    className={`left-[-20rem] top-[-70%] group-hover:left-[15%] rounded-[50%] absolute w-[723px] h-[121px] bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(255,255,255,0.15)_0%,_rgba(0,0,0,0)_100%)] z-990 transition-all duration-300 ${active.includes(item.id) ? 'animate-active-faq-hover' : 'animate-faq-hover'}`}/>
+                                    className={`left-[-40%] top-[-70%] group-hover:left-[15%] rounded-[50%] absolute w-[723px] h-[121px] bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(255,255,255,0.15)_0%,_rgba(0,0,0,0)_100%)] z-990 transition-all duration-300 ${active.includes(item.id) ? 'animate-active-faq-hover' : 'animate-faq-hover'}`}/>
                                 <div
                                     className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium leading-[50%] -tracking-[0.05em] transition-all duration-300 ${active.includes(item.id) ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
                                 >
