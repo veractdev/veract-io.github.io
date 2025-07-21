@@ -461,7 +461,7 @@ export const LandingPageData = {
   showReel: {
     title: "SHOWREEL",
     video:
-      ["/Images/LandingPage/showReel/web-showreel.mp4", "/Images/LandingPage/showReel/tab-showreel.mp4", "/Images/LandingPage/showReel/mobile-showreel.mp4"],
+      ["/Images/LandingPage/showReel/homepage showreel web view.mp4", "/Images/LandingPage/showReel/tab view home showreel.mp4", "/Images/LandingPage/showReel/mobile view home page showreel.mp4"],
     youtube_url: 'https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw',
   },
   aboutUs: {
