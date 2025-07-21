@@ -10,14 +10,15 @@ import Testimonials from "./components/layout/Landing_Page/Testimonials";
 import Footer from "./components/layout/Landing_Page/Footer";
 import LenisProvider from "./LenisProvider";
 import Services from "./components/layout/Landing_Page/Services";
+import { baseUrl } from "@/lib/custom_data";
 
 export default function Page() {
   const [loader, setLoader] = useState(false);
   const preloadImages = [
-    "/Images/LandingPage/Advantages/img1.webp",
-    "/Images/LandingPage/Advantages/img2.jpg",
-    "/Images/LandingPage/Advantages/img3.webp",
-    "/Images/LandingPage/Advantages/img4.webp",
+    `${baseUrl}/Images/LandingPage/Advantages/img1.webp`,
+    `${baseUrl}/Images/LandingPage/Advantages/img2.jpg`,
+    `${baseUrl}/Images/LandingPage/Advantages/img3.webp`,
+    `${baseUrl}/Images/LandingPage/Advantages/img4.webp`,
   ];
 
   useEffect(() => {

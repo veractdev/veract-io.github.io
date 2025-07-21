@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import LenisProvider from '../LenisProvider'
 import { useRouter } from 'next/navigation';
-import { caseStudiesHomePageData } from '@/lib/custom_data';
+import { baseUrl, caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
@@ -36,9 +36,9 @@ export default function Page() {
       const isTabletDevice = isTablet();
 
       if (isMobileDevice || isTabletDevice) {
-        setVideo('/Images/case-studies/List/our_projects_mob_tab.mp4');
-      } else {
-        setVideo('/Images/case-studies/List/our_projects_hero_video_web_view.mp4');
+        setVideo(`${baseUrl}/Images/case-studies/List/our_projects_mob_tab.mp4`);
+      } else {  
+        setVideo(`${baseUrl}/Images/case-studies/List/our_projects_hero_video_web_view.mp4`);
       }
     };
 
@@ -121,8 +121,8 @@ export default function Page() {
                   </video>
                 )}
               </div>
-              <img loading="lazy" src="/Images/case-studies/Overlay-1.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
-              <img loading="lazy" src="/Images/case-studies/Overlay-2.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
+              <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-1.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
+              <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-2.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
               <div
                 className="w-[80%] absolute left-[1.25rem] bottom-[4.75rem] md:w-[80%] lg:w-[90%] md:left-[3.125rem] md:bottom-[2.5rem] md:top-auto lg:top-[15.25rem] lg:left-[3.125rem] lg:bottom-auto flex flex-wrap flex-col gap-[0.625rem] items-start justify-center"
                 style={{

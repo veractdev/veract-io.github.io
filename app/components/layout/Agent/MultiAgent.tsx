@@ -4,6 +4,7 @@ import AgentTitle from "./AgentTitle";
 import AgentRobot from "./AgentRobot";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { baseUrl } from "@/lib/custom_data";
 interface Agent {
   id: number;
   name: string;
@@ -20,49 +21,49 @@ export default function MultiAgent() {
       {
         id: 1,
         name: "Client Request Intake Agent",
-        image: "/Images/agent/agent-1.svg",
+        image: `/Images/agent/agent-1.svg`,
         position: "top-[3%] left-[-3%]",
       },
       {
         id: 2,
         name: "Resource Allocation Agent",
-        image: "/Images/agent/agent-2.svg",
+        image: `/Images/agent/agent-2.svg`,
         position: "bottom-[35%] left-[-3%]",
       },
       {
         id: 3,
         name: "Time Tracking & Billing Agent",
-        image: "/Images/agent/agent-3.svg",
+        image: `/Images/agent/agent-3.svg`,
         position: "bottom-[59%] left-[23%]",
       },
       {
         id: 4,
         name: "Client Communication Agent",
-        image: "/Images/agent/agent-4.svg",
+        image: `/Images/agent/agent-4.svg`,
         position: "top-[6%] right-[35%]",
       },
       {
         id: 5,
         name: "Proposal & Documentation Agent",
-        image: "/Images/agent/agent-5.svg",
+        image: `/Images/agent/agent-5.svg`,
         position: "bottom-[17%] left-[43%]",
       },
       {
         id: 6,
         name: "Issue Escalation Agent",
-        image: "/Images/agent/agent-6.svg",
+        image: `/Images/agent/agent-6.svg`,
         position: "top-[5%] right-[7%]",
       },
       {
         id: 7,
         name: "Project Health Monitoring Agent",
-        image: "/Images/agent/agent-7.svg",
+        image: `/Images/agent/agent-7.svg`,
         position: "top-[43%] right-[12%]",
       },
       {
         id: 8,
         name: "Performance Reporting Agent",
-        image: "/Images/agent/agent-8.svg",
+        image: `/Images/agent/agent-8.svg`,
         position: "bottom-[2%] right-[5%]",
       },
     ]);
@@ -110,7 +111,7 @@ export default function MultiAgent() {
         <div className="scale-down">
           <div className="relative lg:w-[1059.5px] lg:h-[891.5px] md:w-[591.46px] md:h-[497.67px] w-[296.33px] h-[249.34px] right-[-1rem]">
             <img loading="lazy"
-              src="/Images/agent/multi-agent-layers.svg"
+              src={`/Images/agent/multi-agent-layers.svg`}
               alt="MultiAgent"
               className="absolute z-[100]"
             />

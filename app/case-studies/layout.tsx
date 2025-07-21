@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Head from "next/head";
+import { baseUrl } from "@/lib/custom_data";
 export const metadata: Metadata = {
     title: "Case Studies | Real AI, Vision & Automation Projects by Veract.io",
     description: "Explore how Veract.io applies Agentic AI, machine vision, and automation across industries. See real-world projects in wellness, e-commerce, smart industry, and more.",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
         url: "https://veract.io/case-studies",
         images: [
             {
-                url: "https://veract.io/Images/LandingPage/Navbar/veract-logo-white-font.svg",
+                url: `${baseUrl}/Images/LandingPage/Navbar/veract-logo-white-font.svg`,
                 width: 1200,
                 height: 630,
                 alt: "Veract.io Logo",

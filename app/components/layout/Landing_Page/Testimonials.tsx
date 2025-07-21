@@ -1,5 +1,5 @@
 'use client'
-import { LandingPageData } from '@/lib/custom_data';
+import { baseUrl, LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
@@ -31,7 +31,7 @@ export default function Testimonials() {
           <div className="w-full flex flex-col lg:flex-row items-center justify-center relative">
             <img loading="lazy"
               className="absolute top-[-3.4rem] left-1/2 transform -translate-x-1/2 lg:left-[-3rem] lg:-translate-x-0 w-[6rem] lg:w-[7.438rem] h-[6rem] lg:h-[6.938rem] object-contain z-0"
-              src="/Images/LandingPage/Testimonial/TestimonialDots.png"
+              src={`${baseUrl}/Images/LandingPage/Testimonial/TestimonialDots.png`}
               alt="Testimonial_Quotes"
             />
             <div className="w-max relative z-10 syneFont text-[3.125rem] md:text-[4rem] lg:text-[5rem] leading-[1.2em] font-semibold flex flex-col gap-[0.625rem]">
@@ -116,7 +116,7 @@ export default function Testimonials() {
                       transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
                       className="relative pl-[1.438rem] text-base leading-relaxed">
                       <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
-                        <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
+                        <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
                       </div>
                       <div className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
                         {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
@@ -200,7 +200,7 @@ export default function Testimonials() {
                           transition={{ duration: 0.4, ease: "easeInOut" }}
                           className="relative pl-[1.438rem] text-base leading-relaxed">
                           <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
-                            <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src="/Images/LandingPage/Testimonial/quotes.png" alt="Testimonial_Quotes" />
+                            <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
                           </div>
                           <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em] text-left'>
                             {t.quote}

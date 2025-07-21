@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "./LenisProvider";
-
+import { baseUrl } from "@/lib/custom_data";
+  
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,7 +19,7 @@ const schema = {
   "@type": "Organization",
   "name": "Veract.io",
   "url": "https://veract.io",
-  "logo": "/Images/LandingPage/Navbar/veract-logo-white-font.svg",
+  "logo": `${baseUrl}/Images/LandingPage/Navbar/veract-logo-white-font.svg`,
   "description": "Veract.io builds Agentic AI systems, Machine Vision, and Industrial IoT solutions to modernize and automate businesses.",
   "sameAs": [
     "https://www.linkedin.com/company/veract-consultancy-private-limited/",
@@ -75,7 +76,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="/Images/LandingPage/Navbar/veract-logo-white-font.svg"
+          content={`${baseUrl}/Images/LandingPage/Navbar/veract-logo-white-font.svg`}
         />
         <meta
           property="og:url"
@@ -93,7 +94,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Veract.io | AI & IoT Solutions for Digital Growth" />
         <meta name="twitter:description" content="We build Agentic AI, Machine Vision, and IoT systems for modern businesses. Scalable, measurable, and fast." />
-        <meta name="twitter:image" content="https://veract.io/Images/LandingPage/Navbar/veract-logo-white-font.svg" />
+        <meta name="twitter:image" content={`${baseUrl}/Images/LandingPage/Navbar/veract-logo-white-font.svg`} />
 
         <link rel="canonical" href="https://veract.io/" />
 

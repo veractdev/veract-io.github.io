@@ -1,5 +1,5 @@
 "use client"
-import { AgentPageData } from "@/lib/custom_data";
+import { AgentPageData, baseUrl } from "@/lib/custom_data";
 import React, { useEffect, useRef, useState } from "react";
 import { Chat , Gear, Funnel , CircleNotch , Check , ArrowUp , File , MagnifyingGlass , PuzzlePiece , ArrowLeft , ArrowRight , Cards , Minus , X, ShieldCheck, Cpu  , FinnTheHuman , Repeat} from "phosphor-react";
 import gsap from "gsap";
@@ -81,7 +81,7 @@ export default function OurProcess() {
                   <div className="relative flex flex-col items-center gap-[0.625rem] p-[0.625rem_0.813rem_0_0.813rem] shadow-[0px_0px_0px_1px_#222222_inset]">
                     <div className="relative w-[107px] h-[107px] mb-[2.688rem] border-[1px] border-[#222222] rounded-full justify-center items-center duration-500 animate-spin-slow">
                       <img
-                        src="/Images/agent/radar.png"
+                        src={`${baseUrl}/Images/agent/radar.png`}
                         className="absolute w-full h-max"
                         alt="Radar"
                       />
@@ -104,7 +104,7 @@ export default function OurProcess() {
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
-                      <img src="/Images/agent/speedometer.svg" className="w-[13px] h-[13px]"/>
+                      <img src={`/Images/agent/speedometer.svg`} className="w-[13px] h-[13px]"/>
                       <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Speed check
                       </div>
@@ -199,26 +199,26 @@ export default function OurProcess() {
                     </div>
                     <div className="flex flex-col gap-[10px] z-[100]">
                         <div className="relative items-center flex">
-                            <img src="/Images/agent/process-line.png" className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         <div className="relative items-center flex">
-                            <img src="/Images/agent/process-line.png" className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         <div className="relative items-center flex">
-                            <img src="/Images/agent/process-line.png" className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         
                     </div>
                     <div className="w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] z-[200] overflow-hidden items-center justify-center">
                         <div className="flex flex-col gap-[1rem] items-center justify-center mt-[0.5rem] animate-processing-applications">
-                            <img src="/Images/agent/Slack.svg" className="w-[80%] h-[80%]"/>
-                            <img src="/Images/agent/Chatgpt.svg" className="w-[80%] h-[80%]"/>
-                            <img src="/Images/agent/Gmail.svg" className="w-[80%] h-[80%]"/>
-                            <img src="/Images/agent/Discord.svg" className="w-[80%] h-[80%]"/>
-                            <img src="/Images/agent/Slack.svg" className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Chatgpt.svg`} className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Gmail.svg`} className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Discord.svg`} className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]"/>
                         </div>
                     </div>
                 </div>

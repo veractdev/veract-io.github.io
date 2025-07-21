@@ -1,4 +1,5 @@
 "use client";
+import { baseUrl } from "@/lib/custom_data";
 import { isMobile, isTablet } from "@/lib/utils";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -70,7 +71,7 @@ export default function Casestudy_ShowReel({
         loaded && (
             <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col`}>
                 <div className='flex items-center justify-center w-full'>
-                    <img loading="lazy" src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
+                    <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay.png`} alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
                 </div>
                 <motion.div
                     id='showreel-text'

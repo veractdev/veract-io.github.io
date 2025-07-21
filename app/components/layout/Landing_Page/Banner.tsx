@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import Marquee from 'react-fast-marquee';
-import { LandingPageData } from '@/lib/custom_data';
+import { baseUrl, LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
 
@@ -66,18 +66,6 @@ export default function Banner() {
     <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
       style={{ transformStyle: 'preserve-3d' }}
     >
-      {/* background image */}
-      {/* <img loading="lazy"
-        src={`/Images/case-studies/case_study_banner_image.png`}
-        alt={`placeholder image`}
-        className="absolute w-full h-full object-cover"
-        style={{
-          transform: `translateY(-${translateY}px) rotateX(-${rotateX}deg) scale(${scale})`,
-          transformOrigin: 'center center',
-          transition: 'transform 0.1s ease',
-        }}
-      /> */}
-      {/* background video */}
       <video
         className='absolute w-full h-full object-cover'
         autoPlay
@@ -86,7 +74,7 @@ export default function Banner() {
         loop
         controls={false}
       >
-        <source src="/Images/LandingPage/Banner/hero banner video.mp4" type="video/mp4" />
+        <source src={`${baseUrl}/Images/LandingPage/Banner/hero banner video.mp4`} type="video/mp4" />
       </video>
 
       {/* text overlays */}
@@ -228,7 +216,7 @@ export default function Banner() {
                 {LandingPageData.banner.get_in_touch}
                 <img loading="lazy"
 
-                  src="/Images/LandingPage/Banner/arrowIconUp.png"
+                  src={`${baseUrl}/Images/LandingPage/Banner/arrowIconUp.png`}
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain `}
                 />
@@ -245,8 +233,7 @@ export default function Banner() {
               >
                 {LandingPageData.banner.get_in_touch}
                 <img loading="lazy"
-
-                  src="/Images/LandingPage/Banner/arrowIconUp.png"
+                  src={`${baseUrl}/Images/LandingPage/Banner/arrowIconUp.png`}
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain rotate-45`}
                 />

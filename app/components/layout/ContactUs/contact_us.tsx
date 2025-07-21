@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useLenis } from "lenis/react";
+import { baseUrl } from "@/lib/custom_data";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -356,7 +357,7 @@ export default function Contact_Us() {
                     24/7
                   </div>
                 </div>
-                <img src="/Images/horizantal_design.png" alt="design-icon" />
+                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
                 <a
                   href="mailto:info@veract.io"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -375,7 +376,7 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Phone</div>
                 </div>
-                <img src="/Images/horizantal_design.png" alt="design-icon" />
+                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
                 <a
                   href="tel:+919789991565"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -406,7 +407,7 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Address</div>
                 </div>
-                <img src="/Images/horizantal_design.png" alt="design-icon" />
+                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
                 <a
                   href="https://maps.app.goo.gl/raqAmwGuLW77jdLf8"
                   target="_blank"
