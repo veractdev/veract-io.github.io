@@ -683,3 +683,42 @@ body {
 .error_contact_us_shadow {
   box-shadow: 0px 8px 40px 0px #FF224480;
 }
+
+.animate-faq-hover{
+  position: absolute;
+}
+
+.group:hover .animate-faq-hover{
+  animation: faq-hover 0.3s ease-in-out forwards;
+}
+
+.animate-active-faq-hover{
+  position: absolute;
+}
+
+.group:hover .animate-active-faq-hover{
+  animation: faq-hover-active 0.3s ease-in-out forwards;
+  top: -100%;
+}
+
+@keyframes faq-hover{
+  0% {
+    left: -20rem;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes faq-hover-active{
+  0% {
+    left: 0;
+    height: 121px;
+    top: -70%;
+  }
+  100% {
+    left: 0;
+    height: 322px;
+    top: -125%;
+  }
+}

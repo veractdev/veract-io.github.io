@@ -50,7 +50,7 @@ export default function FAQ() {
                     {faq_items.map((item) => (
                         <div
                             key={item.id}
-                            className='group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem]'
+                            className='group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem] overflow-hidden'
                             onClick={() => {
                                 if (active != item.id) {
                                     setActive(item.id)
@@ -61,6 +61,8 @@ export default function FAQ() {
                             }}
                         >
                             <div className='reltive flex flex-row items-center justify-between'>
+                                <div
+                                    className={`left-[-20rem] top-[-70%] rounded-[50%] absolute w-[723px] h-[121px] bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(255,255,255,0.15)_0%,_rgba(0,0,0,0)_100%)] z-990 ${active === item.id ? 'animate-active-faq-hover' : 'animate-faq-hover'}`}/>
                                 <div
                                     className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium leading-[50%] -tracking-[0.05em] transition-all duration-300 ${active === item.id ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
                                 >
