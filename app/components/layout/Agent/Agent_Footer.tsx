@@ -1,4 +1,5 @@
 'use client'
+import { baseUrl } from '@/lib/custom_data';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -21,7 +22,7 @@ export default function Agent_Footer() {
                 muted
                 className='absolute top-0 left-0 w-[100%] h-[100%] object-cover'
             >
-                <source src="/Agent footer video.mp4" type="video/mp4" />
+                <source src={`${baseUrl}/Agent/Footer/footer-video.mp4`} type="video/mp4" />
             </video>
             <div className='relative flex flex-row p-[0.375rem_0.875rem] items-center justify-center gap-[0.625rem] rounded-[0.625rem] shadow-[0px_0px_0px_1px_#FFFFFF0D_inset] backdrop-blur-[2.5] agentFooterTitle'>
                 <div className="absolute top-0 w-[61px] h-[1px] bg-[linear-gradient(90deg,rgba(66,133,244,0)_0%,#4285F4_50%,rgba(66,133,244,0)_100%)]"></div>

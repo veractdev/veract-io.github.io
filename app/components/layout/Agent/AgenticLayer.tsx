@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
 import { isMobile } from "../../../../lib/utils";
 import { useRouter } from "next/navigation";
+import { baseUrl } from "@/lib/custom_data";
 
 export default function AgenticLayer() {
   const [loaded, setLoaded] = useState(false);
@@ -27,7 +28,7 @@ export default function AgenticLayer() {
               }}
             >
               <img loading="lazy"
-                src="/Images/agent/agenticLayer.png"
+                src={`${baseUrl}/Images/agent/agenticLayer.png`}
                 alt="agenticLayer_distorted"
                 className="object-cover w-full h-full rounded-full"
               />
@@ -88,19 +89,19 @@ export default function AgenticLayer() {
           </div>
           <div className="flex lg:top-[3.188rem] lg:left-[3.375rem] relative animate-agentic-layer-opacity">
             <img loading="lazy"
-              src="/Images/agent/agenticLayerVeins.svg"
+              src={`/Images/agent/agenticLayerVeins.svg`}
               alt="agenticLayer_2"
             className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg] scale-130 md:scale-170 lg:scale-190 "
             />
           </div>
           <div className="relative">
             <img loading="lazy"
-              src="/Images/agent/top-blur.svg"
+              src={`/Images/agent/top-blur.svg`}
               alt="blurry effect"
               className="absolute top-[-3.188rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
             <img loading="lazy"
-              src="/Images/agent/bottom-blur.svg"
+              src={`/Images/agent/bottom-blur.svg`}
               alt="blurry effect"
               className="absolute md:bottom-[-5.313rem] bottom-[-6.375rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
@@ -112,7 +113,7 @@ export default function AgenticLayer() {
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
                     <img loading="lazy"
-                      src="/Images/agent/ai-magic.svg"
+                      src={`/Images/agent/ai-magic.svg`}
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
                     />
@@ -124,7 +125,7 @@ export default function AgenticLayer() {
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
                     <img loading="lazy"
-                      src="/Images/agent/ai-magic.svg"
+                      src={`/Images/agent/ai-magic.svg`}
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
                     />
@@ -136,7 +137,7 @@ export default function AgenticLayer() {
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
                     <img loading="lazy"
-                      src="/Images/agent/ai-magic.svg"
+                      src={`/Images/agent/ai-magic.svg`}
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
                     />
@@ -148,7 +149,7 @@ export default function AgenticLayer() {
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
                     <img loading="lazy"
-                      src="/Images/agent/ai-magic.svg"
+                      src={`/Images/agent/ai-magic.svg`}
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
                     />
@@ -160,7 +161,7 @@ export default function AgenticLayer() {
                 <div className="flex flex-row lg:gap-[0.813rem] md:gap-[0.45rem] gap-[0.57181rem]">
                   <div>
                     <img loading="lazy"
-                      src="/Images/agent/ai-magic.svg"
+                      src={`/Images/agent/ai-magic.svg`}
                       alt="bulletin point"
                       className="w-[1.5rem] h-[1.5rem]"
                     />

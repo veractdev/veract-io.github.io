@@ -1,5 +1,5 @@
 "use client";
-import { navItems } from "@/lib/custom_data";
+import { baseUrl, navItems } from "@/lib/custom_data";
 import { getNavbarState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
@@ -102,7 +102,7 @@ export default function Navbar() {
                             } backdrop-blur-[0.563rem] transform transform-gpu transition-all duration-300 ease-in`}
                     >
                         <img loading="lazy"
-                            src="/Images/LandingPage/Navbar/veract-logo-white-font.svg"
+                            src={`/Images/LandingPage/Navbar/veract-logo-white-font.svg`}
                             alt="veract-logo"
                             className={`
                                 absolute left-[1.25rem] w-[9.5rem] h-[2.75rem] object-contain cursor-pointer 
@@ -134,7 +134,7 @@ export default function Navbar() {
                                     }}
                                 >
                                     {item.id === 3 && (
-                                        <img src="/Images/LandingPage/Banner/Join.svg" alt="star icon" className="absolute top-[7px] right-[9px]" />
+                                        <img src={`/Images/LandingPage/Banner/Join.svg`} alt="star icon" className="absolute top-[7px] right-[9px]" />
                                     )}
                                     <div
                                         className={`syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem]' : 'p-[0.875rem_1rem]'} text-[1rem] leading-[1em] 

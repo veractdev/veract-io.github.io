@@ -1,7 +1,7 @@
 'use client';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { LandingPageData } from '@/lib/custom_data';
+import { baseUrl, LandingPageData } from '@/lib/custom_data';
 
 export default function ShowReel() {
   const sectionRef = useRef(null);
@@ -101,7 +101,7 @@ export default function ShowReel() {
     loaded && (
       <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
         <div className='flex items-center justify-center w-full'>
-          <img loading="lazy" src="/Images/case-studies/Overlay.png" alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
+          <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay.png`} alt="overlay" className='absolute top-[-10.938rem] h-[11rem] z-[100]' />
         </div>
         <motion.div
           id='showreel-text'
@@ -146,20 +146,18 @@ export default function ShowReel() {
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
           >
-            <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
-              {/* Base icon */}
+            {/* <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
               <img loading="lazy"
                 src="/Images/LandingPage/showReel/play- default.svg"
                 alt="play icon"
                 className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
               />
-              {/* Hover icon */}
               <img loading="lazy"
                 src="/Images/LandingPage/showReel/play- hover.svg"
                 alt="play icon"
                 className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
               />
-            </div>
+            </div> */}
 
             {/* <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-100 translate-y-6 transition-all duration-300'>
               play showreel
@@ -194,20 +192,18 @@ export default function ShowReel() {
             }}
             className='absolute z-[25] flex flex-col items-center justify-center group cursor-pointer'
           >
-            <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
-              {/* Base icon */}
+            {/* <div className='w-[7.313rem] h-[7.313rem] rounded-full bg-transparent flex items-center justify-center relative'>
               <img loading="lazy"
                 src="/Images/LandingPage/showReel/play- default.svg"
                 alt="play icon"
                 className='w-[7.313rem] h-[7.313rem] absolute opacity-100 group-hover:opacity-0 transition-opacity duration-300'
               />
-              {/* Hover icon */}
               <img loading="lazy"
                 src="/Images/LandingPage/showReel/play- hover.svg"
                 alt="play icon"
                 className='w-[7.313rem] h-[7.313rem] absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300'
               />
-            </div>
+            </div> */}
 
             {/* <div className='syneFont text-[1rem] text-black font-bold leading-[1.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-300'>
               play showreel

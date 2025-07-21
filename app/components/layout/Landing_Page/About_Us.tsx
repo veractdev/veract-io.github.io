@@ -1,5 +1,5 @@
 "use client";
-import { LandingPageData } from "@/lib/custom_data";
+import { baseUrl, LandingPageData } from "@/lib/custom_data";
 import React, { useEffect, useState } from "react";
 
 export default function About_Us() {
@@ -14,7 +14,7 @@ export default function About_Us() {
       <div className="w-full h-max bg-[#0D0D0D] flex items-center justify-center pb-[6.188rem] relative z-20">
         <div className="w-full h-[24.5rem] bg-[#030810] relative rounded-[36px] overflow-hidden">
           <img loading="lazy"
-            src="/Images/LandingPage/AboutUs/about_us_bg.png"
+            src={`${baseUrl}/Images/LandingPage/AboutUs/about_us_bg.png`}
             alt="placeholder image"
             className="absolute top-0 object-center object-cover w-full h-full rounded-[36px]"
           />
