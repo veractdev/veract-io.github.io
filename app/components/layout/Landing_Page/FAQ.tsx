@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function FAQ() {
 
     const [loaded, setLoaded] = useState(false);
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState<number[]>([]);
     const contentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -52,33 +52,33 @@ export default function FAQ() {
                             key={item.id}
                             className='group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem]'
                             onClick={() => {
-                                if (active != item.id) {
-                                    setActive(item.id)
+                                if (!active.includes(item.id)) {
+                                    setActive([...active, item.id])
                                 }
                                 else {
-                                    setActive(0);
+                                    setActive(active.filter(id => id !== item.id));
                                 }
                             }}
                         >
                             <div className='reltive flex flex-row items-center justify-between'>
                                 <div
-                                    className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium leading-[50%] -tracking-[0.05em] transition-all duration-300 ${active === item.id ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
+                                    className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium leading-[50%] -tracking-[0.05em] transition-all duration-300 ${active.includes(item.id) ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
                                 >
                                     {item.title}
                                 </div>
                                 <motion.div
-                                    animate={{ rotate: active === item.id ? 180 : 0 }}
+                                    animate={{ rotate: active.includes(item.id) ? 180 : 0 }}
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
                                 >
                                     <CaretDown
                                         size={28}
                                         weight='regular'
-                                        className={`${active === item.id ? 'text-white group-hover:text-[#095D5D]' : 'text-white group-hover:text-orange'} transition-all duration-300`}
+                                        className={`${active.includes(item.id) ? 'text-white group-hover:text-[#095D5D]' : 'text-white group-hover:text-orange'} transition-all duration-300`}
                                     />
                                 </motion.div>
                             </div>
                             <AnimatePresence>
-                                {active === item.id && (
+                                {active.includes(item.id) && (
                                     <motion.div
                                         ref={contentRef}
                                         initial={{ height: 0, opacity: 0 }}
