@@ -63,6 +63,13 @@ export default async function ProductLayout({ children, params }: { children: Re
                     <meta name="industry" content={data.industry} />
                     <meta name="language" content={data.language} />
                     <meta name="author" content={data.author} />
+
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify(data.schema)
+                        }}
+                    />
                 </Head>
             )}
             {children}

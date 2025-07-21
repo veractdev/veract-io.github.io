@@ -1144,6 +1144,18 @@ export const metadata = [
       position: "12.9784;80.2214",
       icbm: '12.9784, 80.2214',
     },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Infrared Thermography",
+      "alternateName": "Thermal Imaging System for Buffalo Udder Health Monitoring",
+      "url": "https://veract.io/case-studies/infrared-thermography",
+      "author": {
+        "@type": "Organization",
+        "name": "Veract.io",
+        "url": "https://veract.io"
+      },
+    },
   },
   {
     slug: 'accessible-web-widget',
@@ -1185,6 +1197,15 @@ export const metadata = [
       placename: 'Velachery, Chennai',
       position: "12.9784;80.2214",
       icbm: '12.9784, 80.2214',
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Lightweight Accessibility Widget",
+      "alternateName": "WCAG-Compliant & Plug-and-Play Accessibility Tool",
+      "url": "https://veract.io/case-studies/accessible-web-widget",
+      "applicationCategory": "AccessibilityTool",
+      "operatingSystem": "All",
     },
   },
 ]
