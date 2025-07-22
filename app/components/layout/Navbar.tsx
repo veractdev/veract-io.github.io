@@ -22,12 +22,12 @@ export default function Navbar() {
         if (!pathname) return;
         if (pathname === "/") {
             setNavbarState(1);
-        } else if (pathname.startsWith("/case-studies")) {
+        } else if (pathname === "/case-studies") {
             setNavbarState(4);
-        } else if (pathname.startsWith("/agentic-ai")) {
+        } else if (pathname === "/agentic-ai") {
             setNavbarState(3);
         }
-        else if (pathname.startsWith("/contact-us")) {
+        else if (pathname === "/contact-us") {
             setNavbarState(6);
         } else {
             setNavbarState(0); // default/fallback
