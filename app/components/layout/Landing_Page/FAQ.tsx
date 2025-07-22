@@ -18,9 +18,9 @@ export default function FAQ() {
         loaded && (
             <div className='w-full h-max flex flex-col items-center relative z-50 bg-primary-text py-[6.25rem_3.125rem] gap-[3.75rem]'>
                 <img src="/Images/LandingPage/FAQ/Lines.png" alt="FAQ background overlay" className='absolute top-0 left-0 z-0 w-full h-full object-cover' />
-                <div className='z-1 w-[80%] lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>Curious? Check our FAQs</div>
+                <div className='z-1 w-[80%] lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>{LandingPageData.faq.title}</div>
                 <div className='z-1 w-[80%] lg:w-[calc(100%-18.75rem)] flex flex-col gap-[0.625rem]'>
-                    {LandingPageData.faq.map((item) => (
+                    {LandingPageData.faq.faq_list.map((item) => (
                         <div
                             key={item.id}
                             className='group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem] overflow-hidden'

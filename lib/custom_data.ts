@@ -738,33 +738,36 @@ export const LandingPageData = {
       },
     ],
   },
-  faq: [
-    {
-      id: 1,
-      title: "What does Veract.io do?",
-      content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
-    },
-    {
-      id: 2,
-      title: "What does Veract.io do?",
-      content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
-    },
-    {
-      id: 3,
-      title: "What does Veract.io do?",
-      content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
-    },
-    {
-      id: 4,
-      title: "What does Veract.io do?",
-      content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
-    },
-    {
-      id: 5,
-      title: "What does Veract.io do?",
-      content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
-    },
-  ],
+  faq: {
+    title: 'Curious? Check our FAQs',
+    faq_list: [
+      {
+        id: 1,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 2,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 3,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 4,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 5,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+    ]
+  },
   footer: {
     description:
       "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
