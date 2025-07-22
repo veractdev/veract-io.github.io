@@ -24,7 +24,7 @@ export default function Navbar() {
             setNavbarState(1);
         } else if (pathname.startsWith("/case-studies")) {
             setNavbarState(4);
-        } else if (pathname.startsWith("/agent")) {
+        } else if (pathname.startsWith("/agentic-ai")) {
             setNavbarState(3);
         }
         else if (pathname.startsWith("/contact-us")) {
