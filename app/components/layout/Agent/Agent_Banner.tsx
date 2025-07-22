@@ -19,7 +19,7 @@ export default function AgentBanner() {
           <div
             className="w-[25rem] md:w-[50rem] lg:w-[50rem] h-[18.75rem] md:h-[43.75rem] lg:h-[43.75rem] absolute z-0 left-1/2 top-0 translate-y-1/2 -translate-x-1/2 md:-translate-x-1/2 md:translate-y-0 lg:-translate-x-1/2 lg:translate-y-0 animate-spin [animation-duration:6s] [animation-timing-function:linear] blur-[12px] md:blur-none lg:blur-none"
             style={{
-              backgroundImage: `url(${"/Images/agent/radar_component_banner.png"})`,
+              backgroundImage: `url(${"/Images/agent/Banner/radar_component_banner.png"})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "contain",
