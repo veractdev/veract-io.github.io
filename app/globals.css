@@ -683,3 +683,22 @@ body {
 .error_contact_us_shadow {
   box-shadow: 0px 8px 40px 0px #FF224480;
 }
+
+.animate-active-faq-hover{
+  position: absolute;
+  height: 322px;
+  animation: faq-hover-active 0.3s ease-in-out;
+  animation-direction: alternate;
+  top: -125%;
+}
+
+@keyframes faq-hover-active{
+  from{
+    top: -90%;
+    height: 121px;
+  }
+  to{
+    top: -125%;
+    height: 322px;
+  }
+}
