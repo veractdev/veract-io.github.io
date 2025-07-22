@@ -1,5 +1,5 @@
 "use client";
-import { baseUrl, navItems } from "@/lib/custom_data";
+import { navItems } from "@/lib/custom_data";
 import { getNavbarState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
