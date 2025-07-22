@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { baseUrl, LandingPageData } from '@/lib/custom_data';
+import { isMobile } from '@/lib/utils';
 
 export default function ShowReel() {
   const sectionRef = useRef(null);
@@ -105,9 +106,9 @@ export default function ShowReel() {
         </div>
         <motion.div
           id='showreel-text'
-          className={`uppercase static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3.625rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
+          className={`uppercase static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
           style={{
-            scale: springTextScale,
+            scale: !isMobile() ? springTextScale : 1,
           }}
         >
           {LandingPageData.showReel.title}
