@@ -11,7 +11,7 @@ import Footer from "./components/layout/Landing_Page/Footer";
 import LenisProvider from "./LenisProvider";
 import Services from "./components/layout/Landing_Page/Services";
 import { baseUrl } from "@/lib/custom_data";
-import FAQ from "./components/layout/Landing_Page/FAQ";
+// import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
   const [loader, setLoader] = useState(false);
@@ -51,7 +51,7 @@ export default function Page() {
           <Services />
           <We_Work_With />
           <Testimonials />
-          {/* <FAQ /> */}
+          {/* <FAQ faq_props={LandingPageData.faq} /> */}
           <Footer />
         </div>
       )}

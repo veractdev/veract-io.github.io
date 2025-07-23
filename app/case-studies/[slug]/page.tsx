@@ -10,6 +10,9 @@ import CaseStudy_Challenges from '../../components/layout/Casestudy/CaseStudy_Ch
 import Casestudy_Description from '../../components/layout/Casestudy/Casestudy_Description';
 import LenisProvider from '@/app/LenisProvider';
 import { caseStudyData } from '@/lib/custom_data';
+import FAQ from '@/app/components/layout/Landing_Page/FAQ';
+import Footer from '@/app/components/layout/Landing_Page/Footer';
+import Casestudy_Testimonial from '@/app/components/layout/Casestudy/Casestudy_Testimonial';
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -19,25 +22,27 @@ export default function Page({ params }: Props) {
   const { slug } = React.use(params);
   const data = caseStudyData[slug as keyof typeof caseStudyData];
   const [loaded, setLoaded] = useState(false);
- 
+
   useEffect(() => {
     setLoaded(true);
     setTimeout(() => {
-    window.lenis?.scrollTo(0);
+      window.lenis?.scrollTo(0);
     }, 500);
   }, [loaded]);
- 
+
   return (
-      <LenisProvider>
-        <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
-          <Navbar />
+    <LenisProvider>
+      <div className='w-screen flex items-center justify-center flex-col bg-primary-text'>
+        <Navbar />
         <Casestudy_Banner banner_props={data.banner} />
         <Casestudy_ShowReel showreel_props={data.showReel} />
         <Casestudy_Description description_props={data.description} />
         <CaseStudy_Challenges challenges_props={data.challenges} />
         <UserServices user_services_props={data.services} />
         <Casestudy_Key_Features key_features_props={data.key_features} />
-        {/* <Casestudy_Testimonial testimonial_props={data.testimonials} /> */}
+        <Casestudy_Testimonial testimonial_props={data.testimonials} />
+        <FAQ faq_props={data.faq} />
+        <Footer />
       </div>
     </LenisProvider>
   );

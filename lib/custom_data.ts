@@ -210,6 +210,61 @@ export const caseStudyData = {
       profession: "",
       profession_at: "",
     },
+    faq: {
+      title: "Curious? Check our FAQs",
+      faq_list: [
+        {
+          id: 1,
+          title: 'What is the purpose of the thermal imaging system for buffalo udders?',
+          content: 'The system uses infrared thermography to non-invasively monitor buffalo udder health, enabling early detection of mastitis by identifying abnormal temperature patterns.'
+        },
+        {
+          id: 2,
+          title: 'How does infrared thermography help in mastitis detection?',
+          content: 'Mastitis causes inflammation, which increases local udder temperature. Infrared cameras detect these temperature changes early, often before visible symptoms appear.'
+        },
+        {
+          id: 3,
+          title: 'Is infrared thermography system safe for the animals?',
+          content: 'Yes, infrared thermography is a non-contact, radiation-free method, making it completely safe and stress-free for buffaloes.'
+        },
+        {
+          id: 4,
+          title: 'Can the system track udder health over time?',
+          content: 'Absolutely. The system supports session-based tracking, allowing farmers and veterinarians to monitor temperature trends and detect issues early.'
+        },
+        {
+          id: 5,
+          title: 'Does the system require an internet connection to work?',
+          content: 'The system supports offline functionality, enabling temperature analysis and data storage without a continuous internet connection.'
+        },
+        {
+          id: 6,
+          title: 'How easy is it to integrate this system into existing veterinary workflows?',
+          content: 'The system is designed for seamless integration with veterinary workflows, supporting data export and compatibility with common veterinary software.'
+        },
+        {
+          id: 7,
+          title: 'What kind of temperature analysis does the system provide?',
+          content: 'It offers detailed temperature mapping, highlighting hotspots and comparing readings to baseline healthy udder temperatures.'
+        },
+        {
+          id: 8,
+          title: 'Can this system reduce losses caused by mastitis?',
+          content: 'Yes, by enabling early detection and treatment, it helps reduce mastitis-related production losses and improves overall herd health.'
+        },
+        {
+          id: 9,
+          title: 'Is special training required to operate the thermal imaging system?',
+          content: 'The system is user-friendly with guided instructions, but basic training helps maximize accurate image capture and interpretation.'
+        },
+        {
+          id: 10,
+          title: 'What equipment is needed for this system?',
+          content: 'The primary equipment includes an infrared thermal camera and software for image analysis and session tracking.'
+        },
+      ]
+    },
   },
   "accessible-web-widget": {
     id: 2,
@@ -386,6 +441,61 @@ export const caseStudyData = {
       profession: "",
       profession_at: "",
     },
+    faq: {
+      title: "Curious? Check our FAQs",
+      faq_list: [
+        {
+          id: 1,
+          title: 'What is the Accessibility Widget?',
+          content: 'It is a lightweight, plug-and-play tool designed to enhance digital experiences for users with visual, motor, and cognitive impairments by providing real-time accessibility personalization.',
+        },
+        {
+          id: 2,
+          title: 'Is the widget compliant with accessibility standards?',
+          content: 'Yes, the widget is fully compliant with WCAG 2.1 standards to ensure inclusive and accessible digital content.',
+        },
+        {
+          id: 3,
+          title: 'How easy is it to integrate the widget into my website?',
+          content: 'Integration is simple and requires minimal setup. The widget is plug-and-play, compatible with all major browsers and platforms.',
+        },
+        {
+          id: 4,
+          title: 'Does the widget support users with motor impairments?',
+          content: 'Absolutely. It offers keyboard navigation support and customizable UI controls to assist users with motor disabilities.',
+        },
+        {
+          id: 5,
+          title: 'Can the widget personalize accessibility features in real-time?',
+          content: 'Yes, it allows real-time personalization to adapt the website interface based on individual user needs.',
+        },
+        {
+          id: 6,
+          title: 'Is the widget optimized for performance?',
+          content: 'Yes, it is lightweight and designed to minimize impact on website loading times and performance.',
+        },
+        {
+          id: 7,
+          title: 'Which browsers does the widget support?',
+          content: 'The widget supports all major browsers including Chrome, Firefox, Safari, Edge, and Opera.',
+        },
+        {
+          id: 8,
+          title: 'Can this widget help my website meet ADA compliance?',
+          content: 'While the widget aids in improving accessibility and aligns with WCAG standards, full ADA compliance depends on overall website practices; this widget is a key tool in your accessibility strategy.',
+        },
+        {
+          id: 9,
+          title: 'Is the widget customizable?',
+          content: 'Yes, it offers options to customize accessibility settings to fit the unique needs of your user base and branding.',
+        },
+        {
+          id: 10,
+          title: 'Does the widget require an internet connection to work?',
+          content: 'The widget can operate offline once installed, ensuring accessibility features remain functional without constant internet access.',
+        },
+      ]
+    }
   }
 };
 
