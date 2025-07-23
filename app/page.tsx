@@ -51,7 +51,7 @@ export default function Page() {
           <Services />
           <We_Work_With />
           <Testimonials />
-          <FAQ />
+          {/* <FAQ /> */}
           <Footer />
         </div>
       )}
