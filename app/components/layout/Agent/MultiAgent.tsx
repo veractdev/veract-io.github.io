@@ -4,7 +4,6 @@ import AgentTitle from "./AgentTitle";
 import AgentRobot from "./AgentRobot";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { baseUrl } from "@/lib/custom_data";
 interface Agent {
   id: number;
   name: string;

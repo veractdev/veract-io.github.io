@@ -1,7 +1,7 @@
 'use client'
 import { baseUrl, LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 export default function Testimonials() {
@@ -70,59 +70,61 @@ export default function Testimonials() {
               // Expanded card
               if (activeIndex === index) {
                 return (
-                  <motion.div
-                    key={index}
-                    initial={!isMobile() && !isTablet() ? { width: "5.125rem" } : isTablet() ? { height: "5rem" } : { height: "5rem" }}
-                    animate={!isMobile() && !isTablet() ? { width: "20.125rem" } : isTablet() ? { height: "19.938rem" } : { height: "24.5rem" }}
-                    transition={{ duration: 0.7, ease: "easeInOut" }}
-                    style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                    className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
-                  >
-                    {/* Full Card Content */}
+                  <AnimatePresence key={index} mode='wait'>
                     <motion.div
-                      initial={!isMobile() && !isTablet() ? { x: -50, y: -100, opacity: 0 } : false}
-                      animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="flex flex-row flex-wrap items-center gap-[0.625rem] pb-[2.438rem]">
-                      <motion.img
-                        initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
+                      key={index}
+                      initial={!isMobile() && !isTablet() ? { width: "5.125rem" } : isTablet() ? { height: "5rem" } : { height: "5rem" }}
+                      animate={!isMobile() && !isTablet() ? { width: "20.125rem" } : isTablet() ? { height: "19.938rem" } : { height: "auto" }}
+                      transition={{ duration: 0.7, ease: "easeInOut" }}
+                      style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
+                      className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-0 lg:py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
+                    >
+                      {/* Full Card Content */}
+                      <motion.div
+                        initial={!isMobile() && !isTablet() ? { x: -50, y: -100, opacity: 0 } : false}
                         animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
-                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="flex flex-row flex-wrap items-center gap-[0.625rem] pb-[2.438rem] pt-[1.675rem] lg:pt-0">
+                        <motion.img
+                          initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
+                          animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
+                          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
 
-                        className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0  rounded-full" src={t.image} alt="Testimonial_Client" />
+                          className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0  rounded-full" src={t.image} alt="Testimonial_Client" />
+
+                        <motion.div
+                          initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
+                          animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
+                          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                          className='flex flex-col'>
+                          <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-semibold leading-[1.2rem] whitespace-nowrap">
+                            {LandingPageData.testimonials.testimonial_list[activeIndex].name}
+                          </div>
+                          {LandingPageData.testimonials.testimonial_list[activeIndex].role && LandingPageData.testimonials.testimonial_list[activeIndex].role !== "" && (
+                            <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[0.875rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                              {LandingPageData.testimonials.testimonial_list[activeIndex].role}
+                            </div>
+                          )}
+                          <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[0.875rem] font-normal leading-[1.2rem] whitespace-nowrap">
+                            {LandingPageData.testimonials.testimonial_list[activeIndex].company}
+                          </div>
+                        </motion.div>
+                      </motion.div>
 
                       <motion.div
-                        initial={!isMobile() && !isTablet() ? { x: -100, y: -50, opacity: 0 } : false}
-                        animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1 } : false}
-                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-                        className='flex flex-col'>
-                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1rem] font-semibold leading-[1.2rem] whitespace-nowrap">
-                          {LandingPageData.testimonials.testimonial_list[activeIndex].name}
+                        initial={!isMobile() && !isTablet() ? { x: -100, y: 0, opacity: 0 } : false}
+                        animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false}
+                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
+                        className="relative pl-[1.438rem] text-base leading-relaxed pb-[1.675rem] lg:pb-0">
+                        <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
+                          <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
                         </div>
-                        {LandingPageData.testimonials.testimonial_list[activeIndex].role && LandingPageData.testimonials.testimonial_list[activeIndex].role !== "" && (
-                          <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[0.875rem] font-normal leading-[1.2rem] whitespace-nowrap">
-                            {LandingPageData.testimonials.testimonial_list[activeIndex].role}
-                          </div>
-                        )}
-                        <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[0.875rem] font-normal leading-[1.2rem] whitespace-nowrap">
-                          {LandingPageData.testimonials.testimonial_list[activeIndex].company}
+                        <div className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
+                          {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
                         </div>
                       </motion.div>
                     </motion.div>
-
-                    <motion.div
-                      initial={!isMobile() && !isTablet() ? { x: -100, y: 0, opacity: 0 } : false}
-                      animate={!isMobile() && !isTablet() ? { x: 0, y: 0, opacity: 1, } : false}
-                      transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut", }}
-                      className="relative pl-[1.438rem] text-base leading-relaxed">
-                      <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
-                        <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
-                      </div>
-                      <div className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
-                        {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
-                      </div>
-                    </motion.div>
-                  </motion.div>
+                  </AnimatePresence>
                 );
               }
 
@@ -168,7 +170,7 @@ export default function Testimonials() {
                       <motion.div
                         key={index}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        style={{ }}
+                        style={{}}
                         className="h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                       >
                         <div

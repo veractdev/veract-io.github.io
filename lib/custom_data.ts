@@ -156,7 +156,7 @@ export const caseStudyData = {
         },
         {
           title: "User Experience Focus",
-            bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/thermal/Services/Group_35985.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+          bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/thermal/Services/Group_35985.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
           description:
             "Delivered an intuitive interface that simplifies usage for veterinary and research teams.",
           gradient:
@@ -737,6 +737,36 @@ export const LandingPageData = {
         role: "",
       },
     ],
+  },
+  faq: {
+    title: 'Curious? Check our FAQs',
+    faq_list: [
+      {
+        id: 1,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 2,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 3,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 4,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+      {
+        id: 5,
+        title: "What does Veract.io do?",
+        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+      },
+    ]
   },
   footer: {
     description:

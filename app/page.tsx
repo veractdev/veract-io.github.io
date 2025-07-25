@@ -43,16 +43,16 @@ export default function Page() {
               href={image}
             />
           ))}
-          {/* <Navbar />
+          <Navbar />
           <Banner />
           <ShowReel />
           <About_Us />
           <Advantages />
           <Services />
           <We_Work_With />
-          <Testimonials /> */}
-          <FAQ />
-          {/* <Footer /> */}
+          <Testimonials />
+          {/* <FAQ /> */}
+          <Footer />
         </div>
       )}
     </LenisProvider>
