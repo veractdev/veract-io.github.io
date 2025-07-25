@@ -12,7 +12,7 @@ import LenisProvider from '@/app/LenisProvider';
 import { caseStudyData } from '@/lib/custom_data';
 import FAQ from '@/app/components/layout/Landing_Page/FAQ';
 import Footer from '@/app/components/layout/Landing_Page/Footer';
-import Casestudy_Testimonial from '@/app/components/layout/Casestudy/Casestudy_Testimonial';
+// import Casestudy_Testimonial from '@/app/components/layout/Casestudy/Casestudy_Testimonial';
 
 type Props = {
   params: Promise<{ slug: string }>
