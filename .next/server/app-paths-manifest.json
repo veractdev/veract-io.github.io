@@ -7,8 +7,8 @@
   "/blogs/[slug]/page": "app/blogs/[slug]/page.js",
   "/industries/[slug]/page": "app/industries/[slug]/page.js",
   "/services/[slug]/page": "app/services/[slug]/page.js",
-  "/agentic-ai/page": "app/agentic-ai/page.js",
-  "/contact-us/page": "app/contact-us/page.js",
   "/case-studies/page": "app/case-studies/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/agentic-ai/page": "app/agentic-ai/page.js",
   "/case-studies/[slug]/page": "app/case-studies/[slug]/page.js"
 }
