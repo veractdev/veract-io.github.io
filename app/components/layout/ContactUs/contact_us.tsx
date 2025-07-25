@@ -50,8 +50,8 @@ export default function Contact_Us() {
             email.trim() === ""
               ? "Email is required."
               : !isValidEmail(email)
-              ? "Invalid email format."
-              : "",
+                ? "Invalid email format."
+                : "",
         }));
         break;
       case "mobileNumber":
@@ -59,7 +59,7 @@ export default function Contact_Us() {
           ...prev,
           mobileNumber:
             isOnlyCountryCode(mobileNumber, countryCode) ||
-            mobileNumber.trim() === ""
+              mobileNumber.trim() === ""
               ? "Mobile number is required."
               : "",
         }));
@@ -179,15 +179,13 @@ export default function Contact_Us() {
                     onChange={(e) => setFirstName(e.target.value)}
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
-                      errors.firstName && touchedFields.firstName
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
                         ? "border-red-500"
                         : "border-white/15"
-                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${
-                      errors.firstName && touchedFields.firstName
+                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.firstName && touchedFields.firstName
                         ? "focus:ring-red-500"
                         : "focus:ring-[#4287F5]"
-                    } transition-all duration-300 ease-in-out`}
+                      } transition-all duration-300 ease-in-out`}
                   />
                   {errors.firstName && touchedFields.firstName && (
                     <p className="text-red-500 text-[12px] mt-[4px]">
@@ -231,15 +229,13 @@ export default function Contact_Us() {
                     onChange={(e) => setEmail(e.target.value)}
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
-                      errors.email && touchedFields.email
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.email && touchedFields.email
                         ? "border-red-500"
                         : "border-white/15"
-                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${
-                      errors.email && touchedFields.email
+                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.email && touchedFields.email
                         ? "focus:ring-red-500"
                         : "focus:ring-[#4287F5]"
-                    } transition-all duration-300 ease-in-out`}
+                      } transition-all duration-300 ease-in-out`}
                   />
                   {errors.email && touchedFields.email && (
                     <p className="text-red-500 text-[12px] mt-[4px]">
@@ -313,17 +309,16 @@ export default function Contact_Us() {
 
               {/* Submit Button */}
               <div
-                className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
-                  formValid && !isLoading && !submitted && !submissionFailed
+                className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
                     ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
                     : isLoading
-                    ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                    : submitted
-                    ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
-                    : submissionFailed
-                    ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
-                    : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                }`}
+                      ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                      : submitted
+                        ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
+                        : submissionFailed
+                          ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
+                          : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                  }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
                     handleSubmitContact();
@@ -359,10 +354,10 @@ export default function Contact_Us() {
                 </div>
                 <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
                 <a
-                  href="mailto:info@veract.io"
+                  href="mailto:info@veract.co"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
-                  info@veract.io
+                  info@veract.co
                 </a>
               </div>
             </div>
@@ -414,7 +409,7 @@ export default function Contact_Us() {
                   rel="noopener noreferrer"
                   className="text-[16px] font-medium text-white/50 hover:text-white"
                 >
-                 37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam, Chennai - 600 091
+                  37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam, Chennai - 600 091
                 </a>
               </div>
             </div>
