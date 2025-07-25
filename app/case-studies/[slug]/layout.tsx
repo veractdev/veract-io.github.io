@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const data = metadata.find(item => item.slug === slug);
     if (!data) {
         return {
-            title: 'Veract.io',
-            description: 'Veract.io builds Agentic AI systems, Machine Vision, and Industrial IoT solutions to modernize and automate businesses.',
+            title: 'Veract.co',
+            description: 'Veract.co builds Agentic AI systems, Machine Vision, and Industrial IoT solutions to modernize and automate businesses.',
         }
     }
     return {
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: data.twitter.description,
             images: [data.image || ''],
         },
-        metadataBase: new URL('https://veract.io'),
+        metadataBase: new URL('https://veract.co'),
         alternates: {
             canonical: data.url,
         },

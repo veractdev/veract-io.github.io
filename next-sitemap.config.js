@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://veract.io',
+  siteUrl: 'https://veract.co',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 1.0,

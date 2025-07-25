@@ -853,28 +853,28 @@ export const LandingPageData = {
     faq_list: [
       {
         id: 1,
-        title: "What does Veract.io do?",
-        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+        title: "What does Veract.co do?",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
       },
       {
         id: 2,
-        title: "What does Veract.io do?",
-        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+        title: "What does Veract.co do?",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
       },
       {
         id: 3,
-        title: "What does Veract.io do?",
-        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+        title: "What does Veract.co do?",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
       },
       {
         id: 4,
-        title: "What does Veract.io do?",
-        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+        title: "What does Veract.co do?",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
       },
       {
         id: 5,
-        title: "What does Veract.io do?",
-        content: "Veract.io helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
+        title: "What does Veract.co do?",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions."
       },
     ]
   },
@@ -1040,7 +1040,7 @@ export const LandingPageData = {
           {
             id: 4,
             type: "email",
-            title: "info@veract.io",
+            title: "info@veract.co",
           },
         ],
       },
@@ -1274,12 +1274,12 @@ export const metadata = [
       'animal health AI',
       'smart veterinary system'
     ],
-    author: 'Veract.io',
+    author: 'Veract.co',
     language: 'en',
     subject: 'Thermal Imaging System for Buffalo Udder Health Monitoring',
     industry: 'Infrared Thermography',
     image: `${baseUrl}/Images/infrared-thermography.jpg`,
-    url: 'https://veract.io/case-studies/infrared-thermography',
+    url: 'https://veract.co/case-studies/infrared-thermography',
     geo: {
       region: 'IN-TN',
       placename: 'Velachery, Chennai',
@@ -1291,11 +1291,11 @@ export const metadata = [
       "@type": "CreativeWork",
       "name": "Infrared Thermography",
       "alternateName": "Thermal Imaging System for Buffalo Udder Health Monitoring",
-      "url": "https://veract.io/case-studies/infrared-thermography",
+      "url": "https://veract.co/case-studies/infrared-thermography",
       "author": {
         "@type": "Organization",
-        "name": "Veract.io",
-        "url": "https://veract.io"
+        "name": "Veract.co",
+        "url": "https://veract.co"
       },
     },
   },
@@ -1328,12 +1328,12 @@ export const metadata = [
       'inclusive web design',
       'accessibility software'
     ],
-    author: 'Veract.io',
+    author: 'Veract.co',
     language: 'en',
     subject: 'Lightweight Accessibility Widget | WCAG-Compliant & Plug-and-Play',
     industry: 'Accessibility, Web Development',
     image: `${baseUrl}/Images/accessibility-widget-preview.png`,
-    url: 'https://veract.io/case-studies/accessible-web-widget',
+    url: 'https://veract.co/case-studies/accessible-web-widget',
     geo: {
       region: 'IN-TN',
       placename: 'Velachery, Chennai',
@@ -1345,7 +1345,7 @@ export const metadata = [
       "@type": "SoftwareApplication",
       "name": "Lightweight Accessibility Widget",
       "alternateName": "WCAG-Compliant & Plug-and-Play Accessibility Tool",
-      "url": "https://veract.io/case-studies/accessible-web-widget",
+      "url": "https://veract.co/case-studies/accessible-web-widget",
       "applicationCategory": "AccessibilityTool",
       "operatingSystem": "All",
     },
