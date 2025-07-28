@@ -22,7 +22,7 @@ export default function AiAgent() {
   const agentVideo = [
     `${baseUrl}/Agent/AiAgent/web-ai-agent.mp4`,
     `${baseUrl}/Agent/AiAgent/tab-view-ai-agent.mp4`,
-    `${baseUrl}/Agent/AiAgent/tab-view-ai-agent.mp4`,
+    `${baseUrl}/Agent/AiAgent/mob_ai_agent_video.mp4`,
   ]
 
   useEffect(() => {
