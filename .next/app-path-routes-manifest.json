@@ -8,7 +8,7 @@
   "/industries/[slug]/page": "/industries/[slug]",
   "/services/[slug]/page": "/services/[slug]",
   "/agentic-ai/page": "/agentic-ai",
-  "/contact-us/page": "/contact-us",
   "/case-studies/page": "/case-studies",
+  "/contact-us/page": "/contact-us",
   "/case-studies/[slug]/page": "/case-studies/[slug]"
 }

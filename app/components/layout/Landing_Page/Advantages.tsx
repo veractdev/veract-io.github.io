@@ -146,7 +146,7 @@ export default function Advantages() {
                         `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent transition-all duration-300 ease-in  ` +
                         ((isMobile() || isTablet()) && openedArr[idx]
                           ? `${card.gradient} bg-clip-text text-transparent md:top-[2.5rem] md:left-[2.5rem] ease-in duration-300 transition-all  `
-                          : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%]`)
+                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[50%]`)
                       }
                       style={{ zIndex: 30 }}
                     >
@@ -161,7 +161,7 @@ export default function Advantages() {
                         Learn More →
                       </div>
                     )}
-                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                       {card.description}
                     </div>
                   </div>
@@ -194,7 +194,7 @@ export default function Advantages() {
                         `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent transition-all duration-300 ease-in  ` +
                         ((isMobile() || isTablet()) && openedArr[idx + 2]
                           ? `${card.gradient} bg-clip-text text-transparent md:top-[2.5rem] md:left-[2.5rem] ease-in duration-300 transition-all  `
-                          : `text-white group-hover:top-[2.5rem] group-hover:left-[2.5rem] group-hover:${card.gradient} group-hover:bg-clip-text group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
+                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
                       }
                       style={{ zIndex: 30 }}
                     >
@@ -209,7 +209,7 @@ export default function Advantages() {
                         Learn More →
                       </div>
                     )}
-                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in group-hover:opacity-100 group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                    <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                       {card.description}
                     </div>
                   </div>
@@ -239,8 +239,8 @@ export default function Advantages() {
                     className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group cursor-pointer`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
-                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out' />
+                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 lg:group-hover:opacity-0 transition-all duration-300 ease-in-out' />
+                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 lg:group-hover:opacity-100 lg:group-hover:z-50 lg:group-hover:scale-105 transition-all duration-300 ease-in-out' />
                   </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
@@ -264,8 +264,8 @@ export default function Advantages() {
                     className={`relative w-full lg:w-[25rem] md:h-[33.25rem] h-[14.75rem] lg:h-[14.75rem] rounded-[0.75rem] flex items-center justify-center overflow-hidden group cursor-pointer`}
                   >
                     {/* <div className='w-[100%] h-[100%] bg-primary-blue'></div> */}
-                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 group-hover:opacity-0 transition-all duration-300 ease-in-out' />
-                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 group-hover:opacity-100 group-hover:z-50 group-hover:scale-105 transition-all duration-300 ease-in-out' />                  </div>
+                    <img loading="lazy" src={item.image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-100 lg:group-hover:opacity-0 transition-all duration-300 ease-in-out' />
+                    <img loading='lazy' src={item.hover_image} alt={item.title} className='absolute w-[100%] h-[100%] object-cover opacity-0 lg:group-hover:opacity-100 lg:group-hover:z-50 lg:group-hover:scale-105 transition-all duration-300 ease-in-out' />                  </div>
                   <div className='w-full flex flex-col items-start justify-center gap-[0.625rem]'>
                     <div className='uppercase syneFont text-[1.5rem] text-primary-text font-bold md:tracking-[-0.02em] leading-[1.2em]'>{item.title}</div>
                     <div className='uppercase interFont text-[0.875rem] text-[#71717A] font-normal leading-[1.4em] tracking-[0.05em]'>{item.description}</div>
@@ -287,7 +287,7 @@ export default function Advantages() {
             className='w-[8.688rem] h-[2.75rem] relative flex flex-row items-center justify-center rounded-[2.5rem] bg-primary-blue lg:bg-transparent hover:bg-primary-blue transition-all duration-300 easeTransition cursor-pointer group'
           >
             <div
-              className={`absolute ${isHovered || isMobile() || isTablet() ? 'left-[1rem]' : 'left-[1.75rem] md:left-[1.5rem]'} poppinsFont text-[1rem] text-white lg:text-black font-normal leading-[1.8em] text-center group-hover:text-white transition-all duration-300 easeTransition`}
+              className={`absolute ${isHovered || isMobile() || isTablet() ? 'left-[1rem]' : 'left-[1.75rem] md:left-[1.5rem]'} poppinsFont text-[1rem] text-white lg:text-black font-normal leading-[1.8em] text-center lg:group-hover:text-white transition-all duration-300 easeTransition`}
 
             >
               More Works
