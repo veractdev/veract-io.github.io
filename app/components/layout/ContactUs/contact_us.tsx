@@ -354,7 +354,7 @@ export default function Contact_Us() {
                 </div>
                 <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
                 <a
-                  href="mailto:info@veract.co"
+                  href="mailto:info@veract.io"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
                   info@veract.co
