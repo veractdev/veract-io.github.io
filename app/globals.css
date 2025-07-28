@@ -476,6 +476,7 @@ body {
   .animate-agentic-layer {
     animation-name: agenticLayerAnimationMobile !important;
   }
+
   @keyframes agenticLayerAnimationMobile {
     0% {
       opacity: 0;
@@ -488,22 +489,22 @@ body {
       top: 1.25rem;
       scale: 1;
     }
-  } 
+  }
 }
 
 .page-not-found-CTA-boxShadow {
   box-shadow: 0px 0px 0px 3px #FFFFFF26 inset,
-  0px 8px 40px 0px #0055FF80,
-  0px 0px 10px 1px #FFFFFF00,
-  0px 0px 0px 1px #0055FF1F;
+    0px 8px 40px 0px #0055FF80,
+    0px 0px 10px 1px #FFFFFF00,
+    0px 0px 0px 1px #0055FF1F;
   transition: all 0.3s ease;
 }
 
 .page-not-found-CTA-boxShadow:hover {
   box-shadow: 0px 0px 0px 3px #FFFFFF26 inset,
-  0px 8px 40px 0px #0055FFB3,
-  0px 0px 10px 1px #FFFFFF4D,
-  0px 0px 0px 5px #4285F433;
+    0px 8px 40px 0px #0055FFB3,
+    0px 0px 10px 1px #FFFFFF4D,
+    0px 0px 0px 5px #4285F433;
 }
 
 .agentFooterTitle {
@@ -521,6 +522,7 @@ body {
   background-color: #333 !important;
   color: white !important;
 }
+
 .react-tel-input .flag-dropdown {
   background: transparent;
   border: none;
@@ -556,7 +558,8 @@ body {
   from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
@@ -569,7 +572,8 @@ body {
   from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
@@ -582,7 +586,8 @@ body {
   from {
     transform: rotate(360deg);
   }
-  to{
+
+  to {
     transform: rotate(0deg);
   }
 }
@@ -596,7 +601,8 @@ body {
   from {
     transform: translateY(0);
   }
-  to{
+
+  to {
     transform: translateY(-100%);
   }
 }
@@ -609,6 +615,7 @@ body {
   0% {
     left: -3rem;
   }
+
   100% {
     left: 100%;
   }
@@ -622,43 +629,53 @@ body {
   0% {
     transform: translateY(0);
   }
+
   20% {
     transform: translateY(0);
   }
-  25%{
+
+  25% {
     transform: translateY(-21%);
   }
-  40%{
+
+  40% {
     transform: translateY(-21%);
   }
-  45%{
+
+  45% {
     transform: translateY(-42%);
   }
-  65%{
+
+  65% {
     transform: translateY(-42%);
   }
-  70%{
+
+  70% {
     transform: translateY(-63%);
   }
-  95%{
+
+  95% {
     transform: translateY(-63%);
   }
+
   100% {
     transform: translateY(-85%);
   }
 }
 
-.animate-arrow-upwards{
+.animate-arrow-upwards {
   animation: arrow-upwards 1.75s ease infinite;
 }
 
-@keyframes arrow-upwards{
+@keyframes arrow-upwards {
   0% {
     transform: translateY(0);
   }
+
   60% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-135%);
   }
@@ -672,19 +689,19 @@ body {
 
 .contact_us_shadow {
   box-shadow: 0px 8px 40px 0px #0055FF80,
-  0px 0px 10px 1px #FFFFFF00;
+    0px 0px 10px 1px #FFFFFF00;
 }
 
 .contact_us_shadow:hover {
   box-shadow: 0px 8px 40px 0px #0055FFB3,
-  0px 0px 10px 1px #FFFFFF4D;
+    0px 0px 10px 1px #FFFFFF4D;
 }
 
 .error_contact_us_shadow {
   box-shadow: 0px 8px 40px 0px #FF224480;
 }
 
-.animate-active-faq-hover{
+.animate-active-faq-hover {
   position: absolute;
   height: 322px;
   animation: faq-hover-active 0.3s ease-in-out;
@@ -692,13 +709,20 @@ body {
   top: -125%;
 }
 
-@keyframes faq-hover-active{
-  from{
+@keyframes faq-hover-active {
+  from {
     top: -90%;
     height: 121px;
   }
-  to{
+
+  to {
     top: -125%;
     height: 322px;
   }
+}
+
+.scrollSnap {
+  touch-action: pan-y;
+  overscroll-behavior: none !important;
+  scroll-snap-type: none;
 }
