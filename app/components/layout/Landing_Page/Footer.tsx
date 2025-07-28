@@ -336,7 +336,7 @@ export default function Footer() {
                 </div>
               </div>
           </div>
-          <div className="md:w-[13.375rem] w-full text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20">
+          <div className="md:w-[13.375rem] w-full text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20 text-center">
             <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>
             <div>All Rights reserved</div>
           </div>
