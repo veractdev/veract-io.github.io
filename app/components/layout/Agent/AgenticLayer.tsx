@@ -23,12 +23,12 @@ export default function AgenticLayer() {
               className="absolute z-20 lg:top-[3.188rem] lg:left-[3.188rem] md:top-[1.77rem] md-[1.87rem] top-[1.25rem] lg:w-[24.625rem] lg:h-[24.625rem] md:w-[13.66906rem] md:h-[14.25881rem] w-[13.625rem] h-[13.625rem] pointer-events-none animate-agentic-layer"
               style={{
                 filter: "url(#filter0_g_1_1075)",
-                mask: "url(#intersectionMask)",
-                WebkitMask: "url(#intersectionMask)",
+                // mask: "url(#intersectionMask)",
+                // WebkitMask: "url(#intersectionMask)",
               }}
             >
               <img loading="lazy"
-                src={`${baseUrl}/Images/agent/agenticLayer.png`}
+                src={`/Images/agent/AgenticLayer/agentic_layer_overlay.svg`}
                 alt="agenticLayer_distorted"
                 className="object-cover w-full h-full rounded-full"
               />
@@ -81,17 +81,17 @@ export default function AgenticLayer() {
                 </feMerge>
               </filter>
 
-              <mask id="intersectionMask">
+              {/* <mask id="intersectionMask">
                 <rect width="100%" height="100%" fill="black" />
                 <circle cx="197px" cy="197px" r="197px" fill="white" />
-              </mask>
+              </mask> */}
             </svg>
           </div>
           <div className="flex lg:top-[3.188rem] lg:left-[3.375rem] relative animate-agentic-layer-opacity">
             <img loading="lazy"
               src={`/Images/agent/agenticLayerVeins.svg`}
               alt="agenticLayer_2"
-            className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg] scale-130 md:scale-170 lg:scale-190 "
+              className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg] scale-130 md:scale-170 lg:scale-190 "
             />
           </div>
           <div className="relative">
@@ -175,11 +175,11 @@ export default function AgenticLayer() {
                 Your tools stay the same. The way you work changes forever!
               </div>
               <div className="lg:px-[3.625rem] md:px-[1.99rem] px-[2.55rem]">
-                <div 
-                onClick={() => {
-                  router.push("/contact-us");
-                }}
-                className="flex lg:px-[0.875rem] lg:py-[0.375rem] md:py-[0.21rem] md:px-[0.49rem] px-[0.62rem] py-[0.26rem] justify-center items-center gap-[0.625rem] bg-[#4285F4] lg:rounded-[10px] rounded-[0.43988rem] text-center dmSansFont lg:text-[1.25rem] md:text-[0.69388rem] text-[0.875rem] font-normal leading-normal text-white cursor-pointer">
+                <div
+                  onClick={() => {
+                    router.push("/contact-us");
+                  }}
+                  className="flex lg:px-[0.875rem] lg:py-[0.375rem] md:py-[0.21rem] md:px-[0.49rem] px-[0.62rem] py-[0.26rem] justify-center items-center gap-[0.625rem] bg-[#4285F4] lg:rounded-[10px] rounded-[0.43988rem] text-center dmSansFont lg:text-[1.25rem] md:text-[0.69388rem] text-[0.875rem] font-normal leading-normal text-white cursor-pointer">
                   Supercharge Your Tools Now
                 </div>
               </div>

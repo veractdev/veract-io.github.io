@@ -52,7 +52,7 @@ export default function Footer() {
 
   return (
     loader && (
-      <div className="w-full flex flex-col items-center justify-center relative bg-primary-text">
+      <div className="w-full flex flex-col items-center justify-center relative bg-primary-text scrollSnap">
         <svg
           ref={svgRef}
           viewBox="0 20.34 156.69 33.59"
