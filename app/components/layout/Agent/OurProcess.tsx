@@ -104,7 +104,7 @@ export default function OurProcess() {
                       </div>
                     </div>
                     <div className="rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]">
-                      <img src={`/Images/agent/speedometer.svg`} className="w-[13px] h-[13px]"/>
+                      <img src={`/Images/agent/speedometer.svg`} className="w-[13px] h-[13px]" alt="speedometer"/>
                       <div className="interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]">
                         Speed check
                       </div>
@@ -148,7 +148,6 @@ export default function OurProcess() {
                     </div>
                     <div className="w-[230px] h-[128px] overflow-hidden mt-[15px] pl-[5px] ">
                     <div className="relative w-[230px] h-[128px] text-white text-[12px] interFont animate-coding duration-500">
-                        {/* <img src="/Images/agent/code.png" className="absolute"/> */}
                         class AutomationTrigger:<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-primary-blue">def __init__</span>(self, threshold):<br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.threshold = threshold<br/>
@@ -199,26 +198,26 @@ export default function OurProcess() {
                     </div>
                     <div className="flex flex-col gap-[10px] z-[100]">
                         <div className="relative items-center flex">
-                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="w-max h-max" alt="process-line" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         <div className="relative items-center flex">
-                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="w-max h-max" alt="process-line" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         <div className="relative items-center flex">
-                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="" />
+                            <img src={`${baseUrl}/Images/agent/process-line.png`} className="w-max h-max" alt="process-line" />
                             <div className="absolute w-[20px] h-[2px] animate-processing-line" style={{background:"linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"}}></div>
                         </div>
                         
                     </div>
                     <div className="w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] z-[200] overflow-hidden items-center justify-center">
                         <div className="flex flex-col gap-[1rem] items-center justify-center mt-[0.5rem] animate-processing-applications">
-                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]"/>
-                            <img src={`/Images/agent/Chatgpt.svg`} className="w-[80%] h-[80%]"/>
-                            <img src={`/Images/agent/Gmail.svg`} className="w-[80%] h-[80%]"/>
-                            <img src={`/Images/agent/Discord.svg`} className="w-[80%] h-[80%]"/>
-                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]"/>
+                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]" alt="Slack"/>
+                            <img src={`/Images/agent/Chatgpt.svg`} className="w-[80%] h-[80%]" alt="Chatgpt"/>
+                            <img src={`/Images/agent/Gmail.svg`} className="w-[80%] h-[80%]" alt="Gmail"/>
+                            <img src={`/Images/agent/Discord.svg`} className="w-[80%] h-[80%]" alt="Discord"/>
+                            <img src={`/Images/agent/Slack.svg`} className="w-[80%] h-[80%]" alt="Slack"/>
                         </div>
                     </div>
                 </div>

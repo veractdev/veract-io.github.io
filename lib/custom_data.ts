@@ -1040,7 +1040,7 @@ export const LandingPageData = {
           {
             id: 4,
             type: "email",
-            title: "info@veract.co",
+            title: "info@veract.io",
           },
         ],
       },
