@@ -56,7 +56,7 @@ export default function AgentTitle({ title, title_description, description }: { 
           <div className="text-[#FAFAFA] text-center syneFont lg:text-[54px] md:text-[50px] text-[1.75rem] font-semibold leading-normal max-w-[1139px] md:px-0 px-[7.5px]">
             {title_description}
           </div>
-          <div className="text-[#CECECE] text-center dmSansFont md:text-[1.625rem] text-[1.125rem] font-normal leading-normal lg:pb-[136px]  pb-[6.94rem] max-w-[652px]">
+          <div className="text-[#CECECE] text-center dmSansFont md:text-[1.625rem] text-[1.125rem] font-normal leading-normal lg:pb-[136px] pb-[6.94rem] max-w-[652px]">
             {description}
           </div>
         </div>
