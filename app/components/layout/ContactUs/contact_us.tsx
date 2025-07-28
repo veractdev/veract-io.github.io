@@ -357,7 +357,7 @@ export default function Contact_Us() {
                   href="mailto:info@veract.io"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
-                  info@veract.co
+                  info@veract.io
                 </a>
               </div>
             </div>
