@@ -6791,14 +6791,14 @@
 
     100% {
       top: -3rem;
-      left: 60rem;
+      left: 120rem;
     }
   }
 
   @keyframes blob-reverse {
     0% {
       top: -3rem;
-      left: 60rem;
+      left: 120rem;
     }
 
     100% {
@@ -6811,14 +6811,14 @@
     opacity: 100;
     animation: .7s ease-in forwards blob-move;
     top: -3rem;
-    left: 40rem;
+    left: 120rem;
   }
 
   .animate-blob-reverse {
     opacity: 100;
     animation: .7s ease-out forwards blob-reverse;
     top: -3rem;
-    left: -20rem;
+    left: -120rem;
   }
 }
 
