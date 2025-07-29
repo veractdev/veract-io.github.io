@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
 import { isMobile } from "../../../../lib/utils";
 import { useRouter } from "next/navigation";
-import { baseUrl } from "@/lib/custom_data";
 
 export default function AgenticLayer() {
   const [loaded, setLoaded] = useState(false);

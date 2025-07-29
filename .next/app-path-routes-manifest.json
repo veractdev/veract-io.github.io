@@ -1,0 +1,14 @@
+{
+  "/api/contact-us/route": "/api/contact-us",
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/blogs/[slug]/page": "/blogs/[slug]",
+  "/company/[slug]/page": "/company/[slug]",
+  "/industries/[slug]/page": "/industries/[slug]",
+  "/services/[slug]/page": "/services/[slug]",
+  "/contact-us/page": "/contact-us",
+  "/agentic-ai/page": "/agentic-ai",
+  "/case-studies/page": "/case-studies",
+  "/case-studies/[slug]/page": "/case-studies/[slug]"
+}

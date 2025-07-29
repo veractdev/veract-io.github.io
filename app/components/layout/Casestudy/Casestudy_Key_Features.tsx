@@ -43,7 +43,7 @@ export default function Casestudy_Key_Features({ key_features_props }: { key_fea
             >
               <div className="pr-[1.625rem] text-[1.125rem] font-medium interFont leading-[1.4em]" style={{ color: key_features_props.indication_color }}>{feature.number}</div>
               <div className="lg:w-[30.5rem] w-full lg:text-[2.5rem] text-[1.75rem] lg:mr-[16.875rem] lg:pr-[9rem] text-primary-text font-medium leading-[1.2em] geistFont">{feature.title}</div>
-              <div className="absolute right-[18rem] top-[-7rem] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
+              <div className="absolute right-[18rem] top-[-7rem] opacity-0 lg:group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
                 <img loading="lazy" src={feature.img} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image' />
               </div>
               <div className="lg:w-[13.313rem] lg:pl-[1.25rem] text-[#282828] interFont text-[0.875rem] font-medium leading-[1.4em]">{feature.desc}</div>

@@ -1,24 +1,29 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export function isMobile() {
   // if (typeof window === 'undefined') return false;
   // return window.innerWidth < 768;
-  if (!window) return false
+  if (!window) return false;
   if (window && typeof window !== undefined) {
-    return window.innerWidth < 768
+    return window.innerWidth < 768;
   }
 }
 
 export function isTablet() {
   // if (typeof window === 'undefined') return false;
   // return window.innerWidth >= 768 && window.innerWidth <= 1024;
-  if (!window) return false
+  if (!window) return false;
   if (window && typeof window !== undefined) {
     return window.innerWidth >= 768 && window.innerWidth <= 1024;
   }
+}
+
+export function isValidSlug(slug: string): boolean {
+  const validSlugs = ["infrared-thermography", "accessible-web-widget"];
+  return validSlugs.includes(slug);
 }
