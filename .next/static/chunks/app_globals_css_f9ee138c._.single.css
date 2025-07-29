@@ -427,6 +427,10 @@
     top: 120%;
   }
 
+  .top-\[calc\(100\%\+5px\)\] {
+    top: calc(100% + 5px);
+  }
+
   .top-\[calc\(100\%-934px\)\] {
     top: calc(100% - 934px);
   }
@@ -453,6 +457,10 @@
 
   .right-\[5\%\] {
     right: 5%;
+  }
+
+  .right-\[5px\] {
+    right: 5px;
   }
 
   .right-\[7\%\] {
@@ -491,16 +499,16 @@
     bottom: 1.25rem;
   }
 
-  .bottom-\[1rem\] {
-    bottom: 1rem;
-  }
-
   .bottom-\[2\%\] {
     bottom: 2%;
   }
 
   .bottom-\[4\.75rem\] {
     bottom: 4.75rem;
+  }
+
+  .bottom-\[5rem\] {
+    bottom: 5rem;
   }
 
   .bottom-\[6\.5rem\] {
@@ -663,12 +671,20 @@
     z-index: 200;
   }
 
+  .z-\[201\] {
+    z-index: 201;
+  }
+
   .z-\[997\] {
     z-index: 997;
   }
 
   .z-\[999\] {
     z-index: 999;
+  }
+
+  .m-\[0rem_2\.75rem_4rem_2\.75rem\] {
+    margin: 0 2.75rem 4rem;
   }
 
   .mx-0 {
@@ -1751,6 +1767,10 @@
 
   .gap-\[4px\] {
     gap: 4px;
+  }
+
+  .gap-\[7px\] {
+    gap: 7px;
   }
 
   .gap-\[9px\] {
@@ -3298,6 +3318,10 @@
     color: #fffc;
   }
 
+  .text-\[\#FFFFFFE6\] {
+    color: #ffffffe6;
+  }
+
   .text-\[\#FFFFFF\] {
     color: #fff;
   }
@@ -3308,6 +3332,10 @@
 
   .text-\[\#fff\] {
     color: #fff;
+  }
+
+  .text-\[0\.62\] {
+    color: .62;
   }
 
   .text-black {
@@ -3428,6 +3456,16 @@
 
   .shadow-\[0_4px_30px_rgba\(0\,0\,0\,0\.1\)\] {
     --tw-shadow: 0 4px 30px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-\[0px_0px\] {
+    --tw-shadow: 0px 0px var(--tw-shadow-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-\[0px_0px_0px\] {
+    --tw-shadow: 0px 0px 0px var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
@@ -3911,8 +3949,20 @@
   }
 
   @media (width >= 768px) {
+    .md\:m-\[6\.25rem_4\.375rem\] {
+      margin: 6.25rem 4.375rem;
+    }
+  }
+
+  @media (width >= 768px) {
     .md\:mt-0 {
       margin-top: calc(var(--spacing) * 0);
+    }
+  }
+
+  @media (width >= 768px) {
+    .md\:mt-\[-1\.938rem\] {
+      margin-top: -1.938rem;
     }
   }
 
@@ -5179,6 +5229,12 @@
   @media (width >= 1280px) {
     .lg\:my-\[0\.50rem\] {
       margin-block: .5rem;
+    }
+  }
+
+  @media (width >= 1280px) {
+    .lg\:mt-\[-4\.938rem\] {
+      margin-top: -4.938rem;
     }
   }
 

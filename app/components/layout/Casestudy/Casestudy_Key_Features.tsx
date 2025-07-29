@@ -29,7 +29,7 @@ export default function Casestudy_Key_Features({ key_features_props }: { key_fea
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div className="text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont">{key_features_props.title}</div>
+          <div className="uppercase text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont">{key_features_props.title}</div>
         </motion.div>
         <div className="flex flex-col lg:w-[65rem] w-full">
           {key_features_props.key_features_list.map((feature, idx) =>

@@ -105,7 +105,7 @@ export default function AgenticLayer() {
               className="absolute md:bottom-[-5.313rem] bottom-[-6.375rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
 
-            <div className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D] animate-agentic-layer-shadow"
+our            <div className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D] animate-agentic-layer-shadow"
               style={isMobile() ? { boxShadow: '0px 0px 12px 1px #008FFF inset' } : {}}
             >
               <div className="flex flex-col lg:pl-[2.563rem] pl-[1.8rem] lg:pr-[4.25rem] pr-[2.99rem] lg:gap-[1.563rem] md:gap-[0.87rem]  gap-[1.1rem] lg:pb-[6.313rem] md:pb-[1.69rem] pb-[4.54rem]">

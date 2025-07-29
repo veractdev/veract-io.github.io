@@ -307,8 +307,8 @@ const caseStudyData = {
             ],
             // "",
             challenge_description: "BOTTLENECK",
-            challenge_solution: "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
-            challenge_solution_highlighted: "",
+            challenge_solution: "Designing an accessibility system that integrates with websites to support users—",
+            challenge_solution_highlighted: "while maintaining performance, compliance, and customization.",
             solution_list: [
                 {
                     id: 1,
@@ -1378,7 +1378,8 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "cn": (()=>cn),
     "isMobile": (()=>isMobile),
-    "isTablet": (()=>isTablet)
+    "isTablet": (()=>isTablet),
+    "isValidSlug": (()=>isValidSlug)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-client] (ecmascript)");
@@ -1402,6 +1403,13 @@ function isTablet() {
     if (window && "object" !== undefined) {
         return window.innerWidth >= 768 && window.innerWidth <= 1024;
     }
+}
+function isValidSlug(slug) {
+    const validSlugs = [
+        "infrared-thermography",
+        "accessible-web-widget"
+    ];
+    return validSlugs.includes(slug);
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
@@ -1447,7 +1455,9 @@ function Navbar() {
             if (!pathname) return;
             if (pathname === "/") {
                 setNavbarState(1);
-            } else if (pathname === "/case-studies") {
+            } else if (pathname === "/case-studies" || Object.keys(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["caseStudyData"]).some({
+                "Navbar.useEffect": (key)=>pathname === `/case-studies/${key}`
+            }["Navbar.useEffect"])) {
                 setNavbarState(4);
             } else if (pathname === "/agentic-ai") {
                 setNavbarState(3);
@@ -1531,7 +1541,7 @@ function Navbar() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 104,
+                        lineNumber: 106,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1541,7 +1551,9 @@ function Navbar() {
                                     className: `${isHamburgerMenu ? "" : " max-sm:hidden max-md:hidden max-lg:hidden"} relative flex items-center justify-center group`,
                                     onClick: ()=>{
                                         setNavbarState(item.id);
-                                        router.push(item.link);
+                                        if (item.status == 'active') {
+                                            router.push(item.link);
+                                        }
                                     },
                                     children: [
                                         item.id === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1550,7 +1562,7 @@ function Navbar() {
                                             className: "absolute top-[7px] right-[9px]"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 141,
                                             columnNumber: 41
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1561,20 +1573,20 @@ function Navbar() {
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 143,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id && item.status == 'active' ? "w-[calc(100%-3.563rem)]" : "w-0"} group-hover:w-[calc(100%-3.563rem)] ${item.status == 'active' ? 'bg-primary-blue' : ''} transition-all duration-300`
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 154,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, item.id, true, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 127,
                                     columnNumber: 33
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1585,13 +1597,13 @@ function Navbar() {
                                 children: "Talk to us"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 158,
+                                lineNumber: 162,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 121,
+                        lineNumber: 123,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1606,48 +1618,48 @@ function Navbar() {
                                     className: `w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute rotate-45" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 189,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `${isHamburgerMenu ? "hidden" : ""} w-[.75rem] h-[0.125rem] bg-[#FFFFFF]`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 193,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute -rotate-45" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 197,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                            lineNumber: 181,
+                            lineNumber: 185,
                             columnNumber: 29
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 171,
+                        lineNumber: 175,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                lineNumber: 94,
+                lineNumber: 96,
                 columnNumber: 21
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/components/layout/Navbar.tsx",
-            lineNumber: 85,
+            lineNumber: 87,
             columnNumber: 17
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/layout/Navbar.tsx",
-        lineNumber: 83,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }
@@ -2000,6 +2012,7 @@ function AgenticLayer() {
                                 lineNumber: 102,
                                 columnNumber: 13
                             }, this),
+                            "our            ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D] animate-agentic-layer-shadow",
                                 style: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isMobile"])() ? {
@@ -2210,7 +2223,7 @@ function AgenticLayer() {
                             }, void 0, true, {
                                 fileName: "[project]/app/components/layout/Agent/AgenticLayer.tsx",
                                 lineNumber: 108,
-                                columnNumber: 13
+                                columnNumber: 16
                             }, this)
                         ]
                     }, void 0, true, {
@@ -2321,7 +2334,7 @@ function AgentBanner() {
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[1.625rem] md:text-[2.25rem] lg:text-[3.125rem] text-wrap w-[100%] md:w-[60%] lg:w-[45%] text-center font-medium tracking-[-0.01em] leading-[1.2em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]",
+                            className: "interFont text-[1.625rem] md:text-[2.25rem] lg:text-[3.125rem] text-wrap w-[100%] md:w-[60%] lg:w-[45%] text-center font-medium tracking-[-0.01em] leading-[1.2em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]",
                             children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AgentPageData"].banner.title
                         }, void 0, false, {
                             fileName: "[project]/app/components/layout/Agent/Agent_Banner.tsx",
@@ -2601,7 +2614,7 @@ function OurProcess() {
             }, void 0, false, {
                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                 lineNumber: 50,
-                columnNumber: 7
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fade-in-up max-w-[43.75rem] text-center syneFont font-medium md:font-normal text-[1.75rem] md:text-[3.125rem] text-white leading-[1.1em] -tracking-[0.04em] py-[1.563rem_0.938rem]",
@@ -2609,7 +2622,7 @@ function OurProcess() {
             }, void 0, false, {
                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                 lineNumber: 53,
-                columnNumber: 7
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "fade-in-up max-w-[37.5rem] text-center interFont font-normal md:font-medium text-[#CCCCCC] text-[0.875rem] md:text-[1.125rem] leading-[1.5em] -tracking-[0.02em]",
@@ -2617,7 +2630,7 @@ function OurProcess() {
             }, void 0, false, {
                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                 lineNumber: 56,
-                columnNumber: 7
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col items-center justify-center gap-[1.25rem] pt-[3.75rem]",
@@ -2639,7 +2652,7 @@ function OurProcess() {
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 67,
-                                                columnNumber: 17
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-col gap-[0.625rem]",
@@ -2650,7 +2663,7 @@ function OurProcess() {
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 71,
-                                                        columnNumber: 19
+                                                        columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-full md:w-[15.25rem] lg:w-[23.75rem] interFont text-[0.875rem] md:text-[1rem] text-[#CCCCCC] font-medium leading-[1.4em] -tracking-[0.02em]",
@@ -2658,19 +2671,19 @@ function OurProcess() {
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 74,
-                                                        columnNumber: 19
+                                                        columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 70,
-                                                columnNumber: 17
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                         lineNumber: 66,
-                                        columnNumber: 15
+                                        columnNumber: 17
                                     }, this),
                                     card.id === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center",
@@ -2687,12 +2700,12 @@ function OurProcess() {
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                             lineNumber: 83,
-                                                            columnNumber: 23
+                                                            columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 82,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute w-[calc(100%-1.25rem)] bottom-[0.563rem] left-1/2 transform -translate-x-1/2 interFont text-center text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2700,13 +2713,13 @@ function OurProcess() {
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 89,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 81,
-                                                columnNumber: 19
+                                                columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "p-[0.625rem_0.313rem_0.938rem_0.313rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-col gap-[0.313rem]",
@@ -2721,7 +2734,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 95,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2729,13 +2742,13 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 96,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 94,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]",
@@ -2747,7 +2760,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 101,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2755,13 +2768,13 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 102,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 100,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]",
@@ -2773,7 +2786,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 107,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2781,13 +2794,13 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 108,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 106,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]",
@@ -2799,7 +2812,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 113,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2807,13 +2820,13 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 114,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 112,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "rounded-[0.125rem] shadow-[0px_0px_0px_1px_#222222_inset] flex flex-row items-center gap-[0.313rem] p-[0.313rem]",
@@ -2825,7 +2838,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 119,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "interFont md:text-[0.5rem] text-[0.75rem] lg:text-[0.75rem] text-white font-medium leading-[1em] -tracking-[0.04em]",
@@ -2833,25 +2846,25 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 120,
-                                                                columnNumber: 23
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 118,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 93,
-                                                columnNumber: 19
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                         lineNumber: 80,
-                                        columnNumber: 17
+                                        columnNumber: 19
                                     }, this),
                                     card.id === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex flex-col w-full h-[180px]",
@@ -2869,7 +2882,7 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 132,
-                                                                columnNumber: 21
+                                                                columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$ArrowRight$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                                 size: 10,
@@ -2878,20 +2891,20 @@ function OurProcess() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 133,
-                                                                columnNumber: 21
+                                                                columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 131,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-[91px] h-[10px] bg-[#FFFFFF]/5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 135,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex gap-[4px]",
@@ -2927,13 +2940,13 @@ function OurProcess() {
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 136,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 130,
-                                                columnNumber: 19
+                                                columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-row",
@@ -2972,7 +2985,7 @@ function OurProcess() {
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 144,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-[230px] h-[128px] overflow-hidden mt-[15px] pl-[5px] ",
@@ -2983,7 +2996,7 @@ function OurProcess() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 151,
-                                                                    columnNumber: 49
+                                                                    columnNumber: 51
                                                                 }, this),
                                                                 "    ",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2992,30 +3005,30 @@ function OurProcess() {
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 152,
-                                                                    columnNumber: 49
+                                                                    columnNumber: 51
                                                                 }, this),
                                                                 "(self, threshold):",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 152,
-                                                                    columnNumber: 122
+                                                                    columnNumber: 124
                                                                 }, this),
                                                                 "        self.threshold = threshold",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 153,
-                                                                    columnNumber: 99
+                                                                    columnNumber: 101
                                                                 }, this),
                                                                 "        self.status = 'inactive'",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 154,
-                                                                    columnNumber: 107
+                                                                    columnNumber: 109
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 154,
-                                                                    columnNumber: 112
+                                                                    columnNumber: 115
                                                                 }, this),
                                                                 "    ",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3024,48 +3037,48 @@ function OurProcess() {
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 156,
-                                                                    columnNumber: 49
+                                                                    columnNumber: 51
                                                                 }, this),
                                                                 "(self, value):",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 156,
-                                                                    columnNumber: 123
+                                                                    columnNumber: 125
                                                                 }, this),
                                                                 "        if value > self.threshold:",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 157,
-                                                                    columnNumber: 102
+                                                                    columnNumber: 104
                                                                 }, this),
                                                                 "            self.status = 'active'",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 158,
-                                                                    columnNumber: 129
+                                                                    columnNumber: 131
                                                                 }, this),
                                                                 "            return 'Automation triggered!'",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 159,
-                                                                    columnNumber: 137
+                                                                    columnNumber: 139
                                                                 }, this),
                                                                 "        else:",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 160,
-                                                                    columnNumber: 78
+                                                                    columnNumber: 80
                                                                 }, this),
                                                                 "            return 'No action taken.'",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 161,
-                                                                    columnNumber: 132
+                                                                    columnNumber: 134
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 161,
-                                                                    columnNumber: 137
+                                                                    columnNumber: 140
                                                                 }, this),
                                                                 "    ",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3074,13 +3087,13 @@ function OurProcess() {
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 163,
-                                                                    columnNumber: 49
+                                                                    columnNumber: 51
                                                                 }, this),
                                                                 "(self):",
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 163,
-                                                                    columnNumber: 113
+                                                                    columnNumber: 115
                                                                 }, this),
                                                                 "        return f'Status: ",
                                                                 self.status,
@@ -3089,35 +3102,35 @@ function OurProcess() {
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                             lineNumber: 150,
-                                                            columnNumber: 21
+                                                            columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 149,
-                                                        columnNumber: 21
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 143,
-                                                columnNumber: 19
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                         lineNumber: 129,
-                                        columnNumber: 17
+                                        columnNumber: 19
                                     }, this)
                                 ]
                             }, card.id, true, {
                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                 lineNumber: 62,
-                                columnNumber: 13
+                                columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                         lineNumber: 60,
-                        columnNumber: 9
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex lg:flex-row md:flex-row flex-col items-center justify-center gap-[1.25rem]",
@@ -3136,7 +3149,7 @@ function OurProcess() {
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 180,
-                                                columnNumber: 17
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-col gap-[0.625rem]",
@@ -3147,7 +3160,7 @@ function OurProcess() {
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 184,
-                                                        columnNumber: 19
+                                                        columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-full md:w-[15.25rem] lg:w-[23.75rem] interFont text-[0.875rem] md:text-[1rem] text-[#CCCCCC] font-medium leading-[1.4em] -tracking-[0.02em]",
@@ -3155,19 +3168,19 @@ function OurProcess() {
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                         lineNumber: 187,
-                                                        columnNumber: 19
+                                                        columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                 lineNumber: 183,
-                                                columnNumber: 17
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                         lineNumber: 179,
-                                        columnNumber: 15
+                                        columnNumber: 17
                                     }, this),
                                     card.id === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-[11.25rem] lg:py-[40px] lg:px-[38px] flex items-center justify-center",
@@ -3196,12 +3209,20 @@ function OurProcess() {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                             lineNumber: 197,
                                                             columnNumber: 25
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "absolute top-[calc(100%+5px)] interFont text-[0.625rem] text-[#FFFFFFE6] font-regular leading-[1.1em] text-center",
+                                                            children: "Our solution"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                            lineNumber: 198,
+                                                            columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                     lineNumber: 195,
-                                                    columnNumber: 21
+                                                    columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex flex-col gap-[10px] z-[100]",
@@ -3215,8 +3236,8 @@ function OurProcess() {
                                                                     alt: "process-line"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 201,
-                                                                    columnNumber: 29
+                                                                    lineNumber: 202,
+                                                                    columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "absolute w-[20px] h-[2px] animate-processing-line",
@@ -3225,13 +3246,13 @@ function OurProcess() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 202,
-                                                                    columnNumber: 29
+                                                                    lineNumber: 203,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 200,
+                                                            lineNumber: 201,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3241,25 +3262,25 @@ function OurProcess() {
                                                                     src: `${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["baseUrl"]}/Images/agent/process-line.png`,
                                                                     className: "w-max h-max",
                                                                     alt: "process-line"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 205,
-                                                                    columnNumber: 29
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "absolute w-[20px] h-[2px] animate-processing-line",
-                                                                    style: {
-                                                                        background: "linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"
-                                                                    }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                     lineNumber: 206,
-                                                                    columnNumber: 29
+                                                                    columnNumber: 27
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "absolute w-[20px] h-[2px] animate-processing-line",
+                                                                    style: {
+                                                                        background: "linear-gradient(90deg, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0.6) 87.8378%, rgba(221, 121, 253, 0.6) 99.6672%, rgba(66, 133, 244, 0.6) 100%)"
+                                                                    }
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                    lineNumber: 207,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 204,
+                                                            lineNumber: 205,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3271,8 +3292,8 @@ function OurProcess() {
                                                                     alt: "process-line"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 209,
-                                                                    columnNumber: 29
+                                                                    lineNumber: 210,
+                                                                    columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "absolute w-[20px] h-[2px] animate-processing-line",
@@ -3281,92 +3302,109 @@ function OurProcess() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 210,
-                                                                    columnNumber: 29
+                                                                    lineNumber: 211,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 208,
+                                                            lineNumber: 209,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                    lineNumber: 199,
-                                                    columnNumber: 21
+                                                    lineNumber: 200,
+                                                    columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] z-[200] overflow-hidden items-center justify-center",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex flex-col gap-[1rem] items-center justify-center mt-[0.5rem] animate-processing-applications",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                src: `/Images/agent/Slack.svg`,
-                                                                className: "w-[80%] h-[80%]",
-                                                                alt: "Slack"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                lineNumber: 216,
-                                                                columnNumber: 29
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                src: `/Images/agent/Chatgpt.svg`,
-                                                                className: "w-[80%] h-[80%]",
-                                                                alt: "Chatgpt"
-                                                            }, void 0, false, {
+                                                    className: "relative flex justify-center items-center",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "w-[64px] h-[64px] bg-[#0D0D0D]/80 border border-[#222222] rounded-[5px] z-[200] overflow-hidden items-center justify-center",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex flex-col gap-[1rem] items-center justify-center mt-[0.5rem] animate-processing-applications",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: `/Images/agent/Slack.svg`,
+                                                                        className: "w-[80%] h-[80%]",
+                                                                        alt: "Slack"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                        lineNumber: 218,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: `/Images/agent/Chatgpt.svg`,
+                                                                        className: "w-[80%] h-[80%]",
+                                                                        alt: "Chatgpt"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                        lineNumber: 219,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: `/Images/agent/Gmail.svg`,
+                                                                        className: "w-[80%] h-[80%]",
+                                                                        alt: "Gmail"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                        lineNumber: 220,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: `/Images/agent/Discord.svg`,
+                                                                        className: "w-[80%] h-[80%]",
+                                                                        alt: "Discord"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                        lineNumber: 221,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: `/Images/agent/Slack.svg`,
+                                                                        className: "w-[80%] h-[80%]",
+                                                                        alt: "Slack"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                                        lineNumber: 222,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                                                 lineNumber: 217,
-                                                                columnNumber: 29
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                src: `/Images/agent/Gmail.svg`,
-                                                                className: "w-[80%] h-[80%]",
-                                                                alt: "Gmail"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                lineNumber: 218,
-                                                                columnNumber: 29
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                src: `/Images/agent/Discord.svg`,
-                                                                className: "w-[80%] h-[80%]",
-                                                                alt: "Discord"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                lineNumber: 219,
-                                                                columnNumber: 29
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                                src: `/Images/agent/Slack.svg`,
-                                                                className: "w-[80%] h-[80%]",
-                                                                alt: "Slack"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                lineNumber: 220,
-                                                                columnNumber: 29
+                                                                columnNumber: 27
                                                             }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                        lineNumber: 215,
-                                                        columnNumber: 25
-                                                    }, this)
-                                                }, void 0, false, {
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                            lineNumber: 216,
+                                                            columnNumber: 25
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "absolute top-[calc(100%+5px)] interFont text-[0.625rem] text-[#FFFFFFE6] font-regular leading-[1.1em] z-[201] text-center",
+                                                            children: "Your stack"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
+                                                            lineNumber: 225,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                    lineNumber: 214,
-                                                    columnNumber: 21
+                                                    lineNumber: 215,
+                                                    columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                             lineNumber: 194,
-                                            columnNumber: 17
+                                            columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                         lineNumber: 193,
-                                        columnNumber: 15
+                                        columnNumber: 19
                                     }, this),
                                     card.id === 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-[11.25rem] flex flex-row gap-[0.313rem] items-center justify-center",
@@ -3374,26 +3412,26 @@ function OurProcess() {
                                             className: "w-[260px] h-[160px] border border-[#222222] px-[10px] py-[13px] flex flex-col gap-[10px]",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-[240px] h-[38px] flex flex-row pr-[5px] items-center",
+                                                    className: "relative w-[240px] h-[38px] flex flex-row  items-center shadow-[0px_0px_0px_1px_#222222_inset] overflow-hidden rounded-[4px] pl-[5px]",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-[201px] flex flex-row gap-[10px]",
+                                                            className: "w-[201px] flex flex-row gap-[7px]",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]",
+                                                                    className: "w-[28px] h-[28px] rounded-[4px] bg-[#FFFFFF]/5 relative flex items-center justify-center ",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$Chat$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Chat$3e$__["Chat"], {
                                                                         size: 18,
                                                                         weight: "bold",
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                        lineNumber: 232,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 236,
+                                                                        columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 231,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 235,
+                                                                    columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "flex flex-col gap-[4px]",
@@ -3403,220 +3441,220 @@ function OurProcess() {
                                                                             children: "Chatbot system"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 235,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 239,
+                                                                            columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-[10px] text-white interFont font-regular leading-[1.1em] -tracking-[0.04em]",
                                                                             children: "Efficiency will increase by 20%"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 236,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 240,
+                                                                            columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 234,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 238,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 234,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$CircleNotch$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CircleNotch$3e$__["CircleNotch"], {
                                                             size: 18,
                                                             weight: "bold",
-                                                            className: "text-primary-blue animate-spin-slow"
+                                                            className: "text-primary-blue animate-spin-slow absolute right-[5px]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 239,
+                                                            lineNumber: 243,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                    lineNumber: 229,
-                                                    columnNumber: 21
+                                                    lineNumber: 233,
+                                                    columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-[240px] h-[38px] flex flex-row pr-[5px] items-center",
+                                                    className: "relative w-[240px] h-[38px] flex flex-row  items-center shadow-[0px_0px_0px_1px_#222222_inset] overflow-hidden rounded-[4px] pl-[5px]",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-[201px] flex flex-row gap-[10px]",
+                                                            className: "w-[201px] flex flex-row gap-[7px]",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]",
+                                                                    className: "w-[28px] h-[28px] rounded-[4px] bg-[#FFFFFF]/5 relative flex items-center justify-center ",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$Gear$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Gear$3e$__["Gear"], {
                                                                         size: 18,
                                                                         weight: "bold",
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                        lineNumber: 244,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 248,
+                                                                        columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 243,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 247,
+                                                                    columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "flex flex-col gap-[4px]",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-[12px] text-white interFont font-medium leading-[1em] -tracking-[0.04em]",
-                                                                            children: "Chatbot system"
+                                                                            children: "Workflow system"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 247,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 251,
+                                                                            columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-[10px] text-white interFont font-regular leading-[1.1em] -tracking-[0.04em]",
-                                                                            children: "Efficiency will increase by 20%"
+                                                                            children: "Update available.."
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 248,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 252,
+                                                                            columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 246,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 250,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 242,
+                                                            lineNumber: 246,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "relative flex items-center justify-center overflow-hidden w-[19px] h-[19px] bg-[#FFFFFF]/5 rounded-[4px]",
+                                                            className: "flex items-center justify-center overflow-hidden w-[19px] h-[19px] bg-[#FFFFFF]/5 rounded-[4px] absolute right-[5px]",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$ArrowUp$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowUp$3e$__["ArrowUp"], {
                                                                 size: 18,
                                                                 weight: "bold",
-                                                                className: "text-primary-blue animate-arrow-upwards absolute"
+                                                                className: "text-primary-blue animate-arrow-upwards"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                lineNumber: 251,
-                                                                columnNumber: 147
+                                                                lineNumber: 256,
+                                                                columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 251,
+                                                            lineNumber: 255,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                    lineNumber: 241,
-                                                    columnNumber: 21
+                                                    lineNumber: 245,
+                                                    columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-[240px] h-[38px] flex flex-row pr-[5px] items-center",
+                                                    className: "relative w-[240px] h-[38px] flex flex-row  items-center shadow-[0px_0px_0px_1px_#222222_inset] overflow-hidden rounded-[4px] pl-[5px]",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "w-[201px] flex flex-row gap-[10px]",
+                                                            className: "w-[201px] flex flex-row gap-[7px]",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "w-[28px] h-[28px] bg-[#FFFFFF]/5 relative flex items-center justify-center mr-[7px]",
+                                                                    className: "w-[28px] h-[28px] rounded-[4px] bg-[#FFFFFF]/5 relative flex items-center justify-center ",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$Funnel$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Funnel$3e$__["Funnel"], {
                                                                         size: 18,
                                                                         weight: "bold",
                                                                         className: "text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                        lineNumber: 256,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 262,
+                                                                        columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 255,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 261,
+                                                                    columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: "flex flex-col gap-[4px]",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-[12px] text-white interFont font-medium leading-[1em] -tracking-[0.04em]",
-                                                                            children: "Chatbot system"
+                                                                            children: "Sales system"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 259,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 265,
+                                                                            columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                             className: "text-[10px] text-white interFont font-regular leading-[1.1em] -tracking-[0.04em]",
-                                                                            children: "Efficiency will increase by 20%"
+                                                                            children: "Up to date"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                            lineNumber: 260,
-                                                                            columnNumber: 27
+                                                                            lineNumber: 266,
+                                                                            columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                                    lineNumber: 258,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 264,
+                                                                    columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 254,
+                                                            lineNumber: 260,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$phosphor$2d$react$2f$dist$2f$icons$2f$Check$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
                                                             size: 18,
                                                             weight: "bold",
-                                                            className: "text-primary-blue"
+                                                            className: "text-primary-blue absolute right-[5px]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                            lineNumber: 263,
+                                                            lineNumber: 269,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                                    lineNumber: 253,
-                                                    columnNumber: 21
+                                                    lineNumber: 259,
+                                                    columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                            lineNumber: 228,
-                                            columnNumber: 19
+                                            lineNumber: 232,
+                                            columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
-                                        lineNumber: 227,
-                                        columnNumber: 17
+                                        lineNumber: 231,
+                                        columnNumber: 19
                                     }, this)
                                 ]
                             }, card.id, true, {
                                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                                 lineNumber: 175,
-                                columnNumber: 13
+                                columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                         lineNumber: 173,
-                        columnNumber: 9
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
                 lineNumber: 59,
-                columnNumber: 7
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/layout/Agent/OurProcess.tsx",
         lineNumber: 49,
-        columnNumber: 5
+        columnNumber: 7
     }, this);
 }
 _s(OurProcess, "N1MLBivYPKMhsvQDSHkj7PB2w9o=");
