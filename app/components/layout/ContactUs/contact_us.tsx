@@ -247,7 +247,7 @@ export default function Contact_Us() {
                 <div className="w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Mobile number*</div>
                   <div
-                    className="mt-[14px]"
+                    className="mt-[14px] border border-white/30 relative rounded-[5px] focus-within:ring-2 focus-within:ring-[#4287F5] transition-all duration-300 ease-in-out border-solid"
                     onBlur={() => handleBlur("mobileNumber")}
                   >
                     <PhoneInput
@@ -265,7 +265,7 @@ export default function Contact_Us() {
                         border:
                           errors.mobileNumber && touchedFields.mobileNumber
                             ? "1px solid red"
-                            : "1px solid rgba(255, 255, 255, 0.15)",
+                            : "0px solid rgba(255, 255, 255, 0.1)",
                         paddingLeft: "50px",
                         color: "white",
                       }}
