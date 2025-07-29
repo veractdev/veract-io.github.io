@@ -324,14 +324,9 @@ export const caseStudyData = {
       // "",
       challenge_description: "BOTTLENECK",
       challenge_solution:
-<<<<<<< HEAD
-        "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
-      challenge_solution_highlighted: "",
-=======
         "Designing an accessibility system that integrates with websites to support users—",
       challenge_solution_highlighted:
         "while maintaining performance, compliance, and customization.",
->>>>>>> dcb082d78b1bbc09dcd1a30c8bc39cfa84564971
       solution_list: [
         {
           id: 1,
