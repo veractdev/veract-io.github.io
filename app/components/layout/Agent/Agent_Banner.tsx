@@ -28,7 +28,7 @@ export default function AgentBanner() {
           <div className="w-[25rem] md:w-[50rem] lg:w-[50rem] h-[18.75rem] md:h-[31.25rem] lg:h-[31.25rem] absolute bottom-0 overflow-hidden pointer-events-none">
             <div className="absolute inset-0 bg-[#0d0d0d]/50 backdrop-blur-md [mask-image:linear-gradient(to_top,black_85%,transparent_100%)]"></div>
           </div>
-          <div className="text-white w-[100%] flex flex-col items-center justify-center mt-[6.688rem] z-5 pl-[1.125rem] pr-[1.125rem] md:pl-0 md:pr-0 lg:pl-0 lg:pr-0">
+          <div className="interFont text-white w-[100%] flex flex-col items-center justify-center mt-[6.688rem] z-5 pl-[1.125rem] pr-[1.125rem] md:pl-0 md:pr-0 lg:pl-0 lg:pr-0">
             <div className="p-[2px] rounded-[1.625rem] bg-[linear-gradient(105deg,_rgb(41,52,255)_-2%,_rgba(36,65,212,0)_50%)]">
               <div className="pl-[1rem] pr-[1rem] pt-[0.5rem] pb-[0.5rem] bg-black rounded-[1.625rem] text-[#8AA5FF] font-semibold">
                 {AgentPageData.banner.about}

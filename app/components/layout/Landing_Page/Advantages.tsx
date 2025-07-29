@@ -124,7 +124,7 @@ export default function Advantages() {
                 {LandingPageData.advantages.advantages_list.slice(0, 2).map((card, idx) => (
                   <div
                     key={card.title}
-                    className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
+                    className={`syneFont group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
                       } md:w-full md:h-[23.5rem] w-full h-[23.5rem] overflow-clip rounded-[1.875rem]`}
                     onClick={() => handleCardClick(idx)}
                   >
@@ -172,7 +172,7 @@ export default function Advantages() {
                 {LandingPageData.advantages.advantages_list.slice(2, 4).map((card, idx) => (
                   <div
                     key={card.title}
-                    className={`group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
+                    className={`syneFont group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
                       } md:w-full md:h-[23.5rem] w-full h-[23.5rem] overflow-clip rounded-[1.875rem]`}
                     onClick={() => handleCardClick(idx + 2)}
                   >

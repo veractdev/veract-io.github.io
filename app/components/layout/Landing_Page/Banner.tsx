@@ -106,8 +106,8 @@ export default function Banner() {
               className="lg:inline md:inline inline-grid"
             >
               <span>{LandingPageData.banner.title_primary} </span>
-              <span className="text-white hidden lg:inline">&nbsp;{LandingPageData.banner.title_secondary}&nbsp;</span>
-              <span className="text-white md:hidden ">&nbsp;{LandingPageData.banner.title_secondary} {LandingPageData.banner.title_tertiary}&nbsp; </span>
+              <span className="text-white hidden lg:inline">{LandingPageData.banner.title_secondary}</span>
+              <span className="text-white md:hidden ">{LandingPageData.banner.title_secondary}{LandingPageData.banner.title_tertiary}</span>
 
             </motion.span>
             <motion.span
@@ -127,8 +127,8 @@ export default function Banner() {
             >
               <span className="inline-flex md:flex md:flex-col lg:inline-flex md:items-center lg:items-baseline items-baseline md:w-[40rem] lg:w-[47rem]">
                 <div className=''>
-                  <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}&nbsp;</span>
-                  <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}&nbsp;</span>
+                  <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}</span>
+                  <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}</span>
                 </div>
                 <span className={`text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
                   style={{
