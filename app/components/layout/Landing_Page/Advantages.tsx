@@ -224,7 +224,7 @@ export default function Advantages() {
             <div className='interFont text-[1.125rem] text-primary-text-50 font-normal leading-[1.8em] px-0 lg:px-[12.5rem] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
           </div>
           <div className='w-full lg:w-max flex flex-col items-center justify-center gap-[2.5rem] px-0 lg:px-[6.25rem]'>
-            <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
+            <div className='w-full lg:w-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-[2.5rem] md:gap-[2.75rem]'>
               {LandingPageData.advantages.featuredWorks_list.slice(0, 2).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div
@@ -249,7 +249,7 @@ export default function Advantages() {
                 </div>
               ))}
             </div>
-            <div className='w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]'>
+            <div className='w-full lg:w-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-[2.5rem] md:gap-[2.75rem]'>
               {LandingPageData.advantages.featuredWorks_list.slice(2, 4).map((item, index) => (
                 <div key={index} className='w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0'>
                   <div

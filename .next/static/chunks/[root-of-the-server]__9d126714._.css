@@ -480,14 +480,6 @@
     top: 3%;
   }
 
-  .top-\[3\.\.5px\] {
-    top: 3. .5px;
-  }
-
-  .top-\[3\.5px\] {
-    top: 3.5px;
-  }
-
   .top-\[5\%\] {
     top: 5%;
   }
@@ -2822,10 +2814,6 @@
     padding-bottom: 2rem;
   }
 
-  .pb-\[3\.125rem\] {
-    padding-bottom: 3.125rem;
-  }
-
   .pb-\[4\.54rem\] {
     padding-bottom: 4.54rem;
   }
@@ -3725,24 +3713,6 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:top-\[7px\]:is(:where(.group):hover *) {
-      top: 7px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:top-\[9px\]:is(:where(.group):hover *) {
-      top: 9px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:right-\[9px\]:is(:where(.group):hover *) {
-      right: 9px;
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:left-\[15\%\]:is(:where(.group):hover *) {
       left: 15%;
     }
@@ -3808,44 +3778,8 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:p-\[11px_1\.75remx_15px_16px\]:is(:where(.group):hover *) {
-      padding: 11px 1.75remx 15px 16px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:p-\[11px_1\.rem_15px_16px\]:is(:where(.group):hover *) {
-      padding: 11px 1. rem 15px 16px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:p-\[11px_1rem_15px_16px\]:is(:where(.group):hover *) {
-      padding: 11px 1rem 15px 16px;
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:p-\[11px_16px_15px_16px\]:is(:where(.group):hover *) {
       padding: 11px 16px 15px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:p-\[11px_16px_\]:is(:where(.group):hover *) {
-      padding: 11px 16px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:p-\[11px_px_15px_16px\]:is(:where(.group):hover *) {
-      padding: 11px px 15px 16px;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:p-\[11px_x_15px_16px\]:is(:where(.group):hover *) {
-      padding: 11px x 15px 16px;
     }
   }
 

@@ -3254,7 +3254,7 @@ function Advantages() {
                         className: "w-full lg:w-max flex flex-col items-center justify-center gap-[2.5rem] px-0 lg:px-[6.25rem]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]",
+                                className: "w-full lg:w-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-[2.5rem] md:gap-[2.75rem]",
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LandingPageData"].advantages.featuredWorks_list.slice(0, 2).map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0",
                                         children: [
@@ -3331,7 +3331,7 @@ function Advantages() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-full lg:w-max flex flex-col lg:flex-row items-center justify-center gap-[2.5rem] md:gap-[2.75rem]",
+                                className: "w-full lg:w-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-[2.5rem] md:gap-[2.75rem]",
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LandingPageData"].advantages.featuredWorks_list.slice(2, 4).map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full flex flex-col items-center justify-center gap-[1.25rem] py-0 lg:py-[2.5rem] pb-[1.25rem] lg:pb-0",
                                         children: [
