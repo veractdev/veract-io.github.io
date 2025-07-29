@@ -383,6 +383,14 @@
     top: 3%;
   }
 
+  .top-\[3\.\.5px\] {
+    top: 3. .5px;
+  }
+
+  .top-\[3\.5px\] {
+    top: 3.5px;
+  }
+
   .top-\[5\%\] {
     top: 5%;
   }
@@ -683,10 +691,6 @@
     z-index: 999;
   }
 
-  .m-\[0rem_2\.75rem_4rem_2\.75rem\] {
-    margin: 0 2.75rem 4rem;
-  }
-
   .mx-0 {
     margin-inline: calc(var(--spacing) * 0);
   }
@@ -813,10 +817,6 @@
 
   .mr-\[4\.125rem\] {
     margin-right: 4.125rem;
-  }
-
-  .mr-\[7px\] {
-    margin-right: 7px;
   }
 
   .mb-\[0\.625rem\] {
@@ -2681,8 +2681,8 @@
     padding-right: 3.25rem;
   }
 
-  .pr-\[5px\] {
-    padding-right: 5px;
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
   }
 
   .pb-\[0\.5rem\] {
@@ -3334,10 +3334,6 @@
     color: #fff;
   }
 
-  .text-\[0\.62\] {
-    color: .62;
-  }
-
   .text-black {
     color: var(--color-black);
   }
@@ -3456,16 +3452,6 @@
 
   .shadow-\[0_4px_30px_rgba\(0\,0\,0\,0\.1\)\] {
     --tw-shadow: 0 4px 30px var(--tw-shadow-color, #0000001a);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-
-  .shadow-\[0px_0px\] {
-    --tw-shadow: 0px 0px var(--tw-shadow-color, currentcolor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-
-  .shadow-\[0px_0px_0px\] {
-    --tw-shadow: 0px 0px 0px var(--tw-shadow-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
@@ -3636,6 +3622,30 @@
   }
 
   @media (hover: hover) {
+    .group-hover\:top-\[5px\]:is(:where(.group):hover *) {
+      top: 5px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:top-\[7px\]:is(:where(.group):hover *) {
+      top: 7px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:top-\[9px\]:is(:where(.group):hover *) {
+      top: 9px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:right-\[9px\]:is(:where(.group):hover *) {
+      right: 9px;
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:left-\[15\%\]:is(:where(.group):hover *) {
       left: 15%;
     }
@@ -3691,6 +3701,54 @@
   @media (hover: hover) {
     .group-hover\:bg-\[url\(\'https\:\/\/veract-website-assets\.s3\.ap-south-1\.amazonaws\.com\/Images\/LandingPage\/Hover\.png\'\)\]:is(:where(.group):hover *) {
       background-image: url("https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png");
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_1\.75rem_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px 1.75rem 15px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_1\.75remx_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px 1.75remx 15px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_1\.rem_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px 1. rem 15px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_1rem_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px 1rem 15px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_16px_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px 16px 15px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_16px_\]:is(:where(.group):hover *) {
+      padding: 11px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_px_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px px 15px 16px;
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:p-\[11px_x_15px_16px\]:is(:where(.group):hover *) {
+      padding: 11px x 15px 16px;
     }
   }
 
@@ -3949,20 +4007,8 @@
   }
 
   @media (width >= 768px) {
-    .md\:m-\[6\.25rem_4\.375rem\] {
-      margin: 6.25rem 4.375rem;
-    }
-  }
-
-  @media (width >= 768px) {
     .md\:mt-0 {
       margin-top: calc(var(--spacing) * 0);
-    }
-  }
-
-  @media (width >= 768px) {
-    .md\:mt-\[-1\.938rem\] {
-      margin-top: -1.938rem;
     }
   }
 
@@ -4793,6 +4839,12 @@
   }
 
   @media (width >= 768px) {
+    .md\:pb-\[3\.125rem\] {
+      padding-bottom: 3.125rem;
+    }
+  }
+
+  @media (width >= 768px) {
     .md\:pb-\[5\.125rem\] {
       padding-bottom: 5.125rem;
     }
@@ -5229,12 +5281,6 @@
   @media (width >= 1280px) {
     .lg\:my-\[0\.50rem\] {
       margin-block: .5rem;
-    }
-  }
-
-  @media (width >= 1280px) {
-    .lg\:mt-\[-4\.938rem\] {
-      margin-top: -4.938rem;
     }
   }
 

@@ -138,15 +138,16 @@ export default function Navbar() {
                                     }}
                                 >
                                     {item.id === 3 && (
-                                        <img src={`/Images/LandingPage/Banner/Join.svg`} alt="star icon" className="absolute top-[7px] right-[9px]" />
+                                        <img src={`/Images/LandingPage/Banner/Join.svg`} alt="star icon" className={`absolute top-[7px] ${navbarState !== item.id ? 'group-hover:top-[5px]' : ''} right-[9px] transition-all duration-300 ease-in-out`} />
                                     )}
                                     <div
-                                        className={`syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem]' : 'p-[0.875rem_1rem]'} text-[1rem] leading-[1em] 
+                                        className={`syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem] ' : 'p-[0.875rem_1rem] '} text-[1rem] leading-[1em] 
+                                            ${item.status == 'active' && navbarState !== item.id ? `${item.id == 3 ? 'group-hover:p-[11px_1.75rem_15px_16px]' : 'group-hover:p-[11px_16px_15px_16px]'}` : ''}
                                             tracking-[-0.05em] text-nowrap ${navbarState === item.id && item.status == 'active'
                                                 ? "text-primary-blue"
                                                 : "text-white"
                                             } font-semibold ${item.status == 'inactive' ? "opacity-50 pointer-events-none" : "cursor-pointer group-hover:bg-[#FFFFFF1A] group-hover:text-primary-blue"}  
-                                            transition-all duration-300 rounded-[1.625rem] 
+                                            transition-all duration-300 ease-in-out rounded-[1.625rem] 
                                             `}
                                     >
                                         {item.name}
