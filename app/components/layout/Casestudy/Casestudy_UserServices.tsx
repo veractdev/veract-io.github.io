@@ -142,7 +142,7 @@ export default function UserServices({
     loaded && (
       <div className="flex justify-center flex-col items-center syneFont relative z-200 bg-primary-text py-[4.5rem] md:py-[6.25rem] lg:py-[0rem] border-t border-primary-text md:border-t-0 lg:mt-[8.563rem]">
         <div className="flex lg:flex-col md:flex-col flex-col-reverse justify-center items-center z-1">
-          <div className="text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
+          <div className="uppercase text-[#868586] lg:text-[1rem] md:text-[1rem] text-[0.875rem] leading-[1.4em] md:mb-[0.625rem] mb-[2.5rem] geistFont">
             {user_services_props.title}
           </div>
           <div
