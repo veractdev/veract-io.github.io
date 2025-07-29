@@ -307,8 +307,8 @@ const caseStudyData = {
             ],
             // "",
             challenge_description: "BOTTLENECK",
-            challenge_solution: "Designing an accessibility system that integrates with websites to support users—while maintaining performance, compliance, and customization.",
-            challenge_solution_highlighted: "",
+            challenge_solution: "Designing an accessibility system that integrates with websites to support users—",
+            challenge_solution_highlighted: "while maintaining performance, compliance, and customization.",
             solution_list: [
                 {
                     id: 1,
@@ -1455,7 +1455,9 @@ function Navbar() {
             if (!pathname) return;
             if (pathname === "/") {
                 setNavbarState(1);
-            } else if (pathname === "/case-studies") {
+            } else if (pathname === "/case-studies" || Object.keys(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["caseStudyData"]).some({
+                "Navbar.useEffect": (key)=>pathname === `/case-studies/${key}`
+            }["Navbar.useEffect"])) {
                 setNavbarState(4);
             } else if (pathname === "/agentic-ai") {
                 setNavbarState(3);
@@ -1539,7 +1541,7 @@ function Navbar() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 104,
+                        lineNumber: 106,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1549,40 +1551,43 @@ function Navbar() {
                                     className: `${isHamburgerMenu ? "" : " max-sm:hidden max-md:hidden max-lg:hidden"} relative flex items-center justify-center group`,
                                     onClick: ()=>{
                                         setNavbarState(item.id);
-                                        router.push(item.link);
+                                        if (item.status == 'active') {
+                                            router.push(item.link);
+                                        }
                                     },
                                     children: [
                                         item.id === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             src: `/Images/LandingPage/Banner/Join.svg`,
                                             alt: "star icon",
-                                            className: "absolute top-[7px] right-[9px]"
+                                            className: `absolute top-[7px] ${navbarState !== item.id ? 'group-hover:top-[5px]' : ''} right-[9px] transition-all duration-300 ease-in-out`
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 141,
                                             columnNumber: 41
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem]' : 'p-[0.875rem_1rem]'} text-[1rem] leading-[1em] 
+                                            className: `syneFont ${item.id === 3 ? 'p-[0.875rem_1.75rem_0.875rem_1rem] ' : 'p-[0.875rem_1rem] '} text-[1rem] leading-[1em] 
+                                            ${item.status == 'active' && navbarState !== item.id ? `${item.id == 3 ? 'group-hover:p-[11px_1.75rem_15px_16px]' : 'group-hover:p-[11px_16px_15px_16px]'}` : ''}
                                             tracking-[-0.05em] text-nowrap ${navbarState === item.id && item.status == 'active' ? "text-primary-blue" : "text-white"} font-semibold ${item.status == 'inactive' ? "opacity-50 pointer-events-none" : "cursor-pointer group-hover:bg-[#FFFFFF1A] group-hover:text-primary-blue"}  
-                                            transition-all duration-300 rounded-[1.625rem] 
+                                            transition-all duration-300 ease-in-out rounded-[1.625rem] 
                                             `,
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 143,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `absolute bottom-0 h-[0.125rem] rounded-[0.688rem] w-0 ${navbarState === item.id && item.status == 'active' ? "w-[calc(100%-3.563rem)]" : "w-0"} group-hover:w-[calc(100%-3.563rem)] ${item.status == 'active' ? 'bg-primary-blue' : ''} transition-all duration-300`
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 155,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, item.id, true, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 127,
                                     columnNumber: 33
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1593,13 +1598,13 @@ function Navbar() {
                                 children: "Talk to us"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 158,
+                                lineNumber: 163,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 121,
+                        lineNumber: 123,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1614,48 +1619,48 @@ function Navbar() {
                                     className: `w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute rotate-45" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 190,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `${isHamburgerMenu ? "hidden" : ""} w-[.75rem] h-[0.125rem] bg-[#FFFFFF]`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 194,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `w-[1.375rem] h-[0.125rem] bg-[#FFFFFF] transition-all duration-300 ease-in ${isHamburgerMenu ? "absolute -rotate-45" : ""}`
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 193,
+                                    lineNumber: 198,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/layout/Navbar.tsx",
-                            lineNumber: 181,
+                            lineNumber: 186,
                             columnNumber: 29
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 171,
+                        lineNumber: 176,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                lineNumber: 94,
+                lineNumber: 96,
                 columnNumber: 21
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/components/layout/Navbar.tsx",
-            lineNumber: 85,
+            lineNumber: 87,
             columnNumber: 17
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/layout/Navbar.tsx",
-        lineNumber: 83,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }
@@ -2332,7 +2337,7 @@ function Casestudy_ShowReel({ showreel_props }) {
                     loading: "lazy",
                     src: `${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$custom_data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["baseUrl"]}/Images/case-studies/Overlay.png`,
                     alt: "overlay",
-                    className: "absolute top-[-10.938rem] h-[11rem] z-[100]"
+                    className: "w-full absolute top-[-10.938rem] h-[11rem] z-[100]"
                 }, void 0, false, {
                     fileName: "[project]/app/components/layout/Casestudy/Casestudy_ShowReel.tsx",
                     lineNumber: 74,
@@ -2571,7 +2576,7 @@ function Casestudy_Key_Features({ key_features_props }) {
                     delay: 0.15
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont",
+                    className: "uppercase text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont",
                     children: key_features_props.title
                 }, void 0, false, {
                     fileName: "[project]/app/components/layout/Casestudy/Casestudy_Key_Features.tsx",

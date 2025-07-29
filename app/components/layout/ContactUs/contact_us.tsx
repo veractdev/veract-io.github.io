@@ -4,6 +4,7 @@ import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useLenis } from "lenis/react";
 import { baseUrl } from "@/lib/custom_data";
+import Footer from "../Landing_Page/Footer";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -180,8 +181,8 @@ export default function Contact_Us() {
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
                     className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
-                        ? "border-red-500"
-                        : "border-white/15"
+                      ? "border-red-500"
+                      : "border-white/15"
                       } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.firstName && touchedFields.firstName
                         ? "focus:ring-red-500"
                         : "focus:ring-[#4287F5]"
@@ -230,8 +231,8 @@ export default function Contact_Us() {
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
                     className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.email && touchedFields.email
-                        ? "border-red-500"
-                        : "border-white/15"
+                      ? "border-red-500"
+                      : "border-white/15"
                       } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.email && touchedFields.email
                         ? "focus:ring-red-500"
                         : "focus:ring-[#4287F5]"
@@ -310,14 +311,14 @@ export default function Contact_Us() {
               {/* Submit Button */}
               <div
                 className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
-                    ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
-                    : isLoading
-                      ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                      : submitted
-                        ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
-                        : submissionFailed
-                          ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
-                          : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                  ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
+                  : isLoading
+                    ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                    : submitted
+                      ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
+                      : submissionFailed
+                        ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
+                        : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                   }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
@@ -415,6 +416,7 @@ export default function Contact_Us() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   );

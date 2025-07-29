@@ -6,6 +6,7 @@ import { baseUrl, caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
+import Footer from '../components/layout/Landing_Page/Footer';
 interface CaseStudyCard {
   name: string;
   routeTo: string;
@@ -99,7 +100,7 @@ export default function Page() {
   return (
     loaded && (
       <LenisProvider>
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <Navbar />
           <div className="w-full flex flex-col overflow-y-scroll bg-primary-text select-none">
             <div className="w-full h-[100vh] md:h-[100vh] lg:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
@@ -179,7 +180,7 @@ export default function Page() {
                 </div>
               )}
             </div>
-            <div className={`flex flex-row flex-wrap items-start justify-center ${activeTile != 'All' ? 'lg:justify-start' : 'lg:justify-center'} md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-[3.125rem]`}>
+            <div className={`flex flex-row flex-wrap items-start justify-center ${activeTile != 'All' ? 'lg:justify-start' : 'lg:justify-center'} md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-0 md:pb-[3.125rem]`}>
               {caseStudyCards.map((item: CaseStudyCard, index: number) => (
                 <motion.div
                   key={index}
@@ -230,6 +231,7 @@ export default function Page() {
               ))}
             </div>
           </div>
+          <Footer />
         </div>
       </LenisProvider>
     )
