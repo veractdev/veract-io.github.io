@@ -325,7 +325,7 @@ export default function Banner() {
         </div>
       </div>
       <motion.div
-        className='w-full absolute bottom-[1rem] md:bottom-[2rem]'
+        className='w-full absolute bottom-[5rem] md:bottom-[2rem]'
         initial={{ x: 100, y: 15, opacity: 0 }}
         animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
