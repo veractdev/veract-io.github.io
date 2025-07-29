@@ -1,5 +1,5 @@
 "use client";
-import { navItems } from "@/lib/custom_data";
+import { caseStudyData, navItems } from "@/lib/custom_data";
 import { getNavbarState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
@@ -22,7 +22,9 @@ export default function Navbar() {
         if (!pathname) return;
         if (pathname === "/") {
             setNavbarState(1);
-        } else if (pathname === "/case-studies") {
+        }
+        /** if any  key value in caseStudyData is equal to pathname, set the navbar state to 4 */
+        else if (pathname === "/case-studies" || Object.keys(caseStudyData).some(key => pathname === `/case-studies/${key}`)) {
             setNavbarState(4);
         } else if (pathname === "/agentic-ai") {
             setNavbarState(3);
@@ -130,7 +132,9 @@ export default function Navbar() {
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
                                         setNavbarState(item.id);
-                                        router.push(item.link);
+                                        if (item.status == 'active') {
+                                            router.push(item.link);
+                                        }
                                     }}
                                 >
                                     {item.id === 3 && (
