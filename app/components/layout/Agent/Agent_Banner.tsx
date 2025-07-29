@@ -34,7 +34,7 @@ export default function AgentBanner() {
                 {AgentPageData.banner.about}
               </div>
             </div>
-            <div className="text-[1.625rem] md:text-[2.25rem] lg:text-[3.125rem] text-wrap w-[100%] md:w-[60%] lg:w-[45%] text-center font-medium tracking-[-0.01em] leading-[1.2em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]">
+            <div className="interFont text-[1.625rem] md:text-[2.25rem] lg:text-[3.125rem] text-wrap w-[100%] md:w-[60%] lg:w-[45%] text-center font-medium tracking-[-0.01em] leading-[1.2em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]">
               {AgentPageData.banner.title}
             </div>
             <div className="text-[0.875rem] md:text-[1rem] lg:text-[1rem] text-wrap w-[100%] md:w-[50%] lg:w-[30%] text-center text-white/70 font-normal tracking-[-0.02em] leading-[1.6em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]">
