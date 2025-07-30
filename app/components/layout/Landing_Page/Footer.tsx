@@ -197,6 +197,15 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                           : "opacity-50 pointer-events-none"
                           }`}
                         onClick={() => {
+                          console.log(link.link);
+                          console.log(window.location.pathname,'dojmk');
+                          if(window.location.pathname === "/") {
+                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
+                          }else if(window.location.pathname !== "/" && link.title === 'Services') {
+                            router.push("/")
+                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
+                            sessionStorage.setItem("services", "true");
+                          }
                           if (
                             link.status == "active" &&
                             !link.link.startsWith("scroll-to-section")
