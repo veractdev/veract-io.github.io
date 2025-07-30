@@ -5,10 +5,10 @@
   "/page": "/",
   "/blogs/[slug]/page": "/blogs/[slug]",
   "/company/[slug]/page": "/company/[slug]",
-  "/services/[slug]/page": "/services/[slug]",
   "/industries/[slug]/page": "/industries/[slug]",
+  "/services/[slug]/page": "/services/[slug]",
   "/agentic-ai/page": "/agentic-ai",
-  "/case-studies/page": "/case-studies",
   "/contact-us/page": "/contact-us",
+  "/case-studies/page": "/case-studies",
   "/case-studies/[slug]/page": "/case-studies/[slug]"
 }

@@ -37,7 +37,7 @@ export default function Page() {
     const savedScrollPosition = sessionStorage.getItem("footer-landing-page");
     if (savedScrollPosition) {
       setTimeout(() => {
-        // Restore the saved scroll position
+        // Restore the saved scroll positio
         const scrollPosition = parseInt(savedScrollPosition);
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
