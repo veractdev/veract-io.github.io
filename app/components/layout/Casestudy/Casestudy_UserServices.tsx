@@ -212,14 +212,14 @@ export default function UserServices({
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>
               ))}
             </div>
             {/* Second row */}
-            <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] items-center justify-center">
+            <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[1.25rem] items-center justify-center">
               {user_services_props.service_list.slice(2, 4).map((card, idx) => (
                 <div
                   key={card.title}
@@ -269,7 +269,7 @@ export default function UserServices({
                     {card.title}
                   </div>
                   {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[0.938rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30 ">
+                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[1.25rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30 ">
                       {card.description}
                     </div>
                   ) : (
@@ -277,7 +277,7 @@ export default function UserServices({
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>

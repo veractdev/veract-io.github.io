@@ -17,6 +17,11 @@
 
 # production
 /build
+<<<<<<< HEAD
+=======
+.next
+.next/
+>>>>>>> be4476c9e4204f6104d11b149a010e4578184211
 /.next
 
 # misc

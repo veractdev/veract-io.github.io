@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useLenis } from "lenis/react";
@@ -18,6 +18,7 @@ export default function Contact_Us() {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submissionFailed, setSubmissionFailed] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   // Touched fields for onBlur tracking
   const [touchedFields, setTouchedFields] = useState({
@@ -156,6 +157,20 @@ export default function Contact_Us() {
       lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
     }
   }, [loaded, lenis]);
+
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem("footer-contact-us");
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        // Restore the saved scroll position
+        const scrollPosition = parseInt(savedScrollPosition);
+        if (!isNaN(scrollPosition)) {
+          window.scrollTo(0, scrollPosition);
+        }
+        sessionStorage.removeItem("footer-contact-us");
+      }, 100);
+    }
+  }, []);
 
   return (
     loaded && (
@@ -416,7 +431,7 @@ export default function Contact_Us() {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer ref={footerRef} sessionId={'footer-contact-us'} />
       </div>
     )
   );
