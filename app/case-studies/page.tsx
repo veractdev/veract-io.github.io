@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LenisProvider from '../LenisProvider'
 import { useRouter } from 'next/navigation';
 import { baseUrl, caseStudiesHomePageData } from '@/lib/custom_data';
@@ -25,6 +25,7 @@ export default function Page() {
   const [isClient, setIsClient] = useState(false);
   const [showAllTitles, setShowAllTitles] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
   // const { caseStudyState, setCaseStudyState } = getCaseStudyState();
 
   // Initialize with all cards when component mounts
@@ -38,7 +39,7 @@ export default function Page() {
 
       if (isMobileDevice || isTabletDevice) {
         setVideo(`${baseUrl}/Images/case-studies/List/our_projects_mob_tab.mp4`);
-      } else {  
+      } else {
         setVideo(`${baseUrl}/Images/case-studies/List/our_projects_hero_video_web_view.mp4`);
       }
     };
@@ -96,6 +97,14 @@ export default function Page() {
     return caseStudiesHomePageData.caseStudiesTitleList;
   }
 
+  useEffect(() => {
+    if (sessionStorage.getItem("footer-case-studies") === "true") {
+      setTimeout(() => {
+        footerRef.current?.scrollIntoView({ behavior: "instant" });
+        sessionStorage.clear();
+      }, 100);
+    }
+  }, []);
 
   return (
     loaded && (
@@ -231,7 +240,7 @@ export default function Page() {
               ))}
             </div>
           </div>
-          <Footer />
+          <Footer ref={footerRef} sessionId={'footer-case-studies'} />
         </div>
       </LenisProvider>
     )

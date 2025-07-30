@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/layout/Navbar";
 import UserServices from "../../components/layout/Casestudy/Casestudy_UserServices";
 import Casestudy_Banner from "../../components/layout/Casestudy/Casestudy_Banner";
@@ -24,17 +24,31 @@ export default function Page({ params }: Props) {
   const { slug } = React.use(params);
   const data = caseStudyData[slug as keyof typeof caseStudyData];
   const [loaded, setLoaded] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setLoaded(true);
     setTimeout(() => {
-      window.lenis?.scrollTo(0);
+      if (sessionStorage.getItem("footer-case-studies-slug") === "true") {
+        return;
+      } else {
+        window.lenis?.scrollTo(0);
+      }
     }, 500);
   }, [loaded]);
 
   if (!isValidSlug(slug)) {
     return notFound();
   }
+
+  useEffect(() => {
+    if (sessionStorage.getItem("footer-case-studies-slug") === "true") {
+      setTimeout(() => {
+        footerRef.current?.scrollIntoView({ behavior: "instant" });
+        sessionStorage.clear();
+      }, 700);
+    }
+  }, []);
 
   return (
     <LenisProvider>
@@ -49,7 +63,7 @@ export default function Page({ params }: Props) {
           <Casestudy_Key_Features key_features_props={data.key_features} />
           {/* <Casestudy_Testimonial testimonial_props={data.testimonials} /> */}
           <FAQ faq_props={data.faq} />
-          <Footer />
+          <Footer ref={footerRef} sessionId={'footer-case-studies-slug'} />
         </div>
       )}
     </LenisProvider>

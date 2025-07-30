@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { LandingPageData } from "@/lib/custom_data";
 import { useRouter } from "next/navigation";
 
-export default function Footer() {
+const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function Footer(props, ref) {
   const details = LandingPageData.footer;
   const router = useRouter();
   const svgRef = useRef<SVGSVGElement>(null);
@@ -52,7 +52,7 @@ export default function Footer() {
 
   return (
     loader && (
-      <div className="w-full flex flex-col items-center justify-center relative bg-primary-text scrollSnap">
+      <div ref={ref} className="w-full flex flex-col items-center justify-center relative bg-primary-text scrollSnap">
         <svg
           ref={svgRef}
           viewBox="0 20.34 156.69 33.59"
@@ -192,16 +192,16 @@ export default function Footer() {
                     {details.quickLinks.company.links.map((link) => (
                       <div
                         key={link.id}
-                        className={`openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${
-                          link.status == "active"
-                            ? "cursor-pointer"
-                            : "opacity-50 pointer-events-none"
-                        }`}
+                        className={`openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == "active"
+                          ? "cursor-pointer"
+                          : "opacity-50 pointer-events-none"
+                          }`}
                         onClick={() => {
                           if (
                             link.status == "active" &&
                             !link.link.startsWith("scroll-to-section")
                           ) {
+                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
                             router.push(link.link);
                           }
                           if (link.link.startsWith("scroll-to-section")) {
@@ -227,11 +227,10 @@ export default function Footer() {
                     {details.quickLinks.services.links.map((link) => (
                       <div
                         key={link.id}
-                        className={`openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${
-                          link.status == "active"
-                            ? "cursor-pointer"
-                            : "opacity-50 pointer-events-none"
-                        }`}
+                        className={`openSansFont text-[14px] md:text-[1rem] lg:text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] ${link.status == "active"
+                          ? "cursor-pointer"
+                          : "opacity-50 pointer-events-none"
+                          }`}
                         onClick={() => {
                           if (link.status == "active") {
                             router.push(link.link);
@@ -292,49 +291,49 @@ export default function Footer() {
               </div>
             </div>
             <div className="md:hidden flex flex-col items-center justify-center gap-[0.625rem]">
-                <div className="flex flex-row items-center justify-center gap-[0.625rem]">
-                  {details.socialMediaIcons.slice(0, 2).map((icon) => (
-                    <a
+              <div className="flex flex-row items-center justify-center gap-[0.625rem]">
+                {details.socialMediaIcons.slice(0, 2).map((icon) => (
+                  <a
+                    key={icon.id}
+                    href={icon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
                       key={icon.id}
-                      href={icon.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      className="w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer"
                     >
-                      <div
-                        key={icon.id}
-                        className="w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer"
-                      >
-                        <img
-                          loading="lazy"
-                          src={icon.image}
-                          alt="social-media icon"
-                        />
-                      </div>
-                    </a>
-                  ))}
-                </div>
-                <div className="flex flex-row items-center justify-center gap-[0.625rem]">
-                  {details.socialMediaIcons.slice(2, 4).map((icon) => (
-                    <a
-                      key={icon.id}
-                      href={icon.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div
-                        key={icon.id}
-                        className="w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer"
-                      >
-                        <img
-                          loading="lazy"
-                          src={icon.image}
-                          alt="social-media icon"
-                        />
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                      <img
+                        loading="lazy"
+                        src={icon.image}
+                        alt="social-media icon"
+                      />
+                    </div>
+                  </a>
+                ))}
               </div>
+              <div className="flex flex-row items-center justify-center gap-[0.625rem]">
+                {details.socialMediaIcons.slice(2, 4).map((icon) => (
+                  <a
+                    key={icon.id}
+                    href={icon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      key={icon.id}
+                      className="w-[2.5rem] h-[2.5rem] rounded-full bg-white flex items-center justify-center cursor-pointer"
+                    >
+                      <img
+                        loading="lazy"
+                        src={icon.image}
+                        alt="social-media icon"
+                      />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="md:w-[13.375rem] w-full text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20 text-center">
             <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>
@@ -344,4 +343,6 @@ export default function Footer() {
       </div>
     )
   );
-}
+});
+
+export default Footer;
