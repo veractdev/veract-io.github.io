@@ -30,6 +30,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/case-studies": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/case-studies",
+      "dataRoute": "/case-studies.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/contact-us": {
       "experimentalBypassFor": [
         {
@@ -101,37 +125,13 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/case-studies": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/case-studies",
-      "dataRoute": "/case-studies.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "21e850aa6718ffb85ec1d4edea945386",
-    "previewModeSigningKey": "b273f232da07d40e0c1012123acd8f09fc1d4dc143ea9035f77f3c69807df20b",
-    "previewModeEncryptionKey": "0235fa08c1bd4fa54c43c7420375cd4fe2f57cce099f586ba9d159d2e090a178"
+    "previewModeId": "0706e20c0864013db597e6924f6d7788",
+    "previewModeSigningKey": "c7b45a32609a58babc540a557bb8067d40976d9dc7666702e21045f25c1816de",
+    "previewModeEncryptionKey": "6e9b50e4744880a56911d3da658c5027737d8b22d3ca8397a85f8b350b0f0fe6"
   }
 }
