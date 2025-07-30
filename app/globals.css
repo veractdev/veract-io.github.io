@@ -726,3 +726,9 @@ body {
   overscroll-behavior: none !important;
   scroll-snap-type: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .react-tel-input .country-list {
+    width: 227px !important;
+  }
+}

@@ -310,7 +310,7 @@ export default function Contact_Us() {
 
               {/* Submit Button */}
               <div
-                className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
+                className={`text-nowrap mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
                   ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
                   : isLoading
                     ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"

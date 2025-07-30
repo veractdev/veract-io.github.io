@@ -7480,6 +7480,12 @@ html, body {
   overscroll-behavior: none !important;
 }
 
+@media only screen and (width <= 768px) {
+  .react-tel-input .country-list {
+    width: 227px !important;
+  }
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
