@@ -98,10 +98,15 @@ export default function Page() {
   }
 
   useEffect(() => {
-    if (sessionStorage.getItem("footer-case-studies") === "true") {
+    const savedScrollPosition = sessionStorage.getItem("footer-case-studies");
+    if (savedScrollPosition) {
       setTimeout(() => {
-        footerRef.current?.scrollIntoView({ behavior: "instant" });
-        sessionStorage.clear();
+        // Restore the saved scroll position
+        const scrollPosition = parseInt(savedScrollPosition);
+        if (!isNaN(scrollPosition)) {
+          window.scrollTo(0, scrollPosition);
+        }
+        sessionStorage.removeItem("footer-case-studies");
       }, 100);
     }
   }, []);

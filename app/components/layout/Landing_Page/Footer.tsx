@@ -52,7 +52,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
 
   return (
     loader && (
-      <div ref={ref} className="w-full flex flex-col items-center justify-center relative bg-primary-text scrollSnap">
+      <div className="w-full flex flex-col items-center justify-center relative bg-primary-text scrollSnap">
         <svg
           ref={svgRef}
           viewBox="0 20.34 156.69 33.59"
@@ -201,7 +201,10 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                             link.status == "active" &&
                             !link.link.startsWith("scroll-to-section")
                           ) {
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
+
+                            // Store current scroll position instead of just a boolean flag
+                            const currentScrollPosition = window.scrollY || window.pageYOffset;
+                            sessionStorage.setItem(props.sessionId || "scrollToFooter", currentScrollPosition.toString());
                             router.push(link.link);
                           }
                           if (link.link.startsWith("scroll-to-section")) {
@@ -335,7 +338,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
               </div>
             </div>
           </div>
-          <div className="md:w-[13.375rem] w-full text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20 text-center">
+          <div ref={ref} className="md:w-[13.375rem] w-full text-[0.75rem] text-[#8F9FA3] font-normal leading-[1.2em] tracking-[0em] flex flex-col items-center justify-center z-20 text-center">
             <div>© 2025 — Veract Consultancy Pvt. Ltd.</div>
             <div>All Rights reserved</div>
           </div>

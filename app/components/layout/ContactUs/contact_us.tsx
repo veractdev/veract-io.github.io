@@ -159,10 +159,15 @@ export default function Contact_Us() {
   }, [loaded, lenis]);
 
   useEffect(() => {
-    if (sessionStorage.getItem("footer-contact-us") === "true") {
+    const savedScrollPosition = sessionStorage.getItem("footer-contact-us");
+    if (savedScrollPosition) {
       setTimeout(() => {
-        footerRef.current?.scrollIntoView({ behavior: "instant" });
-        sessionStorage.clear();
+        // Restore the saved scroll position
+        const scrollPosition = parseInt(savedScrollPosition);
+        if (!isNaN(scrollPosition)) {
+          window.scrollTo(0, scrollPosition);
+        }
+        sessionStorage.removeItem("footer-contact-us");
       }, 100);
     }
   }, []);

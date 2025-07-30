@@ -33,10 +33,15 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    if (sessionStorage.getItem("footer-landing-page") === "true") {
+    const savedScrollPosition = sessionStorage.getItem("footer-landing-page");
+    if (savedScrollPosition) {
       setTimeout(() => {
-        footerRef.current?.scrollIntoView({ behavior: "instant" });
-        sessionStorage.clear();
+        // Restore the saved scroll position
+        const scrollPosition = parseInt(savedScrollPosition);
+        if (!isNaN(scrollPosition)) {
+          window.scrollTo(0, scrollPosition);
+        }
+        sessionStorage.removeItem("footer-landing-page");
       }, 100);
     }
   }, []);
