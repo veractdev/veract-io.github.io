@@ -43,20 +43,6 @@
       "static/chunks/808-57330275ba159558.js",
       "static/chunks/app/page-27d75c990dfc1f78.js"
     ],
-    "/industries/[slug]/layout": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/684-ed4ebe681e75dd4f.js",
-      "static/chunks/main-app-9eb2a9e2748172b1.js",
-      "static/chunks/app/industries/[slug]/layout-dd91d7efe801b1e9.js"
-    ],
-    "/industries/[slug]/page": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/684-ed4ebe681e75dd4f.js",
-      "static/chunks/main-app-9eb2a9e2748172b1.js",
-      "static/chunks/app/industries/[slug]/page-e1647e4312a38c80.js"
-    ],
     "/blogs/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
@@ -84,6 +70,20 @@
       "static/chunks/684-ed4ebe681e75dd4f.js",
       "static/chunks/main-app-9eb2a9e2748172b1.js",
       "static/chunks/app/company/[slug]/page-0fcb05d1e4a0d72e.js"
+    ],
+    "/industries/[slug]/layout": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/684-ed4ebe681e75dd4f.js",
+      "static/chunks/main-app-9eb2a9e2748172b1.js",
+      "static/chunks/app/industries/[slug]/layout-dd91d7efe801b1e9.js"
+    ],
+    "/industries/[slug]/page": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/684-ed4ebe681e75dd4f.js",
+      "static/chunks/main-app-9eb2a9e2748172b1.js",
+      "static/chunks/app/industries/[slug]/page-e1647e4312a38c80.js"
     ],
     "/services/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
