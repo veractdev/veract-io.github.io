@@ -85,11 +85,11 @@ export default function Navbar() {
         <React.Fragment>
             {loaded && (
                 <div
-                    className={`flex fixed top-0 z-[999] items-center justify-center select-none ${isMobile()
-                        ? "py-[0.625rem_0.375rem]"
+                    className={`flex fixed z-[999] items-center justify-center select-none ${isMobile()
+                        ? "top-[0.625rem] pb-[0.375rem]"
                         : `${isTablet()
-                            ? "py-[0.625rem_0.375rem]"
-                            : "py-[1.875rem_0.375rem]"
+                            ? "top-[0.625rem] pb-[0.375rem]"
+                            : "top-[1.875rem] pb-[0.375rem]"
                         }`
                         }`}
                 >
