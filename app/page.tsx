@@ -14,6 +14,7 @@ import { baseUrl } from "@/lib/custom_data";
 // import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [loader, setLoader] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
   const preloadImages = [
@@ -29,7 +30,7 @@ export default function Page() {
     });
     return () => {
       window.scrollTo(0, 0);
-    }
+    };
   }, []);
 
   useEffect(() => {
@@ -46,28 +47,40 @@ export default function Page() {
     }
   }, []);
 
+  useEffect(() => {
+    if (loader && containerRef.current && sessionStorage.getItem("services") === "true") {
+      setTimeout(() => {
+        containerRef.current?.scrollIntoView({
+          behavior: "instant",
+          block: "start",
+        });
+        sessionStorage.removeItem("services");
+      }, 100);
+    }
+  }, [loader]);
+
   return (
     <LenisProvider>
       {loader && (
         <div className="w-full flex flex-col items-center justify-center bg-primaty-text select-none  ">
           {preloadImages.map((image, index) => (
-            <link
-              key={index}
-              rel="preload"
-              as="image"
-              href={image}
-            />
+            <link key={index} rel="preload" as="image" href={image} />
           ))}
           <Navbar />
           <Banner />
           <ShowReel />
           <About_Us />
           <Advantages />
-          <Services />
+          <div
+            ref={containerRef}
+            className="w-full"
+          >
+            <Services />
+          </div>
           <We_Work_With />
           <Testimonials />
           {/* <FAQ faq_props={LandingPageData.faq} /> */}
-          <Footer ref={footerRef} sessionId={'footer-landing-page'} />
+          <Footer ref={footerRef} sessionId={"footer-landing-page"} />
         </div>
       )}
     </LenisProvider>
