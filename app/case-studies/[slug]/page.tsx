@@ -35,13 +35,6 @@ export default function Page({ params }: Props) {
         window.lenis?.scrollTo(0);
       }
     }, 500);
-  }, [loaded]);
-
-  if (!isValidSlug(slug)) {
-    return notFound();
-  }
-
-  useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("footer-case-studies-slug");
     if (savedScrollPosition) {
       setTimeout(() => {
@@ -53,7 +46,11 @@ export default function Page({ params }: Props) {
         sessionStorage.removeItem("footer-case-studies-slug");
       }, 700);
     }
-  }, []);
+  }, [loaded]);
+
+  if (!isValidSlug(slug)) {
+    return notFound();
+  }
 
   return (
     <LenisProvider>
