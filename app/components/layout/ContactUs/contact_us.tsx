@@ -36,13 +36,13 @@ export default function Contact_Us() {
   });
 
   const handleBlur = (field: keyof typeof touchedFields) => {
-    // setTouchedFields((prev) => ({ ...prev, [field]: true }));
+    setTouchedFields((prev) => ({ ...prev, [field]: true }));
     // this line is commented out for future purpose and error red are for placeholder purpose in future changes with respect to design
     switch (field) {
       case "firstName":
         setErrors((prev) => ({
           ...prev,
-          firstName: firstName.trim() === "" ? "First name is required." : "",
+          firstName: firstName.trim() === "" ? "*Required" : "",
         }));
         break;
       case "email":
@@ -50,20 +50,21 @@ export default function Contact_Us() {
           ...prev,
           email:
             email.trim() === ""
-              ? "Email is required."
+              ? "*Required"
               : !isValidEmail(email)
-                ? "Invalid email format."
+                ? "Please enter a valid mail ID"
                 : "",
         }));
         break;
-      case "mobileNumber":
+        case "mobileNumber":
         setErrors((prev) => ({
           ...prev,
           mobileNumber:
-            isOnlyCountryCode(mobileNumber, countryCode) ||
-              mobileNumber.trim() === ""
-              ? "Mobile number is required."
-              : "",
+            isOnlyCountryCode(mobileNumber, countryCode) || mobileNumber.trim() === ""
+              ? "*Required"
+              : !isValidMobileNumber(mobileNumber, countryCode)
+                ? "Please enter a valid mobile number"
+                : "",
         }));
         break;
     }
@@ -77,11 +78,20 @@ export default function Contact_Us() {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  const isValidMobileNumber = (mobile: string, countryCode: string) => {
+    const trimmed = mobile.trim();
+    const numberWithoutCountryCode = trimmed.replace(countryCode.replace("+", ""), "");
+  
+    // Example: for India, validate it's 10 digits after country code
+    return /^\d{10}$/.test(numberWithoutCountryCode);
+  };
   const formValid =
-    firstName.trim() !== "" &&
-    isValidEmail(email) &&
-    mobileNumber.trim() !== "" &&
-    !isOnlyCountryCode(mobileNumber, countryCode);
+  firstName.trim() !== "" &&
+  isValidEmail(email) &&
+  mobileNumber.trim() !== "" &&
+  !isOnlyCountryCode(mobileNumber, countryCode) &&
+  isValidMobileNumber(mobileNumber, countryCode);
+
 
   const handleSubmitContact = async () => {
     if (!formValid || isLoading) return;
@@ -185,25 +195,31 @@ export default function Contact_Us() {
             <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[1.875rem] md:p-[40px]">
               {/* First & Last Name */}
               <div className="flex flex-col md:flex-row  w-full items-center gap-[24px]">
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">First name*</div>
                   <input
                     required
                     type="text"
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setFirstName(value);
+                      if (touchedFields.firstName && value.trim() !== "") {
+                        setErrors((prev) => ({ ...prev, firstName: "" }));
+                      }
+                    }}
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
                     className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
-                      ? "border-red-500"
+                      ? "border-[#FF4040]"
                       : "border-white/15"
                       } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.firstName && touchedFields.firstName
-                        ? "focus:ring-red-500"
+                        ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
                       } transition-all duration-300 ease-in-out`}
                   />
                   {errors.firstName && touchedFields.firstName && (
-                    <p className="text-red-500 text-[12px] mt-[4px]">
+                    <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                       {errors.firstName}
                     </p>
                   )}
@@ -235,43 +251,74 @@ export default function Contact_Us() {
 
               {/* Email & Phone */}
               <div className="flex flex-col md:flex-row w-full items-center gap-[24px] mt-[30px]">
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Email*</div>
                   <input
                     required
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setEmail(value);
+                      if (touchedFields.email) {
+                        setErrors((prev) => ({
+                          ...prev,
+                          email:
+                            value.trim() === ""
+                              ? "*Required"
+                              : !isValidEmail(value)
+                                ? "Please enter a valid mail ID"
+                                : "",
+                        }));
+                      }
+                    }}
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
                     className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.email && touchedFields.email
-                      ? "border-red-500"
+                      ? "border-[#FF4040]"
                       : "border-white/15"
                       } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.email && touchedFields.email
-                        ? "focus:ring-red-500"
+                        ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
                       } transition-all duration-300 ease-in-out`}
                   />
                   {errors.email && touchedFields.email && (
-                    <p className="text-red-500 text-[12px] mt-[4px]">
+                    <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                       {errors.email}
                     </p>
                   )}
                 </div>
 
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Mobile number*</div>
                   <div
-                    className="mt-[14px] border border-white/30 relative rounded-[5px] focus-within:ring-2 focus-within:ring-[#4287F5] transition-all duration-300 ease-in-out border-solid"
-                    onBlur={() => handleBlur("mobileNumber")}
-                  >
+                      className={`mt-[14px] relative rounded-[5px] border transition-all duration-300 ease-in-out border-solid ${
+                        errors.mobileNumber && touchedFields.mobileNumber
+                          ? "border-[#FF4040] focus-within:ring-[#FF4040]"
+                          : "border-white/15 focus-within:ring-[#4287F5]"
+                      } focus-within:ring-1`}
+                      onBlur={() => handleBlur("mobileNumber")}
+                    >
                     <PhoneInput
                       country={"in"}
                       value={mobileNumber}
                       onChange={(phone: string, countryData: CountryData) => {
                         setMobileNumber(phone);
                         setCountryCode(`+${countryData.dialCode}`);
+                      
+                        if (touchedFields.mobileNumber) {
+                          setErrors((prev) => ({
+                            ...prev,
+                            mobileNumber:
+                              isOnlyCountryCode(phone, `+${countryData.dialCode}`) || phone.trim() === ""
+                                ? "*Required"
+                                : !isValidMobileNumber(phone, `+${countryData.dialCode}`)
+                                  ? "Please enter a valid mobile number"
+                                  : "",
+                          }));
+                        }
                       }}
+                      
                       inputStyle={{
                         width: "100%",
                         height: "52px",
@@ -303,7 +350,7 @@ export default function Contact_Us() {
                       dropdownClass="custom-phone-dropdown"
                     />
                     {errors.mobileNumber && touchedFields.mobileNumber && (
-                      <p className="text-red-500 text-[12px] mt-[4px]">
+                      <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                         {errors.mobileNumber}
                       </p>
                     )}
