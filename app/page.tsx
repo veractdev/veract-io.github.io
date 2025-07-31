@@ -42,7 +42,7 @@ export default function Page() {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.removeItem("footer-landing-page");
+        sessionStorage.clear()
       }, 100);
     }
   }, []);

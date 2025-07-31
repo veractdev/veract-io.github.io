@@ -167,7 +167,7 @@ export default function Contact_Us() {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.removeItem("footer-contact-us");
+        sessionStorage.clear()
       }, 100);
     }
   }, []);
