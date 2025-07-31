@@ -167,7 +167,7 @@ export default function Navbar() {
                                 className={`${isHamburgerMenu
                                     ? `${isMobile() ? "mt-[3.875rem]" : "mt-[3.125rem]"}`
                                     : "max-sm:hidden max-md:hidden max-lg:hidden"
-                                    } syneFont hover:bg-orange hover:text-white ${navbarState === 6 ? "bg-orange text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
+                                    } syneFont hover:bg-[#4285F4] hover:text-white ${navbarState === 6 ? "bg-[#4285F4] text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
                                     } text-nowrap`}
                             >
                                 Talk to us
