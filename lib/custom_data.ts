@@ -527,7 +527,7 @@ export const caseStudyData = {
 export const LandingPageData = {
   banner: {
     title_primary: "Driving Digital Transformation",
-    title_secondary: "with",
+    title_secondary: "with ",
     title_tertiary: "custom",
     typwriting_animation_list: [
       {
@@ -575,24 +575,88 @@ export const LandingPageData = {
     banner_carousel_list: [
       {
         id: 1,
-        img: `/Images/LandingPage/Banner/carousel_images/ibits_logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/anyo.webp`,
       },
       {
         id: 2,
-        img: `/Images/LandingPage/Banner/carousel_images/evo11ve_logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/bsf.webp`,
       },
       {
         id: 3,
-        img: `/Images/LandingPage/Banner/carousel_images/mako-logo (1) 1.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/DCM.webp`,
       },
       {
         id: 4,
-        img: `/Images/LandingPage/Banner/carousel_images/suyash-logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/dhanajaya.webp`,
       },
       {
         id: 5,
-        img: `/Images/LandingPage/Banner/carousel_images/anyo-logo (1) 1.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/evo11ve.webp`,
       },
+      {
+        id: 6,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/IA.webp`,
+      },
+      {
+        id: 7,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/ibits.webp`,
+      },
+      {
+        id: 8,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/incluway.webp`,
+      },
+      {
+        id: 9,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/kivi.webp`,
+      },
+      {
+        id: 10,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/mako.webp`,
+      },
+      {
+        id: 11,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/navyya.webp`,
+      },
+      {
+        id: 12,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/northernarc.webp`,
+      },
+      {
+        id: 13,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/oidlabs.webp`,
+      },
+      {
+        id: 14,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/osakai.webp`,
+      },
+      {
+        id: 15,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/rajdeep.webp`,
+      },
+      {
+        id: 16,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/suyash.webp`,
+      },
+      {
+        id: 17,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/technoweld.webp`,
+      },
+      {
+        id: 18,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/terra-brsr.webp`,
+      },
+      {
+        id: 19,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/trackie.webp`,
+      },
+      {
+        id: 20,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/vishnupressing.webp`,
+      },
+      {
+        id: 21,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/wasted.webp`,
+      }
     ],
   },
   showReel: {
