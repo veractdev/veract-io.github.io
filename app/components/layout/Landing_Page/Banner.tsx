@@ -130,7 +130,7 @@ export default function Banner() {
                   <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}</span>
                   <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}</span>
                 </div>
-                <span className={`text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
+                <span className={`ml-0 lg:-ml-[0.875rem] text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
                   style={{
                     width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}

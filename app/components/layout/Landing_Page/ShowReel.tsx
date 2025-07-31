@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { baseUrl, LandingPageData } from '@/lib/custom_data';
-import { isMobile } from '@/lib/utils';
+import { isMobile, isTablet } from '@/lib/utils';
 
 export default function ShowReel() {
   const sectionRef = useRef(null);
@@ -17,7 +17,7 @@ export default function ShowReel() {
     offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 0.80]); // full scale before scroll continues
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, isTablet() ? 0.95 : 0.80]); // full scale before scroll continues
   const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
   const springScale = useSpring(scale, {
