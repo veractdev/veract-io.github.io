@@ -334,7 +334,7 @@ export default function Banner() {
         <Marquee
           gradient={true}
           autoFill={true}
-          gradientColor="#000000CC"
+          gradientColor="transparent"
           gradientWidth={100}
           speed={30}
           direction="left"

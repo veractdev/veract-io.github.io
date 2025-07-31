@@ -18,7 +18,7 @@ export default function ShowReel() {
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, isTablet() ? 0.95 : 0.80]); // full scale before scroll continues
-  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.1]);
 
   const springScale = useSpring(scale, {
     stiffness: 100,
