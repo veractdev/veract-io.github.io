@@ -42,7 +42,12 @@ export default function Contact_Us() {
       case "firstName":
         setErrors((prev) => ({
           ...prev,
-          firstName: firstName.trim() === "" ? "*Required" : "",
+          firstName:
+            firstName.trim() === ""
+              ? "*Required"
+              : !isValidName(firstName)
+              ? "Please enter a valid name"
+              : "",
         }));
         break;
       case "email":
@@ -52,19 +57,20 @@ export default function Contact_Us() {
             email.trim() === ""
               ? "*Required"
               : !isValidEmail(email)
-                ? "Please enter a valid mail ID"
-                : "",
+              ? "Please enter a valid mail ID"
+              : "",
         }));
         break;
-        case "mobileNumber":
+      case "mobileNumber":
         setErrors((prev) => ({
           ...prev,
           mobileNumber:
-            isOnlyCountryCode(mobileNumber, countryCode) || mobileNumber.trim() === ""
+            isOnlyCountryCode(mobileNumber, countryCode) ||
+            mobileNumber.trim() === ""
               ? "*Required"
               : !isValidMobileNumber(mobileNumber, countryCode)
-                ? "Please enter a valid mobile number"
-                : "",
+              ? "Please enter a valid mobile number"
+              : "",
         }));
         break;
     }
@@ -78,20 +84,25 @@ export default function Contact_Us() {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  const isValidName = (name: string) => {
+    return /^[a-zA-Z\s]+$/.test(name);
+  };
+
   const isValidMobileNumber = (mobile: string, countryCode: string) => {
     const trimmed = mobile.trim();
-    const numberWithoutCountryCode = trimmed.replace(countryCode.replace("+", ""), "");
-  
-    // Example: for India, validate it's 10 digits after country code
+    const numberWithoutCountryCode = trimmed.replace(
+      countryCode.replace("+", ""),
+      ""
+    );
+
     return /^\d{10}$/.test(numberWithoutCountryCode);
   };
   const formValid =
-  firstName.trim() !== "" &&
-  isValidEmail(email) &&
-  mobileNumber.trim() !== "" &&
-  !isOnlyCountryCode(mobileNumber, countryCode) &&
-  isValidMobileNumber(mobileNumber, countryCode);
-
+    firstName.trim() !== "" &&
+    isValidEmail(email) &&
+    mobileNumber.trim() !== "" &&
+    !isOnlyCountryCode(mobileNumber, countryCode) &&
+    isValidMobileNumber(mobileNumber, countryCode);
 
   const handleSubmitContact = async () => {
     if (!formValid || isLoading) return;
@@ -176,7 +187,7 @@ export default function Contact_Us() {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.clear()
+        sessionStorage.clear();
       }, 100);
     }
   }, []);
@@ -204,19 +215,28 @@ export default function Contact_Us() {
                     onChange={(e) => {
                       const value = e.target.value;
                       setFirstName(value);
-                      if (touchedFields.firstName && value.trim() !== "") {
-                        setErrors((prev) => ({ ...prev, firstName: "" }));
+
+                      if (touchedFields.firstName) {
+                        if (value.trim() === "") {
+                          setErrors((prev) => ({ ...prev, firstName: "*Required" }));
+                        } else if (!isValidName(value)) {
+                          setErrors((prev) => ({ ...prev, firstName: "Please enter a valid name" }));
+                        } else {
+                          setErrors((prev) => ({ ...prev, firstName: "" }));
+                        }
                       }
                     }}
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
-                      ? "border-[#FF4040]"
-                      : "border-white/15"
-                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.firstName && touchedFields.firstName
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
+                      errors.firstName && touchedFields.firstName
+                        ? "border-[#FF4040]"
+                        : "border-white/15"
+                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
+                      errors.firstName && touchedFields.firstName
                         ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                      } transition-all duration-300 ease-in-out`}
+                    } transition-all duration-300 ease-in-out`}
                   />
                   {errors.firstName && touchedFields.firstName && (
                     <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
@@ -232,7 +252,7 @@ export default function Contact_Us() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last name"
-                    className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                    className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                   />
                 </div>
               </div>
@@ -245,7 +265,7 @@ export default function Contact_Us() {
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Company name"
-                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 />
               </div>
 
@@ -267,20 +287,22 @@ export default function Contact_Us() {
                             value.trim() === ""
                               ? "*Required"
                               : !isValidEmail(value)
-                                ? "Please enter a valid mail ID"
-                                : "",
+                              ? "Please enter a valid mail ID"
+                              : "",
                         }));
                       }
                     }}
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.email && touchedFields.email
-                      ? "border-[#FF4040]"
-                      : "border-white/15"
-                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.email && touchedFields.email
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border-[0.5px] ${
+                      errors.email && touchedFields.email
+                        ? "border-[#FF4040]"
+                        : "border-white/15"
+                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
+                      errors.email && touchedFields.email
                         ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                      } transition-all duration-300 ease-in-out`}
+                    } transition-all duration-300 ease-in-out`}
                   />
                   {errors.email && touchedFields.email && (
                     <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
@@ -292,33 +314,38 @@ export default function Contact_Us() {
                 <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Mobile number*</div>
                   <div
-                      className={`mt-[14px] relative rounded-[5px] border transition-all duration-300 ease-in-out border-solid ${
-                        errors.mobileNumber && touchedFields.mobileNumber
-                          ? "border-[#FF4040] focus-within:ring-[#FF4040]"
-                          : "border-white/15 focus-within:ring-[#4287F5]"
-                      } focus-within:ring-1`}
-                      onBlur={() => handleBlur("mobileNumber")}
-                    >
+                    className={`mt-[14px] relative rounded-[5px] transition-all duration-300 ease-in-out border-solid focus:ring-[1px] border border-white/20 ${
+                      errors.mobileNumber && touchedFields.mobileNumber
+                        ? "border-0 focus-within:ring-[#FF4040]"
+                        : " focus-within:ring-[#4287F5]"
+                    } focus-within:ring-[1px]`}
+                    onBlur={() => handleBlur("mobileNumber")}
+                  >
                     <PhoneInput
                       country={"in"}
                       value={mobileNumber}
                       onChange={(phone: string, countryData: CountryData) => {
                         setMobileNumber(phone);
                         setCountryCode(`+${countryData.dialCode}`);
-                      
+
                         if (touchedFields.mobileNumber) {
                           setErrors((prev) => ({
                             ...prev,
                             mobileNumber:
-                              isOnlyCountryCode(phone, `+${countryData.dialCode}`) || phone.trim() === ""
+                              isOnlyCountryCode(
+                                phone,
+                                `+${countryData.dialCode}`
+                              ) || phone.trim() === ""
                                 ? "*Required"
-                                : !isValidMobileNumber(phone, `+${countryData.dialCode}`)
-                                  ? "Please enter a valid mobile number"
-                                  : "",
+                                : !isValidMobileNumber(
+                                    phone,
+                                    `+${countryData.dialCode}`
+                                  )
+                                ? "Please enter a valid mobile number"
+                                : "",
                           }));
                         }
                       }}
-                      
                       inputStyle={{
                         width: "100%",
                         height: "52px",
@@ -346,6 +373,7 @@ export default function Contact_Us() {
                       }}
                       containerStyle={{
                         width: "100%",
+                        height: "52px",
                       }}
                       dropdownClass="custom-phone-dropdown"
                     />
@@ -365,22 +393,23 @@ export default function Contact_Us() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us a little about your enquiry..."
-                  className="mt-[14px] w-full h-[100px] text-[14px] font-medium rounded-[5px] p-[18px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className="mt-[14px] w-full h-[100px] text-[14px] font-medium rounded-[5px] p-[18px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <div
-                className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
-                  ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
-                  : isLoading
+                className={`mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
+                  formValid && !isLoading && !submitted && !submissionFailed
+                    ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
+                    : isLoading
                     ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                     : submitted
-                      ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
-                      : submissionFailed
-                        ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
-                        : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                  }`}
+                    ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
+                    : submissionFailed
+                    ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
+                    : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
                     handleSubmitContact();
@@ -414,7 +443,10 @@ export default function Contact_Us() {
                     24/7
                   </div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="mailto:info@veract.io"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -433,7 +465,10 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Phone</div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="tel:+919789991565"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -464,20 +499,24 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Address</div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="https://maps.app.goo.gl/raqAmwGuLW77jdLf8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[16px] font-medium text-white/50 hover:text-white"
                 >
-                  37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam, Chennai - 600 091
+                  37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam,
+                  Chennai - 600 091
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <Footer ref={footerRef} sessionId={'footer-contact-us'} />
+        <Footer ref={footerRef} sessionId={"footer-contact-us"} />
       </div>
     )
   );
