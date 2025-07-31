@@ -27,7 +27,6 @@ export default function AiAgent() {
 
   useEffect(() => {
     setLoaded(true);
-    console.log(agentVideo[0]);
   }, []);
   return (
     loaded && (
