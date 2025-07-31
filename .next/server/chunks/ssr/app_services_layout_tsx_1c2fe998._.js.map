@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Documents/veract_latest/veract-io.github.io/app/services/layout.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nexport default function ServicesLayout({ children, }: { children: React.ReactNode; }) {\r\n    return children;\r\n}"],"names":[],"mappings":";;;AAEe,SAAS,eAAe,EAAE,QAAQ,EAAmC;IAChF,OAAO;AACX","debugId":null}}]
+}
