@@ -741,3 +741,9 @@ select:-webkit-autofill {
   top: 1px !important;
   left: 3px !important;
 }
+
+@media only screen and (max-width: 768px) {
+  .react-tel-input .country-list {
+    width: 227px !important;
+  }
+}
