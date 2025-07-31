@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import AgentTitle from "./AgentTitle";
-import { isMobile } from "../../../../lib/utils";
+import { isMobile, isTablet } from "../../../../lib/utils";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function AgenticLayer() {
   const [loaded, setLoaded] = useState(false);
@@ -18,8 +19,15 @@ export default function AgenticLayer() {
         <div className="flex md:flex-row flex-col items-center justify-center lg:pb-[13.563rem] pb-[8.5rem]">
           <div className="relative lg:w-[25.063rem] lg:h-[25.063rem] md:w-[13.66906rem] md:h-[14.25881rem] w-[13.625rem] h-[13.625rem] rounded-full flex items-center justify-center overflow-visible">
             <div className="absolute agenticLayerBase lg:w-[25.063rem] lg:h-[25.063rem] md:w-[13.66906rem] md:h-[14.25881rem] w-[13.625rem] h-[13.625rem] rounded-full z-0"></div>
-            <div
-              className="absolute z-20 lg:top-[3.188rem] lg:left-[3.188rem] md:top-[1.77rem] md-[1.87rem] top-[1.25rem] lg:w-[24.625rem] lg:h-[24.625rem] md:w-[13.66906rem] md:h-[14.25881rem] w-[13.625rem] h-[13.625rem] pointer-events-none animate-agentic-layer"
+            <motion.div
+              initial={{ opacity: 0, top: isMobile() ? 0 : isTablet() ? -100 : -100, left: isMobile() ? 0 : isTablet() ? -100 : -100, scale: 0.25 }}
+              whileInView={{ opacity: 1, top: isMobile() ? '1.25rem' : isTablet() ? 28 : 51, left: isMobile() ? 0 : isTablet() ? 30 : 51, scale: 1 }}
+              transition={{
+                duration: 0.75,
+                ease: 'easeInOut'
+              }}
+              viewport={{ amount: 0.5, once: isTablet() ? false : true }} // similar to entry 5% cover 35%
+              className="absolute z-20 lg:top-[3.188rem] lg:left-[3.188rem] md:top-[1.77rem] md:left-[1.87rem] top-[1.25rem] lg:w-[24.625rem] lg:h-[24.625rem] md:w-[13.66906rem] md:h-[14.25881rem] w-[13.625rem] h-[13.625rem] pointer-events-none animate-agentic-layer"
               style={{
                 filter: "url(#filter0_g_1_1075)",
                 // mask: "url(#intersectionMask)",
@@ -28,23 +36,34 @@ export default function AgenticLayer() {
             >
               <img loading="lazy"
                 src={`/Images/agent/AgenticLayer/agentic_layer_overlay.svg`}
+                // src='https://picsum.photos/200/300'
                 alt="agenticLayer_distorted"
                 className="object-cover w-full h-full rounded-full"
               />
-            </div>
+            </motion.div>
 
-            <div className="absolute z-30 text-[#FAFAFA] syneFont lg:text-[3.75rem] md:text-[1.875rem] text-[1.625rem] text-center font-semibold lg:leading-[3.75rem] leading-[2.03863rem] lg:top-[11rem] lg:left-[8.813rem] md:top-[6.5rem] md:left-[4.5rem] top-[6rem] lg:w-[65%] md:w-[7.935rem] w-[6.875rem] animate-agentic-layer-opacity">
+            {/* animate-agentic-layer-opacity */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeIn'
+              }}
+              viewport={{ amount: 0.5 }} // similar to entry 5% cover 35%
+              className="absolute z-30 text-[#FAFAFA] syneFont lg:text-[3.75rem] md:text-[1.875rem] text-[1.625rem] text-center font-semibold lg:leading-[3.75rem] leading-[2.03863rem] lg:top-[11rem] lg:left-[8.813rem] md:top-[6.5rem] md:left-[4.5rem] top-[6rem] lg:w-[65%] md:w-[7.935rem] w-[6.875rem]"
+            >
               Ai Agent Layer
-            </div>
+            </motion.div>
 
-            <svg className="absolute w-0 h-0">
+            <svg className="absolute w-0 h-0" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
               <filter
                 id="filter0_g_1_1075"
-                x="-40"
-                y="-40"
-                width="481"
-                height="481"
-                filterUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                filterUnits="objectBoundingBox"
                 colorInterpolationFilters="sRGB"
               >
                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
@@ -70,7 +89,7 @@ export default function AgenticLayer() {
                 <feDisplacementMap
                   in2="turbulence"
                   in="shape"
-                  scale="48"
+                  scale="20"
                   xChannelSelector="R"
                   yChannelSelector="G"
                   result="displacedImage"
@@ -86,13 +105,23 @@ export default function AgenticLayer() {
               </mask> */}
             </svg>
           </div>
-          <div className="flex lg:top-[3.188rem] lg:left-[3.375rem] relative animate-agentic-layer-opacity">
+          {/* animate-agentic-layer-opacity */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeIn'
+            }}
+            viewport={{ amount: 0.5 }} // similar to entry 5% cover 35%
+            className="flex lg:top-[3.188rem] lg:left-[3.375rem] relative scale-125 md:scale-100 lg:scale-125 transform translate-y-[0.625rem] md:translate-y-0"
+          >
             <img loading="lazy"
               src={`/Images/agent/agenticLayerVeins.svg`}
               alt="agenticLayer_2"
               className="md:rotate-0 lg:w-[20.111rem] lg:h-[15.642rem] md:w-[11.16331rem] md:h-[8.68256rem]  w-[8.60706rem] h-[6.69438rem] rotate-[90deg] scale-130 md:scale-170 lg:scale-190 "
             />
-          </div>
+          </motion.div>
           <div className="relative">
             <img loading="lazy"
               src={`/Images/agent/top-blur.svg`}
@@ -105,7 +134,15 @@ export default function AgenticLayer() {
               className="absolute md:bottom-[-5.313rem] bottom-[-6.375rem] left-[-3.375rem] z-10 md:animate-agentic-layer-opacity md:opacity-100 opacity-0"
             />
 
-our            <div className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D] animate-agentic-layer-shadow"
+            <motion.div
+              initial={{ boxShadow: 'none' }}
+              whileInView={{ boxShadow: '0px 0px 12px 1px #008FFF inset' }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeIn'
+              }}
+              viewport={{ amount: 0.5 }} // similar to entry 5% cover 35%
+              className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem] flex flex-col lg:w-[25.688rem] md:w-[14.25rem]  w-[18.079rem] h-max lg:pt-[3.563rem] lg:pb-[3.125rem] pb-[2.22rem] pt-[2.51rem] rounded-[1.875rem] bg-[#0D0D0D]"
               style={isMobile() ? { boxShadow: '0px 0px 12px 1px #008FFF inset' } : {}}
             >
               <div className="flex flex-col lg:pl-[2.563rem] pl-[1.8rem] lg:pr-[4.25rem] pr-[2.99rem] lg:gap-[1.563rem] md:gap-[0.87rem]  gap-[1.1rem] lg:pb-[6.313rem] md:pb-[1.69rem] pb-[4.54rem]">
@@ -182,7 +219,7 @@ our            <div className="relative z-20 lg:top-[3.188rem] lg:left-[3.375rem
                   Supercharge Your Tools Now
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

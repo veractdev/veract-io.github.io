@@ -45,7 +45,7 @@ export default function AgentBanner() {
                 onClick={() => {
                   router.push("/contact-us");
                 }}
-                className="relative overflow-hidden w-[9.75rem] md:w-[11.625rem] h-[2.25rem] text-nowrap text-white rounded-[40px] shadow-[0px_0px_0px_1px_#FFFFFF1A_inset] cursor-pointer flex items-center justify-center bg-[#4285F4] group"
+                className="relative overflow-hidden w-[10.75rem] md:w-[11.625rem] h-[2.25rem] text-nowrap text-white rounded-[40px] shadow-[0px_0px_0px_1px_#FFFFFF1A_inset] cursor-pointer flex items-center justify-center bg-[#4285F4] group"
               >
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium text-[0.875rem] md:text-[0.875rem] lg:text-[1rem]">
