@@ -206,6 +206,8 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                             router.push("/")
                             sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
                             sessionStorage.setItem("services", "true");
+                            const currentScrollPosition = window.scrollY || window.pageYOffset;
+                            sessionStorage.setItem(props.sessionId || "scrollToFooter", currentScrollPosition.toString());
                           }
                           if (
                             link.status == "active" &&
