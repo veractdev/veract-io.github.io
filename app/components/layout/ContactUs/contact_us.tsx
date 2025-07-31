@@ -68,7 +68,7 @@ export default function Contact_Us() {
             isOnlyCountryCode(mobileNumber, countryCode) ||
             mobileNumber.trim() === ""
               ? "*Required"
-              : !isValidMobileNumber(mobileNumber, countryCode)
+              : !isValidMobileNumber(mobileNumber)
               ? "Please enter a valid mobile number"
               : "",
         }));
@@ -76,34 +76,36 @@ export default function Contact_Us() {
     }
   };
 
+  //check if the mobile number is only the country code
   const isOnlyCountryCode = (mobile: string, code: string) => {
     return mobile === code.replace("+", "");
   };
 
+  // Validate email format
   const isValidEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  // Validate name format (only letters and spaces)
   const isValidName = (name: string) => {
     return /^[a-zA-Z\s]+$/.test(name);
   };
 
-  const isValidMobileNumber = (mobile: string, countryCode: string) => {
-    const trimmed = mobile.trim();
-    const numberWithoutCountryCode = trimmed.replace(
-      countryCode.replace("+", ""),
-      ""
-    );
-
-    return /^\d{10}$/.test(numberWithoutCountryCode);
+  // Validate mobile number (not empty)
+  const isValidMobileNumber = (mobile: string) => {
+    return mobile.trim() !== "";
   };
+
+  // Check if the form is valid
+  // This function checks if all required fields are filled correctly
   const formValid =
     firstName.trim() !== "" &&
     isValidEmail(email) &&
     mobileNumber.trim() !== "" &&
     !isOnlyCountryCode(mobileNumber, countryCode) &&
-    isValidMobileNumber(mobileNumber, countryCode);
+    isValidMobileNumber(mobileNumber);
 
+  // This function handles the form submission
   const handleSubmitContact = async () => {
     if (!formValid || isLoading) return;
     setIsLoading(true);
@@ -139,6 +141,7 @@ export default function Contact_Us() {
     }
   };
 
+  // Reset form fields to initial state
   const resetFormFields = () => {
     setFirstName("");
     setLastName("");
@@ -151,10 +154,12 @@ export default function Contact_Us() {
     setErrors({ firstName: "", email: "", mobileNumber: "" });
   };
 
+  //loading component
   useEffect(() => {
     setLoaded(true);
   }, []);
 
+  // Prevent scroll on wheel event when dropdown is open
   useEffect(() => {
     function wheelHandler(e: Event) {
       if (
@@ -172,12 +177,14 @@ export default function Contact_Us() {
       document.removeEventListener("wheel", wheelHandler, { capture: true });
   }, []);
 
+  // Scroll to top on component load
   useEffect(() => {
     if (loaded && lenis) {
       lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
     }
   }, [loaded, lenis]);
 
+  // Restore scroll position from session storage
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("footer-contact-us");
     if (savedScrollPosition) {
@@ -332,18 +339,13 @@ export default function Contact_Us() {
                           setErrors((prev) => ({
                             ...prev,
                             mobileNumber:
-                              isOnlyCountryCode(
-                                phone,
-                                `+${countryData.dialCode}`
-                              ) || phone.trim() === ""
+                              phone.trim() === ""
                                 ? "*Required"
-                                : !isValidMobileNumber(
-                                    phone,
-                                    `+${countryData.dialCode}`
-                                  )
+                                : !isValidMobileNumber(phone)
                                 ? "Please enter a valid mobile number"
                                 : "",
                           }));
+
                         }
                       }}
                       inputStyle={{
