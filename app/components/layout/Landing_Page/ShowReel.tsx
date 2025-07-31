@@ -12,13 +12,12 @@ export default function ShowReel() {
 
   const [isMobileView, setIsMobileView] = useState(false);
   const [isTabView, setTabView] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 0.70]); // full scale before scroll continues
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 0.80]); // full scale before scroll continues
   const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
   const springScale = useSpring(scale, {
@@ -42,10 +41,6 @@ export default function ShowReel() {
         setIsMobileView(true);
       }
     }
-  }, [])
-
-  useEffect(() => {
-    setLoaded(true)
   }, [])
 
   useEffect(() => {
@@ -99,8 +94,7 @@ export default function ShowReel() {
   
 
   return (
-    loaded && (
-      <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[300vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
+      <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[180vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem]`}>
         <div className='flex items-center justify-center w-full'>
           <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay.png`} alt="overlay" className='w-full absolute top-[-10.938rem] h-[11rem] z-[100]' />
         </div>
@@ -231,6 +225,5 @@ export default function ShowReel() {
         )}
 
       </div>
-    )
   );
 }
