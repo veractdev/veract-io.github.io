@@ -126,7 +126,11 @@ export default function Advantages() {
                     key={card.title}
                     className={`syneFont group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'h-[11.938rem]' : (idx === 0 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
                       } md:w-full md:h-[23.5rem] w-full h-[23.5rem] overflow-clip rounded-[1.875rem]`}
-                    onClick={() => handleCardClick(idx)}
+                    onClick={() => {
+                      if (!isMobile() && !isTablet()) {
+                        handleCardClick(idx)
+                      }
+                    }}
                   >
                     {/* Animated background for mobile click */}
                     <div
@@ -152,15 +156,17 @@ export default function Advantages() {
                     >
                       {card.title}
                     </div>
-                    {(isMobile() || isTablet()) && openedArr[idx] ? (
-                      <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
-                        {card.description}
-                      </div>
-                    ) : (
-                      <div className="hidden lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
-                        Learn More →
-                      </div>
-                    )}
+                    {(isMobile() || isTablet())
+                      // && openedArr[idx] 
+                      ? (
+                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                          {card.description}
+                        </div>
+                      ) : (
+                        <div className="hidden lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                          Learn More →
+                        </div>
+                      )}
                     <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                       {card.description}
                     </div>
@@ -174,7 +180,11 @@ export default function Advantages() {
                     key={card.title}
                     className={`syneFont group services-group relative transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'h-[11.938rem]' : (idx === 1 ? 'lg:h-[23.5rem] lg:w-[66%]' : 'lg:h-[23.5rem] lg:w-[33%]')
                       } md:w-full md:h-[23.5rem] w-full h-[23.5rem] overflow-clip rounded-[1.875rem]`}
-                    onClick={() => handleCardClick(idx + 2)}
+                    onClick={() => {
+                      if (!isMobile() && !isTablet()) {
+                        handleCardClick(idx + 2)
+                      }
+                    }}
                   >
                     {/* Animated background for mobile click */}
                     <div
@@ -200,15 +210,17 @@ export default function Advantages() {
                     >
                       {card.title}
                     </div>
-                    {(isMobile() || isTablet()) && openedArr[idx + 2] ? (
-                      <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[1.25rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
-                        {card.description}
-                      </div>
-                    ) : (
-                      <div className="hidden lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
-                        Learn More →
-                      </div>
-                    )}
+                    {(isMobile() || isTablet())
+                      // && openedArr[idx + 2] 
+                      ? (
+                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white md:text-[1.25rem] font-light text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
+                          {card.description}
+                        </div>
+                      ) : (
+                        <div className="hidden lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                          Learn More →
+                        </div>
+                      )}
                     <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                       {card.description}
                     </div>
