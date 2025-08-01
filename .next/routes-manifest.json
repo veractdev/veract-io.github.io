@@ -45,14 +45,6 @@
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/industries/(?<nxtPslug>[^/]+?)(?:/)?$"
-    },
-    {
-      "page": "/services/[slug]",
-      "regex": "^/services/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/services/(?<nxtPslug>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -91,6 +83,12 @@
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
     }
   ],
   "dataRoutes": [],
