@@ -27,7 +27,7 @@
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/css/182e1fe2ab05b5c3.css",
+      "static/css/9c375358ca85027f.css",
       "static/chunks/810-1b10bb3ee3181027.js",
       "static/chunks/app/layout-71c7b65a0cc8beb1.js"
     ],
@@ -41,7 +41,7 @@
       "static/chunks/976-212d88e9d86fc408.js",
       "static/chunks/776-136049878a4dd6fa.js",
       "static/chunks/257-3ffb1f159e2fe30e.js",
-      "static/chunks/app/page-eadd7f0c23094784.js"
+      "static/chunks/app/page-855ad1fbf57f99e7.js"
     ],
     "/blogs/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -57,20 +57,6 @@
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
       "static/chunks/app/blogs/[slug]/page-b388d7d09e259b1a.js"
     ],
-    "/company/[slug]/layout": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/303-603ebaa76d6ad84f.js",
-      "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/chunks/app/company/[slug]/layout-b9284acae9f58be8.js"
-    ],
-    "/company/[slug]/page": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/303-603ebaa76d6ad84f.js",
-      "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/chunks/app/company/[slug]/page-1d6419501df58b2a.js"
-    ],
     "/industries/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
@@ -84,6 +70,20 @@
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
       "static/chunks/app/industries/[slug]/page-e9bc0142f0ec3e57.js"
+    ],
+    "/company/[slug]/layout": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/303-603ebaa76d6ad84f.js",
+      "static/chunks/main-app-c35571c6a6ddf8eb.js",
+      "static/chunks/app/company/[slug]/layout-b9284acae9f58be8.js"
+    ],
+    "/company/[slug]/page": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/303-603ebaa76d6ad84f.js",
+      "static/chunks/main-app-c35571c6a6ddf8eb.js",
+      "static/chunks/app/company/[slug]/page-1d6419501df58b2a.js"
     ],
     "/agentic-ai/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
