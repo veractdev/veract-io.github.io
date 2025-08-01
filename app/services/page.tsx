@@ -4,7 +4,6 @@ import Footer from '../components/layout/Landing_Page/Footer'
 import Navbar from '../components/layout/Navbar'
 import { useRouter } from 'next/navigation'
 import { services } from '@/lib/custom_data';
-import { motion } from 'framer-motion'
 
 export default function page() {
 
@@ -34,7 +33,8 @@ export default function page() {
 
   return (
     loaded && (
-      <div className='flex flex-col items-center justify-center bg-black'>
+      <div className='flex flex-col items-center justify-center bg-black relative'>
+        <img src="/Images/services/service_background_overlay.png" alt="overlay image" className='absolute top-0 left-0 w-full h-full object-cover' />
         <Navbar />
         <div
           className='flex flex-col items-center justify-center p-[6.5rem_1rem_3.75rem_1rem] md:p-[6.94rem_3.81rem_7.56rem_2.44rem] lg:p-[9.31rem_3rem_10.69rem_3.06rem]'
