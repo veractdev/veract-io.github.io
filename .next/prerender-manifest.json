@@ -78,30 +78,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/case-studies": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/case-studies",
-      "dataRoute": "/case-studies.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/contact-us": {
       "experimentalBypassFor": [
         {
@@ -117,6 +93,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/contact-us",
       "dataRoute": "/contact-us.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/case-studies": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/case-studies",
+      "dataRoute": "/case-studies.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "57315bb72f8a7af8094ce70360f29144",
-    "previewModeSigningKey": "3997f9861cafc4378703fd21bcc69aa1f5d74a5489f3bf21d1c788e0748a6a5a",
-    "previewModeEncryptionKey": "8e188a993749d8627e358f5a658d28c02d8ed33789fac9fcbce0c8f80772ed7e"
+    "previewModeId": "3dfa034cb15d46be098a83b6e3cd881c",
+    "previewModeSigningKey": "ac17688f4ed96424f127646d35e6e9413097bb3f430a0d4af6226be6f08d0b4c",
+    "previewModeEncryptionKey": "286fe1e91229d6ed096ffdf0c67a58cc748ac718bb5f485fa6d124a1ca11955c"
   }
 }
