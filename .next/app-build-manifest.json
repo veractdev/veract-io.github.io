@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pages": {
     "/api/contact-us/route": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -174,4 +175,7 @@
       "static/chunks/app/case-studies/[slug]/page-481bbb470ca940f0.js"
     ]
   }
+=======
+  "pages": {}
+>>>>>>> 74af40da18fa945d3dc3fc8f334c9bd42362708e
 }

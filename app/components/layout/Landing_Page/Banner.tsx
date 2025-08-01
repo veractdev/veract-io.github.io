@@ -62,8 +62,23 @@ export default function Banner() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [showBanner, setShowBanner] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      setShowBanner(scrollY < window.innerHeight); // hide after 100vh
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
+    <div className={`
+      fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black 
+      ${showBanner ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
+      `}
       style={{ transformStyle: 'preserve-3d' }}
     >
       <video
@@ -130,7 +145,7 @@ export default function Banner() {
                   <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}</span>
                   <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}</span>
                 </div>
-                <span className={`text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
+                <span className={`ml-0 lg:-ml-[0.875rem] text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem]`}
                   style={{
                     width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}
@@ -145,7 +160,7 @@ export default function Banner() {
 
 
 
-          <motion.div className="interFont text-[1rem] lg:text-[1.125rem] md:text-[1rem] font-medium w-[90%] md:w-[90%] lg:w-[39.188rem] leading-[1.5em] mx-auto pb-[1.75rem] md:pb-[1.75rem]  lg:pb-[1rem] tracking-[-0.02em] space-y-1">
+          <motion.div className="interFont text-[1rem] lg:text-[1.125rem] md:text-[1rem] font-medium w-[90%] md:w-[90%] lg:w-[39.188rem] leading-[1.5em] mx-auto pb-[1.75rem] md:pb-[1.75rem]  lg:pb-[1rem] tracking-[-0.02em] space-y-1 mt-0 lg:mt-[40px] md:mt-[40px]">
             {/* Line 1 */}
             <div className="overflow-hidden">
               <motion.span
@@ -193,7 +208,7 @@ export default function Banner() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3, ease: "easeOut" }}
-            className=' flex items-center justify-center gap-[0.938rem]  pb-[1.75rem] lg:pb-[2.688rem] md:pb-[1.75rem] '>
+            className=' flex items-center justify-center gap-[0.938rem]  pb-[1.75rem] lg:pb-[2.688rem] md:pb-[1.75rem] mt-0 lg:mt-[30px] md:mt-[30px]'>
 
             <div
               onMouseEnter={() => setHoveredTouch(true)}
@@ -325,7 +340,7 @@ export default function Banner() {
         </div>
       </div>
       <motion.div
-        className='w-full absolute bottom-[5rem] md:bottom-[2rem]'
+        className='w-full absolute bottom-[5.5vh] lg:bottom-0 md:bottom-[5vh] left-0 z-20'
         initial={{ x: 100, y: 15, opacity: 0 }}
         animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 1.5 }}
@@ -334,8 +349,8 @@ export default function Banner() {
         <Marquee
           gradient={true}
           autoFill={true}
-          gradientColor="#000000CC"
-          gradientWidth={100}
+          gradientColor="transparent"
+          gradientWidth={0}
           speed={30}
           direction="left"
           className="flex items-center "

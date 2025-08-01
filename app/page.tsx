@@ -14,7 +14,6 @@ import { baseUrl } from "@/lib/custom_data";
 // import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [loader, setLoader] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
   const preloadImages = [
@@ -42,22 +41,22 @@ export default function Page() {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.removeItem("footer-landing-page");
+        sessionStorage.clear()
       }, 100);
     }
   }, []);
 
-  useEffect(() => {
-    if (loader && containerRef.current && sessionStorage.getItem("services") === "true") {
-      setTimeout(() => {
-        containerRef.current?.scrollIntoView({
-          behavior: "instant",
-          block: "start",
-        });
-        sessionStorage.removeItem("services");
-      }, 100);
-    }
-  }, [loader]);
+  // useEffect(() => {
+  //   if (loader && containerRef.current && sessionStorage.getItem("services") === "true") {
+  //     setTimeout(() => {
+  //       containerRef.current?.scrollIntoView({
+  //         behavior: "instant",
+  //         block: "start",
+  //       });
+  //       sessionStorage.removeItem("services");
+  //     }, 100);
+  //   }
+  // }, [loader]);
 
   return (
     <LenisProvider>
@@ -71,12 +70,7 @@ export default function Page() {
           <ShowReel />
           <About_Us />
           <Advantages />
-          <div
-            ref={containerRef}
-            className="w-full"
-          >
-            <Services />
-          </div>
+          <Services />
           <We_Work_With />
           <Testimonials />
           {/* <FAQ faq_props={LandingPageData.faq} /> */}

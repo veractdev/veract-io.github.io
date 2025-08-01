@@ -38,14 +38,14 @@ export default function AgentBanner() {
               {AgentPageData.banner.title}
             </div>
             <div className="text-[0.875rem] md:text-[1rem] lg:text-[1rem] text-wrap w-[100%] md:w-[50%] lg:w-[30%] text-center text-white/70 font-normal tracking-[-0.02em] leading-[1.6em] md:mt-[0.75rem] lg:mt-[0.75rem] mt-[2.063rem]">
-            <div dangerouslySetInnerHTML={{ __html: AgentPageData.banner.subtitle}}></div>
+              <div dangerouslySetInnerHTML={{ __html: AgentPageData.banner.subtitle }}></div>
             </div>
             <div className="flex items-center justify-center md:mt-[0.875rem] lg:mt-[0.875rem] mt-[2.125rem] gap-[0.938rem]">
               <div
                 onClick={() => {
                   router.push("/contact-us");
                 }}
-                className="relative overflow-hidden w-[9.75rem] md:w-[10.625rem] lg:[10.625rem] h-[2.25rem] text-nowrap text-white rounded-[6px] cursor-pointer flex items-center justify-center bg-[#4285F4] group"
+                className="relative overflow-hidden w-[10.75rem] md:w-[11.625rem] h-[2.25rem] text-nowrap text-white rounded-[40px] shadow-[0px_0px_0px_1px_#FFFFFF1A_inset] cursor-pointer flex items-center justify-center bg-[#4285F4] group"
               >
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium text-[0.875rem] md:text-[0.875rem] lg:text-[1rem]">

@@ -23,6 +23,9 @@ export default function Navbar() {
         if (pathname === "/") {
             setNavbarState(1);
         }
+        else if (pathname === "/services") {
+            setNavbarState(2);
+        }
         /** if any  key value in caseStudyData is equal to pathname, set the navbar state to 4 */
         else if (pathname === "/case-studies" || Object.keys(caseStudyData).some(key => pathname === `/case-studies/${key}`)) {
             setNavbarState(4);
@@ -116,6 +119,7 @@ export default function Navbar() {
                                 lg:static lg:top-auto lg:left-auto
                             `}
                             onClick={() => {
+                                sessionStorage.clear()
                                 router.push("/");
                             }}
                         />
@@ -131,6 +135,7 @@ export default function Navbar() {
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
+                                        sessionStorage.clear()
                                         setNavbarState(item.id);
                                         if (item.status == 'active') {
                                             router.push(item.link);
@@ -162,12 +167,13 @@ export default function Navbar() {
                             ))}
                             <div
                                 onClick={() => {
+                                    sessionStorage.clear()
                                     router.push("/contact-us");
                                 }}
                                 className={`${isHamburgerMenu
                                     ? `${isMobile() ? "mt-[3.875rem]" : "mt-[3.125rem]"}`
                                     : "max-sm:hidden max-md:hidden max-lg:hidden"
-                                    } syneFont hover:bg-orange hover:text-white ${navbarState === 6 ? "bg-orange text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
+                                    } syneFont hover:bg-[#4285F4] hover:text-white ${navbarState === 6 ? "bg-[#4285F4] text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!isMobile() && !isTablet() ? "ml-[.625rem]" : ""
                                     } text-nowrap`}
                             >
                                 Talk to us

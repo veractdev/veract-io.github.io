@@ -28,8 +28,8 @@ export default function Casestudy_ShowReel({
         offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
     });
 
-    const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]); // full scale before scroll continues
-    const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+    const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, isTablet() ? 0.95 : 0.80]); // full scale before scroll continues
+    const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.1]);
 
     const [isHover, setHover] = useState<boolean>(false);
 

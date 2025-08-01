@@ -197,30 +197,12 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                           : "opacity-50 pointer-events-none"
                           }`}
                         onClick={() => {
-                          if(window.location.pathname === "/") {
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
-                          }else if(window.location.pathname !== "/" && link.title === 'Services') {
-                            router.push("/")
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
-                            sessionStorage.setItem("services", "true");
-                          }
                           if (
-                            link.status == "active" &&
-                            !link.link.startsWith("scroll-to-section")
+                            link.status == "active"
                           ) {
-
-                            // Store current scroll position instead of just a boolean flag
                             const currentScrollPosition = window.scrollY || window.pageYOffset;
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", currentScrollPosition.toString());
+                            sessionStorage.setItem(props.sessionId || "footer-landing-page", currentScrollPosition.toString());
                             router.push(link.link);
-                          }
-                          if (link.link.startsWith("scroll-to-section")) {
-                            window.scrollTo({
-                              top: document.getElementById(
-                                link.title.toLowerCase()
-                              )?.offsetTop,
-                              behavior: "smooth",
-                            });
                           }
                         }}
                       >

@@ -15,7 +15,7 @@ export default function Services() {
         <div id='services' className='w-full h-max bg-black overflow-x-hidden flex flex-col items-center justify-center relative z-50 py-[0_6.25rem] xl:px-[10%]'>
             <div className='w-full flex flex-col items-center justify-center gap-[0.625rem] py-[6.25rem_3.125rem] lg:py-[5.875rem_3.125rem]'>
                 <div className='uppercase syneFont text-[2.5rem] text-white font-bold -tracking-[0.05rem] leading-[3.125rem]'>Our <span className='text-primary-blue'>Service</span></div>
-                <div className='w-full lg:w-[50rem] px-[1.5rem] md:px-[4.375rem] lg:px-0 interFont text-[1.125rem] text-white font-normal leading-[1.8em] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
+                <div className='w-full lg:w-[50rem] px-[1.5rem] md:px-[4.375rem] lg:px-0 interFont text-[1.125rem] text-white font-normal leading-[1.8em] text-center'>Explore how our tailored tech services drive innovation, solve challenges, and empower businesses to thrive.</div>
             </div>
             <div className="flex flex-col w-full px-[1.5rem] md:px-[4.375rem] lg:px-[3.125rem] overflow-x-hidden">
                 {LandingPageData.services.service_list.map((feature) =>

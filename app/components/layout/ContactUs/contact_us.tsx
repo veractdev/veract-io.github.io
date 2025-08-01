@@ -36,13 +36,18 @@ export default function Contact_Us() {
   });
 
   const handleBlur = (field: keyof typeof touchedFields) => {
-    // setTouchedFields((prev) => ({ ...prev, [field]: true }));
+    setTouchedFields((prev) => ({ ...prev, [field]: true }));
     // this line is commented out for future purpose and error red are for placeholder purpose in future changes with respect to design
     switch (field) {
       case "firstName":
         setErrors((prev) => ({
           ...prev,
-          firstName: firstName.trim() === "" ? "First name is required." : "",
+          firstName:
+            firstName.trim() === ""
+              ? "*Required"
+              : !isValidName(firstName)
+              ? "Please enter a valid name"
+              : "",
         }));
         break;
       case "email":
@@ -50,10 +55,10 @@ export default function Contact_Us() {
           ...prev,
           email:
             email.trim() === ""
-              ? "Email is required."
+              ? "*Required"
               : !isValidEmail(email)
-                ? "Invalid email format."
-                : "",
+              ? "Please enter a valid mail ID"
+              : "",
         }));
         break;
       case "mobileNumber":
@@ -61,28 +66,46 @@ export default function Contact_Us() {
           ...prev,
           mobileNumber:
             isOnlyCountryCode(mobileNumber, countryCode) ||
-              mobileNumber.trim() === ""
-              ? "Mobile number is required."
+            mobileNumber.trim() === ""
+              ? "*Required"
+              : !isValidMobileNumber(mobileNumber)
+              ? "Please enter a valid mobile number"
               : "",
         }));
         break;
     }
   };
 
+  //check if the mobile number is only the country code
   const isOnlyCountryCode = (mobile: string, code: string) => {
     return mobile === code.replace("+", "");
   };
 
+  // Validate email format
   const isValidEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  // Validate name format (only letters and spaces)
+  const isValidName = (name: string) => {
+    return /^[a-zA-Z\s]+$/.test(name);
+  };
+
+  // Validate mobile number (not empty)
+  const isValidMobileNumber = (mobile: string) => {
+    return mobile.trim() !== "";
+  };
+
+  // Check if the form is valid
+  // This function checks if all required fields are filled correctly
   const formValid =
     firstName.trim() !== "" &&
     isValidEmail(email) &&
     mobileNumber.trim() !== "" &&
-    !isOnlyCountryCode(mobileNumber, countryCode);
+    !isOnlyCountryCode(mobileNumber, countryCode) &&
+    isValidMobileNumber(mobileNumber);
 
+  // This function handles the form submission
   const handleSubmitContact = async () => {
     if (!formValid || isLoading) return;
     setIsLoading(true);
@@ -119,6 +142,7 @@ export default function Contact_Us() {
     }
   };
 
+  // Reset form fields to initial state
   const resetFormFields = () => {
     setFirstName("");
     setLastName("");
@@ -131,10 +155,12 @@ export default function Contact_Us() {
     setErrors({ firstName: "", email: "", mobileNumber: "" });
   };
 
+  //loading component
   useEffect(() => {
     setLoaded(true);
   }, []);
 
+  // Prevent scroll on wheel event when dropdown is open
   useEffect(() => {
     function wheelHandler(e: Event) {
       if (
@@ -152,12 +178,14 @@ export default function Contact_Us() {
       document.removeEventListener("wheel", wheelHandler, { capture: true });
   }, []);
 
+  // Scroll to top on component load
   useEffect(() => {
     if (loaded && lenis) {
       lenis.scrollTo(0, { duration: 1, easing: (t: number) => t }); // linear scroll to top
     }
   }, [loaded, lenis]);
 
+  // Restore scroll position from session storage
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem("footer-contact-us");
     if (savedScrollPosition) {
@@ -167,7 +195,7 @@ export default function Contact_Us() {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.removeItem("footer-contact-us");
+        sessionStorage.clear();
       }, 100);
     }
   }, []);
@@ -186,25 +214,46 @@ export default function Contact_Us() {
             <div className="dmSansFont flex flex-col border border-white/8 rounded-[20px] p-[1.875rem] md:p-[40px]">
               {/* First & Last Name */}
               <div className="flex flex-col md:flex-row  w-full items-center gap-[24px]">
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">First name*</div>
                   <input
                     required
                     type="text"
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setFirstName(value);
+
+                      if (touchedFields.firstName) {
+                        if (value.trim() === "") {
+                          setErrors((prev) => ({
+                            ...prev,
+                            firstName: "*Required",
+                          }));
+                        } else if (!isValidName(value)) {
+                          setErrors((prev) => ({
+                            ...prev,
+                            firstName: "Please enter a valid name",
+                          }));
+                        } else {
+                          setErrors((prev) => ({ ...prev, firstName: "" }));
+                        }
+                      }
+                    }}
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
-                      ? "border-red-500"
-                      : "border-white/15"
-                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.firstName && touchedFields.firstName
-                        ? "focus:ring-red-500"
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
+                      errors.firstName && touchedFields.firstName
+                        ? "border-[#FF4040]"
+                        : "border-white/15"
+                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
+                      errors.firstName && touchedFields.firstName
+                        ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                      } transition-all duration-300 ease-in-out`}
+                    } transition-all duration-300 ease-in-out`}
                   />
                   {errors.firstName && touchedFields.firstName && (
-                    <p className="text-red-500 text-[12px] mt-[4px]">
+                    <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                       {errors.firstName}
                     </p>
                   )}
@@ -217,7 +266,7 @@ export default function Contact_Us() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last name"
-                    className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                    className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                   />
                 </div>
               </div>
@@ -230,41 +279,69 @@ export default function Contact_Us() {
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Company name"
-                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className="mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 />
               </div>
 
               {/* Email & Phone */}
               <div className="flex flex-col md:flex-row w-full items-center gap-[24px] mt-[30px]">
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Email*</div>
                   <input
                     required
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setEmail(value);
+                      if (touchedFields.email) {
+                        setErrors((prev) => ({
+                          ...prev,
+                          email:
+                            value.trim() === ""
+                              ? "*Required"
+                              : !isValidEmail(value)
+                              ? "Please enter a valid mail ID"
+                              : "",
+                        }));
+                      }
+                    }}
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.email && touchedFields.email
-                      ? "border-red-500"
-                      : "border-white/15"
-                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 ${errors.email && touchedFields.email
-                        ? "focus:ring-red-500"
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border-[0.5px] ${
+                      errors.email && touchedFields.email
+                        ? "border-[#FF4040]"
+                        : "border-white/15"
+                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
+                      errors.email && touchedFields.email
+                        ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                      } transition-all duration-300 ease-in-out`}
+                    } transition-all duration-300 ease-in-out`}
                   />
                   {errors.email && touchedFields.email && (
-                    <p className="text-red-500 text-[12px] mt-[4px]">
+                    <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                       {errors.email}
                     </p>
                   )}
                 </div>
 
-                <div className="w-full md:w-1/2">
+                <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Mobile number*</div>
                   <div
-                    className="mt-[14px] border border-white/30 relative rounded-[5px] focus-within:ring-2 focus-within:ring-[#4287F5] transition-all duration-300 ease-in-out border-solid"
-                    onBlur={() => handleBlur("mobileNumber")}
+                    className={`mt-[14px] relative rounded-[5px] transition-all duration-300 ease-in-out border-solid focus:ring-[1px] border border-white/20 ${
+                      errors.mobileNumber && touchedFields.mobileNumber
+                        ? "border-0 focus-within:ring-[#FF4040]"
+                        : " focus-within:ring-[#4287F5]"
+                    } focus-within:ring-[1px]`}
+                    onBlur={() => {
+                      setTimeout(() => {
+                        if (
+                          !document.activeElement?.closest(".react-tel-input")
+                        ) {
+                          handleBlur("mobileNumber");
+                        }
+                      }, 100);
+                    }}
                   >
                     <PhoneInput
                       country={"in"}
@@ -272,6 +349,18 @@ export default function Contact_Us() {
                       onChange={(phone: string, countryData: CountryData) => {
                         setMobileNumber(phone);
                         setCountryCode(`+${countryData.dialCode}`);
+
+                        if (touchedFields.mobileNumber) {
+                          setErrors((prev) => ({
+                            ...prev,
+                            mobileNumber:
+                              phone.trim() === ""
+                                ? "*Required"
+                                : !isValidMobileNumber(phone)
+                                ? "Please enter a valid mobile number"
+                                : "",
+                          }));
+                        }
                       }}
                       inputStyle={{
                         width: "100%",
@@ -300,11 +389,12 @@ export default function Contact_Us() {
                       }}
                       containerStyle={{
                         width: "100%",
+                        height: "52px",
                       }}
                       dropdownClass="custom-phone-dropdown"
                     />
                     {errors.mobileNumber && touchedFields.mobileNumber && (
-                      <p className="text-red-500 text-[12px] mt-[4px]">
+                      <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
                         {errors.mobileNumber}
                       </p>
                     )}
@@ -319,22 +409,23 @@ export default function Contact_Us() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us a little about your enquiry..."
-                  className="mt-[14px] w-full h-[100px] text-[14px] font-medium rounded-[5px] p-[18px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-2 focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
+                  className="mt-[14px] w-full h-[100px] text-[14px] font-medium rounded-[5px] p-[18px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] focus:ring-[#4287F5] transition-all duration-300 ease-in-out"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <div
-                className={`text-nowrap mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
-                  ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
-                  : isLoading
+                className={`text-nowrap mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
+                  formValid && !isLoading && !submitted && !submissionFailed
+                    ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
+                    : isLoading
                     ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                     : submitted
-                      ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
-                      : submissionFailed
-                        ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
-                        : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                  }`}
+                    ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
+                    : submissionFailed
+                    ? "bg-[#FF4040]/15 pointer-events-none text-[#FF4040] border-[3px] border-white/15 error_contact_us_shadow"
+                    : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
                     handleSubmitContact();
@@ -368,7 +459,10 @@ export default function Contact_Us() {
                     24/7
                   </div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="mailto:info@veract.io"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -387,7 +481,10 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Phone</div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="tel:+919789991565"
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
@@ -418,20 +515,24 @@ export default function Contact_Us() {
                   />
                   <div className="text-[16px] font-bold">Address</div>
                 </div>
-                <img src={`${baseUrl}/Images/horizantal_design.png`} alt="design-icon" />
+                <img
+                  src={`${baseUrl}/Images/horizantal_design.png`}
+                  alt="design-icon"
+                />
                 <a
                   href="https://maps.app.goo.gl/raqAmwGuLW77jdLf8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[16px] font-medium text-white/50 hover:text-white"
                 >
-                  37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam, Chennai - 600 091
+                  37, Aspace, Brindavan Street, Srinivasa Nagar, Madipakkam,
+                  Chennai - 600 091
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <Footer ref={footerRef} sessionId={'footer-contact-us'} />
+        <Footer ref={footerRef} sessionId={"footer-contact-us"} />
       </div>
     )
   );

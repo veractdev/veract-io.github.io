@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "/api/contact-us/route": "app/api/contact-us/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
@@ -12,3 +13,6 @@
   "/case-studies/page": "app/case-studies/page.js",
   "/case-studies/[slug]/page": "app/case-studies/[slug]/page.js"
 }
+=======
+{}
+>>>>>>> 74af40da18fa945d3dc3fc8f334c9bd42362708e

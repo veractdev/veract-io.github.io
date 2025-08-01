@@ -11,8 +11,8 @@ export const navItems = [
   {
     id: 2,
     name: "Services",
-    link: "",
-    status: "inactive",
+    link: "/services",
+    status: "active",
   },
   {
     id: 3,
@@ -527,7 +527,7 @@ export const caseStudyData = {
 export const LandingPageData = {
   banner: {
     title_primary: "Driving Digital Transformation",
-    title_secondary: "with",
+    title_secondary: "with ",
     title_tertiary: "custom",
     typwriting_animation_list: [
       {
@@ -575,24 +575,88 @@ export const LandingPageData = {
     banner_carousel_list: [
       {
         id: 1,
-        img: `/Images/LandingPage/Banner/carousel_images/ibits_logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/anyo.webp`,
       },
       {
         id: 2,
-        img: `/Images/LandingPage/Banner/carousel_images/evo11ve_logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/bsf.webp`,
       },
       {
         id: 3,
-        img: `/Images/LandingPage/Banner/carousel_images/mako-logo (1) 1.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/DCM.webp`,
       },
       {
         id: 4,
-        img: `/Images/LandingPage/Banner/carousel_images/suyash-logo.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/dhanajaya.webp`,
       },
       {
         id: 5,
-        img: `/Images/LandingPage/Banner/carousel_images/anyo-logo (1) 1.svg`,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/evo11ve.webp`,
       },
+      {
+        id: 6,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/IA.webp`,
+      },
+      {
+        id: 7,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/ibits.webp`,
+      },
+      {
+        id: 8,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/incluway.webp`,
+      },
+      {
+        id: 9,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/kivi.webp`,
+      },
+      {
+        id: 10,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/mako.webp`,
+      },
+      {
+        id: 11,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/navyya.webp`,
+      },
+      {
+        id: 12,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/northernarc.webp`,
+      },
+      {
+        id: 13,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/oidlabs.webp`,
+      },
+      {
+        id: 14,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/osakai.webp`,
+      },
+      {
+        id: 15,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/rajdeep.webp`,
+      },
+      {
+        id: 16,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/suyash.webp`,
+      },
+      {
+        id: 17,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/technoweld.webp`,
+      },
+      {
+        id: 18,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/terra-brsr.webp`,
+      },
+      {
+        id: 19,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/trackie.webp`,
+      },
+      {
+        id: 20,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/vishnupressing.webp`,
+      },
+      {
+        id: 21,
+        img: `/Images/LandingPage/Banner/carousel_images/client_logos/wasted.webp`,
+      }
     ],
   },
   showReel: {
@@ -848,7 +912,7 @@ export const LandingPageData = {
       {
         name: "Hare Priyaa Rajendran",
         quote:
-          "I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie. They swiftly got into the details and educated me wherever required. Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.",
+          "They swiftly got into the details and educated me wherever required.",
         image: `${baseUrl}/Images/LandingPage/Testimonial/harepriyaa.jpeg`,
         company: "Geeraj Business Solutions",
         role: "Founder",
@@ -856,7 +920,7 @@ export const LandingPageData = {
       {
         name: "Mahendra Vadivelu",
         quote:
-          "We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well. Focus on the deliverables and technical expertise stood out during our engagement. Thank you Veract for all your splendid work in this engagement. I will assure you that you will be our first go to team for any outsourcing need.",
+          "Focus on the deliverables and technical expertise stood out during our engagement. I will assure you that you will be our first go to team for any outsourcing need.",
         image: `${baseUrl}/Images/LandingPage/Testimonial/mahendra.jpg`,
         company: "Mako IT Lab",
         role: "CEO",
@@ -864,14 +928,14 @@ export const LandingPageData = {
       {
         name: "Salil Nair",
         quote:
-          "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly. This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.",
+          "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly.",
         image: `${baseUrl}/Images/LandingPage/Testimonial/salil.png`,
         company: "Agrosperity Tech Solutions",
         role: "",
       },
       {
         name: "Anand Shah",
-        quote: "Excellent prompt support in spite of remote location. ",
+        quote: "Excellent prompt support in spite of remote location.",
         image: `${baseUrl}/Images/LandingPage/Testimonial/AnanadShah.png`,
         company: "Rajdeep Industrial Products",
         role: "",
@@ -879,7 +943,7 @@ export const LandingPageData = {
       {
         name: "Bijoy KT",
         quote:
-          "Our engagement with veract for Datacenter Mart project has been a fantastic experience. The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon. This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.",
+          "Our engagement with veract for Datacenter Mart project has been a fantastic experience.This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected. ",
         image: `${baseUrl}/Images/LandingPage/Testimonial/Bijoy.jpg`,
         company: "Data Center Mart",
         role: "",
@@ -923,7 +987,7 @@ export const LandingPageData = {
   },
   footer: {
     description:
-      "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
+      "At Veract, we empower digital transformation through custom software—crafting innovative web, mobile, and AI solutions that drive measurable business success.",
     footer_logo_list: [
       {
         id: 1,
@@ -977,7 +1041,7 @@ export const LandingPageData = {
           {
             id: 2,
             title: "Services",
-            link: "scroll-to-section",
+            link: "/services",
             status: "active",
           },
           {
@@ -1398,3 +1462,204 @@ export const metadata = [
     },
   },
 ];
+
+export const services = [
+  {
+    id: '01',
+    title: 'Digital Transformation Strategy for Modern Businesses',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-computer.svg',
+        service_title: 'Legacy System Modernization',
+      },
+      {
+        service_icon: '/Images/services/icons/algorithm.svg',
+        service_title: 'Process Automation & Workflow Digitization',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop.svg',
+        service_title: 'Business Dashboards & Reporting Systems',
+      },
+      {
+        service_icon: '/Images/services/icons/stash_integrations-light.svg',
+        service_title: 'System Integrations Across Departments & Tools',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/smart_industry_portal.svg',
+        CTA_title: 'Smart Industry Portal',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/accessible_web_widget.svg',
+        CTA_title: 'Accessibility Web Widget',
+        status: 'active',
+        routeTo: '/case-studies/accessible-web-widget',
+      },
+    ]
+  },
+  {
+    id: '02',
+    title: 'Development Services for Startup Founders',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/computer-video.svg',
+        service_title: 'MVP & Prototype Development',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop-phone-sync.svg',
+        service_title: 'Custom SaaS & Web Application Development',
+      },
+      {
+        service_icon: '/Images/services/icons/phone-developer-mode.svg',
+        service_title: 'Modular Feature Development for Scalable Apps',
+      },
+      {
+        service_icon: '/Images/services/icons/api.svg',
+        service_title: 'Integration of Third-party APIs & Platforms',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/learning_platform.svg',
+        CTA_title: 'Learning Platform',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/Digital_wellness.svg',
+        CTA_title: 'Digital Wellness',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '03',
+    title: 'Industrial IoT for Smarter Operations',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-phone-02.svg',
+        service_title: 'IoT-Enabled App Development',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-laptop.svg',
+        service_title: 'Remote Monitoring Interfaces',
+      },
+      {
+        service_icon: '/Images/services/icons/carbon_iot-platform.svg',
+        service_title: 'Sensor Integration & Visualization',
+      },
+      {
+        service_icon: '/Images/services/icons/tabler_eye-spark.svg',
+        service_title: 'Smart Factory & Equipment Tracking',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/infrared_thermography.svg',
+        CTA_title: 'Infrared Thermography',
+        status: 'active',
+        routeTo: '/case-studies/infrared-thermography',
+      },
+    ]
+  },
+  {
+    id: '04',
+    title: 'AI & Agentic AI for Intelligent Decision-Making',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-chat-01.svg',
+        service_title: 'AI-Powered Decision Support Tools',
+      },
+      {
+        service_icon: '/Images/services/icons/elements.svg',
+        service_title: 'Task Automation & Workflow Bots',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-file.svg',
+        service_title: 'Document Intelligence & Invoice Parsing',
+      },
+      {
+        service_icon: '/Images/services/icons/robot-01.svg',
+        service_title: 'Agentic AI Systems for Business Logic',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/task_management.svg',
+        CTA_title: 'Task Management',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/invoice_mapping.svg',
+        CTA_title: 'Invoice Mapping',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '05',
+    title: 'Machine Vision for Quality Control and Inspection',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/camera-ai.svg',
+        service_title: 'AI for Visual Quality Inspection',
+      },
+      {
+        service_icon: '/Images/services/icons/cctv-camera.svg',
+        service_title: 'Camera-Based Defect Detection',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop-performance.svg',
+        service_title: 'Production Line Monitoring Solutions',
+      },
+      {
+        service_icon: '/Images/services/icons/bitcoin-eye.svg',
+        service_title: 'Embedded Vision System Development',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/visual_inspection_ai.svg',
+        CTA_title: 'Visual Inspection AI',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '06',
+    title: 'Generative AI & GPT',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/chat-bot.svg',
+        service_title: 'Custom AI Chatbots & Assistants',
+      },
+      {
+        service_icon: '/Images/services/icons/artificial-intelligence-06.svg',
+        service_title: 'Generative AI Content Automation',
+      },
+      {
+        service_icon: '/Images/services/icons/chat-gpt.svg',
+        service_title: 'GPT/LLM Integration for Business flows',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-brain-04.svg',
+        service_title: 'Knowledge Management Assistants',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/sara.svg',
+        CTA_title: 'AI Chat Assistant',
+        status: 'inactive',
+        routeTo: '',
+      }
+    ]
+  },
+]

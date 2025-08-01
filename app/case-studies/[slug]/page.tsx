@@ -43,7 +43,7 @@ export default function Page({ params }: Props) {
         if (!isNaN(scrollPosition)) {
           window.scrollTo(0, scrollPosition);
         }
-        sessionStorage.removeItem("footer-case-studies-slug");
+        sessionStorage.clear()
       }, 700);
     }
   }, [loaded]);
