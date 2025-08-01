@@ -199,13 +199,14 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                         onClick={() => {
                           if (window.location.pathname === "/") {
                             sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
-                          } else if (window.location.pathname !== "/" && link.title === 'Services') {
-                            router.push("/")
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
-                            sessionStorage.setItem("services", "true");
-                            const currentScrollPosition = window.scrollY || window.pageYOffset;
-                            sessionStorage.setItem(props.sessionId || "scrollToFooter", currentScrollPosition.toString());
-                          }
+                          } 
+                          // else if (window.location.pathname !== "/" && link.title === 'Services') {
+                          //   router.push("/")
+                          //   sessionStorage.setItem(props.sessionId || "scrollToFooter", "true");
+                          //   sessionStorage.setItem("services", "true");
+                          //   const currentScrollPosition = window.scrollY || window.pageYOffset;
+                          //   sessionStorage.setItem(props.sessionId || "scrollToFooter", currentScrollPosition.toString());
+                          // }
                           if (
                             link.status == "active" &&
                             !link.link.startsWith("scroll-to-section")

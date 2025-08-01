@@ -1041,7 +1041,7 @@ export const LandingPageData = {
           {
             id: 2,
             title: "Services",
-            link: "scroll-to-section",
+            link: "/services",
             status: "active",
           },
           {
