@@ -5,7 +5,7 @@ import Navbar from '../components/layout/Navbar'
 import { useRouter } from 'next/navigation'
 import { services } from '@/lib/custom_data';
 
-export default function page() {
+export default function Page() {
 
   const router = useRouter();
   const [loaded, setLoaded] = useState(false);

@@ -133,6 +133,7 @@ export default function Contact_Us() {
         setTimeout(() => setSubmissionFailed(false), 3000);
       }
     } catch (error) {
+      console.log(error);
       setSubmissionFailed(true);
       resetFormFields();
       setTimeout(() => setSubmissionFailed(false), 3000);

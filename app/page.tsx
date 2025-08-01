@@ -14,7 +14,6 @@ import { baseUrl } from "@/lib/custom_data";
 // import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [loader, setLoader] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
   const preloadImages = [
