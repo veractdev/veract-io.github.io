@@ -208,7 +208,7 @@ export default function UserServices({
                       {card.description}
                     </div>
                   ) : (
-                    <div className="hidden lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                    <div className=" lg:opacity-0 absolute  md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
                       Learn More →
                     </div>
                   )}
@@ -273,7 +273,7 @@ export default function UserServices({
                       {card.description}
                     </div>
                   ) : (
-                    <div className="hidden lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
+                    <div className=" lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem]  text-[0.875rem] tracking-[-0.04em] leading-[1.5em] cursor-pointer z-30">
                       Learn More →
                     </div>
                   )}
@@ -329,7 +329,7 @@ export default function UserServices({
                 {user_services_props.service_list[4].description}
               </div>
             ) : (
-              <div className="hidden lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
+              <div className=" lg:opacity-0 absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] interFont text-white md:text-[1.125rem] text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
                 Learn More →
               </div>
             )}
