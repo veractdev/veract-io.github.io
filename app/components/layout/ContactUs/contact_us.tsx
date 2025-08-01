@@ -225,9 +225,15 @@ export default function Contact_Us() {
 
                       if (touchedFields.firstName) {
                         if (value.trim() === "") {
-                          setErrors((prev) => ({ ...prev, firstName: "*Required" }));
+                          setErrors((prev) => ({
+                            ...prev,
+                            firstName: "*Required",
+                          }));
                         } else if (!isValidName(value)) {
-                          setErrors((prev) => ({ ...prev, firstName: "Please enter a valid name" }));
+                          setErrors((prev) => ({
+                            ...prev,
+                            firstName: "Please enter a valid name",
+                          }));
                         } else {
                           setErrors((prev) => ({ ...prev, firstName: "" }));
                         }
@@ -326,7 +332,15 @@ export default function Contact_Us() {
                         ? "border-0 focus-within:ring-[#FF4040]"
                         : " focus-within:ring-[#4287F5]"
                     } focus-within:ring-[1px]`}
-                    onBlur={() => handleBlur("mobileNumber")}
+                    onBlur={() => {
+                      setTimeout(() => {
+                        if (
+                          !document.activeElement?.closest(".react-tel-input")
+                        ) {
+                          handleBlur("mobileNumber");
+                        }
+                      }, 100);
+                    }}
                   >
                     <PhoneInput
                       country={"in"}
@@ -345,7 +359,6 @@ export default function Contact_Us() {
                                 ? "Please enter a valid mobile number"
                                 : "",
                           }));
-
                         }
                       }}
                       inputStyle={{
@@ -409,7 +422,7 @@ export default function Contact_Us() {
                     : submitted
                     ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
                     : submissionFailed
-                    ? "bg-[#FF2244]/15 pointer-events-none text-[#FF0000] border-[3px] border-white/15 error_contact_us_shadow"
+                    ? "bg-[#FF4040]/15 pointer-events-none text-[#FF4040] border-[3px] border-white/15 error_contact_us_shadow"
                     : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
                 }`}
                 onClick={() => {
