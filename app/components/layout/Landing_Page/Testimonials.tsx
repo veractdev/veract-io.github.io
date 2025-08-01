@@ -77,7 +77,7 @@ export default function Testimonials() {
                       animate={!isMobile() && !isTablet() ? { width: "20.125rem" } : isTablet() ? { height: "19.938rem" } : { height: "auto" }}
                       transition={{ duration: 0.7, ease: "easeInOut" }}
                       style={{ boxShadow: 'rgb(66, 135, 245) 0rem 0rem 0.813rem 0rem' }}
-                      className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-0 lg:py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
+                      className="md:h-[19.938rem] md:w-full h-[27.5rem] lg:h-[33rem] rounded-[2.5rem] px-[1.563rem] py-0 lg:py-[1.675rem] text-white border-[0.25rem] border-[#4285F4] overflow-hidden"
                     >
                       {/* Full Card Content */}
                       <motion.div
@@ -144,7 +144,7 @@ export default function Testimonials() {
                     transition={{ duration: 0.7, ease: "easeInOut" }}
                     onMouseEnter={() => (!isMobile() && !isTablet()) && handleSetActiveIndex(index)}
                     onClick={() => (isMobile() || isTablet()) && handleSetActiveIndex(index)}
-                    className="relative lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
+                    className="relative lg:h-[33rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4] overflow-hidden"
                   >
                     {visibleMiniIndex === index ? (
                       // Mini card content (after 3s)
@@ -171,7 +171,7 @@ export default function Testimonials() {
                         key={index}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         style={{}}
-                        className="h-[27.5rem] lg:h-[27.5rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
+                        className="h-[27.5rem] lg:h-[33rem] rounded-[2.5rem] px-[1.563rem] py-[1.675rem] text-white overflow-hidden"
                       >
                         <div
                           className="flex items-center gap-[0.625rem] pb-[2.438rem]">
@@ -221,7 +221,7 @@ export default function Testimonials() {
                   key={index}
                   onMouseEnter={() => (!isMobile() && !isTablet()) && handleSetActiveIndex(index)}
                   onClick={() => (isMobile() || isTablet()) && handleSetActiveIndex(index)}
-                  className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[27.5rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
+                  className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[33rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
                 >
                   <img loading="lazy"
                     className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0 lg:mx-[0.75rem] lg:my-[0.50rem] rounded-full"
