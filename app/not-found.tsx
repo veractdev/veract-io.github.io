@@ -53,7 +53,7 @@ export default function NotFound() {
             onClick={() => {
               router.push("/");
             }}
-            className="bg-primary-blue rounded-[2.5rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] mt-[2.375rem] cursor-pointer pl-[1.125rem] pt-[0.625rem] pb-[0.625rem] pr-[1.125rem]"
+            className="bg-primary-blue rounded-[2.5rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] mt-[2rem] cursor-pointer pl-[1.125rem] pt-[0.625rem] pb-[0.625rem] pr-[1.125rem]"
           >
             Go To Homepage
           </div>

@@ -119,6 +119,7 @@ export default function Navbar() {
                                 lg:static lg:top-auto lg:left-auto
                             `}
                             onClick={() => {
+                                sessionStorage.clear()
                                 router.push("/");
                             }}
                         />
@@ -134,6 +135,7 @@ export default function Navbar() {
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
+                                        sessionStorage.clear()
                                         setNavbarState(item.id);
                                         if (item.status == 'active') {
                                             router.push(item.link);
@@ -165,6 +167,7 @@ export default function Navbar() {
                             ))}
                             <div
                                 onClick={() => {
+                                    sessionStorage.clear()
                                     router.push("/contact-us");
                                 }}
                                 className={`${isHamburgerMenu
