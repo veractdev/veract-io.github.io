@@ -753,3 +753,7 @@ select:-webkit-autofill {
     width: 227px !important;
   }
 }
+
+.service_bottom_border {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 12.44%, rgba(255, 255, 255, 0.20) 50%, rgba(255, 255, 255, 0.00) 90.86%);
+}

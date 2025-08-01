@@ -11,8 +11,8 @@ export const navItems = [
   {
     id: 2,
     name: "Services",
-    link: "",
-    status: "inactive",
+    link: "/services",
+    status: "active",
   },
   {
     id: 3,
@@ -1462,3 +1462,204 @@ export const metadata = [
     },
   },
 ];
+
+export const services = [
+  {
+    id: '01',
+    title: 'Digital Transformation Strategy for Modern Businesses',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-computer.svg',
+        service_title: 'Legacy System Modernization',
+      },
+      {
+        service_icon: '/Images/services/icons/algorithm.svg',
+        service_title: 'Process Automation & Workflow Digitization',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop.svg',
+        service_title: 'Business Dashboards & Reporting Systems',
+      },
+      {
+        service_icon: '/Images/services/icons/stash_integrations-light.svg',
+        service_title: 'System Integrations Across Departments & Tools',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/smart_industry_portal.svg',
+        CTA_title: 'Smart Industry Portal',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/accessible_web_widget.svg',
+        CTA_title: 'Accessibility Web Widget',
+        status: 'active',
+        routeTo: '/case-studies/accessible-web-widget',
+      },
+    ]
+  },
+  {
+    id: '02',
+    title: 'Development Services for Startup Founders',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/computer-video.svg',
+        service_title: 'MVP & Prototype Development',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop-phone-sync.svg',
+        service_title: 'Custom SaaS & Web Application Development',
+      },
+      {
+        service_icon: '/Images/services/icons/phone-developer-mode.svg',
+        service_title: 'Modular Feature Development for Scalable Apps',
+      },
+      {
+        service_icon: '/Images/services/icons/api.svg',
+        service_title: 'Integration of Third-party APIs & Platforms',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/learning_platform.svg',
+        CTA_title: 'Learning Platform',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/Digital_wellness.svg',
+        CTA_title: 'Digital Wellness',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '03',
+    title: 'Industrial IoT for Smarter Operations',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-phone-02.svg',
+        service_title: 'IoT-Enabled App Development',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-laptop.svg',
+        service_title: 'Remote Monitoring Interfaces',
+      },
+      {
+        service_icon: '/Images/services/icons/carbon_iot-platform.svg',
+        service_title: 'Sensor Integration & Visualization',
+      },
+      {
+        service_icon: '/Images/services/icons/tabler_eye-spark.svg',
+        service_title: 'Smart Factory & Equipment Tracking',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/infrared_thermography.svg',
+        CTA_title: 'Infrared Thermography',
+        status: 'active',
+        routeTo: '/case-studies/infrared-thermography',
+      },
+    ]
+  },
+  {
+    id: '04',
+    title: 'AI & Agentic AI for Intelligent Decision-Making',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/ai-chat-01.svg',
+        service_title: 'AI-Powered Decision Support Tools',
+      },
+      {
+        service_icon: '/Images/services/icons/elements.svg',
+        service_title: 'Task Automation & Workflow Bots',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-file.svg',
+        service_title: 'Document Intelligence & Invoice Parsing',
+      },
+      {
+        service_icon: '/Images/services/icons/robot-01.svg',
+        service_title: 'Agentic AI Systems for Business Logic',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/task_management.svg',
+        CTA_title: 'Task Management',
+        status: 'inactive',
+        routeTo: '',
+      },
+      {
+        image: '/Images/services/images/invoice_mapping.svg',
+        CTA_title: 'Invoice Mapping',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '05',
+    title: 'Machine Vision for Quality Control and Inspection',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/camera-ai.svg',
+        service_title: 'AI for Visual Quality Inspection',
+      },
+      {
+        service_icon: '/Images/services/icons/cctv-camera.svg',
+        service_title: 'Camera-Based Defect Detection',
+      },
+      {
+        service_icon: '/Images/services/icons/laptop-performance.svg',
+        service_title: 'Production Line Monitoring Solutions',
+      },
+      {
+        service_icon: '/Images/services/icons/bitcoin-eye.svg',
+        service_title: 'Embedded Vision System Development',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/visual_inspection_ai.svg',
+        CTA_title: 'Visual Inspection AI',
+        status: 'inactive',
+        routeTo: '',
+      },
+    ]
+  },
+  {
+    id: '06',
+    title: 'Generative AI & GPT',
+    service_array: [
+      {
+        service_icon: '/Images/services/icons/chat-bot.svg',
+        service_title: 'Custom AI Chatbots & Assistants',
+      },
+      {
+        service_icon: '/Images/services/icons/artificial-intelligence-06.svg',
+        service_title: 'Generative AI Content Automation',
+      },
+      {
+        service_icon: '/Images/services/icons/chat-gpt.svg',
+        service_title: 'GPT/LLM Integration for Business flows',
+      },
+      {
+        service_icon: '/Images/services/icons/ai-brain-04.svg',
+        service_title: 'Knowledge Management Assistants',
+      }
+    ],
+    service_CTA: [
+      {
+        image: '/Images/services/images/sara.svg',
+        CTA_title: 'AI Chat Assistant',
+        status: 'inactive',
+        routeTo: '',
+      }
+    ]
+  },
+]

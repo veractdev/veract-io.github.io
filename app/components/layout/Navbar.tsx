@@ -23,6 +23,9 @@ export default function Navbar() {
         if (pathname === "/") {
             setNavbarState(1);
         }
+        else if (pathname === "/services") {
+            setNavbarState(2);
+        }
         /** if any  key value in caseStudyData is equal to pathname, set the navbar state to 4 */
         else if (pathname === "/case-studies" || Object.keys(caseStudyData).some(key => pathname === `/case-studies/${key}`)) {
             setNavbarState(4);

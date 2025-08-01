@@ -145,7 +145,7 @@ export default function Page() {
                   willChange: "transform",
                 }}
               >
-                <div className="syneFont text-[3.75rem] md:text-[6rem] gradient-text font-bold leading-[1em] -tracking-[0.05em]">
+                <div className="syneFont text-[3.75rem] md:text-[6rem] gradient-text font-bold leading-[1em] -tracking-[0.05em] pr-[0.75rem]">
                   {caseStudiesHomePageData.header}
                 </div>
                 <div className="interFont max-w-full lg:max-w-1/2 text-[1rem] md:text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
