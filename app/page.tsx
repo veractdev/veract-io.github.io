@@ -47,17 +47,17 @@ export default function Page() {
     }
   }, []);
 
-  useEffect(() => {
-    if (loader && containerRef.current && sessionStorage.getItem("services") === "true") {
-      setTimeout(() => {
-        containerRef.current?.scrollIntoView({
-          behavior: "instant",
-          block: "start",
-        });
-        sessionStorage.removeItem("services");
-      }, 100);
-    }
-  }, [loader]);
+  // useEffect(() => {
+  //   if (loader && containerRef.current && sessionStorage.getItem("services") === "true") {
+  //     setTimeout(() => {
+  //       containerRef.current?.scrollIntoView({
+  //         behavior: "instant",
+  //         block: "start",
+  //       });
+  //       sessionStorage.removeItem("services");
+  //     }, 100);
+  //   }
+  // }, [loader]);
 
   return (
     <LenisProvider>
@@ -71,12 +71,7 @@ export default function Page() {
           <ShowReel />
           <About_Us />
           <Advantages />
-          <div
-            ref={containerRef}
-            className="w-full"
-          >
-            <Services />
-          </div>
+          <Services />
           <We_Work_With />
           <Testimonials />
           {/* <FAQ faq_props={LandingPageData.faq} /> */}
