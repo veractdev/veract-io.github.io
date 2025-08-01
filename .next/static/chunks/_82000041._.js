@@ -516,109 +516,105 @@ const LandingPageData = {
         banner_image_list: [
             {
                 id: 1,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/anyo.webp`
+                image: `/Images/LandingPage/Banner/BNI.svg`
             },
             {
                 id: 2,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/bsf.webp`
+                image: `/Images/LandingPage/Banner/clutch.svg`
             },
             {
                 id: 3,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/DCM.webp`
+                image: `/Images/LandingPage/Banner/5 stars.svg`
             },
             {
                 id: 4,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/dhanajaya.webp`
-            },
-            {
-                id: 5,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/evo11ve.webp`
-            },
-            {
-                id: 6,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/IA.webp`
-            },
-            {
-                id: 7,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/ibits.webp`
-            },
-            {
-                id: 8,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/incluway.webp`
-            },
-            {
-                id: 9,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/kivi.webp`
-            },
-            {
-                id: 10,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/mako.webp`
-            },
-            {
-                id: 11,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/navyya.webp`
-            },
-            {
-                id: 12,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/northernarc.webp`
-            },
-            {
-                id: 13,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/oidlabs.webp`
-            },
-            {
-                id: 14,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/osakai.webp`
-            },
-            {
-                id: 15,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/rajdeep.webp`
-            },
-            {
-                id: 16,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/suyash.webp`
-            },
-            {
-                id: 17,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/technoweld.webp`
-            },
-            {
-                id: 18,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/terra-brsr.webp`
-            },
-            {
-                id: 19,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/trackie.webp`
-            },
-            {
-                id: 20,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/vishnupressing.webp`
-            },
-            {
-                id: 21,
-                image: `/Images/LandingPage/Banner/carousel_images/client_logos/wasted.webp`
+                image: `/Images/LandingPage/Banner/Ethercat_logo_.svg`
             }
         ],
         banner_carousel_list: [
             {
                 id: 1,
-                img: `/Images/LandingPage/Banner/carousel_images/ibits_logo.svg`
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/anyo.webp`
             },
             {
                 id: 2,
-                img: `/Images/LandingPage/Banner/carousel_images/evo11ve_logo.svg`
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/bsf.webp`
             },
             {
                 id: 3,
-                img: `/Images/LandingPage/Banner/carousel_images/mako-logo (1) 1.svg`
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/DCM.webp`
             },
             {
                 id: 4,
-                img: `/Images/LandingPage/Banner/carousel_images/suyash-logo.svg`
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/dhanajaya.webp`
             },
             {
                 id: 5,
-                img: `/Images/LandingPage/Banner/carousel_images/anyo-logo (1) 1.svg`
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/evo11ve.webp`
+            },
+            {
+                id: 6,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/IA.webp`
+            },
+            {
+                id: 7,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/ibits.webp`
+            },
+            {
+                id: 8,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/incluway.webp`
+            },
+            {
+                id: 9,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/kivi.webp`
+            },
+            {
+                id: 10,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/mako.webp`
+            },
+            {
+                id: 11,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/navyya.webp`
+            },
+            {
+                id: 12,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/northernarc.webp`
+            },
+            {
+                id: 13,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/oidlabs.webp`
+            },
+            {
+                id: 14,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/osakai.webp`
+            },
+            {
+                id: 15,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/rajdeep.webp`
+            },
+            {
+                id: 16,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/suyash.webp`
+            },
+            {
+                id: 17,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/technoweld.webp`
+            },
+            {
+                id: 18,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/terra-brsr.webp`
+            },
+            {
+                id: 19,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/trackie.webp`
+            },
+            {
+                id: 20,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/vishnupressing.webp`
+            },
+            {
+                id: 21,
+                img: `/Images/LandingPage/Banner/carousel_images/client_logos/wasted.webp`
             }
         ]
     },
@@ -1662,7 +1658,7 @@ function Navbar() {
                                 onClick: ()=>{
                                     router.push("/contact-us");
                                 },
-                                className: `${isHamburgerMenu ? `${(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isMobile"])() ? "mt-[3.875rem]" : "mt-[3.125rem]"}` : "max-sm:hidden max-md:hidden max-lg:hidden"} syneFont hover:bg-orange hover:text-white ${navbarState === 6 ? "bg-orange text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isMobile"])() && !(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isTablet"])() ? "ml-[.625rem]" : ""} text-nowrap`,
+                                className: `${isHamburgerMenu ? `${(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isMobile"])() ? "mt-[3.875rem]" : "mt-[3.125rem]"}` : "max-sm:hidden max-md:hidden max-lg:hidden"} syneFont hover:bg-[#4285F4] hover:text-white ${navbarState === 6 ? "bg-[#4285F4] text-white" : "bg-[#FFFFFF] text-black"} font-bold leading-[1.2em] tracking-[0em] p-[0.563rem_2.063rem] rounded-[1.875rem] cursor-pointer transition-all duration-300 ease-in-out ${!(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isMobile"])() && !(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isTablet"])() ? "ml-[.625rem]" : ""} text-nowrap`,
                                 children: "Talk to us"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",

@@ -987,7 +987,7 @@ export const LandingPageData = {
   },
   footer: {
     description:
-      "At Veract, we craft custom software with precision and innovation—driving business success through web, mobile, and AI excellence.",
+      "At Veract, we empower digital transformation through custom software—crafting innovative web, mobile, and AI solutions that drive measurable business success.",
     footer_logo_list: [
       {
         id: 1,

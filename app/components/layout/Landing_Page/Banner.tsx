@@ -62,8 +62,23 @@ export default function Banner() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [showBanner, setShowBanner] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      setShowBanner(scrollY < window.innerHeight); // hide after 100vh
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-0 select-none w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black"
+    <div className={`
+      fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black 
+      ${showBanner ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
+      `}
       style={{ transformStyle: 'preserve-3d' }}
     >
       <video

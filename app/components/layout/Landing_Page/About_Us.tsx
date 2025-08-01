@@ -36,10 +36,10 @@ export default function About_Us() {
                     key={index}
                     className="flex flex-col lg:gap-[20px] md:gap-[20px] items-center"
                   >
-                    <div className="md:text-[54px] lg:text-[54px] text-[32px] sm:text-[10px ] tracking-[-1.9px] lg:leading-[50px] md:leading-[50px] text-center">
+                    <div className="md:text-[54px] lg:text-[54px] text-[32px] sm:text-[10px] tracking-[-1.9px] lg:leading-[50px] md:leading-[50px] text-center">
                       {category.numbers}
                     </div>
-                    <div className="lg:text-[32px] md:text-[32px] text-[26px] tracking-[-1.9px] leading-[32px] lg:leading-[50px] md:leading-[50px] text-center text-wrap">
+                    <div className="lg:text-[32px] md:text-[32px] text-[24px] tracking-[-1.9px] leading-[32px] lg:leading-[50px] md:leading-[50px] text-center text-wrap">
                       {category.description}
                     </div>
                   </div>
