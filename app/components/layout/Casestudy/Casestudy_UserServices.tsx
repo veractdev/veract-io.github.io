@@ -212,7 +212,7 @@ export default function UserServices({
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>
@@ -277,7 +277,7 @@ export default function UserServices({
                       Learn More →
                     </div>
                   )}
-                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1.25rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+                  <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
                     {card.description}
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function UserServices({
                 Learn More →
               </div>
             )}
-            <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[0.938rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
+            <div className="absolute interFont lg:bottom-[2.5rem] md:bottom-[2.5rem] bottom-[1.25rem] left-[1rem] text-[1.125rem] md:text-[1rem] font-light leading-[1.5em] text-white-80 opacity-0 transition-all duration-700 ease-in lg:group-hover:opacity-100 lg:group-hover:left-[2.5rem] lg:right-[2.5rem] z-30">
               {user_services_props.service_list[4].description}
             </div>
           </div>

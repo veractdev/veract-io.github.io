@@ -115,7 +115,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                     className="w-[41px] object-cover"
                   />
 
-                  <div className="flex flex-col items-center justify-center gap-[0.5rem]">
+                  <div className="flex flex-col items-center justify-center gap-[0.5rem] transform origin-top scale-100 lg:scale-[130%]">
                     <img
                       loading="lazy"
                       src={details.footer_logo_list[1].image}
@@ -133,7 +133,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                   <img
                     src={details.footer_logo_list[3].image}
                     alt="logo image"
-                    className="w-[41px] object-cover"
+                    className="w-[41px] object-cover transform origin-top scale-100 lg:scale-[200%] ml-[0px] lg:ml-[23px]"
                   />
                 </div>
               </div>

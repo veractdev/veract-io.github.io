@@ -331,7 +331,7 @@ export default function Banner() {
             <motion.img
               src={LandingPageData.banner.banner_image_list[3].image}
               alt="logo image"
-              className="w-[3.563rem] object-cover"
+              className="w-[3.563rem] object-cover transform scale-100 lg:scale-[175%] pl-[0px] lg:pl-[12px]"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}

@@ -557,7 +557,7 @@ export const LandingPageData = {
     banner_image_list: [
       {
         id: 1,
-        image: `/Images/LandingPage/Banner/BNI.svg`,
+        image: `/Images/LandingPage/Banner/BNI_logo.webp`,
       },
       {
         id: 2,
@@ -569,7 +569,7 @@ export const LandingPageData = {
       },
       {
         id: 4,
-        image: `/Images/LandingPage/Banner/Ethercat_logo_.svg`,
+        image: `/Images/LandingPage/Banner/ethercat_.webp`,
       },
     ],
     banner_carousel_list: [
@@ -712,7 +712,7 @@ export const LandingPageData = {
       {
         title: "Digital Transformation Strategy with the Right Technologies",
         // /Images/LandingPage/Advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.jpg
-        bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img2.jpg')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        bg: `bg-[url('/Images/LandingPage/advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
         description:
           "Modernize operations with digital tools that serve real business goals",
         gradient:
@@ -991,7 +991,7 @@ export const LandingPageData = {
     footer_logo_list: [
       {
         id: 1,
-        image: `/Images/LandingPage/Banner/BNI.svg`,
+        image: `/Images/LandingPage/Footer/BNI_logo.webp`,
       },
       {
         id: 2,
@@ -1003,7 +1003,7 @@ export const LandingPageData = {
       },
       {
         id: 4,
-        image: `/Images/LandingPage/Banner/Ethercat_logo_.svg`,
+        image: `/Images/LandingPage/Footer/ethercat_.webp`,
       },
     ],
     socialMediaIcons: [
