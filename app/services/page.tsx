@@ -5,6 +5,7 @@ import Navbar from '../components/layout/Navbar'
 import { useRouter } from 'next/navigation'
 import { baseUrl, services } from '@/lib/custom_data';
 import { motion } from 'framer-motion'
+import { isMobile, isTablet } from '@/lib/utils'
 
 export default function Page() {
 
@@ -50,7 +51,7 @@ export default function Page() {
         <img src="/Images/services/service_background_overlay.png" alt="overlay image" className='hidden absolute top-0 left-0 w-full h-full object-cover' />
         <Navbar />
         <div className="w-full h-[100vh] md:h-[100vh] lg:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
-          <img src={`/Images/services/services-background-overlay.jpg`} alt='service background image' className="absolute top-0 left-0 w-full h-full" />
+          <img src={`${!isMobile() && !isTablet() ? '/Images/services/services-background-overlay.jpg' : `${isTablet() ? '/Images/services/services_tab_background_overlay.png' : '/Images/services/services_mobile_background_overlay.png'}`}`} alt='service background image' className="absolute top-0 left-0 w-full h-full" />
           <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-1.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
           <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-2.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
           <div
@@ -120,7 +121,7 @@ export default function Page() {
                           router.push(CTA.routeTo)
                         }
                         else {
-                          router.push('/contact-us')
+                          router.push('/case-studies')
                         }
                       }}
                     >
