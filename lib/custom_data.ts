@@ -367,7 +367,7 @@ export const caseStudyData = {
           title: "Inclusive Accessibility Features",
           bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/incluway/Services/Inclusive_Accessibility_Features.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
           description:
-            "Offered real-time controls like text resizing, contrast modes, screen reader compatibility, and animation toggles to serve users with varied accessibility needs.",
+            "Offered real-time controls to support diverse accessibility needs like text resizing, contrast, screen readers, and animations.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[8rem]",
@@ -376,7 +376,7 @@ export const caseStudyData = {
           title: "Seamless Integration",
           bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/incluway/Services/Seamless_Integration.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
           description:
-            "Developed a plug-and-play widget that can be embedded on any website with minimal code—supporting fast adoption and cross-platform reliability.",
+            "Developed a plug-and-play widget for fast, cross-platform website integration.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[8rem]",
@@ -385,7 +385,7 @@ export const caseStudyData = {
           title: "Widget Management System",
           bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/incluway/Services/Widget_Management_System.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
           description:
-            "Built a modular, customizable web-based widget with admin control for managing display, placement, and feature toggling without code changes.",
+            "Built a modular, customizable widget with admin controls to manage display, placement, and features—no coding required.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[10rem]",
@@ -394,7 +394,7 @@ export const caseStudyData = {
           title: "Actionable Accessibility Data",
           bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/case-studies/incluway/Services/Actionable_Accessibility_Data.png')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
           description:
-            "Enabled tracking of widget usage and accessibility feature adoption to help website owners improve their inclusivity efforts.",
+            "Enabled tracking of usage and feature adoption to help websites enhance accessibility and inclusivity efforts effectively.",
           gradient:
             "bg-[linear-gradient(93deg,_rgb(31,139,255)_42.49%,_rgb(255,255,255)_100%)]",
           blobWidth: "w-[10rem]",
