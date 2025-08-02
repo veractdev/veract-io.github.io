@@ -30,30 +30,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/agentic-ai": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/agentic-ai",
-      "dataRoute": "/agentic-ai.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/services": {
       "experimentalBypassFor": [
         {
@@ -78,7 +54,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/case-studies": {
+    "/agentic-ai": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,8 +67,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/case-studies",
-      "dataRoute": "/case-studies.rsc",
+      "srcRoute": "/agentic-ai",
+      "dataRoute": "/agentic-ai.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/contact-us": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/contact-us",
+      "dataRoute": "/contact-us.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +126,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/contact-us": {
+    "/case-studies": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +139,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contact-us",
-      "dataRoute": "/contact-us.rsc",
+      "srcRoute": "/case-studies",
+      "dataRoute": "/case-studies.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "92100f41bb005d48df95fa63dbe69dea",
-    "previewModeSigningKey": "b5b0da1e9c2e32c6c3194c9375fcab954ee272546850d46d84cb71b3223e0948",
-    "previewModeEncryptionKey": "d180b2fdf7a41510c0692a57725b1ac90af4362cfaaa0b872ab6eb978219e1ed"
+    "previewModeId": "564f0ef02600b8916ca45c7af4541a4f",
+    "previewModeSigningKey": "bec7f05a3c6e1b1e08071724b093a1aa0b7ee999ddfc56bfaf77801ddb178a11",
+    "previewModeEncryptionKey": "2e64bb59dfdeb957dd4ec99019d686fa6b46c2193189d469524e2b04700e6cd7"
   }
 }
