@@ -50,7 +50,7 @@ export default function Page() {
         <img src="/Images/services/service_background_overlay.png" alt="overlay image" className='hidden absolute top-0 left-0 w-full h-full object-cover' />
         <Navbar />
         <div className="w-full h-[100vh] md:h-[100vh] lg:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
-          <img src={`https://picsum.photos/1920/1080`} alt='service background image' className="absolute top-0 left-0 w-full h-full" />
+          <img src={`/Images/services/services-background-overlay.jpg`} alt='service background image' className="absolute top-0 left-0 w-full h-full" />
           <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-1.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
           <img loading="lazy" src={`${baseUrl}/Images/case-studies/Overlay-2.png`} alt="overlay image" className='absolute top-0 left-0 w-full h-full' />
           <div
@@ -64,8 +64,7 @@ export default function Page() {
               Our Services
             </div>
             <div className="interFont max-w-full lg:max-w-1/2 text-[1rem] md:text-[1.25rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
-              We offer a wide range of services to help you achieve your goals.
-            </div>
+              Discover how our customized tech services spark innovation, overcome complex challenges, and provide businesses with the tools they need to grow and thrive.            </div>
           </div>
           <div className="scale-75 md:scale-100 absolute top-[35%] md:top-[50%] left-[-2.85rem] translate-y-[50%] md:translate-y-[-50%] lg:translate-none lg:top-[85%] md:-left-[1.5rem] flex flex-row gap-[1rem] items-center justify-center transform rotate-90">
             <div className="uppercase interFont text-[0.875rem] text-white font-light leading-[1.5em] -tracking-[0.02em]">
