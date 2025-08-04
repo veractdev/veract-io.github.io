@@ -56,7 +56,7 @@ export default function FAQ({ faq_props }: { faq_props: FAQProps }) {
                                     <CaretDown
                                         size={28}
                                         weight='regular'
-                                        className={`${active.includes(item.id) ? 'text-white group-hover:text-[#095D5D]' : 'text-white group-hover:text-orange'} transition-all duration-300`}
+                                        className={`${active.includes(item.id) ? 'text-white group-hover:text-primary-blue' : 'text-white group-hover:text-primary-blue'} transition-all duration-300`}
                                     />
                                 </motion.div>
                             </div>
