@@ -24,10 +24,10 @@ export default function FAQ({ faq_props }: { faq_props: FAQProps }) {
 
     return (
         loaded && (
-            <div className='w-full h-max flex flex-col items-center relative z-50 bg-primary-text p-[6.25rem_1.5rem] md:p-[6.25rem_3.125rem] gap-[3.75rem]'>
-                <img src="/Images/LandingPage/FAQ/Lines.png" alt="FAQ background overlay" className='absolute top-0 left-0 z-0 w-full h-full object-cover' />
-                <div className='z-1 w-[80%] lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>{faq_props.title}</div>
-                <div className='z-1 w-full lg:w-[calc(100%-18.75rem)] flex flex-col gap-[0.625rem]'>
+            <div className='w-full h-max flex flex-col items-center relative z-50 bg-primary-text p-[3.125rem_3.125rem_6.25rem_3.125rem] gap-[3.75rem] faqBackgroundOverlay'>
+                {/* <img src="/Images/LandingPage/FAQ/Lines.png" alt="FAQ background overlay" className='absolute top-0 left-0 z-0 w-full h-full object-cover' /> */}
+                <div className='z-1 px-[7.625rem] md:px-[13.563rem] lg:px-0 lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>{faq_props.title}</div>
+                <div className='z-1 w-full lg:w-[calc(100%-21.875rem)] flex flex-col gap-[0.625rem]'>
                     {faq_props.faq_list.map((item) => (
                         <div
                             key={item.id}
@@ -45,7 +45,7 @@ export default function FAQ({ faq_props }: { faq_props: FAQProps }) {
                                 <motion.div
                                     className={`left-[-40%] top-[-70%] group-hover:left-[15%] rounded-[50%] absolute w-[723px] h-[121px] bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(255,255,255,0.15)_0%,_rgba(0,0,0,0)_100%)] z-990 transition-all duration-300 ${active.includes(item.id) ? 'animate-active-faq-hover' : 'animate-faq-hover'}`} />
                                 <div
-                                    className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium lg:leading-[50%] leading-[100%] lg:-tracking-[0.05em] tracking-0 transition-all duration-300 ${active.includes(item.id) ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
+                                    className={`syneFont w-full lg:w-[95%] text-[1.125rem] text-[#FFFFFF] font-medium leading-[150%] lg:-tracking-[0.05em] transition-all duration-300 ${active.includes(item.id) ? 'pl-0' : 'group-hover:pl-[1.25rem] group-hover:opacity-[0.67]'}`}
                                 >
                                     {item.title}
                                 </div>
