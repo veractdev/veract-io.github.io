@@ -7,10 +7,20 @@ import Navbar from "./components/layout/Navbar";
 export default function NotFound() {
   const router = useRouter();
   const [loaded, setLoaded] = useState(false);
+  const [time, setTime] = useState(10);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(time - 1);
+      if (time === 2) {
+        router.push("/");
+      }
+    }, 1000);
+  }, [time]);
 
   return (
     loaded && (
@@ -46,8 +56,8 @@ export default function NotFound() {
             <div>Not Found in Data.</div>
           </div>
           <div className="dmSansFont text-[1rem] text-[#FFFFFF]/60 font-normal leading-[1.625rem] -tracking-[0.013rem] text-center mt-[1.625rem] w-[80%] lg:w-[40%] md:w-[60%]">
-            Oops! The web page you’re looking for doesn’t exist. Please click the
-            below button to get back to the home.
+            Oops! The web page you’re looking for doesn’t exist. Please click
+            the below button to get back to the home.
           </div>
           <div
             onClick={() => {
@@ -56,6 +66,9 @@ export default function NotFound() {
             className="bg-primary-blue rounded-[2.5rem] page-not-found-CTA-boxShadow dmSansFont text-[1rem] text-white font-medium leading-[1.625rem] -tracking-[0.031rem] mt-[2rem] cursor-pointer pl-[1.125rem] pt-[0.625rem] pb-[0.625rem] pr-[1.125rem]"
           >
             Go To Homepage
+          </div>
+          <div className="dmSansFont text-[1rem] text-[#FFFFFF]/60 font-normal leading-[1.625rem] -tracking-[0.013rem] text-center mt-[1rem] w-[90%] lg:w-[40%] md:w-[60%]">
+            Redirecting to the home page in {time} {time === 1 ? 'second':'seconds'}...
           </div>
         </div>
       </div>

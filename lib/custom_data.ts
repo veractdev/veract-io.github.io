@@ -1232,6 +1232,61 @@ export const AgentPageData = {
       },
     ],
   },
+  faq: {
+    title: "Curious? Check our FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: 'What is Agentic AI?',
+        content: 'Agentic AI refers to autonomous AI agents that use memory, tools, and reasoning to plan and act toward business goals without constant human input.'
+      },
+      {
+        id: 2,
+        title: 'How does Veract.io implement Agentic AI?',
+        content: 'We design agents using LangChain, LangGraph, Gemini, and GPT-4o — enabling them to integrate with platforms like Slack, Notion, Excel, and SAP to automate work.'
+      },
+      {
+        id: 3,
+        title: 'What tasks can your AI agents perform?',
+        content: 'Tasks like client intake, communication, billing, ticket escalation, status updates, and sales follow-up — all powered by goal-driven logic and coordination.'
+      },
+      {
+        id: 4,
+        title: 'What is the difference between AI agents and traditional automation?',
+        content: 'AI agents operate with autonomy — they plan, reason, and decide across tasks. Traditional automation executes predefined steps without adapting to context.'
+      },
+      {
+        id: 5,
+        title: 'Which tasks are commonly automated using agent-based AI?',
+        content: 'Common examples include email replies, CRM updates, onboarding flows, meeting summaries, and multi-step business process orchestration.'
+      },
+      {
+        id: 6,
+        title: 'How do businesses integrate AI agents with existing tools?',
+        content: 'AI agents can connect to tools like Slack, Google Sheets, Notion, or SAP via APIs. Platforms like LangChain and Gemini are often used by teams like Veract.io to build these layers.'
+      },
+      {
+        id: 7,
+        title: 'What are some real-world applications of language models in business?',
+        content: 'Language models are used in document understanding, smart support systems, feedback classification, and report summarization.'
+      },
+      {
+        id: 8,
+        title: 'Seeking AI and machine learning solutions tailored to healthcare—any leads?',
+        content: 'In healthcare, AI is used for patient monitoring, diagnostics, and smart triage. Veract.io has built systems in this space with a focus on compliance and usability.'
+      },
+      {
+        id: 9,
+        title: 'Do I need to replace my current software to use these agents?',
+        content: 'No — our agents layer over your existing tools. They act like intelligent assistants working across your current stack.'
+      },
+      {
+        id: 10,
+        title: 'Can I test an AI agent before buying?',
+        content: 'Yes — we provide a live demo and a free trial deployment of one AI agent into your business workflow.'
+      },
+    ]
+  }
 };
 
 export const caseStudiesHomePageData = {
