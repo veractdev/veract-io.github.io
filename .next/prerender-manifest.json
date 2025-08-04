@@ -1,54 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/contact-us": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/contact-us",
-      "dataRoute": "/contact-us.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/services": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/services",
-      "dataRoute": "/services.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/favicon.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -102,7 +54,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/case-studies": {
+    "/contact-us": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -115,8 +67,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/case-studies",
-      "dataRoute": "/case-studies.rsc",
+      "srcRoute": "/contact-us",
+      "dataRoute": "/contact-us.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -149,13 +101,61 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
+    },
+    "/services": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/services",
+      "dataRoute": "/services.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/case-studies": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/case-studies",
+      "dataRoute": "/case-studies.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
     }
   },
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "935f7d28279eb2fce6118586a4945311",
-    "previewModeSigningKey": "a704dc01a1fd06fba8cb3242f85b4c2df5fcd31efd38d7a994053071242deb66",
-    "previewModeEncryptionKey": "4329f9c1c59738ee49e591af974531d836244365f09333e65c6a632fb995149c"
+    "previewModeId": "b2393c535aa95c755f580e62cc0fb942",
+    "previewModeSigningKey": "652acf2c270d40bdd76a3be5e591bbb57d25d65c737658391ab16bc5478da1b9",
+    "previewModeEncryptionKey": "5869f7bb3b06590aa3240889f1fb1e4f0711dcc65874251eb4492ebb48a1eccd"
   }
 }
