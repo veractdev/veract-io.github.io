@@ -8,6 +8,8 @@ import OurProcess from '../components/layout/Agent/OurProcess';
 import MultiAgent from '../components/layout/Agent/MultiAgent';
 import AiAgent from '../components/layout/Agent/AiAgent';
 import Agent_Footer from '../components/layout/Agent/Agent_Footer';
+import FAQ from '../components/layout/Landing_Page/FAQ';
+import { AgentPageData } from '@/lib/custom_data';
 
 export default function Page() {
   return (
@@ -19,6 +21,7 @@ export default function Page() {
           <AiAgent />
           <OurProcess />
           <MultiAgent />
+          <FAQ faq_props={AgentPageData.faq} />
           <Agent_Footer />
         </div>
       </LenisProvider>
