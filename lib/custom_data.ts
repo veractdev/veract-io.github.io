@@ -1466,7 +1466,8 @@ export const metadata = [
 export const services = [
   {
     id: '01',
-    title: 'Digital Transformation Strategy for Modern Businesses',
+    // title: 'Digital Transformation Strategy for Modern Businesses',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Digital Transformation Strategy for <span class='text-primary-blue'>Modern Businesses</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/ai-computer.svg',
@@ -1502,7 +1503,8 @@ export const services = [
   },
   {
     id: '02',
-    title: 'Development Services for Startup Founders',
+    // title: 'Development Services for Startup Founders',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Development Services for <span class='text-primary-blue'>Startup Founders</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/computer-video.svg',
@@ -1538,7 +1540,8 @@ export const services = [
   },
   {
     id: '03',
-    title: 'Industrial IoT for Smarter Operations',
+    // title: 'Industrial IoT for Smarter Operations',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Industrial IoT for <span class='text-primary-blue'>Smarter Operations</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/ai-phone-02.svg',
@@ -1568,7 +1571,8 @@ export const services = [
   },
   {
     id: '04',
-    title: 'AI & Agentic AI for Intelligent Decision-Making',
+    // title: 'AI & Agentic AI for Intelligent Decision-Making',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>AI & Agentic AI for <span class='text-primary-blue'>Intelligent Decision-Making</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/ai-chat-01.svg',
@@ -1604,7 +1608,8 @@ export const services = [
   },
   {
     id: '05',
-    title: 'Machine Vision for Quality Control and Inspection',
+    // title: 'Machine Vision for Quality Control and Inspection',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Machine Vision for <span class='text-primary-blue'>Quality Control and Inspection</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/camera-ai.svg',
@@ -1634,7 +1639,8 @@ export const services = [
   },
   {
     id: '06',
-    title: 'Generative AI & GPT',
+    // title: 'Generative AI & GPT',
+    title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Generative AI & GPT for <span class='text-primary-blue'>workplace productivity</span></span>`,
     service_array: [
       {
         service_icon: '/Images/services/icons/chat-bot.svg',
