@@ -907,12 +907,6 @@ export const LandingPageData = {
       },
     ],
   },
-
-  //                       '<span class="interFont testimonial_blurred_text"></span>'
-  //                       '<span class="testimonial_white_text"></span>'
-  //                       '<span class="testimonial_primary_text"></span>'
-
-
   testimonials: {
     testimonial_list: [
       {
@@ -977,10 +971,7 @@ export const LandingPageData = {
   early stage
 </span>
 <span class="interFont testimonial_white_text">
-  and they helped build out 
-</span>
-<span class="interFont testimonial_primary_text">
-  our 'KiViStar'
+  and they helped build out our 'KiViStar'
 </span>
 <span class="interFont testimonial_white_text">
   App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly.

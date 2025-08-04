@@ -783,7 +783,6 @@ select:-webkit-autofill {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 19px;
 }
 
 .testimonial_text_blur {
@@ -795,8 +794,6 @@ select:-webkit-autofill {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 19px;
-  filter: unset;
 }
 
 .testimonial_primary_text {
@@ -804,6 +801,4 @@ select:-webkit-autofill {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 19px;
-  filter: unset;
 }
