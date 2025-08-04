@@ -197,22 +197,22 @@ export default function Page() {
             </div>
             <div className={`flex flex-row flex-wrap items-start justify-center lg:justify-start md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-0 md:pb-[3.125rem]`}>
               {caseStudyCards.map((item: CaseStudyCard, index: number) => (
-                <motion.div
+                <div
                   key={index}
                   className="w-full md:w-[20.75rem] lg:w-[25.563rem] flex flex-col items-center justify-center gap-[1.375rem] p-[0.625rem_0.625rem_1.75rem_0.625rem]"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.3,
-                      ease: "easeIn",
-                      delay: 0.1 * (index * 0.35),
-                    },
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
+                  // initial={{ opacity: 0, y: 40 }}
+                  // whileInView={{
+                  //   opacity: 1,
+                  //   y: 0,
+                  //   transition: {
+                  //     duration: 0.3,
+                  //     ease: "easeIn",
+                  //     delay: 0.1 * (index * 0.35),
+                  //   },
+                  // }}
+                  // viewport={{
+                  //   once: true,
+                  // }}
                 >
                   <div
                     className='relative group w-full h-[13.188rem] md:w-[19.5rem] md:h-[11.5rem] lg:w-[24.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
@@ -245,7 +245,7 @@ export default function Page() {
                       {item.subHeader}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
