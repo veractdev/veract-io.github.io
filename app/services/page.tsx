@@ -96,11 +96,12 @@ export default function Page() {
                 >
                   [{service.id}]
                 </div>
-                <div
+                {/* <div
                   className='w-full lg:w-[18.3125rem] interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'
                 >
                   {service.title}
-                </div>
+                </div> */}
+                <span className='w-full lg:w-[350px] ' dangerouslySetInnerHTML={{ __html: service.title }} />
               </div>
               <div className='flex flex-col md:flex-row gap-[2.31rem] md:gap-[4.38rem] lg:gap-[2.06rem] items-center md:items-start justify-center'>
                 <div className='flex flex-col p-[0.625rem_1.25rem] md:p-[0.62rem_0_0_2.094rem] lg:p-0 gap-[1rem] lg:gap-[0.62rem] items-start lg:items-center justify-center'>
