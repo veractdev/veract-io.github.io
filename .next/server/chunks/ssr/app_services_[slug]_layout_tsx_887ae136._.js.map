@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Documents/veract_latest/veract-io.github.io/app/services/%5Bslug%5D/layout.tsx"],"sourcesContent":["import { Metadata } from 'next';\r\n\r\ntype Props = {\r\n    params: Promise<{ slug: string }>\r\n}\r\n\r\nexport async function generateMetadata({ params }: Props): Promise<Metadata> {\r\n    const { slug } = await params;\r\n    return {\r\n        title: slug,\r\n        description: 'Services',\r\n        openGraph: {\r\n            title: slug,\r\n            description: 'Services',\r\n            type: 'website',\r\n        },\r\n        twitter: {\r\n            card: 'summary_large_image',\r\n            title: slug,\r\n            description: 'Services',\r\n        }\r\n    }\r\n}\r\n\r\nexport default function ServicesLayout({\r\n    children,\r\n}: {\r\n    children: React.ReactNode;\r\n}) {\r\n    return children;\r\n} "],"names":[],"mappings":";;;;AAMO,eAAe,iBAAiB,EAAE,MAAM,EAAS;IACpD,MAAM,EAAE,IAAI,EAAE,GAAG,MAAM;IACvB,OAAO;QACH,OAAO;QACP,aAAa;QACb,WAAW;YACP,OAAO;YACP,aAAa;YACb,MAAM;QACV;QACA,SAAS;YACL,MAAM;YACN,OAAO;YACP,aAAa;QACjB;IACJ;AACJ;AAEe,SAAS,eAAe,EACnC,QAAQ,EAGX;IACG,OAAO;AACX","debugId":null}}]
-}
