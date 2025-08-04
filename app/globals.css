@@ -769,3 +769,11 @@ select:-webkit-autofill {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.20) 50%, rgba(255, 255, 255, 0.00) 100%);
   }
 }
+
+.faqBackgroundOverlay {
+  background-image: url('/Images/LandingPage/FAQ/Lines.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
