@@ -150,7 +150,7 @@ export default function Advantages() {
                         `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem] leading-[1.5em] text-[1.375rem] font-semibold md:tracking-[-0.05em] tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent transition-all duration-300 ease-in  ` +
                         ((isMobile() || isTablet()) && openedArr[idx]
                           ? `${card.gradient} bg-clip-text text-transparent md:top-[2.5rem] md:left-[2.5rem] ease-in duration-300 transition-all  `
-                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[50%]`)
+                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[60%]`)
                       }
                       style={{ zIndex: 30 }}
                     >
@@ -204,7 +204,7 @@ export default function Advantages() {
                         `absolute lg:top-[0.75rem] md:top-[0.75rem] top-[1.25rem] left-[1.25rem] lg:text-[1.625rem] md:text-[1.625rem]  text-[1.375rem] font-semibold tracking-[-0.07em] lg:text-white lg:transition-all lg:duration-700 lg:ease-in ${card.gradient} bg-clip-text text-transparent transition-all duration-300 ease-in  ` +
                         ((isMobile() || isTablet()) && openedArr[idx + 2]
                           ? `${card.gradient} bg-clip-text text-transparent md:top-[2.5rem] md:left-[2.5rem] ease-in duration-300 transition-all  `
-                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[50%] md:w-[60%]`)
+                          : `text-white lg:group-hover:top-[2.5rem] lg:group-hover:left-[2.5rem] lg:group-hover:${card.gradient} lg:group-hover:bg-clip-text lg:group-hover:text-transparent lg:w-[60%] md:w-[60%]`)
                       }
                       style={{ zIndex: 30 }}
                     >

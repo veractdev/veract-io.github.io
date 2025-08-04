@@ -1,14 +1,5 @@
 {
-  "/api/contact-us/route": "app/api/contact-us/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/blogs/[slug]/page": "app/blogs/[slug]/page.js",
-  "/company/[slug]/page": "app/company/[slug]/page.js",
-  "/industries/[slug]/page": "app/industries/[slug]/page.js",
-  "/agentic-ai/page": "app/agentic-ai/page.js",
+  "/case-studies/[slug]/page": "app/case-studies/[slug]/page.js",
   "/case-studies/page": "app/case-studies/page.js",
-  "/contact-us/page": "app/contact-us/page.js",
-  "/services/page": "app/services/page.js",
-  "/case-studies/[slug]/page": "app/case-studies/[slug]/page.js"
+  "/page": "app/page.js"
 }
