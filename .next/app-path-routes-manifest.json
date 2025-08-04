@@ -3,11 +3,11 @@
   "/favicon.ico/route": "/favicon.ico",
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/blogs/[slug]/page": "/blogs/[slug]",
   "/company/[slug]/page": "/company/[slug]",
   "/industries/[slug]/page": "/industries/[slug]",
-  "/agentic-ai/page": "/agentic-ai",
+  "/blogs/[slug]/page": "/blogs/[slug]",
   "/case-studies/page": "/case-studies",
+  "/agentic-ai/page": "/agentic-ai",
   "/contact-us/page": "/contact-us",
   "/services/page": "/services",
   "/case-studies/[slug]/page": "/case-studies/[slug]"
