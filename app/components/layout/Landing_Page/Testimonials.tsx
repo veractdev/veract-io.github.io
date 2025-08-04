@@ -119,9 +119,7 @@ export default function Testimonials() {
                         <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                           <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
                         </div>
-                        <div className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em]'>
-                          {LandingPageData.testimonials.testimonial_list[activeIndex].quote}
-                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: LandingPageData.testimonials.testimonial_list[activeIndex].quote }} />
                       </motion.div>
                     </motion.div>
                   </AnimatePresence>
@@ -204,9 +202,7 @@ export default function Testimonials() {
                           <div className="absolute -top-4 -left-2 text-blue-500 text-3xl font-serif">
                             <img loading="lazy" className='w-[1.938rem] h-[1.438rem] object-contain' src={`${baseUrl}/Images/LandingPage/Testimonial/quotes.png`} alt="Testimonial_Quotes" />
                           </div>
-                          <p className='interFont text-[#E3E3E3] font-normal text-[1rem] leading-[1.3rem] tracking-[0.00em] text-left'>
-                            {t.quote}
-                          </p>
+                          <div dangerouslySetInnerHTML={{ __html: t.quote }} />
                         </motion.div>
                       </motion.div>
                     )}

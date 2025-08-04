@@ -777,3 +777,33 @@ select:-webkit-autofill {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.testimonial_blurred_text {
+  color: #666873;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.testimonial_text_blur {
+  filter: blur(1.5px);
+}
+
+.testimonial_white_text {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  filter: unset;
+}
+
+.testimonial_primary_text {
+  color: #4285F4;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  filter: unset;
+}

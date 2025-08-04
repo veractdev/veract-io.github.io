@@ -907,43 +907,135 @@ export const LandingPageData = {
       },
     ],
   },
+
+  //                       '<span class="interFont testimonial_blurred_text"></span>'
+  //                       '<span class="testimonial_white_text"></span>'
+  //                       '<span class="testimonial_primary_text"></span>'
+
+
   testimonials: {
     testimonial_list: [
       {
         name: "Hare Priyaa Rajendran",
-        quote:
-          "They swiftly got into the details and educated me wherever required.",
+        quote: `<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  I am amazed the way Veract took the initial discussion of our HRMS product MyTrackie.
+</span>
+<span class="interFont testimonial_white_text">
+  They swiftly got into the details and 
+</span>
+<span class="interFont testimonial_primary_text">
+  educated
+</span>
+<span class="interFont testimonial_white_text">
+  me wherever required.
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.
+</span>
+`,
         image: `${baseUrl}/Images/LandingPage/Testimonial/harepriyaa.jpeg`,
         company: "Geeraj Business Solutions",
         role: "Founder",
       },
       {
         name: "Mahendra Vadivelu",
-        quote:
-          "Focus on the deliverables and technical expertise stood out during our engagement. I will assure you that you will be our first go to team for any outsourcing need.",
+        quote: `<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  We engaged Veract for an Angular project which required custom printing domain knowledge and involved high level of complexity of the legacy system. Veract team took complete ownership of client coordination, project management and project delivery as well.
+</span>
+<span class="interFont testimonial_white_text">
+  Focus on the deliverables and 
+</span>
+<span class="interFont testimonial_primary_text">
+  technical expertise
+</span>
+<span class="interFont testimonial_white_text">
+  stood out during our engagement.
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  Thank you Veract for all your splendid work in this engagement.
+</span>
+<span class="interFont testimonial_white_text">
+  I will assure you that you will be 
+</span>
+<span class="interFont testimonial_primary_text">
+  our first
+</span>
+<span class="interFont testimonial_white_text">
+  go to team for any outsourcing need.
+</span>
+  `,
         image: `${baseUrl}/Images/LandingPage/Testimonial/mahendra.jpg`,
         company: "Mako IT Lab",
         role: "CEO",
       },
       {
         name: "Salil Nair",
-        quote:
-          "We engaged with Veract team from an early stage and they helped build out our 'KiViStar' App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly.",
+        quote: `<span class="interFont testimonial_white_text">
+  We engaged with Veract team from an 
+</span>
+<span class="interFont testimonial_primary_text">
+  early stage
+</span>
+<span class="interFont testimonial_white_text">
+  and they helped build out 
+</span>
+<span class="interFont testimonial_primary_text">
+  our 'KiViStar'
+</span>
+<span class="interFont testimonial_white_text">
+  App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly.
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.
+</span>
+`,
         image: `${baseUrl}/Images/LandingPage/Testimonial/salil.png`,
         company: "Agrosperity Tech Solutions",
         role: "CTO",
       },
       {
         name: "Anand Shah",
-        quote: "Excellent prompt support in spite of remote location.",
+        quote: `<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  Excellent prompt support in spite of 
+</span>
+<span class="interFont testimonial_primary_text">
+  remote
+</span>
+<span class="interFont testimonial_white_text">
+  location.
+</span>
+`,
         image: `${baseUrl}/Images/LandingPage/Testimonial/AnanadShah.png`,
         company: "Rajdeep Industrial Products",
         role: "Director",
       },
       {
         name: "Bijoy KT",
-        quote:
-          "Our engagement with veract for Datacenter Mart project has been a fantastic experience.This is a very complex project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected. ",
+        quote: `<span class="interFont testimonial_white_text">
+  Our 
+</span>
+<span class="interFont testimonial_primary_text">
+  engagement
+</span>
+<span class="interFont testimonial_white_text">
+  with veract for Datacenter Mart project has been a fantastic 
+</span>
+<span class="interFont testimonial_primary_text">
+  experience.
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon.
+</span>
+<span class="interFont testimonial_white_text">
+  This is a 
+</span>
+<span class="interFont testimonial_primary_text">
+  very complex
+</span>
+<span class="interFont testimonial_white_text">
+  project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.
+</span>
+`,
         image: `${baseUrl}/Images/LandingPage/Testimonial/Bijoy.jpg`,
         company: "Data Center Mart",
         role: "Co-Founder",
