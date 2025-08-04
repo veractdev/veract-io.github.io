@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
 import Footer from '../components/layout/Landing_Page/Footer';
+import FAQ from '../components/layout/Landing_Page/FAQ';
 interface CaseStudyCard {
   name: string;
   routeTo: string;
@@ -113,7 +114,7 @@ export default function Page() {
 
   return (
     loaded && (
-      <LenisProvider>
+      // <LenisProvider>
         <div className="flex flex-col items-center justify-center">
           <Navbar />
           <div className="w-full flex flex-col overflow-y-scroll bg-primary-text select-none">
@@ -209,6 +210,9 @@ export default function Page() {
                       delay: 0.1 * (index * 0.35),
                     },
                   }}
+                  viewport={{
+                    once: true,
+                  }}
                 >
                   <div
                     className='relative group w-full h-[13.188rem] md:w-[19.5rem] md:h-[11.5rem] lg:w-[24.313rem] lg:h-[13.125rem] rounded-[0.875rem] flex justify-center cursor-pointer overflow-hidden'
@@ -245,9 +249,10 @@ export default function Page() {
               ))}
             </div>
           </div>
+          <FAQ faq_props={caseStudiesHomePageData.faq} />
           <Footer ref={footerRef} sessionId={'footer-case-studies'} />
         </div>
-      </LenisProvider>
+      // </LenisProvider>
     )
   );
 }

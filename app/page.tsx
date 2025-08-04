@@ -10,7 +10,8 @@ import Testimonials from "./components/layout/Landing_Page/Testimonials";
 import Footer from "./components/layout/Landing_Page/Footer";
 import LenisProvider from "./LenisProvider";
 import Services from "./components/layout/Landing_Page/Services";
-import { baseUrl } from "@/lib/custom_data";
+import { baseUrl, LandingPageData } from "@/lib/custom_data";
+import FAQ from "./components/layout/Landing_Page/FAQ";
 // import FAQ from "./components/layout/Landing_Page/FAQ";
 
 export default function Page() {
@@ -59,8 +60,8 @@ export default function Page() {
   // }, [loader]);
 
   return (
-    <LenisProvider>
-      {loader && (
+    // <LenisProvider>
+      loader && (
         <div className="w-full flex flex-col items-center justify-center bg-primaty-text select-none  ">
           {preloadImages.map((image, index) => (
             <link key={index} rel="preload" as="image" href={image} />
@@ -73,10 +74,10 @@ export default function Page() {
           <Services />
           <We_Work_With />
           <Testimonials />
-          {/* <FAQ faq_props={LandingPageData.faq} /> */}
+          <FAQ faq_props={LandingPageData.faq} />
           <Footer ref={footerRef} sessionId={"footer-landing-page"} />
         </div>
-      )}
-    </LenisProvider>
+      )
+    // </LenisProvider>
   );
 }
