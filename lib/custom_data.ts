@@ -956,32 +956,37 @@ export const LandingPageData = {
       {
         id: 1,
         title: "What does Veract.co do?",
-        content:
-          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
       },
       {
         id: 2,
-        title: "What does Veract.co do?",
-        content:
-          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        title: "Who is veract.co best suited for?",
+        content: "We work with startups, small teams, and mid-sized businesses looking to scale intelligently without increasing headcount.",
       },
       {
         id: 3,
-        title: "What does Veract.co do?",
-        content:
-          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        title: "What makes veract.co different from other agencies?",
+        content: "We don’t just build software — we build intelligent systems that automate decisions, streamline workflows, and deliver measurable business outcomes.",
       },
       {
         id: 4,
-        title: "What does Veract.co do?",
-        content:
-          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        title: "What technologies do you use?",
+        content: "We use a mix of AI frameworks (LangChain, Gemini, GPT), IoT protocols (Modbus, MQTT, EtherCAT), and full-stack technologies (Python, Node.js, React) tailored to the solution.",
       },
       {
         id: 5,
-        title: "What does Veract.co do?",
-        content:
-          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        title: " Do you offer free consultations or demos?",
+        content: "Yes — we offer a no-cost consultation to explore automation opportunities, and you can try one AI agent or automation module for free.",
+      },
+      {
+        id: 6,
+        title: "How can I streamline my business operations with custom software?",
+        content: "Custom software automates workflows, integrates data, and reduces manual effort. Tools like internal dashboards or domain-specific platforms are effective entry points.",
+      },
+      {
+        id: 7,
+        title: "What are the best options for mobile application development agencies?",
+        content: "Consider agencies with full-stack capabilities, strong UI/UX, and experience across platforms. Browse portfolios and tech stacks before finalizing — veract.co is one such example.",
       },
     ],
   },
@@ -1242,7 +1247,7 @@ export const AgentPageData = {
       },
       {
         id: 2,
-        title: 'How does Veract.io implement Agentic AI?',
+        title: 'How does veract.co implement Agentic AI?',
         content: 'We design agents using LangChain, LangGraph, Gemini, and GPT-4o — enabling them to integrate with platforms like Slack, Notion, Excel, and SAP to automate work.'
       },
       {
@@ -1263,7 +1268,7 @@ export const AgentPageData = {
       {
         id: 6,
         title: 'How do businesses integrate AI agents with existing tools?',
-        content: 'AI agents can connect to tools like Slack, Google Sheets, Notion, or SAP via APIs. Platforms like LangChain and Gemini are often used by teams like Veract.io to build these layers.'
+        content: 'AI agents can connect to tools like Slack, Google Sheets, Notion, or SAP via APIs. Platforms like LangChain and Gemini are often used by teams like veract.co to build these layers.'
       },
       {
         id: 7,
@@ -1273,7 +1278,7 @@ export const AgentPageData = {
       {
         id: 8,
         title: 'Seeking AI and machine learning solutions tailored to healthcare—any leads?',
-        content: 'In healthcare, AI is used for patient monitoring, diagnostics, and smart triage. Veract.io has built systems in this space with a focus on compliance and usability.'
+        content: 'In healthcare, AI is used for patient monitoring, diagnostics, and smart triage. veract.co has built systems in this space with a focus on compliance and usability.'
       },
       {
         id: 9,
@@ -1407,6 +1412,71 @@ export const caseStudiesHomePageData = {
       },
     ],
   },
+  faq: {
+    title: "Curious? Check our FAQs",
+    faq_list: [
+      {
+        id: 1,
+        title: "What types of projects are featured in veract.co's case studies?",
+        content: 'Our portfolio includes AI-powered systems, machine vision platforms, wellness apps, ecommerce solutions, accessibility tools, and dashboards built for various industries.',
+      },
+      {
+        id: 2,
+        title: "Are all of your case studies AI projects?",
+        content: "Many use AI — such as chat assistants, vision models, or analytics — but others focus on user experience, automation, or platform engineering without direct AI.",
+      },
+      {
+        id: 3,
+        title: "What industries are represented in your case studies?",
+        content: "We’ve delivered solutions for agriculture, education, ecommerce, accessibility, wellness, manufacturing, and enterprise tech.",
+      },
+      {
+        id: 4,
+        title: "Can I request a live demo of any project?",
+        content: "Yes — we can walk you through any project and explore how similar outcomes can be tailored to your business.",
+      },
+      {
+        id: 5,
+        title: "What technologies do these projects use?",
+        content: "We use full-stack frameworks like React, Node.js, and Python, alongside AI/ML libraries, OCR, OpenCV, IoT protocols, and integrations with tools like Notion, Slack, and SAP.",
+      },
+      {
+        id: 6,
+        title: "Are these solutions scalable to my organization?",
+        content: "Yes. All systems are built to scale — whether you're piloting a feature or rolling it out enterprise-wide.",
+      },
+      {
+        id: 7,
+        title: "Do any projects combine hardware and software?",
+        content: "Yes — some projects involve camera-based vision systems, IoT sensors, and real-time analytics combined with custom software dashboards.",
+      },
+      {
+        id: 8,
+        title: "What tech stack powers most of these solutions?",
+        content: "Common stacks include Python, Node.js, React, MongoDB, LangChain, OpenCV, and various cloud APIs — chosen based on problem fit and scale.",
+      },
+      {
+        id: 9,
+        title: "Where can I source the best React Native app development services?",
+        content: "React Native is ideal for shared-codebase mobile development. Agencies experienced in JS-heavy stacks, such as veract.co, often provide tailored solutions.",
+      },
+      {
+        id: 10,
+        title: "How are tools like OCR or computer vision used in real-world apps?",
+        content: "OCR is used to extract structured data from documents. Vision is applied in defect detection, thermal analysis, and layout inspection — often in manufacturing and diagnostics.",
+      },
+      {
+        id: 11,
+        title: "What types of problems are solved in your case studies?",
+        content: "Projects address challenges in inspection automation, wellness tracking, accessibility compliance, ecommerce personalization, and enterprise visibility.",
+      },
+      {
+        id: 12,
+        title: "Can you help me find top Flutter app development companies?",
+        content: "Look for teams that deliver smooth UI/UX and native performance across devices. veract.co, among others, builds production-grade Flutter apps for startups and enterprises.",
+      },
+    ]
+  }
 };
 
 export const metadata = [
