@@ -148,7 +148,7 @@ export default function Testimonials() {
                   >
                     {visibleMiniIndex === index ? (
                       // Mini card content (after 3s)
-                      <div className='p-[0.625rem] lg:p-0 flex flex-row items-center justify-center gap-[2.063rem] md:gap-[10.063rem]'>
+                      <div className='p-[0.625rem] lg:p-0 flex flex-row items-center justify-center gap-[0.875rem] lg:gap-[2.063rem] md:gap-[10.063rem]'>
                         <motion.img
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
@@ -162,7 +162,7 @@ export default function Testimonials() {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           className="static lg:absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-0 lg:rotate-[-90deg] interFont font-semibold text-[0.938rem] leading-[1.2em] lg:text-[1.25rem] text-white whitespace-nowrap text-center">
-                          {t.name}
+                          {t.name}{","} {t.role}
                         </motion.div>
                       </div>
                     ) : (
@@ -188,7 +188,7 @@ export default function Testimonials() {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className='flex flex-col'>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
-                              {t.name}
+                              {t.name}{","} {t.role}
                             </div>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.125rem] font-normal leading-[1.2rem] whitespace-nowrap">
                               {t.company}
@@ -221,7 +221,7 @@ export default function Testimonials() {
                   key={index}
                   onMouseEnter={() => (!isMobile() && !isTablet()) && handleSetActiveIndex(index)}
                   onClick={() => (isMobile() || isTablet()) && handleSetActiveIndex(index)}
-                  className="relative w-full p-[0.625rem] gap-[2.063rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[33rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
+                  className="relative w-full p-[0.625rem] gap-[0.875rem] md:gap-[10.063rem] lg:gap-0 lg:p-0 lg:w-[5.125rem] h-max lg:h-[33rem] flex-shrink-0 cursor-pointer flex flex-row lg:flex-col items-center justify-start lg:justify-end rounded-[2.5rem] border-[0.25rem] border-[#4285F4]"
                 >
                   <img loading="lazy"
                     className="w-[2.75rem] h-[2.75rem] lg:w-[3.688rem] lg:h-[3.688rem] mx-0 my-0 lg:mx-[0.75rem] lg:my-[0.50rem] rounded-full"
@@ -229,7 +229,7 @@ export default function Testimonials() {
                     alt="Testimonial_Client"
                   />
                   <div className="static lg:absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-0 lg:rotate-[-90deg] interFont font-semibold text-[0.938rem] leading-[1.2em] lg:text-[1.25rem] text-[#E3E3E3] whitespace-nowrap text-center">
-                    {t.name}
+                    {t.name}{","} {t.role}
                   </div>
                 </button>
 
