@@ -162,7 +162,7 @@ export default function Testimonials() {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           className="static lg:absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-0 lg:rotate-[-90deg] interFont font-semibold text-[0.938rem] leading-[1.2em] lg:text-[1.25rem] text-white whitespace-nowrap text-center">
-                          {t.name}
+                          {t.name}{","} {t.role}
                         </motion.div>
                       </div>
                     ) : (
@@ -188,7 +188,7 @@ export default function Testimonials() {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className='flex flex-col'>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.25rem] font-semibold leading-[1.2rem] whitespace-nowrap">
-                              {t.name}
+                              {t.name}{","} {t.role}
                             </div>
                             <div className="interFont text-[#E3E3E3] text-[0.938rem] lg:text-[1.125rem] font-normal leading-[1.2rem] whitespace-nowrap">
                               {t.company}
@@ -229,7 +229,7 @@ export default function Testimonials() {
                     alt="Testimonial_Client"
                   />
                   <div className="static lg:absolute left-2/3 bottom-[6.5rem]  transform  origin-bottom-left rotate-0 lg:rotate-[-90deg] interFont font-semibold text-[0.938rem] leading-[1.2em] lg:text-[1.25rem] text-[#E3E3E3] whitespace-nowrap text-center">
-                    {t.name}
+                    {t.name}{","} {t.role}
                   </div>
                 </button>
 
