@@ -135,10 +135,12 @@ export default function Navbar() {
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
-                                        sessionStorage.clear()
-                                        setNavbarState(item.id);
-                                        if (item.status == 'active') {
-                                            router.push(item.link);
+                                        if(item.status !== 'inactive'){
+                                            sessionStorage.clear()
+                                            setNavbarState(item.id);
+                                            if (item.status == 'active') {
+                                                router.push(item.link);
+                                            }
                                         }
                                     }}
                                 >
