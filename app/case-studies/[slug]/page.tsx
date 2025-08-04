@@ -8,7 +8,7 @@ import Casestudy_ShowReel from "../../components/layout/Casestudy/Casestudy_Show
 import Casestudy_Key_Features from "../../components/layout/Casestudy/Casestudy_Key_Features";
 import CaseStudy_Challenges from "../../components/layout/Casestudy/CaseStudy_Challenges";
 import Casestudy_Description from "../../components/layout/Casestudy/Casestudy_Description";
-import LenisProvider from "@/app/LenisProvider";
+// import LenisProvider from "@/app/LenisProvider";
 import { caseStudyData } from "@/lib/custom_data";
 import FAQ from "@/app/components/layout/Landing_Page/FAQ";
 import Footer from "@/app/components/layout/Landing_Page/Footer";

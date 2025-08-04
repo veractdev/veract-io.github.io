@@ -1,5 +1,5 @@
 'use client'
-import LenisProvider from '@/app/LenisProvider';
+// import LenisProvider from '@/app/LenisProvider';
 import Navbar from '../components/layout/Navbar';
 import Contact_Us from '../components/layout/ContactUs/contact_us';
 

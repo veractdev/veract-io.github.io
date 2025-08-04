@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
-import LenisProvider from '../LenisProvider'
+// import LenisProvider from '../LenisProvider'
 import { useRouter } from 'next/navigation';
 import { baseUrl, caseStudiesHomePageData } from '@/lib/custom_data';
 import { motion } from 'framer-motion';
