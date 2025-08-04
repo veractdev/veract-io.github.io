@@ -108,32 +108,32 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                 <div className="openSansFont lg:text-[1.125rem] md:text-[1rem] text-[1.125rem] text-[#8F9FA3] font-normal leading-[1.2em]">
                   {details.description}
                 </div>
-                <div className="flex items-start justify-center gap-[32px]">
+                <div className="flex items-end justify-center gap-[32px]">
                   <img
                     src={details.footer_logo_list[0].image}
                     alt="logo image"
                     className="w-[41px] object-cover"
                   />
 
-                  <div className="flex flex-col items-center justify-center gap-[0.5rem] transform origin-top scale-100 lg:scale-[130%]">
+                  <div className="relative flex flex-col items-center justify-center gap-[0.5rem] md:transform md:scale-[150%] lg:transform lg:scale-[100%]">
                     <img
                       loading="lazy"
                       src={details.footer_logo_list[1].image}
                       alt="logo image"
-                      className="w-[41px] object-cover"
+                      className="w-[56px] object-cover"
                     />
                     <img
                       loading="lazy"
                       src={details.footer_logo_list[2].image}
                       alt="logo image"
-                      className="w-[41px] object-cover"
+                      className="w-[56px] object-cover absolute top-[calc(100%+0.5rem)]"
                     />
                   </div>
 
                   <img
                     src={details.footer_logo_list[3].image}
                     alt="logo image"
-                    className="w-[41px] object-cover transform origin-top scale-100 lg:scale-[200%] ml-[0px] lg:ml-[23px]"
+                    className="w-[88px] object-cover"
                   />
                 </div>
               </div>

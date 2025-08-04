@@ -297,7 +297,7 @@ export default function Banner() {
           </motion.div>
 
           {/*Actual; pb-[5.438rem] for web */}
-          <div className="flex items-start justify-center gap-[1.5rem]">
+          <div className="flex items-end justify-center gap-[1.5rem]">
             <motion.img
               src={LandingPageData.banner.banner_image_list[0].image}
               alt="logo image"
@@ -307,7 +307,7 @@ export default function Banner() {
               transition={{ duration: 0.3, delay: 1.3, ease: "easeOut" }}
             />
 
-            <div className="flex flex-col items-center justify-center gap-[0.5rem]">
+            <div className="relativeflex flex-col items-center justify-center gap-[0.5rem]">
               <motion.img
                 loading='lazy'
                 src={LandingPageData.banner.banner_image_list[1].image}
@@ -324,14 +324,14 @@ export default function Banner() {
                 transition={{ duration: 0.3, delay: 1.5, ease: "easeOut" }}
                 src={LandingPageData.banner.banner_image_list[2].image}
                 alt="logo image"
-                className="w-[3.938rem] object-cover"
+                className="w-[3.938rem] object-cover absolute top-[calc(100%+0.5rem)]"
               />
             </div>
 
             <motion.img
               src={LandingPageData.banner.banner_image_list[3].image}
               alt="logo image"
-              className="w-[3.563rem] object-cover transform scale-100 lg:scale-[175%] pl-[0px] lg:pl-[12px]"
+              className="w-[88px] object-cover"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}
