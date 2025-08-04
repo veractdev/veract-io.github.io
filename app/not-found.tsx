@@ -67,7 +67,7 @@ export default function NotFound() {
           >
             Go To Homepage
           </div>
-          <div className="dmSansFont text-[1rem] text-[#FFFFFF]/60 font-normal leading-[1.625rem] -tracking-[0.013rem] text-center mt-[1.625rem] w-[90%] lg:w-[40%] md:w-[60%]">
+          <div className="dmSansFont text-[1rem] text-[#FFFFFF]/60 font-normal leading-[1.625rem] -tracking-[0.013rem] text-center mt-[1rem] w-[90%] lg:w-[40%] md:w-[60%]">
             Redirecting to the home page in {time} {time === 1 ? 'second':'seconds'}...
           </div>
         </div>
