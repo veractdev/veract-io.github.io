@@ -194,7 +194,7 @@ export default function Page() {
                 </div>
               )}
             </div>
-            <div className={`flex flex-row flex-wrap items-start justify-center ${activeTile != 'All' ? 'lg:justify-start' : 'lg:justify-center'} md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-0 md:pb-[3.125rem]`}>
+            <div className={`flex flex-row flex-wrap items-start justify-center lg:justify-start md:gap-[1rem] lg:gap-[0.563rem] px-[1.25rem] md:px-[3.125rem] pb-0 md:pb-[3.125rem]`}>
               {caseStudyCards.map((item: CaseStudyCard, index: number) => (
                 <motion.div
                   key={index}
