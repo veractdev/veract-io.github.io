@@ -114,7 +114,7 @@ export default function Page() {
 
   return (
     loaded && (
-      <LenisProvider>
+      // <LenisProvider>
         <div className="flex flex-col items-center justify-center">
           <Navbar />
           <div className="w-full flex flex-col overflow-y-scroll bg-primary-text select-none">
@@ -252,7 +252,7 @@ export default function Page() {
           <FAQ faq_props={caseStudiesHomePageData.faq} />
           <Footer ref={footerRef} sessionId={'footer-case-studies'} />
         </div>
-      </LenisProvider>
+      // </LenisProvider>
     )
   );
 }

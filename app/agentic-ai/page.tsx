@@ -13,7 +13,7 @@ import { AgentPageData } from '@/lib/custom_data';
 
 export default function Page() {
   return (
-      <LenisProvider>
+      // <LenisProvider>
         <div className='w-screen flex items-center justify-center flex-col bg-[#080808] select-none'>
           <Navbar />
           <AgentBanner/>
@@ -24,6 +24,6 @@ export default function Page() {
           <FAQ faq_props={AgentPageData.faq} />
           <Agent_Footer />
         </div>
-      </LenisProvider>
+      // </LenisProvider>
   );
 }

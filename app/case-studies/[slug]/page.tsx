@@ -53,8 +53,8 @@ export default function Page({ params }: Props) {
   }
 
   return (
-    <LenisProvider>
-      {data && loaded && (
+    // <LenisProvider>
+      data && loaded && (
         <div className="w-screen flex items-center justify-center flex-col bg-primary-text">
           <Navbar />
           <Casestudy_Banner banner_props={data.banner} />
@@ -67,7 +67,7 @@ export default function Page({ params }: Props) {
           <FAQ faq_props={data.faq} />
           <Footer ref={footerRef} sessionId={'footer-case-studies-slug'} />
         </div>
-      )}
-    </LenisProvider>
+      )
+    // </LenisProvider>
   );
 }

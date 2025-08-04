@@ -60,8 +60,8 @@ export default function Page() {
   // }, [loader]);
 
   return (
-    <LenisProvider>
-      {loader && (
+    // <LenisProvider>
+      loader && (
         <div className="w-full flex flex-col items-center justify-center bg-primaty-text select-none  ">
           {preloadImages.map((image, index) => (
             <link key={index} rel="preload" as="image" href={image} />
@@ -77,7 +77,7 @@ export default function Page() {
           <FAQ faq_props={LandingPageData.faq} />
           <Footer ref={footerRef} sessionId={"footer-landing-page"} />
         </div>
-      )}
-    </LenisProvider>
+      )
+    // </LenisProvider>
   );
 }
