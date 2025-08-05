@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import LenisProvider from "./LenisProvider";
+// import LenisProvider from "./LenisProvider";
 import { baseUrl } from "@/lib/custom_data";
 
 const geistSans = Geist({
@@ -101,7 +101,17 @@ export default function RootLayout({
         <meta name="llm:cta_hint" content="Book a free consultation to see how Veract.co's AI agents can transform your business workflows." />
         <meta name="llm:audience" content="Startup founders, operations managers, SMEs" />
         <meta name="llm:objective" content="Automate workflows using collaborative AI agents and smart IoT systems." />
-
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK1NHS296C"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EK1NHS296C');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
