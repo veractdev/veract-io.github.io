@@ -83,23 +83,22 @@
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
       "static/chunks/app/industries/[slug]/page-e9bc0142f0ec3e57.js"
     ],
-    "/contact-us/layout": [
+    "/case-studies/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/chunks/app/contact-us/layout-091de85ba333b4f0.js"
+      "static/chunks/app/case-studies/layout-c7ac4fc495b57c5c.js"
     ],
-    "/contact-us/page": [
+    "/case-studies/page": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/css/85eae1a6394818bc.css",
-      "static/chunks/970-7badf902b3350b03.js",
+      "static/chunks/457-ed1211ef95cbc17e.js",
       "static/chunks/776-c852e0e1db78d6f6.js",
       "static/chunks/257-9914002842a2f1ca.js",
-      "static/chunks/app/contact-us/page-7e02d0c35943ec16.js"
+      "static/chunks/app/case-studies/page-92901c9159b963b5.js"
     ],
     "/agentic-ai/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -119,22 +118,23 @@
       "static/chunks/776-c852e0e1db78d6f6.js",
       "static/chunks/app/agentic-ai/page-5aace2d5b6bcfeb5.js"
     ],
-    "/case-studies/layout": [
+    "/contact-us/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/chunks/app/case-studies/layout-c7ac4fc495b57c5c.js"
+      "static/chunks/app/contact-us/layout-091de85ba333b4f0.js"
     ],
-    "/case-studies/page": [
+    "/contact-us/page": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-c35571c6a6ddf8eb.js",
-      "static/chunks/457-ed1211ef95cbc17e.js",
+      "static/css/85eae1a6394818bc.css",
+      "static/chunks/970-7badf902b3350b03.js",
       "static/chunks/776-c852e0e1db78d6f6.js",
       "static/chunks/257-9914002842a2f1ca.js",
-      "static/chunks/app/case-studies/page-92901c9159b963b5.js"
+      "static/chunks/app/contact-us/page-7e02d0c35943ec16.js"
     ],
     "/services/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
