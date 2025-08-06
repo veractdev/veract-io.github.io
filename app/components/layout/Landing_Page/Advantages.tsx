@@ -160,7 +160,7 @@ export default function Advantages() {
                     {(isMobile() || isTablet())
                       // && openedArr[idx] 
                       ? (
-                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] md:text-[1.125rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
                           {card.description}
                         </div>
                       ) : (
