@@ -1,5 +1,5 @@
 "use client";
-import { AgentPageData, LandingPageData } from "@/lib/custom_data";
+import { AgentPageData } from "@/lib/custom_data";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
