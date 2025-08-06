@@ -1,6 +1,7 @@
 'use client'
 import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -233,7 +234,7 @@ export default function Advantages() {
         <div className='relative z-20 w-full h-max bg-white flex flex-col items-center justify-center gap-[2.5rem] p-[6.25rem_1.5rem] md:p-[6.25rem_3.125rem]'>
           <div className='flex flex-col items-center justify-center gap-[.625rem] w-[calc(100%+1px)] md:w-full'>
             <div className='uppercase syneFont text-[2.5rem] font-bold tracking-0 lg:-tracking-[0.05rem] leading-[1.2em] lg:leading-[3.125rem] text-primary-text text-center'>Featured<span className='text-primary-blue'>{' '}Projects</span></div>
-            <div className='interFont text-[1.125rem] text-primary-text-50 font-normal leading-[1.8em] px-0 lg:px-[12.5rem] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.</div>
+            <div className='interFont text-[1.125rem] text-primary-text-50 font-normal leading-[1.8em] px-0 lg:px-[12.5rem] text-center'>Take a look at our handpicked case studies showcasing real-world tech solutions. A quick glimpse into the impact we create.</div>
           </div>
           <div className='w-full lg:w-max flex flex-col items-center justify-center gap-[2.5rem] px-0 lg:px-[6.25rem]'>
             <div className='w-full lg:w-max flex flex-col lg:flex-row items-center lg:items-start justify-center gap-[2.5rem] md:gap-[2.75rem]'>
@@ -304,7 +305,8 @@ export default function Advantages() {
             >
               More Projects
             </div>
-            <img loading="lazy" src="/Icons/arrow-right.png" alt="arrow-right" className={`absolute ${isHovered || isMobile() || isTablet() ? 'left-[calc(100%-1.65rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} />
+            {/* <img loading="lazy" src="/Icons/arrow-right.png" alt="arrow-right" className={`absolute ${isHovered || isMobile() || isTablet() ? 'left-[calc(100%-1.65rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} /> */}
+            <ArrowRight size={16} color='white' className={`absolute ${isHovered || isMobile() || isTablet() ? 'left-[calc(100%-1.85rem)] opacity-100' : 'left-[calc(100%-3rem)] opacity-0'} transition-all duration-300 easeTransition`} />
           </div>
         </div>
       </div >

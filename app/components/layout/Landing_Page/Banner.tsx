@@ -5,6 +5,7 @@ import Marquee from 'react-fast-marquee';
 import { baseUrl, LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
+import { ArrowRight } from 'lucide-react';
 
 export default function Banner() {
   const router = useRouter();
@@ -229,12 +230,13 @@ export default function Banner() {
                 className="bg-primary-blue absolute inset-0 flex items-center justify-center"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img loading="lazy"
+                {/* <img loading="lazy"
 
                   src={`${baseUrl}/Images/LandingPage/Banner/arrowIconUp.png`}
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain `}
-                />
+                /> */}
+                <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain' />
               </motion.div>
               {/* Hover Text */}
               <motion.div
@@ -247,11 +249,12 @@ export default function Banner() {
                 className="absolute inset-0 flex items-center justify-center bg-primary-blue"
               >
                 {LandingPageData.banner.get_in_touch}
-                <img loading="lazy"
+                {/* <img loading="lazy"
                   src={`${baseUrl}/Images/LandingPage/Banner/arrowIconUp.png`}
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain rotate-45`}
-                />
+                /> */}
+                <ArrowRight size={16} color='white' className='transform -rotate-45 w-[1rem] h-[1rem] object-contain' />
               </motion.div>
             </div>
 

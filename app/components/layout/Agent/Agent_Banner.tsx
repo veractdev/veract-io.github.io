@@ -1,5 +1,6 @@
 "use client";
 import { AgentPageData, LandingPageData } from "@/lib/custom_data";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -50,19 +51,21 @@ export default function AgentBanner() {
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out group-hover:-translate-y-full">
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium text-[0.875rem] md:text-[0.875rem] lg:text-[1rem]">
                     {AgentPageData.banner.book_demo}
-                    <img loading="lazy"
+                    {/* <img loading="lazy"
                       src={LandingPageData.banner.get_in_touch_arrow}
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem]"
-                    />
+                    /> */}
+                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem]' />
                   </div>
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium">
                     {AgentPageData.banner.book_demo}
-                    <img loading="lazy"
+                    {/* <img loading="lazy"
                       src={LandingPageData.banner.get_in_touch_arrow}
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem] rotate-45"
-                    />
+                    /> */}
+                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem] transform -rotate-45' />
                   </div>
                 </div>
               </div>
