@@ -5649,6 +5649,12 @@
   }
 
   @media (width >= 1280px) {
+    .lg\:-ml-\[0\.875rem\] {
+      margin-left: -.875rem;
+    }
+  }
+
+  @media (width >= 1280px) {
     .lg\:ml-\[11\.5\%\] {
       margin-left: 11.5%;
     }
@@ -7157,6 +7163,12 @@
   @media (width >= 1700px) {
     .xl\:px-\[10\%\] {
       padding-inline: 10%;
+    }
+  }
+
+  @media (width >= 1920px) {
+    .\32 xl\:left-\[17\.5rem\] {
+      left: 17.5rem;
     }
   }
 

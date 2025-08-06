@@ -69,7 +69,7 @@ export default function Contact_Us() {
             isOnlyCountryCode(mobileNumber, countryCode) ||
             mobileNumber.trim() === ""
               ? "*Required"
-              : !isValidMobileNumber(mobileNumber, countryCode)
+              : !isValidMobileNumber(mobileNumber)
               ? "Please enter a valid mobile number"
               : "",
         }));
@@ -93,7 +93,7 @@ export default function Contact_Us() {
   };
 
   // Validate mobile number (not empty)
-  const isValidMobileNumber = (mobile: string, countryCode: string) => {
+  const isValidMobileNumber = (mobile: string) => {
     try {
       const phoneNumber = parsePhoneNumberFromString("+" + mobile);
       if (!phoneNumber) return false;
@@ -110,7 +110,7 @@ export default function Contact_Us() {
     isValidEmail(email) &&
     mobileNumber.trim() !== "" &&
     !isOnlyCountryCode(mobileNumber, countryCode) &&
-    isValidMobileNumber(mobileNumber, countryCode);
+    isValidMobileNumber(mobileNumber);
 
   // This function handles the form submission
   const handleSubmitContact = async () => {
@@ -365,7 +365,7 @@ export default function Contact_Us() {
                                 ? "*Required"
                                 : !isValidMobileNumber(
                                     phone,
-                                    `+${countryData.dialCode}`
+                                   
                                   )
                                 ? "Please enter a valid mobile number"
                                 : "",

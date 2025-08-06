@@ -2935,7 +2935,7 @@ function Contact_Us() {
             case "mobileNumber":
                 setErrors((prev)=>({
                         ...prev,
-                        mobileNumber: isOnlyCountryCode(mobileNumber, countryCode) || mobileNumber.trim() === "" ? "*Required" : !isValidMobileNumber(mobileNumber, countryCode) ? "Please enter a valid mobile number" : ""
+                        mobileNumber: isOnlyCountryCode(mobileNumber, countryCode) || mobileNumber.trim() === "" ? "*Required" : !isValidMobileNumber(mobileNumber) ? "Please enter a valid mobile number" : ""
                     }));
                 break;
         }
@@ -2953,7 +2953,7 @@ function Contact_Us() {
         return /^[a-zA-Z\s]+$/.test(name);
     };
     // Validate mobile number (not empty)
-    const isValidMobileNumber = (mobile, countryCode)=>{
+    const isValidMobileNumber = (mobile)=>{
         try {
             const phoneNumber = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$libphonenumber$2d$js$2f$min$2f$exports$2f$parsePhoneNumber$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__parsePhoneNumber__as__parsePhoneNumberFromString$3e$__["parsePhoneNumberFromString"])("+" + mobile);
             if (!phoneNumber) return false;
@@ -2964,7 +2964,7 @@ function Contact_Us() {
     };
     // Check if the form is valid
     // This function checks if all required fields are filled correctly
-    const formValid = firstName.trim() !== "" && isValidEmail(email) && mobileNumber.trim() !== "" && !isOnlyCountryCode(mobileNumber, countryCode) && isValidMobileNumber(mobileNumber, countryCode);
+    const formValid = firstName.trim() !== "" && isValidEmail(email) && mobileNumber.trim() !== "" && !isOnlyCountryCode(mobileNumber, countryCode) && isValidMobileNumber(mobileNumber);
     // This function handles the form submission
     const handleSubmitContact = async ()=>{
         if (!formValid || isLoading) return;
@@ -3312,7 +3312,7 @@ function Contact_Us() {
                                                                 if (touchedFields.mobileNumber) {
                                                                     setErrors((prev)=>({
                                                                             ...prev,
-                                                                            mobileNumber: phone.trim() === "" ? "*Required" : !isValidMobileNumber(phone, `+${countryData.dialCode}`) ? "Please enter a valid mobile number" : ""
+                                                                            mobileNumber: phone.trim() === "" ? "*Required" : !isValidMobileNumber(phone) ? "Please enter a valid mobile number" : ""
                                                                         }));
                                                                 }
                                                             },
