@@ -5,6 +5,7 @@ import "react-phone-input-2/lib/style.css";
 import { useLenis } from "lenis/react";
 import { baseUrl } from "@/lib/custom_data";
 import Footer from "../Landing_Page/Footer";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -68,7 +69,7 @@ export default function Contact_Us() {
             isOnlyCountryCode(mobileNumber, countryCode) ||
             mobileNumber.trim() === ""
               ? "*Required"
-              : !isValidMobileNumber(mobileNumber)
+              : !isValidMobileNumber(mobileNumber, countryCode)
               ? "Please enter a valid mobile number"
               : "",
         }));
@@ -92,8 +93,14 @@ export default function Contact_Us() {
   };
 
   // Validate mobile number (not empty)
-  const isValidMobileNumber = (mobile: string) => {
-    return mobile.trim() !== "";
+  const isValidMobileNumber = (mobile: string, countryCode: string) => {
+    try {
+      const phoneNumber = parsePhoneNumberFromString("+" + mobile);
+      if (!phoneNumber) return false;
+      return phoneNumber.isValid();
+    } catch (e) {
+      return false;
+    }
   };
 
   // Check if the form is valid
@@ -103,7 +110,7 @@ export default function Contact_Us() {
     isValidEmail(email) &&
     mobileNumber.trim() !== "" &&
     !isOnlyCountryCode(mobileNumber, countryCode) &&
-    isValidMobileNumber(mobileNumber);
+    isValidMobileNumber(mobileNumber, countryCode);
 
   // This function handles the form submission
   const handleSubmitContact = async () => {
@@ -356,7 +363,10 @@ export default function Contact_Us() {
                             mobileNumber:
                               phone.trim() === ""
                                 ? "*Required"
-                                : !isValidMobileNumber(phone)
+                                : !isValidMobileNumber(
+                                    phone,
+                                    `+${countryData.dialCode}`
+                                  )
                                 ? "Please enter a valid mobile number"
                                 : "",
                           }));
