@@ -26,6 +26,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1280px;
   --breakpoint-xl: 1700px;
+  --breakpoint-2xl: 1920px;
 }
 
 ::-webkit-scrollbar {
