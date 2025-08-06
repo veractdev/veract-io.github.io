@@ -99,6 +99,7 @@ export default function Contact_Us() {
       if (!phoneNumber) return false;
       return phoneNumber.isValid();
     } catch (e) {
+      console.error("Error validating mobile number:", e);
       return false;
     }
   };
