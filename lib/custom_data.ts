@@ -782,7 +782,7 @@ export const LandingPageData = {
   services: {
     title: "Our Service",
     description:
-      "Take a look at our handpicked case studies showcasing real-world tech solutions.A quick glimpse into the impact we create.",
+      "Take a look at our handpicked case studies showcasing real-world tech solutions. A quick glimpse into the impact we create.",
     service_list: [
       {
         number: "[01]",
