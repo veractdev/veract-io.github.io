@@ -56,7 +56,7 @@ export default function AgentBanner() {
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem]"
                     /> */}
-                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem]' />
+                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem] transform -rotate-45' />
                   </div>
                   <div className="flex items-center justify-center h-[2.25rem] w-full font-medium">
                     {AgentPageData.banner.book_demo}
@@ -65,7 +65,7 @@ export default function AgentBanner() {
                       alt="arrow_icon"
                       className="w-[1rem] h-[1rem] object-contain ml-[0.25rem] rotate-45"
                     /> */}
-                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem] transform -rotate-45' />
+                    <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain ml-[0.25rem]' />
                   </div>
                 </div>
               </div>
