@@ -122,7 +122,7 @@ export default function Page() {
               <div className="absolute top-0 left-0 w-full h-full">
                 {isClient && fetchVideo && (
                   <video
-                    className="w-full h-full object-cover"
+                    className="w-full h-[99%] object-cover"
                     autoPlay
                     // loop
                     muted
