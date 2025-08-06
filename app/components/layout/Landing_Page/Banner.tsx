@@ -141,12 +141,12 @@ export default function Banner() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
 
             >
-              <span className="flex w-auto md:flex md:flex-col lg:flex-row lg:gap-2 md:items-center lg:items-baseline items-baseline md:w-[40rem] lg:w-[47rem]">
+              <span className="inline-flex md:flex md:flex-col lg:inline-flex md:items-center lg:items-baseline items-baseline md:w-[40rem] lg:w-[47rem]">
                 <div className=''>
                   <span className="text-white hidden md:inline lg:hidden">{LandingPageData.banner.title_secondary}</span>
                   <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}</span>
                 </div>
-                <span className={`ml-0 text-primary-blue text-center lg:text-left`}
+                <span className={`ml-0 lg:-ml-[0.875rem] text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem] 2xl:left-[17.5rem]`}
                   style={{
                     width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}
