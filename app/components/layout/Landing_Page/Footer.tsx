@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LandingPageData } from "@/lib/custom_data";
 import { useRouter } from "next/navigation";
+import { useFooterScrollState } from "@/lib/globalState";
 
 const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function Footer(props, ref) {
   const details = LandingPageData.footer;
@@ -11,6 +12,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
   const [showGlow, setShowGlow] = useState(false);
   const coords = useRef({ x: 0, y: 0 });
   const [loader, setLoader] = useState(false);
+  const { setScrollPosition } = useFooterScrollState();
 
   // Animate using RAF to prevent stuttering
   useEffect(() => {
@@ -201,7 +203,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                             link.status == "active"
                           ) {
                             const currentScrollPosition = window.scrollY || window.pageYOffset;
-                            sessionStorage.setItem(props.sessionId || "footer-landing-page", currentScrollPosition.toString());
+                            setScrollPosition(props.sessionId || "footer-landing-page", currentScrollPosition);
                             router.push(link.link);
                           }
                         }}

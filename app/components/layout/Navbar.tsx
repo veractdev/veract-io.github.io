@@ -1,6 +1,6 @@
 "use client";
 import { caseStudyData, navItems } from "@/lib/custom_data";
-import { getNavbarState } from "@/lib/globalState";
+import { getNavbarState, useFooterScrollState } from "@/lib/globalState";
 import { isMobile, isTablet } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
@@ -12,7 +12,7 @@ export default function Navbar() {
     const [loaded, setLoaded] = useState<boolean>(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const { navbarState, setNavbarState } = getNavbarState();
-
+    const { clearScrollPosition } = useFooterScrollState();
 
     useEffect(() => {
         setLoaded(true);
@@ -119,7 +119,9 @@ export default function Navbar() {
                                 lg:static lg:top-auto lg:left-auto
                             `}
                             onClick={() => {
-                                sessionStorage.clear()
+                                // sessionStorage.clear()
+                                clearScrollPosition("footer-landing-page");
+
                                 router.push("/");
                             }}
                         />
@@ -135,8 +137,9 @@ export default function Navbar() {
                                         : " max-sm:hidden max-md:hidden max-lg:hidden"
                                         } relative flex items-center justify-center group`}
                                     onClick={() => {
-                                        if(item.status !== 'inactive'){
-                                            sessionStorage.clear()
+                                        if (item.status !== 'inactive') {
+                                            // sessionStorage.clear()
+                                            clearScrollPosition("footer-landing-page");
                                             setNavbarState(item.id);
                                             if (item.status == 'active') {
                                                 router.push(item.link);
@@ -169,7 +172,12 @@ export default function Navbar() {
                             ))}
                             <div
                                 onClick={() => {
-                                    sessionStorage.clear()
+                                    //  sessionStorage.clear()
+                                    clearScrollPosition("footer-landing-page");
+                                    clearScrollPosition("footer-services");
+                                    clearScrollPosition("footer-case-studies");
+                                    clearScrollPosition("footer-contact-us");
+                                    clearScrollPosition("footer-case-studies-slug");
                                     router.push("/contact-us");
                                 }}
                                 className={`${isHamburgerMenu

@@ -1,11 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useLenis } from "lenis/react";
 import { baseUrl } from "@/lib/custom_data";
 import Footer from "../Landing_Page/Footer";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
+import { motion } from "framer-motion";
+import { useFooterScrollState } from "@/lib/globalState";
 
 export default function Contact_Us() {
   // Form input control fields
@@ -35,6 +37,7 @@ export default function Contact_Us() {
     email: "",
     mobileNumber: "",
   });
+  const { getScrollPosition, clearScrollPosition } = useFooterScrollState();
 
   const handleBlur = (field: keyof typeof touchedFields) => {
     setTouchedFields((prev) => ({ ...prev, [field]: true }));
@@ -47,8 +50,8 @@ export default function Contact_Us() {
             firstName.trim() === ""
               ? "*Required"
               : !isValidName(firstName)
-              ? "Please enter a valid name"
-              : "",
+                ? "Please enter a valid name"
+                : "",
         }));
         break;
       case "email":
@@ -58,8 +61,8 @@ export default function Contact_Us() {
             email.trim() === ""
               ? "*Required"
               : !isValidEmail(email)
-              ? "Please enter a valid mail ID"
-              : "",
+                ? "Please enter a valid mail ID"
+                : "",
         }));
         break;
       case "mobileNumber":
@@ -67,11 +70,11 @@ export default function Contact_Us() {
           ...prev,
           mobileNumber:
             isOnlyCountryCode(mobileNumber, countryCode) ||
-            mobileNumber.trim() === ""
+              mobileNumber.trim() === ""
               ? "*Required"
               : !isValidMobileNumber(mobileNumber)
-              ? "Please enter a valid mobile number"
-              : "",
+                ? "Please enter a valid mobile number"
+                : "",
         }));
         break;
     }
@@ -193,20 +196,29 @@ export default function Contact_Us() {
     }
   }, [loaded, lenis]);
 
-  // Restore scroll position from session storage
+  // Restore scroll position from global state
   useEffect(() => {
-    const savedScrollPosition = sessionStorage.getItem("footer-contact-us");
+    const savedScrollPosition = getScrollPosition("footer-contact-us");
     if (savedScrollPosition) {
       setTimeout(() => {
         // Restore the saved scroll position
-        const scrollPosition = parseInt(savedScrollPosition);
-        if (!isNaN(scrollPosition)) {
-          window.scrollTo(0, scrollPosition);
-        }
-        sessionStorage.clear();
+        window.scrollTo(0, savedScrollPosition);
+        clearScrollPosition("footer-contact-us");
       }, 100);
     }
-  }, []);
+  }, [getScrollPosition, clearScrollPosition]);
+
+  // Handle tab close to clear scroll position
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      clearScrollPosition("footer-contact-us");
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [clearScrollPosition]);
 
   return (
     loaded && (
@@ -250,15 +262,13 @@ export default function Contact_Us() {
                     }}
                     onBlur={() => handleBlur("firstName")}
                     placeholder="First name"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${
-                      errors.firstName && touchedFields.firstName
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border ${errors.firstName && touchedFields.firstName
                         ? "border-[#FF4040]"
                         : "border-white/15"
-                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
-                      errors.firstName && touchedFields.firstName
+                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${errors.firstName && touchedFields.firstName
                         ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                    } transition-all duration-300 ease-in-out`}
+                      } transition-all duration-300 ease-in-out`}
                   />
                   {errors.firstName && touchedFields.firstName && (
                     <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
@@ -309,22 +319,20 @@ export default function Contact_Us() {
                             value.trim() === ""
                               ? "*Required"
                               : !isValidEmail(value)
-                              ? "Please enter a valid mail ID"
-                              : "",
+                                ? "Please enter a valid mail ID"
+                                : "",
                         }));
                       }
                     }}
                     onBlur={() => handleBlur("email")}
                     placeholder="you@company.com"
-                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border-[0.5px] ${
-                      errors.email && touchedFields.email
+                    className={`mt-[14px] w-full h-[52px] text-[14px] font-medium rounded-[5px] px-[20px] text-white placeholder-white/60 bg-white/10 backdrop-blur-md border-[0.5px] ${errors.email && touchedFields.email
                         ? "border-[#FF4040]"
                         : "border-white/15"
-                    } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${
-                      errors.email && touchedFields.email
+                      } shadow-[0_4px_30px_rgba(0,0,0,0.1)] outline-none focus:ring-[1px] ${errors.email && touchedFields.email
                         ? "focus:ring-[#FF4040]"
                         : "focus:ring-[#4287F5]"
-                    } transition-all duration-300 ease-in-out`}
+                      } transition-all duration-300 ease-in-out`}
                   />
                   {errors.email && touchedFields.email && (
                     <p className="text-[#FF4040] text-[12px] mt-[4px] absolute top-full left-0">
@@ -336,11 +344,10 @@ export default function Contact_Us() {
                 <div className="relative w-full md:w-1/2">
                   <div className="text-[14px] font-bold">Mobile number*</div>
                   <div
-                    className={`mt-[14px] relative rounded-[5px] transition-all duration-300 ease-in-out border-solid focus:ring-[1px] border border-white/20 ${
-                      errors.mobileNumber && touchedFields.mobileNumber
+                    className={`mt-[14px] relative rounded-[5px] transition-all duration-300 ease-in-out border-solid focus:ring-[1px] border border-white/20 ${errors.mobileNumber && touchedFields.mobileNumber
                         ? "border-0 focus-within:ring-[#FF4040]"
                         : " focus-within:ring-[#4287F5]"
-                    } focus-within:ring-[1px]`}
+                      } focus-within:ring-[1px]`}
                     onBlur={() => {
                       setTimeout(() => {
                         if (
@@ -365,11 +372,11 @@ export default function Contact_Us() {
                               phone.trim() === ""
                                 ? "*Required"
                                 : !isValidMobileNumber(
-                                    phone,
-                                   
-                                  )
-                                ? "Please enter a valid mobile number"
-                                : "",
+                                  phone,
+
+                                )
+                                  ? "Please enter a valid mobile number"
+                                  : "",
                           }));
                         }
                       }}
@@ -426,17 +433,16 @@ export default function Contact_Us() {
 
               {/* Submit Button */}
               <div
-                className={`text-nowrap mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${
-                  formValid && !isLoading && !submitted && !submissionFailed
+                className={`text-nowrap mt-[30px] w-full px-[77px] py-[12px] flex items-center justify-center rounded-[5px] transition-all duration-300 ease-in-out ${formValid && !isLoading && !submitted && !submissionFailed
                     ? "bg-[#4285F4] cursor-pointer text-white border-[3px] border-white/15 contact_us_shadow"
                     : isLoading
-                    ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                    : submitted
-                    ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
-                    : submissionFailed
-                    ? "bg-[#FF4040]/15 pointer-events-none text-[#FF4040] border-[3px] border-white/15 error_contact_us_shadow"
-                    : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
-                }`}
+                      ? "bg-[#4285F4]/80 text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                      : submitted
+                        ? "bg-[#4285F4] pointer-events-none text-white cursor-default border-[3px] border-white/15 contact_us_shadow"
+                        : submissionFailed
+                          ? "bg-[#FF4040]/15 pointer-events-none text-[#FF4040] border-[3px] border-white/15 error_contact_us_shadow"
+                          : "bg-[#4285F4] pointer-events-none text-white border-[3px] border-white/15 contact_us_shadow opacity-50"
+                  }`}
                 onClick={() => {
                   if (formValid && !submitted && !isLoading)
                     handleSubmitContact();
