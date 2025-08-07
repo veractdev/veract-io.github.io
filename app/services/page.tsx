@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { baseUrl, services } from '@/lib/custom_data';
 import { motion } from 'framer-motion'
 import { isMobile, isTablet } from '@/lib/utils'
+import { useFooterScrollState } from '@/lib/globalState';
 
 export default function Page() {
 
@@ -13,6 +14,7 @@ export default function Page() {
   const [loaded, setLoaded] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
   const [translateY, setTranslateY] = useState<number>(0);
+  const { getScrollPosition, clearScrollPosition } = useFooterScrollState();
 
   useEffect(() => {
     setLoaded(true);
@@ -28,22 +30,31 @@ export default function Page() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Restore scroll position from session storage
+  // Restore scroll position from global state
   useEffect(() => {
     if (loaded) {
-      const savedScrollPosition = sessionStorage.getItem("footer-services");
+      const savedScrollPosition = getScrollPosition("footer-services");
       if (savedScrollPosition) {
         setTimeout(() => {
           // Restore the saved scroll position
-          const scrollPosition = parseInt(savedScrollPosition);
-          if (!isNaN(scrollPosition)) {
-            window.scrollTo(0, scrollPosition);
-          }
-          sessionStorage.clear();
+          window.scrollTo(0, savedScrollPosition);
+          clearScrollPosition("footer-services");
         }, 100);
       }
     }
-  }, [loaded]);
+  }, [loaded, getScrollPosition, clearScrollPosition]);
+
+  // Handle tab close to clear scroll position
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      clearScrollPosition("footer-services");
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [clearScrollPosition]);
 
   return (
     loaded && (
