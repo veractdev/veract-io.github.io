@@ -31,7 +31,7 @@ export default function FAQ({ faq_props }: { faq_props: FAQProps }) {
                     {faq_props.faq_list.map((item) => (
                         <div
                             key={item.id}
-                            className='group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem] overflow-hidden'
+                            className='relative group w-full p-[1.5rem] flex flex-col rounded-[1.25rem] shadow-[0px_0px_0px_1px_#FFFFFF4D_inset] cursor-pointer transition-all duration-300 backdrop-blur-[0.625rem] overflow-hidden'
                             onClick={() => {
                                 if (!active.includes(item.id)) {
                                     setActive([...active, item.id])
