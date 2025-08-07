@@ -62,7 +62,7 @@ export default function Page() {
   return (
     // <LenisProvider>
       loader && (
-        <div className="w-full flex flex-col items-center justify-center bg-primaty-text select-none  ">
+        <div className="w-full flex flex-col items-center justify-center bg-[#0d0d0d] select-none  ">
           {preloadImages.map((image, index) => (
             <link key={index} rel="preload" as="image" href={image} />
           ))}
