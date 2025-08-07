@@ -4,11 +4,11 @@
   "/_not-found/page": "/_not-found",
   "/page": "/",
   "/blogs/[slug]/page": "/blogs/[slug]",
-  "/company/[slug]/page": "/company/[slug]",
   "/industries/[slug]/page": "/industries/[slug]",
+  "/company/[slug]/page": "/company/[slug]",
   "/agentic-ai/page": "/agentic-ai",
-  "/contact-us/page": "/contact-us",
   "/case-studies/page": "/case-studies",
   "/services/page": "/services",
+  "/contact-us/page": "/contact-us",
   "/case-studies/[slug]/page": "/case-studies/[slug]"
 }
