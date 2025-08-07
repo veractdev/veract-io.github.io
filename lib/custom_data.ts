@@ -1069,7 +1069,7 @@ export const LandingPageData = {
       {
         id: 7,
         title: "What are the best options for mobile application development agencies?",
-        content: "Consider agencies with full-stack capabilities, strong UI/UX, and experience across platforms. Browse portfolios and tech stacks before finalizing — veract.co is one such example.",
+        content: "Consider agencies with full-stack capabilities, strong UI/UX, and experience across platforms. Browse portfolios and tech stacks before finalizing — veract is one such example.",
       },
     ],
   },
