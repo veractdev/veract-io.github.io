@@ -6,9 +6,9 @@
   "/blogs/[slug]/page": "/blogs/[slug]",
   "/company/[slug]/page": "/company/[slug]",
   "/industries/[slug]/page": "/industries/[slug]",
-  "/contact-us/page": "/contact-us",
   "/agentic-ai/page": "/agentic-ai",
-  "/services/page": "/services",
+  "/contact-us/page": "/contact-us",
   "/case-studies/page": "/case-studies",
+  "/services/page": "/services",
   "/case-studies/[slug]/page": "/case-studies/[slug]"
 }

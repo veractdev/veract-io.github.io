@@ -1,7 +1,7 @@
 'use client';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { baseUrl, LandingPageData } from '@/lib/custom_data';
+import { LandingPageData } from '@/lib/custom_data';
 import { isMobile, isTablet } from '@/lib/utils';
 
 export default function ShowReel() {

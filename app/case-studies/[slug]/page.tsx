@@ -7,7 +7,6 @@ import Casestudy_Description from "../../components/layout/Casestudy/Casestudy_D
 import CaseStudy_Challenges from "../../components/layout/Casestudy/CaseStudy_Challenges";
 import UserServices from "../../components/layout/Casestudy/Casestudy_UserServices";
 import Casestudy_Key_Features from "../../components/layout/Casestudy/Casestudy_Key_Features";
-import Casestudy_Testimonial from "../../components/layout/Casestudy/Casestudy_Testimonial";
 import FAQ from "../../components/layout/Landing_Page/FAQ";
 import Footer from "../../components/layout/Landing_Page/Footer";
 import { caseStudyData } from "@/lib/custom_data";

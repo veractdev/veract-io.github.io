@@ -6,7 +6,6 @@ import { useLenis } from "lenis/react";
 import { baseUrl } from "@/lib/custom_data";
 import Footer from "../Landing_Page/Footer";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { motion } from "framer-motion";
 import { useFooterScrollState } from "@/lib/globalState";
 
 export default function Contact_Us() {
