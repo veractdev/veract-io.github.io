@@ -15,7 +15,6 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
   const [scale, setScale] = useState<number>(1);
   const [opacity, setOpacity] = useState<number>(1);
   const [loaded, setLoaded] = useState(false);
-  const [animationDelay, setAnimationDelay] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,9 +32,6 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
 
   useEffect(() => {
     setLoaded(true);
-    setTimeout(() => {
-      setAnimationDelay(0.3);
-    }, 100);
   }, [])
 
   return (
@@ -72,7 +68,7 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
             {banner_props.title}
           </div>
           <div
-            className={`w-[calc(100%-4.75rem)] ${animationDelay ? 'fadeInAnimation' : 'opacity-0'} md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center`}
+            className={`w-[calc(100%-4.75rem)] fadeInAnimation md:w-auto lg:w-[37.5rem] interFont text-white text-[1rem] md:text-[1.063rem] md:px-[10.313rem] lg:px-0 lg:text-[1.063rem] leading-[1.5em] tracking-[-0.02em] font-light text-center`}
           >
             {banner_props.description}
           </div>
