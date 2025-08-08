@@ -96,7 +96,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\veract-io.github.io",
+    "outputFileTracingRoot": "C:\\Users\\HP\\Documents\\veract_latest\\veract-io.github.io",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -154,7 +154,7 @@
       "middlewarePrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 11,
+      "cpus": 7,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -279,10 +279,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "D:\\veract-io.github.io"
+      "root": "C:\\Users\\HP\\Documents\\veract_latest\\veract-io.github.io"
     }
   },
-  "appDir": "D:\\veract-io.github.io",
+  "appDir": "C:\\Users\\HP\\Documents\\veract_latest\\veract-io.github.io",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

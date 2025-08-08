@@ -1,4 +1,4 @@
-// File: D:\veract-io.github.io\app\industries\[slug]\page.tsx
+// File: C:\Users\HP\Documents\veract_latest\veract-io.github.io\app\industries\[slug]\page.tsx
 import * as entry from '../../../../../app/industries/[slug]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
