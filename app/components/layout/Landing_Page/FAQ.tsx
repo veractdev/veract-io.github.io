@@ -26,7 +26,7 @@ export default function FAQ({ faq_props }: { faq_props: FAQProps }) {
         loaded && (
             <div className='w-full h-max flex flex-col items-center relative z-50 bg-primary-text p-[3.125rem_1.5rem_6.25rem_1.5rem] md:p-[3.125rem_3.125rem_6.25rem_3.125rem] gap-[3.75rem] faqBackgroundOverlay'>
                 {/* <img src="/Images/LandingPage/FAQ/Lines.png" alt="FAQ background overlay" className='absolute top-0 left-0 z-0 w-full h-full object-cover' /> */}
-                <div className='z-1 px-[7.625rem] md:px-[13.563rem] lg:px-0 lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>{faq_props.title}</div>
+                <div className='z-1 px-[4rem] md:px-[13.563rem] lg:px-0 lg:w-full syneFont text-[1.875rem] text-white font-semibold leading-[1.2em] -tracking-[0.05em] text-center'>{faq_props.title}</div>
                 <div className='z-1 w-full lg:w-[calc(100%-21.875rem)] flex flex-col gap-[0.625rem]'>
                     {faq_props.faq_list.map((item) => (
                         <div

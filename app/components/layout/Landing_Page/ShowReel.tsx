@@ -9,9 +9,6 @@ export default function ShowReel() {
   const scrollYRef = useRef(0);
   const videoRef = useRef<HTMLIFrameElement>(null);
   const [isVideo, setVideo] = useState<boolean>(false);
-
-  const [isMobileView, setIsMobileView] = useState(false);
-  const [isTabView, setTabView] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'], // triggers when the top of section hits top of viewport
@@ -31,17 +28,6 @@ export default function ShowReel() {
   });
 
   const [isHover, setHover] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (window) {
-      if (window.innerWidth < 1024) {
-        setTabView(true);
-      }
-      if (window.innerWidth < 768) {
-        setIsMobileView(true);
-      }
-    }
-  }, [])
 
   useEffect(() => {
     const body = document.body;
@@ -94,13 +80,13 @@ export default function ShowReel() {
 
 
   return (
-    <div ref={sectionRef} className={`${isMobileView ? 'h-max' : `${isTabView ? 'h-[180vh]' : 'h-[180vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem] overlay_patch`}>
+    <div ref={sectionRef} className={`${isMobile() ? 'h-max' : `${isTablet() ? 'h-[180vh]' : 'h-[180vh]'}`} relative mt-[100vh] bg-primary-text flex flex-col pb-[6.188rem] overlay_patch`}>
       {/* <div className='flex items-center justify-center w-full'>
         <div className='overlay_patch'></div>
       </div> */}
       <motion.div
         id='showreel-text'
-        className={`uppercase static md:sticky lg:sticky z-10 ${isTabView ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
+        className={`uppercase static md:sticky lg:sticky z-10 ${isTablet() ? 'top-[7rem]' : 'top-0'} w-screen syneFont text-[3rem] md:text-[7.813rem] lg:text-[11.563rem] leading-[100%] tracking-[-0.05em] font-bold text-white text-center bg-primary-text`}
         style={{
           scale: !isMobile() ? springTextScale : 1,
         }}
@@ -123,7 +109,7 @@ export default function ShowReel() {
             playsInline
             controls={false}
           >
-            <source src={`${isMobileView ? LandingPageData.showReel.video[2] : isTabView ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
+            <source src={`${isMobile() ? LandingPageData.showReel.video[2] : isTablet() ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
@@ -170,7 +156,7 @@ export default function ShowReel() {
             playsInline
             controls={false}
           >
-            <source src={`${isMobileView ? LandingPageData.showReel.video[2] : isTabView ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
+            <source src={`${isMobile() ? LandingPageData.showReel.video[2] : isTablet() ? LandingPageData.showReel.video[1] : LandingPageData.showReel.video[0]}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <motion.div
