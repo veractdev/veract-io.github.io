@@ -147,7 +147,7 @@ export default function Banner() {
                   <span className="text-white hidden md:inline">{LandingPageData.banner.title_tertiary}</span>
                 </div>
                 {/* lg:-ml-[0.875rem] r */}
-                <span className={`ml-0  text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem] 2xl:left-[17.5rem]`}
+                <span className={`ml-0 lg:-ml-[0.875rem] text-primary-blue text-center lg:text-left lg:absolute lg:left-[12rem] 2xl:left-[17.5rem]`}
                   style={{
                     width: `${isMobile() || isTablet() ? `100%` : `${LandingPageData.banner.typwriting_animation_list[wordIndex].word.length}ch`}`,
                   }}
