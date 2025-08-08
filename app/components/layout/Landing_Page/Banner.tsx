@@ -90,7 +90,7 @@ export default function Banner() {
         loop
         controls={false}
       >
-        <source src={`${baseUrl}/Images/LandingPage/Banner/hero banner video.mp4`} type="video/mp4" />
+        <source src={`${baseUrl}/Images/LandingPage/Banner/home_bg.mp4`} type="video/mp4" />
       </video>
 
       {/* text overlays */}
