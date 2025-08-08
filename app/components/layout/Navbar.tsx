@@ -121,7 +121,10 @@ export default function Navbar() {
                             onClick={() => {
                                 // sessionStorage.clear()
                                 clearScrollPosition("footer-landing-page");
-
+                                clearScrollPosition("footer-services");
+                                clearScrollPosition("footer-case-studies");
+                                clearScrollPosition("footer-contact-us");
+                                clearScrollPosition("footer-case-studies-slug");
                                 router.push("/");
                             }}
                         />
@@ -140,6 +143,10 @@ export default function Navbar() {
                                         if (item.status !== 'inactive') {
                                             // sessionStorage.clear()
                                             clearScrollPosition("footer-landing-page");
+                                            clearScrollPosition("footer-services");
+                                            clearScrollPosition("footer-case-studies");
+                                            clearScrollPosition("footer-contact-us");
+                                            clearScrollPosition("footer-case-studies-slug");
                                             setNavbarState(item.id);
                                             if (item.status == 'active') {
                                                 router.push(item.link);
