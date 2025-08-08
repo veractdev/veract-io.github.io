@@ -83,22 +83,23 @@
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
       "static/chunks/app/industries/[slug]/page-e9bc0142f0ec3e57.js"
     ],
-    "/services/layout": [
+    "/agentic-ai/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
-      "static/chunks/app/services/layout-5f2278727f11e4b3.js"
+      "static/chunks/app/agentic-ai/layout-4c678f6ebde62b15.js"
     ],
-    "/services/page": [
+    "/agentic-ai/page": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
+      "static/chunks/c15bf2b0-d67976aba37a88f8.js",
       "static/chunks/457-ed1211ef95cbc17e.js",
+      "static/chunks/375-e00643c36b69924b.js",
       "static/chunks/502-4623b5043226a26d.js",
-      "static/chunks/257-67ed01e592fb0f92.js",
-      "static/chunks/app/services/page-2076e72e9cad4e79.js"
+      "static/chunks/app/agentic-ai/page-e1c9965cc5d9f573.js"
     ],
     "/case-studies/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -135,23 +136,22 @@
       "static/chunks/257-67ed01e592fb0f92.js",
       "static/chunks/app/contact-us/page-4bc0b6cfd8b1d4a8.js"
     ],
-    "/agentic-ai/layout": [
+    "/services/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
-      "static/chunks/app/agentic-ai/layout-4c678f6ebde62b15.js"
+      "static/chunks/app/services/layout-5f2278727f11e4b3.js"
     ],
-    "/agentic-ai/page": [
+    "/services/page": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
       "static/chunks/4bd1b696-299743f5624cdabe.js",
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
-      "static/chunks/c15bf2b0-d67976aba37a88f8.js",
       "static/chunks/457-ed1211ef95cbc17e.js",
-      "static/chunks/375-e00643c36b69924b.js",
       "static/chunks/502-4623b5043226a26d.js",
-      "static/chunks/app/agentic-ai/page-e1c9965cc5d9f573.js"
+      "static/chunks/257-67ed01e592fb0f92.js",
+      "static/chunks/app/services/page-2076e72e9cad4e79.js"
     ],
     "/case-studies/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
