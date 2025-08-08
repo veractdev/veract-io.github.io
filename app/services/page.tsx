@@ -114,7 +114,7 @@ export default function Page() {
                 </div> */}
                 <span className='w-full lg:w-[350px] ' dangerouslySetInnerHTML={{ __html: service.title }} />
               </div>
-              <div className='w-full flex flex-col md:flex-row gap-[2.31rem] md:gap-[4.38rem] lg:gap-[2.06rem] items-center md:items-start justify-center'>
+              <div className='w-full flex flex-col md:flex-row gap-[2.31rem] md:gap-[4.38rem] lg:gap-[2.06rem] items-center md:items-start justify-center md:justify-start lg:justify-center'>
                 <div className='w-auto lg:w-[22.125rem] flex flex-col p-[0.625rem_1.25rem] md:p-[0.62rem_0_0_2.094rem] lg:p-0 gap-[1rem] lg:gap-[0.62rem] items-start lg:items-center justify-center'>
                   {service.service_array.map((service, index) => (
                     <div key={index} className='flex flex-row gap-[0.62rem] items-center justify-center p-[0.38rem_0.62rem]'>
