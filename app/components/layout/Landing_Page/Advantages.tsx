@@ -4,6 +4,7 @@ import { isMobile, isTablet } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 
 export default function Advantages() {
 
@@ -134,11 +135,29 @@ export default function Advantages() {
                     }}
                   >
                     {/* Animated background for mobile click */}
-                    <div
+                    {/* <div
                       className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx] ? 'scale-200' : 'scale-100'
                         } ${(isMobile() || isTablet()) && scaledArr[idx] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
                       style={{ borderRadius: '1.875rem' }}
-                    ></div>
+                    >
+                    </div> */}
+
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={card.image}
+                        alt="card-image"
+                        fill
+                        priority
+                        className="object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                      <Image
+                        src={card.hoverImage}
+                        alt="card-hover-image"
+                        fill
+                        priority
+                        className="object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+                      />
+                    </div>
                     {/* Overlay image or black with 50% opacity when opened on mobile */}
                     {(isMobile() || isTablet()) && openedArr[idx] && (
                       <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>
@@ -160,7 +179,7 @@ export default function Advantages() {
                     {(isMobile() || isTablet())
                       // && openedArr[idx] 
                       ? (
-                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] md:text-[1.125rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                        <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] md:text-[1.25rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
                           {card.description}
                         </div>
                       ) : (
@@ -190,9 +209,25 @@ export default function Advantages() {
                     {/* Animated background for mobile click */}
                     <div
                       className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${(isMobile() || isTablet()) && openedArr[idx + 2] ? 'scale-200' : 'scale-100'
-                        } ${(isMobile() || isTablet()) && scaledArr[idx + 2] ? 'opacity-30' : 'opacity-100'} ${card.bg}`}
+                        } ${(isMobile() || isTablet()) && scaledArr[idx + 2] ? 'opacity-30' : 'opacity-100'} `}
                       style={{ borderRadius: '1.875rem' }}
                     ></div>
+                    <div className="absolute inset-0 z-0">
+                      <Image
+                        src={card.image}
+                        alt="card-image"
+                        fill
+                        priority
+                        className="object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                      <Image
+                        src={card.hoverImage}
+                        alt="card-hover-image"
+                        fill
+                        priority
+                        className="object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+                      />
+                    </div>
                     {/* Overlay image or black with 50% opacity when opened on mobile */}
                     {(isMobile() || isTablet()) && openedArr[idx + 2] && (
                       <div className="absolute inset-0 bg-black/50 z-10" style={{ borderRadius: '1.875rem' }}></div>

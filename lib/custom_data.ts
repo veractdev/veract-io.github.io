@@ -702,7 +702,9 @@ export const LandingPageData = {
       {
         title: "Bespoke Software, Tailored to Your Business Needs",
         // /Images/LandingPage/Advantages/Bespoke_Software_Tailored_to_Your_Business_Needs.jpg
-        bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img1.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        // bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img1.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        image: `${baseUrl}/Images/LandingPage/Advantages/img1.webp`,
+        hoverImage: `${baseUrl}/Images/LandingPage/Hover.png`,
         description:
           "Custom software solutions designed around your workflows — not off-the-shelf",
         gradient:
@@ -712,7 +714,9 @@ export const LandingPageData = {
       {
         title: "Digital Transformation Strategy with the Right Technologies",
         // /Images/LandingPage/Advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.jpg
-        bg: `bg-[url('/Images/LandingPage/advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        // bg: `bg-[url('/Images/LandingPage/advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        image: `/Images/LandingPage/advantages/Digital_Transformation_Strategy_with_the_Right_Technologies.webp`,
+        hoverImage: `${baseUrl}/Images/LandingPage/Hover.png`,
         description:
           "Modernize operations with digital tools that serve real business goals",
         gradient:
@@ -722,7 +726,9 @@ export const LandingPageData = {
       {
         title: "Flexible Engagement Models for Agile Development",
         // /Images/LandingPage/Advantages/Flexible_Engagement_Models_for_Agile_Development.jpg
-        bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img3.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        // bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img3.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        image: `${baseUrl}/Images/LandingPage/Advantages/img3.webp`,
+        hoverImage: `${baseUrl}/Images/LandingPage/Hover.png`,
         description:
           "Start small, scale fast, or pause — flexibility built into the process",
         gradient:
@@ -732,7 +738,9 @@ export const LandingPageData = {
       {
         title: "Measurable Outcomes Through AI, IoT, and Machine Vision",
         // /Images/LandingPage/Advantages/Measurable_Outcomes_Through_AI_IoT_and_Machine_Vision.jpg
-        bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img4.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        // bg: `bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Advantages/img4.webp')] bg-cover bg-center object-center group-hover:bg-[url('https://veract-website-assets.s3.ap-south-1.amazonaws.com/Images/LandingPage/Hover.png')]`,
+        image: `${baseUrl}/Images/LandingPage/Advantages/img4.webp`,
+        hoverImage: `${baseUrl}/Images/LandingPage/Hover.png`,
         description:
           "Drive impact with intelligent systems and real-time performance insights",
         gradient:
