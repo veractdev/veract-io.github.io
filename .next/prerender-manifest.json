@@ -30,7 +30,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/contact-us": {
+    "/agentic-ai": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -43,8 +43,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contact-us",
-      "dataRoute": "/contact-us.rsc",
+      "srcRoute": "/agentic-ai",
+      "dataRoute": "/agentic-ai.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -78,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/agentic-ai": {
+    "/contact-us": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,8 +91,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/agentic-ai",
-      "dataRoute": "/agentic-ai.rsc",
+      "srcRoute": "/contact-us",
+      "dataRoute": "/contact-us.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "4713e9a9ce0b1cc4b5c15722e90ea949",
-    "previewModeSigningKey": "5b1d3b1b8b6f398cc5b6a7f9ba278b0bb97cdd84b0717700dac7d26b71d4d421",
-    "previewModeEncryptionKey": "fc04de94f140d01eb2b8054b17152040610215bc7d4b196340e234d4d6484128"
+    "previewModeId": "cefbfb9f4739bd7c51194b2adc293367",
+    "previewModeSigningKey": "a84c60924be37fe4335beb79042e0e8112347c0352d2a6a06c01605e777c69e4",
+    "previewModeEncryptionKey": "b0aadc085a6adad371bbfac92e2a7875b7e36005fbdb8ee1258f1906f47c3b16"
   }
 }

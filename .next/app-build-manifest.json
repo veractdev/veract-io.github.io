@@ -39,7 +39,7 @@
       "static/chunks/726-14c9e64d73eec5d5.js",
       "static/chunks/502-ac504c12a98651a3.js",
       "static/chunks/257-67ed01e592fb0f92.js",
-      "static/chunks/app/page-bb860ead9a82e351.js"
+      "static/chunks/app/page-bbecc2364555c1f1.js"
     ],
     "/blogs/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -54,6 +54,20 @@
       "static/chunks/303-603ebaa76d6ad84f.js",
       "static/chunks/main-app-7e3486fc6da2fe6e.js",
       "static/chunks/app/blogs/[slug]/page-b388d7d09e259b1a.js"
+    ],
+    "/industries/[slug]/layout": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/303-603ebaa76d6ad84f.js",
+      "static/chunks/main-app-7e3486fc6da2fe6e.js",
+      "static/chunks/app/industries/[slug]/layout-9426357a93be26be.js"
+    ],
+    "/industries/[slug]/page": [
+      "static/chunks/webpack-92dcaa06aa8ac813.js",
+      "static/chunks/4bd1b696-299743f5624cdabe.js",
+      "static/chunks/303-603ebaa76d6ad84f.js",
+      "static/chunks/main-app-7e3486fc6da2fe6e.js",
+      "static/chunks/app/industries/[slug]/page-e9bc0142f0ec3e57.js"
     ],
     "/company/[slug]/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
@@ -86,20 +100,6 @@
       "static/chunks/375-e00643c36b69924b.js",
       "static/chunks/502-ac504c12a98651a3.js",
       "static/chunks/app/agentic-ai/page-e1c9965cc5d9f573.js"
-    ],
-    "/industries/[slug]/layout": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/303-603ebaa76d6ad84f.js",
-      "static/chunks/main-app-7e3486fc6da2fe6e.js",
-      "static/chunks/app/industries/[slug]/layout-9426357a93be26be.js"
-    ],
-    "/industries/[slug]/page": [
-      "static/chunks/webpack-92dcaa06aa8ac813.js",
-      "static/chunks/4bd1b696-299743f5624cdabe.js",
-      "static/chunks/303-603ebaa76d6ad84f.js",
-      "static/chunks/main-app-7e3486fc6da2fe6e.js",
-      "static/chunks/app/industries/[slug]/page-e9bc0142f0ec3e57.js"
     ],
     "/contact-us/layout": [
       "static/chunks/webpack-92dcaa06aa8ac813.js",
