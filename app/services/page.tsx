@@ -103,7 +103,7 @@ export default function Page() {
             >
               <div className='flex flex-row gap-[0.69rem] md:gap-[0.69rem] lg:gap-[2.06rem] items-start justify-center'>
                 <div
-                  className='interFont text-[1.125rem] text-white font-medium leading-normal'
+                  className='w-auto lg:w-[2.375rem] interFont text-[1.125rem] text-white font-medium leading-normal'
                 >
                   [{service.id}]
                 </div>
@@ -115,7 +115,7 @@ export default function Page() {
                 <span className='w-full lg:w-[350px] ' dangerouslySetInnerHTML={{ __html: service.title }} />
               </div>
               <div className='w-full flex flex-col md:flex-row gap-[2.31rem] md:gap-[4.38rem] lg:gap-[2.06rem] items-center md:items-start justify-center'>
-                <div className='flex flex-col p-[0.625rem_1.25rem] md:p-[0.62rem_0_0_2.094rem] lg:p-0 gap-[1rem] lg:gap-[0.62rem] items-start lg:items-center justify-center'>
+                <div className='w-auto lg:w-[22.125rem] flex flex-col p-[0.625rem_1.25rem] md:p-[0.62rem_0_0_2.094rem] lg:p-0 gap-[1rem] lg:gap-[0.62rem] items-start lg:items-center justify-center'>
                   {service.service_array.map((service, index) => (
                     <div key={index} className='flex flex-row gap-[0.62rem] items-center justify-center p-[0.38rem_0.62rem]'>
                       <img src={service.service_icon} alt="service icon" className='w-[1.5rem] h-[1.5rem]' />
@@ -123,7 +123,7 @@ export default function Page() {
                     </div>
                   ))}
                 </div>
-                <div className='flex flex-col gap-[1.38rem] items-center md:items-start justify-center py-0 md:py-[0.62rem] lg:py-0'>
+                <div className='w-auto lg:w-[20.125rem] flex flex-col gap-[1.38rem] items-center md:items-start justify-center py-0 md:py-[0.62rem] lg:py-0'>
                   {service.service_CTA.map((CTA, index) => (
                     <div
                       key={index}
