@@ -664,7 +664,7 @@ export const LandingPageData = {
     video: [
       `${baseUrl}/Images/LandingPage/showReel/homepage showreel web view.mp4`,
       `${baseUrl}/Images/LandingPage/showReel/tab view home showreel.mp4`,
-      `${baseUrl}/Images/LandingPage/showReel/mobile view home page showreel.mp4`,
+      `${baseUrl}/Images/LandingPage/showReel/mobile-compressed-home-page-video.mp4`,
     ],
     youtube_url:
       "https://www.youtube.com/embed/pFtxR-O78sY?si=t_x_0UF65Q1YaHFw",
