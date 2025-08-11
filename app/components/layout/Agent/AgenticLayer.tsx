@@ -107,7 +107,7 @@ export default function AgenticLayer() {
           </div>
           {/* animate-agentic-layer-opacity */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: isMobile() ? 1 : 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
               duration: 0.5,

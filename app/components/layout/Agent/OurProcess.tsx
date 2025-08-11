@@ -11,7 +11,6 @@ export default function OurProcess() {
 
   useEffect(() => {
     if (!loaded) return;
-
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('.fade-in-up').forEach((el) => {
         gsap.fromTo(
@@ -34,11 +33,29 @@ export default function OurProcess() {
         );
       });
     });
-
     ScrollTrigger.refresh();
-
     return () => ctx.revert();
   }, [loaded]);
+
+  useEffect(()=>{
+    if(!loaded) return;
+    const restartAnimation = () => {
+      if (document.visibilityState === 'visible') {
+        const el = document.querySelector('.animate-processing-applications') as HTMLElement;
+        if (el) {
+          el.classList.remove('animate-processing-applications');
+          void el.offsetWidth; // force reflow
+          el.classList.add('animate-processing-applications');
+        }
+      }
+    };
+  
+    document.addEventListener('visibilitychange', restartAnimation);
+  
+    return () => {
+      document.removeEventListener('visibilitychange', restartAnimation);
+    };
+  },[loaded])
 
   useEffect(() => {
     setLoaded(true);
