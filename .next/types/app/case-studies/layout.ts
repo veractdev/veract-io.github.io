@@ -1,4 +1,4 @@
-// File: C:\Users\HP\Documents\veract_latest\veract-io.github.io\app\case-studies\layout.tsx
+// File: D:\veract-io.github.io\app\case-studies\layout.tsx
 import * as entry from '../../../../app/case-studies/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

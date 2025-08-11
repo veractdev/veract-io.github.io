@@ -1,4 +1,4 @@
-// File: C:\Users\HP\Documents\veract_latest\veract-io.github.io\app\api\contact-us\route.ts
+// File: D:\veract-io.github.io\app\api\contact-us\route.ts
 import * as entry from '../../../../../app/api/contact-us/route.js'
 import type { NextRequest } from 'next/server.js'
 
