@@ -204,7 +204,7 @@ export default function UserServices({
                     {card.title}
                   </div>
                   {(isMobile() || isTablet()) && openedArr[idx] ? (
-                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
+                    <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] md:text-[1.25rem] font-light tracking-[-0.04em] leading-[1.5em] z-30">
                       {card.description}
                     </div>
                   ) : (
@@ -325,7 +325,7 @@ export default function UserServices({
               {user_services_props.service_list[4].title}
             </div>
             {(isMobile() || isTablet()) && openedArr[4] ? (
-              <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] tracking-[-0.04em] leading-[1.5em] z-30">
+              <div className="absolute md:bottom-[2.5rem] bottom-[1.25rem] left-[1.25rem] mr-[1.25rem] interFont text-white text-[0.875rem] md:text-[1.25rem] tracking-[-0.04em] leading-[1.5em] z-30">
                 {user_services_props.service_list[4].description}
               </div>
             ) : (
