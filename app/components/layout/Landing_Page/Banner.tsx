@@ -68,6 +68,9 @@ export default function Banner() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
+      // console.log(window.scrollY, window.pageYOffset);
+      // console.log(scrollY);
+      // console.log(scrollY < window.innerHeight);
       setShowBanner(scrollY < window.innerHeight); // hide after 100vh
     };
 
@@ -77,7 +80,7 @@ export default function Banner() {
 
   return (
     <div className={`
-      fixed top-0 select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black 
+      fixed top-0 transform will-change-transform translate-3d select-none  w-full h-[100vh] overflow-hidden perspective-[75rem] flex items-center justify-center bg-black 
       ${showBanner ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
       `}
       style={{ transformStyle: 'preserve-3d' }}
