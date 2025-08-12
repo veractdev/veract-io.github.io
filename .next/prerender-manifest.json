@@ -78,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/services": {
+    "/agentic-ai": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,8 +91,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/services",
-      "dataRoute": "/services.rsc",
+      "srcRoute": "/agentic-ai",
+      "dataRoute": "/agentic-ai.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +126,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/agentic-ai": {
+    "/services": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +139,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/agentic-ai",
-      "dataRoute": "/agentic-ai.rsc",
+      "srcRoute": "/services",
+      "dataRoute": "/services.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "756dc1ef0a760baed8fe5fe561d26ec7",
-    "previewModeSigningKey": "34b26ed578e489774f38f1b3b2fa834ab859f8750a6ee7f9aa884bb7d4530f35",
-    "previewModeEncryptionKey": "39512d9216b3188e6180cd59ba804868c758befa6f08ab4c80f3644c7d797ddc"
+    "previewModeId": "628607744a6877ed3f1cf1472317bc46",
+    "previewModeSigningKey": "f47f7eb4b38db78e135bf9e7bb964568a34a0a2359326435e75938ec00ba8a3f",
+    "previewModeEncryptionKey": "788cece7072ed7aae616c3818e254ea7e296daf9cb0052f38fb764b48ac321e5"
   }
 }
