@@ -8,7 +8,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
   const details = LandingPageData.footer;
   const router = useRouter();
   const svgRef = useRef<SVGSVGElement>(null);
-  const circleRef = useRef<SVGCircleElement>(null);
+  const circleRef = useRef<SVGImageElement>(null);
   const [showGlow, setShowGlow] = useState(false);
   const coords = useRef({ x: 0, y: 0 });
   const [loader, setLoader] = useState(false);
@@ -19,10 +19,11 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
     let animationFrame: number;
 
     const animate = () => {
-      const circle = circleRef.current;
-      if (circle) {
-        circle.setAttribute("cx", String(coords.current.x));
-        circle.setAttribute("cy", String(coords.current.y));
+      const image = circleRef.current;
+      if (image) {
+        // Update the image position to follow the mouse
+        image.setAttribute("x", String(coords.current.x - 10));
+        image.setAttribute("y", String(coords.current.y - 10));
       }
       animationFrame = requestAnimationFrame(animate);
     };
@@ -76,6 +77,9 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+            <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="20" height="20">
+              <image href="/Images/services/images/Digital_wellness.svg" width="20" height="20" />
+            </pattern>
           </defs>
           <path
             fill="#1c1c1c"
@@ -86,14 +90,16 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
             onMouseMove={handleMouseMove}
           />
           {showGlow && (
-            <circle
+            <image
               ref={circleRef}
-              r={10}
-              fill="#004FD1"
+              href="/Images/LandingPage/Footer/footer_logo_blur.svg"
+              x="-10"
+              y="-10"
+              width="20"
+              height="20"
               filter="url(#glow)"
               clipPath="url(#text-clip)"
               style={{ pointerEvents: "none" }}
-              className="w-[80.33px] h-[119.31px] blur-[8px]"
             />
           )}
         </svg>
