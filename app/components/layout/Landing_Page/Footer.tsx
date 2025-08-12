@@ -78,7 +78,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
               </feMerge>
             </filter>
             <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="20" height="20">
-              <image href="/Images/services/images/Digital_wellness.svg" width="20" height="20" />
+              <image href="/Images/LandingPage/Footer/veract_logo_overlay.svg" width="20" height="20" />
             </pattern>
           </defs>
           <path
@@ -92,7 +92,7 @@ const Footer = React.forwardRef<HTMLDivElement, { sessionId?: string }>(function
           {showGlow && (
             <image
               ref={circleRef}
-              href="/Images/LandingPage/Footer/footer_logo_blur.svg"
+              href="/Images/LandingPage/Footer/veract_logo_overlay.svg"
               x="-10"
               y="-10"
               width="20"
