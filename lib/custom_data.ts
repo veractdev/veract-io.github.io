@@ -656,7 +656,7 @@ export const LandingPageData = {
       {
         id: 21,
         img: `/Images/LandingPage/Banner/carousel_images/client_logos/wasted.webp`,
-      }
+      },
     ],
   },
   showReel: {
@@ -932,8 +932,18 @@ export const LandingPageData = {
   me wherever required.
 </span>
 <span class="interFont testimonial_text_blur testimonial_blurred_text">
-  Really thrilled to work with Veract for the software upgrades of our product. I would certainly recommend Veract for product development and technical consulting.
+  Really thrilled to work with Veract for the software upgrades of our product.
 </span>
+<span class="interFont testimonial_white_text">
+  I would
+</span>
+<span class="interFont testimonial_primary_text">
+  recommend
+</span>
+<span class="interFont testimonial_white_text">
+  Veract for product development and technical consulting.
+</span>
+
 `,
         image: `${baseUrl}/Images/LandingPage/Testimonial/harepriyaa.jpeg`,
         company: "Geeraj Business Solutions",
@@ -978,15 +988,28 @@ export const LandingPageData = {
 <span class="interFont testimonial_primary_text">
   early stage
 </span>
-<span class="interFont testimonial_white_text">
-  and they helped build out our 'KiViStar'
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  and they helped build out our 'KiViStar' App from basic day one concept.
 </span>
 <span class="interFont testimonial_white_text">
-  App from basic day one concept. Their choice of architecture, framework and ability to deliver the product helped us go to market quickly.
+  Their choice of architecture, framework and ability to deliver the product helped us go to
+</span>
+<span class="interFont testimonial_primary_text">
+ market quickly.
 </span>
 <span class="interFont testimonial_text_blur testimonial_blurred_text">
-  This helped us focus on our core work. The team at Veract developed software like their own product! We continue to engage with Veract for our technical development requirements.
+  This helped us focus on our core work.
 </span>
+<span class="interFont testimonial_white_text">
+  The team at Veract developed software like their
+</span>
+<span class="interFont testimonial_primary_text">
+  own product!
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  We continue to engage with Veract for our technical development requirements.
+</span>
+
 `,
         image: `${baseUrl}/Images/LandingPage/Testimonial/salil.png`,
         company: "Agrosperity Tech Solutions",
@@ -995,13 +1018,22 @@ export const LandingPageData = {
       {
         name: "Anand Shah",
         quote: `<span class="interFont testimonial_text_blur testimonial_blurred_text">
-  Excellent prompt support in spite of 
+  Excellent
+</span>
+<span class="interFont testimonial_primary_text">
+  prompt
+</span>
+<span class="interFont testimonial_white_text">
+  support
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
+  in spite of
 </span>
 <span class="interFont testimonial_primary_text">
   remote
 </span>
 <span class="interFont testimonial_white_text">
-  location.
+  location
 </span>
 `,
         image: `${baseUrl}/Images/LandingPage/Testimonial/AnanadShah.png`,
@@ -1010,28 +1042,32 @@ export const LandingPageData = {
       },
       {
         name: "Bijoy KT",
-        quote: `<span class="interFont testimonial_white_text">
+        quote: `<span class="interFont testimonial_text_blur testimonial_blurred_text">
   Our 
 </span>
-<span class="interFont testimonial_primary_text">
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   engagement
 </span>
-<span class="interFont testimonial_white_text">
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   with veract for Datacenter Mart project has been a fantastic 
 </span>
-<span class="interFont testimonial_primary_text">
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   experience.
 </span>
-<span class="interFont testimonial_text_blur testimonial_blurred_text">
-  The team was very prompt and supportive throughout the project. We are very happy with the outcome and we expect to start the second phase soon.
+<span class="interFont testimonial_white_text">The team was</span>
+<span class="interFont testimonial_primary_text">
+  very prompt and supportive
 </span>
 <span class="interFont testimonial_white_text">
+  throughout the project. We are very happy with the outcome and we expect to start the second phase soon.
+</span>
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   This is a 
 </span>
-<span class="interFont testimonial_primary_text">
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   very complex
 </span>
-<span class="interFont testimonial_white_text">
+<span class="interFont testimonial_text_blur testimonial_blurred_text">
   project because we did not have an exact comparison to show them but they grasped the requirements well and was able to deliver what we expected.
 </span>
 `,
@@ -1047,37 +1083,46 @@ export const LandingPageData = {
       {
         id: 1,
         title: "What does Veract.co do?",
-        content: "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
+        content:
+          "Veract.co helps businesses modernize and automate operations using AI, machine vision, IoT systems, and custom software solutions.",
       },
       {
         id: 2,
         title: "Who is veract.co best suited for?",
-        content: "We work with startups, small teams, and mid-sized businesses looking to scale intelligently without increasing headcount.",
+        content:
+          "We work with startups, small teams, and mid-sized businesses looking to scale intelligently without increasing headcount.",
       },
       {
         id: 3,
         title: "What makes veract.co different from other agencies?",
-        content: "We don’t just build software — we build intelligent systems that automate decisions, streamline workflows, and deliver measurable business outcomes.",
+        content:
+          "We don’t just build software — we build intelligent systems that automate decisions, streamline workflows, and deliver measurable business outcomes.",
       },
       {
         id: 4,
         title: "What technologies do you use?",
-        content: "We use a mix of AI frameworks (LangChain, Gemini, GPT), IoT protocols (Modbus, MQTT, EtherCAT), and full-stack technologies (Python, Node.js, React) tailored to the solution.",
+        content:
+          "We use a mix of AI frameworks (LangChain, Gemini, GPT), IoT protocols (Modbus, MQTT, EtherCAT), and full-stack technologies (Python, Node.js, React) tailored to the solution.",
       },
       {
         id: 5,
         title: " Do you offer free consultations or demos?",
-        content: "Yes — we offer a no-cost consultation to explore automation opportunities, and you can try one AI agent or automation module for free.",
+        content:
+          "Yes — we offer a no-cost consultation to explore automation opportunities, and you can try one AI agent or automation module for free.",
       },
       {
         id: 6,
-        title: "How can I streamline my business operations with custom software?",
-        content: "Custom software automates workflows, integrates data, and reduces manual effort. Tools like internal dashboards or domain-specific platforms are effective entry points.",
+        title:
+          "How can I streamline my business operations with custom software?",
+        content:
+          "Custom software automates workflows, integrates data, and reduces manual effort. Tools like internal dashboards or domain-specific platforms are effective entry points.",
       },
       {
         id: 7,
-        title: "What are the best options for mobile application development agencies?",
-        content: "Consider agencies with full-stack capabilities, strong UI/UX, and experience across platforms. Browse portfolios and tech stacks before finalizing — veract.co is one such example.",
+        title:
+          "What are the best options for mobile application development agencies?",
+        content:
+          "Consider agencies with full-stack capabilities, strong UI/UX, and experience across platforms. Browse portfolios and tech stacks before finalizing — veract is one such example.",
       },
     ],
   },
@@ -1333,56 +1378,69 @@ export const AgentPageData = {
     faq_list: [
       {
         id: 1,
-        title: 'What is Agentic AI?',
-        content: 'Agentic AI refers to autonomous AI agents that use memory, tools, and reasoning to plan and act toward business goals without constant human input.'
+        title: "What is Agentic AI?",
+        content:
+          "Agentic AI refers to autonomous AI agents that use memory, tools, and reasoning to plan and act toward business goals without constant human input.",
       },
       {
         id: 2,
-        title: 'How does veract.co implement Agentic AI?',
-        content: 'We design agents using LangChain, LangGraph, Gemini, and GPT-4o — enabling them to integrate with platforms like Slack, Notion, Excel, and SAP to automate work.'
+        title: "How does veract.co implement Agentic AI?",
+        content:
+          "We design agents using LangChain, LangGraph, Gemini, and GPT-4o — enabling them to integrate with platforms like Slack, Notion, Excel, and SAP to automate work.",
       },
       {
         id: 3,
-        title: 'What tasks can your AI agents perform?',
-        content: 'Tasks like client intake, communication, billing, ticket escalation, status updates, and sales follow-up — all powered by goal-driven logic and coordination.'
+        title: "What tasks can your AI agents perform?",
+        content:
+          "Tasks like client intake, communication, billing, ticket escalation, status updates, and sales follow-up — all powered by goal-driven logic and coordination.",
       },
       {
         id: 4,
-        title: 'What is the difference between AI agents and traditional automation?',
-        content: 'AI agents operate with autonomy — they plan, reason, and decide across tasks. Traditional automation executes predefined steps without adapting to context.'
+        title:
+          "What is the difference between AI agents and traditional automation?",
+        content:
+          "AI agents operate with autonomy — they plan, reason, and decide across tasks. Traditional automation executes predefined steps without adapting to context.",
       },
       {
         id: 5,
-        title: 'Which tasks are commonly automated using agent-based AI?',
-        content: 'Common examples include email replies, CRM updates, onboarding flows, meeting summaries, and multi-step business process orchestration.'
+        title: "Which tasks are commonly automated using agent-based AI?",
+        content:
+          "Common examples include email replies, CRM updates, onboarding flows, meeting summaries, and multi-step business process orchestration.",
       },
       {
         id: 6,
-        title: 'How do businesses integrate AI agents with existing tools?',
-        content: 'AI agents can connect to tools like Slack, Google Sheets, Notion, or SAP via APIs. Platforms like LangChain and Gemini are often used by teams like veract.co to build these layers.'
+        title: "How do businesses integrate AI agents with existing tools?",
+        content:
+          "AI agents can connect to tools like Slack, Google Sheets, Notion, or SAP via APIs. Platforms like LangChain and Gemini are often used by teams like veract.co to build these layers.",
       },
       {
         id: 7,
-        title: 'What are some real-world applications of language models in business?',
-        content: 'Language models are used in document understanding, smart support systems, feedback classification, and report summarization.'
+        title:
+          "What are some real-world applications of language models in business?",
+        content:
+          "Language models are used in document understanding, smart support systems, feedback classification, and report summarization.",
       },
       {
         id: 8,
-        title: 'Seeking AI and machine learning solutions tailored to healthcare—any leads?',
-        content: 'In healthcare, AI is used for patient monitoring, diagnostics, and smart triage. veract.co has built systems in this space with a focus on compliance and usability.'
+        title:
+          "Seeking AI and machine learning solutions tailored to healthcare—any leads?",
+        content:
+          "In healthcare, AI is used for patient monitoring, diagnostics, and smart triage. veract.co has built systems in this space with a focus on compliance and usability.",
       },
       {
         id: 9,
-        title: 'Do I need to replace my current software to use these agents?',
-        content: 'No — our agents layer over your existing tools. They act like intelligent assistants working across your current stack.'
+        title: "Do I need to replace my current software to use these agents?",
+        content:
+          "No — our agents layer over your existing tools. They act like intelligent assistants working across your current stack.",
       },
       {
         id: 10,
-        title: 'Can I test an AI agent before buying?',
-        content: 'Yes — we provide a live demo and a free trial deployment of one AI agent into your business workflow.'
+        title: "Can I test an AI agent before buying?",
+        content:
+          "Yes — we provide a live demo and a free trial deployment of one AI agent into your business workflow.",
       },
-    ]
-  }
+    ],
+  },
 };
 
 export const caseStudiesHomePageData = {
@@ -1508,66 +1566,81 @@ export const caseStudiesHomePageData = {
     faq_list: [
       {
         id: 1,
-        title: "What types of projects are featured in veract.co's case studies?",
-        content: 'Our portfolio includes AI-powered systems, machine vision platforms, wellness apps, ecommerce solutions, accessibility tools, and dashboards built for various industries.',
+        title:
+          "What types of projects are featured in veract.co's case studies?",
+        content:
+          "Our portfolio includes AI-powered systems, machine vision platforms, wellness apps, ecommerce solutions, accessibility tools, and dashboards built for various industries.",
       },
       {
         id: 2,
         title: "Are all of your case studies AI projects?",
-        content: "Many use AI — such as chat assistants, vision models, or analytics — but others focus on user experience, automation, or platform engineering without direct AI.",
+        content:
+          "Many use AI — such as chat assistants, vision models, or analytics — but others focus on user experience, automation, or platform engineering without direct AI.",
       },
       {
         id: 3,
         title: "What industries are represented in your case studies?",
-        content: "We’ve delivered solutions for agriculture, education, ecommerce, accessibility, wellness, manufacturing, and enterprise tech.",
+        content:
+          "We’ve delivered solutions for agriculture, education, ecommerce, accessibility, wellness, manufacturing, and enterprise tech.",
       },
       {
         id: 4,
         title: "Can I request a live demo of any project?",
-        content: "Yes — we can walk you through any project and explore how similar outcomes can be tailored to your business.",
+        content:
+          "Yes — we can walk you through any project and explore how similar outcomes can be tailored to your business.",
       },
       {
         id: 5,
         title: "What technologies do these projects use?",
-        content: "We use full-stack frameworks like React, Node.js, and Python, alongside AI/ML libraries, OCR, OpenCV, IoT protocols, and integrations with tools like Notion, Slack, and SAP.",
+        content:
+          "We use full-stack frameworks like React, Node.js, and Python, alongside AI/ML libraries, OCR, OpenCV, IoT protocols, and integrations with tools like Notion, Slack, and SAP.",
       },
       {
         id: 6,
         title: "Are these solutions scalable to my organization?",
-        content: "Yes. All systems are built to scale — whether you're piloting a feature or rolling it out enterprise-wide.",
+        content:
+          "Yes. All systems are built to scale — whether you're piloting a feature or rolling it out enterprise-wide.",
       },
       {
         id: 7,
         title: "Do any projects combine hardware and software?",
-        content: "Yes — some projects involve camera-based vision systems, IoT sensors, and real-time analytics combined with custom software dashboards.",
+        content:
+          "Yes — some projects involve camera-based vision systems, IoT sensors, and real-time analytics combined with custom software dashboards.",
       },
       {
         id: 8,
         title: "What tech stack powers most of these solutions?",
-        content: "Common stacks include Python, Node.js, React, MongoDB, LangChain, OpenCV, and various cloud APIs — chosen based on problem fit and scale.",
+        content:
+          "Common stacks include Python, Node.js, React, MongoDB, LangChain, OpenCV, and various cloud APIs — chosen based on problem fit and scale.",
       },
       {
         id: 9,
-        title: "Where can I source the best React Native app development services?",
-        content: "React Native is ideal for shared-codebase mobile development. Agencies experienced in JS-heavy stacks, such as veract.co, often provide tailored solutions.",
+        title:
+          "Where can I source the best React Native app development services?",
+        content:
+          "React Native is ideal for shared-codebase mobile development. Agencies experienced in JS-heavy stacks, such as veract.co, often provide tailored solutions.",
       },
       {
         id: 10,
-        title: "How are tools like OCR or computer vision used in real-world apps?",
-        content: "OCR is used to extract structured data from documents. Vision is applied in defect detection, thermal analysis, and layout inspection — often in manufacturing and diagnostics.",
+        title:
+          "How are tools like OCR or computer vision used in real-world apps?",
+        content:
+          "OCR is used to extract structured data from documents. Vision is applied in defect detection, thermal analysis, and layout inspection — often in manufacturing and diagnostics.",
       },
       {
         id: 11,
         title: "What types of problems are solved in your case studies?",
-        content: "Projects address challenges in inspection automation, wellness tracking, accessibility compliance, ecommerce personalization, and enterprise visibility.",
+        content:
+          "Projects address challenges in inspection automation, wellness tracking, accessibility compliance, ecommerce personalization, and enterprise visibility.",
       },
       {
         id: 12,
         title: "Can you help me find top Flutter app development companies?",
-        content: "Look for teams that deliver smooth UI/UX and native performance across devices. veract.co, among others, builds production-grade Flutter apps for startups and enterprises.",
+        content:
+          "Look for teams that deliver smooth UI/UX and native performance across devices. veract.co, among others, builds production-grade Flutter apps for startups and enterprises.",
       },
-    ]
-  }
+    ],
+  },
 };
 
 export const metadata = [
@@ -1681,207 +1754,207 @@ export const metadata = [
 
 export const services = [
   {
-    id: '01',
+    id: "01",
     // title: 'Digital Transformation Strategy for Modern Businesses',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Digital Transformation Strategy for <span class='text-primary-blue'>Modern Businesses</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/ai-computer.svg',
-        service_title: 'Legacy System Modernization',
+        service_icon: "/Images/services/icons/ai-computer.svg",
+        service_title: "Legacy System Modernization",
       },
       {
-        service_icon: '/Images/services/icons/algorithm.svg',
-        service_title: 'Process Automation & Workflow Digitization',
+        service_icon: "/Images/services/icons/algorithm.svg",
+        service_title: "Process Automation & Workflow Digitization",
       },
       {
-        service_icon: '/Images/services/icons/laptop.svg',
-        service_title: 'Business Dashboards & Reporting Systems',
+        service_icon: "/Images/services/icons/laptop.svg",
+        service_title: "Business Dashboards & Reporting Systems",
       },
       {
-        service_icon: '/Images/services/icons/stash_integrations-light.svg',
-        service_title: 'System Integrations Across Departments & Tools',
-      }
+        service_icon: "/Images/services/icons/stash_integrations-light.svg",
+        service_title: "System Integrations Across Departments & Tools",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/smart_industry_portal.svg',
-        CTA_title: 'Smart Industry Portal',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/smart_industry_portal.svg",
+        CTA_title: "Smart Industry Portal",
+        status: "inactive",
+        routeTo: "",
       },
       {
-        image: '/Images/services/images/accessible_web_widget.svg',
-        CTA_title: 'Accessibility Web Widget',
-        status: 'active',
-        routeTo: '/case-studies/accessible-web-widget',
+        image: "/Images/services/images/accessible_web_widget.svg",
+        CTA_title: "Accessibility Web Widget",
+        status: "active",
+        routeTo: "/case-studies/accessible-web-widget",
       },
-    ]
+    ],
   },
   {
-    id: '02',
+    id: "02",
     // title: 'Development Services for Startup Founders',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Development Services for <span class='text-primary-blue'>Startup Founders</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/computer-video.svg',
-        service_title: 'MVP & Prototype Development',
+        service_icon: "/Images/services/icons/computer-video.svg",
+        service_title: "MVP & Prototype Development",
       },
       {
-        service_icon: '/Images/services/icons/laptop-phone-sync.svg',
-        service_title: 'Custom SaaS & Web Application Development',
+        service_icon: "/Images/services/icons/laptop-phone-sync.svg",
+        service_title: "Custom SaaS & Web Application Development",
       },
       {
-        service_icon: '/Images/services/icons/phone-developer-mode.svg',
-        service_title: 'Modular Feature Development for Scalable Apps',
+        service_icon: "/Images/services/icons/phone-developer-mode.svg",
+        service_title: "Modular Feature Development for Scalable Apps",
       },
       {
-        service_icon: '/Images/services/icons/api.svg',
-        service_title: 'Integration of Third-party APIs & Platforms',
-      }
+        service_icon: "/Images/services/icons/api.svg",
+        service_title: "Integration of Third-party APIs & Platforms",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/learning_platform.svg',
-        CTA_title: 'Learning Platform',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/learning_platform.svg",
+        CTA_title: "Learning Platform",
+        status: "inactive",
+        routeTo: "",
       },
       {
-        image: '/Images/services/images/Digital_wellness.svg',
-        CTA_title: 'Digital Wellness',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/Digital_wellness.svg",
+        CTA_title: "Digital Wellness",
+        status: "inactive",
+        routeTo: "",
       },
-    ]
+    ],
   },
   {
-    id: '03',
+    id: "03",
     // title: 'Industrial IoT for Smarter Operations',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Industrial IoT for <span class='text-primary-blue'>Smarter Operations</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/ai-phone-02.svg',
-        service_title: 'IoT-Enabled App Development',
+        service_icon: "/Images/services/icons/ai-phone-02.svg",
+        service_title: "IoT-Enabled App Development",
       },
       {
-        service_icon: '/Images/services/icons/ai-laptop.svg',
-        service_title: 'Remote Monitoring Interfaces',
+        service_icon: "/Images/services/icons/ai-laptop.svg",
+        service_title: "Remote Monitoring Interfaces",
       },
       {
-        service_icon: '/Images/services/icons/carbon_iot-platform.svg',
-        service_title: 'Sensor Integration & Visualization',
+        service_icon: "/Images/services/icons/carbon_iot-platform.svg",
+        service_title: "Sensor Integration & Visualization",
       },
       {
-        service_icon: '/Images/services/icons/tabler_eye-spark.svg',
-        service_title: 'Smart Factory & Equipment Tracking',
-      }
+        service_icon: "/Images/services/icons/tabler_eye-spark.svg",
+        service_title: "Smart Factory & Equipment Tracking",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/infrared_thermography.svg',
-        CTA_title: 'Infrared Thermography',
-        status: 'active',
-        routeTo: '/case-studies/infrared-thermography',
+        image: "/Images/services/images/infrared_thermography.svg",
+        CTA_title: "Infrared Thermography",
+        status: "active",
+        routeTo: "/case-studies/infrared-thermography",
       },
-    ]
+    ],
   },
   {
-    id: '04',
+    id: "04",
     // title: 'AI & Agentic AI for Intelligent Decision-Making',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>AI & Agentic AI for <span class='text-primary-blue'>Intelligent Decision-Making</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/ai-chat-01.svg',
-        service_title: 'AI-Powered Decision Support Tools',
+        service_icon: "/Images/services/icons/ai-chat-01.svg",
+        service_title: "AI-Powered Decision Support Tools",
       },
       {
-        service_icon: '/Images/services/icons/elements.svg',
-        service_title: 'Task Automation & Workflow Bots',
+        service_icon: "/Images/services/icons/elements.svg",
+        service_title: "Task Automation & Workflow Bots",
       },
       {
-        service_icon: '/Images/services/icons/ai-file.svg',
-        service_title: 'Document Intelligence & Invoice Parsing',
+        service_icon: "/Images/services/icons/ai-file.svg",
+        service_title: "Document Intelligence & Invoice Parsing",
       },
       {
-        service_icon: '/Images/services/icons/robot-01.svg',
-        service_title: 'Agentic AI Systems for Business Logic',
-      }
+        service_icon: "/Images/services/icons/robot-01.svg",
+        service_title: "Agentic AI Systems for Business Logic",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/task_management.svg',
-        CTA_title: 'Task Management',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/task_management.svg",
+        CTA_title: "Task Management",
+        status: "inactive",
+        routeTo: "",
       },
       {
-        image: '/Images/services/images/invoice_mapping.svg',
-        CTA_title: 'Invoice Mapping',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/invoice_mapping.svg",
+        CTA_title: "Invoice Mapping",
+        status: "inactive",
+        routeTo: "",
       },
-    ]
+    ],
   },
   {
-    id: '05',
+    id: "05",
     // title: 'Machine Vision for Quality Control and Inspection',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Machine Vision for <span class='text-primary-blue'>Quality Control and Inspection</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/camera-ai.svg',
-        service_title: 'AI for Visual Quality Inspection',
+        service_icon: "/Images/services/icons/camera-ai.svg",
+        service_title: "AI for Visual Quality Inspection",
       },
       {
-        service_icon: '/Images/services/icons/cctv-camera.svg',
-        service_title: 'Camera-Based Defect Detection',
+        service_icon: "/Images/services/icons/cctv-camera.svg",
+        service_title: "Camera-Based Defect Detection",
       },
       {
-        service_icon: '/Images/services/icons/laptop-performance.svg',
-        service_title: 'Production Line Monitoring Solutions',
+        service_icon: "/Images/services/icons/laptop-performance.svg",
+        service_title: "Production Line Monitoring Solutions",
       },
       {
-        service_icon: '/Images/services/icons/bitcoin-eye.svg',
-        service_title: 'Embedded Vision System Development',
-      }
+        service_icon: "/Images/services/icons/bitcoin-eye.svg",
+        service_title: "Embedded Vision System Development",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/visual_inspection_ai.svg',
-        CTA_title: 'Visual Inspection AI',
-        status: 'inactive',
-        routeTo: '',
+        image: "/Images/services/images/visual_inspection_ai.svg",
+        CTA_title: "Visual Inspection AI",
+        status: "inactive",
+        routeTo: "",
       },
-    ]
+    ],
   },
   {
-    id: '06',
+    id: "06",
     // title: 'Generative AI & GPT',
     title: `<span class='interFont text-[1.25rem] md:text-[1.625rem] lg:text-[1.875rem] text-[#FFFFFF] font-medium leading-normal'>Generative AI & GPT for <span class='text-primary-blue'>workplace productivity</span></span>`,
     service_array: [
       {
-        service_icon: '/Images/services/icons/chat-bot.svg',
-        service_title: 'Custom AI Chatbots & Assistants',
+        service_icon: "/Images/services/icons/chat-bot.svg",
+        service_title: "Custom AI Chatbots & Assistants",
       },
       {
-        service_icon: '/Images/services/icons/artificial-intelligence-06.svg',
-        service_title: 'Generative AI Content Automation',
+        service_icon: "/Images/services/icons/artificial-intelligence-06.svg",
+        service_title: "Generative AI Content Automation",
       },
       {
-        service_icon: '/Images/services/icons/chat-gpt.svg',
-        service_title: 'GPT/LLM Integration for Business flows',
+        service_icon: "/Images/services/icons/chat-gpt.svg",
+        service_title: "GPT/LLM Integration for Business flows",
       },
       {
-        service_icon: '/Images/services/icons/ai-brain-04.svg',
-        service_title: 'Knowledge Management Assistants',
-      }
+        service_icon: "/Images/services/icons/ai-brain-04.svg",
+        service_title: "Knowledge Management Assistants",
+      },
     ],
     service_CTA: [
       {
-        image: '/Images/services/images/sara.svg',
-        CTA_title: 'AI Chat Assistant',
-        status: 'inactive',
-        routeTo: '',
-      }
-    ]
+        image: "/Images/services/images/sara.svg",
+        CTA_title: "AI Chat Assistant",
+        status: "inactive",
+        routeTo: "",
+      },
+    ],
   },
-]
+];
