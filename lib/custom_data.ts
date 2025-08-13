@@ -1027,13 +1027,7 @@ export const LandingPageData = {
   support
 </span>
 <span class="interFont testimonial_text_blur testimonial_blurred_text">
-  in spite of
-</span>
-<span class="interFont testimonial_primary_text">
-  remote
-</span>
-<span class="interFont testimonial_white_text">
-  location
+  in spite of remote location.
 </span>
 `,
         image: `${baseUrl}/Images/LandingPage/Testimonial/AnanadShah.png`,
