@@ -19,7 +19,7 @@ export function isTablet() {
   // return window.innerWidth >= 768 && window.innerWidth <= 1024;
   if (!window) return false;
   if (window && typeof window !== undefined) {
-    return window.innerWidth >= 768 && window.innerWidth <= 1280;
+    return window.innerWidth >= 768 && window.innerWidth < 1280;
   }
 }
 
