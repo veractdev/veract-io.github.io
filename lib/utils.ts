@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isMobile() {
-  // if (typeof window === 'undefined') return false;
+  if (typeof window === 'undefined') return false;
   // return window.innerWidth < 768;
   if (!window) return false;
   if (window && typeof window !== undefined) {
@@ -15,7 +15,7 @@ export function isMobile() {
 }
 
 export function isTablet() {
-  // if (typeof window === 'undefined') return false;
+  if (typeof window === 'undefined') return false;
   // return window.innerWidth >= 768 && window.innerWidth <= 1024;
   if (!window) return false;
   if (window && typeof window !== undefined) {
@@ -26,4 +26,12 @@ export function isTablet() {
 export function isValidSlug(slug: string): boolean {
   const validSlugs = ["infrared-thermography", "accessible-web-widget"];
   return validSlugs.includes(slug);
+}
+
+export function getStrapiImage(image: string) {
+  let url = process.env.STRAPI_URL;
+  if(!url){
+    url = "http://localhost:1337";
+  }
+  return `${url}${image}`;
 }

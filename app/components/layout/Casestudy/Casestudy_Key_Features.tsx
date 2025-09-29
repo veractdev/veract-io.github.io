@@ -1,19 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { isMobile, isTablet } from '@/lib/utils'
+import { getStrapiImage, isMobile, isTablet } from '@/lib/utils'
 
-type key_features_props = {
-  title: string;
-  indication_color: string,
-  key_features_list: {
-    number: string;
-    title: string;
-    img: string;
-    desc: string;
-  }[];
-}
-export default function Casestudy_Key_Features({ key_features_props }: { key_features_props: key_features_props }) {
+export default function Casestudy_Key_Features({ key_features_props }: { key_features_props: any }) {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
@@ -32,7 +22,7 @@ export default function Casestudy_Key_Features({ key_features_props }: { key_fea
           <div className="uppercase text-left text-[#868586] font-semibold text-[1rem] leading-[1.4em] geistFont">{key_features_props.title}</div>
         </motion.div>
         <div className="flex flex-col lg:w-[65rem] w-full">
-          {key_features_props.key_features_list.map((feature, idx) =>
+          {key_features_props.key_features_list.map((feature: any, idx: number) =>
             <motion.div
               key={feature.number}
               className="group relative flex lg:flex-row md:flex-col flex-col lg:items-center items-start md:py-[1.875rem] py-[3.125rem] lg:opacity-60 hover:!opacity-100 border-b-[0.063rem] border-[#282828] lg:gap-0 gap-[0.938rem]"
@@ -44,9 +34,9 @@ export default function Casestudy_Key_Features({ key_features_props }: { key_fea
               <div className="pr-[1.625rem] text-[1.125rem] font-medium interFont leading-[1.4em]" style={{ color: key_features_props.indication_color }}>{feature.number}</div>
               <div className="lg:w-[30.5rem] w-full lg:text-[2.5rem] text-[1.75rem] lg:mr-[16.875rem] lg:pr-[9rem] text-primary-text font-medium leading-[1.2em] geistFont">{feature.title}</div>
               <div className="absolute right-[18rem] top-[-7rem] opacity-0 lg:group-hover:opacity-100 transition-all duration-500 group-hover:-rotate-15 p-[1.25rem] backdrop-blur-[0.625rem]">
-                <img loading="lazy" src={feature.img} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image' />
+                <img loading="lazy" src={`${getStrapiImage(feature.image.url)}`} className="w-[17.5rem] h-[19.063rem]" alt='Feature Image' />
               </div>
-              <div className="lg:w-[13.313rem] lg:pl-[1.25rem] text-[#282828] interFont text-[0.875rem] font-medium leading-[1.4em]">{feature.desc}</div>
+              <div className="lg:w-[13.313rem] lg:pl-[1.25rem] text-[#282828] interFont text-[0.875rem] font-medium leading-[1.4em]">{feature.description}</div>
             </motion.div>
           )}
         </div>

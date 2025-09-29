@@ -1,13 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { getStrapiImage } from '@/lib/utils'
 
-type banner_props = {
-  title: string;
-  description: string;
-  image: string;
-}
-
-export default function Casestudy_Banner({ banner_props }: { banner_props: banner_props }) {
+export default function Casestudy_Banner({ banner_props }: { banner_props: any }) {
 
   const [translateY, setTranslateY] = useState<number>(0);
   const [translateY2, setTranslateY2] = useState<number>(0);
@@ -42,7 +37,7 @@ export default function Casestudy_Banner({ banner_props }: { banner_props: banne
       >
         {/* background image */}
         <img loading="lazy"
-          src={`${banner_props.image}`}
+          src={`${getStrapiImage(banner_props.image.url)}`}
           alt={`placeholder image`}
           className="absolute w-full h-full object-cover"
           style={{

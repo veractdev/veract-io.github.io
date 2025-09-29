@@ -1,22 +1,11 @@
 "use client";
-import { isMobile, isTablet } from "@/lib/utils";
+import { getStrapiImage, isMobile, isTablet } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
-type user_services_props = {
-  title: string;
-  description: string;
-  service_list: {
-    title: string;
-    bg: string;
-    description: string;
-    gradient: string;
-    blobWidth: string;
-  }[];
-};
 export default function UserServices({
   user_services_props,
 }: {
-  user_services_props: user_services_props;
+  user_services_props: any;
 }) {
   const cardCount = 5;
   const [openedArr, setOpenedArr] = useState(Array(cardCount).fill(false));
@@ -155,7 +144,7 @@ export default function UserServices({
           <div className="flex flex-col lg:gap-[0.625rem] gap-[0.938rem] lg:w-max w-full">
             {/* First row */}
             <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[0.938rem] justify-center items-center">
-              {user_services_props.service_list.slice(0, 2).map((card, idx) => (
+              {user_services_props.service_list.slice(0, 2).map((card: any, idx: number) => (
                 <div
                   key={card.title}
                   className={`group services-group relative transition-all duration-700 ease-in-out ${
@@ -177,8 +166,17 @@ export default function UserServices({
                       (isMobile() || isTablet()) && scaledArr[idx]
                         ? "opacity-30"
                         : "opacity-100"
-                    } ${card.bg}`}
-                    style={{ borderRadius: "1.875rem" }}
+                    } bg-cover bg-center object-center group-hover:opacity-0`}
+                    style={{ borderRadius: "1.875rem" , backgroundImage: `url('${getStrapiImage(card.background_image.url)}')`, backgroundSize: "cover", backgroundPosition: "center"}}
+                  ></div>
+                  <div
+                    className="absolute inset-0 z-0 transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 bg-cover bg-center"
+                    style={{
+                      borderRadius: "1.875rem",
+                      backgroundImage: `url('${getStrapiImage(card.background_hover_image.url)}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
                   ></div>
                   {/* Overlay image or black with 50% opacity when opened on mobile */}
                   {(isMobile() || isTablet()) && openedArr[idx] && (
@@ -220,7 +218,7 @@ export default function UserServices({
             </div>
             {/* Second row */}
             <div className="flex lg:w-max lg:flex-row md:flex-row flex-col lg:gap-[0.625rem] gap-[1.25rem] items-center justify-center">
-              {user_services_props.service_list.slice(2, 4).map((card, idx) => (
+              {user_services_props.service_list.slice(2, 4).map((card: any, idx: number) => (
                 <div
                   key={card.title}
                   className={`group services-group relative transition-all duration-700 ease-in-out ${
@@ -242,8 +240,17 @@ export default function UserServices({
                       (isMobile() || isTablet()) && scaledArr[idx + 2]
                         ? "opacity-30"
                         : "opacity-100"
-                    } ${card.bg}`}
-                    style={{ borderRadius: "1.875rem" }}
+                    } bg-cover bg-center object-center group-hover:opacity-0`}
+                    style={{ borderRadius: "1.875rem" , backgroundImage: `url('${getStrapiImage(card.background_image.url)}')`, backgroundSize: "cover", backgroundPosition: "center"}}
+                  ></div>
+                  <div
+                    className="absolute inset-0 z-0 transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 bg-cover bg-center"
+                    style={{
+                      borderRadius: "1.875rem",
+                      backgroundImage: `url('${getStrapiImage(card.background_hover_image.url)}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
                   ></div>
                   {/* Overlay image or black with 50% opacity when opened on mobile */}
                   {(isMobile() || isTablet()) && openedArr[idx + 2] && (
@@ -301,8 +308,17 @@ export default function UserServices({
                 (isMobile() || isTablet()) && scaledArr[4]
                   ? "opacity-30"
                   : "opacity-100"
-              } ${user_services_props.service_list[4].bg}`}
-              style={{ borderRadius: "1.875rem" }}
+              } bg-cover bg-center object-center group-hover:opacity-0`}
+              style={{ borderRadius: "1.875rem" , backgroundImage: `url('${getStrapiImage(user_services_props.service_list[4].background_image.url)}')`, backgroundSize: "cover", backgroundPosition: "center"}}
+            ></div>
+            <div
+              className="absolute inset-0 z-0 transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 bg-cover bg-center"
+              style={{
+                borderRadius: "1.875rem",
+                backgroundImage: `url('${getStrapiImage(user_services_props.service_list[4].background_hover_image.url)}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             ></div>
             {/* Overlay image or black with 50% opacity when opened on mobile */}
             {(isMobile() || isTablet()) && openedArr[4] && (

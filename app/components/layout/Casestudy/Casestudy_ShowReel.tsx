@@ -1,19 +1,13 @@
 "use client";
 import { baseUrl } from "@/lib/custom_data";
-import { isMobile, isTablet } from "@/lib/utils";
+import { getStrapiImage,    isMobile, isTablet } from "@/lib/utils";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-type showreel_props = {
-    title: string;
-    video: string[];
-    youtube_url: string;
-};
 
 export default function Casestudy_ShowReel({
     showreel_props,
 }: {
-    showreel_props: showreel_props;
+    showreel_props: any;
 }) {
     const sectionRef = useRef(null);
     const [isMobileView, setIsMobileView] = useState(false);
@@ -27,7 +21,7 @@ export default function Casestudy_ShowReel({
         target: sectionRef,
         offset: ["start start", "end start"], // triggers when the top of section hits top of viewport
     });
-
+    
     const scale = useTransform(scrollYProgress, [0, 0.2], [0.2, isTablet() ? 0.95 : 0.80]); // full scale before scroll continues
     const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.1]);
 
@@ -44,7 +38,7 @@ export default function Casestudy_ShowReel({
     });
 
     useEffect(() => {
-        if (window) {
+        if (typeof window !== 'undefined') {
           if (window.innerWidth < 1024) {
             setTabView(true);
           }
@@ -81,7 +75,7 @@ export default function Casestudy_ShowReel({
                         scale: !isMobile() ? springTextScale : 1,
                     }}
                 >
-                    {showreel_props.title}
+                    {showreel_props?.title}
                 </motion.div>
                 <div className={`hidden md:flex lg:flex flex-col items-center justify-center sticky top-[0%] transform z-10 bg-transparent`}>
                     <motion.div
@@ -99,7 +93,7 @@ export default function Casestudy_ShowReel({
                             playsInline
                             controls={false}
                         >
-                            <source src={showreel_props.video[videoURL]} type="video/mp4" />
+                            <source src={getStrapiImage(showreel_props.video_web_tab_mobile [videoURL].url)} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </motion.div>
@@ -145,7 +139,7 @@ export default function Casestudy_ShowReel({
                             playsInline
                             controls={false}
                         >
-                            <source src={showreel_props.video[videoURL]} type="video/mp4" />
+                            <source src={getStrapiImage(showreel_props.video_web_tab_mobile [videoURL].url)} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <motion.div
