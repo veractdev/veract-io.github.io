@@ -1,9 +1,8 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
-import LenisProvider from '../LenisProvider'
+// import LenisProvider from '../LenisProvider'
 import { useRouter } from 'next/navigation';
 import { baseUrl, caseStudiesHomePageData } from '@/lib/custom_data';
-import { motion } from 'framer-motion';
 import Navbar from '../components/layout/Navbar';
 import { isMobile, isTablet } from '@/lib/utils';
 import Footer from '../components/layout/Landing_Page/Footer';

@@ -1276,11 +1276,6 @@ export const LandingPageData = {
           },
           {
             id: 3,
-            type: "phone",
-            title: "+1 7377101523",
-          },
-          {
-            id: 4,
             type: "email",
             title: "info@veract.io",
           },

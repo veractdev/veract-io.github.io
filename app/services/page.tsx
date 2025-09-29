@@ -59,7 +59,7 @@ export default function Page() {
   return (
     loaded && (
       <div className='flex flex-col items-center justify-center bg-primary-text relative'>
-        <img src="/Images/services/service_background_overlay.png" alt="overlay image" className='hidden absolute top-0 left-0 w-full h-full object-cover' />
+        <img src="/Images/services/service_background_overlay.png" alt="overlay image" className='hidden absolute top-0 left-0 w-full h-full' />
         <Navbar />
         <div className="w-full h-[100vh] md:h-[100vh] lg:h-max flex flex-col items-center justify-center py-0 md:py-[15.25rem_22.5rem] px-[3.125rem] relative">
           <img src={`${!isMobile() && !isTablet() ? '/Images/services/services-background-overlay.jpg' : `${isTablet() ? '/Images/services/services_tab_background_overlay.png' : '/Images/services/services_mobile_background_overlay.png'}`}`} alt='service background image' className="absolute top-0 left-0 w-full h-[99%] object-cover" />

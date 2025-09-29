@@ -240,7 +240,7 @@ export default function Banner() {
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain `}
                 /> */}
-                <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain' />
+                <ArrowRight size={16} color='white' className='transform -rotate-45 w-[1rem] h-[1rem] object-contain' />
               </motion.div>
               {/* Hover Text */}
               <motion.div
@@ -258,7 +258,7 @@ export default function Banner() {
                   alt="arrow_icon"
                   className={`w-[1rem] h-[1rem] object-contain rotate-45`}
                 /> */}
-                <ArrowRight size={16} color='white' className='transform -rotate-45 w-[1rem] h-[1rem] object-contain' />
+                <ArrowRight size={16} color='white' className='w-[1rem] h-[1rem] object-contain' />
               </motion.div>
             </div>
 

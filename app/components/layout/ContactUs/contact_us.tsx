@@ -6,7 +6,6 @@ import { useLenis } from "lenis/react";
 import { baseUrl } from "@/lib/custom_data";
 import Footer from "../Landing_Page/Footer";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { motion } from "framer-motion";
 import { useFooterScrollState } from "@/lib/globalState";
 
 export default function Contact_Us() {
@@ -513,12 +512,6 @@ export default function Contact_Us() {
                   className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
                 >
                   +91 99628 37650
-                </a>
-                <a
-                  href="tel:+17377101523"
-                  className="text-[16px] font-medium text-white/50 hover:text-white cursor-pointer"
-                >
-                  +1 7377101523
                 </a>
               </div>
             </div>
